@@ -1,0 +1,129 @@
+{
+  "id": "discover/movies-slider-backdrops-5",
+  "request": {
+    "path": "/discover/movie",
+    "params": {
+      "include_adult": "false",
+      "include_video": "true",
+      "language": "en",
+      "page": "1",
+      "region": "",
+      "sort_by": "popularity.desc",
+      "with_genres": "35"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "page": 1,
+      "results": [
+        {
+          "adult": false,
+          "backdrop_path": "/z26LxXDMmAIzKr06FPDudCJyvsM.jpg",
+          "genre_ids": [
+            18,
+            27,
+            9648
+          ],
+          "id": 1813355,
+          "title": "Uma História de Derry",
+          "original_language": "en",
+          "original_title": "A Story of Derry",
+          "overview": "Séculos antes da aparição do palhaço Pennywise em Derry, três jovens nativos americanos encontram um aterrorizante espírito ancestral na floresta.",
+          "popularity": 148.4325,
+          "poster_path": "/9duTLm4Xk62wGIWJBfdco9lPHvW.jpg",
+          "release_date": "2026-10-31",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.638,
+          "vote_count": 149
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/bDsmYvrzto7xrEwqDpLC3SPhn9A.jpg",
+          "genre_ids": [
+            18,
+            10752
+          ],
+          "id": 1422041,
+          "title": "A Bola Preta",
+          "original_language": "es",
+          "original_title": "La bola negra",
+          "overview": "As histórias de três homens cujas vidas estão intimamente ligadas pelo desejo, pela dor e pela herança, ao longo de três épocas diferentes: 1932, 1937 e 2017.",
+          "popularity": 94.7194,
+          "poster_path": "/66Pj7O90qWce4pYZYKriVkFNcOS.jpg",
+          "release_date": "2027-01-21",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.885,
+          "vote_count": 258
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/274ahmbkJSzdmcWrWSTu9DFv5rp.jpg",
+          "genre_ids": [
+            14,
+            18,
+            27
+          ],
+          "id": 1567605,
+          "title": "Ebenezer e os Fantasmas do Natal",
+          "original_language": "en",
+          "original_title": "Ebenezer",
+          "overview": "Ebenezer Scrooge é um velho avarento que recebe a visita do fantasma de seu antigo sócio, Jacob Marley, e dos Espíritos do Natal Passado, Presente e Futuro. Os encontros o força a confrontar o próprio passado e a lutar por uma segunda chance de ser feliz.",
+          "popularity": 89.7007,
+          "poster_path": "/7MBeM27NNcCYUszjTNYJUycPDhV.jpg",
+          "release_date": "2026-11-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.529,
+          "vote_count": 174
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/mdBElS5YjpZPkB9DNYjgxwWgXcv.jpg",
+          "genre_ids": [
+            18,
+            10749,
+            53
+          ],
+          "id": 1568060,
+          "title": "Perfeitos Mentirosos",
+          "original_language": "es",
+          "original_title": "Perfectos mentirosos",
+          "overview": "Jude Derry chega à exclusiva Universidade de Tagus com uma missão secreta: se infiltrar no círculo dos irmãos Cash e descobrir a verdade sobre a morte do irmão dela. O que começa como vingança vira um perigoso triângulo de sedução, atração proibida e mentiras, que a empurra rumo a uma verdade para a qual talvez ela não esteja preparada. Baseado no romance de Alex Mírez.",
+          "popularity": 91.3971,
+          "poster_path": "/lKgbxuLuupPgIUAw0Ren7ZlOHLg.jpg",
+          "release_date": "2026-11-20",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.5,
+          "vote_count": 32
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/bybAHw5fenKXRFI4phanPhpljlT.jpg",
+          "genre_ids": [
+            18,
+            10402,
+            10749
+          ],
+          "id": 27,
+          "title": "9 Canções",
+          "original_language": "en",
+          "original_title": "9 Songs",
+          "overview": "Londres, verão de 2003. Matt conhece Lisa, uma jovem estudante americana, em meio a um show. Eles logo se apaixonam, vivendo um intenso relacionamento sexual entremeado por vários shows que acompanham.",
+          "popularity": 77.0001,
+          "poster_path": "/91O7z0vo7MiNWd5xD2BoivwbQsb.jpg",
+          "release_date": "2004-07-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.5,
+          "vote_count": 615
+        }
+      ],
+      "total_pages": 1001,
+      "total_results": 20001
+    }
+  }
+}

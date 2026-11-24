@@ -1,0 +1,2974 @@
+{
+  "case": "tv-details-full",
+  "family": "title",
+  "request": "GET /api/v1/tv/249042",
+  "fixtures": [
+    "tv/details-en-full",
+    "tv/details-full"
+  ],
+  "status": 200,
+  "body": {
+    "createdBy": [
+      {
+        "id": 1115,
+        "credit_id": "669e90a5efa9caf41859180a",
+        "name": "Stephen Graham",
+        "original_name": "Stephen Graham",
+        "gender": 2,
+        "profile_path": "/yguEO9zFvuccq87kOJpFLsmUgvs.jpg"
+      },
+      {
+        "id": 207132,
+        "credit_id": "669e90b20e17966c48d17585",
+        "name": "Jack Thorne",
+        "original_name": "Jack Thorne",
+        "gender": 2,
+        "profile_path": "/siVfYSurwcIrplOc0vP3DiJAVN2.jpg"
+      }
+    ],
+    "episodeRunTime": [],
+    "firstAirDate": "2025-03-13",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "relatedVideos": [
+      {
+        "site": "YouTube",
+        "key": "mh48KXaCSxM",
+        "name": "Trailer oficial [Legendado]",
+        "size": 1080,
+        "type": "Trailer",
+        "url": "https://www.youtube.com/watch?v=mh48KXaCSxM"
+      }
+    ],
+    "homepage": "https://www.netflix.com/title/81756069",
+    "id": 249042,
+    "inProduction": false,
+    "languages": [
+      "en"
+    ],
+    "lastAirDate": "2025-03-13",
+    "name": "Adolescência",
+    "networks": [
+      {
+        "id": 213,
+        "name": "Netflix",
+        "originCountry": "",
+        "logoPath": "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
+      }
+    ],
+    "numberOfEpisodes": 4,
+    "numberOfSeasons": 1,
+    "originCountry": [
+      "GB",
+      "US"
+    ],
+    "originalLanguage": "en",
+    "originalName": "Adolescence",
+    "tagline": "",
+    "overview": "Um garoto de 13 anos é acusado de assassinar uma colega de escola, levando a família, a terapeuta e o investigador do caso a se perguntarem: o que realmente aconteceu?",
+    "popularity": "<number>",
+    "productionCompanies": [
+      {
+        "id": 12180,
+        "name": "Warp Films",
+        "originCountry": "GB",
+        "logoPath": "/ye2vKF2MZbVPzof7YZjeRUkL7Up.png"
+      },
+      {
+        "id": 181091,
+        "name": "Matriarch Productions",
+        "originCountry": "GB",
+        "logoPath": "/gLl9wfw0VsGAHaapn2yoqofQuIS.png"
+      },
+      {
+        "id": 81,
+        "name": "Plan B Entertainment",
+        "originCountry": "US",
+        "logoPath": "/8wOfUhA7vwU2gbPjQy7Vv3EiF0o.png"
+      },
+      {
+        "id": 159584,
+        "name": "One Shoe Films",
+        "originCountry": "GB",
+        "logoPath": "/bHkB5jZNUvvN9j2JAYZ6YASnm4g.png"
+      },
+      {
+        "id": 192277,
+        "name": "It's All Made Up Productions",
+        "originCountry": "GB",
+        "logoPath": "/6EWCQcniXEDLdkD8Go4dge64HWf.png"
+      }
+    ],
+    "productionCountries": [
+      {
+        "iso_3166_1": "GB",
+        "name": "United Kingdom"
+      },
+      {
+        "iso_3166_1": "US",
+        "name": "United States of America"
+      }
+    ],
+    "contentRatings": {
+      "results": [
+        {
+          "descriptors": [],
+          "iso_3166_1": "SG",
+          "rating": "NC16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "NL",
+          "rating": "12"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "UA",
+          "rating": "16+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "BR",
+          "rating": "12"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "US",
+          "rating": "TV-MA"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "AR",
+          "rating": "SAM 16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "AU",
+          "rating": "M"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "BE",
+          "rating": "12"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "BG",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "CA",
+          "rating": "18+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "DE",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "ES",
+          "rating": "12"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "GB",
+          "rating": "15"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "GR",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "HU",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "IE",
+          "rating": "15"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "IN",
+          "rating": "U/A 16+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "KR",
+          "rating": "15"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "LU",
+          "rating": "12"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "MA",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "PL",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "PR",
+          "rating": "TV-MA"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "VI",
+          "rating": "TV-MA"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "ZA",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "RU",
+          "rating": "16+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "MX",
+          "rating": "B-15"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "FR",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "NO",
+          "rating": "12"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "TR",
+          "rating": "18+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "ID",
+          "rating": "D"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "PH",
+          "rating": "SPG"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "RO",
+          "rating": "15"
+        }
+      ]
+    },
+    "spokenLanguages": [
+      {
+        "englishName": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      }
+    ],
+    "seasons": [
+      {
+        "airDate": "2025-03-13",
+        "episodeCount": 4,
+        "id": 383679,
+        "name": "Minissérie",
+        "overview": "",
+        "seasonNumber": 1,
+        "posterPath": "/kryDvFcwSlnbEMnT3Dq89EUmFuX.jpg"
+      }
+    ],
+    "status": "Ended",
+    "type": "Miniseries",
+    "voteAverage": "<number>",
+    "voteCount": "<number>",
+    "backdropPath": "/llZodlkVKRkTdUsiRxvn8h80hhx.jpg",
+    "lastEpisodeToAir": {
+      "id": 5951305,
+      "airDate": "2025-03-13",
+      "episodeNumber": 4,
+      "name": "Episódio 4",
+      "overview": "A família Miller tenta comemorar o aniversário de Eddie como se tudo estivesse normal. Mas uma série de situações pode acabar com essa paz.",
+      "productionCode": "",
+      "seasonNumber": 1,
+      "showId": 249042,
+      "voteAverage": "<number>",
+      "voteCount": "<number>",
+      "stillPath": "/bVi6fXdsj2GXTJda563OfNJ1axQ.jpg"
+    },
+    "posterPath": "/3v8MSpNNk3hhadeU9XocQrQXbuk.jpg",
+    "credits": {
+      "cast": [
+        {
+          "character": "Eddie Miller",
+          "creditId": "67e06a5ae4a9c8690607f0a2",
+          "id": 1115,
+          "name": "Stephen Graham",
+          "order": 516,
+          "gender": 2,
+          "profilePath": "/yguEO9zFvuccq87kOJpFLsmUgvs.jpg"
+        },
+        {
+          "character": "Jamie Miller",
+          "creditId": "67e06a4ece605a1ed1c73257",
+          "id": 5225942,
+          "name": "Owen Cooper",
+          "order": 526,
+          "gender": 2,
+          "profilePath": "/zdV9mPv6QD89jgdaqW3w9TEn5bA.jpg"
+        },
+        {
+          "character": "Eileen",
+          "creditId": "67dca09f143da6410faf2716",
+          "id": 5311720,
+          "name": "Bidi Iredale",
+          "order": 504,
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "character": "Lisa Miller",
+          "creditId": "67e06a6bc2d819df69c7487b",
+          "id": 5285958,
+          "name": "Amélie Pease",
+          "order": 517,
+          "gender": 1,
+          "profilePath": "/4sV89UjNbnaBt95KQkxTWbt95JM.jpg"
+        },
+        {
+          "character": "Manda Miller",
+          "creditId": "67e06a714ce07d684e07ec1d",
+          "id": 94741,
+          "name": "Christine Tremarco",
+          "order": 518,
+          "gender": 1,
+          "profilePath": "/tYcwKwBK10OViYRBaxBZMZN8oT0.jpg"
+        },
+        {
+          "character": "DS Misha Frank",
+          "creditId": "67e06a7e4ce07d684e07ec2c",
+          "id": 1204956,
+          "name": "Faye Marsay",
+          "order": 519,
+          "gender": 1,
+          "profilePath": "/63vFGISlg0mD1c0tAjxlMMPgWVj.jpg"
+        },
+        {
+          "character": "DI Luke Bascombe",
+          "creditId": "67e06a844ce07d684e07ec33",
+          "id": 61364,
+          "name": "Ashley Walters",
+          "order": 520,
+          "gender": 2,
+          "profilePath": "/jSazpnwfMqbIuBGjnB8r0Yb5l7H.jpg"
+        },
+        {
+          "character": "Fredo",
+          "creditId": "67e06b0e4ce07d684e07ec6d",
+          "id": 3286992,
+          "name": "Austin Haynes",
+          "order": 523,
+          "gender": 2,
+          "profilePath": "/ayKzDHAK6ePdYguCO0xdnD9M9Ra.jpg"
+        },
+        {
+          "character": "Moray",
+          "creditId": "67dc9f83d67d7dc3c86bb213",
+          "id": 5311765,
+          "name": "Alfie Ward",
+          "order": 500,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "Ryan",
+          "creditId": "67dc9fbbfaba16b5bdf2d1f6",
+          "id": 5311756,
+          "name": "Kaine Davis",
+          "order": 501,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "Katie",
+          "creditId": "67dca06e143da6410faf26f2",
+          "id": 5311721,
+          "name": "Emilia Holliday",
+          "order": 502,
+          "gender": 1,
+          "profilePath": "/8gc8RQvD4cciKkW7ajAtfH2uuqd.jpg"
+        },
+        {
+          "character": "Tonia Simpson",
+          "creditId": "67dca081faba16b5bdf2d286",
+          "id": 1773266,
+          "name": "Anne Hornby",
+          "order": 503,
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "character": "PC Grogan",
+          "creditId": "67dca153d67d7dc3c86bb2c3",
+          "id": 1803186,
+          "name": "Jay Johnson",
+          "order": 505,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "Jade",
+          "creditId": "67dca1c1927d39deb3f2d659",
+          "id": 5311753,
+          "name": "Fatima Bojang",
+          "order": 506,
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "character": "Adam Bascombe",
+          "creditId": "67dca1d0faba16b5bdf2d2f8",
+          "id": 5311757,
+          "name": "Amari Bacchus",
+          "order": 507,
+          "gender": 2,
+          "profilePath": "/1ahSvL03DBVRuHYeWYyCrJTeIrp.jpg"
+        },
+        {
+          "character": "Tommy",
+          "creditId": "67dca1e9927d39deb3f2d67b",
+          "id": 5311759,
+          "name": "Lewis Pemberton",
+          "order": 508,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "Tau",
+          "creditId": "67dca228143da6410faf2893",
+          "id": 5318164,
+          "name": "Adam Khan",
+          "order": 509,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "Shaun",
+          "creditId": "67dca247d67d7dc3c86bb33e",
+          "id": 5311762,
+          "name": "Charlie McSweeney",
+          "order": 510,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "Carla",
+          "creditId": "67dca268143da6410faf28e2",
+          "id": 2852034,
+          "name": "Melissa Johns",
+          "order": 511,
+          "gender": 1,
+          "profilePath": "/n6428jG9k8PS5qAj4rSRzGrTXiM.jpg"
+        },
+        {
+          "character": "Mr Curtis",
+          "creditId": "67dca276143da6410faf28f8",
+          "id": 1508567,
+          "name": "Jonathon Ojinnaka",
+          "order": 512,
+          "gender": 2,
+          "profilePath": "/vMynyPa4UTqE3ju1ZE3dp2bn9pl.jpg"
+        },
+        {
+          "character": "Terry",
+          "creditId": "67dca322927d39deb3f2d752",
+          "id": 1990550,
+          "name": "Kaya Moore",
+          "order": 513,
+          "gender": 2,
+          "profilePath": "/oZJAst0uRf6jvytXqLrdNedw1uk.jpg"
+        },
+        {
+          "character": "Quint",
+          "creditId": "67dca33cfaba16b5bdf2d353",
+          "id": 4591730,
+          "name": "Joe Barber",
+          "order": 514,
+          "gender": 2,
+          "profilePath": "/rT0JWmlQ1RJFX3s3jLcPi1Hp6RQ.jpg"
+        },
+        {
+          "character": "Paulie Barlow",
+          "creditId": "67e06a8ee4a9c8690607f0b0",
+          "id": 1345950,
+          "name": "Mark Stanley",
+          "order": 521,
+          "gender": 2,
+          "profilePath": "/3ABvmcomWJxKsDnfqyVsIzjvul8.jpg"
+        },
+        {
+          "character": "PC Jenkins",
+          "creditId": "67e06a9dc2d819df69c74899",
+          "id": 2193492,
+          "name": "Connor Calland",
+          "order": 522,
+          "gender": 2,
+          "profilePath": "/oJe5BZ0qDYQnozKBJrDA2j29iDy.jpg"
+        },
+        {
+          "character": "Mrs Fenumore",
+          "creditId": "67e06b4d978bda8ae24db98c",
+          "id": 70518,
+          "name": "Jo Hartley",
+          "order": 524,
+          "gender": 1,
+          "profilePath": "/A8JMDj5yddYr5Pl7a35YPBGc2CS.jpg"
+        },
+        {
+          "character": "Georgie",
+          "creditId": "67e06b5c4ce07d684e07ec93",
+          "id": 5311768,
+          "name": "Elodie Grace Walker",
+          "order": 525,
+          "gender": 1,
+          "profilePath": "/bZUlbVXAQjt7RzGTNcS405q4U9k.jpg"
+        },
+        {
+          "character": "Briony Ariston",
+          "creditId": "67e06b66978bda8ae24db9a9",
+          "id": 2121856,
+          "name": "Erin Doherty",
+          "order": 526,
+          "gender": 1,
+          "profilePath": "/brqo9iAILtnkWj1WaQKUCNxLGfQ.jpg"
+        },
+        {
+          "character": "Derek",
+          "creditId": "67e06b78ce605a1ed1c732c8",
+          "id": 2794296,
+          "name": "Jon Furlong",
+          "order": 527,
+          "gender": 0,
+          "profilePath": "/cRAGW5M8F39cjhYT7KEZH7Ezzkp.jpg"
+        },
+        {
+          "character": "Sgt Golding",
+          "creditId": "67e06b8e978bda8ae24db9cd",
+          "id": 178629,
+          "name": "Neil Bell",
+          "order": 528,
+          "gender": 2,
+          "profilePath": "/3K3dDytqtTSaGrDZ3qOHYpJUGea.jpg"
+        },
+        {
+          "character": "Erica",
+          "creditId": "67e06b9cce605a1ed1c732dc",
+          "id": 1388198,
+          "name": "Faye McKeever",
+          "order": 529,
+          "gender": 1,
+          "profilePath": "/6JKIMRGaez1mzCgqhdjSt4xQ3iv.jpg"
+        },
+        {
+          "character": "Mrs Bailey",
+          "creditId": "67e06ba8c0b4387a6ec72bc4",
+          "id": 1252521,
+          "name": "Hannah Walters",
+          "order": 530,
+          "gender": 1,
+          "profilePath": "/mA7z6xoIor0chk3d92tVJzFsyFJ.jpg"
+        },
+        {
+          "character": "Mr Garfield",
+          "creditId": "67e06bbc4ce07d684e07ecd0",
+          "id": 1806331,
+          "name": "Robbie O'Neill",
+          "order": 531,
+          "gender": 2,
+          "profilePath": "/yle1fegcksRawo6D4OwAKvNpxMy.jpg"
+        },
+        {
+          "character": "Mr Hutchinson",
+          "creditId": "67e06bcab8e0fea9340802e0",
+          "id": 1231667,
+          "name": "Craig Cheetham",
+          "order": 532,
+          "gender": 2,
+          "profilePath": "/kvLoDPkCDTA3drPehw0bva4HJTS.jpg"
+        },
+        {
+          "character": "Mr Malik",
+          "creditId": "67e06bd2c0b4387a6ec72be6",
+          "id": 1294984,
+          "name": "Faraz Ayub",
+          "order": 533,
+          "gender": 2,
+          "profilePath": "/l5Rx4PwWezPFf0YXTwoQ6hmFDfO.jpg"
+        },
+        {
+          "character": "Billie",
+          "creditId": "67e06be44ce07d684e07ecde",
+          "id": 2848487,
+          "name": "Amelia Minto",
+          "order": 534,
+          "gender": 1,
+          "profilePath": "/e1Pn3fWyfmYiiKTWS1Ke3uxkqQX.jpg"
+        },
+        {
+          "character": "Victor",
+          "creditId": "67e06bf3c0b4387a6ec72c00",
+          "id": 119095,
+          "name": "Douglas Russell",
+          "order": 535,
+          "gender": 2,
+          "profilePath": "/7iRHwMRmOmK9yB6zEtGAqq1xEJg.jpg"
+        },
+        {
+          "character": "Frank",
+          "creditId": "67e06c02b8e0fea9340802f6",
+          "id": 1395427,
+          "name": "Claudius Peters",
+          "order": 536,
+          "gender": 2,
+          "profilePath": "/dfRPdF5BtpVqN6JKqHRAw1zKe06.jpg"
+        },
+        {
+          "character": "Paul",
+          "creditId": "67e06c164ce07d684e07ecf6",
+          "id": 4885871,
+          "name": "Liam Hawkins-Finnegan",
+          "order": 537,
+          "gender": 2,
+          "profilePath": null
+        }
+      ],
+      "crew": [
+        {
+          "creditId": "65f34c40470ead017ea03423",
+          "department": "Production",
+          "id": 1115,
+          "job": "Executive Producer",
+          "name": "Stephen Graham",
+          "gender": 2,
+          "profilePath": "/yguEO9zFvuccq87kOJpFLsmUgvs.jpg"
+        },
+        {
+          "creditId": "669e9188f099879236a85ae0",
+          "department": "Production",
+          "id": 70524,
+          "job": "Executive Producer",
+          "name": "Mark Herbert",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "669e91919b8e53c6a78efe64",
+          "department": "Production",
+          "id": 1862505,
+          "job": "Executive Producer",
+          "name": "Emily Feller",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "669e91a35243da88a75027af",
+          "department": "Production",
+          "id": 1252521,
+          "job": "Executive Producer",
+          "name": "Hannah Walters",
+          "gender": 1,
+          "profilePath": "/mA7z6xoIor0chk3d92tVJzFsyFJ.jpg"
+        },
+        {
+          "creditId": "669e91c8d06402da05502b5a",
+          "department": "Production",
+          "id": 207132,
+          "job": "Executive Producer",
+          "name": "Jack Thorne",
+          "gender": 2,
+          "profilePath": "/siVfYSurwcIrplOc0vP3DiJAVN2.jpg"
+        },
+        {
+          "creditId": "669e920406ceff883b502bcf",
+          "department": "Production",
+          "id": 191750,
+          "job": "Executive Producer",
+          "name": "Philip Barantini",
+          "gender": 2,
+          "profilePath": "/8v03JkqIDNm6TnaTuCiD929bexm.jpg"
+        },
+        {
+          "creditId": "669e922b1dd010b55ddd8544",
+          "department": "Production",
+          "id": 967387,
+          "job": "Executive Producer",
+          "name": "Jeremy Kleiner",
+          "gender": 2,
+          "profilePath": "/rRccbqvpL5HU73n1CLmJs9fyzzc.jpg"
+        },
+        {
+          "creditId": "669e924249bc9e7daa1867ef",
+          "department": "Production",
+          "id": 20458,
+          "job": "Executive Producer",
+          "name": "Dede Gardner",
+          "gender": 1,
+          "profilePath": "/uQ0Zgn4MZe5q1fMTb0m9Vi5ZqNK.jpg"
+        },
+        {
+          "creditId": "669e925c75734c27d2a6f05b",
+          "department": "Production",
+          "id": 971715,
+          "job": "Executive Producer",
+          "name": "Nina Wolarsky",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "669e926d35ece46e5f7d27ea",
+          "department": "Production",
+          "id": 1227805,
+          "job": "Producer",
+          "name": "Jo Johnson",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "674886d210946c29c602b066",
+          "department": "Production",
+          "id": 287,
+          "job": "Executive Producer",
+          "name": "Brad Pitt",
+          "gender": 2,
+          "profilePath": "/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg"
+        },
+        {
+          "creditId": "674886f91d0b5b3fb833fed9",
+          "department": "Production",
+          "id": 2783901,
+          "job": "Co-Executive Producer",
+          "name": "Carina Sposato",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "674887091d0b5b3fb833fede",
+          "department": "Production",
+          "id": 2811684,
+          "job": "Co-Executive Producer",
+          "name": "Peter Balm",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "674887171d0b5b3fb833fee4",
+          "department": "Production",
+          "id": 2811686,
+          "job": "Co-Executive Producer",
+          "name": "Niall Shamma",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d2ba6f64443984b11e3a85",
+          "department": "Production",
+          "id": 5301745,
+          "job": "Co-Producer",
+          "name": "Leo Martin",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8cdec12fbac9a56a74539",
+          "department": "Sound",
+          "id": 2498626,
+          "job": "Original Music Composer",
+          "name": "Aaron May",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8cdf8009ea62bdaee9f24",
+          "department": "Sound",
+          "id": 2498627,
+          "job": "Original Music Composer",
+          "name": "David Ridley",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8ce03fa6dabaac3eea0f3",
+          "department": "Camera",
+          "id": 2498628,
+          "job": "Director of Photography",
+          "name": "Matthew Lewis",
+          "gender": 2,
+          "profilePath": "/6VJL450CzbVTIUuIe1IVWb97tM6.jpg"
+        },
+        {
+          "creditId": "67d8ce2cee370afa15a73e6d",
+          "department": "Sound",
+          "id": 1763081,
+          "job": "Sound Re-Recording Mixer",
+          "name": "Jules Woods",
+          "gender": 2,
+          "profilePath": "/nG6ftkvRSakyc8gSoNOoqICDRRt.jpg"
+        },
+        {
+          "creditId": "67d8ce55fa6dabaac3eea11b",
+          "department": "Sound",
+          "id": 1548943,
+          "job": "Foley Supervisor",
+          "name": "Adam Mendez",
+          "gender": 2,
+          "profilePath": "/vp1UWvbRDleU3kGlCQyvkSKi8WX.jpg"
+        },
+        {
+          "creditId": "67d8ce5fa7f1f7ac1c859942",
+          "department": "Sound",
+          "id": 1494825,
+          "job": "Sound Mixer",
+          "name": "Kiff McManus",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8ce69fa6dabaac3eea128",
+          "department": "Sound",
+          "id": 2307796,
+          "job": "Foley Artist",
+          "name": "Oliver Ferris",
+          "gender": 2,
+          "profilePath": "/TWOZddlpBAMjKd0oNxdgbgPiKZ.jpg"
+        },
+        {
+          "creditId": "67d8ce75a7f1f7ac1c859949",
+          "department": "Sound",
+          "id": 1025713,
+          "job": "Sound Mixer",
+          "name": "Rob Entwistle",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8ce82ee370afa15a73ea3",
+          "department": "Sound",
+          "id": 1637873,
+          "job": "Supervising Sound Editor",
+          "name": "James Drake",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8ce8ec4c2b520a0859a3b",
+          "department": "Sound",
+          "id": 1615149,
+          "job": "ADR Mixer",
+          "name": "Simon Diggins",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8ce9a7b4be4f26ca73362",
+          "department": "Sound",
+          "id": 1784629,
+          "job": "ADR Mixer",
+          "name": "Mike Tehrani",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8cec7c4c2b520a0859a4c",
+          "department": "Visual Effects",
+          "id": 1981994,
+          "job": "Visual Effects Producer",
+          "name": "Mariluz Noto",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8e95fc5339eabc6365008",
+          "department": "Art",
+          "id": 1419211,
+          "job": "Production Design",
+          "name": "Adam Tomlinson",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8e971c0566a100a087d9b",
+          "department": "Costume & Make-Up",
+          "id": 5311723,
+          "job": "Costume Design",
+          "name": "Jessica Schofield",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8e97ac5339eabc6365010",
+          "department": "Costume & Make-Up",
+          "id": 1454503,
+          "job": "Hair Designer",
+          "name": "Sian Wilson",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8e982c5339eabc6365016",
+          "department": "Costume & Make-Up",
+          "id": 1454503,
+          "job": "Makeup Designer",
+          "name": "Sian Wilson",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8e990c0566a100a087daa",
+          "department": "Production",
+          "id": 5311724,
+          "job": "Line Producer",
+          "name": "Desmond Hughes",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8e9a1bb433951a7364f8e",
+          "department": "Directing",
+          "id": 5311726,
+          "job": "First Assistant Director",
+          "name": "Sarah Lucas",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8e9bee1e3cdcbf9c69de9",
+          "department": "Production",
+          "id": 2635,
+          "job": "Casting",
+          "name": "Shaheen Baig",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8e9de562e832c97365204",
+          "department": "Production",
+          "id": 2346245,
+          "job": "Location Manager",
+          "name": "Tom Bartram",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8e9eac0566a100a087dc6",
+          "department": "Production",
+          "id": 3473844,
+          "job": "Post Production Producer",
+          "name": "Hannah Dunnell",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8e9f7c24529be92087efc",
+          "department": "Editing",
+          "id": 2473388,
+          "job": "Colorist",
+          "name": "Dan Moran",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8eaeebb433951a7365012",
+          "department": "Directing",
+          "id": 2174865,
+          "job": "Script Supervisor",
+          "name": "Carley Armstrong",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8eaf8c0566a100a087df7",
+          "department": "Lighting",
+          "id": 2617927,
+          "job": "Gaffer",
+          "name": "Max Hodgkinson",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8eb26bb433951a736502a",
+          "department": "Camera",
+          "id": 5311728,
+          "job": "Key Grip",
+          "name": "Pat Gillespie",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8fd8f562e832c97365723",
+          "department": "Sound",
+          "id": 5049442,
+          "job": "Boom Operator",
+          "name": "Kyle Pickford",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67d8fd9b562e832c97365728",
+          "department": "Sound",
+          "id": 3575321,
+          "job": "Boom Operator",
+          "name": "Ashley Sinani",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a44e024d4be900311997edf",
+          "department": "Directing",
+          "id": 6319795,
+          "job": "Second Assistant Director",
+          "name": "Charlotte Allen",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "6ade167b6611064da817214f",
+          "department": "Visual Effects",
+          "id": 6574613,
+          "job": "Visual Effects Supervisor",
+          "name": "David Simpson",
+          "gender": 0,
+          "profilePath": null
+        }
+      ]
+    },
+    "externalIds": {
+      "facebookId": null,
+      "freebaseId": null,
+      "freebaseMid": null,
+      "imdbId": "tt31806037",
+      "instagramId": null,
+      "tvdbId": 452467,
+      "tvrageId": null,
+      "twitterId": null
+    },
+    "keywords": [
+      {
+        "id": 392,
+        "name": "england"
+      },
+      {
+        "id": 4411,
+        "name": "sexism"
+      },
+      {
+        "id": 5927,
+        "name": "violence against women"
+      },
+      {
+        "id": 6337,
+        "name": "patriarchy"
+      },
+      {
+        "id": 6733,
+        "name": "bullying"
+      },
+      {
+        "id": 9826,
+        "name": "murder"
+      },
+      {
+        "id": 10235,
+        "name": "family relationships"
+      },
+      {
+        "id": 11162,
+        "name": "miniseries"
+      },
+      {
+        "id": 15025,
+        "name": "parenting"
+      },
+      {
+        "id": 15295,
+        "name": "confrontation"
+      },
+      {
+        "id": 15320,
+        "name": "insecurity"
+      },
+      {
+        "id": 18068,
+        "name": "teenage boy"
+      },
+      {
+        "id": 34136,
+        "name": "blunt"
+      },
+      {
+        "id": 156312,
+        "name": "visceral"
+      },
+      {
+        "id": 159315,
+        "name": "mental health"
+      },
+      {
+        "id": 161166,
+        "name": "misogyny"
+      },
+      {
+        "id": 165092,
+        "name": "british youth"
+      },
+      {
+        "id": 176834,
+        "name": "social media"
+      },
+      {
+        "id": 193717,
+        "name": "british school system"
+      },
+      {
+        "id": 201066,
+        "name": "social structures"
+      },
+      {
+        "id": 201072,
+        "name": "objectification"
+      },
+      {
+        "id": 206921,
+        "name": "single take"
+      },
+      {
+        "id": 237378,
+        "name": "teenage killer"
+      },
+      {
+        "id": 242691,
+        "name": "thought provoking"
+      },
+      {
+        "id": 274750,
+        "name": "today's youth"
+      },
+      {
+        "id": 309029,
+        "name": "psychological drama"
+      },
+      {
+        "id": 321464,
+        "name": "intense"
+      },
+      {
+        "id": 325817,
+        "name": "foreboding"
+      },
+      {
+        "id": 337727,
+        "name": "slut shaming"
+      },
+      {
+        "id": 366041,
+        "name": "today's society"
+      },
+      {
+        "id": 368148,
+        "name": "toxic masculinity"
+      }
+    ],
+    "watchProviders": [
+      {
+        "iso_3166_1": "AD",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=AD",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AE",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=AE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AG",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=AG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AL",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=AL",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AO",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=AO",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AR",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=AR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AT",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=AT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AU",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=AU",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          },
+          {
+            "displayPriority": 51,
+            "logoPath": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+            "id": 1796,
+            "name": "Netflix Standard with Ads"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AZ",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=AZ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BA",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=BA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BB",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=BB",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BE",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=BE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BG",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=BG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BH",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=BH",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BM",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=BM",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BO",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=BO",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BR",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=BR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          },
+          {
+            "displayPriority": 42,
+            "logoPath": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+            "id": 1796,
+            "name": "Netflix Standard with Ads"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BS",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=BS",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BY",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=BY",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BZ",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=BZ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CA",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=CA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          },
+          {
+            "displayPriority": 92,
+            "logoPath": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+            "id": 1796,
+            "name": "Netflix Standard with Ads"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CH",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=CH",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CI",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=CI",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CL",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=CL",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CM",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=CM",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CO",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=CO",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CR",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=CR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CU",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=CU",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CV",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=CV",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CY",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=CY",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CZ",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=CZ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "DE",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=DE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          },
+          {
+            "displayPriority": 86,
+            "logoPath": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+            "id": 1796,
+            "name": "Netflix Standard with Ads"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "DK",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=DK",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "DO",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=DO",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "DZ",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=DZ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "EC",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=EC",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "EE",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=EE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "EG",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=EG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "ES",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=ES",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          },
+          {
+            "displayPriority": 52,
+            "logoPath": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+            "id": 1796,
+            "name": "Netflix Standard with Ads"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "FI",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=FI",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "FJ",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=FJ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "FR",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=FR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          },
+          {
+            "displayPriority": 52,
+            "logoPath": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+            "id": 1796,
+            "name": "Netflix Standard with Ads"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GB",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=GB",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          },
+          {
+            "displayPriority": 87,
+            "logoPath": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+            "id": 1796,
+            "name": "Netflix Standard with Ads"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GF",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=GF",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GG",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=GG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 2,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GH",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=GH",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GI",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=GI",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GQ",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=GQ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GR",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=GR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GT",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=GT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "HK",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=HK",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "HN",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=HN",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "HR",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=HR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "HU",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=HU",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "ID",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=ID",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IE",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=IE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IL",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=IL",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IN",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=IN",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IQ",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=IQ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IS",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=IS",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IT",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=IT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "JM",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=JM",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "JO",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=JO",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 2,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "JP",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=JP",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          },
+          {
+            "displayPriority": 24,
+            "logoPath": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+            "id": 1796,
+            "name": "Netflix Standard with Ads"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "KE",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=KE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "KR",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=KR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          },
+          {
+            "displayPriority": 26,
+            "logoPath": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+            "id": 1796,
+            "name": "Netflix Standard with Ads"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "KW",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=KW",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "LB",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=LB",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "LC",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=LC",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "LI",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=LI",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "LT",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=LT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "LU",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=LU",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "LV",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=LV",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "LY",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=LY",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MA",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=MA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MC",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=MC",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MD",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=MD",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "ME",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=ME",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MG",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=MG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MK",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=MK",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "ML",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=ML",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MT",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=MT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MU",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=MU",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MX",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=MX",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          },
+          {
+            "displayPriority": 42,
+            "logoPath": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+            "id": 1796,
+            "name": "Netflix Standard with Ads"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MY",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=MY",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MZ",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=MZ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "NE",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=NE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "NG",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=NG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "NI",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=NI",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "NL",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=NL",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "NO",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=NO",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "NZ",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=NZ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "OM",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=OM",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PA",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=PA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PE",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=PE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PF",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=PF",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PH",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=PH",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PK",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=PK",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PL",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=PL",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PS",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=PS",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PT",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=PT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PY",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=PY",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "QA",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=QA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "RO",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=RO",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "RS",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=RS",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SA",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=SA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SC",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=SC",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SE",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=SE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SG",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=SG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SI",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=SI",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SK",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=SK",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SM",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=SM",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SN",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=SN",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SV",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=SV",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "TC",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=TC",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "TD",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=TD",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "TH",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=TH",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "TN",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=TN",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "TR",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=TR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "TT",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=TT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "TW",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=TW",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "TZ",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=TZ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "UA",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=UA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "UG",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=UG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "US",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=US",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          },
+          {
+            "displayPriority": 154,
+            "logoPath": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+            "id": 1796,
+            "name": "Netflix Standard with Ads"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "UY",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=UY",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "VE",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=VE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "YE",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=YE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "ZA",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=ZA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 0,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "ZM",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=ZM",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "ZW",
+        "link": "https://www.themoviedb.org/tv/249042-adolescence/watch?locale=ZW",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+            "id": 8,
+            "name": "Netflix"
+          }
+        ]
+      }
+    ],
+    "onUserWatchlist": false
+  }
+}

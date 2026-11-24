@@ -1,0 +1,676 @@
+{
+  "id": "search/multi-adult",
+  "request": {
+    "path": "/search/multi",
+    "params": {
+      "include_adult": "false",
+      "language": "pt-BR",
+      "page": "1",
+      "query": "cooper"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "page": 1,
+      "results": [
+        {
+          "adult": true,
+          "backdrop_path": "/nFnzqHuiKF7mLjGb9GFKZ7SeuoB.jpg",
+          "genre_ids": [
+            10763,
+            10767
+          ],
+          "id": 3508,
+          "name": "Anderson Cooper 360°",
+          "original_language": "en",
+          "original_name": "Anderson Cooper 360°",
+          "overview": "",
+          "popularity": 81.9282,
+          "poster_path": "/xwlxWVjSTVcERt4GQ0kes8qrsbu.jpg",
+          "first_air_date": "2003-09-08",
+          "softcore": false,
+          "vote_average": 5.2,
+          "vote_count": 10,
+          "media_type": "tv",
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/idvQZx9CufFb3a5y6rojNJLkBSc.jpg",
+          "genre_ids": [
+            35
+          ],
+          "id": 4438,
+          "name": "Hangin' with Mr. Cooper",
+          "original_language": "en",
+          "original_name": "Hangin' with Mr. Cooper",
+          "overview": "",
+          "popularity": 23.2127,
+          "poster_path": "/y6jjIhPcvNijt632WAa4AuXu73L.jpg",
+          "first_air_date": "1992-09-22",
+          "softcore": false,
+          "vote_average": 6.702,
+          "vote_count": 42,
+          "media_type": "tv",
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/im4rdy5dVJlJgl0kgO6UlWX1ENs.jpg",
+          "genre_ids": [],
+          "id": 194999,
+          "name": "Anderson Cooper Full Circle",
+          "original_language": "en",
+          "original_name": "Anderson Cooper Full Circle",
+          "overview": "",
+          "popularity": 19.1921,
+          "poster_path": "/k17ifEZEuGQUCSZWPVaWAzzkzRs.jpg",
+          "first_air_date": "2018-07-16",
+          "softcore": false,
+          "vote_average": 0,
+          "vote_count": 0,
+          "media_type": "tv",
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/kgWPwLlDW6Ay8f4jvwybZKA0L9A.jpg",
+          "genre_ids": [
+            80,
+            18,
+            9648
+          ],
+          "id": 296520,
+          "name": "Cooper & Fry",
+          "original_language": "en",
+          "original_name": "Cooper & Fry",
+          "overview": "O agente Ben Cooper, um afável garoto, se junta à vigilante estreante DC Diane Fry para investigar uma série de mortes misteriosas.",
+          "popularity": 4.7166,
+          "poster_path": "/frDntanA2DMcNppQYBY5NfHmMM2.jpg",
+          "first_air_date": "2025-11-18",
+          "softcore": false,
+          "vote_average": 7.583,
+          "vote_count": 24,
+          "media_type": "tv",
+          "origin_country": [
+            "GB"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/axCh3DpOgISsPoMxKslQW9l4PO3.jpg",
+          "genre_ids": [
+            35,
+            10749
+          ],
+          "id": 19840,
+          "title": "Eu Te Amo, Beth Cooper",
+          "original_language": "en",
+          "original_title": "I Love You, Beth Cooper",
+          "overview": "Ao longo de quatro anos, Denis Cooverman nunca teve coragem de declarar seu amor por Beth Cooper, a garota mais popular da escola. No dia da formatura, ele faz o discurso da turma e manifesta seus sentimentos. Após a cerimônia, ela aceita o convite para ir a uma festa em sua casa, o que não agrada Kevin, seu ex-namorado. Kevin e seus amigos destroem tudo na casa de Denis e passam a persegui-lo. Beth e suas amigas ajudam Denis e ele enfim conhece a garota com quem sempre sonhou.",
+          "popularity": 3.25,
+          "poster_path": "/pzn7Dud5qTZitgd03XUTw0YB6Lp.jpg",
+          "release_date": "2009-07-10",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.054,
+          "vote_count": 1025,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/4JKxRP3Rdpx2YtxdO3uGkubEtNR.jpg",
+          "genre_ids": [],
+          "id": 223132,
+          "name": "The Whole Story with Anderson Cooper",
+          "original_language": "en",
+          "original_name": "The Whole Story with Anderson Cooper",
+          "overview": "",
+          "popularity": 5.9936,
+          "poster_path": "/f5w4F3oqPVOj3nLiCHVlYICkmT7.jpg",
+          "first_air_date": "2023-04-16",
+          "softcore": false,
+          "vote_average": 7.75,
+          "vote_count": 4,
+          "media_type": "tv",
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "id": 51329,
+          "name": "Bradley Cooper",
+          "original_name": "Bradley Cooper",
+          "popularity": 4.7159,
+          "media_type": "person",
+          "gender": 2,
+          "known_for_department": "Acting",
+          "profile_path": "/5Dhy50qOMOHfR1NZifKIfffjV9X.jpg",
+          "known_for": [
+            {
+              "adult": false,
+              "backdrop_path": "/iuRVt8tFiXDPGgzavhuSa3QHRxD.jpg",
+              "id": 18785,
+              "title": "Se Beber, Não Case!",
+              "original_title": "The Hangover",
+              "overview": "Dois dias antes de seu casamento, Doug e três amigos vão de carro até Las Vegas para uma louca e memorável despedida de solteiro. Quando os três padrinhos acordam na manhã seguinte, eles não conseguem se lembrar de nada e notam que Doug desapareceu. Com pouco tempo de sobra, os amigos tentam refazer a noite anterior e encontrar Doug para que possam levá-lo de volta a Los Angeles a tempo de chegar ao altar.",
+              "poster_path": "/m0tQyMdp3fy5ooUOQkJMd1fQKBJ.jpg",
+              "media_type": "movie",
+              "original_language": "en",
+              "genre_ids": [
+                35
+              ],
+              "popularity": 15.5212,
+              "release_date": "2009-06-02",
+              "softcore": false,
+              "video": false,
+              "vote_average": 7.339,
+              "vote_count": 18783
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/rl95VDEP3nsUQmGzE0S1S7y6T0N.jpg",
+              "id": 190859,
+              "title": "Sniper Americano",
+              "original_title": "American Sniper",
+              "overview": "Chris Kyle é um atirador de elite das forças especiais da marinha dos Estados Unidos. Durante a Guerra do Iraque, sua missão é proteger seus companheiros e seu dever faz dele um dos maiores atiradores da história norte-americana. Sua precisão salva inúmeras vidas, mas também o torna um alvo preferencial. Quando Kyle finalmente volta para casa, ele descobre que não tem como deixar a guerra para trás.",
+              "poster_path": "/mAXzc2oDTTYcnn6IGHlSXvmXloG.jpg",
+              "media_type": "movie",
+              "original_language": "en",
+              "genre_ids": [
+                10752,
+                28
+              ],
+              "popularity": 10.9079,
+              "release_date": "2014-12-25",
+              "softcore": false,
+              "video": false,
+              "vote_average": 7.403,
+              "vote_count": 14057
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/12GpsUm9nVVKFlcjDTflKLClFVA.jpg",
+              "id": 82693,
+              "title": "O Lado Bom da Vida",
+              "original_title": "Silver Linings Playbook",
+              "overview": "Ao perder o emprego e a esposa, Pat Solatano vai morar com os pais. Ele quer reconstruir sua vida, mas seus pais ficariam felizes se ele simplesmente gostasse tanto do Philadelphia Eagles quanto eles. Tudo se complica quando Pat conhece Tiffany, que oferece ajuda para ele reconquistar a esposa.",
+              "poster_path": "/5R2ZLkflncVmRzTvSVP7MooxZ0C.jpg",
+              "media_type": "movie",
+              "original_language": "en",
+              "genre_ids": [
+                18,
+                35,
+                10749
+              ],
+              "popularity": 9.4585,
+              "release_date": "2012-11-16",
+              "softcore": false,
+              "video": false,
+              "vote_average": 7.153,
+              "vote_count": 13000
+            }
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            35
+          ],
+          "id": 237988,
+          "name": "Cooper",
+          "original_language": "en",
+          "original_name": "Cooper",
+          "overview": "",
+          "popularity": 0.4368,
+          "poster_path": "/slj9ov9K7OmXSmswhM96iKYQuqG.jpg",
+          "first_air_date": "1975-10-15",
+          "softcore": false,
+          "vote_average": 6.7,
+          "vote_count": 3,
+          "media_type": "tv",
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/nWyQxUKrxOLk3YUDC0UyHompkFW.jpg",
+          "genre_ids": [
+            9648
+          ],
+          "id": 563799,
+          "title": "Clyde Cooper",
+          "original_language": "en",
+          "original_title": "Clyde Cooper",
+          "overview": "",
+          "popularity": 0.4971,
+          "poster_path": "/6gTe5LyA5wjdQAWy7aEnrNpMFMq.jpg",
+          "release_date": "2018-11-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 4.5,
+          "vote_count": 11,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wLKLSPfGaxqcWiFqRoXTbkYuApY.jpg",
+          "genre_ids": [
+            35
+          ],
+          "id": 198015,
+          "name": "Cooper's Bar",
+          "original_language": "en",
+          "original_name": "Cooper's Bar",
+          "overview": "",
+          "popularity": 2.8305,
+          "poster_path": "/rIGCOL7pclvbmzoIUhiHU8WbuUm.jpg",
+          "first_air_date": "2022-05-30",
+          "softcore": false,
+          "vote_average": 5.7,
+          "vote_count": 2,
+          "media_type": "tv",
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "id": 55470,
+          "name": "Dominic Cooper",
+          "original_name": "Dominic Cooper",
+          "popularity": 2.4749,
+          "media_type": "person",
+          "gender": 2,
+          "known_for_department": "Acting",
+          "profile_path": "/wFPdARerxpaAaHucYGTSNqViWpn.jpg",
+          "known_for": [
+            {
+              "adult": false,
+              "backdrop_path": "/yFuKvT4Vm3sKHdFY4eG6I4ldAnn.jpg",
+              "id": 1771,
+              "title": "Capitão América: O Primeiro Vingador",
+              "original_title": "Captain America: The First Avenger",
+              "overview": "Durante a Segunda Guerra Mundial, Steve Rogers é um homem doente, do Brooklyn, que se transforma no super soldado Capitão América para ajudar nos esforços de guerra. Rogers deve parar o Caveira Vermelha, o implacável chefe de armas de Adolf Hitler e líder de uma organização que pretende usar um misterioso mecanismo de incalculáveis poderes para dominar o mundo.",
+              "poster_path": "/19wxfSXHhuJBRbbfUweCsfXFhpv.jpg",
+              "media_type": "movie",
+              "original_language": "en",
+              "genre_ids": [
+                28,
+                12,
+                878
+              ],
+              "popularity": 12.3185,
+              "release_date": "2011-07-22",
+              "softcore": false,
+              "video": false,
+              "vote_average": 7.012,
+              "vote_count": 23554
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/syVAWAnY6fTBDDFntHsM8vFjKex.jpg",
+              "id": 136797,
+              "title": "Need for Speed: O Filme",
+              "original_title": "Need for Speed",
+              "overview": "Aperte os cintos com Tobey Marshall, quando ele sai em uma missão de vingança contra o rico e arrogante Dino Brewster que o acusou de um crime que ele não cometeu. Tobey desafia seus limites ao máximo em uma corrida de alta octanagem em todos os Estados Unidos, pegando a estrada com os carros mais exóticos do mundo – oferecendo velocidade, perigo e ação reais.",
+              "poster_path": "/tMRqzpQr9v0ji7IWMKboKy1UJfu.jpg",
+              "media_type": "movie",
+              "original_language": "en",
+              "genre_ids": [
+                28,
+                80,
+                18,
+                53
+              ],
+              "popularity": 8.1416,
+              "release_date": "2014-03-12",
+              "softcore": false,
+              "video": false,
+              "vote_average": 6.457,
+              "vote_count": 4908
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/oa0bHsnrD96miW3Yx10HWb211Sj.jpg",
+              "id": 49017,
+              "title": "Dracula: A História Nunca Contada",
+              "original_title": "Dracula Untold",
+              "overview": "Os habitantes da Transilvânia sempre foram inimigos dos turcos, com quem tiveram batalhas épicas. Para evitar que sua população fosse massacrada, o rei local aceitou entregar aos turcos centenas de crianças. Entre elas estava seu próprio filho, Vlad Tepes (Luke Evans), que aprendeu com os turcos a arte de guerrear. Logo Vlad ganhou fama pela ferocidade nas batalhas e também por empalar os derrotados. De volta à Transilvânia, onde é nomeado príncipe, ele governa em paz por 10 anos. Só que o rei Mehmed (Dominic Cooper) mais uma vez exige que 100 crianças sejam entregues aos turcos. Vlad se recusa e, com isso, inicia uma nova guerra. Para vencê-la, ele recorre a um ser das trevas (Charles Dance) que vive pela região. Após beber o sangue dele, Vlad se torna um vampiro e ganha poderes sobrehumanos.",
+              "poster_path": "/cCq6nnwIki2HGg6DjjtFSxxgCUY.jpg",
+              "media_type": "movie",
+              "original_language": "en",
+              "genre_ids": [
+                27,
+                28,
+                14
+              ],
+              "popularity": 5.3155,
+              "release_date": "2014-10-01",
+              "softcore": false,
+              "video": false,
+              "vote_average": 6.468,
+              "vote_count": 6717
+            }
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wCnJBOVg8Nnf9hweQbFXJZ0694B.jpg",
+          "genre_ids": [
+            35
+          ],
+          "id": 63260,
+          "name": "Cooper Barrett's Guide to Surviving Life",
+          "original_language": "en",
+          "original_name": "Cooper Barrett's Guide to Surviving Life",
+          "overview": "Comédia juvenil sobre um grupo de amigos que moram juntos pela primeira vez. Cada episódio é contado a partir da perspectiva de Cooper Barrett, um graduado da faculdade recentemente perversamente encantador e profundamente falho cuja vida é cheia de escolhas terríveis, excelentes erros e fantásticas desventuras.",
+          "popularity": 7.7204,
+          "poster_path": "/5lCN5MNJHepHSpBmvdk5wd1l7Fv.jpg",
+          "first_air_date": "2016-01-03",
+          "softcore": false,
+          "vote_average": 5.56,
+          "vote_count": 25,
+          "media_type": "tv",
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/nSbzj6FnxJi6EbPDT0owCzkqE6l.jpg",
+          "genre_ids": [
+            10749,
+            35,
+            10770
+          ],
+          "id": 1547882,
+          "title": "Merry Christmas, Ted Cooper!",
+          "original_language": "en",
+          "original_title": "Merry Christmas, Ted Cooper!",
+          "overview": "",
+          "popularity": 1.2509,
+          "poster_path": "/cdPfcMltESmaYukwnDqvDcqEJUF.jpg",
+          "release_date": "2025-10-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.225,
+          "vote_count": 20,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            99,
+            10402
+          ],
+          "id": 842116,
+          "title": "Alice Cooper",
+          "original_language": "en",
+          "original_title": "Alice Cooper",
+          "overview": "O registro da lendária banda Alice Cooper no início de sua carreira. Um show comovente e selvagem que virou uma de suas marcas registradas.",
+          "popularity": 0.2986,
+          "poster_path": "/wlp5E6ppJlXZYMhxegqgiGC3VpF.jpg",
+          "release_date": "1970-01-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "id": 2955,
+          "name": "Chris Cooper",
+          "original_name": "Chris Cooper",
+          "popularity": 2.1471,
+          "media_type": "person",
+          "gender": 2,
+          "known_for_department": "Acting",
+          "profile_path": "/sJKghcu9wRDIvKM0cI7kqNXYRfS.jpg",
+          "known_for": [
+            {
+              "adult": false,
+              "backdrop_path": "/kJaRWmy1BGq3pHyE94LOTteiHer.jpg",
+              "id": 2501,
+              "title": "A Identidade Bourne",
+              "original_title": "The Bourne Identity",
+              "overview": "Um homem sem memória é resgatado do oceano por um barco de pesca. Sobre si, ele só sabe que tem talento para matar e um chip implantado no quadril. Enquanto busca sua história, tenta escapar de pessoas que, inexplicavelmente, querem matá-lo.",
+              "poster_path": "/q18OhXWdS0WncHminNK7A7uiEvc.jpg",
+              "media_type": "movie",
+              "original_language": "en",
+              "genre_ids": [
+                28,
+                9648,
+                53
+              ],
+              "popularity": 12.1416,
+              "release_date": "2002-06-14",
+              "softcore": false,
+              "video": false,
+              "vote_average": 7.491,
+              "vote_count": 10595
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/wvBO5vBrFQtQpJPWx83JYuysr4f.jpg",
+              "id": 260514,
+              "title": "Carros 3",
+              "original_title": "Cars 3",
+              "overview": "Durante mais uma disputa eletrizante nas pistas, o campeão Relâmpago McQueen acelerou demais e acabou perdendo o controle. Agora, após ter capotando várias vezes e quase ter partido dessa para melhor, o vermelhinho vai ter sua vida alterada para sempre. O acidente foi tão grave que, com os estragos, McQueen pode ter que se aposentar de vez.",
+              "poster_path": "/oEmdfjqQnAWe1t23WiiW0icFhGv.jpg",
+              "media_type": "movie",
+              "original_language": "en",
+              "genre_ids": [
+                16,
+                18,
+                10751,
+                12
+              ],
+              "popularity": 13.5437,
+              "release_date": "2017-06-15",
+              "softcore": false,
+              "video": false,
+              "vote_average": 6.863,
+              "vote_count": 6707
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/kEA3iOrV1DpHQ3Z01Q28y2Qoc89.jpg",
+              "id": 14,
+              "title": "Beleza Americana",
+              "original_title": "American Beauty",
+              "overview": "Lester Burham não aguenta mais o emprego e se sente impotente perante sua vida. Casado com Carolyn e pai da \"aborrecente\" Jane, o melhor momento de seu dia quando se masturba no chuveiro. Até que conhece Angela Hayes, amiga de Jane. Encantado com sua beleza e disposto a dar a volta por cima, Lester pede demissão e começa a reconstruir sua vida, com a ajuda de seu vizinho Ricky.",
+              "poster_path": "/9PJKsH7Btz2xjYIvLLtJ7qcJlL3.jpg",
+              "media_type": "movie",
+              "original_language": "en",
+              "genre_ids": [
+                18
+              ],
+              "popularity": 10.6305,
+              "release_date": "1999-09-15",
+              "softcore": false,
+              "video": false,
+              "vote_average": 7.996,
+              "vote_count": 13580
+            }
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/w2ELcHBcIvbcXbtiGxEEJ5PiOBU.jpg",
+          "genre_ids": [
+            99,
+            10402
+          ],
+          "id": 261814,
+          "title": "Super Duper Alice Cooper",
+          "original_language": "en",
+          "original_title": "Super Duper Alice Cooper",
+          "overview": "Entrevistas e imagens raras de arquivo ilustram a história de Vincent Furnier, o filho de um pastor que se tornou um ícone do rock: Alice Cooper.",
+          "popularity": 0.795,
+          "poster_path": "/A72W2mvQ5EZ4pzx96RjKyHYAfGJ.jpg",
+          "release_date": "2014-04-17",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.1,
+          "vote_count": 32,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/tWUjm0RDdSeQWvlgFDQhwV6DjgT.jpg",
+          "genre_ids": [
+            35
+          ],
+          "id": 25001,
+          "name": "The Tommy Cooper Hour",
+          "original_language": "en",
+          "original_name": "The Tommy Cooper Hour",
+          "overview": "",
+          "popularity": 1.3789,
+          "poster_path": "/rNz1zGuCyshTxflatNEMAUIbYFj.jpg",
+          "first_air_date": "1973-10-31",
+          "softcore": false,
+          "vote_average": 7.5,
+          "vote_count": 2,
+          "media_type": "tv",
+          "origin_country": [
+            "GB"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/iitVj60nwTGClUEHarmF2n8i4Qj.jpg",
+          "genre_ids": [
+            18
+          ],
+          "id": 929374,
+          "title": "Madeline & Cooper",
+          "original_language": "en",
+          "original_title": "Madeline & Cooper",
+          "overview": "",
+          "popularity": 0.1805,
+          "poster_path": "/78MoDWv9qtMBmjK8UWcxO3imkZF.jpg",
+          "release_date": "2018-12-31",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/gOA3Zlf4iQMXooXXTRX2J0HtRUN.jpg",
+          "genre_ids": [
+            99
+          ],
+          "id": 202150,
+          "name": "O Extraordinário Observador de Pássaros com Christian Cooper",
+          "original_language": "en",
+          "original_name": "Extraordinary Birder with Christian Cooper",
+          "overview": "O experiente observador de pássaros Christian Cooper nos leva a uma jornada para explorar e descobrir o selvagem, maravilhoso e imprevisível mundo dos pássaros.",
+          "popularity": 1.2646,
+          "poster_path": "/gHK2o6F4qIdRvzuZogH2l6C11uk.jpg",
+          "first_air_date": "2023-06-17",
+          "softcore": false,
+          "vote_average": 1,
+          "vote_count": 1,
+          "media_type": "tv",
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "id": 2823609,
+          "name": "Cooper Tomlinson",
+          "original_name": "Cooper Tomlinson",
+          "popularity": 1.7904,
+          "media_type": "person",
+          "gender": 2,
+          "known_for_department": "Acting",
+          "profile_path": "/vBMQbYT1DyWPCUp11dIiqZR9zhd.jpg",
+          "known_for": [
+            {
+              "adult": false,
+              "backdrop_path": "/5lTZyuBTNOfawsfPT8Q0cIg6qAF.jpg",
+              "id": 1339713,
+              "title": "Obsessão",
+              "original_title": "Obsession",
+              "overview": "Sem grandes pretensões, um romântico incurável compra um brinquedo que promete realizar desejos únicos. Ele quebra o artefato misterioso enquanto pede para conquistar a crush e consegue exatamente o que desejava, mas descobre que a consequência é sinistra.",
+              "poster_path": "/wUc6IDf5ChjM1UyQye21qFBeJY0.jpg",
+              "media_type": "movie",
+              "original_language": "en",
+              "genre_ids": [
+                27,
+                53
+              ],
+              "popularity": 78.6147,
+              "release_date": "2026-05-13",
+              "softcore": false,
+              "video": false,
+              "vote_average": 8.156,
+              "vote_count": 6727
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/hBOH4PNnhcGPgZbZjBwkx9gnNxI.jpg",
+              "id": 614560,
+              "title": "Mank",
+              "original_title": "Mank",
+              "overview": "A Hollywood da década de 1930 é vista pelo olhar crítico do roteirista Herman J. Mankiewicz, em meio aos seus esforços para terminar o roteiro de Cidadão Kane.",
+              "poster_path": "/gyjYToNFFIUKUvBYFchqpptZA1F.jpg",
+              "media_type": "movie",
+              "original_language": "en",
+              "genre_ids": [
+                18,
+                36
+              ],
+              "popularity": 3.7943,
+              "release_date": "2020-11-13",
+              "softcore": false,
+              "video": false,
+              "vote_average": 6.665,
+              "vote_count": 1875
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/34gFNJQ5zT2rqH7iPbIN7Yp8oz7.jpg",
+              "id": 1352582,
+              "title": "O Clube do Tesouro",
+              "original_title": "Treasure Trackers",
+              "overview": "Leah, uma curiosa garota de 12 anos, recruta seus colegas de escola Marshy e Tessa para caçar o mítico tesouro de sua cidade, mas eles logo descobrem que a lenda esconde segredos muito mais complexos do que imaginavam.",
+              "poster_path": "/shKztvANU0Lqo1WB4QU6wT0cuft.jpg",
+              "media_type": "movie",
+              "original_language": "en",
+              "genre_ids": [
+                12,
+                10751
+              ],
+              "popularity": 0.7434,
+              "release_date": "2024-10-01",
+              "softcore": false,
+              "video": false,
+              "vote_average": 4.9,
+              "vote_count": 8
+            }
+          ]
+        }
+      ],
+      "total_pages": 176,
+      "total_results": 3516
+    }
+  }
+}

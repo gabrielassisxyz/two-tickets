@@ -1,0 +1,79 @@
+{
+  "id": "movie/videos-en-minimal",
+  "request": {
+    "path": "/movie/485013",
+    "params": {
+      "append_to_response": "videos",
+      "include_video_language": "en",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "adult": false,
+      "backdrop_path": null,
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Ação"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10752,
+          "name": "Guerra"
+        }
+      ],
+      "homepage": "",
+      "id": 485013,
+      "imdb_id": "tt6388158",
+      "origin_country": [
+        "NO"
+      ],
+      "original_language": "en",
+      "original_title": "The Guardian Angel",
+      "overview": "",
+      "popularity": 0.5715,
+      "poster_path": null,
+      "production_companies": [
+        {
+          "id": 98610,
+          "logo_path": null,
+          "name": "Daniel Stisen Productions",
+          "origin_country": ""
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "NO",
+          "name": "Norway"
+        }
+      ],
+      "release_date": "2018-03-29",
+      "revenue": 0,
+      "runtime": 0,
+      "softcore": false,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "The Guardian Angel",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0,
+      "videos": {
+        "results": []
+      }
+    }
+  }
+}

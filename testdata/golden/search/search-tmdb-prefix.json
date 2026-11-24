@@ -1,0 +1,40 @@
+{
+  "case": "search-tmdb-prefix",
+  "family": "search",
+  "request": "GET /api/v1/search?query=tmdb%3A485013",
+  "fixtures": [
+    "movie/details-minimal",
+    "search/tmdb-prefix-tv-not-found",
+    "search/tmdb-prefix-person-not-found",
+    "movie/videos-en-minimal"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 1,
+    "totalResults": 1,
+    "results": [
+      {
+        "id": 485013,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          18,
+          10752
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Guardian Angel",
+        "overview": "",
+        "popularity": "<number>",
+        "releaseDate": "2018-03-29",
+        "title": "The Guardian Angel",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": null,
+        "posterPath": null
+      }
+    ]
+  }
+}

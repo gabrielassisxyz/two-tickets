@@ -1,0 +1,18 @@
+{
+  "case": "studio",
+  "family": "lookup",
+  "request": "GET /api/v1/studio/2",
+  "fixtures": [
+    "company/walt-disney-pictures"
+  ],
+  "status": 200,
+  "body": {
+    "id": 2,
+    "name": "Walt Disney Pictures",
+    "originCountry": "US",
+    "description": "",
+    "headquarters": "Burbank, California",
+    "homepage": "https://movies.disney.com",
+    "logoPath": "/wdrCwmRnLFJhEoH8GSfymY85KHT.png"
+  }
+}

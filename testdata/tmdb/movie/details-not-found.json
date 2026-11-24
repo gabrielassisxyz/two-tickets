@@ -1,0 +1,19 @@
+{
+  "id": "movie/details-not-found",
+  "request": {
+    "path": "/movie/999999999",
+    "params": {
+      "append_to_response": "credits,external_ids,videos,keywords,release_dates,watch/providers",
+      "include_video_language": "pt-BR",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 404,
+    "body": {
+      "success": false,
+      "status_code": 34,
+      "status_message": "The resource you requested could not be found."
+    }
+  }
+}

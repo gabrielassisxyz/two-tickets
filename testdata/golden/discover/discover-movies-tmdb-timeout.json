@@ -1,0 +1,12 @@
+{
+  "case": "discover-movies-tmdb-timeout",
+  "family": "discover",
+  "request": "GET /api/v1/discover/movies?page=1",
+  "fixtures": [
+    "errors/discover-movies-timeout"
+  ],
+  "status": 500,
+  "body": {
+    "message": "Unable to retrieve popular movies."
+  }
+}

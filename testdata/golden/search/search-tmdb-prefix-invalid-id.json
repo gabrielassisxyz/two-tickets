@@ -1,0 +1,17 @@
+{
+  "case": "search-tmdb-prefix-invalid-id",
+  "family": "search",
+  "request": "GET /api/v1/search?query=tmdb%3A999999999",
+  "fixtures": [
+    "movie/details-not-found",
+    "search/tmdb-prefix-tv-not-found-invalid-id",
+    "search/tmdb-prefix-person-not-found-invalid-id"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 1,
+    "totalResults": 0,
+    "results": []
+  }
+}

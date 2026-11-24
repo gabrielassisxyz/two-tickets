@@ -1,0 +1,431 @@
+{
+  "case": "discover-trending-movies",
+  "family": "discover",
+  "request": "GET /api/v1/discover/trending?page=1&mediaType=movie",
+  "fixtures": [
+    "trending/movie-day"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 500,
+    "totalResults": 10000,
+    "results": [
+      {
+        "id": 1003596,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Avengers: Doomsday",
+        "overview": "Heróis icônicos de três universos diferentes são colocados em rota de colisão mortal e enfrentam uma ameaça existencial sem precedentes, diferente de tudo que já vivenciaram antes.",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-16",
+        "title": "Vingadores: Doutor Destino",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/tXNt66khUBZcusc22INKCeGRr4l.jpg",
+        "posterPath": "/aSzeVbyyU65420A1646YfHcf6Zt.jpg"
+      },
+      {
+        "id": 1300968,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Hunger Games: Sunrise on the Reaping",
+        "overview": "Revisite o mundo de Panem 24 anos antes dos eventos de Jogos Vorazes, começando na manhã da colheita dos 50º Jogos Vorazes, também conhecida como o Segundo Massacre Quaternário.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-18",
+        "title": "Jogos Vorazes: Amanhecer na Colheita",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+        "posterPath": "/ibZ6GSHtCeC7fLDJ2uyXNemgYwr.jpg"
+      },
+      {
+        "id": 1611767,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          10749,
+          35
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Clashing Through the Snow",
+        "overview": "Os editores rivais Ryan Mitchell e Hannah Hendricks não podem voar por causa de uma tempestade e são obrigados a dividir um carro alugado para chegar em Nova York, onde uma reunião pode salvar suas carreiras. À medida que imprevistos na estrada e paradas em cidadezinhas acontecem, o espírito natalino vai transformando a rivalidade entre eles em algo inesperado.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-23",
+        "title": "Correndo para o Natal",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/x6kwEsxxqLIoqpIrZOXRV0LORqm.jpg",
+        "posterPath": "/38xHqU2bKbsXs0KD8bXtrDFpc8n.jpg"
+      },
+      {
+        "id": 1281331,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Social Reckoning",
+        "overview": "Frances Haugen, uma jovem engenheira do Facebook, conta com a ajuda de Jeff Horwitz, repórter do The Wall Street Journal, para embarcar em uma jornada arriscada que acaba revelando alguns dos segredos mais bem guardados da rede social.",
+        "popularity": "<number>",
+        "releaseDate": "2026-10-07",
+        "title": "O Outro Lado das Redes",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/wXTaGcqX3jvdXSKCJAkl5jZyrKp.jpg",
+        "posterPath": "/51AEphEZ5JXaV0FL5PGITjLQE0m.jpg"
+      },
+      {
+        "id": 1368337,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          28,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Odyssey",
+        "overview": "Acompanhe o rei grego Odisseu em sua perigosa jornada de 20 anos para voltar a Ítaca após a Guerra de Troia, enfrentando monstros e deuses enquanto sua esposa Penélope resiste em seu reino.",
+        "popularity": "<number>",
+        "releaseDate": "2026-07-15",
+        "title": "A Odisseia",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/c7btGYblBnfAaw713WvFM0Kimc7.jpg",
+        "posterPath": "/m0ehGErq8GTLK4WZxaq9QLGAR3u.jpg"
+      },
+      {
+        "id": 1595124,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          10751,
+          35,
+          12,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Steps",
+        "overview": "Nesta comédia de ação diferente e encantadora, Lilith, a meia-irmã \"malvada\" da Cinderela, rouba a varinha da Fada Madrinha e vira do avesso a clássica história.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-20",
+        "title": "Tipo Irmãs",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/g1bEboMx1a8JCg1jXeDCh24RtgW.jpg",
+        "posterPath": "/fLOzL7A81v6V0BKWXXjfeT1ehkw.jpg"
+      },
+      {
+        "id": 969681,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Spider-Man: Brand New Day",
+        "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
+        "popularity": "<number>",
+        "releaseDate": "2026-07-29",
+        "title": "Homem-Aranha: Um Novo Dia",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/subj7knTn4DeS6KS7qI66EQKe9i.jpg",
+        "posterPath": "/x0nvYzQpyJc5pdT9lMnkMuYAg0O.jpg"
+      },
+      {
+        "id": 1538497,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          16,
+          10751,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Hexed",
+        "overview": "Uma adolescente desajeitada e sua mãe perfeccionista descobrem que suas peculiaridades podem ser poderes mágicos, transformando suas vidas e revelando um reino mágico oculto.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-25",
+        "title": "Enfeitiçadas: Bem-vindos a Hexe",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/eMcrgrIyeAgMHS5R9LltDnuxB5R.jpg",
+        "posterPath": "/lhDdE2Uvis4Khtr1o366cAbnb57.jpg"
+      },
+      {
+        "id": 1170608,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Dune: Part Three",
+        "overview": "Na qualidade de Imperador, Paul Atreides debate-se com as consequências da sua ascensão ao poder, enquanto conspirações políticas e uma guerra santa que se estende por toda a galáxia ameaçam o futuro que só ele consegue prever.",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-15",
+        "title": "Duna: Parte Três",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/i5E9H7Ik0u61ylDDTbmUpTL3Yw.jpg",
+        "posterPath": "/8WBjwT8TBCt5PCFHjmBeb1St8BS.jpg"
+      },
+      {
+        "id": 1400336,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          35,
+          10749
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Focker In-Law",
+        "overview": "Henry, filho de Greg e Pam Focker, enfrenta o caos familiar ao decidir se casar com uma mulher de personalidade forte que parece ser totalmente incompatível com ele.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-21",
+        "title": "Entrando Numa Grande Fria",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/nubnNXuMArUhiDW1nUevGsG65x9.jpg",
+        "posterPath": "/aoJYSUEBOS1MYEf4nqjsH0K3PWB.jpg"
+      },
+      {
+        "id": 1381071,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          27,
+          28
+        ],
+        "originalLanguage": "ja",
+        "originalTitle": "ゴジラ-0.0",
+        "overview": "A guerra reduziu o Japão a zero, e o Godzilla mergulhou-o no negativo. Passaram-se dois anos desde então, e o país tem enfrentado lutas agonizantes para alcançar a recuperação e, finalmente, voltar à vida normal. No momento em que a humanidade conseguiu se agarrar a uma paz conquistada com dificuldade, surge uma nova ameaça, esmagando a esperança num instante.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-03",
+        "title": "Godzilla Minus Zero",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/oqrYIDH4tvfEzPe1yqT4jzmAWHQ.jpg",
+        "posterPath": "/ebVZ8n64rtHsSItTei4EgTKzPVu.jpg"
+      },
+      {
+        "id": 1568060,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          10749,
+          53
+        ],
+        "originalLanguage": "es",
+        "originalTitle": "Perfectos mentirosos",
+        "overview": "Jude Derry chega à exclusiva Universidade de Tagus com uma missão secreta: se infiltrar no círculo dos irmãos Cash e descobrir a verdade sobre a morte do irmão dela. O que começa como vingança vira um perigoso triângulo de sedução, atração proibida e mentiras, que a empurra rumo a uma verdade para a qual talvez ela não esteja preparada. Baseado no romance de Alex Mírez.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-20",
+        "title": "Perfeitos Mentirosos",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/mdBElS5YjpZPkB9DNYjgxwWgXcv.jpg",
+        "posterPath": "/lKgbxuLuupPgIUAw0Ren7ZlOHLg.jpg"
+      },
+      {
+        "id": 1286656,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          36
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "I Play Rocky",
+        "overview": "Antes de Rocky se tornar uma lenda que atravessa gerações, Stallone precisou lutar para sobreviver. Na pele de um ator fracassado, ele escreve a história definitiva de um perdedor e precisa lutar pela chance de interpretar o papel de sua vida: Rocky Balboa. Conheça a trajetória por trás da criação de Rocky: Um Lutador.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-06",
+        "title": "Eu Sou o Rocky",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/1lnnjBCRLZzKRhQipK5zm61YkPe.jpg",
+        "posterPath": "/vXT9vzSqNypCydx0x7QXizN4CNO.jpg"
+      },
+      {
+        "id": 1551025,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          10749,
+          35
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Guarding Stars",
+        "overview": "Uma guarda-costas pragmática tem que proteger um ator de Hollywood durante as festas de fim de ano, mas o clima esquenta, segredos vêm à tona e o Natal fica bem mais complicado.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-18",
+        "title": "Protegendo Estrelas",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/qHvap0vpfTBIbv7cnR0OyBRqQHG.jpg",
+        "posterPath": "/lcjabMgrRfWGs81vq9vGK0tERDo.jpg"
+      },
+      {
+        "id": 1423191,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          27,
+          878,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Resident Evil",
+        "overview": "Bryan, um tranquilo entregador de órgãos, é enviado para uma entrega noturna no Hospital Geral de Raccoon City. No caminho por uma estrada montanhosa coberta de neve, ele acidentalmente atropela uma mulher desconhecida. Ela sobrevive, mas algo está muito errado. Ao tentar ajudar, Bryan se depara com um surto em larga escala envolvendo mutações horríveis com tentáculos e monstruosidades bioengenheiradas.",
+        "popularity": "<number>",
+        "releaseDate": "2026-09-16",
+        "title": "Resident Evil",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
+        "posterPath": "/bvBTdNaWVPrHKjyPFnsigZJsKdD.jpg"
+      },
+      {
+        "id": 1642568,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          27,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Last Temptation of Becky",
+        "overview": "A agente da CIA Becky se infiltra na Polônia em uma família que administra uma pousada em The Wolf's Lair, um dos bunkers de Hitler na Segunda Guerra Mundial. Aí descobre que o pai dela planeja iniciar o Quarto Reich, e Becky deve detê-lo.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-04",
+        "title": "The Last Temptation of Becky",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/4IyYpwIUAkWE3CiUEg2YItc4mIv.jpg",
+        "posterPath": "/nzSx9jiInWGWumMV1n1qyRqrpbq.jpg"
+      },
+      {
+        "id": 1263337,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Heart of the Beast",
+        "overview": "Um ex-soldado ferido e seu cão de guerra aposentado lutam para sobreviver na região do Alasca e encontrar o caminho de volta para casa após um acidente aéreo na mata.",
+        "popularity": "<number>",
+        "releaseDate": "2026-09-19",
+        "title": "Coração Selvagem",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/yE766yhgg98tKwTKd8CyNvAtmn6.jpg",
+        "posterPath": "/n4PJa4xVo4SjIsBvTA0yGMKjTBh.jpg"
+      },
+      {
+        "id": 1131943,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          36,
+          35
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Madden",
+        "overview": "Inspirado na vida de um querido ícone americano, este filme narra a incrível jornada de John Madden ao lado de seu melhor amigo e autêntico Al Davis. A trama acompanha desde a parceria campeã do Super Bowl com a equipe do Raiders, até ele se tornar a voz mais reconhecível do futebol americano e construir a franquia mundial de videogame Madden NFL. É a celebração de uma mente brilhante, cujo espírito e personalidade únicos, a parceria com sua ousada esposa Virginia, as amizades duradouras e o amor contagiante pelas pessoas e pelo esporte transcenderam o mundo do futebol americano.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-18",
+        "title": "Madden: O Homem e o Jogo",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/lRsapglJZIyMfGl8oQyNASlZqDC.jpg",
+        "posterPath": "/hCJ93wcAb0zGFK3G4MgkWJKx6Lm.jpg"
+      },
+      {
+        "id": 1599184,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          12
+        ],
+        "originalLanguage": "zh",
+        "originalTitle": "斗破苍穹剧场版：双帝之战",
+        "overview": "Acima da Academia Jia Nan, o Clã Hun e a Aliança Tianfu se enfrentam em um confronto por causa do lendário Imperador Antigo Tuoshe. Hun Tiandi utiliza o antigo jade para abrir a caverna do imperador. Assim, começa a disputa entre Xiao Yan e Hun Tiandi pela oportunidade de alcançar o nível de Imperador (Dou Di).",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-22",
+        "title": "Battle Through the Heavens Movie：Duel of the Two Dou Emperors",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/9uMWGlxHR3bpyhzKQLYL83m5puq.jpg",
+        "posterPath": "/kQA44KCjcI284f3uxCRAdiS9blt.jpg"
+      },
+      {
+        "id": 1084409,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          53,
+          18,
+          80
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "A Talent for Murder",
+        "overview": "A escritora Patricia Highsmith, autora do clássico O talentoso Ripley, tem um encontro curioso e intenso com um jovem agente literário determinado a convencê-la a lançar mais um livro.",
+        "popularity": "<number>",
+        "releaseDate": "2026-10-23",
+        "title": "Como Nasce um Assassino",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/b3EGc5Ucj7wIeUjFc64Wq4IYgkp.jpg",
+        "posterPath": "/bOHVe8XVlUU21Fjxtbhx4Jknksx.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "genre/movie-list-slider",
+  "request": {
+    "path": "/genre/movie/list",
+    "params": {
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "genres": [
+        {
+          "id": 28,
+          "name": "Ação"
+        },
+        {
+          "id": 12,
+          "name": "Aventura"
+        },
+        {
+          "id": 16,
+          "name": "Animação"
+        },
+        {
+          "id": 35,
+          "name": "Comédia"
+        }
+      ]
+    }
+  }
+}

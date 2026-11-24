@@ -1,0 +1,37 @@
+{
+  "case": "search-tvdb-prefix",
+  "family": "search",
+  "request": "GET /api/v1/search?query=tvdb%3A81189",
+  "fixtures": [
+    "search/find-tvdb"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 1,
+    "totalResults": 1,
+    "results": [
+      {
+        "id": 1396,
+        "firstAirDate": "2008-01-20",
+        "genreIds": [
+          18,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "Breaking Bad",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Breaking Bad",
+        "overview": "Ao saber que tem câncer, um professor passa a fabricar metanfetamina pelo futuro da família, mudando o destino de todos.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg",
+        "posterPath": "/hGwm9Cj3CdbJIqQWNExQqiYmCd4.jpg"
+      }
+    ]
+  }
+}

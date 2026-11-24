@@ -1,0 +1,17 @@
+{
+  "case": "movie-details-non-numeric-id",
+  "family": "title",
+  "request": "GET /api/v1/movie/abc",
+  "fixtures": [],
+  "status": 400,
+  "body": {
+    "message": "request/params/movieId must be number",
+    "errors": [
+      {
+        "path": "/params/movieId",
+        "message": "must be number",
+        "errorCode": "type.openapi.validation"
+      }
+    ]
+  }
+}

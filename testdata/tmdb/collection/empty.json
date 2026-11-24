@@ -1,0 +1,22 @@
+{
+  "id": "collection/empty",
+  "request": {
+    "path": "/collection/1620352",
+    "params": {
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "id": 1620352,
+      "name": "二龙湖浩哥（系列）",
+      "original_language": "zh",
+      "original_name": "二龙湖浩哥（系列）",
+      "overview": "",
+      "poster_path": null,
+      "backdrop_path": null,
+      "parts": []
+    }
+  }
+}

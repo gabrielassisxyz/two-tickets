@@ -1,0 +1,64 @@
+{
+  "case": "search-keyword",
+  "family": "search",
+  "request": "GET /api/v1/search/keyword?query=anime&page=1",
+  "fixtures": [
+    "search/keyword-anime"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "results": [
+      {
+        "id": 210024,
+        "name": "anime"
+      },
+      {
+        "id": 290799,
+        "name": "idol anime"
+      },
+      {
+        "id": 287501,
+        "name": "korean anime"
+      },
+      {
+        "id": 327471,
+        "name": "anime inspired"
+      },
+      {
+        "id": 358297,
+        "name": "independent anime"
+      },
+      {
+        "id": 382946,
+        "name": "mystery anime"
+      },
+      {
+        "id": 359393,
+        "name": "dessin animé"
+      },
+      {
+        "id": 359095,
+        "name": "anime live-action"
+      },
+      {
+        "id": 222243,
+        "name": "based on anime"
+      },
+      {
+        "id": 382947,
+        "name": "hane kage anime"
+      },
+      {
+        "id": 388864,
+        "name": "shonen anime animation"
+      },
+      {
+        "id": 381930,
+        "name": "animesque"
+      }
+    ],
+    "total_pages": 1,
+    "total_results": 12
+  }
+}

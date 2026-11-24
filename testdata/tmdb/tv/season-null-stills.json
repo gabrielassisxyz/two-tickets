@@ -1,0 +1,302 @@
+{
+  "id": "tv/season-null-stills",
+  "request": {
+    "path": "/tv/125164/season/0",
+    "params": {
+      "append_to_response": "external_ids",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "id": 202876,
+      "_id": "60f5c1bb7b7b4d005c4918b2",
+      "air_date": "2021-07-18",
+      "episodes": [
+        {
+          "air_date": "2021-07-18",
+          "episode_number": 1,
+          "episode_type": "standard",
+          "id": 3082411,
+          "name": "Episódio 1",
+          "overview": "",
+          "production_code": "",
+          "runtime": 300,
+          "season_number": 0,
+          "show_id": 125164,
+          "still_path": null,
+          "vote_average": 0,
+          "vote_count": 0,
+          "crew": [],
+          "guest_stars": [
+            {
+              "character": "Self - Correspondent",
+              "credit_id": "60f5c21f7b7b4d0020ebd64f",
+              "order": 509,
+              "adult": false,
+              "gender": 1,
+              "id": 2985035,
+              "known_for_department": "Acting",
+              "name": "Mónica Rincón",
+              "original_name": "Mónica Rincón",
+              "popularity": 0.141,
+              "profile_path": "/323wLuLAQK4pt3AtOwflusFnhdd.jpg"
+            },
+            {
+              "character": "Self",
+              "credit_id": "60f5c2337b7b4d0020ebd681",
+              "order": 510,
+              "adult": false,
+              "gender": 2,
+              "id": 3041116,
+              "known_for_department": "Acting",
+              "name": "Ignacio Briones",
+              "original_name": "Ignacio Briones",
+              "popularity": 0.0633,
+              "profile_path": "/pwx1rOgqlaXAUpBwLnLG3aMgKAm.jpg"
+            },
+            {
+              "character": "Self",
+              "credit_id": "609751cba055ef003fbca997",
+              "order": 511,
+              "adult": false,
+              "gender": 2,
+              "id": 2976798,
+              "known_for_department": "Acting",
+              "name": "Joaquín Lavín",
+              "original_name": "Joaquín Lavín",
+              "popularity": 0.271,
+              "profile_path": "/6ZD4VIjkeuFx4GO9zJ4GkeR46sh.jpg"
+            },
+            {
+              "character": "Self",
+              "credit_id": "60a866dd501cf20078c575dd",
+              "order": 512,
+              "adult": false,
+              "gender": 2,
+              "id": 2978104,
+              "known_for_department": "Acting",
+              "name": "Daniel Jadue",
+              "original_name": "Daniel Jadue",
+              "popularity": 0.0791,
+              "profile_path": "/1VlRNfDAG31Im8ktlP4302JX0Lh.jpg"
+            },
+            {
+              "character": "Self",
+              "credit_id": "60f5c263b84cdd007ebf62f4",
+              "order": 532,
+              "adult": false,
+              "gender": 2,
+              "id": 3077929,
+              "known_for_department": "Acting",
+              "name": "Sebastián Sichel",
+              "original_name": "Sebastián Sichel",
+              "popularity": 0.1787,
+              "profile_path": "/kPJJrkK0W21ULhlRvPeWlaFDMkT.jpg"
+            },
+            {
+              "character": "Self",
+              "credit_id": "6097527ecf4b8b003ca2da13",
+              "order": 552,
+              "adult": false,
+              "gender": 2,
+              "id": 3041119,
+              "known_for_department": "Acting",
+              "name": "Mario Desbordes",
+              "original_name": "Mario Desbordes",
+              "popularity": 0.156,
+              "profile_path": "/q1BJR0sf1nCMgnWbP3YSFP2mZQd.jpg"
+            },
+            {
+              "character": "Self - Correspondent",
+              "credit_id": "60f5c2298258fc0045891961",
+              "order": 567,
+              "adult": false,
+              "gender": 2,
+              "id": 1994711,
+              "known_for_department": "Acting",
+              "name": "Daniel Matamala",
+              "original_name": "Daniel Matamala",
+              "popularity": 0.1911,
+              "profile_path": "/AmdAXuABjRKrVY2HMjOMlfpl1wX.jpg"
+            },
+            {
+              "character": "Self - Correspondent",
+              "credit_id": "60f5c2724c2592002d2730bb",
+              "order": 568,
+              "adult": false,
+              "gender": 2,
+              "id": 3142322,
+              "known_for_department": "Acting",
+              "name": "Juan Pablo Queraltó",
+              "original_name": "Juan Pablo Queraltó",
+              "popularity": 0.0845,
+              "profile_path": null
+            },
+            {
+              "character": "Self",
+              "credit_id": "609754a9b39e35003d19a3f5",
+              "order": 585,
+              "adult": false,
+              "gender": 2,
+              "id": 2987222,
+              "known_for_department": "Acting",
+              "name": "Gabriel Boric",
+              "original_name": "Gabriel Boric",
+              "popularity": 0.2225,
+              "profile_path": "/gGgW4FX1qCx5Ssih9taqxHtiUUe.jpg"
+            }
+          ]
+        },
+        {
+          "air_date": "2021-11-21",
+          "episode_number": 2,
+          "episode_type": "standard",
+          "id": 3349746,
+          "name": "Episódio 2",
+          "overview": "",
+          "production_code": "",
+          "runtime": 300,
+          "season_number": 0,
+          "show_id": 125164,
+          "still_path": null,
+          "vote_average": 0,
+          "vote_count": 0,
+          "crew": [],
+          "guest_stars": [
+            {
+              "character": "Self",
+              "credit_id": "60975e95a055ef003ebdce72",
+              "order": 583,
+              "adult": false,
+              "gender": 2,
+              "id": 2978117,
+              "known_for_department": "Acting",
+              "name": "Francisco Vidal",
+              "original_name": "Francisco Vidal",
+              "popularity": 0.229,
+              "profile_path": "/8ndJWW1AOEg2zlDczh7kzOT0qz6.jpg"
+            }
+          ]
+        },
+        {
+          "air_date": "2021-12-19",
+          "episode_number": 3,
+          "episode_type": "standard",
+          "id": 3409228,
+          "name": "Episódio 3",
+          "overview": "",
+          "production_code": "",
+          "runtime": 300,
+          "season_number": 0,
+          "show_id": 125164,
+          "still_path": null,
+          "vote_average": 0,
+          "vote_count": 0,
+          "crew": [],
+          "guest_stars": [
+            {
+              "character": "Self",
+              "credit_id": "60975e95a055ef003ebdce72",
+              "order": 583,
+              "adult": false,
+              "gender": 2,
+              "id": 2978117,
+              "known_for_department": "Acting",
+              "name": "Francisco Vidal",
+              "original_name": "Francisco Vidal",
+              "popularity": 0.229,
+              "profile_path": "/8ndJWW1AOEg2zlDczh7kzOT0qz6.jpg"
+            }
+          ]
+        },
+        {
+          "air_date": "2022-03-11",
+          "episode_number": 4,
+          "episode_type": "standard",
+          "id": 3589080,
+          "name": "Episódio 4",
+          "overview": "",
+          "production_code": "",
+          "runtime": 300,
+          "season_number": 0,
+          "show_id": 125164,
+          "still_path": null,
+          "vote_average": 0,
+          "vote_count": 0,
+          "crew": [],
+          "guest_stars": [
+            {
+              "character": "Self",
+              "credit_id": "60975e95a055ef003ebdce72",
+              "order": 583,
+              "adult": false,
+              "gender": 2,
+              "id": 2978117,
+              "known_for_department": "Acting",
+              "name": "Francisco Vidal",
+              "original_name": "Francisco Vidal",
+              "popularity": 0.229,
+              "profile_path": "/8ndJWW1AOEg2zlDczh7kzOT0qz6.jpg"
+            }
+          ]
+        },
+        {
+          "air_date": "2023-02-18",
+          "episode_number": 5,
+          "episode_type": "standard",
+          "id": 4417010,
+          "name": "Episódio 5",
+          "overview": "",
+          "production_code": "",
+          "runtime": null,
+          "season_number": 0,
+          "show_id": 125164,
+          "still_path": null,
+          "vote_average": 0,
+          "vote_count": 0,
+          "crew": [],
+          "guest_stars": []
+        },
+        {
+          "air_date": "2023-02-19",
+          "episode_number": 6,
+          "episode_type": "standard",
+          "id": 4417011,
+          "name": "Episódio 6",
+          "overview": "",
+          "production_code": "",
+          "runtime": null,
+          "season_number": 0,
+          "show_id": 125164,
+          "still_path": null,
+          "vote_average": 0,
+          "vote_count": 0,
+          "crew": [],
+          "guest_stars": []
+        }
+      ],
+      "name": "Especiais",
+      "networks": [
+        {
+          "id": 805,
+          "logo_path": "/nZAblk9dd36BmwuPoK61Tb2xHTQ.png",
+          "name": "Chilevisión",
+          "origin_country": "CL"
+        }
+      ],
+      "overview": "",
+      "poster_path": null,
+      "season_number": 0,
+      "vote_average": 0,
+      "external_ids": {
+        "freebase_mid": null,
+        "freebase_id": null,
+        "tvdb_id": null,
+        "tvrage_id": null,
+        "wikidata_id": null
+      }
+    }
+  }
+}

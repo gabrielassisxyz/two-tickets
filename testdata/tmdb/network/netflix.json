@@ -1,0 +1,18 @@
+{
+  "id": "network/netflix",
+  "request": {
+    "path": "/network/213",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "headquarters": "Los Gatos, California, USA",
+      "homepage": "https://www.netflix.com",
+      "id": 213,
+      "logo_path": "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png",
+      "name": "Netflix",
+      "origin_country": ""
+    }
+  }
+}

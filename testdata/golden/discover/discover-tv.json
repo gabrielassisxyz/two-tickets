@@ -1,0 +1,442 @@
+{
+  "case": "discover-tv",
+  "family": "discover",
+  "request": "GET /api/v1/discover/tv?page=1",
+  "fixtures": [
+    "discover/tv-popular"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 1001,
+    "totalResults": 20001,
+    "keywords": [],
+    "results": [
+      {
+        "id": 42009,
+        "firstAirDate": "2011-12-04",
+        "genreIds": [
+          10765,
+          18,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Black Mirror",
+        "originCountry": [
+          "GB"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Black Mirror",
+        "overview": "As histórias bizarras não têm limite nesta série antológica que revela o pior da humanidade, suas maiores invenções e muito mais.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/dg3OindVAGZBjlT3xYKqIAdukPL.jpg",
+        "posterPath": "/aCTL24B8ZuiI2osMwoUI5rqBXoF.jpg"
+      },
+      {
+        "id": 46923,
+        "firstAirDate": "2013-03-10",
+        "genreIds": [
+          80,
+          18,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Shetland",
+        "originCountry": [
+          "GB"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Shetland",
+        "overview": "DI Jimmy Perez volta a sua terra natal com a enteada Cassie após a morte de sua esposa. O pai biológico de Cassie vive na ilha e Jimmy tenta reatar o relacionamento entre a enteada e o pai biológico, que a abandonou quando bebê. Jimmy percebe que as ilhas já não são como antes, onde a violência, insegurança e intranquilidade também chegaram.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/AdlDrgoNCDu3naYjZMwmiklBHnV.jpg",
+        "posterPath": "/rKnxmir8m5I3RdSTdZr3jaQaCZi.jpg"
+      },
+      {
+        "id": 41727,
+        "firstAirDate": "2013-01-11",
+        "genreIds": [
+          80,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Banshee",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Banshee",
+        "overview": "Um ex-detento assume a identidade de Lucas Hood, o novo delegado de Banshee. Lá vive Carrie, ex-parceira no amor e no crime, que hoje leva uma vida pacata ao lado do marido, o promotor local. A marca da registrada da cidade é a corrupção, graças ao líder amish Kai Proctor. Ele, porém, não é o único problema para Lucas, já que um mafioso de Nova York quer vingança.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/mo9bfYdewzmHxnaeURB2jRPvGuX.jpg",
+        "posterPath": "/5nXFiz8Rn8eezVjSTZBd7HmnF1G.jpg"
+      },
+      {
+        "id": 1434,
+        "firstAirDate": "1999-01-31",
+        "genreIds": [
+          16,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Uma Família da Pesada",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Family Guy",
+        "overview": "A série animada apresenta as aventuras da família Griffin. O ignorante Peter e sua esposa Lois residem em Quahog, em Rhode Island e têm três filhos. Meg, a filha mais velha, é uma pária social, e o adolescente Chris é estranho e sem noção quando se trata do sexo oposto. O mais novo, Stewie, é um bebê gênio decidido a matar sua mãe e destruir o mundo. O cachorro falante, Brian, mantém Stewie sob controle enquanto toma martinis e resolve seus próprios problemas de vida.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/jbTqU6BJMufoMnPSlO4ThrcXs3Y.jpg",
+        "posterPath": "/j28XGzAhvJNGWEHbYrzvREw7kKd.jpg"
+      },
+      {
+        "id": 32573,
+        "firstAirDate": "2010-05-05",
+        "genreIds": [
+          18,
+          10759
+        ],
+        "mediaType": "tv",
+        "name": "Strike Back",
+        "originCountry": [
+          "GB"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Strike Back",
+        "overview": "Strike Back é o fruto de uma parceria Reino Unido e Estados Unidos que resultou em uma série de ação militar. A história segue as ações da Seção 20, um ramo secreto do serviço de defesa britânico que opera várias missões de alto risco, prioritárias em todo o mundo.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/2tL3pNaPQb2ioEYswMkDGVTo1pt.jpg",
+        "posterPath": "/c0ItaC2Grf4WVJ06G87BjNn9pRs.jpg"
+      },
+      {
+        "id": 1622,
+        "firstAirDate": "2005-09-13",
+        "genreIds": [
+          18,
+          9648,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Sobrenatural",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Supernatural",
+        "overview": "Os irmãos Dean e Sam vasculham o país em busca de atividades paranormais, brigando com demônios, fantasmas e monstros no caminho.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/lirPqYLTtd6XZqGn4cS1wiesTq0.jpg",
+        "posterPath": "/ovFzkkKknAo2SbM2DfOabxRvzmy.jpg"
+      },
+      {
+        "id": 95480,
+        "firstAirDate": "2022-04-01",
+        "genreIds": [
+          80,
+          18,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Slow Horses",
+        "originCountry": [
+          "GB"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Slow Horses",
+        "overview": "Este drama perspicaz acompanha uma equipe disfuncional de agentes da MI5 – e seu chefe arrogante, o notório Jackson Lamb – enquanto navegam os mistérios e ilusões do mundo da espionagem para proteger a Inglaterra de forças sinistras.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/gPQppUnLx9vqPDLz3WwZ2HJsNbt.jpg",
+        "posterPath": "/rdNvIaPXpkUZl5tQLsTP15osfu2.jpg"
+      },
+      {
+        "id": 1420,
+        "firstAirDate": "2011-09-20",
+        "genreIds": [
+          35
+        ],
+        "mediaType": "tv",
+        "name": "New Girl",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "New Girl",
+        "overview": "Uma nova comédia que gira em torno de uma jovem nada convencional que, após uma complicada ruptura sentimental, vai morar com três amigos solteiros que mudam sua vida de forma inusitada.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/959IFVeGqz2M6qGvQ1RxN2r6Mq6.jpg",
+        "posterPath": "/blNT5hSseducgYndEVPAajh09VS.jpg"
+      },
+      {
+        "id": 4620,
+        "firstAirDate": "2006-07-18",
+        "genreIds": [
+          10765,
+          35,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Eureka",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Eureka",
+        "overview": "A cidade de Eureka, no noroeste do Pacífico, está escondendo um misterioso segredo. O governo tem relocado os gênios do mundo e suas famílias para esta cidade rústica há anos, onde a inovação e o caos têm vivido de mãos dadas. O marechal americano Jack Carter se depara com essa estranha cidade depois de destruir seu carro e ficar encalhado ali. Quando os habitantes da cidade se lançam sobre uma criação científica desconhecida, Carter pula para tentar restaurar a ordem e, consequentemente, aprende um dos segredos mais bem guardados do país.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/8MQeyFsWrp2ILjbumtxrinmk7t4.jpg",
+        "posterPath": "/f2l5hUk63hPqYTucnFy2HmElFV0.jpg"
+      },
+      {
+        "id": 1438,
+        "firstAirDate": "2002-06-02",
+        "genreIds": [
+          80,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "A Escuta",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Wire",
+        "overview": "Uma série que acompanha o desenrolar de uma investigação policial, a partir do ponto de vista dos agentes policiais e também dos criminosos procurados.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/aQTtua5pG490fMfeKgtYg5B853e.jpg",
+        "posterPath": "/taMUpRAnpZzi5yEaDQ45KhKGRyu.jpg"
+      },
+      {
+        "id": 1413,
+        "firstAirDate": "2011-10-05",
+        "genreIds": [
+          18,
+          9648,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "American Horror Story",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "American Horror Story",
+        "overview": "Uma antologia dramática de terror trazendo a cada temporada novas histórias, cenários e personagens perturbadores.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/5G4Bnc4Q0YUK1bwLEUYmIsmm2Ib.jpg",
+        "posterPath": "/yCkPLQ10qKIUgRBXmQVVMF1h96d.jpg"
+      },
+      {
+        "id": 5920,
+        "firstAirDate": "2008-09-23",
+        "genreIds": [
+          80,
+          18,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "O Mentalista",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Mentalist",
+        "overview": "Patrick Jane é famoso por sua habilidade de alta percepção de tudo que está ao seu redor. Ele já quase foi uma celebridade, alegando ser médium vidente, mas agora admite que fingia ter poderes paranormais. Com sua grande habilidade de observação, Patrick trabalha como consultor independente para as autoridades da Califórnia, resolvendo um número considerável de crimes complicados.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/rJFqKcmMSttdNP58l0dVzY2NcTA.jpg",
+        "posterPath": "/bJ0SNoD0DchXo5nH3N81ABIe3H.jpg"
+      },
+      {
+        "id": 76331,
+        "firstAirDate": "2018-06-03",
+        "genreIds": [
+          18,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Succession",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Succession",
+        "overview": "Acompanhe a história da família Roy, composta por Logan e seus quatro filhos, que controla um dos maiores conglomerados de meios de comunicação e entretenimento do mundo.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/d87JXX3DLkRJMfm5StCmmnmhHuX.jpg",
+        "posterPath": "/z0XiwdrCQ9yVIr4O0pxzaAYRxdW.jpg"
+      },
+      {
+        "id": 18347,
+        "firstAirDate": "2009-09-17",
+        "genreIds": [
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Community",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Community",
+        "overview": "Sempre foi dito que universidades comunitárias são um meio escolar para perdedores, um workshop de auto-estima para donas-de-casa recém divorciadas e um lugar onde pessoas velhas vão para manter sua mente ocupada enquanto esperam pela morte. Bem, no Greendale Community College… Isso tudo é verdade! “Community” é focada em um grupo de desviados, onde o líder é um advogado que teve o grau revogado. Eles formam um grupo de estudo, onde acabam aprendendo mais sobre si mesmo, do que sobre a matéria cursada.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/1xRfgONYmK3T6FSmbtcuo8eyxVt.jpg",
+        "posterPath": "/3KUjDt8XY7w2Ku70UE0SECmv1zP.jpg"
+      },
+      {
+        "id": 84773,
+        "firstAirDate": "2022-09-01",
+        "genreIds": [
+          10759,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "O Senhor dos Anéis: Os Anéis de Poder",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Lord of the Rings: The Rings of Power",
+        "overview": "Tendo início em uma época de relativa paz, a série acompanha um grupo de personagens que enfrenta o ressurgimento do mal na Terra-média. Das profundezas escuras das Montanhas de Névoa, das majestosas florestas de Lindon, do belíssimo reino da ilha de Númenor, até os confins do mapa, esses reinos e personagens criarão legados que permanecerão vivos muito além de suas partidas.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/i1phX1JpaqSnHBBGta6LBFYVCZq.jpg",
+        "posterPath": "/8FPCnfOftiLTHg5wnJxVdtlF8EN.jpg"
+      },
+      {
+        "id": 60735,
+        "firstAirDate": "2014-10-07",
+        "genreIds": [
+          18,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Flash",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Flash",
+        "overview": "Um perito forense desperta de um coma com poderes especiais que serão postos à prova na luta contra forças que ameaçam a cidade.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/gFkHcIh7iE5G0oVOgpmY8ONQjhl.jpg",
+        "posterPath": "/lFxIoMKqkgTuxpghTPHBjoVstMV.jpg"
+      },
+      {
+        "id": 86893,
+        "firstAirDate": "2019-03-25",
+        "genreIds": [
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Tacoma FD",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Tacoma FD",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/cn0BAoregZTYm7hG58pDFIfPjAr.jpg",
+        "posterPath": "/mH0d0dUdHYkmHLAkoTVXc1FUS9V.jpg"
+      },
+      {
+        "id": 83631,
+        "firstAirDate": "2019-03-27",
+        "genreIds": [
+          35,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "O Que Fazemos Nas Sombras",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "What We Do in the Shadows",
+        "overview": "Um olhar sobre a vida cotidiana de quatro vampiros que estão juntos há centenas de anos. Após a visita de seu senhor e líder sombrio, eles são lembrados de seu propósito em vir a Nova York há mais de um século.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/mKikck71CvVISUSTLk29fwRbH4y.jpg",
+        "posterPath": "/cWsC3SWssTIBVxA2nZenacBgYh2.jpg"
+      },
+      {
+        "id": 1877,
+        "firstAirDate": "2007-08-17",
+        "genreIds": [
+          16,
+          35,
+          10751,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Phineas e Ferb",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Phineas and Ferb",
+        "overview": "Todos os dias, dois meio-irmãos nas férias de verão embarcam em um grande novo projeto, o que irrita sua irmã controladora, Candace, que sempre tenta entrega-los para sua mãe. Enquanto isso, seu animal de estimação Perry o ornitorrinco luta contra o malvado Dr. Doofenshmirtz.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/5MWFjQ3NuNtNeOE9FdrVLeNMNPs.jpg",
+        "posterPath": "/cu2nJgERq8ZmRUlBFPsamdJb7rh.jpg"
+      },
+      {
+        "id": 37678,
+        "firstAirDate": "2011-04-26",
+        "genreIds": [
+          10764
+        ],
+        "mediaType": "tv",
+        "name": "The Voice",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Voice",
+        "overview": "Quatro músicos famosos procuram pela melhor voz na América e vão orientar os cantores durante a competição. A América irá decidir qual cantor será digno do grande prêmio.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/x8pSFa3BXyVpkjHyn7YxmLyhjoh.jpg",
+        "posterPath": "/7ah1WExcMkzbq7sARCTmcC23tBr.jpg"
+      }
+    ]
+  }
+}

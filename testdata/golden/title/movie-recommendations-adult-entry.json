@@ -1,0 +1,433 @@
+{
+  "case": "movie-recommendations-adult-entry",
+  "family": "title",
+  "request": "GET /api/v1/movie/603/recommendations?page=1",
+  "fixtures": [
+    "movie/recommendations-adult"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 36,
+    "totalResults": 709,
+    "results": [
+      {
+        "id": 87101,
+        "mediaType": "movie",
+        "adult": true,
+        "genreIds": [
+          878,
+          28,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Terminator Genisys",
+        "overview": "John Connor, líder da resistência humana contra Skynet, envia Kyle Reese de volta a 1984 para proteger sua mãe, Sarah. Porém, Reese se surpreende ao encontrá-la com um exterminador que age como seu protetor, e descobre que o passado foi alterado.",
+        "popularity": "<number>",
+        "releaseDate": "2015-06-23",
+        "title": "O Exterminador do Futuro: Gênesis",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/wvlIoof1FnKPLv9jAYanuP31V0C.jpg",
+        "posterPath": "/xmFGm5Earx8OOYEbgE3iuiNmQpu.jpg"
+      },
+      {
+        "id": 777443,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          12,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Electric State",
+        "overview": "Uma adolescente órfã pega a estrada com um robô misterioso em busca do irmão há muito tempo desaparecido, encontrando no caminho um contrabandista e seu ajudante hilário.",
+        "popularity": "<number>",
+        "releaseDate": "2025-02-24",
+        "title": "The Electric State",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/2n7lYEeIbucsEQCswRcVB6ZYmMP.jpg",
+        "posterPath": "/mUBxeBpI5xg66YhLJxg8Ppv0ArW.jpg"
+      },
+      {
+        "id": 99861,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          12,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Avengers: Age of Ultron",
+        "overview": "Ao tentar proteger o planeta de ameaças, Tony Stark constrói um sistema de inteligência artificial que cuidaria da paz mundial. O projeto acaba dando errado e gera o nascimento do Ultron. Com o destino da Terra em jogo, os Vingadores terão que se unir para mais uma vez salvar a raça humana da extinção.",
+        "popularity": "<number>",
+        "releaseDate": "2015-04-22",
+        "title": "Vingadores: Era de Ultron",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/kIBK5SKwgqIIuRKhhWrJn3XkbPq.jpg",
+        "posterPath": "/uvzqTsRmUzk9mJVzX8cMSWMyM5l.jpg"
+      },
+      {
+        "id": 274855,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          878,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Geostorm",
+        "overview": "E se, após mais de uma década de desastres naturais devastadores, nós descobríssemos uma forma de controlar a mãe natureza e a destruição que ela carrega? Quando uma mudança catastrófica do clima ameaça a sobrevivência da terra, os governos mundiais se unem e criam o Projeto Dutch Boy: uma rede global de satélites ao redor do planeta armados com tecnologias de geo-engenharia desenvolvidas para impedir os desastres naturais. Após proteger o planeta com sucesso por dois anos, algo começa a dar errado. Dois irmão afastados são encarregados de resolver um defeito no funcionamento do programa antes que uma tempestade mundial acabe com tudo.",
+        "popularity": "<number>",
+        "releaseDate": "2017-10-12",
+        "title": "Tempestade: Planeta em Fúria",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/u6QKT8EqpPHoPUng7aE90mWXigX.jpg",
+        "posterPath": "/7646jFVhBDqpd8WqwWLSVO5vAIR.jpg"
+      },
+      {
+        "id": 670292,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Creator",
+        "overview": "Em meio a uma futura guerra entre a raça humana e as forças da inteligência artificial, Joshua, um endurecido ex-agente das forças especiais que lamenta o desaparecimento de sua esposa, é recrutado para caçar e matar o Criador, o indescritível arquiteto da IA avançada que desenvolveu uma arma misteriosa com o poder de acabar com a guerra - e a própria humanidade.",
+        "popularity": "<number>",
+        "releaseDate": "2023-09-27",
+        "title": "Resistência",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/kjQBrc00fB2RjHZB3PGR4w9ibpz.jpg",
+        "posterPath": "/a2CroeECoXPpvJlbUxtrfDd4Rih.jpg"
+      },
+      {
+        "id": 860,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          878,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "WarGames",
+        "overview": "Um jovem (Matthew Broderick) aficcionado por informática conecta seu micro acidentalmente ao sistema de defesa americano, controlado por um computador ultrasofisticado. O acidente provoca um estado de alerta, que pode acabar causando a Terceira Guerra Mundial.",
+        "popularity": "<number>",
+        "releaseDate": "1983-06-03",
+        "title": "Jogos de Guerra",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/qtamfYGFfDLfGRcucx1zNwohRts.jpg",
+        "posterPath": "/wp0pKfyNhAE2EgWapYWNl5Zm4v5.jpg"
+      },
+      {
+        "id": 262543,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          53,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Autómata",
+        "overview": "Jacq Vaucan, agente de seguros da Robotics Corporation por volta de 2060, investiga rotineiramente casos de manipulação de robôs. Numa de suas descobertas, Vaucan irá desvendar mistérios complexos que trarão consequências profundas para o futuro da humanidade.",
+        "popularity": "<number>",
+        "releaseDate": "2014-10-09",
+        "title": "Agente do Futuro",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/kVChi7qHX9UMcpAh7J6fGBCCH2c.jpg",
+        "posterPath": "/s2GdAwJulHmlTIKZmSnFzFDxwvq.jpg"
+      },
+      {
+        "id": 438631,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Dune",
+        "overview": "Em um futuro distante, planetas são comandados por casas nobres que fazem parte de um império feudal intergalático. Paul Atreides é um jovem cuja família toma o controle do planeta deserto Arrakis, também conhecido como Duna. A única fonte da especiaria Melange, a substância mais importante do cosmos, Arrakis se mostra ser um planeta nem um pouco fácil de governar.",
+        "popularity": "<number>",
+        "releaseDate": "2021-09-15",
+        "title": "Duna",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/xS0g3s4blsiPmtpjjb7chFjI1ip.jpg",
+        "posterPath": "/uzERcfV2rSHNhW5eViQiO9hNiA7.jpg"
+      },
+      {
+        "id": 524434,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Eternals",
+        "overview": "Após os eventos de \"Vingadores: Ultimato\", os Eternos, uma raça alienígena imortal criada pelos Celestiais que vivem em segredo na Terra há mais de 7000 anos, se reúnem após uma tragédia inesperada para proteger a humanidade de seus colegas malignos: os Deviantes.",
+        "popularity": "<number>",
+        "releaseDate": "2021-11-03",
+        "title": "Eternos",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/c6H7Z4u73ir3cIoCteuhJh7UCAR.jpg",
+        "posterPath": "/2IgZIYa8iTQuLNIcVERwXmh8pUj.jpg"
+      },
+      {
+        "id": 20526,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          28,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "TRON: Legacy",
+        "overview": "Quando Flynn, o maior criador de videogames do planeta, envia uma mensagem de um incrível mundo digital, seu filho descobre o caminho e embarca numa jornada pessoal para salvar seu pai desaparecido há anos. Com a ajuda da destemida guerreira Quorra, pai e filho se aventuram num universo cibernético incrível e travam a batalha definitiva do bem x mal.",
+        "popularity": "<number>",
+        "releaseDate": "2010-12-14",
+        "title": "Tron: O Legado",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/uUa6jgSr5BQpcBhhaz1PV1JhSa4.jpg",
+        "posterPath": "/kHSIHeYvcP8NTjESmxh9vMAk15E.jpg"
+      },
+      {
+        "id": 157350,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          12,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Divergent",
+        "overview": "Na futurística cidade de Chicago, ao completar 16 anos, Beatrice precisa escolher entre as diferentes facções em que a cidade está dividida. Cada uma representa um valor diferente e, ao contrário de sua família, a jovem opta pela facção dos destemidos, a Audácia. Ela então se torna Tris e inicia uma jornada para afastar seus medos e descobrir quem realmente é. Durante essa jornada, acaba conhecendo o jovem Quatro, um rapaz experiente que tem o dom de intrigá-la e de encantá-la ao mesmo tempo.",
+        "popularity": "<number>",
+        "releaseDate": "2014-03-14",
+        "title": "Divergente",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/bgkFOoXEQMRjKkCvgoj7smdGbuh.jpg",
+        "posterPath": "/tieMNz2baXJNSbIWMt0zFTb1IuY.jpg"
+      },
+      {
+        "id": 533533,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          12,
+          28
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "TRON: Ares",
+        "overview": "Um programa de IA altamente avançado chamado Ares (Jared Leto) que é enviado do mundo digital (A Grade) para o mundo real em uma missão perigosa, sendo o primeiro encontro da humanidade com inteligência artificial que transcende o ciberespaço, explorando temas de consciência e a linha tênue entre homem e máquina em meio a uma corrida tecnológica entre duas empresas, Dillinger e Encon",
+        "popularity": "<number>",
+        "releaseDate": "2025-10-08",
+        "title": "Tron: Ares",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/pUNfHmVqfwRdILhCkU8TdysVOXo.jpg",
+        "posterPath": "/4NO0mmJ7WEU3PcllcogmiQIUecq.jpg"
+      },
+      {
+        "id": 1090,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          53,
+          878,
+          9648
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Thirteenth Floor",
+        "overview": "Um homem acorda e descobre uma camisa ensanguentada em casa. Seu chefe foi assassinado na noite anterior, e ele não consegue se lembrar de nada. Esta ficção científica explora a possibilidade sinistra e assustadora de universos simulados por computadores, onde as pessoas apenas acreditam que são reais.",
+        "popularity": "<number>",
+        "releaseDate": "1999-04-16",
+        "title": "13º Andar",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/nJ0jz1J3zNja31UEMeklhgFeMw5.jpg",
+        "posterPath": "/2Wv6a0yNxTl7NH1f0FbPYC2kZvg.jpg"
+      },
+      {
+        "id": 9620,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          878,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Paycheck",
+        "overview": "Michael Jennings é um engenheiro de computação contratado por corporações para descobrir os segredos de empresas concorrentes. Quando ele finaliza um projeto, sua memória é apagada para evitar o vazamento de informações secretas. Porém, quando termina seu trabalho mais recente, ele acorda do processo de eliminação de memória apenas com um envelope na mão, contendo vários objetos, e começa a ser perseguido pela polícia.",
+        "popularity": "<number>",
+        "releaseDate": "2003-12-25",
+        "title": "O Pagamento",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/rdlXnumaarKFHQ4rB8YBWINEeuE.jpg",
+        "posterPath": "/8d6VZvqRqTPKGA074BfZiOGGw94.jpg"
+      },
+      {
+        "id": 2135,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          12,
+          28
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Time Machine",
+        "overview": "Desesperado pelo assassinato de sua noiva, o inventor Alexander não consegue reverter a morte da amada alterando o tempo. Porém, em um futuro em que a humanidade está dividida entre espécies pacíficas e predatórias, o cientista precisa enfrentar os carnívoros Morlocks para salvar seus novos amigos.",
+        "popularity": "<number>",
+        "releaseDate": "2002-03-04",
+        "title": "A Máquina do Tempo",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/i0eOILDW8HipIkOUSKhB1dvZzNJ.jpg",
+        "posterPath": "/hEUR9s3oWImmN1PdSvzzTm0ez1N.jpg"
+      },
+      {
+        "id": 353491,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          14,
+          28,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Dark Tower",
+        "overview": "Um pistoleiro chamado Roland Deschain percorre o mundo em busca da famosa Torre Negra, prédio mágico que está prestes a desaparecer. Essa busca envolve uma intensa perseguição ao poderoso Homem de Preto, passagens entre tempos diferentes, encontros intensos e confusões entre o real e o imaginário. Baseado na obra literária homônima de Stephen King.",
+        "popularity": "<number>",
+        "releaseDate": "2017-08-03",
+        "title": "A Torre Negra",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/pVVobDO8cezhVPvwD6EBUN0g3mt.jpg",
+        "posterPath": "/ampCjcdMJAPm9AmVcmxwicpjnKE.jpg"
+      },
+      {
+        "id": 30061,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          878,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Justice League: Crisis on Two Earths",
+        "overview": "Neste longa de animação, um Lex Luthor \"do bem\" vem de um universo alternativo para pedir ajuda, pois seu planeta está sendo ameaçado pelo Sindicato do Crime, uma versão maligna da Liga da Justiça. As coisas se complicam quando o vilão Coruja tenta por em prática um plano diabólico, que poderá colocar todo o equilíbrio dos universos em perigo.",
+        "popularity": "<number>",
+        "releaseDate": "2010-02-23",
+        "title": "Liga da Justiça: Crise em Duas Terras",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/okRY6YHbakM9cQz08EfcaLfzDoX.jpg",
+        "posterPath": "/bdlmUeBn2k2LGADnJKsyzuegaXC.jpg"
+      },
+      {
+        "id": 70160,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          12,
+          28,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Hunger Games",
+        "overview": "Num futuro distante, boa parte da população é controlada por um regime totalitário, que relembra esse domínio realizando um evento anual – e mortal – entre os 12 distritos sob sua tutela. Para salvar sua irmã caçula, a jovem Katniss Everdeen se oferece como voluntária para representar seu distrito na competição e acaba contando com a companhia de Peeta Melark, desafiando não só o sistema dominante, mas também a força dos outros oponentes.",
+        "popularity": "<number>",
+        "releaseDate": "2012-03-12",
+        "title": "Jogos Vorazes",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/eVYChqJavS1DCXFeJE2lzVUMLKp.jpg",
+        "posterPath": "/l6jn53LMu07uPt8A42JWIKi1Beb.jpg"
+      },
+      {
+        "id": 412656,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          14,
+          878,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Chaos Walking",
+        "overview": "Em um futuro não muito distante, em um mundo onde as mulheres desapareceram e os homens foram afetados pelo \"ruído\" – uma força que deixa seus pensamentos audíveis – Todd Hewitt encontra Viola, uma jovem misteriosa que aterrissou em seu planeta. Com Viola correndo perigo, Todd jura protegê-la e colocá-la fora de perigo. Para salvá-la, Todd terá que controlar seu \"ruído\", descobrir sua própria força e desvendar todos os segredos sombrios que seu planeta e sua comunidade guardam.",
+        "popularity": "<number>",
+        "releaseDate": "2021-02-24",
+        "title": "Mundo em Caos",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/qCPLtXrTB10UsgAFxsWOB44gDPu.jpg",
+        "posterPath": "/oMSumadgRiygK1DUtBurdnZb9Jz.jpg"
+      },
+      {
+        "id": 420410,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "2149: The Aftermath",
+        "overview": "In an oppressive future, where everyone's only contact is their computer, one lonely young man is forced to venture forth in search of human contact.",
+        "popularity": "<number>",
+        "releaseDate": "2016-10-07",
+        "title": "2149: The Aftermath",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/gJmM9pDsltITbPz0iH79kc8tWv9.jpg",
+        "posterPath": "/oHBGb6MKYvT6j1ICCV53t2Kn1Te.jpg"
+      }
+    ]
+  }
+}

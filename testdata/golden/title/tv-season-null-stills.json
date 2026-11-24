@@ -1,0 +1,104 @@
+{
+  "case": "tv-season-null-stills",
+  "family": "title",
+  "request": "GET /api/v1/tv/125164/season/0",
+  "fixtures": [
+    "tv/details-en-null-stills",
+    "tv/season-null-stills"
+  ],
+  "status": 200,
+  "body": {
+    "airDate": "2021-07-18",
+    "episodes": [
+      {
+        "id": 3082411,
+        "airDate": "2021-07-18",
+        "episodeNumber": 1,
+        "name": "Episódio 1",
+        "overview": "",
+        "productionCode": "",
+        "seasonNumber": 0,
+        "showId": 125164,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "stillPath": null
+      },
+      {
+        "id": 3349746,
+        "airDate": "2021-11-21",
+        "episodeNumber": 2,
+        "name": "Episódio 2",
+        "overview": "",
+        "productionCode": "",
+        "seasonNumber": 0,
+        "showId": 125164,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "stillPath": null
+      },
+      {
+        "id": 3409228,
+        "airDate": "2021-12-19",
+        "episodeNumber": 3,
+        "name": "Episódio 3",
+        "overview": "",
+        "productionCode": "",
+        "seasonNumber": 0,
+        "showId": 125164,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "stillPath": null
+      },
+      {
+        "id": 3589080,
+        "airDate": "2022-03-11",
+        "episodeNumber": 4,
+        "name": "Episódio 4",
+        "overview": "",
+        "productionCode": "",
+        "seasonNumber": 0,
+        "showId": 125164,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "stillPath": null
+      },
+      {
+        "id": 4417010,
+        "airDate": "2023-02-18",
+        "episodeNumber": 5,
+        "name": "Episódio 5",
+        "overview": "",
+        "productionCode": "",
+        "seasonNumber": 0,
+        "showId": 125164,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "stillPath": null
+      },
+      {
+        "id": 4417011,
+        "airDate": "2023-02-19",
+        "episodeNumber": 6,
+        "name": "Episódio 6",
+        "overview": "",
+        "productionCode": "",
+        "seasonNumber": 0,
+        "showId": 125164,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "stillPath": null
+      }
+    ],
+    "externalIds": {
+      "freebaseId": null,
+      "freebaseMid": null,
+      "tvdbId": null,
+      "tvrageId": null
+    },
+    "id": 202876,
+    "name": "Especiais",
+    "overview": "",
+    "seasonNumber": 0,
+    "posterPath": null
+  }
+}
