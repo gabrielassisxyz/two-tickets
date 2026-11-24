@@ -24,7 +24,7 @@ const (
 	titleTvAppend        = "aggregate_credits,credits,external_ids,keywords,videos,content_ratings,watch/providers"
 )
 
-func (s *Service) registerTitles(mux *http.ServeMux) {
+func (s *Service) registerTitles(mux watchlistRouteMux) {
 	mux.HandleFunc("GET /api/v1/movie/{movieId}", s.handleTitleMovie)
 	mux.HandleFunc("GET /api/v1/movie/{movieId}/recommendations", s.handleTitleMovieRecommendations)
 	mux.HandleFunc("GET /api/v1/movie/{movieId}/similar", s.handleTitleMovieSimilar)
@@ -105,6 +105,7 @@ func (s *Service) handleTitleMovie(w http.ResponseWriter, r *http.Request) {
 	case !found:
 		respond.Error(w, http.StatusNotFound, "Movie not found.")
 	default:
+		details.OnUserWatchlist = s.watchlistHas(r.Context(), "movie", id)
 		respond.JSON(w, details)
 	}
 }
@@ -152,6 +153,7 @@ func (s *Service) handleTitleTv(w http.ResponseWriter, r *http.Request) {
 	case !found:
 		respond.Error(w, http.StatusNotFound, "Series not found.")
 	default:
+		details.OnUserWatchlist = s.watchlistHas(r.Context(), "tv", id)
 		respond.JSON(w, details)
 	}
 }

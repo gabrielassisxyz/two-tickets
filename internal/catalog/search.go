@@ -15,7 +15,7 @@ import (
 // Seerr's own responses and are pinned by goldens under testdata/golden/search.
 // Keyword and company answers stay raw snake_case, as their consumers expect.
 
-func (s *Service) registerSearch(mux *http.ServeMux) {
+func (s *Service) registerSearch(mux watchlistRouteMux) {
 	mux.Handle("GET /api/v1/search", http.HandlerFunc(s.handleSearch))
 	mux.Handle("GET /api/v1/search/keyword", http.HandlerFunc(s.handleSearchKeyword))
 	mux.Handle("GET /api/v1/search/company", http.HandlerFunc(s.handleSearchCompany))

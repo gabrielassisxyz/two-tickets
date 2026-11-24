@@ -100,7 +100,7 @@ type lookupWatchRegionsTMDB struct {
 	Results []tmdb.WatchProviderRegion `json:"results"`
 }
 
-func (s *Service) registerLookups(mux *http.ServeMux) {
+func (s *Service) registerLookups(mux watchlistRouteMux) {
 	mux.Handle("GET /api/v1/genres/movie", http.HandlerFunc(s.handleLookupMovieGenres))
 	mux.Handle("GET /api/v1/genres/tv", http.HandlerFunc(s.handleLookupTVGenres))
 	mux.Handle("GET /api/v1/keyword/{id}", http.HandlerFunc(s.handleLookupKeyword))

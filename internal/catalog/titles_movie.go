@@ -177,7 +177,7 @@ func mapTitleMovieDetails(movie titleMovieTMDB) titleMovieDetails {
 		ExternalIds:         MapExternalIds(movie.ExternalIDs),
 		WatchProviders:      MapWatchProviders(movie.WatchProviders.Results),
 		Keywords:            nonNullResultArray(movie.Keywords.Keywords),
-		// Watchlist state belongs to the library; nothing here reads it.
+		// Watchlist state belongs to the library; the route sets it.
 		OnUserWatchlist: false,
 	}
 }
