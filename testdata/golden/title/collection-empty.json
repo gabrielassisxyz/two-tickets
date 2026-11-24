@@ -1,0 +1,17 @@
+{
+  "case": "collection-empty",
+  "family": "title",
+  "request": "GET /api/v1/collection/1620352",
+  "fixtures": [
+    "collection/empty"
+  ],
+  "status": 200,
+  "body": {
+    "id": 1620352,
+    "name": "二龙湖浩哥（系列）",
+    "overview": "",
+    "posterPath": null,
+    "backdropPath": null,
+    "parts": []
+  }
+}

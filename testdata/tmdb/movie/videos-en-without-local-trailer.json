@@ -1,0 +1,84 @@
+{
+  "id": "movie/videos-en-without-local-trailer",
+  "request": {
+    "path": "/movie/26564",
+    "params": {
+      "append_to_response": "videos",
+      "include_video_language": "en",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "adult": false,
+      "backdrop_path": "/1mlfORlfu2PtZnlEB3gMKqJy7Qp.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 99,
+          "name": "Documentário"
+        }
+      ],
+      "homepage": "",
+      "id": 26564,
+      "imdb_id": "tt0109508",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "Crumb",
+      "overview": "Documentário que retrata a genialidade e o espírito transgressor do cartunista Robert Crumb, papa do movimento underground dos anos 70, nos Estados Unidos. Engraçado e ao mesmo tempo perturbador, o filme percorre seis anos da vida de Crumb e da sua família.",
+      "popularity": 1.3917,
+      "poster_path": "/9ocTHdBCJdwJ65Tubg3lYlfMxEY.jpg",
+      "production_companies": [
+        {
+          "id": 4532,
+          "logo_path": null,
+          "name": "Superior Pictures",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "1995-04-28",
+      "revenue": 3041083,
+      "runtime": 121,
+      "softcore": false,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Sexo Estranho • Obsessão • Quadrinhos",
+      "title": "Crumb",
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 300,
+      "videos": {
+        "results": [
+          {
+            "iso_639_1": "en",
+            "iso_3166_1": "US",
+            "name": "Official Trailer",
+            "key": "67uWAtFmjYI",
+            "site": "YouTube",
+            "size": 480,
+            "type": "Trailer",
+            "official": true,
+            "id": "6805c159276bf64e41aab41c",
+            "published_at": "2025-04-16T22:00:07.000Z"
+          }
+        ]
+      }
+    }
+  }
+}

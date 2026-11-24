@@ -1,0 +1,19 @@
+{
+  "id": "search/tmdb-prefix-tv-not-found",
+  "request": {
+    "path": "/tv/485013",
+    "params": {
+      "append_to_response": "aggregate_credits,credits,external_ids,keywords,videos,content_ratings,watch/providers",
+      "include_video_language": "pt-BR",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 404,
+    "body": {
+      "success": false,
+      "status_code": 34,
+      "status_message": "The resource you requested could not be found."
+    }
+  }
+}

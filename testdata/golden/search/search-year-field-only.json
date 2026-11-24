@@ -1,0 +1,16 @@
+{
+  "case": "search-year-field-only",
+  "family": "search",
+  "request": "GET /api/v1/search?query=year%3A1999",
+  "fixtures": [
+    "search/year-only-movies",
+    "search/year-only-tv"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 1,
+    "totalResults": 0,
+    "results": []
+  }
+}

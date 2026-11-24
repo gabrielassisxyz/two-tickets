@@ -1,0 +1,296 @@
+{
+  "case": "movie-details-minimal",
+  "family": "title",
+  "request": "GET /api/v1/movie/485013",
+  "fixtures": [
+    "movie/details-minimal",
+    "movie/videos-en-minimal",
+    "movie/details-en-minimal"
+  ],
+  "status": 200,
+  "body": {
+    "id": 485013,
+    "adult": false,
+    "budget": 0,
+    "genres": [
+      {
+        "id": 28,
+        "name": "Ação"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10752,
+        "name": "Guerra"
+      }
+    ],
+    "relatedVideos": [],
+    "originalLanguage": "en",
+    "originalTitle": "The Guardian Angel",
+    "popularity": "<number>",
+    "productionCompanies": [
+      {
+        "id": 98610,
+        "name": "Daniel Stisen Productions",
+        "originCountry": "",
+        "logoPath": null
+      }
+    ],
+    "productionCountries": [
+      {
+        "iso_3166_1": "NO",
+        "name": "Norway"
+      }
+    ],
+    "releaseDate": "2018-03-29",
+    "releases": {
+      "results": [
+        {
+          "iso_3166_1": "NO",
+          "release_dates": [
+            {
+              "certification": "",
+              "descriptors": [],
+              "iso_639_1": "no",
+              "note": "Cineuropa lists year 2018 and first listed release FI 29/03/2018; DK release 28/06/2018.",
+              "release_date": "2018-03-29T00:00:00.000Z",
+              "type": 2
+            }
+          ]
+        }
+      ]
+    },
+    "revenue": 0,
+    "spokenLanguages": [
+      {
+        "english_name": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      }
+    ],
+    "status": "Released",
+    "title": "The Guardian Angel",
+    "video": false,
+    "voteAverage": "<number>",
+    "voteCount": "<number>",
+    "backdropPath": null,
+    "homepage": "",
+    "imdbId": "tt6388158",
+    "overview": "In July 1944, with the Allies landed at Normandy but unable to push past German forces, a young German soldier is enlisted for a spy mission by a mysterious American OSS officer named Harry which could turn the tide of the war.",
+    "posterPath": null,
+    "runtime": 0,
+    "tagline": "",
+    "credits": {
+      "cast": [
+        {
+          "castId": 6,
+          "character": "Sergeant Braun",
+          "creditId": "64c89fc789f74900c981a7c2",
+          "id": 32887,
+          "name": "Christopher Heyerdahl",
+          "order": 0,
+          "gender": 2,
+          "profilePath": "/pTPZa3TFIkxRbqM5adXYE51a99s.jpg"
+        },
+        {
+          "castId": 2,
+          "character": "Albert Klosser",
+          "creditId": "59fcf5eac3a368683500158f",
+          "id": 920,
+          "name": "Jürgen Prochnow",
+          "order": 1,
+          "gender": 2,
+          "profilePath": "/4489XcYBPCY0CoqLHN04Bjz4A3q.jpg"
+        },
+        {
+          "castId": 3,
+          "character": "Colonel Otto Skorzeny",
+          "creditId": "59fcf5f8c3a36867f60016fa",
+          "id": 942,
+          "name": "Ralf Moeller",
+          "order": 2,
+          "gender": 2,
+          "profilePath": "/lfx7pAL0einahCePvn10SmMCfoU.jpg"
+        },
+        {
+          "castId": 7,
+          "character": "General Omar Bradley",
+          "creditId": "64c8a07108cf87011c55cfff",
+          "id": 6564,
+          "name": "Lawrence Pressman",
+          "order": 3,
+          "gender": 2,
+          "profilePath": "/k9MkT0iU8JkFuiA2SSwigAlM7wT.jpg"
+        },
+        {
+          "castId": 8,
+          "character": "Colonel William Donovan",
+          "creditId": "64c8a0b5d5191f00acd55e48",
+          "id": 78439,
+          "name": "John Shea",
+          "order": 4,
+          "gender": 2,
+          "profilePath": "/hw8bJ85kNBx0cz5Ml2X5vqMP7bu.jpg"
+        },
+        {
+          "castId": 9,
+          "character": "Sergeant Preis",
+          "creditId": "64c8a0e0d5191f00c529fe4f",
+          "id": 25848,
+          "name": "Rudolf Martin",
+          "order": 5,
+          "gender": 2,
+          "profilePath": "/hoAVxstMxMYr38EBvpc5eH3wR41.jpg"
+        },
+        {
+          "castId": 10,
+          "character": "Captain Ulrich Muller",
+          "creditId": "64c8a1241fa1c8015144a546",
+          "id": 1481440,
+          "name": "Daniel Stisen",
+          "order": 6,
+          "gender": 2,
+          "profilePath": "/jhyIFfBnM5nLhHdpFiGIW6qk9x5.jpg"
+        },
+        {
+          "castId": 11,
+          "character": "Colonel Robert Kessler",
+          "creditId": "64c8a149b97442012d6c6dfc",
+          "id": 19899,
+          "name": "Dennis Storhøi",
+          "order": 7,
+          "gender": 2,
+          "profilePath": "/oKIPuT0L0jiXfqXIBRzpqrojsPv.jpg"
+        },
+        {
+          "castId": 12,
+          "character": "Gerta Greenfeld",
+          "creditId": "64c8a17b08cf8700e2777f44",
+          "id": 1179775,
+          "name": "Mia Jexen",
+          "order": 8,
+          "gender": 1,
+          "profilePath": "/jEJ6FMabAheEiwyLOHTYB8urXF0.jpg"
+        },
+        {
+          "castId": 13,
+          "character": "Sergeant Liebig",
+          "creditId": "64c8a1a9f794ad00fff42ba4",
+          "id": 28432,
+          "name": "Max Mauff",
+          "order": 9,
+          "gender": 2,
+          "profilePath": "/iLbPfx8jKCWKxYkh27yVgJTmHQB.jpg"
+        },
+        {
+          "castId": 14,
+          "character": "Maurice",
+          "creditId": "64c8a1c389f74900ae0bcbbe",
+          "id": 370383,
+          "name": "Nicky Naudé",
+          "order": 10,
+          "gender": 2,
+          "profilePath": "/rYepc4NHmUMZB4ogKHXCFECvFPu.jpg"
+        }
+      ],
+      "crew": [
+        {
+          "creditId": "59fcf5c9c3a36867f60016b2",
+          "department": "Directing",
+          "id": 9556,
+          "job": "Director",
+          "name": "David Barrett",
+          "gender": 2,
+          "profilePath": "/aGLJHvn8BPFzbRq0zAIHGvqlmje.jpg"
+        },
+        {
+          "creditId": "67760ed6dd179c5b35927fec",
+          "department": "Writing",
+          "id": 1006260,
+          "job": "Writer",
+          "name": "Scott Fivelson",
+          "gender": 2,
+          "profilePath": "/BjDMRfNiW7IQZNbC11YXSEHS8g.jpg"
+        },
+        {
+          "creditId": "67760ee109b80f9bb312973d",
+          "department": "Writing",
+          "id": 5153308,
+          "job": "Writer",
+          "name": "Charles E. Gibb",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67760ef0f6fa01a2aa613d38",
+          "department": "Production",
+          "id": 1006260,
+          "job": "Producer",
+          "name": "Scott Fivelson",
+          "gender": 2,
+          "profilePath": "/BjDMRfNiW7IQZNbC11YXSEHS8g.jpg"
+        },
+        {
+          "creditId": "67760f09dd179c5b35928003",
+          "department": "Production",
+          "id": 1379036,
+          "job": "Co-Producer",
+          "name": "Pontus Olgrim",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67760f1bdd179c5b3592800d",
+          "department": "Production",
+          "id": 4736580,
+          "job": "Co-Producer",
+          "name": "Helen Holly Phoenix",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "67760f2efbe3722a9861c74b",
+          "department": "Production",
+          "id": 1303320,
+          "job": "Co-Producer",
+          "name": "Thierry Malet",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67760f3fdd179c5b35928030",
+          "department": "Sound",
+          "id": 1303320,
+          "job": "Music",
+          "name": "Thierry Malet",
+          "gender": 2,
+          "profilePath": null
+        }
+      ]
+    },
+    "externalIds": {
+      "facebookId": null,
+      "imdbId": "tt6388158",
+      "instagramId": null,
+      "twitterId": null
+    },
+    "watchProviders": [],
+    "keywords": [
+      {
+        "id": 5265,
+        "name": "espionage"
+      },
+      {
+        "id": 470,
+        "name": "spy"
+      },
+      {
+        "id": 1956,
+        "name": "world war ii"
+      }
+    ],
+    "onUserWatchlist": false
+  }
+}

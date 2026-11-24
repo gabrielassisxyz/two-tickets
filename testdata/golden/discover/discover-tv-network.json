@@ -1,0 +1,456 @@
+{
+  "case": "discover-tv-network",
+  "family": "discover",
+  "request": "GET /api/v1/discover/tv/network/213?page=1",
+  "fixtures": [
+    "network/netflix",
+    "discover/tv-network-netflix"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 148,
+    "totalResults": 2950,
+    "network": {
+      "id": 213,
+      "name": "Netflix",
+      "originCountry": "",
+      "headquarters": "Los Gatos, California, USA",
+      "homepage": "https://www.netflix.com",
+      "logoPath": "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
+    },
+    "results": [
+      {
+        "id": 42009,
+        "firstAirDate": "2011-12-04",
+        "genreIds": [
+          10765,
+          18,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Black Mirror",
+        "originCountry": [
+          "GB"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Black Mirror",
+        "overview": "As histórias bizarras não têm limite nesta série antológica que revela o pior da humanidade, suas maiores invenções e muito mais.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/dg3OindVAGZBjlT3xYKqIAdukPL.jpg",
+        "posterPath": "/aCTL24B8ZuiI2osMwoUI5rqBXoF.jpg"
+      },
+      {
+        "id": 4656,
+        "firstAirDate": "1993-01-11",
+        "genreIds": [
+          10764
+        ],
+        "mediaType": "tv",
+        "name": "Raw",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Raw",
+        "overview": "Esta série pioneira da WWE destaca mais de trinta anos de lutas inesquecíveis, momentos marcantes e episódios cheios de grandes estrelas.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/ykWWT8FAChBffNxcDzoJMCK9LBb.jpg",
+        "posterPath": "/fstEe6RsyNyPUnMwNcL20iNl0nE.jpg"
+      },
+      {
+        "id": 291507,
+        "firstAirDate": "2026-11-11",
+        "genreIds": [
+          9648,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "O Corpo",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Body",
+        "overview": "Na noite de Halloween, as garotas de um grupo de dança são tomadas por desejos profanos, visões fantasmagóricas e culpa católica depois que um ritual de iniciação dá errado.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/hYJqUoXRZnodGxgVZTM8uwr5kbC.jpg",
+        "posterPath": "/iHG87S3P8409qOFtYA616BiNLPj.jpg"
+      },
+      {
+        "id": 15226,
+        "firstAirDate": "1998-01-21",
+        "genreIds": [
+          10759,
+          80,
+          18,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "C.I.D",
+        "originCountry": [
+          "IN"
+        ],
+        "originalLanguage": "hi",
+        "originalName": "सीआईडी",
+        "overview": "Uma equipe de homens e mulheres que trabalha no Departamento de Investigação Criminal está disposta a arriscar tudo para solucionar os crimes mais desafiadores de Mumbai.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/1gZrOa2E9DOohEvSLLBJqus2zGu.jpg",
+        "posterPath": "/3UymnlLfLMKxG8OcFhSnAlnhQfZ.jpg"
+      },
+      {
+        "id": 65701,
+        "firstAirDate": "2012-01-09",
+        "genreIds": [
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Good Mythical Morning",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Good Mythical Morning",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/hvFCS0dMeC3ffiF4uYTKzUAkvYL.jpg",
+        "posterPath": "/jMpBQr2aNOFAI6wsC47zsOG6qOh.jpg"
+      },
+      {
+        "id": 502,
+        "firstAirDate": "1969-11-10",
+        "genreIds": [
+          10762,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Vila Sésamo",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Sesame Street",
+        "overview": "Em uma rua especial no centro da cidade, os habitantes, humanos e bonecos, ensinam temas pré-escolares com comédia, desenhos animados, jogos e canções.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/tNi2aJPdCKfielGYzIi3IKxStz9.jpg",
+        "posterPath": "/efyqi8KvJcYrnFA9cDOL3Ph9bxs.jpg"
+      },
+      {
+        "id": 45790,
+        "firstAirDate": "2012-10-06",
+        "genreIds": [
+          16,
+          10759,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "JoJo's Bizarre Adventure",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ジョジョの奇妙な冒険",
+        "overview": "A saga que se inicia na Inglaterra do século XIX, contando a rivalidade entre Jonathan Joestar, um jovem aristocrata, e Dio Brando, um garoto plebeu que foi acolhido pelo pai de Jonathan quando tornou-se órfão. Insatisfeito com sua posição social, a ambição insaciável e o desejo de dominação de Dio o levam a estudar os poderes sobrenaturais de uma antiga máscara asteca de pedra presente na mansão dos Joestar - um artefato que mudará para sempre o destino de Dio e das futuras gerações dos Joestar.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/l2gc2dPRUPe3bAfYCRTjc6uAMmB.jpg",
+        "posterPath": "/2Sc0veFPh9CcHMtNqMyiQqIW9ZF.jpg"
+      },
+      {
+        "id": 1424,
+        "firstAirDate": "2013-07-11",
+        "genreIds": [
+          18,
+          35,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "Orange Is the New Black",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Orange Is the New Black",
+        "overview": "Um crime cometido no passado coloca uma privilegiada nova-iorquina na prisão, onde ela faz várias amigas. E inimigas.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/zJiWhsEYCy5BkFCBONoMnUunyZQ.jpg",
+        "posterPath": "/enI85hAm51txs8jUY7PWQXR1Xm5.jpg"
+      },
+      {
+        "id": 66732,
+        "firstAirDate": "2016-07-15",
+        "genreIds": [
+          10759,
+          9648,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Stranger Things",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Stranger Things",
+        "overview": "Quando um garoto desaparece, a cidade toda participa nas buscas. Mas o que encontram são segredos, forças sobrenaturais e uma menina.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/9P4IIMYY3HifqeruZq0ZZ9g7YUi.jpg",
+        "posterPath": "/twfKp60THrcOIep9sjHODOOfO8d.jpg"
+      },
+      {
+        "id": 63174,
+        "firstAirDate": "2016-01-25",
+        "genreIds": [
+          80,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Lucifer",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Lucifer",
+        "overview": "Entediado com a vida nas trevas, o diabo se muda para Los Angeles, abre um piano-bar e empresta sua sabedoria a uma investigadora de assassinatos.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/ta5oblpMlEcIPIS2YGcq9XEkWK2.jpg",
+        "posterPath": "/hdKxcoV5CFc3sGOmbGXDXbx1cTZ.jpg"
+      },
+      {
+        "id": 65494,
+        "firstAirDate": "2016-11-04",
+        "genreIds": [
+          18
+        ],
+        "mediaType": "tv",
+        "name": "The Crown",
+        "originCountry": [
+          "GB",
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Crown",
+        "overview": "Esta série dramática segue a política, rivalidades e relacionamentos da rainha Elizabeth II, e os eventos que fizeram a história.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/8VXhcrl5z2I1zEU9X3pkkNrZlD.jpg",
+        "posterPath": "/ehUMAA3qDR5HNor9DB60g72KNQZ.jpg"
+      },
+      {
+        "id": 68073,
+        "firstAirDate": "2016-05-02",
+        "genreIds": [
+          16,
+          35,
+          10751,
+          10762
+        ],
+        "mediaType": "tv",
+        "name": "The Loud House",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Loud House",
+        "overview": "A série conta a história de Lincoln Loud, um menino de 11 anos de idade, que vive em sua casa com dez irmãs e como ele tenta sobreviver sendo o único garoto da família, com as suas soluções criativas para os problemas comuns e caóticos do lar.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/jQmYRTt29hTNFGdNdwFVazOrDpO.jpg",
+        "posterPath": "/6ois2bDPTluWA4tpDWwMEHUVtjP.jpg"
+      },
+      {
+        "id": 4194,
+        "firstAirDate": "2008-10-03",
+        "genreIds": [
+          10759,
+          10765,
+          16
+        ],
+        "mediaType": "tv",
+        "name": "Star Wars: The Clone Wars",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Star Wars: The Clone Wars",
+        "overview": "A guerra dos clones se expande por toda a galáxia, e os heróis Jedi lutam desesperadamente a fim de manter a ordem e a paz. Sistemas sucumbem perante o lado negro da força e a República Galáctica está sofrendo contínua pressão dos Separatistas e seu infinito exército de dróides.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/m6eRgkR1KC6Mr6gKx6gKCzSn6vD.jpg",
+        "posterPath": "/pvDFqSHSdyWiPu0ihJJkDXxnBM9.jpg"
+      },
+      {
+        "id": 67744,
+        "firstAirDate": "2017-10-13",
+        "genreIds": [
+          18,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "MINDHUNTER",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "MINDHUNTER",
+        "overview": "Um agente da Unidade de Crimes em Série do FBI desenvolve avançadas técnicas de psicologia criminal ao perseguir notórios assassinos e estupradores.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/lpDVJuIro21gtMj9iXMFKHuroZN.jpg",
+        "posterPath": "/fbKE87mojpIETWepSbD5Qt741fp.jpg"
+      },
+      {
+        "id": 96677,
+        "firstAirDate": "2021-01-08",
+        "genreIds": [
+          80,
+          18,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Lupin",
+        "originCountry": [
+          "FR"
+        ],
+        "originalLanguage": "fr",
+        "originalName": "Lupin",
+        "overview": "Inspirado pelas aventuras de Arsène Lupin, o ladrão gentil Assane Diop quer se vingar de uma família rica por uma injustiça cometida contra o pai dele.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/jgAZYiuRV37pCxmhx8NTdhE36RL.jpg",
+        "posterPath": "/sOUWRai0215iUSMackrZx3Y1j05.jpg"
+      },
+      {
+        "id": 300523,
+        "firstAirDate": "2026-11-20",
+        "genreIds": [
+          80,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Estrada das Lágrimas",
+        "originCountry": [
+          "KR"
+        ],
+        "originalLanguage": "ko",
+        "originalName": "푸른길",
+        "overview": "Dois detetives tentam solucionar assassinatos brutais e mensagens enigmáticas que surgem em dois países. Só que a verdade está mais perto do que eles imaginam.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/7ojpD6ARKYhRxnsjzMIrorOfj4T.jpg",
+        "posterPath": "/c3kKwzYpUvtLMCtfmrDPqphsZrc.jpg"
+      },
+      {
+        "id": 63333,
+        "firstAirDate": "2015-10-10",
+        "genreIds": [
+          10759,
+          18,
+          10768
+        ],
+        "mediaType": "tv",
+        "name": "The Last Kingdom",
+        "originCountry": [
+          "GB"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Last Kingdom",
+        "overview": "Enquanto Alfredo, o Grande, defende seu reino de invasões nórdicas, Uhtred - um saxão criado por vikings - planeja reivindicar o que é seu por direito.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/QbtctI8EzlhsyFDMUMyG3fli8B.jpg",
+        "posterPath": "/fMNJjzZUdc8pBVIQ85olSNaBKix.jpg"
+      },
+      {
+        "id": 61222,
+        "firstAirDate": "2014-08-22",
+        "genreIds": [
+          16,
+          35,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "BoJack Horseman",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "BoJack Horseman",
+        "overview": "Conheça o cavalo mais amado da TV dos anos 90... vinte anos depois! Ranzinza e com um coração de... não exatamente ouro... mas parecido. Latão?",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/81BCTObfPk0EvarJpUgnGXHvM9x.jpg",
+        "posterPath": "/6JFWzlChcGgLiIUo2COgNlWGFKy.jpg"
+      },
+      {
+        "id": 93405,
+        "firstAirDate": "2021-09-17",
+        "genreIds": [
+          10759,
+          9648,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Round 6",
+        "originCountry": [
+          "KR"
+        ],
+        "originalLanguage": "ko",
+        "originalName": "오징어 게임",
+        "overview": "Centenas de jogadores falidos aceitam um estranho convite para um jogo de sobrevivência. Um prêmio milionário aguarda, mas as apostas são altas e mortais.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/2meX1nMdScFOoV4370rqHWKmXhY.jpg",
+        "posterPath": "/6gcHdboppvplmBWxvROc96NJnmm.jpg"
+      },
+      {
+        "id": 289517,
+        "firstAirDate": "2026-10-30",
+        "genreIds": [
+          9648,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Um Trabalho do Inferno",
+        "originCountry": [
+          "KR"
+        ],
+        "originalLanguage": "ko",
+        "originalName": "꿀알바",
+        "overview": "Endividado, um jovem aceita empregos lucrativos em uma agência misteriosa, mas logo descobre que sua busca por dinheiro vai se tornar um pesadelo.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/gWedDgBsZkuOho2qe3q2sTQmbpO.jpg",
+        "posterPath": "/sb7uyzV8re3uSvogl6jn8KjLbAH.jpg"
+      }
+    ]
+  }
+}

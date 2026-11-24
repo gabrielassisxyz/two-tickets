@@ -1,0 +1,140 @@
+{
+  "id": "discover/tv-slider-backdrops-4",
+  "request": {
+    "path": "/discover/tv",
+    "params": {
+      "include_null_first_air_dates": "false",
+      "language": "en",
+      "page": "1",
+      "region": "",
+      "sort_by": "popularity.desc",
+      "with_genres": "35"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "page": 1,
+      "results": [
+        {
+          "adult": false,
+          "backdrop_path": "/jbTqU6BJMufoMnPSlO4ThrcXs3Y.jpg",
+          "genre_ids": [
+            16,
+            35
+          ],
+          "id": 1434,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Family Guy",
+          "overview": "A série animada apresenta as aventuras da família Griffin. O ignorante Peter e sua esposa Lois residem em Quahog, em Rhode Island e têm três filhos. Meg, a filha mais velha, é uma pária social, e o adolescente Chris é estranho e sem noção quando se trata do sexo oposto. O mais novo, Stewie, é um bebê gênio decidido a matar sua mãe e destruir o mundo. O cachorro falante, Brian, mantém Stewie sob controle enquanto toma martinis e resolve seus próprios problemas de vida.",
+          "popularity": 2146.4007,
+          "poster_path": "/j28XGzAhvJNGWEHbYrzvREw7kKd.jpg",
+          "first_air_date": "1999-01-31",
+          "softcore": false,
+          "name": "Uma Família da Pesada",
+          "vote_average": 7.419,
+          "vote_count": 5229
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/5MWFjQ3NuNtNeOE9FdrVLeNMNPs.jpg",
+          "genre_ids": [
+            16,
+            35,
+            10751,
+            10765
+          ],
+          "id": 1877,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Phineas and Ferb",
+          "overview": "Todos os dias, dois meio-irmãos nas férias de verão embarcam em um grande novo projeto, o que irrita sua irmã controladora, Candace, que sempre tenta entrega-los para sua mãe. Enquanto isso, seu animal de estimação Perry o ornitorrinco luta contra o malvado Dr. Doofenshmirtz.",
+          "popularity": 1508.5257,
+          "poster_path": "/cu2nJgERq8ZmRUlBFPsamdJb7rh.jpg",
+          "first_air_date": "2007-08-17",
+          "softcore": false,
+          "name": "Phineas e Ferb",
+          "vote_average": 7.9,
+          "vote_count": 1098
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/jIArNHIekrCSVgdMbKPAXpPY03Y.jpg",
+          "genre_ids": [
+            16,
+            35
+          ],
+          "id": 456,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "The Simpsons",
+          "overview": "Uma animação sobre uma típica família dos Estados Unidos. Homer é o pai de família nada saudável ou inteligente, que adora beber cerveja. Marge é a esposa e mãe de família dedicada. Bart é o filho de 10 anos, que não leva a escola a sério e tem orgulho disso. Lisa é a garota de 8 anos, um gênio não apreciado. E Maggie é a bebê que não larga a chupeta.",
+          "popularity": 1025.6937,
+          "poster_path": "/1jGPgDDcmg3Xgs3WO8sfYfbnFoA.jpg",
+          "first_air_date": "1989-12-17",
+          "softcore": false,
+          "name": "Os Simpsons",
+          "vote_average": 8.029,
+          "vote_count": 11198
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/yYpQV25I7XB6S0POJOScPjxYWV5.jpg",
+          "genre_ids": [
+            16,
+            10759,
+            10765
+          ],
+          "id": 60572,
+          "origin_country": [
+            "JP"
+          ],
+          "original_language": "ja",
+          "original_name": "ポケットモンスター",
+          "overview": "Explore o mundo de Pokémon com Ash Ketchum e seu parceiro Pikachu enquanto eles fazem novos amigos, encontram Pokémon poderosos e buscam o objetivo supremo de Ash: Tornar-se um Mestre Pokémon!",
+          "popularity": 950.3702,
+          "poster_path": "/ck1nfqYxMkiGvBVztIuM6b7fHoC.jpg",
+          "first_air_date": "1997-04-01",
+          "softcore": false,
+          "name": "Pokémon",
+          "vote_average": 7.984,
+          "vote_count": 2316
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            16,
+            35,
+            10762,
+            10751
+          ],
+          "id": 2153,
+          "origin_country": [
+            "US",
+            "CA"
+          ],
+          "original_language": "en",
+          "original_name": "Arthur",
+          "overview": "Conta as aventuras e desventuras de um porquinho-da-terra de oito anos, cujo maior charme é ser apenas uma criança normal. Acompanhado da irmã e dos amigos, ele consegue resolver os problemas que aparecem, sempre com imaginação, bondade e muito humor.",
+          "popularity": 368.3718,
+          "poster_path": "/nYN8okmcsmhd4bGVcqifZ5OCumB.jpg",
+          "first_air_date": "1996-10-07",
+          "softcore": false,
+          "name": "Arthur",
+          "vote_average": 7,
+          "vote_count": 194
+        }
+      ],
+      "total_pages": 787,
+      "total_results": 15739
+    }
+  }
+}

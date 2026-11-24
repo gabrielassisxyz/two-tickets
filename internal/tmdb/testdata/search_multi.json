@@ -1,0 +1,25 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "id": 550,
+      "media_type": "movie",
+      "title": "Central do Brasil",
+      "name": "",
+      "overview": "A retired teacher hits the road.",
+      "poster_path": "/central.jpg",
+      "vote_average": 8.1
+    },
+    {
+      "id": 1399,
+      "media_type": "tv",
+      "title": "",
+      "name": "Bacurau Nights",
+      "overview": "A small town resists.",
+      "poster_path": "/bacurau.jpg",
+      "vote_average": 7.4
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 2
+}

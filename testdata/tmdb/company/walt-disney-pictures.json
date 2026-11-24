@@ -1,0 +1,20 @@
+{
+  "id": "company/walt-disney-pictures",
+  "request": {
+    "path": "/company/2",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "description": "",
+      "headquarters": "Burbank, California",
+      "homepage": "https://movies.disney.com",
+      "id": 2,
+      "logo_path": "/wdrCwmRnLFJhEoH8GSfymY85KHT.png",
+      "name": "Walt Disney Pictures",
+      "origin_country": "US",
+      "parent_company": null
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "case": "genres-movie-tmdb-timeout",
+  "family": "lookup",
+  "request": "GET /api/v1/genres/movie",
+  "fixtures": [
+    "errors/genres-movie-timeout"
+  ],
+  "status": 500,
+  "body": {
+    "message": "Unable to retrieve movie genres."
+  }
+}

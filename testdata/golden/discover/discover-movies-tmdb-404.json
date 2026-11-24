@@ -1,0 +1,12 @@
+{
+  "case": "discover-movies-tmdb-404",
+  "family": "discover",
+  "request": "GET /api/v1/discover/movies?page=1",
+  "fixtures": [
+    "errors/discover-movies-404"
+  ],
+  "status": 500,
+  "body": {
+    "message": "Unable to retrieve popular movies."
+  }
+}

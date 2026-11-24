@@ -1,0 +1,443 @@
+{
+  "case": "tv-recommendations",
+  "family": "title",
+  "request": "GET /api/v1/tv/249042/recommendations?page=1",
+  "fixtures": [
+    "tv/recommendations"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 29,
+    "totalResults": 564,
+    "results": [
+      {
+        "id": 211358,
+        "firstAirDate": "2024-04-17",
+        "genreIds": [
+          18,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "Debaixo da Ponte: A Verdadeira História do Assassinato de Reena Virk",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Under the Bridge",
+        "overview": "A história real de uma jovem de catorze anos que foi encontrar amigos e nunca mais voltou para casa.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/zooSXzEZCqULXUZZpwqiLEGcid7.jpg",
+        "posterPath": "/ca8oSnPFQ3zOykasqnsWF9K2zfo.jpg"
+      },
+      {
+        "id": 72750,
+        "firstAirDate": "2018-04-08",
+        "genreIds": [
+          80,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Killing Eve: Dupla Obsessão",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Killing Eve",
+        "overview": "Eve é uma agente secreta que fica obcecada em conseguir capturar uma misteriosa assassina, o que a leva a embarcar em uma perigosa caçada.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/2eR0H27Us1tvbjd95oW7WhiKioC.jpg",
+        "posterPath": "/xl2kKX5pTppfHHJyxN0HWU76ssP.jpg"
+      },
+      {
+        "id": 2850,
+        "firstAirDate": "1999-06-01",
+        "genreIds": [
+          18,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "Bad Girls",
+        "originCountry": [
+          "GB"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Bad Girls",
+        "overview": "Bad Girls is a British television drama series that was broadcast on ITV from 1 June 1999 to 20 December 2006 and starred Simone Lahbib, Mandana Jones, Debra Stephenson, Linda Henry, Jack Ellis and many more throughout the eight-year run. The series was broadcast in 17 countries and was produced by Shed Productions, the company which later produced Footballers' Wives and Waterloo Road. It is set in the fictional women's prison of Larkhall, and features a mixture of serious and light storylines focusing on the prisoners and staff of G Wing. From 2010, the UK broadcast rights were bought by CBS Drama, and is repeated regularly – as of September 2012, the channel is re-running the series again in a late-night time slot.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/rWDpToBi2QmBpETwpzX5w1v8Quu.jpg",
+        "posterPath": "/vlYanINWRod3cKUyV4evJJsq1xW.jpg"
+      },
+      {
+        "id": 87784,
+        "firstAirDate": "2020-04-24",
+        "genreIds": [
+          18,
+          9648,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "Em Defesa de Jacob",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Defending Jacob",
+        "overview": "Uma família sofre um grande baque quando o filho é acusado de matar um colega de classe.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/wGPbGjNmFhkT9uTWDX4b06FMd45.jpg",
+        "posterPath": "/xu3eBwkqK3CGpepcbFQjuiqHRHV.jpg"
+      },
+      {
+        "id": 135868,
+        "firstAirDate": "2022-08-30",
+        "genreIds": [
+          18,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "O Paciente",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Patient",
+        "overview": "Alan Strauss é um terapeuta feito prisioneiro por um paciente que se revela como serial killer. Com o tempo se esgotando, Alan luta desesperadamente para impedir Sam antes que ele se torne cúmplice de seus assassinatos ou pior, se torne uma vítima.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/ioUbRvVdl8utMHEHknFhiJuqc1G.jpg",
+        "posterPath": "/ab6A08ihBr1t8FCE6KFbxkHDEkx.jpg"
+      },
+      {
+        "id": 66788,
+        "firstAirDate": "2017-03-31",
+        "genreIds": [
+          18,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "13 Reasons Why",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "13 Reasons Why",
+        "overview": "A série gira em torno do estudante Clay Jensen e as consequências do suicídio de uma estudante, Hannah Baker, após uma série de falhas culminantes, provocadas por indivíduos selecionados dentro de sua escola. Uma caixa de fitas cassetes gravadas por Hannah antes de se suicidar relata treze motivos pelas quais ela tirou sua própria vida.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/c4CSgKL6QfkJxsWcGYDyTxpbzpW.jpg",
+        "posterPath": "/91emkzygieAGFrFCSoJiBZxC1rR.jpg"
+      },
+      {
+        "id": 1426,
+        "firstAirDate": "2010-05-04",
+        "genreIds": [
+          80,
+          18,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Luther",
+        "originCountry": [
+          "GB"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Luther",
+        "overview": "Luther é um detetive brilhante que, lutando com seus próprios tormentos, pode ser tão perigoso quanto os assassinos que ele persegue.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/A2qdFRq9oJDC5E7fbgSS4POUMDF.jpg",
+        "posterPath": "/hDxOMX8zzH1FiqKWVBzNaYGBkle.jpg"
+      },
+      {
+        "id": 288673,
+        "firstAirDate": "2026-10-07",
+        "genreIds": [
+          9648,
+          18,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Carrie, a Estranha",
+        "originCountry": [
+          "CA",
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Carrie",
+        "overview": "Após a morte abrupta e inesperada de seu pai arremessá-la no ecossistema implacável de um colégio público, Carrie é forçada a lidar com um escândalo de cyberbullying que destrói sua comunidade, a pressão implacável e a crueldade casual da era das redes sociais, e o despertar de misteriosos poderes telecinéticos que surgem com a chegada de sua adolescência.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/9yCJtipMeDe8uAdSJKvw8BnYfRz.jpg",
+        "posterPath": "/pgi67D7ERtedbywBHXY9Tj2vk2L.jpg"
+      },
+      {
+        "id": 2583,
+        "firstAirDate": "1991-04-07",
+        "genreIds": [
+          80,
+          18,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Prime Suspect",
+        "originCountry": [
+          "GB"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Prime Suspect",
+        "overview": "Highly skilled Detective Inspector Jane Tennison battles to prove herself in a male dominated world.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/3qaIDtU8gtHBj4m2K4s4upMrplG.jpg",
+        "posterPath": "/vhlbnMgz9hBouXWmxBS2RjFC03S.jpg"
+      },
+      {
+        "id": 299939,
+        "firstAirDate": "2026-09-17",
+        "genreIds": [
+          18,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "Monstro: A História de Lizzie Borden",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Monster: The Lizzie Borden Story",
+        "overview": "Presa em um lar cruel da era vitoriana, Lizzie Borden mata os pais em um crime sangrento que abala o país.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/gaew60NXUxok3Vmls7gkAT7lYW0.jpg",
+        "posterPath": "/cLP2z0O78DLiMqH8pvtB8EYq8KY.jpg"
+      },
+      {
+        "id": 113988,
+        "firstAirDate": "2022-09-21",
+        "genreIds": [
+          80,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Dahmer: Um Canibal Americano",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "DAHMER - Monster: The Jeffrey Dahmer Story",
+        "overview": "Jeffrey Dahmer drogou, estuprou e matou 17 rapazes, além de devorar parte dos cadáveres. Conheça seu modus operandi e veja entrevistas com seu pai e com sobreviventes dos crimes.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/5vUux2vNUTqwCzb7tVcH18XnsF.jpg",
+        "posterPath": "/67ujv4O6AalmGu3UaVSNdcw8juT.jpg"
+      },
+      {
+        "id": 31917,
+        "firstAirDate": "2010-06-08",
+        "genreIds": [
+          18,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Maldosas",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Pretty Little Liars",
+        "overview": "Quatro amigas se unem contra um inimigo anônimo que ameaça revelar seus segredos mais obscuros, enquanto também investigam o desaparecimento de sua melhor amiga.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/hunaEPitjdWsJgqmiIBglySNClr.jpg",
+        "posterPath": "/lntOFDrvVPBAULcrE8NoUlExa11.jpg"
+      },
+      {
+        "id": 243217,
+        "firstAirDate": "2025-03-20",
+        "genreIds": [
+          18,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "Happy Face: Um Serial Killer",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Happy Face",
+        "overview": "Acompanha Melissa e seu pai encarcerado, conhecido como o assassino Happy Face. Depois de décadas sem contato, ele finalmente encontra um caminho de volta à vida de sua filha. Em uma corrida contra o tempo, Melissa precisa descobrir se um homem inocente será condenado à morte por um crime cometido por seu pai e, ao mesmo tempo, ela descobre o impacto que seu pai teve nas famílias de suas vítimas e, dessa forma, precisando repensar sua própria identidade.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/jpo9nZOayoh7IHIIXa6jRT6WP9L.jpg",
+        "posterPath": "/sGHZrYxOU2U2JLrmYO12qGl1VK4.jpg"
+      },
+      {
+        "id": 71379,
+        "firstAirDate": "2017-04-20",
+        "genreIds": [
+          18,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "Born to Kill",
+        "originCountry": [
+          "GB"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Born to Kill",
+        "overview": "Um adolescente está prestes a liberar seus instintos psicopatas.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/hRkGQ4UqcRNUnBlVyEr4VDJTfJL.jpg",
+        "posterPath": "/80uMPyA0KK3CPtodXUAEEAmJbIn.jpg"
+      },
+      {
+        "id": 225634,
+        "firstAirDate": "2024-09-19",
+        "genreIds": [
+          18,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "Monstros: Irmãos Menendez: Assassinos dos Pais",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Monsters: The Lyle and Erik Menendez Story",
+        "overview": "Esta série sobre um crime real examina as vidas dos irmãos Menendez, condenados pelo assassinato brutal dos pais em 1989.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/is3ZdGCPEKTW7IyDe0khvE1nc6R.jpg",
+        "posterPath": "/xjFWzcu8LyFnuuHcVSZvVSp04XF.jpg"
+      },
+      {
+        "id": 62560,
+        "firstAirDate": "2015-06-24",
+        "genreIds": [
+          80,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Mr. Robot",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Mr. Robot",
+        "overview": "Elliot é um jovem programador que sofre de uma desordem que o torna anti-social. Acreditando que a única forma de se conectar com as pessoas é hackeando suas vidas, ele alia seu conhecimento ao fato de trabalhar em uma empresa de segurança online para proteger aqueles que ele ama daqueles que tentam, de alguma forma, prejudicá-los. Suas atividades chamam a atenção de Mr. Robot, um misterioso anarquista que convida Elliot a fazer parte de uma organização que atua na ilegalidade com o objetivo de derrubar as corporações americanas.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/uJUe985oIuRiD3hmHQYskIMc2WU.jpg",
+        "posterPath": "/3kfqfvgS6Ejs3J1MHO7NiHJ8g1b.jpg"
+      },
+      {
+        "id": 6322,
+        "firstAirDate": "2002-11-14",
+        "genreIds": [
+          80,
+          18,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Wire in the Blood",
+        "originCountry": [
+          "GB"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Wire in the Blood",
+        "overview": "Clinical psychologist Dr Tony Hill's uncanny ability to see into the minds of murderers means he finds it difficult to distance himself from disturbing cases.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/ovT7OERAwUAJj0vTHNsydJ0Ohn7.jpg",
+        "posterPath": "/pAPufmS7XjSvvQ4mQFUAn3mOD07.jpg"
+      },
+      {
+        "id": 10370,
+        "firstAirDate": "1983-11-23",
+        "genreIds": [
+          18,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "O Carona",
+        "originCountry": [
+          "US",
+          "CA"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Hitchhiker",
+        "overview": "A young hitchhiker introduces characters who are about to experience a frightening and sometimes supernatural incident of some kind in this moody anthology series.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/hiKKRRIJ9WB7mGxzhheQVcDIfYO.jpg",
+        "posterPath": "/nCWJ1MAOi1tXz91gkx8qSIvqqEC.jpg"
+      },
+      {
+        "id": 158083,
+        "firstAirDate": "2023-08-10",
+        "genreIds": [
+          18,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "Império da Dor",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Painkiller",
+        "overview": "Este drama sobre as causas e consequências da epidemia de opioides nos Estados Unidos, acompanha culpados, vítimas e uma investigadora em busca da verdade.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/gXs6po9ARYYDhYhj3eD34afd5kW.jpg",
+        "posterPath": "/eYw5XHXS4rPgZOSGGjRM5wJ8U8t.jpg"
+      },
+      {
+        "id": 39852,
+        "firstAirDate": "2017-08-02",
+        "genreIds": [
+          80,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "The Sinner",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Sinner",
+        "overview": "Quando um assassinato terrível apavora uma cidadezinha, a busca por respostas de um detetive revela uma teia de segredos sinistros.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/lVWku9LX2qdJTtAbRzaCDhhWeTK.jpg",
+        "posterPath": "/rmibFGdqOe0kKKhPls0jVOdZCWw.jpg"
+      }
+    ]
+  }
+}

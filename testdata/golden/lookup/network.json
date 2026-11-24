@@ -1,0 +1,17 @@
+{
+  "case": "network",
+  "family": "lookup",
+  "request": "GET /api/v1/network/213",
+  "fixtures": [
+    "network/netflix"
+  ],
+  "status": 200,
+  "body": {
+    "id": 213,
+    "name": "Netflix",
+    "originCountry": "",
+    "headquarters": "Los Gatos, California, USA",
+    "homepage": "https://www.netflix.com",
+    "logoPath": "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
+  }
+}

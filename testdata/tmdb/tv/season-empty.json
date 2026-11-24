@@ -1,0 +1,39 @@
+{
+  "id": "tv/season-empty",
+  "request": {
+    "path": "/tv/125164/season/0",
+    "params": {
+      "append_to_response": "external_ids",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "id": 202876,
+      "_id": "60f5c1bb7b7b4d005c4918b2",
+      "air_date": null,
+      "episodes": [],
+      "name": "Especiais",
+      "networks": [
+        {
+          "id": 805,
+          "logo_path": "/nZAblk9dd36BmwuPoK61Tb2xHTQ.png",
+          "name": "Chilevisión",
+          "origin_country": "CL"
+        }
+      ],
+      "overview": "",
+      "poster_path": null,
+      "season_number": 0,
+      "vote_average": 0,
+      "external_ids": {
+        "freebase_mid": null,
+        "freebase_id": null,
+        "tvdb_id": null,
+        "tvrage_id": null,
+        "wikidata_id": null
+      }
+    }
+  }
+}

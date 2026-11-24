@@ -1,0 +1,19 @@
+{
+  "id": "errors/movie-details-500",
+  "request": {
+    "path": "/movie/603",
+    "params": {
+      "append_to_response": "credits,external_ids,videos,keywords,release_dates,watch/providers",
+      "include_video_language": "pt-BR",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 500,
+    "body": {
+      "success": false,
+      "status_code": 11,
+      "status_message": "Internal error: Something went wrong, contact TMDB."
+    }
+  }
+}

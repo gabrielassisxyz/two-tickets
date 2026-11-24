@@ -1,0 +1,439 @@
+{
+  "id": "discover/movies-genre-drama",
+  "request": {
+    "path": "/discover/movie",
+    "params": {
+      "include_adult": "false",
+      "include_video": "true",
+      "language": "pt-BR",
+      "page": "1",
+      "region": "BR",
+      "sort_by": "popularity.desc",
+      "with_genres": "18",
+      "with_original_language": ""
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "page": 1,
+      "results": [
+        {
+          "adult": false,
+          "backdrop_path": "/z26LxXDMmAIzKr06FPDudCJyvsM.jpg",
+          "genre_ids": [
+            18,
+            27,
+            9648
+          ],
+          "id": 1813355,
+          "title": "Uma História de Derry",
+          "original_language": "en",
+          "original_title": "A Story of Derry",
+          "overview": "Séculos antes da aparição do palhaço Pennywise em Derry, três jovens nativos americanos encontram um aterrorizante espírito ancestral na floresta.",
+          "popularity": 148.4325,
+          "poster_path": "/9duTLm4Xk62wGIWJBfdco9lPHvW.jpg",
+          "release_date": "2026-10-31",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.638,
+          "vote_count": 149
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/bDsmYvrzto7xrEwqDpLC3SPhn9A.jpg",
+          "genre_ids": [
+            18,
+            10752
+          ],
+          "id": 1422041,
+          "title": "A Bola Preta",
+          "original_language": "es",
+          "original_title": "La bola negra",
+          "overview": "As histórias de três homens cujas vidas estão intimamente ligadas pelo desejo, pela dor e pela herança, ao longo de três épocas diferentes: 1932, 1937 e 2017.",
+          "popularity": 94.7194,
+          "poster_path": "/66Pj7O90qWce4pYZYKriVkFNcOS.jpg",
+          "release_date": "2027-01-21",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.885,
+          "vote_count": 258
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/274ahmbkJSzdmcWrWSTu9DFv5rp.jpg",
+          "genre_ids": [
+            14,
+            18,
+            27
+          ],
+          "id": 1567605,
+          "title": "Ebenezer e os Fantasmas do Natal",
+          "original_language": "en",
+          "original_title": "Ebenezer",
+          "overview": "Ebenezer Scrooge é um velho avarento que recebe a visita do fantasma de seu antigo sócio, Jacob Marley, e dos Espíritos do Natal Passado, Presente e Futuro. Os encontros o força a confrontar o próprio passado e a lutar por uma segunda chance de ser feliz.",
+          "popularity": 89.7007,
+          "poster_path": "/7MBeM27NNcCYUszjTNYJUycPDhV.jpg",
+          "release_date": "2026-11-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.529,
+          "vote_count": 174
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/mdBElS5YjpZPkB9DNYjgxwWgXcv.jpg",
+          "genre_ids": [
+            18,
+            10749,
+            53
+          ],
+          "id": 1568060,
+          "title": "Perfeitos Mentirosos",
+          "original_language": "es",
+          "original_title": "Perfectos mentirosos",
+          "overview": "Jude Derry chega à exclusiva Universidade de Tagus com uma missão secreta: se infiltrar no círculo dos irmãos Cash e descobrir a verdade sobre a morte do irmão dela. O que começa como vingança vira um perigoso triângulo de sedução, atração proibida e mentiras, que a empurra rumo a uma verdade para a qual talvez ela não esteja preparada. Baseado no romance de Alex Mírez.",
+          "popularity": 91.3971,
+          "poster_path": "/lKgbxuLuupPgIUAw0Ren7ZlOHLg.jpg",
+          "release_date": "2026-11-20",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.5,
+          "vote_count": 32
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/bybAHw5fenKXRFI4phanPhpljlT.jpg",
+          "genre_ids": [
+            18,
+            10402,
+            10749
+          ],
+          "id": 27,
+          "title": "9 Canções",
+          "original_language": "en",
+          "original_title": "9 Songs",
+          "overview": "Londres, verão de 2003. Matt conhece Lisa, uma jovem estudante americana, em meio a um show. Eles logo se apaixonam, vivendo um intenso relacionamento sexual entremeado por vários shows que acompanham.",
+          "popularity": 77.0001,
+          "poster_path": "/91O7z0vo7MiNWd5xD2BoivwbQsb.jpg",
+          "release_date": "2004-07-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.5,
+          "vote_count": 615
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/lRsapglJZIyMfGl8oQyNASlZqDC.jpg",
+          "genre_ids": [
+            18,
+            36,
+            35
+          ],
+          "id": 1131943,
+          "title": "Madden: O Homem e o Jogo",
+          "original_language": "en",
+          "original_title": "Madden",
+          "overview": "Inspirado na vida de um querido ícone americano, este filme narra a incrível jornada de John Madden ao lado de seu melhor amigo e autêntico Al Davis. A trama acompanha desde a parceria campeã do Super Bowl com a equipe do Raiders, até ele se tornar a voz mais reconhecível do futebol americano e construir a franquia mundial de videogame Madden NFL. É a celebração de uma mente brilhante, cujo espírito e personalidade únicos, a parceria com sua ousada esposa Virginia, as amizades duradouras e o amor contagiante pelas pessoas e pelo esporte transcenderam o mundo do futebol americano.",
+          "popularity": 74.6629,
+          "poster_path": "/hCJ93wcAb0zGFK3G4MgkWJKx6Lm.jpg",
+          "release_date": "2026-11-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.6,
+          "vote_count": 57
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8sNiAPPYU14PUepFNeSNGUTiHW.jpg",
+          "genre_ids": [
+            12,
+            18,
+            878
+          ],
+          "id": 157336,
+          "title": "Interestelar",
+          "original_language": "en",
+          "original_title": "Interstellar",
+          "overview": "As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.",
+          "popularity": 62.7689,
+          "poster_path": "/tR1XVa5bxgdh2bRw2u0DzrgkO2l.jpg",
+          "release_date": "2014-11-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.494,
+          "vote_count": 42001
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/sl5NJ1vtyhP9Vr88bB4blULsJYp.jpg",
+          "genre_ids": [
+            16,
+            12,
+            18,
+            14
+          ],
+          "id": 791523,
+          "title": "O Bosque Selvagem",
+          "original_language": "en",
+          "original_title": "Wildwood",
+          "overview": "A determinada adolescente Prue McKeel embarca em uma missão desesperada de resgate depois que seu irmão caçula é sequestrado por um bando de corvos. Acompanhada por seu colega de classe desajeitado, mas leal, Curtis Mehlberg, Prue navega por um mundo habitado por animais falantes, bandidos e figuras poderosas movidas pela dor e pela ambição. À medida que a dupla é arrastada para um conflito que ameaça o equilíbrio da própria floresta, Prue precisa descobrir uma força e uma crença que jamais soube que possuía.",
+          "popularity": 61.1033,
+          "poster_path": "/mcuUYNWGJHPEaRumOlgSZCzMRPc.jpg",
+          "release_date": "2026-10-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.455,
+          "vote_count": 320
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/anz69m07H9b2zG5Hw5OSQ71dwxJ.jpg",
+          "genre_ids": [
+            53,
+            18
+          ],
+          "id": 1310458,
+          "title": "சாயாவனம்",
+          "original_language": "ta",
+          "original_title": "சாயாவனம்",
+          "overview": "",
+          "popularity": 52.6515,
+          "poster_path": "/FfkveUaCib1ukPkBMeU2IFQcqw.jpg",
+          "release_date": "2025-12-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/1lnnjBCRLZzKRhQipK5zm61YkPe.jpg",
+          "genre_ids": [
+            18,
+            36
+          ],
+          "id": 1286656,
+          "title": "Eu Sou o Rocky",
+          "original_language": "en",
+          "original_title": "I Play Rocky",
+          "overview": "Antes de Rocky se tornar uma lenda que atravessa gerações, Stallone precisou lutar para sobreviver. Na pele de um ator fracassado, ele escreve a história definitiva de um perdedor e precisa lutar pela chance de interpretar o papel de sua vida: Rocky Balboa. Conheça a trajetória por trás da criação de Rocky: Um Lutador.",
+          "popularity": 57.1401,
+          "poster_path": "/vXT9vzSqNypCydx0x7QXizN4CNO.jpg",
+          "release_date": "2026-11-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.4,
+          "vote_count": 68
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/4BtL2vvEufDXDP4u6xQjjQ1Y2aT.jpg",
+          "genre_ids": [
+            28,
+            80,
+            18,
+            53
+          ],
+          "id": 1419406,
+          "title": "Operação Sombra",
+          "original_language": "zh",
+          "original_title": "捕风追影",
+          "overview": "Um policial aposentado, especialista em rastreamento, é convocado de volta à ativa em Macau para desmantelar uma gangue de ladrões de alta tecnologia, colocando suas táticas tradicionais contra a tecnologia avançada, num jogo de gato e rato com uma equipe de jovens detetives de elite.",
+          "popularity": 53.9755,
+          "poster_path": "/zI4UdGnD4KMjiaGQTgF5PMiagVF.jpg",
+          "release_date": "2026-08-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.354,
+          "vote_count": 1634
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/b3EGc5Ucj7wIeUjFc64Wq4IYgkp.jpg",
+          "genre_ids": [
+            53,
+            18,
+            80
+          ],
+          "id": 1084409,
+          "title": "Como Nasce um Assassino",
+          "original_language": "en",
+          "original_title": "A Talent for Murder",
+          "overview": "A escritora Patricia Highsmith, autora do clássico O talentoso Ripley, tem um encontro curioso e intenso com um jovem agente literário determinado a convencê-la a lançar mais um livro.",
+          "popularity": 47.0834,
+          "poster_path": "/bOHVe8XVlUU21Fjxtbhx4Jknksx.jpg",
+          "release_date": "2027-01-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7,
+          "vote_count": 35
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/uxGoKyTnXylK5M4z1hyyaWbmBV7.jpg",
+          "genre_ids": [
+            28,
+            35,
+            18
+          ],
+          "id": 1234139,
+          "title": "ஜெயிலர் 2",
+          "original_language": "ta",
+          "original_title": "ஜெயிலர் 2",
+          "overview": "",
+          "popularity": 42.9797,
+          "poster_path": "/upwdEyhhYZ7pT2hD535fr2MGfpx.jpg",
+          "release_date": "2026-10-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.95,
+          "vote_count": 40
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/v8xVDqt8uCul3c3mgx4VpGCwxJC.jpg",
+          "genre_ids": [
+            18,
+            80
+          ],
+          "id": 278,
+          "title": "Um Sonho de Liberdade",
+          "original_language": "en",
+          "original_title": "The Shawshank Redemption",
+          "overview": "Em 1946, Andy Dufresne, um banqueiro jovem e bem sucedido, tem a sua vida radicalmente modificada ao ser condenado por um crime que nunca cometeu, o homicídio de sua esposa e do amante dela. Ele é mandado para uma prisão que é o pesadelo de qualquer detento, a Penitenciária Estadual de Shawshank, no Maine. Lá ele irá cumprir a pena perpétua. Andy logo será apresentado a Warden Norton, o corrupto e cruel agente penitenciário, que usa a Bíblia como arma de controle e ao Capitão Byron Hadley que trata os internos como animais. Andy faz amizade com Ellis Boyd Redding, um prisioneiro que cumpre pena há 20 anos e controla o mercado negro da instituição.",
+          "popularity": 48.1667,
+          "poster_path": "/umX3lBhHoTV7Lsci140Yr8VpXyN.jpg",
+          "release_date": "1995-03-17",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.735,
+          "vote_count": 31922
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/uI3kWI7kGW5E0F8WduewgQYPt34.jpg",
+          "genre_ids": [
+            53,
+            18,
+            80
+          ],
+          "id": 1571955,
+          "title": "Colisão Implacável",
+          "original_language": "es",
+          "original_title": "Colisión",
+          "overview": "Em meio à crise financeira espanhola, um grupo planeja roubar um banco. Mas o acidente envolvendo seu carro de fuga destrói a frágil aliança que existe entre eles.",
+          "popularity": 42.2542,
+          "poster_path": "/2UcuNset77zceI6dCO59pkIcctZ.jpg",
+          "release_date": "2026-10-30",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.4,
+          "vote_count": 127
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/hhQT0TySg3LXCE8BEPpfPJ5zJA2.jpg",
+          "genre_ids": [
+            35,
+            18
+          ],
+          "id": 1570488,
+          "title": "O Natal Perfeito de um Cachorro",
+          "original_language": "en",
+          "original_title": "A Dog's Perfect Christmas",
+          "overview": "Depois que uma emergência médica separa a família Goss, o determinado cãozinho Winstead faz de tudo para reunir seus humanos antes da véspera de Natal.",
+          "popularity": 41.637,
+          "poster_path": "/2YhgEEGYOQfl3CzoRcYys8b6JxH.jpg",
+          "release_date": "2026-11-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.114,
+          "vote_count": 83
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/sEsMwSDUWGIx9EfNxzM6KzVSsSQ.jpg",
+          "genre_ids": [
+            53,
+            18,
+            80
+          ],
+          "id": 1375441,
+          "title": "Primetime",
+          "original_language": "en",
+          "original_title": "Primetime",
+          "overview": "Um jornalista determinado a tirar sua emissora da falência iminente cria um programa para expor ao vivo criminosos e se torna sucesso de audiência mudando a história televisiva. No entanto, um hacker descobre um segredo e os papéis podem acabar se invertendo.",
+          "popularity": 41.2574,
+          "poster_path": "/lmrulvLbmaejTix1YaMxo1oGhH1.jpg",
+          "release_date": "2026-10-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.752,
+          "vote_count": 481
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ejdD20cdHNFAYAN2DlqPToXKyzx.jpg",
+          "genre_ids": [
+            18,
+            80
+          ],
+          "id": 238,
+          "title": "O Poderoso Chefão",
+          "original_language": "en",
+          "original_title": "The Godfather",
+          "overview": "Em 1945, Don Corleone é o chefe de uma mafiosa família italiana de Nova York. Ele costuma apadrinhar várias pessoas, realizando importantes favores para elas, em troca de favores futuros. Com a chegada das drogas, as famílias começam uma disputa pelo promissor mercado. Quando Corleone se recusa a facilitar a entrada dos narcóticos na cidade, não oferecendo ajuda política e policial, sua família começa a sofrer atentados para que mudem de posição. É nessa complicada época que Michael, um herói de guerra nunca envolvido nos negócios da família, vê a necessidade de proteger o seu pai e tudo o que ele construiu ao longo dos anos.",
+          "popularity": 46.4573,
+          "poster_path": "/oJagOzBu9Rdd9BrciseCm3U3MCU.jpg",
+          "release_date": "1972-07-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.689,
+          "vote_count": 24040
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wXTaGcqX3jvdXSKCJAkl5jZyrKp.jpg",
+          "genre_ids": [
+            18,
+            53
+          ],
+          "id": 1281331,
+          "title": "O Outro Lado das Redes",
+          "original_language": "en",
+          "original_title": "The Social Reckoning",
+          "overview": "Frances Haugen, uma jovem engenheira do Facebook, conta com a ajuda de Jeff Horwitz, repórter do The Wall Street Journal, para embarcar em uma jornada arriscada que acaba revelando alguns dos segredos mais bem guardados da rede social.",
+          "popularity": 43.4398,
+          "poster_path": "/51AEphEZ5JXaV0FL5PGITjLQE0m.jpg",
+          "release_date": "2026-10-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.046,
+          "vote_count": 152
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/bacOuUnRBoAO1NjMfsAGX2EKRrS.jpg",
+          "genre_ids": [
+            18
+          ],
+          "id": 1366,
+          "title": "Rocky: Um Lutador",
+          "original_language": "en",
+          "original_title": "Rocky",
+          "overview": "Rocky Balboa, um pequeno boxeador da classe trabalhadora da Filadélfia, é arbitrariamente escolhido para lutar contra o campeão dos pesos pesados, Apollo Creed, quando o adversário do invicto lutador agendado para a luta é ferido. Durante o treinamento com o mal-humorado Mickey Goldmill, Rocky timidamente começa um relacionamento com Adrian, a invisível irmã de Paulie, seu amigo empacotador de carne.",
+          "popularity": 39.3251,
+          "poster_path": "/b9B1DXcPNsJfTtc4x2LKA3bykoJ.jpg",
+          "release_date": "1977-01-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.803,
+          "vote_count": 9132
+        }
+      ],
+      "total_pages": 1001,
+      "total_results": 20001
+    }
+  }
+}

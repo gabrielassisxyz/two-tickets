@@ -83,4 +83,30 @@ else
     echo "==> web: skipped (no web/src/compat yet)"
 fi
 
+# The goldens harness has its own package and lockfile, apart from web/, and
+# regenerates every golden from testdata/tmdb/ with no TMDB call. --check fails
+# when a committed golden, derived fixture or the fixture index differs from
+# what the pinned upstream code produces, and when the pinned commit cannot be
+# fetched.
+if [ -f web/tools/goldens/package.json ]; then
+    echo "==> goldens"
+    (
+        cd web/tools/goldens
+        # The harness pins Node like web/ does (engines plus engine-strict). A
+        # CI runner gets that Node from setup-node; a machine with mise asks it.
+        node_22=()
+        if command -v mise >/dev/null 2>&1; then
+            node_22=(mise exec node@22 --)
+        fi
+        if [ -d "$build_root" ] && [ -w "$build_root" ]; then
+            export TMPDIR="$build_root/goldens-tmp"
+            mkdir -p "$TMPDIR"
+        fi
+        export COREPACK_ENABLE_DOWNLOAD_PROMPT=0
+        "${node_22[@]}" corepack pnpm install --frozen-lockfile
+        "${node_22[@]}" node --test lib/golden.test.mjs
+        "${node_22[@]}" node generate.mjs --check
+    )
+fi
+
 echo "bin/ci: green"

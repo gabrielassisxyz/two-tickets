@@ -1,0 +1,18 @@
+{
+  "id": 1399,
+  "name": "Bacurau Nights",
+  "original_name": "Bacurau Nights",
+  "overview": "A small town resists.",
+  "poster_path": "/bacurau.jpg",
+  "backdrop_path": "/bacurau-bg.jpg",
+  "first_air_date": "2019-08-23",
+  "vote_average": 7.4,
+  "genre_ids": [18, 53],
+  "genres": [{"id": 18, "name": "Drama"}, {"id": 53, "name": "Thriller"}],
+  "status": "Ended",
+  "tagline": "",
+  "homepage": "",
+  "number_of_seasons": 1,
+  "number_of_episodes": 6,
+  "episode_run_time": [50]
+}

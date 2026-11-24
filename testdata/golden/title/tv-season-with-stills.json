@@ -1,0 +1,78 @@
+{
+  "case": "tv-season-with-stills",
+  "family": "title",
+  "request": "GET /api/v1/tv/249042/season/1",
+  "fixtures": [
+    "tv/details-en-full",
+    "tv/season-with-stills"
+  ],
+  "status": 200,
+  "body": {
+    "airDate": "2025-03-13",
+    "episodes": [
+      {
+        "id": 5951245,
+        "airDate": "2025-03-13",
+        "episodeNumber": 1,
+        "name": "Episódio 1",
+        "overview": "A polícia arromba a casa da família Miller, levando o adolescente Jamie preso. Ao ser interrogado, ele insiste que não fez nada.",
+        "productionCode": "",
+        "seasonNumber": 1,
+        "showId": 249042,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "stillPath": "https://image.tmdb.org/t/p/original//5h4BocxrJG4UVfsX0cdI3QCUyoK.jpg"
+      },
+      {
+        "id": 5951303,
+        "airDate": "2025-03-13",
+        "episodeNumber": 2,
+        "name": "Episódio 2",
+        "overview": "A polícia procura respostas e a arma do crime na escola de Jamie, mas não consegue nada com os amigos dele. Até que o filho do inspetor Bascombe se oferece para ajudar.",
+        "productionCode": "",
+        "seasonNumber": 1,
+        "showId": 249042,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "stillPath": "https://image.tmdb.org/t/p/original//uZ8QDoszwxM68WgPgjHfqTCZWZB.jpg"
+      },
+      {
+        "id": 5951304,
+        "airDate": "2025-03-13",
+        "episodeNumber": 3,
+        "name": "Episódio 3",
+        "overview": "Jamie fala com uma psicóloga. No início ele reluta, mas acaba falando sobre como se sentia com relação a Katie.",
+        "productionCode": "",
+        "seasonNumber": 1,
+        "showId": 249042,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "stillPath": "https://image.tmdb.org/t/p/original//tx6jUngouwZxnVQDmz34bw24IQN.jpg"
+      },
+      {
+        "id": 5951305,
+        "airDate": "2025-03-13",
+        "episodeNumber": 4,
+        "name": "Episódio 4",
+        "overview": "A família Miller tenta comemorar o aniversário de Eddie como se tudo estivesse normal. Mas uma série de situações pode acabar com essa paz.",
+        "productionCode": "",
+        "seasonNumber": 1,
+        "showId": 249042,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "stillPath": "https://image.tmdb.org/t/p/original//bVi6fXdsj2GXTJda563OfNJ1axQ.jpg"
+      }
+    ],
+    "externalIds": {
+      "freebaseId": null,
+      "freebaseMid": null,
+      "tvdbId": 2138027,
+      "tvrageId": null
+    },
+    "id": 383679,
+    "name": "Minissérie",
+    "overview": "",
+    "seasonNumber": 1,
+    "posterPath": "/kryDvFcwSlnbEMnT3Dq89EUmFuX.jpg"
+  }
+}

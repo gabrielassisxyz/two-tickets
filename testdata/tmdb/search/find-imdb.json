@@ -1,0 +1,42 @@
+{
+  "id": "search/find-imdb",
+  "request": {
+    "path": "/find/tt0133093",
+    "params": {
+      "external_source": "imdb_id",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "movie_results": [
+        {
+          "adult": false,
+          "backdrop_path": "/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
+          "genre_ids": [
+            28,
+            878
+          ],
+          "id": 603,
+          "title": "Matrix",
+          "original_language": "en",
+          "original_title": "The Matrix",
+          "overview": "O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a desconfiar da realidade. Thomas conhece os misteriosos Morpheus e Trinity e descobre que é vítima de um sistema inteligente e artificial chamado Matrix, que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia.",
+          "popularity": 40.2493,
+          "poster_path": "/lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg",
+          "release_date": "1999-03-31",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.264,
+          "vote_count": 29331,
+          "media_type": "movie"
+        }
+      ],
+      "person_results": [],
+      "tv_results": [],
+      "tv_episode_results": [],
+      "tv_season_results": []
+    }
+  }
+}
