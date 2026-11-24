@@ -1,3 +1,7 @@
+import type {
+  LogMessage,
+  LogsResultsResponse,
+} from '@app/compat/interfaces/api/settingsInterfaces';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
@@ -22,10 +26,6 @@ import {
   PauseIcon,
   PlayIcon,
 } from '@heroicons/react/24/solid';
-import type {
-  LogMessage,
-  LogsResultsResponse,
-} from '@server/interfaces/api/settingsInterfaces';
 import copy from 'copy-to-clipboard';
 import { useRouter } from 'next/router';
 import { Fragment, useEffect, useState } from 'react';

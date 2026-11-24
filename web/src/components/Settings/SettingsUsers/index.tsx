@@ -1,3 +1,5 @@
+import { MediaServerType, ServerType } from '@app/compat/constants/server';
+import type { MainSettings } from '@app/compat/lib/settings';
 import Alert from '@app/components/Common/Alert';
 import Button from '@app/components/Common/Button';
 import LabeledCheckbox from '@app/components/Common/LabeledCheckbox';
@@ -10,8 +12,6 @@ import useToasts from '@app/hooks/useToasts';
 import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
 import { ArrowDownOnSquareIcon } from '@heroicons/react/24/outline';
-import { MediaServerType, ServerType } from '@server/constants/server';
-import type { MainSettings } from '@server/lib/settings';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import { useIntl } from 'react-intl';

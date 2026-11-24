@@ -1,3 +1,4 @@
+import type { PushoverSound } from '@app/compat/api/pushover';
 import Button from '@app/components/Common/Button';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
 import NotificationTypeSelector from '@app/components/NotificationTypeSelector';
@@ -5,7 +6,6 @@ import useToasts from '@app/hooks/useToasts';
 import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
 import { ArrowDownOnSquareIcon, BeakerIcon } from '@heroicons/react/24/outline';
-import type { PushoverSound } from '@server/api/pushover';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import { useState } from 'react';

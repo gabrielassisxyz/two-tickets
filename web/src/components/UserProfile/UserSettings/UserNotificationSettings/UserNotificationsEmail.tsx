@@ -1,3 +1,4 @@
+import type { UserSettingsNotificationsResponse } from '@app/compat/interfaces/api/userSettingsInterfaces';
 import Button from '@app/components/Common/Button';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
 import SensitiveInput from '@app/components/Common/SensitiveInput';
@@ -11,7 +12,6 @@ import { useUser } from '@app/hooks/useUser';
 import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
 import { ArrowDownOnSquareIcon } from '@heroicons/react/24/outline';
-import type { UserSettingsNotificationsResponse } from '@server/interfaces/api/userSettingsInterfaces';
 import axios from 'axios';
 import { Form, Formik } from 'formik';
 import { useRouter } from 'next/router';

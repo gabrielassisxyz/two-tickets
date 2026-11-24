@@ -1,9 +1,9 @@
+import type { WatchlistItem } from '@app/compat/interfaces/api/discoverInterfaces';
 import Slider from '@app/components/Slider';
 import TmdbTitleCard from '@app/components/TitleCard/TmdbTitleCard';
 import { useUser } from '@app/hooks/useUser';
 import defineMessages from '@app/utils/defineMessages';
 import { ArrowRightCircleIcon } from '@heroicons/react/24/outline';
-import type { WatchlistItem } from '@server/interfaces/api/discoverInterfaces';
 import Link from 'next/link';
 import { useIntl } from 'react-intl';
 import useSWR from 'swr';

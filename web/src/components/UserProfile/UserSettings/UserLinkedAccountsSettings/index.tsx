@@ -1,6 +1,7 @@
 import EmbyLogo from '@app/assets/services/emby-icon-only.svg';
 import JellyfinLogo from '@app/assets/services/jellyfin-icon.svg';
 import PlexLogo from '@app/assets/services/plex.svg';
+import { MediaServerType, ServerType } from '@app/compat/constants/server';
 import Alert from '@app/components/Common/Alert';
 import ConfirmButton from '@app/components/Common/ConfirmButton';
 import Dropdown from '@app/components/Common/Dropdown';
@@ -12,7 +13,6 @@ import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
 import PlexOAuth from '@app/utils/plex';
 import { TrashIcon } from '@heroicons/react/24/solid';
-import { MediaServerType, ServerType } from '@server/constants/server';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';

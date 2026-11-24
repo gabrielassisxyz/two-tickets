@@ -1,6 +1,6 @@
+import type { Collection } from '@app/compat/models/Collection';
 import CollectionDetails from '@app/components/CollectionDetails';
 import { getHostAndPort } from '@app/utils/urlHelper';
-import type { Collection } from '@server/models/Collection';
 import axios from 'axios';
 import type { GetServerSideProps, NextPage } from 'next';
 

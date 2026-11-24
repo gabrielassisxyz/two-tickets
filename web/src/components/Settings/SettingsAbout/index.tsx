@@ -1,3 +1,7 @@
+import type {
+  SettingsAboutResponse,
+  StatusResponse,
+} from '@app/compat/interfaces/api/settingsInterfaces';
 import Alert from '@app/components/Common/Alert';
 import Badge from '@app/components/Common/Badge';
 import List from '@app/components/Common/List';
@@ -8,10 +12,6 @@ import useSettings from '@app/hooks/useSettings';
 import globalMessages from '@app/i18n/globalMessages';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
-import type {
-  SettingsAboutResponse,
-  StatusResponse,
-} from '@server/interfaces/api/settingsInterfaces';
 import { useIntl } from 'react-intl';
 import useSWR from 'swr';
 

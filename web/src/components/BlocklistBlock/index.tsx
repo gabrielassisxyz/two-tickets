@@ -1,3 +1,5 @@
+import type { MediaType } from '@app/compat/constants/media';
+import type { Blocklist } from '@app/compat/entity/Blocklist';
 import BlocklistedTagsBadge from '@app/components/BlocklistedTagsBadge';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
@@ -8,8 +10,6 @@ import { useUser } from '@app/hooks/useUser';
 import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
 import { CalendarIcon, TrashIcon, UserIcon } from '@heroicons/react/24/solid';
-import type { MediaType } from '@server/constants/media';
-import type { Blocklist } from '@server/entity/Blocklist';
 import axios from 'axios';
 import Link from 'next/link';
 import { useState } from 'react';

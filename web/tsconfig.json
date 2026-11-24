@@ -21,7 +21,6 @@
     "baseUrl": "src",
     "downlevelIteration": true,
     "paths": {
-      "@server/*": ["../server/*"],
       "@app/*": ["*"]
     }
   },

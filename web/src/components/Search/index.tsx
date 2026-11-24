@@ -1,14 +1,14 @@
+import type {
+  MovieResult,
+  PersonResult,
+  TvResult,
+} from '@app/compat/models/Search';
 import Header from '@app/components/Common/Header';
 import ListView from '@app/components/Common/ListView';
 import PageTitle from '@app/components/Common/PageTitle';
 import useDiscover from '@app/hooks/useDiscover';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
-import type {
-  MovieResult,
-  PersonResult,
-  TvResult,
-} from '@server/models/Search';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 

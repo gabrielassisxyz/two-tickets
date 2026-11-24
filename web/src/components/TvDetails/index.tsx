@@ -4,6 +4,17 @@ import RTFresh from '@app/assets/rt_fresh.svg';
 import RTRotten from '@app/assets/rt_rotten.svg';
 import Spinner from '@app/assets/spinner.svg';
 import TmdbLogo from '@app/assets/tmdb_logo.svg';
+import type { RTRating } from '@app/compat/api/rottentomatoes';
+import { ANIME_KEYWORD_ID } from '@app/compat/api/themoviedb/constants';
+import { IssueStatus } from '@app/compat/constants/issue';
+import {
+  MediaRequestStatus,
+  MediaStatus,
+  MediaType,
+} from '@app/compat/constants/media';
+import { MediaServerType, ServerType } from '@app/compat/constants/server';
+import type { TvDetails as TvDetailsType } from '@app/compat/models/Tv';
+import type { Crew } from '@app/compat/models/common';
 import BlocklistModal from '@app/components/BlocklistModal';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
@@ -52,17 +63,6 @@ import {
   PlayIcon,
   StarIcon,
 } from '@heroicons/react/24/solid';
-import type { RTRating } from '@server/api/rating/rottentomatoes';
-import { ANIME_KEYWORD_ID } from '@server/api/themoviedb/constants';
-import { IssueStatus } from '@server/constants/issue';
-import {
-  MediaRequestStatus,
-  MediaStatus,
-  MediaType,
-} from '@server/constants/media';
-import { MediaServerType, ServerType } from '@server/constants/server';
-import type { TvDetails as TvDetailsType } from '@server/models/Tv';
-import type { Crew } from '@server/models/common';
 import axios from 'axios';
 import { countries } from 'country-flag-icons';
 import 'country-flag-icons/3x2/flags.css';

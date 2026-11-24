@@ -1,3 +1,6 @@
+import { MediaServerType, ServerType } from '@app/compat/constants/server';
+import type { UserResultsResponse } from '@app/compat/interfaces/api/userInterfaces';
+import { hasPermission } from '@app/compat/lib/permissions';
 import Alert from '@app/components/Common/Alert';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
@@ -31,9 +34,6 @@ import {
   PencilIcon,
   UserPlusIcon,
 } from '@heroicons/react/24/solid';
-import { MediaServerType, ServerType } from '@server/constants/server';
-import type { UserResultsResponse } from '@server/interfaces/api/userInterfaces';
-import { hasPermission } from '@server/lib/permissions';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import Link from 'next/link';

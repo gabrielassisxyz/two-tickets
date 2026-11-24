@@ -1,10 +1,10 @@
+import type { MediaStatus } from '@app/compat/constants/media';
+import type { MediaRequest } from '@app/compat/entity/MediaRequest';
+import type { NonFunctionProperties } from '@app/compat/interfaces/api/common';
 import CollectionRequestModal from '@app/components/RequestModal/CollectionRequestModal';
 import MovieRequestModal from '@app/components/RequestModal/MovieRequestModal';
 import TvRequestModal from '@app/components/RequestModal/TvRequestModal';
 import { Transition } from '@headlessui/react';
-import type { MediaStatus } from '@server/constants/media';
-import type { MediaRequest } from '@server/entity/MediaRequest';
-import type { NonFunctionProperties } from '@server/interfaces/api/common';
 
 interface RequestModalProps {
   show: boolean;

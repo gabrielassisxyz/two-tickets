@@ -1,3 +1,15 @@
+import { IssueStatus } from '@app/compat/constants/issue';
+import {
+  MediaRequestStatus,
+  MediaStatus,
+  MediaType,
+} from '@app/compat/constants/media';
+import { MediaServerType, ServerType } from '@app/compat/constants/server';
+import type { MediaWatchDataResponse } from '@app/compat/interfaces/api/mediaInterfaces';
+import type { DownloadingItem } from '@app/compat/lib/downloadtracker';
+import type { RadarrSettings, SonarrSettings } from '@app/compat/lib/settings';
+import type { MovieDetails } from '@app/compat/models/Movie';
+import type { TvDetails } from '@app/compat/models/Tv';
 import BlocklistBlock from '@app/components/BlocklistBlock';
 import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
@@ -18,18 +30,6 @@ import {
   DocumentMinusIcon,
   TrashIcon,
 } from '@heroicons/react/24/solid';
-import { IssueStatus } from '@server/constants/issue';
-import {
-  MediaRequestStatus,
-  MediaStatus,
-  MediaType,
-} from '@server/constants/media';
-import { MediaServerType, ServerType } from '@server/constants/server';
-import type { MediaWatchDataResponse } from '@server/interfaces/api/mediaInterfaces';
-import type { DownloadingItem } from '@server/lib/downloadtracker';
-import type { RadarrSettings, SonarrSettings } from '@server/lib/settings';
-import type { MovieDetails } from '@server/models/Movie';
-import type { TvDetails } from '@server/models/Tv';
 import axios from 'axios';
 import Link from 'next/link';
 import { useIntl } from 'react-intl';

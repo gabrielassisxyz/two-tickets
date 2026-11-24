@@ -1,3 +1,6 @@
+import { MediaServerType } from '@app/compat/constants/server';
+import type { PublicSettingsResponse } from '@app/compat/interfaces/api/settingsInterfaces';
+import type { AvailableLocale } from '@app/compat/types/languages';
 import Layout from '@app/components/Layout';
 import LoadingBar from '@app/components/LoadingBar';
 import PWAHeader from '@app/components/PWAHeader';
@@ -13,9 +16,6 @@ import '@app/styles/globals.css';
 import { polyfillIntl } from '@app/utils/polyfillIntl';
 import { getHostAndPort } from '@app/utils/urlHelper';
 import '@fontsource-variable/inter';
-import { MediaServerType } from '@server/constants/server';
-import type { PublicSettingsResponse } from '@server/interfaces/api/settingsInterfaces';
-import type { AvailableLocale } from '@server/types/languages';
 import axios from 'axios';
 import type { AppInitialProps, AppProps } from 'next/app';
 import App from 'next/app';

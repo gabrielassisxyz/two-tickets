@@ -1,3 +1,5 @@
+import { DiscoverSliderType } from '@app/compat/constants/discover';
+import type DiscoverSlider from '@app/compat/entity/DiscoverSlider';
 import Button from '@app/components/Common/Button';
 import ConfirmButton from '@app/components/Common/ConfirmButton';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
@@ -27,8 +29,6 @@ import {
   PencilIcon,
   PlusIcon,
 } from '@heroicons/react/24/solid';
-import { DiscoverSliderType } from '@server/constants/discover';
-import type DiscoverSlider from '@server/entity/DiscoverSlider';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';

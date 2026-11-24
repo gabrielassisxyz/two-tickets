@@ -1,3 +1,11 @@
+import type { WatchlistResponse } from '@app/compat/interfaces/api/discoverInterfaces';
+import type {
+  QuotaResponse,
+  UserRequestsResponse,
+  UserWatchDataResponse,
+} from '@app/compat/interfaces/api/userInterfaces';
+import type { MovieDetails } from '@app/compat/models/Movie';
+import type { TvDetails } from '@app/compat/models/Tv';
 import ImageFader from '@app/components/Common/ImageFader';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
 import PageTitle from '@app/components/Common/PageTitle';
@@ -10,14 +18,6 @@ import { Permission, UserType, useUser } from '@app/hooks/useUser';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
 import { ArrowRightCircleIcon } from '@heroicons/react/24/outline';
-import type { WatchlistResponse } from '@server/interfaces/api/discoverInterfaces';
-import type {
-  QuotaResponse,
-  UserRequestsResponse,
-  UserWatchDataResponse,
-} from '@server/interfaces/api/userInterfaces';
-import type { MovieDetails } from '@server/models/Movie';
-import type { TvDetails } from '@server/models/Tv';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useState } from 'react';

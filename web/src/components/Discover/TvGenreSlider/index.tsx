@@ -1,9 +1,9 @@
+import type { GenreSliderItem } from '@app/compat/interfaces/api/discoverInterfaces';
 import { genreColorMap } from '@app/components/Discover/constants';
 import GenreCard from '@app/components/GenreCard';
 import Slider from '@app/components/Slider';
 import defineMessages from '@app/utils/defineMessages';
 import { ArrowRightCircleIcon } from '@heroicons/react/24/outline';
-import type { GenreSliderItem } from '@server/interfaces/api/discoverInterfaces';
 import Link from 'next/link';
 import React from 'react';
 import { useIntl } from 'react-intl';

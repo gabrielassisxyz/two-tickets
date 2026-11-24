@@ -1,3 +1,5 @@
+import { DiscoverSliderType } from '@app/compat/constants/discover';
+import type DiscoverSlider from '@app/compat/entity/DiscoverSlider';
 import Button from '@app/components/Common/Button';
 import SlideCheckbox from '@app/components/Common/SlideCheckbox';
 import Tag from '@app/components/Common/Tag';
@@ -19,8 +21,6 @@ import {
   PencilIcon,
   XMarkIcon,
 } from '@heroicons/react/24/solid';
-import { DiscoverSliderType } from '@server/constants/discover';
-import type DiscoverSlider from '@server/entity/DiscoverSlider';
 import axios from 'axios';
 import { useRef, useState } from 'react';
 import { useDrag, useDrop } from 'react-aria';

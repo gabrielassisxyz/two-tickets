@@ -1,4 +1,4 @@
-import { type AvailableLocale } from '@server/types/languages';
+import { type AvailableLocale } from '@app/compat/types/languages';
 import React from 'react';
 
 type AvailableLanguageObject = Record<

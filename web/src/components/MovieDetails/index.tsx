@@ -5,6 +5,11 @@ import RTRotten from '@app/assets/rt_rotten.svg';
 import ImdbLogo from '@app/assets/services/imdb.svg';
 import Spinner from '@app/assets/spinner.svg';
 import TmdbLogo from '@app/assets/tmdb_logo.svg';
+import { type RatingResponse } from '@app/compat/api/ratings';
+import { IssueStatus } from '@app/compat/constants/issue';
+import { MediaStatus, MediaType } from '@app/compat/constants/media';
+import { MediaServerType, ServerType } from '@app/compat/constants/server';
+import type { MovieDetails as MovieDetailsType } from '@app/compat/models/Movie';
 import BlocklistModal from '@app/components/BlocklistModal';
 import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
@@ -48,11 +53,6 @@ import {
   ChevronDoubleDownIcon,
   ChevronDoubleUpIcon,
 } from '@heroicons/react/24/solid';
-import { type RatingResponse } from '@server/api/ratings';
-import { IssueStatus } from '@server/constants/issue';
-import { MediaStatus, MediaType } from '@server/constants/media';
-import { MediaServerType, ServerType } from '@server/constants/server';
-import type { MovieDetails as MovieDetailsType } from '@server/models/Movie';
 import axios from 'axios';
 import { countries } from 'country-flag-icons';
 import 'country-flag-icons/3x2/flags.css';

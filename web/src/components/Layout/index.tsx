@@ -1,3 +1,4 @@
+import type { AvailableLocale } from '@app/compat/types/languages';
 import MobileMenu from '@app/components/Layout/MobileMenu';
 import PullToRefresh from '@app/components/Layout/PullToRefresh';
 import SearchInput from '@app/components/Layout/SearchInput';
@@ -8,7 +9,6 @@ import useLocale from '@app/hooks/useLocale';
 import useSettings from '@app/hooks/useSettings';
 import { useUser } from '@app/hooks/useUser';
 import { ArrowLeftIcon, Bars3BottomLeftIcon } from '@heroicons/react/24/solid';
-import type { AvailableLocale } from '@server/types/languages';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import useSWR from 'swr';

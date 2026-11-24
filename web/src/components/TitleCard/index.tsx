@@ -1,4 +1,7 @@
 import Spinner from '@app/assets/spinner.svg';
+import { MediaStatus } from '@app/compat/constants/media';
+import type { Watchlist } from '@app/compat/entity/Watchlist';
+import type { MediaType } from '@app/compat/models/Search';
 import BlocklistModal from '@app/components/BlocklistModal';
 import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
@@ -21,9 +24,6 @@ import {
   MinusCircleIcon,
   StarIcon,
 } from '@heroicons/react/24/outline';
-import { MediaStatus } from '@server/constants/media';
-import type { Watchlist } from '@server/entity/Watchlist';
-import type { MediaType } from '@server/models/Search';
 import axios from 'axios';
 import Link from 'next/link';
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
