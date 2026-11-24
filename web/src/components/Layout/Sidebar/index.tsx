@@ -3,6 +3,7 @@ import defineMessages from '@app/utils/defineMessages';
 import { Transition, TransitionChild } from '@headlessui/react';
 import {
   FilmIcon,
+  InformationCircleIcon,
   SparklesIcon,
   TvIcon,
   XMarkIcon,
@@ -17,6 +18,7 @@ export const menuMessages = defineMessages('components.Layout.Sidebar', {
   dashboard: 'Descobrir',
   browsemovies: 'Filmes',
   browsetv: 'Series',
+  about: 'About',
 });
 
 interface SidebarProps {
@@ -33,9 +35,9 @@ interface SidebarLinkProps {
   dataTestId?: string;
 }
 
-// Only entries that resolve today. The Para você, Listas, Histórico and
-// Sobre pages land in later beads together with their entries, so no link
-// here points at a page that does not exist yet.
+// Only entries that resolve today. The Para você, Listas and Histórico
+// pages land in later beads together with their entries, so no link here
+// points at a page that does not exist yet.
 const SidebarLinks: SidebarLinkProps[] = [
   {
     href: '/',
@@ -54,6 +56,12 @@ const SidebarLinks: SidebarLinkProps[] = [
     messagesKey: 'browsetv',
     svgIcon: <TvIcon className="mr-3 h-6 w-6" />,
     activeRegExp: /^\/discover\/tv$/,
+  },
+  {
+    href: '/about',
+    messagesKey: 'about',
+    svgIcon: <InformationCircleIcon className="mr-3 h-6 w-6" />,
+    activeRegExp: /^\/about$/,
   },
 ];
 

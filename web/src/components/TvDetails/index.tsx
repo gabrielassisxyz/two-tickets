@@ -1,9 +1,11 @@
 import { MediaType } from '@app/compat/constants/media';
 import type { TvDetails as TvDetailsType } from '@app/compat/models/Tv';
+import JustWatchCredit from '@app/components/About/JustWatchCredit';
 import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
 import PageTitle from '@app/components/Common/PageTitle';
+import Tooltip from '@app/components/Common/Tooltip';
 import ExternalLinkBlock from '@app/components/ExternalLinkBlock';
 import MediaSlider from '@app/components/MediaSlider';
 import PersonCard from '@app/components/PersonCard';
@@ -26,6 +28,7 @@ const messages = defineMessages('components.TvDetails', {
   recommendations: 'Recommendations',
   similar: 'Similar Titles',
   overviewunavailable: 'Overview unavailable.',
+  streamingproviders: 'Currently Streaming On',
   seasons: 'Seasons',
   watchlistSuccess: '<strong>{title}</strong> added to watchlist successfully!',
   watchlistDeleted:
@@ -67,6 +70,11 @@ const TvDetails = ({ tv }: TvDetailsProps) => {
   if (!data) {
     return <ErrorPage statusCode={404} />;
   }
+
+  // The display locale is always pt-BR and the region is always BR.
+  const streamingProviders =
+    data.watchProviders?.find((provider) => provider.iso_3166_1 === 'BR')
+      ?.flatrate ?? [];
 
   const onClickWatchlistBtn = async (): Promise<void> => {
     setIsUpdating(true);
@@ -204,6 +212,39 @@ const TvDetails = ({ tv }: TvDetailsProps) => {
         </div>
       </div>
       <ExternalLinkBlock mediaType="tv" tmdbId={data.id} />
+      {streamingProviders.length > 0 && (
+        <div className="media-overview">
+          <div className="flex-1">
+            <h2>{intl.formatMessage(messages.streamingproviders)}</h2>
+            <div className="flex flex-row flex-wrap gap-3">
+              {streamingProviders.map((provider) => (
+                <Tooltip
+                  content={provider.name}
+                  key={`provider-${provider.id}`}
+                >
+                  <span className="opacity-50 transition duration-300 hover:opacity-100">
+                    <CachedImage
+                      type="tmdb"
+                      src={
+                        provider.logoPath
+                          ? `https://image.tmdb.org/t/p/w45${provider.logoPath}`
+                          : '/images/seerr_poster_not_found.png'
+                      }
+                      alt={provider.name}
+                      width={32}
+                      height={32}
+                      className="rounded-md"
+                    />
+                  </span>
+                </Tooltip>
+              ))}
+            </div>
+            <div className="mt-2">
+              <JustWatchCredit />
+            </div>
+          </div>
+        </div>
+      )}
       {data.seasons.length > 0 && (
         <>
           <div className="slider-header">

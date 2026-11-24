@@ -4,11 +4,13 @@ import { Transition } from '@headlessui/react';
 import {
   EllipsisHorizontalIcon,
   FilmIcon,
+  InformationCircleIcon,
   SparklesIcon,
   TvIcon,
 } from '@heroicons/react/24/outline';
 import {
   FilmIcon as FilledFilmIcon,
+  InformationCircleIcon as FilledInformationCircleIcon,
   SparklesIcon as FilledSparklesIcon,
   TvIcon as FilledTvIcon,
   XMarkIcon,
@@ -64,6 +66,13 @@ const MobileMenu = () => {
       svgIcon: <TvIcon className="h-6 w-6" />,
       svgIconSelected: <FilledTvIcon className="h-6 w-6" />,
       activeRegExp: /^\/discover\/tv$/,
+    },
+    {
+      href: '/about',
+      content: intl.formatMessage(menuMessages.about),
+      svgIcon: <InformationCircleIcon className="h-6 w-6" />,
+      svgIconSelected: <FilledInformationCircleIcon className="h-6 w-6" />,
+      activeRegExp: /^\/about$/,
     },
   ];
 

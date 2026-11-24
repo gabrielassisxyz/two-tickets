@@ -51,6 +51,11 @@
       "note": "Upstream placeholder poster, kept byte for byte (LICENSE.seerr)."
     },
     {
+      "path": "public/images/tmdb-logo.svg",
+      "licence": "trademark",
+      "note": "TMDB logo from the TMDB brand assets (https://www.themoviedb.org/about/logos-attribution), copied byte for byte from src/assets/services/tmdb.svg and shown on the About page with the required notice; unmodified, trademark of TMDB."
+    },
+    {
       "path": "public/robots.txt",
       "licence": "MIT",
       "note": "Project file."
