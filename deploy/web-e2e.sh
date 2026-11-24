@@ -10,7 +10,10 @@
 # Part two runs it against the real api binary, with a temporary SQLite
 # directory and a throwaway account, and logs in the way the login page
 # does: GET /login, POST /api/v1/auth/local through the proxy, then GET /
-# with the session cookie.
+# with the session cookie. Then, with that session, it marks and unmarks a
+# title through the proxy: the DELETE carries its target in the body, which
+# the proxy once dropped, and the request after it shows whether the dropped
+# bytes poisoned the kept-alive connection to the api.
 #
 # Everything it starts is removed in a trap, whatever happens.
 set -euo pipefail
@@ -190,5 +193,39 @@ code="$(status_of -H "Cookie: ${session}" "${base}/")"
 me="$(curl -sS -H "Cookie: ${session}" "${base}/api/v1/auth/me")"
 printf '%s' "$me" | grep -qF '"username":"alice"' || fail "auth/me through the proxy = ${me}"
 echo "web e2e: GET / with the session renders as alice"
+
+# library_call <method> <path> <body>: sends a library mutation through the
+# proxy the way the UI does and prints "<status> <body>".
+library_call() {
+  local reply="$work/library.reply"
+  local code
+  code="$(curl -sS -o "$reply" -w '%{http_code}' -X "$1" -H "Cookie: ${session}" \
+    -H 'Content-Type: application/json' -H "Origin: ${allowed_origin}" \
+    --data "$3" "${base}$2")"
+  printf '%s %s' "$code" "$(cat "$reply")"
+}
+target='{"mediaType":"movie","tmdbId":603,"scope":"movie"}'
+for kind in watch rating; do
+  put_body="$target"
+  marked='"watched":true'
+  if [ "$kind" = "rating" ]; then
+    put_body='{"mediaType":"movie","tmdbId":603,"scope":"movie","level":"liked"}'
+    marked='"level":"liked"'
+  fi
+  reply="$(library_call PUT "/api/v1/library/${kind}" "$put_body")"
+  [ "${reply%% *}" = "200" ] || fail "PUT ${kind} through the proxy = ${reply}"
+  case "$reply" in
+  *"$marked"*) ;;
+  *) fail "PUT ${kind} answered 200 without ${marked}: ${reply}" ;;
+  esac
+  reply="$(library_call DELETE "/api/v1/library/${kind}" "$target")"
+  [ "${reply%% *}" = "200" ] || fail "DELETE ${kind} with a body through the proxy = ${reply}"
+  case "$reply" in
+  *"$marked"*) fail "DELETE ${kind} answered 200 but left the ${kind} in place: ${reply}" ;;
+  esac
+  code="$(status_of -H "Cookie: ${session}" "${base}/api/v1/auth/me")"
+  [ "$code" = "200" ] || fail "the request after DELETE ${kind} = ${code}, want 200: the body leaked onto the api connection"
+done
+echo "web e2e: DELETE with a body reaches the api, and the next request is clean"
 
 echo "web e2e: green"
