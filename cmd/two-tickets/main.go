@@ -14,9 +14,11 @@ import (
 	"os"
 	"os/signal"
 	"path/filepath"
+	"sync"
 	"syscall"
 	"time"
 
+	"github.com/gabrielassisxyz/two-tickets/internal/auth"
 	"github.com/gabrielassisxyz/two-tickets/internal/config"
 	"github.com/gabrielassisxyz/two-tickets/internal/httpapi"
 	"github.com/gabrielassisxyz/two-tickets/internal/store"
@@ -31,6 +33,8 @@ const (
 	readHeaderTimeout = 10 * time.Second
 	idleTimeout       = 120 * time.Second
 	shutdownTimeout   = 15 * time.Second
+
+	sessionPruneInterval = 24 * time.Hour
 )
 
 // serveDeps is everything serve takes from the outside world, so a test can run
@@ -87,10 +91,11 @@ func runServe(ctx context.Context, deps serveDeps) int {
 // returns before the port is bound, so nothing ever sees the process ready.
 func serve(ctx context.Context, deps serveDeps, logger *slog.Logger) error {
 	cfg, err := config.Load(deps.lookupEnv)
-	if err != nil {
+	authCfg, authErr := config.LoadAuth(deps.lookupEnv)
+	if err := errors.Join(err, authErr); err != nil {
 		return err
 	}
-	logger.Info("configuration loaded", "config", cfg)
+	logger.Info("configuration loaded", "config", cfg, "auth", authCfg)
 	if err := requireDirectory(cfg.DataDir); err != nil {
 		return err
 	}
@@ -114,12 +119,37 @@ func serve(ctx context.Context, deps serveDeps, logger *slog.Logger) error {
 		return fmt.Errorf("migrate %s: %w", store.StateFileName, err)
 	}
 
+	authService, err := auth.NewService(ctx, state, authCfg.Accounts, nil)
+	if err != nil {
+		return fmt.Errorf("accounts: %w", err)
+	}
+	stopPruning := startSessionPruning(ctx, authService, logger)
+	defer stopPruning()
+
 	listener, err := deps.listen("tcp", cfg.ListenAddr)
 	if err != nil {
 		return fmt.Errorf("listen on %s: %w", cfg.ListenAddr, err)
 	}
-	router := httpapi.NewRouter(httpapi.RouterDeps{Logger: logger, Readiness: []httpapi.ReadinessCheck{state, cache}})
+	router := httpapi.NewRouter(httpapi.RouterDeps{
+		Logger:         logger,
+		Readiness:      []httpapi.ReadinessCheck{state, cache},
+		Auth:           authService,
+		AllowedOrigins: authCfg.AllowedOrigins,
+		TrustedProxies: authCfg.TrustedProxies,
+	})
 	return serveUntilDone(ctx, listener, router, logger)
+}
+
+// startSessionPruning runs the daily prune in the background. The returned
+// function stops it and waits, so it never runs against a closed database.
+func startSessionPruning(ctx context.Context, service *auth.Service, logger *slog.Logger) func() {
+	ctx, cancel := context.WithCancel(ctx)
+	var wg sync.WaitGroup
+	wg.Go(func() { service.RunSessionPruning(ctx, sessionPruneInterval, logger) })
+	return func() {
+		cancel()
+		wg.Wait()
+	}
 }
 
 func serveUntilDone(ctx context.Context, listener net.Listener, handler http.Handler, logger *slog.Logger) error {
