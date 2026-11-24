@@ -75,6 +75,12 @@ type authServer struct {
 // forwarding headers count; the test client always connects from loopback.
 func startAuthServer(t *testing.T, trusted []netip.Prefix) *authServer {
 	t.Helper()
+	return startAuthServerWith(t, trusted, NewRouter)
+}
+
+// startAuthServerWith serves the handler build makes from the same deps.
+func startAuthServerWith(t *testing.T, trusted []netip.Prefix, build func(RouterDeps) http.Handler) *authServer {
+	t.Helper()
 	ctx := context.Background()
 	path := filepath.Join(t.TempDir(), store.StateFileName)
 	db, err := store.OpenDatabase(ctx, path)
@@ -98,7 +104,7 @@ func startAuthServer(t *testing.T, trusted []netip.Prefix) *authServer {
 	if err != nil {
 		t.Fatal(err)
 	}
-	server := httptest.NewServer(NewRouter(RouterDeps{
+	server := httptest.NewServer(build(RouterDeps{
 		Readiness:      []ReadinessCheck{db},
 		Auth:           service,
 		AllowedOrigins: []string{routerOrigin, routerLANOrigin},
@@ -571,5 +577,35 @@ func TestAuthRoutesRefuseOtherMethods(t *testing.T) {
 		if resp := s.do(t, r); resp.status != http.StatusMethodNotAllowed {
 			t.Errorf("%s %s = %d, want 405", r.method, r.path, resp.status)
 		}
+	}
+}
+
+// stubCatalogRoutes stands in for a catalog route family: catalog itself
+// registers no route yet.
+type stubCatalogRoutes struct{}
+
+const stubCatalogPath = "/api/v1/stub-catalog"
+
+func (stubCatalogRoutes) Register(mux *http.ServeMux) {
+	mux.HandleFunc(stubCatalogPath, func(w http.ResponseWriter, _ *http.Request) {
+		writeJSONBody(w, map[string]string{"stub": "catalog"})
+	})
+}
+
+func TestCatalogRoutesAreBehindTheSessionGateAndTheOriginCheck(t *testing.T) {
+	s := startAuthServerWith(t, nil, func(deps RouterDeps) http.Handler {
+		return newRouter(deps, stubCatalogRoutes{})
+	})
+	if resp := s.do(t, authRequest{method: http.MethodGet, path: stubCatalogPath}); resp.status != http.StatusUnauthorized {
+		t.Errorf("without a session = %d %s, want 401", resp.status, resp.body)
+	}
+	token := s.mustLogin(t, "alice", routerAlicePassword)
+	resp := s.do(t, authRequest{method: http.MethodGet, path: stubCatalogPath, token: token})
+	if resp.status != http.StatusOK || string(resp.body) != `{"stub":"catalog"}`+"\n" {
+		t.Errorf("with a session = %d %q, want the handler's answer", resp.status, resp.body)
+	}
+	foreign := s.do(t, authRequest{method: http.MethodPost, path: stubCatalogPath, token: token, headers: map[string]string{"Origin": "https://elsewhere.example"}})
+	if foreign.status != http.StatusForbidden {
+		t.Errorf("mutation from a foreign origin = %d, want 403", foreign.status)
 	}
 }

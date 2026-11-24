@@ -105,11 +105,12 @@ func serve(ctx context.Context, deps serveDeps, logger *slog.Logger) error {
 		return fmt.Errorf("open %s: %w", store.StateFileName, err)
 	}
 	defer closeAndLog(logger, store.StateFileName, state)
-	cache, err := store.OpenDatabase(ctx, filepath.Join(cfg.DataDir, store.CacheFileName))
+	cache, err := store.OpenCacheStore(ctx, filepath.Join(cfg.DataDir, store.CacheFileName))
 	if err != nil {
 		return fmt.Errorf("open %s: %w", store.CacheFileName, err)
 	}
-	defer closeAndLog(logger, store.CacheFileName, cache)
+	stopCachePruning := startCachePruning(ctx, cache, cachePruneInterval, cfg.CacheMaxBytes, logger)
+	defer stopCachePruning()
 
 	migrations, err := store.LoadMigrations(deps.stateMigrations)
 	if err != nil {
@@ -123,6 +124,10 @@ func serve(ctx context.Context, deps serveDeps, logger *slog.Logger) error {
 	if err != nil {
 		return fmt.Errorf("accounts: %w", err)
 	}
+	// After the accounts: each watchlist references its owner's users row.
+	if err := store.BootstrapLibraryLists(ctx, state, time.Now()); err != nil {
+		return fmt.Errorf("library lists: %w", err)
+	}
 	stopPruning := startSessionPruning(ctx, authService, logger)
 	defer stopPruning()
 
@@ -132,10 +137,11 @@ func serve(ctx context.Context, deps serveDeps, logger *slog.Logger) error {
 	}
 	router := httpapi.NewRouter(httpapi.RouterDeps{
 		Logger:         logger,
-		Readiness:      []httpapi.ReadinessCheck{state, cache},
+		Readiness:      []httpapi.ReadinessCheck{state, cacheReadiness{cache: cache}},
 		Auth:           authService,
 		AllowedOrigins: authCfg.AllowedOrigins,
 		TrustedProxies: authCfg.TrustedProxies,
+		Catalog:        newCatalogService(cfg, cache, logger),
 	})
 	return serveUntilDone(ctx, listener, router, logger)
 }
@@ -191,7 +197,7 @@ func requireDirectory(path string) error {
 	return nil
 }
 
-func closeAndLog(logger *slog.Logger, name string, db *store.Database) {
+func closeAndLog(logger *slog.Logger, name string, db io.Closer) {
 	if err := db.Close(); err != nil {
 		logger.Error("close database", "file", name, "error", err)
 	}

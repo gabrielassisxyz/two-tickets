@@ -15,6 +15,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/gabrielassisxyz/two-tickets/internal/respond"
 	"github.com/gabrielassisxyz/two-tickets/internal/store"
 )
 
@@ -189,6 +190,30 @@ func TestWriteErrorCarriesDetails(t *testing.T) {
 	}
 	if len(body.Errors) != 1 || body.Errors[0] != "page must be a number" {
 		t.Fatalf("errors = %v", body.Errors)
+	}
+}
+
+// A handler outside httpapi answers errors through respond; the client must
+// not be able to tell which of the two wrote it.
+func TestRespondErrorIsByteIdenticalToWriteError(t *testing.T) {
+	for _, details := range [][]string{nil, {"page must be a number", "query is required"}} {
+		viaHTTPAPI := httptest.NewRecorder()
+		WriteError(viaHTTPAPI, http.StatusBadRequest, "Bad Request", details...)
+		viaRespond := httptest.NewRecorder()
+		respond.Error(viaRespond, http.StatusBadRequest, "Bad Request", details...)
+
+		if viaHTTPAPI.Code != viaRespond.Code {
+			t.Errorf("details %v: status %d vs %d", details, viaHTTPAPI.Code, viaRespond.Code)
+		}
+		var left, right bytes.Buffer
+		_ = viaHTTPAPI.Header().Write(&left)
+		_ = viaRespond.Header().Write(&right)
+		if left.String() != right.String() {
+			t.Errorf("details %v: headers differ:\n%s\nvs\n%s", details, left.String(), right.String())
+		}
+		if !bytes.Equal(viaHTTPAPI.Body.Bytes(), viaRespond.Body.Bytes()) {
+			t.Errorf("details %v: body %q vs %q", details, viaHTTPAPI.Body.Bytes(), viaRespond.Body.Bytes())
+		}
 	}
 }
 
