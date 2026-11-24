@@ -25,11 +25,6 @@
     "reason": "runtime proxy to the api process, added here"
   },
   {
-    "path": "blocklist/index.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
     "path": "collection/[collectionId]/index.tsx",
     "class": "modify",
     "reason": "collection page, modified for local lists"
@@ -120,24 +115,9 @@
     "reason": "standalone catalogue page, kept as is"
   },
   {
-    "path": "issues/[issueId]/index.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "issues/index.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
     "path": "login/index.tsx",
     "class": "modify",
     "reason": "login flow, modified for the two fixed accounts"
-  },
-  {
-    "path": "login/plex/loading.tsx",
-    "class": "drop",
-    "reason": "Plex sign-in callback, a route that is not ported"
   },
   {
     "path": "movie/[movieId]/cast.tsx",
@@ -170,199 +150,9 @@
     "reason": "person title page, kept as is"
   },
   {
-    "path": "profile/index.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "profile/settings/index.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "profile/settings/linked-accounts.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "profile/settings/main.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "profile/settings/notifications/discord.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "profile/settings/notifications/email.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "profile/settings/notifications/pushbullet.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "profile/settings/notifications/pushover.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "profile/settings/notifications/telegram.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "profile/settings/notifications/webpush.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "profile/settings/password.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "profile/settings/permissions.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "profile/watchlist.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "requests/index.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "resetpassword/[guid]/index.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "resetpassword/index.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
     "path": "search.tsx",
     "class": "keep",
     "reason": "standalone catalogue page, kept as is"
-  },
-  {
-    "path": "settings/about.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/index.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/jellyfin.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/jobs.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/logs.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/main.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/metadata.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/network.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/notifications/discord.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/notifications/email.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/notifications/gotify.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/notifications/ntfy.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/notifications/pushbullet.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/notifications/pushover.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/notifications/slack.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/notifications/telegram.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/notifications/webhook.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/notifications/webpush.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/plex.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/services.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "settings/users.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "setup.tsx",
-    "class": "drop",
-    "reason": "first-run setup wizard, not ported"
   },
   {
     "path": "tv/[tvId]/cast.tsx",
@@ -388,80 +178,5 @@
     "path": "tv/[tvId]/similar.tsx",
     "class": "keep",
     "reason": "title subpage, kept as is"
-  },
-  {
-    "path": "users/[userId]/index.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/requests.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/settings/index.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/settings/linked-accounts.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/settings/main.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/settings/notifications/discord.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/settings/notifications/email.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/settings/notifications/pushbullet.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/settings/notifications/pushover.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/settings/notifications/telegram.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/settings/notifications/webpush.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/settings/password.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/settings/permissions.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/[userId]/watchlist.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
-  },
-  {
-    "path": "users/index.tsx",
-    "class": "drop",
-    "reason": "request and user management, not ported"
   }
 ]

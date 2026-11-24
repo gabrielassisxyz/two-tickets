@@ -1,4 +1,3 @@
-import { MediaServerType, ServerType } from '@app/compat/constants/server';
 import Alert from '@app/components/Common/Alert';
 import Button from '@app/components/Common/Button';
 import SensitiveInput from '@app/components/Common/SensitiveInput';
@@ -8,7 +7,6 @@ import { ArrowLeftOnRectangleIcon } from '@heroicons/react/24/outline';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/solid';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
-import Link from 'next/link';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import * as Yup from 'yup';
@@ -19,14 +17,11 @@ const messages = defineMessages('components.Login', {
   password: 'Password',
   validationusernamerequired: 'Username required',
   validationpasswordrequired: 'You must provide a password',
-  jellyfinLocalLoginHint:
-    "If you haven't set an email address in your profile, use your {mediaServerName} username instead.",
   loginerror: 'Something went wrong while trying to sign in.',
   credentialerror: 'The email address or password is incorrect.',
   tipEmailHasTrailingWhitespace: 'The email ends with whitespace',
   signingin: 'Signing In…',
   signin: 'Sign In',
-  forgotpassword: 'Forgot Password?',
   demoModeInfo: 'Demo mode is enabled. Use the demo credentials to sign in.',
 });
 
@@ -49,10 +44,6 @@ const LocalLogin = ({ revalidate }: LocalLoginProps) => {
       intl.formatMessage(messages.validationpasswordrequired)
     ),
   });
-
-  const passwordResetEnabled =
-    settings.currentSettings.applicationUrl &&
-    settings.currentSettings.emailEnabled;
 
   return (
     <Formik
@@ -126,20 +117,6 @@ const LocalLogin = ({ revalidate }: LocalLoginProps) => {
                     typeof errors.email === 'string' && (
                       <div className="error">{errors.email}</div>
                     )}
-                  {(settings.currentSettings.mediaServerType ===
-                    MediaServerType.JELLYFIN ||
-                    settings.currentSettings.mediaServerType ===
-                      MediaServerType.EMBY) && (
-                    <div className="mt-1 text-xs text-gray-400">
-                      {intl.formatMessage(messages.jellyfinLocalLoginHint, {
-                        mediaServerName:
-                          settings.currentSettings.mediaServerType ===
-                          MediaServerType.JELLYFIN
-                            ? ServerType.JELLYFIN
-                            : ServerType.EMBY,
-                      })}
-                    </div>
-                  )}
                 </div>
                 <div className="mb-2 mt-1">
                   <div className="form-input-field">
@@ -164,14 +141,6 @@ const LocalLogin = ({ revalidate }: LocalLoginProps) => {
                         <div className="error">{errors.password}</div>
                       )}
                     <div className="flex-grow" />
-                    {passwordResetEnabled && (
-                      <Link
-                        href="/resetpassword"
-                        className="pt-2 text-sm text-indigo-500 hover:text-indigo-400"
-                      >
-                        {intl.formatMessage(messages.forgotpassword)}
-                      </Link>
-                    )}
                   </div>
                 </div>
                 {loginError && (

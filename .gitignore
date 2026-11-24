@@ -41,4 +41,7 @@ web/out
 web/.eslintcache
 web/next-env.d.ts
 web/tsconfig.tsbuildinfo
+# Written by the renderer tests on every web test run: the request log the
+# api-inventory check diffs against the route manifest.
+web/tests/.runtime-requests.jsonl
 coverage

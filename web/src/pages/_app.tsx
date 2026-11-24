@@ -4,15 +4,13 @@ import type { AvailableLocale } from '@app/compat/types/languages';
 import Layout from '@app/components/Layout';
 import LoadingBar from '@app/components/LoadingBar';
 import PWAHeader from '@app/components/PWAHeader';
-import ServiceWorkerSetup from '@app/components/ServiceWorkerSetup';
-import StatusChecker from '@app/components/StatusChecker';
 import { InteractionProvider } from '@app/context/InteractionContext';
 import { LanguageContext } from '@app/context/LanguageContext';
 import { SettingsProvider } from '@app/context/SettingsContext';
 import { UserContext } from '@app/context/UserContext';
 import type { User } from '@app/hooks/useUser';
-import { Permission, useUser } from '@app/hooks/useUser';
 import '@app/styles/globals.css';
+import { loadLocaleData } from '@app/utils/loadLocaleData';
 import { polyfillIntl } from '@app/utils/polyfillIntl';
 import { getApiBaseUrl } from '@app/utils/urlHelper';
 import '@fontsource-variable/inter';
@@ -20,90 +18,10 @@ import axios from 'axios';
 import type { AppInitialProps, AppProps } from 'next/app';
 import App from 'next/app';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { IntlProvider } from 'react-intl';
 import { SWRConfig } from 'swr';
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const loadLocaleData = (locale: AvailableLocale): Promise<any> => {
-  switch (locale) {
-    case 'ar':
-      return import('../i18n/locale/ar.json');
-    case 'bg':
-      return import('../i18n/locale/bg.json');
-    case 'ca':
-      return import('../i18n/locale/ca.json');
-    case 'cs':
-      return import('../i18n/locale/cs.json');
-    case 'da':
-      return import('../i18n/locale/da.json');
-    case 'de':
-      return import('../i18n/locale/de.json');
-    case 'el':
-      return import('../i18n/locale/el.json');
-    case 'es':
-      return import('../i18n/locale/es.json');
-    case 'es-MX':
-      return import('../i18n/locale/es_MX.json');
-    case 'et':
-      return import('../i18n/locale/et.json');
-    case 'fi':
-      return import('../i18n/locale/fi.json');
-    case 'fr':
-      return import('../i18n/locale/fr.json');
-    case 'he':
-      return import('../i18n/locale/he.json');
-    case 'hi':
-      return import('../i18n/locale/hi.json');
-    case 'hr':
-      return import('../i18n/locale/hr.json');
-    case 'hu':
-      return import('../i18n/locale/hu.json');
-    case 'it':
-      return import('../i18n/locale/it.json');
-    case 'ja':
-      return import('../i18n/locale/ja.json');
-    case 'ko':
-      return import('../i18n/locale/ko.json');
-    case 'lb':
-      return import('../i18n/locale/lb.json');
-    case 'lt':
-      return import('../i18n/locale/lt.json');
-    case 'nb-NO':
-      return import('../i18n/locale/nb_NO.json');
-    case 'nl':
-      return import('../i18n/locale/nl.json');
-    case 'pl':
-      return import('../i18n/locale/pl.json');
-    case 'pt-BR':
-      return import('../i18n/locale/pt_BR.json');
-    case 'pt-PT':
-      return import('../i18n/locale/pt_PT.json');
-    case 'ro':
-      return import('../i18n/locale/ro.json');
-    case 'ru':
-      return import('../i18n/locale/ru.json');
-    case 'sq':
-      return import('../i18n/locale/sq.json');
-    case 'sr':
-      return import('../i18n/locale/sr.json');
-    case 'sv':
-      return import('../i18n/locale/sv.json');
-    case 'tr':
-      return import('../i18n/locale/tr.json');
-    case 'uk':
-      return import('../i18n/locale/uk.json');
-    case 'vi':
-      return import('../i18n/locale/vi.json');
-    case 'zh-CN':
-      return import('../i18n/locale/zh_Hans.json');
-    case 'zh-TW':
-      return import('../i18n/locale/zh_Hant.json');
-    default:
-      return import('../i18n/locale/en.json');
-  }
-};
 
 // Custom types so we can correctly type our GetInitialProps function
 // with our combined user prop
@@ -127,58 +45,11 @@ const CoreApp: Omit<NextAppComponentType, 'origGetInitialProps'> = ({
   locale,
   currentSettings,
 }: ExtendedAppProps) => {
+  const [loadedMessages] = useState<MessagesType>(messages);
+  const [currentLocale] = useState<AvailableLocale>(locale);
+
   let component: React.ReactNode;
-  const [loadedMessages, setMessages] = useState<MessagesType>(messages);
-  const [currentLocale, setLocale] = useState<AvailableLocale>(locale);
-
-  useEffect(() => {
-    loadLocaleData(currentLocale).then(setMessages);
-  }, [currentLocale]);
-
-  const { hasPermission } = useUser();
-
-  useEffect(() => {
-    const requestsCount = async () => {
-      const response = await axios.get('/api/v1/request/count');
-      return response.data;
-    };
-
-    // Cast navigator to a type that includes setAppBadge and clearAppBadge
-    // to avoid TypeScript errors while ensuring these methods exist before calling them.
-    const newNavigator = navigator as unknown as {
-      setAppBadge?: (count: number) => Promise<void>;
-      clearAppBadge?: () => Promise<void>;
-    };
-
-    const handleBadgeUpdate = () => {
-      if ('setAppBadge' in newNavigator) {
-        if (
-          !router.pathname.match(/(login|setup|resetpassword)/) &&
-          hasPermission(Permission.ADMIN)
-        ) {
-          requestsCount().then((data) => {
-            if (data.pending > 0) {
-              newNavigator.setAppBadge?.(data.pending);
-            } else {
-              newNavigator.clearAppBadge?.();
-            }
-          });
-        } else {
-          newNavigator.clearAppBadge?.();
-        }
-      }
-    };
-
-    handleBadgeUpdate();
-
-    window.addEventListener('focus', handleBadgeUpdate);
-
-    return () => {
-      window.removeEventListener('focus', handleBadgeUpdate);
-    };
-  }, [hasPermission, router.pathname]);
-
-  if (router.pathname.match(/(login|setup|resetpassword)/)) {
+  if (router.pathname === '/login') {
     component = <Component {...pageProps} />;
   } else {
     component = (
@@ -197,7 +68,7 @@ const CoreApp: Omit<NextAppComponentType, 'origGetInitialProps'> = ({
         },
       }}
     >
-      <LanguageContext.Provider value={{ locale: currentLocale, setLocale }}>
+      <LanguageContext.Provider value={{ locale: currentLocale }}>
         <IntlProvider
           locale={currentLocale}
           defaultLocale="en"
@@ -216,8 +87,6 @@ const CoreApp: Omit<NextAppComponentType, 'origGetInitialProps'> = ({
                   applicationTitle={currentSettings.applicationTitle}
                 />
               </Head>
-              <StatusChecker />
-              <ServiceWorkerSetup />
               <UserContext initialUser={user}>{component}</UserContext>
               <Toaster
                 position="top-right"
@@ -245,24 +114,24 @@ CoreApp.getInitialProps = async (initialProps) => {
     hideAvailable: false,
     hideBlocklisted: false,
     hideRequested: false,
+    localLogin: true,
+    mediaServerLogin: false,
     movie4kEnabled: false,
     series4kEnabled: false,
-    localLogin: true,
-    mediaServerLogin: true,
     discoverRegion: '',
     streamingRegion: '',
     originalLanguage: '',
     mediaServerType: MediaServerType.NOT_CONFIGURED,
-    partialRequestsEnabled: true,
+    partialRequestsEnabled: false,
     enableSpecialEpisodes: false,
     cacheImages: false,
     vapidPublic: '',
     enablePushRegistration: false,
-    locale: 'en',
+    locale: 'pt-BR',
     emailEnabled: false,
-    newPlexLogin: true,
+    newPlexLogin: false,
     youtubeUrl: '',
-    versionCheck: true,
+    versionCheck: false,
     plexClientIdentifier: '',
   };
 
@@ -277,9 +146,9 @@ CoreApp.getInitialProps = async (initialProps) => {
     const initialized = response.data.initialized;
 
     if (!initialized) {
-      if (!router.pathname.match(/(setup|login\/plex)/)) {
+      if (router.pathname !== '/login') {
         ctx.res.writeHead(307, {
-          Location: '/setup',
+          Location: '/login',
         });
         ctx.res.end();
       }
@@ -297,7 +166,7 @@ CoreApp.getInitialProps = async (initialProps) => {
         );
         user = response.data;
 
-        if (router.pathname.match(/(setup|login)/)) {
+        if (router.pathname === '/login') {
           ctx.res.writeHead(307, {
             Location: '/',
           });
@@ -305,9 +174,9 @@ CoreApp.getInitialProps = async (initialProps) => {
         }
       } catch {
         // If there is no user, and ctx.res is set (to check if we are on the server side)
-        // _AND_ we are not already on the login or setup route, redirect to /login with a 307
+        // _AND_ we are not already on the login route, redirect to /login with a 307
         // before anything actually renders
-        if (!router.pathname.match(/(login|setup|resetpassword)/)) {
+        if (router.pathname !== '/login') {
           ctx.res.writeHead(307, {
             Location: '/login',
           });
@@ -321,14 +190,16 @@ CoreApp.getInitialProps = async (initialProps) => {
   const appInitialProps: AppInitialProps =
     await App.getInitialProps(initialProps);
 
-  const locale = user?.settings?.locale
-    ? user.settings.locale
-    : currentSettings.locale;
-
-  const messages = await loadLocaleData(locale as AvailableLocale);
+  const messages = await loadLocaleData();
   await polyfillIntl();
 
-  return { ...appInitialProps, user, messages, locale, currentSettings };
+  return {
+    ...appInitialProps,
+    user,
+    messages,
+    locale: 'pt-BR',
+    currentSettings,
+  };
 };
 
 export default CoreApp;

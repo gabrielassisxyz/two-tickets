@@ -1,0 +1,669 @@
+{
+  "assets": [
+    {
+      "path": "public/apple-touch-icon.png",
+      "licence": "MIT",
+      "note": "Generated for this project from the Two Tickets mark."
+    },
+    {
+      "path": "public/favicon-16x16.png",
+      "licence": "MIT",
+      "note": "Generated for this project from the Two Tickets mark."
+    },
+    {
+      "path": "public/favicon-32x32.png",
+      "licence": "MIT",
+      "note": "Generated for this project from the Two Tickets mark."
+    },
+    {
+      "path": "public/favicon.ico",
+      "licence": "MIT",
+      "note": "Generated for this project from the Two Tickets mark."
+    },
+    {
+      "path": "public/logo_full.png",
+      "licence": "MIT",
+      "note": "Two Tickets wordmark rendered for the smoke test."
+    },
+    {
+      "path": "public/logo_full.svg",
+      "licence": "MIT",
+      "note": "Two Tickets wordmark shown in the sidebar."
+    },
+    {
+      "path": "public/logo_stacked.svg",
+      "licence": "MIT",
+      "note": "Two Tickets wordmark shown on the login page."
+    },
+    {
+      "path": "public/images/seerr_poster_not_found.png",
+      "licence": "MIT",
+      "note": "Upstream placeholder poster, kept byte for byte (LICENSE.seerr)."
+    },
+    {
+      "path": "public/images/seerr_poster_not_found_logo_center.png",
+      "licence": "MIT",
+      "note": "Upstream placeholder poster, kept byte for byte (LICENSE.seerr)."
+    },
+    {
+      "path": "public/images/seerr_poster_not_found_logo_top.png",
+      "licence": "MIT",
+      "note": "Upstream placeholder poster, kept byte for byte (LICENSE.seerr)."
+    },
+    {
+      "path": "public/robots.txt",
+      "licence": "MIT",
+      "note": "Project file."
+    },
+    {
+      "path": "src/assets/ellipsis.svg",
+      "licence": "MIT",
+      "note": "Upstream loading indicator, kept byte for byte (LICENSE.seerr)."
+    },
+    {
+      "path": "src/assets/spinner.svg",
+      "licence": "MIT",
+      "note": "Upstream loading indicator, kept byte for byte (LICENSE.seerr)."
+    },
+    {
+      "path": "src/assets/services/emby.svg",
+      "licence": "trademark",
+      "note": "Emby service mark for the outbound attribution link in ExternalLinkBlock; unmodified, link to the owner kept. Rendered only when a media server is configured, which two-tickets never sets."
+    },
+    {
+      "path": "src/assets/services/imdb.svg",
+      "licence": "trademark",
+      "note": "IMDb service mark for the outbound attribution link in ExternalLinkBlock; unmodified, link to the owner kept."
+    },
+    {
+      "path": "src/assets/services/jellyfin.svg",
+      "licence": "trademark",
+      "note": "Jellyfin service mark (the companion jellyfin-icon.svg carried the CC-BY-SA-4.0 header and was removed as unused). Retained for the outbound attribution link in ExternalLinkBlock; unmodified, link to the owner kept. Rendered only when a media server is configured, which two-tickets never sets."
+    },
+    {
+      "path": "src/assets/services/letterboxd.svg",
+      "licence": "trademark",
+      "note": "Letterboxd service mark for the outbound attribution link in ExternalLinkBlock; unmodified, link to the owner kept."
+    },
+    {
+      "path": "src/assets/services/plex.svg",
+      "licence": "trademark",
+      "note": "Plex service mark for the outbound attribution link in ExternalLinkBlock; unmodified, link to the owner kept. Rendered only when a media server is configured, which two-tickets never sets."
+    },
+    {
+      "path": "src/assets/services/rt.svg",
+      "licence": "trademark",
+      "note": "Rotten Tomatoes service mark for the outbound attribution link in ExternalLinkBlock; unmodified, link to the owner kept."
+    },
+    {
+      "path": "src/assets/services/simkl.svg",
+      "licence": "trademark",
+      "note": "Simkl service mark for the outbound attribution link in ExternalLinkBlock; unmodified, link to the owner kept."
+    },
+    {
+      "path": "src/assets/services/tmdb.svg",
+      "licence": "trademark",
+      "note": "TMDB service mark for the outbound attribution link in ExternalLinkBlock; unmodified, link to the owner kept. TMDB is also the catalog source, attributed in the interface."
+    },
+    {
+      "path": "src/assets/services/trakt.svg",
+      "licence": "trademark",
+      "note": "Trakt service mark for the outbound attribution link in ExternalLinkBlock; unmodified, link to the owner kept."
+    },
+    {
+      "path": "src/assets/services/tvdb.svg",
+      "licence": "trademark",
+      "note": "TheTVDB service mark for the outbound attribution link in ExternalLinkBlock; unmodified, link to the owner kept."
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "@commitlint/cli",
+      "licence": "MIT"
+    },
+    {
+      "name": "@commitlint/config-conventional",
+      "licence": "MIT"
+    },
+    {
+      "name": "@dr.pogodin/csurf",
+      "licence": "MIT"
+    },
+    {
+      "name": "@eslint/js",
+      "licence": "MIT"
+    },
+    {
+      "name": "@fontsource-variable/inter",
+      "licence": "OFL-1.1"
+    },
+    {
+      "name": "@formatjs/intl",
+      "licence": "MIT"
+    },
+    {
+      "name": "@formatjs/intl-locale",
+      "licence": "MIT"
+    },
+    {
+      "name": "@headlessui/react",
+      "licence": "MIT"
+    },
+    {
+      "name": "@heroicons/react",
+      "licence": "MIT"
+    },
+    {
+      "name": "@next/eslint-plugin-next",
+      "licence": "MIT"
+    },
+    {
+      "name": "@playwright/test",
+      "licence": "Apache-2.0"
+    },
+    {
+      "name": "@react-spring/web",
+      "licence": "MIT"
+    },
+    {
+      "name": "@seerr-team/react-tailwindcss-datepicker",
+      "licence": "MIT"
+    },
+    {
+      "name": "@supercharge/request-ip",
+      "licence": "MIT"
+    },
+    {
+      "name": "@svgr/webpack",
+      "licence": "MIT"
+    },
+    {
+      "name": "@tailwindcss/aspect-ratio",
+      "licence": "MIT"
+    },
+    {
+      "name": "@tailwindcss/forms",
+      "licence": "MIT"
+    },
+    {
+      "name": "@tailwindcss/typography",
+      "licence": "MIT"
+    },
+    {
+      "name": "@tanem/react-nprogress",
+      "licence": "MIT"
+    },
+    {
+      "name": "@testing-library/react",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/bcrypt",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/cookie-parser",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/country-flag-icons",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/csurf",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/eslint-plugin-jsx-a11y",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/express",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/express-session",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/js-yaml",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/lodash",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/node",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/node-schedule",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/nodemailer",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/react",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/react-dom",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/react-transition-group",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/semver",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/supertest",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/swagger-ui-express",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/validator",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/wink-jaro-distance",
+      "licence": "MIT"
+    },
+    {
+      "name": "@types/xml2js",
+      "licence": "MIT"
+    },
+    {
+      "name": "ace-builds",
+      "licence": "BSD-3-Clause"
+    },
+    {
+      "name": "autoprefixer",
+      "licence": "MIT"
+    },
+    {
+      "name": "axios",
+      "licence": "MIT"
+    },
+    {
+      "name": "axios-rate-limit",
+      "licence": "MIT"
+    },
+    {
+      "name": "baseline-browser-mapping",
+      "licence": "Apache-2.0"
+    },
+    {
+      "name": "bcrypt",
+      "licence": "MIT"
+    },
+    {
+      "name": "bowser",
+      "licence": "MIT"
+    },
+    {
+      "name": "commander",
+      "licence": "MIT"
+    },
+    {
+      "name": "commitizen",
+      "licence": "MIT"
+    },
+    {
+      "name": "connect-typeorm",
+      "licence": "MIT"
+    },
+    {
+      "name": "cookie-parser",
+      "licence": "MIT"
+    },
+    {
+      "name": "copy-to-clipboard",
+      "licence": "MIT"
+    },
+    {
+      "name": "copyfiles",
+      "licence": "MIT"
+    },
+    {
+      "name": "country-flag-icons",
+      "licence": "MIT"
+    },
+    {
+      "name": "cronstrue",
+      "licence": "MIT"
+    },
+    {
+      "name": "cy-mobile-commands",
+      "licence": "ISC"
+    },
+    {
+      "name": "cypress",
+      "licence": "MIT"
+    },
+    {
+      "name": "cz-conventional-changelog",
+      "licence": "MIT"
+    },
+    {
+      "name": "dns-caching",
+      "licence": "MIT"
+    },
+    {
+      "name": "eslint",
+      "licence": "MIT"
+    },
+    {
+      "name": "eslint-config-next",
+      "licence": "MIT"
+    },
+    {
+      "name": "eslint-config-prettier",
+      "licence": "MIT"
+    },
+    {
+      "name": "eslint-plugin-formatjs",
+      "licence": "MIT"
+    },
+    {
+      "name": "eslint-plugin-jsx-a11y",
+      "licence": "MIT"
+    },
+    {
+      "name": "eslint-plugin-no-relative-import-paths",
+      "licence": "ISC"
+    },
+    {
+      "name": "eslint-plugin-prettier",
+      "licence": "MIT"
+    },
+    {
+      "name": "eslint-plugin-react",
+      "licence": "MIT"
+    },
+    {
+      "name": "eslint-plugin-react-hooks",
+      "licence": "MIT"
+    },
+    {
+      "name": "express",
+      "licence": "MIT"
+    },
+    {
+      "name": "express-openapi-validator",
+      "licence": "MIT"
+    },
+    {
+      "name": "express-rate-limit",
+      "licence": "MIT"
+    },
+    {
+      "name": "express-session",
+      "licence": "MIT"
+    },
+    {
+      "name": "formik",
+      "licence": "Apache-2.0"
+    },
+    {
+      "name": "globals",
+      "licence": "MIT"
+    },
+    {
+      "name": "gravatar-url",
+      "licence": "MIT"
+    },
+    {
+      "name": "http-proxy-agent",
+      "licence": "MIT"
+    },
+    {
+      "name": "https-proxy-agent",
+      "licence": "MIT"
+    },
+    {
+      "name": "husky",
+      "licence": "MIT"
+    },
+    {
+      "name": "ip-address",
+      "licence": "MIT"
+    },
+    {
+      "name": "jiti",
+      "licence": "MIT"
+    },
+    {
+      "name": "js-yaml",
+      "licence": "MIT"
+    },
+    {
+      "name": "jsdom",
+      "licence": "MIT"
+    },
+    {
+      "name": "lint-staged",
+      "licence": "MIT"
+    },
+    {
+      "name": "lodash",
+      "licence": "MIT"
+    },
+    {
+      "name": "lru-cache",
+      "licence": "ISC"
+    },
+    {
+      "name": "mime",
+      "licence": "MIT"
+    },
+    {
+      "name": "nanoid",
+      "licence": "MIT"
+    },
+    {
+      "name": "next",
+      "licence": "MIT"
+    },
+    {
+      "name": "node-gyp",
+      "licence": "MIT"
+    },
+    {
+      "name": "node-schedule",
+      "licence": "MIT"
+    },
+    {
+      "name": "nodemailer",
+      "licence": "MIT-0"
+    },
+    {
+      "name": "nodemon",
+      "licence": "MIT"
+    },
+    {
+      "name": "pg",
+      "licence": "MIT"
+    },
+    {
+      "name": "postcss",
+      "licence": "MIT"
+    },
+    {
+      "name": "prettier",
+      "licence": "MIT"
+    },
+    {
+      "name": "prettier-plugin-organize-imports",
+      "licence": "MIT"
+    },
+    {
+      "name": "prettier-plugin-tailwindcss",
+      "licence": "MIT"
+    },
+    {
+      "name": "pug",
+      "licence": "MIT"
+    },
+    {
+      "name": "react",
+      "licence": "MIT"
+    },
+    {
+      "name": "react-ace",
+      "licence": "MIT"
+    },
+    {
+      "name": "react-animate-height",
+      "licence": "MIT"
+    },
+    {
+      "name": "react-aria",
+      "licence": "Apache-2.0"
+    },
+    {
+      "name": "react-dom",
+      "licence": "MIT"
+    },
+    {
+      "name": "react-hot-toast",
+      "licence": "MIT"
+    },
+    {
+      "name": "react-intersection-observer",
+      "licence": "MIT"
+    },
+    {
+      "name": "react-intl",
+      "licence": "BSD-3-Clause"
+    },
+    {
+      "name": "react-markdown",
+      "licence": "MIT"
+    },
+    {
+      "name": "react-popper-tooltip",
+      "licence": "MIT"
+    },
+    {
+      "name": "react-select",
+      "licence": "MIT"
+    },
+    {
+      "name": "react-transition-group",
+      "licence": "BSD-3-Clause"
+    },
+    {
+      "name": "react-truncate-markup",
+      "licence": "Apache-2.0"
+    },
+    {
+      "name": "react-use-clipboard",
+      "licence": "MIT"
+    },
+    {
+      "name": "reflect-metadata",
+      "licence": "Apache-2.0"
+    },
+    {
+      "name": "semver",
+      "licence": "ISC"
+    },
+    {
+      "name": "sharp",
+      "licence": "Apache-2.0"
+    },
+    {
+      "name": "sqlite3",
+      "licence": "BSD-3-Clause"
+    },
+    {
+      "name": "supertest",
+      "licence": "MIT"
+    },
+    {
+      "name": "swagger-ui-express",
+      "licence": "MIT"
+    },
+    {
+      "name": "swr",
+      "licence": "MIT"
+    },
+    {
+      "name": "tailwind-merge",
+      "licence": "MIT"
+    },
+    {
+      "name": "tailwindcss",
+      "licence": "MIT"
+    },
+    {
+      "name": "ts-node",
+      "licence": "MIT"
+    },
+    {
+      "name": "tsc-alias",
+      "licence": "MIT"
+    },
+    {
+      "name": "tsconfig-paths",
+      "licence": "MIT"
+    },
+    {
+      "name": "typeorm",
+      "licence": "MIT"
+    },
+    {
+      "name": "typescript",
+      "licence": "Apache-2.0"
+    },
+    {
+      "name": "typescript-eslint",
+      "licence": "MIT"
+    },
+    {
+      "name": "undici",
+      "licence": "MIT"
+    },
+    {
+      "name": "validator",
+      "licence": "MIT"
+    },
+    {
+      "name": "vitest",
+      "licence": "MIT"
+    },
+    {
+      "name": "wink-jaro-distance",
+      "licence": "MIT"
+    },
+    {
+      "name": "winston",
+      "licence": "MIT"
+    },
+    {
+      "name": "winston-daily-rotate-file",
+      "licence": "MIT"
+    },
+    {
+      "name": "xml2js",
+      "licence": "MIT"
+    },
+    {
+      "name": "yup",
+      "licence": "MIT"
+    },
+    {
+      "name": "zod",
+      "licence": "MIT"
+    }
+  ]
+}

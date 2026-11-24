@@ -535,3 +535,61 @@ Updates are pulled by hand, never merged:
 4. Check slider-id collisions.
 5. Run the contract, build, end-to-end and licence checks.
 6. Update this file in the same commit.
+
+## Divergences: strip and rebrand (tt-2gv)
+
+Two-tickets is a tracker for two fixed accounts, not a media-request app.
+Every class below deletes what the app never uses; nothing is left as a stub.
+
+- Dropped pages: `blocklist/`, `issues/`, `requests/`, `resetpassword/`,
+  `settings/`, `users/`, `profile/`, `setup.tsx`, `login/plex/`. The page
+  inventory was regenerated; every remaining page is classified keep or
+  modify with no unclassified page.
+- Dropped components: request, issue, blocklist, settings, setup, user and
+  user-profile management, `StatusChecker`, `ServiceWorkerSetup`,
+  `StatusBadge`, `JSONEditor`, `ManageSlideOver`, `MetadataSelector`,
+  `NotificationTypeSelector`, `PermissionEdit`, `PermissionOption`,
+  `QuotaSelector`, `ResetPassword`, `DownloadBlock`, `AppDataWarning`, and
+  the `RecentlyAdded`, `RecentRequests` and `PlexWatchlist` sliders, with
+  their `CreateSlider`/`DiscoverSliderEdit` customization UI. Every incoming
+  link to a dropped page was removed from `Layout`, `Sidebar`, `MobileMenu`
+  and `UserDropdown`.
+- Removed callers rather than left to fail: the request and issue count
+  polling in `_app` and `Layout`, `StatusChecker` (`/api/v1/status`),
+  `ServiceWorkerSetup` with `public/sw.js` and the push-subscription cleanup
+  on logout, `MiniQuotaDisplay` (`/api/v1/user/:id/quota`), `UserWarnings`
+  with the profile-completion flow, `VersionStatus`, the language pickers,
+  and the Jellyfin/Emby/Plex login hints and buttons. The locale is locked
+  to pt-BR; `loadLocaleData` drops empty values so the English
+  `defaultMessage` renders instead of a blank label.
+- Kept pages were simplified in place: `Discover` renders a fixed slider
+  manifest with no server fetch and no edit UI; `TitleCard` keeps only the
+  watchlist star ("Quero ver"); `CollectionDetails`, `MovieDetails` and
+  `TvDetails` show the catalog record with recommendations and similar
+  titles; `FilterSlideover` keeps only controls backed by a lookup route
+  (genres, keyword, studio, network, watch providers, languages, regions,
+  certifications); `MediaSlider`, `useDiscover` and `Common/ListView` lost
+  their hide-available/hide-blocklist/hide-requested filters and blocklist
+  permission checks; `Selector` lost `UserSelector`.
+- No PWA: the manifest link, mobile-web-app tags, splash images,
+  `site.webmanifest`, `offline.html` and `sw.js` are gone; `PWAHeader`
+  renders browser metadata only. Menus show Descobrir, Filmes and Séries;
+  the Para você, Listas, Histórico and Sobre entries land together with
+  their pages in later beads, so no link points at a missing page.
+- Rebrand: page titles, logo SVGs, favicon, apple-touch-icon and browser
+  metadata read "Two Tickets". The Discover carousels and title-page layout
+  keep their structure with the project's own identity.
+- Removed assets: the PWA icons (`android-chrome-*`, `badge-`, `clock-`,
+  `cog-`, `sparkles-`, `user-icon-`, `os_icon.svg`), `offline.html`,
+  `site.webmanifest`, `sw.js`, the splash images, the notification-provider
+  logos (`src/assets/extlogos/`), the unused `radarr`/`sonarr` service
+  marks, the unused `jellyfin-icon.svg` (the CC-BY-SA file the import
+  review flagged) and `emby-icon-only.svg`, the unused Font Awesome Pro
+  `infinity.svg` (commercial licence, removed, not replaced), and the
+  external-ratings marks (`rt_*`, `tmdb_logo.svg`) with the ratings calls
+  that used them.
+- Removed dependencies: `openpgp` (LGPL-3.0+), `ua-parser-js`
+  (AGPL-3.0-or-later) and `web-push` (MPL-2.0) with their `@types/*`
+  packages. Nothing under `web/src` imported them; the push code that used
+  `web-push` went with `ServiceWorkerSetup`. Every retained asset and
+  dependency is listed with its licence in `web/tests/licences.json`.

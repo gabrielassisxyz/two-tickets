@@ -29,13 +29,9 @@ const Search = () => {
     titles,
     fetchMore,
     error,
-  } = useDiscover<MovieResult | TvResult | PersonResult>(
-    `/api/v1/search`,
-    {
-      query: router.query.query,
-    },
-    { hideAvailable: false, hideBlocklisted: false, hideRequested: false }
-  );
+  } = useDiscover<MovieResult | TvResult | PersonResult>(`/api/v1/search`, {
+    query: router.query.query,
+  });
 
   if (error) {
     return <ErrorPage statusCode={500} />;
