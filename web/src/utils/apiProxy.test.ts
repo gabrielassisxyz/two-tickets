@@ -221,6 +221,20 @@ describe('buildApiRequestHeaders', () => {
     });
   });
 
+  it("forwards the body's framing headers", () => {
+    const sized = buildApiRequestHeaders(
+      fakeRequest({ 'content-length': '27' }, { remoteAddress: '192.0.2.7' })
+    );
+    expect(sized['content-length']).toBe('27');
+    const chunked = buildApiRequestHeaders(
+      fakeRequest(
+        { 'transfer-encoding': 'chunked' },
+        { remoteAddress: '192.0.2.7' }
+      )
+    );
+    expect(chunked['transfer-encoding']).toBe('chunked');
+  });
+
   it('replaces inbound forwarding headers instead of appending to them', () => {
     const headers = buildApiRequestHeaders(
       fakeRequest(
@@ -391,6 +405,58 @@ describe('proxyToApi against a fake api', () => {
     );
     expect(answer.status).toBe(200);
     expect(received).toHaveLength(1);
+    expect(received[0].bodyBytes).toBe(whole.length);
+    expect(received[0].bodySha256).toBe(
+      createHash('sha256').update(whole).digest('hex')
+    );
+  });
+
+  // The library's unwatch and clear-rating calls send DELETE with a JSON
+  // body, which Node does not frame on its own.
+  it('delivers a DELETE body sized by Content-Length, as a browser sends it', async () => {
+    const body = Buffer.from(
+      JSON.stringify({ mediaType: 'movie', tmdbId: 603, scope: 'movie' })
+    );
+    const answer = await throughProxy(
+      {
+        method: 'DELETE',
+        path: '/api/v1/library/rating',
+        headers: {
+          'content-type': 'application/json',
+          'content-length': String(body.length),
+        },
+      },
+      [body]
+    );
+    expect(answer.status).toBe(200);
+    expect(received).toHaveLength(1);
+    expect(received[0].method).toBe('DELETE');
+    expect(received[0].bodyBytes).toBe(body.length);
+    expect(received[0].bodySha256).toBe(
+      createHash('sha256').update(body).digest('hex')
+    );
+  });
+
+  it('delivers a chunked DELETE body', async () => {
+    const chunks = [
+      Buffer.from('{"mediaType":"movie",'),
+      Buffer.from('"tmdbId":603}'),
+    ];
+    const whole = Buffer.concat(chunks);
+    const answer = await throughProxy(
+      {
+        method: 'DELETE',
+        path: '/api/v1/library/watch',
+        headers: {
+          'content-type': 'application/json',
+          'transfer-encoding': 'chunked',
+        },
+      },
+      chunks
+    );
+    expect(answer.status).toBe(200);
+    expect(received).toHaveLength(1);
+    expect(received[0].method).toBe('DELETE');
     expect(received[0].bodyBytes).toBe(whole.length);
     expect(received[0].bodySha256).toBe(
       createHash('sha256').update(whole).digest('hex')

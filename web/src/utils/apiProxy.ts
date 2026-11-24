@@ -15,8 +15,15 @@ import type { TLSSocket } from 'tls';
 // What the api reads from the browser's request. Nothing else is forwarded:
 // in particular no Forwarded or X-Forwarded-* header the browser wrote, since
 // the api trusts those headers from this process.
+//
+// content-length and transfer-encoding are the body's framing, and not
+// optional: without them Node sends a piped GET, HEAD, DELETE or OPTIONS body
+// unframed, and the api reads those bytes as the next request on the
+// keep-alive connection, with whatever forwarding headers they carry.
 const forwardedRequestHeaders = [
   'content-type',
+  'content-length',
+  'transfer-encoding',
   'accept',
   'cookie',
   'origin',
