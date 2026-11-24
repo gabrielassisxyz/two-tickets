@@ -160,6 +160,37 @@ func TestCallerCancellationStopsRetriesImmediately(t *testing.T) {
 	}
 }
 
+// The caller returning is not enough: with nobody left waiting, the shared
+// fetch itself must stop, and the upstream request with it.
+func TestLastCallerLeavingCancelsTheUpstreamRequest(t *testing.T) {
+	cancelled := make(chan struct{})
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		select {
+		case <-r.Context().Done():
+			close(cancelled)
+		case <-time.After(5 * time.Second):
+		}
+	}))
+	defer server.Close()
+
+	ctx, cancel := context.WithCancel(context.Background())
+	client, _, _ := newTestClient(t, server.URL, testClientArgs{attemptTO: 5 * time.Second})
+	done := make(chan error, 1)
+	go func() {
+		var movie MovieDetails
+		done <- client.Get(ctx, "/movie/550", nil, &movie)
+	}()
+	waitUntilShared(t, client, 1)
+	cancel()
+	if err := <-done; !errors.Is(err, context.Canceled) {
+		t.Fatalf("Get after cancellation = %v, want context.Canceled", err)
+	}
+	select {
+	case <-cancelled:
+	case <-time.After(2 * time.Second):
+		t.Fatal("the upstream request kept running after its only caller left")
+	}
+}
 
 func TestCached200ServedWithoutUpstreamUntilTTLPasses(t *testing.T) {
 	var upstream atomic.Int64

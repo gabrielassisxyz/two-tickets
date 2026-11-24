@@ -2,6 +2,7 @@ package tmdb
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"net/http"
 	"net/http/httptest"
@@ -50,6 +51,76 @@ func TestSingleflightCoalesces100IdenticalColdRequests(t *testing.T) {
 	if got := upstream.Load(); got != 1 {
 		t.Fatalf("upstream requests = %d, want exactly 1", got)
 	}
+}
+
+// A shared fetch outlives any one of its callers: the caller that gives up
+// gets its own cancellation at once, and the caller still waiting gets the
+// response from the same single upstream request.
+func TestOneCallerCancellingDoesNotFailTheOthers(t *testing.T) {
+	var upstream atomic.Int64
+	release := make(chan struct{})
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, _ *http.Request) {
+		upstream.Add(1)
+		<-release
+		w.Header().Set("Content-Type", "application/json")
+		_, _ = w.Write([]byte(`{"id":550,"title":"Central do Brasil"}`))
+	}))
+	defer server.Close()
+	defer func() {
+		select {
+		case <-release:
+		default:
+			close(release)
+		}
+	}()
+	client, _, _ := newTestClient(t, server.URL, testClientArgs{})
+
+	leaving, cancel := context.WithCancel(context.Background())
+	left := make(chan error, 1)
+	go func() {
+		var movie MovieDetails
+		left <- client.Get(leaving, "/movie/550", nil, &movie)
+	}()
+	waitUntilShared(t, client, 1)
+	stayed := make(chan error, 1)
+	var movie MovieDetails
+	go func() { stayed <- client.Get(context.Background(), "/movie/550", nil, &movie) }()
+	waitUntilShared(t, client, 2)
+
+	cancel()
+	if err := <-left; !errors.Is(err, context.Canceled) {
+		t.Fatalf("the caller that cancelled got %v, want context.Canceled", err)
+	}
+	close(release)
+	if err := <-stayed; err != nil {
+		t.Fatalf("the caller that stayed got %v, want the response", err)
+	}
+	if movie.Title != "Central do Brasil" {
+		t.Fatalf("title = %q, want the shared response", movie.Title)
+	}
+	if got := upstream.Load(); got != 1 {
+		t.Fatalf("upstream requests = %d, want exactly 1", got)
+	}
+}
+
+// waitUntilShared waits until exactly one fetch is in flight with the given
+// number of callers waiting on it.
+func waitUntilShared(t *testing.T, client *Client, waiters int) {
+	t.Helper()
+	deadline := time.Now().Add(5 * time.Second)
+	for time.Now().Before(deadline) {
+		client.flightsMu.Lock()
+		count, total := len(client.flights), 0
+		for _, flight := range client.flights {
+			total = flight.waiters
+		}
+		client.flightsMu.Unlock()
+		if count == 1 && total == waiters {
+			return
+		}
+		time.Sleep(2 * time.Millisecond)
+	}
+	t.Fatalf("no single shared fetch with %d waiters appeared", waiters)
 }
 
 type startRecorder struct {

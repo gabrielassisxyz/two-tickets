@@ -15,9 +15,9 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+	"sync"
 	"time"
 
-	"golang.org/x/sync/singleflight"
 	"golang.org/x/time/rate"
 
 	"github.com/gabrielassisxyz/two-tickets/internal/config"
@@ -111,7 +111,22 @@ type Client struct {
 	logger         *slog.Logger
 	language       string
 	region         string
-	group          singleflight.Group
+
+	flightsMu sync.Mutex
+	flights   map[string]*sharedFetch
+}
+
+// sharedFetch is one upstream fetch that every concurrent caller of the same
+// cache key waits on. Its context is cancelled only when the last waiter gives
+// up: keyed to the first caller instead, one caller navigating away would fail
+// every other caller of that key, while a fetch nobody waits for any more
+// still stops at once.
+type sharedFetch struct {
+	done    chan struct{}
+	body    []byte
+	err     error
+	waiters int
+	cancel  context.CancelFunc
 }
 
 // NewClient builds a client, filling every zero Option with the production
@@ -196,6 +211,7 @@ func NewClient(opts Options) *Client {
 		logger:         logger,
 		language:       language,
 		region:         region,
+		flights:        map[string]*sharedFetch{},
 	}
 }
 
@@ -236,19 +252,15 @@ func (c *Client) Get(ctx context.Context, path string, params map[string]string,
 	key := BuildCacheKey(c.formatVersion, http.MethodGet, path, merged)
 	ttl := TTLForPath(path)
 
-	// Singleflight wraps the whole cache-miss-then-fetch path, keyed by the
+	// One shared fetch wraps the whole cache-miss-then-fetch path, keyed by the
 	// cache key, so 100 concurrent identical cold requests make 1 upstream
 	// request. The shared value is the raw body; each caller decodes into its
 	// own dest.
-	shared, err, _ := c.group.Do(key, func() (any, error) {
-		return c.fetchUnshared(ctx, path, merged, key, ttl)
+	body, err := c.fetchShared(ctx, key, func(fetchCtx context.Context) ([]byte, error) {
+		return c.fetchUnshared(fetchCtx, path, merged, key, ttl)
 	})
 	if err != nil {
 		return err
-	}
-	body, ok := shared.([]byte)
-	if !ok {
-		return fmt.Errorf("tmdb: unexpected shared type %T", shared)
 	}
 	if dest == nil {
 		return nil
@@ -261,6 +273,58 @@ func (c *Client) Get(ctx context.Context, path string, params map[string]string,
 		return fmt.Errorf("tmdb: decode %s: %w", redactPath(path), err)
 	}
 	return nil
+}
+
+// fetchShared joins the in-flight fetch for key, or starts one, and waits for
+// it under the caller's own context. A caller that gives up gets its own
+// error at once and leaves the fetch to whoever still waits.
+func (c *Client) fetchShared(ctx context.Context, key string, fetch func(context.Context) ([]byte, error)) ([]byte, error) {
+	c.flightsMu.Lock()
+	flight, joined := c.flights[key]
+	if !joined {
+		fetchCtx, cancel := context.WithCancel(context.WithoutCancel(ctx))
+		flight = &sharedFetch{done: make(chan struct{}), cancel: cancel}
+		c.flights[key] = flight
+		go c.runSharedFetch(fetchCtx, key, flight, fetch)
+	}
+	flight.waiters++
+	c.flightsMu.Unlock()
+
+	select {
+	case <-flight.done:
+		return flight.body, flight.err
+	case <-ctx.Done():
+		c.leaveSharedFetch(key, flight)
+		return nil, ctx.Err()
+	}
+}
+
+func (c *Client) runSharedFetch(ctx context.Context, key string, flight *sharedFetch, fetch func(context.Context) ([]byte, error)) {
+	body, err := fetch(ctx)
+	c.flightsMu.Lock()
+	flight.body, flight.err = body, err
+	if c.flights[key] == flight {
+		delete(c.flights, key)
+	}
+	c.flightsMu.Unlock()
+	flight.cancel()
+	close(flight.done)
+}
+
+// leaveSharedFetch drops one waiter. The last one to leave cancels the fetch
+// and forgets it, so the next caller starts a fresh fetch instead of joining
+// one that is being torn down.
+func (c *Client) leaveSharedFetch(key string, flight *sharedFetch) {
+	c.flightsMu.Lock()
+	defer c.flightsMu.Unlock()
+	flight.waiters--
+	if flight.waiters > 0 {
+		return
+	}
+	flight.cancel()
+	if c.flights[key] == flight {
+		delete(c.flights, key)
+	}
 }
 
 func (c *Client) fetchUnshared(ctx context.Context, path string, params map[string]string, key string, ttl time.Duration) ([]byte, error) {
