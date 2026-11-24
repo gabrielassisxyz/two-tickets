@@ -6,19 +6,35 @@ import (
 	"sync"
 	"time"
 
+	"github.com/gabrielassisxyz/two-tickets/internal/auth"
 	"github.com/gabrielassisxyz/two-tickets/internal/catalog"
 	"github.com/gabrielassisxyz/two-tickets/internal/config"
+	"github.com/gabrielassisxyz/two-tickets/internal/hydrate"
+	"github.com/gabrielassisxyz/two-tickets/internal/library"
 	"github.com/gabrielassisxyz/two-tickets/internal/store"
 	"github.com/gabrielassisxyz/two-tickets/internal/tmdb"
 )
 
 const cachePruneInterval = 24 * time.Hour
 
-// newCatalogService builds the one TMDB client the process has, over cache.db,
-// and the catalog on top of it.
-func newCatalogService(cfg config.Config, cache *store.CacheStore, logger *slog.Logger) *catalog.Service {
-	client := tmdb.NewClient(tmdb.Options{APIKey: cfg.TMDBAPIKey, Cache: cache, Logger: logger})
+// newTMDBClient builds the one TMDB client the process has, over cache.db.
+// The catalog and the library's hydration share it, and with it the limiter
+// and the cache.
+func newTMDBClient(cfg config.Config, cache *store.CacheStore, logger *slog.Logger) *tmdb.Client {
+	return tmdb.NewClient(tmdb.Options{APIKey: cfg.TMDBAPIKey, Cache: cache, Logger: logger})
+}
+
+// newCatalogService builds the catalog on the shared client.
+func newCatalogService(client *tmdb.Client) *catalog.Service {
 	return catalog.NewService(client, nil)
+}
+
+// newLibraryService builds the library and makes it the catalog's source of
+// watchlist state, which the catalog cannot read on its own.
+func newLibraryService(state *store.Database, accounts *auth.Service, client *tmdb.Client, catalogService *catalog.Service, logger *slog.Logger) *library.Service {
+	libraryService := library.NewService(state, accounts, hydrate.New(client), logger, nil)
+	catalogService.UseWatchlist(libraryService)
+	return libraryService
 }
 
 // prunableCache is the part of *store.CacheStore the prune loop uses.
