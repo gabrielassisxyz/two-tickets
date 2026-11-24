@@ -1,12 +1,17 @@
-import { Address6 } from 'ip-address';
-
-export function getHostAndPort(): string {
-  let host = process.env.HOST || 'localhost';
-  if (Address6.isValid(host)) {
-    // If host is an IPv6 literal it needs to be placed in square brackets
-    host = `[${host}]`;
+// Where server-side code reaches the api process. Seerr ran its API inside
+// the Next process and called itself at HOST:PORT; here the api is a separate
+// process, and HOST, HOSTNAME and PORT keep meaning web's own listen address.
+// The address is read at run time, never at build time, so one production
+// image works wherever it is deployed.
+export function getApiBaseUrl(): string {
+  // In the browser every call stays on the page's own origin and goes
+  // through the /api/v1 proxy route.
+  if (typeof window !== 'undefined') {
+    return '';
   }
-
-  const port = Number(process.env.PORT) || 5055;
-  return `${host}:${port}`;
+  const base = process.env.API_INTERNAL_URL;
+  if (!base) {
+    throw new Error('API_INTERNAL_URL is not set');
+  }
+  return base.replace(/\/+$/, '');
 }

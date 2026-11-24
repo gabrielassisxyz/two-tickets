@@ -16,9 +16,8 @@ import * as Yup from 'yup';
 const messages = defineMessages('components.Login', {
   loginwithapp: 'Login with {appName}',
   username: 'Username',
-  email: 'Email Address',
   password: 'Password',
-  validationemailrequired: 'You must provide a valid email address',
+  validationusernamerequired: 'Username required',
   validationpasswordrequired: 'You must provide a password',
   jellyfinLocalLoginHint:
     "If you haven't set an email address in your profile, use your {mediaServerName} username instead.",
@@ -41,8 +40,10 @@ const LocalLogin = ({ revalidate }: LocalLoginProps) => {
   const [loginError, setLoginError] = useState<string | null>(null);
 
   const LoginSchema = Yup.object().shape({
+    // The field keeps Seerr's name, email, because that is the key the api
+    // reads; what goes in it is the username.
     email: Yup.string().required(
-      intl.formatMessage(messages.validationemailrequired)
+      intl.formatMessage(messages.validationusernamerequired)
     ),
     password: Yup.string().required(
       intl.formatMessage(messages.validationpasswordrequired)
@@ -103,9 +104,10 @@ const LocalLogin = ({ revalidate }: LocalLoginProps) => {
                     <Field
                       id="email"
                       name="email"
-                      placeholder={intl.formatMessage(messages.email)}
+                      placeholder={intl.formatMessage(messages.username)}
                       type="text"
-                      inputMode="email"
+                      autoComplete="username"
+                      autoCapitalize="none"
                       data-testid="email"
                       data-form-type="username,email"
                       className="!bg-gray-700/80 placeholder:text-gray-400"

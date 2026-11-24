@@ -78,6 +78,8 @@ if [ -d web/src/compat ]; then
     )
     echo "==> web smoke"
     bash deploy/web-smoke.sh
+    echo "==> web e2e"
+    bash deploy/web-e2e.sh
 else
     # Step 5 creates web/src/compat; the pristine tree cannot build without it.
     echo "==> web: skipped (no web/src/compat yet)"
