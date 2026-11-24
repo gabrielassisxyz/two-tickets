@@ -13,17 +13,6 @@ import (
 	"fmt"
 )
 
-// Run is one row of rec_runs. CompletedAt is nil while the run is being
-// written; readers never see such a row.
-type Run struct {
-	ID          int64
-	UserID      int64
-	Algorithm   string
-	Watermark   string
-	StartedAt   int64
-	CompletedAt sql.NullInt64
-}
-
 // Result is one row of rec_results. Reasons holds the seed titles that
 // produced it.
 type Result struct {

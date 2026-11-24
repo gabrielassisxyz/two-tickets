@@ -50,31 +50,23 @@ func recsInsertAccount(t *testing.T, db *sql.DB, id int64, key string) {
 
 func newRecsTestDatabase(t *testing.T) *store.Database {
 	t.Helper()
-	db, err := store.OpenDatabase(context.Background(), newRecsTestDatabaseFile(t))
-	if err != nil {
-		t.Fatal(err)
-	}
-	// newRecsTestDatabaseFile already migrated and seeded on its own path;
-	// reopening a second temp file would lose the seed, so open the same
-	// file: rebuild here instead to keep one helper for the simple tests.
-	_ = db.Close()
 	dir := t.TempDir()
 	path := filepath.Join(dir, store.StateFileName)
-	fresh, err := store.OpenDatabase(context.Background(), path)
+	db, err := store.OpenDatabase(context.Background(), path)
 	if err != nil {
 		t.Fatal(err)
 	}
-	t.Cleanup(func() { _ = fresh.Close() })
+	t.Cleanup(func() { _ = db.Close() })
 	migrations, err := store.LoadMigrations(store.StateMigrations())
 	if err != nil {
 		t.Fatal(err)
 	}
-	if err := store.MigrateState(context.Background(), fresh, migrations, filepath.Join(dir, store.RollbackDirName)); err != nil {
+	if err := store.MigrateState(context.Background(), db, migrations, filepath.Join(dir, store.RollbackDirName)); err != nil {
 		t.Fatalf("MigrateState: %v", err)
 	}
-	recsInsertAccount(t, fresh.Write, recsUserA, "account1")
-	recsInsertAccount(t, fresh.Write, recsUserB, "account2")
-	return fresh
+	recsInsertAccount(t, db.Write, recsUserA, "account1")
+	recsInsertAccount(t, db.Write, recsUserB, "account2")
+	return db
 }
 
 func recsInsertWatch(t *testing.T, db *sql.DB, userID, tmdbID int64) {
@@ -284,6 +276,53 @@ func TestRecsReasonsRoundTrip(t *testing.T) {
 	}
 	if page.RunID != run || len(page.Results) != 1 || !slices.Equal(page.Results[0].Reasons, want) {
 		t.Fatalf("round trip = %+v, want reasons %q", page, want)
+	}
+}
+
+func TestRecsPublishRefusesASecondPublishOrAMissingRun(t *testing.T) {
+	db := newRecsTestDatabase(t)
+	ctx := context.Background()
+	run, err := CreateRun(ctx, db.Write, recsUserA, "v1-test", "0:0:0:0", recsFixtureTime)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := PublishRun(ctx, db.Write, run, recsFixtureTime); err != nil {
+		t.Fatal(err)
+	}
+	if err := PublishRun(ctx, db.Write, run, recsFixtureTime); err == nil {
+		t.Fatal("a second publish succeeded")
+	}
+	if err := PublishRun(ctx, db.Write, 9999, recsFixtureTime); err == nil {
+		t.Fatal("publishing a missing run succeeded")
+	}
+}
+
+func TestRecsReadRejectsAnUnknownMediaType(t *testing.T) {
+	db := newRecsTestDatabase(t)
+	if _, err := ReadLatest(context.Background(), db.Write, recsUserA, "person", 10, 0); err == nil {
+		t.Fatal("reading with media type person succeeded")
+	}
+}
+
+func TestRecsNilReasonsEncodeAsAnEmptyArray(t *testing.T) {
+	db := newRecsTestDatabase(t)
+	ctx := context.Background()
+	run, err := CreateRun(ctx, db.Write, recsUserA, "v1-test", "0:0:0:0", recsFixtureTime)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := AddResults(ctx, db.Write, run, []Result{{Rank: 1, MediaType: "movie", TmdbID: 550, Score: 0.9}}); err != nil {
+		t.Fatalf("nil reasons: %v", err)
+	}
+	if err := PublishRun(ctx, db.Write, run, recsFixtureTime); err != nil {
+		t.Fatal(err)
+	}
+	page, err := ReadLatest(ctx, db.Write, recsUserA, "", 10, 0)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(page.Results) != 1 || page.Results[0].Reasons == nil || len(page.Results[0].Reasons) != 0 {
+		t.Fatalf("nil reasons round trip = %+v, want an empty list", page)
 	}
 }
 
