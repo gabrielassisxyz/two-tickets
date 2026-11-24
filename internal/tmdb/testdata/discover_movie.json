@@ -1,0 +1,29 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "id": 550,
+      "title": "Central do Brasil",
+      "original_title": "Central do Brasil",
+      "overview": "A retired teacher hits the road.",
+      "poster_path": "/central.jpg",
+      "backdrop_path": "/central-bg.jpg",
+      "release_date": "1998-01-16",
+      "vote_average": 8.1,
+      "genre_ids": [18]
+    },
+    {
+      "id": 551,
+      "title": "Bacurau",
+      "original_title": "Bacurau",
+      "overview": "A small town resists.",
+      "poster_path": "/bacurau.jpg",
+      "backdrop_path": "/bacurau-bg.jpg",
+      "release_date": "2019-08-23",
+      "vote_average": 7.6,
+      "genre_ids": [18, 53]
+    }
+  ],
+  "total_pages": 10,
+  "total_results": 200
+}

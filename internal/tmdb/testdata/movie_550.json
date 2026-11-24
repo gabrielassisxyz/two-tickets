@@ -1,0 +1,21 @@
+{
+  "id": 550,
+  "title": "Central do Brasil",
+  "original_title": "Central do Brasil",
+  "overview": "A retired teacher hits the road with a boy searching for his father.",
+  "poster_path": "/central.jpg",
+  "backdrop_path": "/central-bg.jpg",
+  "release_date": "1998-01-16",
+  "vote_average": 8.1,
+  "genre_ids": [18],
+  "genres": [{"id": 18, "name": "Drama"}],
+  "runtime": 113,
+  "status": "Released",
+  "tagline": "A journey of hope.",
+  "homepage": "",
+  "imdb_id": "tt0140888",
+  "original_language": "pt",
+  "budget": 2900000,
+  "revenue": 17000000,
+  "adult": false
+}
