@@ -11,6 +11,7 @@ import {
   listIdOf,
   refuse,
   restoreToast,
+  revealCardActions,
   setOnWatchlist,
   signIn,
 } from './session';
@@ -19,9 +20,9 @@ import {
 test.use({ ...devices['Pixel 7'] });
 
 // A rejected add or remove restores the star's previous state and says so,
-// on a card, on a slider and on both title pages. Each case sets the
-// title's watchlist state through the api first, so no case depends on
-// another having run.
+// on a card, on a slider, on the lists page and on both title pages. Each
+// case sets the title's watchlist state through the api first, so no case
+// depends on another having run.
 
 const addPattern = '**/api/v1/watchlist';
 const removePattern = '**/api/v1/watchlist/*';
@@ -53,6 +54,7 @@ test.beforeEach(async ({ page }) => {
 test('card: a rejected add restores the empty star', async ({ page }) => {
   await setOnWatchlist(page, 'tv', 4438, false);
   const card = await searchCard(page, 4438);
+  await revealCardActions(card);
   const star = card.getByTestId('quick-watchlist');
   await expect(star).toHaveAttribute('aria-pressed', 'false');
   const refused = await refuse(page, addPattern, 'POST');
@@ -63,6 +65,7 @@ test('card: a rejected add restores the empty star', async ({ page }) => {
 test('card: a rejected remove restores the filled star', async ({ page }) => {
   await setOnWatchlist(page, 'tv', 194999, true);
   const card = await searchCard(page, 194999);
+  await revealCardActions(card);
   const star = card.getByTestId('quick-watchlist');
   await expect(star).toHaveAttribute('aria-pressed', 'true');
   const refused = await refuse(page, removePattern, 'DELETE');
@@ -70,7 +73,7 @@ test('card: a rejected remove restores the filled star', async ({ page }) => {
   await expectRestored(page, star, refused, 'true');
 });
 
-test('slider: a rejected add on "Lista do casal" restores the empty star', async ({
+test('lists page: a rejected add on "Lista do casal" restores the empty star', async ({
   page,
 }) => {
   const couple = await listIdOf(page, 'couple');
@@ -79,12 +82,13 @@ test('slider: a rejected add on "Lista do casal" restores the empty star', async
     mediaType: 'movie',
     tmdbId: 11441,
   });
-  await page.goto(`${base()}/`);
+  await page.goto(`${base()}/lists`);
   const card = page
-    .getByTestId('library-slider-couple')
+    .getByTestId('library-list-couple')
     .locator(
       '[data-testid="title-card"][data-media-type="movie"][data-tmdb-id="11441"]'
     );
+  await revealCardActions(card);
   const star = card.getByTestId('quick-watchlist');
   await expect(star).toHaveAttribute('aria-pressed', 'false');
   const refused = await refuse(page, addPattern, 'POST');
@@ -102,6 +106,7 @@ test('slider: a rejected remove on "Minha lista" keeps the card and its star', a
     .locator(
       '[data-testid="title-card"][data-media-type="movie"][data-tmdb-id="26564"]'
     );
+  await revealCardActions(card);
   const star = card.getByTestId('quick-watchlist');
   await expect(star).toHaveAttribute('aria-pressed', 'true');
   const refused = await refuse(page, removePattern, 'DELETE');

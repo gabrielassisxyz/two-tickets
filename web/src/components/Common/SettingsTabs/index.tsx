@@ -50,7 +50,7 @@ const SettingsLink = ({
   if (tabType === 'button') {
     linkClasses =
       'px-3 py-2 text-sm font-medium transition duration-300 rounded-md whitespace-nowrap mx-2 my-1';
-    activeLinkColor = 'bg-indigo-700';
+    activeLinkColor = 'bg-indigo-700 text-ink';
     inactiveLinkColor = 'bg-gray-800 hover:bg-gray-700 focus:bg-gray-700';
   }
 

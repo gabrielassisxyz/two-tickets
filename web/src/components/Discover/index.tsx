@@ -20,7 +20,6 @@ const messages = defineMessages('components.Discover', {
   discover: 'Discover',
   foryou: 'For you',
   myList: 'My list',
-  coupleList: 'Couple list',
 });
 
 // The api serves a fixed slider manifest from /api/v1/settings/discover: the
@@ -129,14 +128,6 @@ const discoverSliderFor = (
           kind="watchlist"
           sliderKey="my-list"
           title={intl.formatMessage(messages.myList)}
-        />
-      );
-    case SliderId.COUPLE_LIST:
-      return (
-        <LibraryListSlider
-          kind="couple"
-          sliderKey="couple-list"
-          title={intl.formatMessage(messages.coupleList)}
         />
       );
     case SliderId.FOR_YOU:

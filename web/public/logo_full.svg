@@ -1,6 +1,6 @@
 <svg width="322" height="96" viewBox="0 0 322 96" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="14" y="22" width="52" height="52" rx="10" fill="#17171A" stroke="#3A3A40" stroke-width="2"/>
-<rect x="24" y="36" width="32" height="24" rx="5" fill="#5AA88E"/>
+<rect x="24" y="36" width="32" height="24" rx="5" fill="#E8C87A"/>
 <line x1="40" y1="36" x2="40" y2="60" stroke="#17171A" stroke-width="3" stroke-dasharray="4 3"/>
 <text x="84" y="60" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="34" font-weight="700" letter-spacing="0.5" fill="#EDEDEF">Two Tickets</text>
 </svg>

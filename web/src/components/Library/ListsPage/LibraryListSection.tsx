@@ -197,7 +197,7 @@ const ListName = ({ list }: ListNameProps) => {
       />
       <button
         type="submit"
-        className="rounded-md border border-indigo-500 bg-indigo-600 px-2 py-1 text-xs text-white"
+        className="rounded-md border border-indigo-500 bg-indigo-600 px-2 py-1 text-xs text-ink"
       >
         {intl.formatMessage(messages.saveName)}
       </button>

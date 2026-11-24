@@ -22,21 +22,21 @@ const ButtonWithDropdown = ({
   ...props
 }: ButtonWithDropdownProps) => {
   const styleClasses = {
-    mainButtonClasses: 'button-md text-white border',
+    mainButtonClasses: 'button-md border',
     dropdownSideButtonClasses: 'button-md border',
   };
 
   switch (buttonType) {
     case 'ghost':
       styleClasses.mainButtonClasses +=
-        ' bg-transparent border-gray-600 hover:border-gray-200 focus:border-gray-100 active:border-gray-100';
+        ' text-white bg-transparent border-gray-600 hover:border-gray-200 focus:border-gray-100 active:border-gray-100';
       styleClasses.dropdownSideButtonClasses = styleClasses.mainButtonClasses;
       break;
     default:
       styleClasses.mainButtonClasses +=
-        ' bg-indigo-600/80 border-indigo-500 hover:bg-indigo-600 hover:border-indigo-500 active:bg-indigo-700 active:border-indigo-700 focus:ring-blue';
+        ' text-ink bg-indigo-600/80 border-indigo-500 hover:bg-indigo-600 hover:border-indigo-500 active:bg-indigo-700 active:border-indigo-700 focus:ring-blue';
       styleClasses.dropdownSideButtonClasses +=
-        ' bg-indigo-600/80 border-indigo-500 hover:bg-indigo-600 active:bg-indigo-600 focus:ring-blue';
+        ' text-ink bg-indigo-600/80 border-indigo-500 hover:bg-indigo-600 active:bg-indigo-600 focus:ring-blue';
   }
 
   const TriggerElement = props.as ?? 'button';

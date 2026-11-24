@@ -301,6 +301,8 @@ const answerGet = (path: string, query: URLSearchParams) => {
     return historyAnswer(query);
   }
   if (path === '/api/v1/settings/discover') {
+    // 102 is the retired couple-list slider an older api still lists; the
+    // page must not render it.
     return [101, 102].map((type, order) => ({
       id: type,
       type,
@@ -418,14 +420,43 @@ const mutations = (method: string, path: string) =>
 const pressed = (el: HTMLElement) => el.getAttribute('aria-pressed');
 
 describe('title card quick actions', () => {
-  it('shows watched, Quero ver and rate without hover', () => {
+  it('shows watch later and watched only on hover or tap, and no rating', () => {
     const screen = renderWithApi(
       <TitleCard id={603} title="Fixture" mediaType="movie" image="/p.jpg" />
     );
     const actions = screen.getByTestId('quick-actions');
-    expect(within(actions).getByTestId('quick-watched')).toBeTruthy();
-    expect(within(actions).getByTestId('quick-watchlist')).toBeTruthy();
-    expect(within(actions).getByTestId('quick-rate')).toBeTruthy();
+    expect(actions.getAttribute('data-visible')).toBe('false');
+    expect(actions.className).toContain('invisible');
+
+    // The poster itself, not the title link the hover reveals.
+    const poster = screen.container.querySelector(
+      'div[role="link"]'
+    ) as HTMLElement;
+    fireEvent.pointerEnter(poster, { pointerType: 'mouse' });
+    expect(actions.getAttribute('data-visible')).toBe('true');
+    expect(actions.className).not.toContain('invisible');
+    expect(
+      within(actions)
+        .getAllByRole('button')
+        .map((b) => b.getAttribute('data-testid'))
+    ).toEqual(['quick-watchlist', 'quick-watched']);
+    expect(screen.queryByTestId('quick-rate')).toBeNull();
+    expect(screen.queryByTestId('rating-picker')).toBeNull();
+
+    fireEvent.pointerLeave(poster, { pointerType: 'mouse' });
+    expect(actions.getAttribute('data-visible')).toBe('false');
+
+    // A tap reveals them; the mouse events a browser emulates for that tap
+    // must not hide them again, and a tap elsewhere does.
+    fireEvent.click(poster);
+    expect(actions.getAttribute('data-visible')).toBe('true');
+    fireEvent.pointerLeave(poster, { pointerType: 'touch' });
+    fireEvent.mouseLeave(poster);
+    expect(actions.getAttribute('data-visible')).toBe('true');
+    fireEvent.pointerDown(poster, { pointerType: 'touch' });
+    expect(actions.getAttribute('data-visible')).toBe('true');
+    fireEvent.pointerDown(document.body, { pointerType: 'touch' });
+    expect(actions.getAttribute('data-visible')).toBe('false');
   });
 
   it('flips watched at once and sends one PUT /library/watch', async () => {
@@ -463,12 +494,12 @@ describe('title card quick actions', () => {
     expect(pressed(watched)).toBe('false');
     expect(addToast.mock.calls[0][1]).toMatchObject({ appearance: 'error' });
   });
+});
 
-  it('opens the seven-label picker in place and rates with one tap', async () => {
-    const screen = renderWithApi(
-      <TitleCard id={603} title="Fixture" mediaType="movie" />
-    );
-    fireEvent.click(screen.getByTestId('quick-rate'));
+describe('rating on the title page', () => {
+  it('opens the seven-label picker and rates with one tap', async () => {
+    const screen = renderWithApi(<TitlePanel mediaType="movie" tmdbId={603} />);
+    fireEvent.click(screen.getByTestId('title-rate'));
     const picker = screen.getByTestId('rating-picker');
     expect(within(picker).getAllByRole('radio')).toHaveLength(7);
     fireEvent.click(within(picker).getByTestId('rating-level-liked'));
@@ -482,11 +513,11 @@ describe('title card quick actions', () => {
       level: 'liked',
     });
     await waitFor(() =>
-      expect(screen.getByTestId('quick-rate').getAttribute('aria-busy')).toBe(
+      expect(screen.getByTestId('title-rate').getAttribute('aria-busy')).toBe(
         'false'
       )
     );
-    fireEvent.click(screen.getByTestId('quick-rate'));
+    fireEvent.click(screen.getByTestId('title-rate'));
     fireEvent.click(screen.getByTestId('rating-clear'));
     await waitFor(() =>
       expect(mutations('DELETE', '/api/v1/library/rating')).toHaveLength(1)
@@ -500,13 +531,11 @@ describe('title card quick actions', () => {
 
   it('restores the rating after a 400', async () => {
     rejections.set('PUT /api/v1/library/rating', 400);
-    const screen = renderWithApi(
-      <TitleCard id={603} title="Fixture" mediaType="movie" />
-    );
-    fireEvent.click(screen.getByTestId('quick-rate'));
+    const screen = renderWithApi(<TitlePanel mediaType="movie" tmdbId={603} />);
+    fireEvent.click(screen.getByTestId('title-rate'));
     fireEvent.click(screen.getByTestId('rating-level-loved'));
     await waitFor(() => expect(addToast).toHaveBeenCalledTimes(1));
-    expect(screen.getByTestId('quick-rate').getAttribute('aria-label')).toBe(
+    expect(screen.getByTestId('title-rate').getAttribute('aria-label')).toBe(
       'Rate'
     );
   });
@@ -546,26 +575,7 @@ describe('the watchlist star restores the previous state after a rejected reques
     );
   });
 
-  it('on a slider, for an add and for a delete, keeping the card on failure', async () => {
-    rejections.set('POST /api/v1/watchlist', 500);
-    const couple = renderWithApi(
-      <LibraryListSlider
-        kind="couple"
-        title="Lista do casal"
-        sliderKey="couple"
-      />
-    );
-    const star = await couple.findByTestId('quick-watchlist');
-    fireEvent.click(star);
-    await waitFor(() => expect(addToast).toHaveBeenCalledTimes(1));
-    expect(pressed(couple.getByTestId('quick-watchlist'))).toBe('false');
-    expect(mutations('POST', '/api/v1/watchlist')[0].data).toEqual({
-      tmdbId: 602,
-      mediaType: 'movie',
-      title: 'List 2 title',
-    });
-    couple.unmount();
-
+  it('on the "Minha lista" slider, for a delete, keeping the card on failure', async () => {
     rejections.set('DELETE /api/v1/watchlist/601', 500);
     const mine = renderWithApi(
       <LibraryListSlider
@@ -577,7 +587,7 @@ describe('the watchlist star restores the previous state after a rejected reques
     const myStar = await mine.findByTestId('quick-watchlist');
     expect(pressed(myStar)).toBe('true');
     fireEvent.click(myStar);
-    await waitFor(() => expect(addToast).toHaveBeenCalledTimes(2));
+    await waitFor(() => expect(addToast).toHaveBeenCalledTimes(1));
     expect(pressed(mine.getByTestId('quick-watchlist'))).toBe('true');
     expect(mine.getAllByTestId('title-card')).toHaveLength(1);
   });
@@ -926,9 +936,9 @@ describe('history page', () => {
 });
 
 describe('discover', () => {
-  it('renders the "Minha lista" and "Lista do casal" slider types', async () => {
+  it('renders "Minha lista" and no "Lista do casal" slider', async () => {
     const screen = renderWithApi(<Discover />);
     expect(await screen.findByTestId('library-slider-watchlist')).toBeTruthy();
-    expect(screen.getByTestId('library-slider-couple')).toBeTruthy();
+    expect(screen.queryByTestId('library-slider-couple')).toBeNull();
   });
 });

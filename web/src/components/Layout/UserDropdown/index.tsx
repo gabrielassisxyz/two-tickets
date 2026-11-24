@@ -93,10 +93,10 @@ const UserDropdown = () => {
                 {({ active }) => (
                   <Link
                     href="/lists"
-                    className={`flex items-center rounded px-4 py-2 text-sm font-medium text-gray-200 transition duration-150 ease-in-out ${
+                    className={`flex items-center rounded px-4 py-2 text-sm font-medium transition duration-150 ease-in-out ${
                       active
-                        ? 'bg-gradient-to-br from-indigo-600 to-purple-600 text-white'
-                        : ''
+                        ? 'bg-gradient-to-br from-indigo-600 to-purple-600 text-ink'
+                        : 'text-gray-200'
                     }`}
                   >
                     <QueueListIcon className="mr-2 inline h-5 w-5" />
@@ -108,10 +108,10 @@ const UserDropdown = () => {
                 {({ active }) => (
                   <Link
                     href="/history"
-                    className={`flex items-center rounded px-4 py-2 text-sm font-medium text-gray-200 transition duration-150 ease-in-out ${
+                    className={`flex items-center rounded px-4 py-2 text-sm font-medium transition duration-150 ease-in-out ${
                       active
-                        ? 'bg-gradient-to-br from-indigo-600 to-purple-600 text-white'
-                        : ''
+                        ? 'bg-gradient-to-br from-indigo-600 to-purple-600 text-ink'
+                        : 'text-gray-200'
                     }`}
                   >
                     <ClockIcon className="mr-2 inline h-5 w-5" />
@@ -123,10 +123,10 @@ const UserDropdown = () => {
                 {({ active }) => (
                   <Link
                     href="/about"
-                    className={`flex items-center rounded px-4 py-2 text-sm font-medium text-gray-200 transition duration-150 ease-in-out ${
+                    className={`flex items-center rounded px-4 py-2 text-sm font-medium transition duration-150 ease-in-out ${
                       active
-                        ? 'bg-gradient-to-br from-indigo-600 to-purple-600 text-white'
-                        : ''
+                        ? 'bg-gradient-to-br from-indigo-600 to-purple-600 text-ink'
+                        : 'text-gray-200'
                     }`}
                   >
                     <InformationCircleIcon className="mr-2 inline h-5 w-5" />
@@ -138,10 +138,10 @@ const UserDropdown = () => {
                 {({ active }) => (
                   <a
                     href="#"
-                    className={`flex items-center rounded px-4 py-2 text-sm font-medium text-gray-200 transition duration-150 ease-in-out ${
+                    className={`flex items-center rounded px-4 py-2 text-sm font-medium transition duration-150 ease-in-out ${
                       active
-                        ? 'bg-gradient-to-br from-indigo-600 to-purple-600 text-white'
-                        : ''
+                        ? 'bg-gradient-to-br from-indigo-600 to-purple-600 text-ink'
+                        : 'text-gray-200'
                     }`}
                     onClick={() => logout()}
                   >

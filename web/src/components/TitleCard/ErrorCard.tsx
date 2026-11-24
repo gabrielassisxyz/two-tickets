@@ -54,11 +54,7 @@ const ErrorCard = ({ tmdbId, tvdbId, type, canExpand }: ErrorCardProps) => {
       >
         <div className="absolute inset-0 h-full w-full overflow-hidden">
           <div className="absolute left-0 right-0 flex items-center justify-between p-2">
-            <div
-              className={`pointer-events-none z-40 rounded-full shadow ${
-                type === 'movie' ? 'bg-blue-500' : 'bg-purple-600'
-              }`}
-            >
+            <div className="pointer-events-none z-40 rounded-full border border-gray-600 bg-gray-900/80 shadow">
               <div className="flex h-4 items-center px-2 py-2 text-center text-xs font-medium uppercase tracking-wider text-white sm:h-5">
                 {type === 'movie'
                   ? intl.formatMessage(globalMessages.movie)
@@ -66,7 +62,7 @@ const ErrorCard = ({ tmdbId, tvdbId, type, canExpand }: ErrorCardProps) => {
               </div>
             </div>
             <div className="pointer-events-none z-40">
-              <div className="flex h-4 w-4 items-center justify-center rounded-full bg-green-400 text-white shadow sm:h-5 sm:w-5">
+              <div className="flex h-4 w-4 items-center justify-center rounded-full bg-green-400 text-ink shadow sm:h-5 sm:w-5">
                 <CheckIcon className="h-3 w-3 sm:h-4 sm:w-4" />
               </div>
             </div>

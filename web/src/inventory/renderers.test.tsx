@@ -36,6 +36,7 @@ import LanguageSelector from '@app/components/LanguageSelector';
 import UserDropdown from '@app/components/Layout/UserDropdown';
 import HistoryPage from '@app/components/Library/HistoryPage';
 import ListsPage from '@app/components/Library/ListsPage';
+import TitlePanel from '@app/components/Library/TitlePanel';
 import MovieDetails from '@app/components/MovieDetails';
 import MovieCast from '@app/components/MovieDetails/MovieCast';
 import MovieCrew from '@app/components/MovieDetails/MovieCrew';
@@ -299,13 +300,12 @@ const fixtureFor = (pathname: string) => {
       requestCount: 0,
     };
   }
-  // The api's fixed slider manifest: the personal list, the two library
-  // lists, then the nine kept built-ins, in its order.
+  // The api's fixed slider manifest: the personal list, "Minha lista", then
+  // the nine kept built-ins, in its order.
   if (pathname === '/api/v1/settings/discover') {
     return [
       SliderId.FOR_YOU,
       SliderId.MY_LIST,
-      SliderId.COUPLE_LIST,
       DiscoverSliderType.TRENDING,
       DiscoverSliderType.POPULAR_MOVIES,
       DiscoverSliderType.MOVIE_GENRES,
@@ -1194,12 +1194,20 @@ describe('renderers against fixtures', () => {
     await waitFor(() => {
       expect(loggedPaths()).toContain('/api/v1/library/watch');
     });
-    fireEvent.click(card.getByTestId('quick-rate'));
-    fireEvent.click(card.getByTestId('rating-level-loved'));
+    card.unmount();
+
+    // Rating lives on the title's page, not on the card.
+    const panel = render(
+      <Wrapper>
+        <TitlePanel mediaType="movie" tmdbId={603} />
+      </Wrapper>
+    );
+    fireEvent.click(panel.getByTestId('title-rate'));
+    fireEvent.click(panel.getByTestId('rating-level-loved'));
     await waitFor(() => {
       expect(loggedPaths()).toContain('/api/v1/library/rating');
     });
-    card.unmount();
+    panel.unmount();
 
     const lists = render(
       <Wrapper>

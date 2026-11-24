@@ -28,10 +28,10 @@ const DropdownItem = ({
     <MenuItem>
       <a
         className={[
-          'button-md flex cursor-pointer items-center rounded px-4 py-2 text-sm leading-5 text-white focus:text-white focus:outline-none',
+          'button-md flex cursor-pointer items-center rounded px-4 py-2 text-sm leading-5 focus:outline-none',
           buttonType === 'ghost'
-            ? 'bg-transparent from-indigo-600 to-purple-600 hover:bg-gradient-to-br focus:border-gray-500'
-            : 'bg-indigo-600 hover:bg-indigo-500 focus:border-indigo-700',
+            ? 'bg-transparent from-indigo-600 to-purple-600 text-white hover:bg-gradient-to-br hover:text-ink focus:border-gray-500'
+            : 'bg-indigo-600 text-ink hover:bg-indigo-500 focus:border-indigo-700',
         ].join(' ')}
         {...props}
       >
@@ -98,10 +98,10 @@ const Dropdown = ({
       <MenuButton
         type="button"
         className={[
-          'button-md inline-flex h-full items-center space-x-2 rounded-md border px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out hover:z-20 focus:z-20 focus:outline-none',
+          'button-md inline-flex h-full items-center space-x-2 rounded-md border px-4 py-2 text-sm font-medium leading-5 transition duration-150 ease-in-out hover:z-20 focus:z-20 focus:outline-none',
           buttonType === 'ghost'
-            ? 'border-gray-600 bg-transparent hover:border-gray-200 focus:border-gray-100 active:border-gray-100'
-            : `focus:ring-blue border-indigo-500 bg-indigo-600/80 hover:border-indigo-500 hover:bg-indigo-600 active:border-indigo-700 active:bg-indigo-700`,
+            ? 'border-gray-600 bg-transparent text-white hover:border-gray-200 focus:border-gray-100 active:border-gray-100'
+            : `focus:ring-blue border-indigo-500 bg-indigo-600/80 text-ink hover:border-indigo-500 hover:bg-indigo-600 active:border-indigo-700 active:bg-indigo-700`,
           className,
         ].join(' ')}
         ref={buttonRef}

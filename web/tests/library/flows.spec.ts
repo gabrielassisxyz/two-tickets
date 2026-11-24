@@ -1,10 +1,10 @@
 import { devices, expect, test } from '@playwright/test';
-import { api, base, listIdOf, signIn } from './session';
+import { api, base, listIdOf, revealCardActions, signIn } from './session';
 
 // Mobile viewport with touch input, on every run.
 test.use({ ...devices['Pixel 7'] });
 
-test('log in, search, rate from a card, and add a title to the couple list', async ({
+test('log in, search, mark watched from a card, rate on the title page, and add a title to the couple list', async ({
   page,
 }) => {
   await signIn(page);
@@ -17,29 +17,12 @@ test('log in, search, rate from a card, and add a title to the couple list', asy
   const card = page.locator(
     '[data-testid="title-card"][data-media-type="movie"][data-tmdb-id="19840"]'
   );
-  await expect(card.getByTestId('quick-actions')).toBeVisible();
 
-  // Rate in seven steps from the card: one tap opens the picker in place,
-  // one tap on a label rates.
-  await card.getByTestId('quick-rate').tap();
-  const picker = card.getByTestId('rating-picker');
-  await expect(picker.getByRole('radio')).toHaveCount(7);
-  const rated = page.waitForRequest(
-    (r) => r.url().endsWith('/api/v1/library/rating') && r.method() === 'PUT'
-  );
-  await picker.getByTestId('rating-level-liked').tap();
-  const rating = await rated;
-  expect(rating.postDataJSON()).toEqual({
-    mediaType: 'movie',
-    tmdbId: 19840,
-    scope: 'movie',
-    level: 'liked',
-  });
-  expect((await rating.response())?.status()).toBe(200);
-  await expect(card.getByTestId('quick-rate')).toHaveAttribute(
-    'aria-label',
-    'Gostei'
-  );
+  // The card's actions appear only once it is tapped, as upstream's hover
+  // buttons did, and the card carries no rating.
+  await expect(card.getByTestId('quick-actions')).toBeHidden();
+  await revealCardActions(card);
+  await expect(card.getByTestId('quick-rate')).toHaveCount(0);
 
   // Watched flips at once and sends exactly one PUT.
   const watches: string[] = [];
@@ -54,8 +37,30 @@ test('log in, search, rate from a card, and add a title to the couple list', asy
   await expect(watched).toHaveAttribute('aria-busy', 'false');
   expect(watches).toEqual(['PUT']);
 
-  // Add a title to the couple list from its page.
+  // Rate in seven steps on the title's page: one tap opens the picker, one
+  // tap on a label rates.
   await page.goto(`${base()}/movie/603`);
+  await page.getByTestId('title-rate').tap();
+  const picker = page.getByTestId('rating-picker');
+  await expect(picker.getByRole('radio')).toHaveCount(7);
+  const rated = page.waitForRequest(
+    (r) => r.url().endsWith('/api/v1/library/rating') && r.method() === 'PUT'
+  );
+  await picker.getByTestId('rating-level-liked').tap();
+  const rating = await rated;
+  expect(rating.postDataJSON()).toEqual({
+    mediaType: 'movie',
+    tmdbId: 603,
+    scope: 'movie',
+    level: 'liked',
+  });
+  expect((await rating.response())?.status()).toBe(200);
+  await expect(page.getByTestId('title-rate')).toHaveAttribute(
+    'aria-label',
+    'Gostei'
+  );
+
+  // Add the same title to the couple list from its page.
   const couple = page.getByTestId('list-membership-couple');
   await expect(couple).toHaveAttribute('aria-pressed', 'false');
   const added = page.waitForResponse(
@@ -77,7 +82,8 @@ test('log in, search, rate from a card, and add a title to the couple list', asy
     expect.objectContaining({ mediaType: 'movie', tmdbId: 603 })
   );
 
-  // Both pages show it: the couple list on Lists, the rating in History.
+  // Both pages show it: the couple list on Lists; the rating and the watch
+  // in History.
   await page.goto(`${base()}/lists`);
   await expect(
     page
@@ -85,11 +91,14 @@ test('log in, search, rate from a card, and add a title to the couple list', asy
       .locator('[data-testid="title-card"][data-tmdb-id="603"]')
   ).toHaveCount(1);
   await page.goto(`${base()}/history`);
-  const row = page.locator(
+  const rated603 = page.locator(
+    '[data-testid="history-row"][data-media-type="movie"][data-tmdb-id="603"]'
+  );
+  await expect(rated603.getByTestId('history-rating')).toHaveText('Gostei');
+  const watched19840 = page.locator(
     '[data-testid="history-row"][data-media-type="movie"][data-tmdb-id="19840"]'
   );
-  await expect(row.getByTestId('history-rating')).toHaveText('Gostei');
-  await expect(row.getByTestId('history-watched')).toContainText(
+  await expect(watched19840.getByTestId('history-watched')).toContainText(
     'Assistido em'
   );
 });

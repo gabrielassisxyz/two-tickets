@@ -3,11 +3,10 @@ import { SliderId } from '@app/compat/sliderIds';
 import { describe, expect, it } from 'vitest';
 
 describe('project slider ids', () => {
-  it('reserves three ids at 100 or above', () => {
+  it('reserves two ids at 100 or above', () => {
     expect(SliderId.FOR_YOU).toBeGreaterThanOrEqual(100);
     expect(SliderId.MY_LIST).toBeGreaterThanOrEqual(100);
-    expect(SliderId.COUPLE_LIST).toBeGreaterThanOrEqual(100);
-    expect(new Set(Object.values(SliderId)).size).toBe(3);
+    expect(new Set(Object.values(SliderId)).size).toBe(2);
   });
 
   it('collides with no upstream DiscoverSliderType value', () => {

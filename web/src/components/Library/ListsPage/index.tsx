@@ -67,7 +67,7 @@ const CreateListForm = () => {
       <button
         type="submit"
         disabled={creating || name.trim() === ''}
-        className="rounded-md border border-indigo-500 bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white disabled:opacity-50"
+        className="rounded-md border border-indigo-500 bg-indigo-600 px-3 py-1.5 text-sm font-medium text-ink disabled:opacity-50"
       >
         {intl.formatMessage(messages.create)}
       </button>
