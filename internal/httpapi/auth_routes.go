@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/gabrielassisxyz/two-tickets/internal/auth"
+	"github.com/gabrielassisxyz/two-tickets/internal/respond"
 )
 
 const (
@@ -150,11 +151,7 @@ func writeUser(w http.ResponseWriter, user auth.User) {
 }
 
 func writeJSONBody(w http.ResponseWriter, body any) {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.Header().Set("X-Content-Type-Options", "nosniff")
-	w.Header().Set("Cache-Control", "no-store")
-	w.WriteHeader(http.StatusOK)
-	_ = json.NewEncoder(w).Encode(body)
+	respond.JSON(w, body)
 }
 
 func sessionTokenFrom(r *http.Request) string {
