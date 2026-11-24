@@ -161,7 +161,9 @@ func TestErrorResponsesUseTheErrorShape(t *testing.T) {
 		method, path string
 		want         int
 	}{
-		{http.MethodGet, "/no-such-route", http.StatusNotFound},
+		// Without a session every route but the public ones answers 401;
+		// the 404 behind the gate is covered in auth_routes_test.go.
+		{http.MethodGet, "/no-such-route", http.StatusUnauthorized},
 		{http.MethodGet, "/api/v1/settings/public", http.StatusNotFound},
 		{http.MethodPost, "/healthz", http.StatusMethodNotAllowed},
 		{http.MethodDelete, "/readyz", http.StatusMethodNotAllowed},
