@@ -231,11 +231,10 @@ func (s *CacheStore) Rotate(ctx context.Context) error {
 		return s.reopenAfterFailedRotate(ctx)
 	}
 	for _, suffix := range []string{"-wal", "-shm"} {
-		if err := os.Remove(s.path + suffix); err != nil && !errors.Is(err, os.ErrNotExist) {
-			// A stale sidecar is harmless next to a fresh file, but report it
-			// so a full disk does not pass silently.
-			_ = err
-		}
+		// A stale sidecar next to a fresh file is harmless: the new database
+		// opens without it and recreates what it needs. Failures are ignored
+		// so a read-only sidecar cannot fail an otherwise good rotation.
+		_ = os.Remove(s.path + suffix)
 	}
 	db, err := OpenDatabase(ctx, s.path)
 	if err != nil {

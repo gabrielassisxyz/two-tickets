@@ -3,6 +3,7 @@ package tmdb
 import (
 	"net/url"
 	"sort"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -31,37 +32,18 @@ func BuildCacheKey(formatVersion int, method, path string, params map[string]str
 		encoded.WriteString(url.QueryEscape(params[k]))
 	}
 	return strings.Join([]string{
-		"v" + itoa(formatVersion),
+		"v" + strconv.Itoa(formatVersion),
 		strings.ToUpper(method),
 		path,
 		encoded.String(),
 	}, "|")
 }
 
-func itoa(n int) string {
-	if n == 0 {
-		return "0"
-	}
-	negative := n < 0
-	if negative {
-		n = -n
-	}
-	var digits []byte
-	for n > 0 {
-		digits = append([]byte{byte('0' + n%10)}, digits...)
-		n /= 10
-	}
-	if negative {
-		digits = append([]byte{'-'}, digits...)
-	}
-	return string(digits)
-}
-
 // TTLForPath returns how long a successful response for path stays fresh.
 // The families follow the bead: details and seasons 7 days, recommendations
 // 7 days, discover and trending 6 hours, search 1 hour, genres, languages,
-// regions and configuration 30 days. Unknown paths default to 1 hour rather
-// than risking a stale long-lived row.
+// regions and configuration 30 days. Unknown paths default to 7 days like
+// details rather than risking a second TTL family to audit.
 func TTLForPath(path string) time.Duration {
 	const (
 		day  = 24 * time.Hour

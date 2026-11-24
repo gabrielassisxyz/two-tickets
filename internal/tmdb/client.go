@@ -95,23 +95,23 @@ type Options struct {
 
 // Client is one process-wide TMDB client.
 type Client struct {
-	baseURL       string
-	apiKey        config.Secret
-	http          *http.Client
-	limiter       *rate.Limiter
-	clock         Clock
-	sleep         func(ctx context.Context, d time.Duration) error
-	jitter        func() float64
-	maxAttempts   int
-	retryBudget   time.Duration
-	attemptTimout time.Duration
-	sem           chan struct{}
-	cache         responseCache
-	formatVersion int
-	logger        *slog.Logger
-	language      string
-	region        string
-	group         singleflight.Group
+	baseURL        string
+	apiKey         config.Secret
+	http           *http.Client
+	limiter        *rate.Limiter
+	clock          Clock
+	sleep          func(ctx context.Context, d time.Duration) error
+	jitter         func() float64
+	maxAttempts    int
+	retryBudget    time.Duration
+	attemptTimeout time.Duration
+	sem            chan struct{}
+	cache          responseCache
+	formatVersion  int
+	logger         *slog.Logger
+	language       string
+	region         string
+	group          singleflight.Group
 }
 
 // NewClient builds a client, filling every zero Option with the production
@@ -180,22 +180,22 @@ func NewClient(opts Options) *Client {
 		region = DefaultRegion
 	}
 	return &Client{
-		baseURL:       strings.TrimSuffix(baseURL, "/"),
-		apiKey:        opts.APIKey,
-		http:          httpClient,
-		limiter:       limiter,
-		clock:         clock,
-		sleep:         sleep,
-		jitter:        jitter,
-		maxAttempts:   maxAttempts,
-		retryBudget:   retryBudget,
-		attemptTimout: attemptTimeout,
-		sem:           make(chan struct{}, maxConcurrency),
-		cache:         opts.Cache,
-		formatVersion: formatVersion,
-		logger:        logger,
-		language:      language,
-		region:        region,
+		baseURL:        strings.TrimSuffix(baseURL, "/"),
+		apiKey:         opts.APIKey,
+		http:           httpClient,
+		limiter:        limiter,
+		clock:          clock,
+		sleep:          sleep,
+		jitter:         jitter,
+		maxAttempts:    maxAttempts,
+		retryBudget:    retryBudget,
+		attemptTimeout: attemptTimeout,
+		sem:            make(chan struct{}, maxConcurrency),
+		cache:          opts.Cache,
+		formatVersion:  formatVersion,
+		logger:         logger,
+		language:       language,
+		region:         region,
 	}
 }
 

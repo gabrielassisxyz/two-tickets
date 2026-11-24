@@ -3,7 +3,6 @@ package tmdb
 import (
 	"context"
 	"io"
-	"net"
 	"net/http"
 	"strconv"
 	"strings"
@@ -117,7 +116,7 @@ func (c *Client) backoff(attempt int) time.Duration {
 // retryable flag is true for timeouts and transport failures; HTTP statuses
 // are decided by the caller.
 func (c *Client) doAttempt(ctx context.Context, path string, params map[string]string) (body []byte, status int, retryable bool, retryAfter time.Duration, err error) {
-	attemptCtx, cancel := context.WithTimeout(ctx, c.attemptTimout)
+	attemptCtx, cancel := context.WithTimeout(ctx, c.attemptTimeout)
 	defer cancel()
 	request, err := c.newRequest(attemptCtx, path, params)
 	if err != nil {
@@ -162,26 +161,7 @@ func isRetryableTransportError(err error) bool {
 	}
 	// Timeouts retry. Other transport errors (connection reset, no route)
 	// retry as well: from the client's seat they look like a slow TMDB.
-	var netErr net.Error
-	if isTimeoutError(err) {
-		return true
-	}
-	_ = netErr
 	return true
-}
-
-func isTimeoutError(err error) bool {
-	for err != nil {
-		if timeout, ok := err.(interface{ Timeout() bool }); ok && timeout.Timeout() {
-			return true
-		}
-		unwrapper, ok := err.(interface{ Unwrap() error })
-		if !ok {
-			return false
-		}
-		err = unwrapper.Unwrap()
-	}
-	return false
 }
 
 // parseRetryAfter honours Retry-After on 429: seconds or an HTTP date. An
