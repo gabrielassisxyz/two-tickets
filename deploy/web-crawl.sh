@@ -117,6 +117,7 @@ docker run --rm --network "$network" \
   -w /work \
   -e PLAYWRIGHT_VERSION="$playwright_version" \
   -e CRAWL_BASE_URL=http://web:3000 \
+  -e CRAWL_TMDB_URL=http://tmdb:8080 \
   -e CRAWL_USERNAME=alice \
   -e "CRAWL_PASSWORD=${password}" \
   "mcr.microsoft.com/playwright:v${playwright_version}-noble" \
