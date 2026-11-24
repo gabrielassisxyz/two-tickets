@@ -20,6 +20,7 @@ import (
 	"testing/fstest"
 	"time"
 
+	"github.com/gabrielassisxyz/two-tickets/internal/auth"
 	"github.com/gabrielassisxyz/two-tickets/internal/config"
 	"github.com/gabrielassisxyz/two-tickets/internal/store"
 )
@@ -77,6 +78,38 @@ func helperCommand(ctx context.Context, mode string, env map[string]string) *exe
 	return cmd
 }
 
+var (
+	accountHashOnce sync.Once
+	accountHash     string
+)
+
+// validEnv is a complete environment for dataDir: the TMDB key, both
+// accounts with a real argon2id hash, and the allowed origins.
+func validEnv(t *testing.T, dataDir string) map[string]string {
+	t.Helper()
+	accountHashOnce.Do(func() {
+		var err error
+		accountHash, err = auth.HashPassword(dummySecret, auth.MinimumArgon2idParams)
+		if err != nil {
+			panic(err)
+		}
+	})
+	env := map[string]string{
+		config.EnvDataDir:        dataDir,
+		config.EnvTMDBAPIKey:     dummySecret,
+		config.EnvListenAddr:     "127.0.0.1:0",
+		config.EnvAllowedOrigins: "http://127.0.0.1",
+	}
+	for slot, name := range []string{"alice", "bob"} {
+		env[config.AccountEnvName(slot+1, config.AccountKeySuffix)] = name
+		env[config.AccountEnvName(slot+1, config.AccountUsernameSuffix)] = name
+		env[config.AccountEnvName(slot+1, config.AccountEmailSuffix)] = name + "@example.com"
+		env[config.AccountEnvName(slot+1, config.AccountDisplayNameSuffix)] = name
+		env[config.AccountEnvName(slot+1, config.AccountPasswordHashSuffix)] = accountHash
+	}
+	return env
+}
+
 func exitCodeOf(t *testing.T, err error) int {
 	t.Helper()
 	if err == nil {
@@ -93,14 +126,13 @@ func exitCodeOf(t *testing.T, err error) int {
 }
 
 func TestBinaryRefusesToStartWithoutARequiredVariable(t *testing.T) {
-	for _, missing := range []string{config.EnvDataDir, config.EnvTMDBAPIKey} {
+	for _, missing := range []string{
+		config.EnvDataDir, config.EnvTMDBAPIKey, config.EnvAllowedOrigins,
+		config.AccountEnvName(1, config.AccountPasswordHashSuffix), config.AccountEnvName(2, config.AccountUsernameSuffix),
+	} {
 		t.Run(missing, func(t *testing.T) {
 			dataDir := t.TempDir()
-			env := map[string]string{
-				config.EnvDataDir:    dataDir,
-				config.EnvTMDBAPIKey: dummySecret,
-				config.EnvListenAddr: "127.0.0.1:0",
-			}
+			env := validEnv(t, dataDir)
 			delete(env, missing)
 			ctx, cancel := context.WithTimeout(context.Background(), processWait)
 			defer cancel()
@@ -112,8 +144,8 @@ func TestBinaryRefusesToStartWithoutARequiredVariable(t *testing.T) {
 			if !strings.Contains(string(out), missing) {
 				t.Errorf("output does not name %s:\n%s", missing, out)
 			}
-			if strings.Contains(string(out), dummySecret) {
-				t.Errorf("output prints the secret value:\n%s", out)
+			if strings.Contains(string(out), dummySecret) || strings.Contains(string(out), accountHash) {
+				t.Errorf("output prints a secret value:\n%s", out)
 			}
 			if _, err := os.Stat(filepath.Join(dataDir, store.StateFileName)); !errors.Is(err, os.ErrNotExist) {
 				t.Errorf("state.db was touched before the configuration was valid (stat: %v)", err)
@@ -128,12 +160,9 @@ func TestBinaryExitsBeforeListeningWhenAMigrationFails(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), processWait)
 	defer cancel()
 
-	out, err := helperCommand(ctx, helperBrokenSchema, map[string]string{
-		config.EnvDataDir:    dataDir,
-		config.EnvTMDBAPIKey: dummySecret,
-		config.EnvListenAddr: "127.0.0.1:0",
-		listenMarkerEnv:      marker,
-	}).CombinedOutput()
+	env := validEnv(t, dataDir)
+	env[listenMarkerEnv] = marker
+	out, err := helperCommand(ctx, helperBrokenSchema, env).CombinedOutput()
 	if code := exitCodeOf(t, err); code == 0 {
 		t.Fatalf("exit code 0 after a failed migration; output:\n%s", out)
 	}
@@ -203,11 +232,7 @@ func TestBinaryStartsMigratesAndServesHealthRoutes(t *testing.T) {
 	dataDir := t.TempDir()
 	ctx, cancel := context.WithTimeout(context.Background(), processWait)
 	defer cancel()
-	cmd := helperCommand(ctx, helperMain, map[string]string{
-		config.EnvDataDir:    dataDir,
-		config.EnvTMDBAPIKey: dummySecret,
-		config.EnvListenAddr: "127.0.0.1:0",
-	})
+	cmd := helperCommand(ctx, helperMain, validEnv(t, dataDir))
 	stderr, err := cmd.StderrPipe()
 	if err != nil {
 		t.Fatal(err)
@@ -237,6 +262,7 @@ func TestBinaryStartsMigratesAndServesHealthRoutes(t *testing.T) {
 			t.Errorf("GET %s = %d %q, want 200 with an empty body", path, resp.StatusCode, body)
 		}
 	}
+	assertBinaryLogsIn(t, addr)
 	for _, name := range []string{store.StateFileName, store.CacheFileName} {
 		if mode := journalModeOf(t, filepath.Join(dataDir, name)); mode != "wal" {
 			t.Errorf("%s journal_mode = %q, want wal", name, mode)
@@ -252,11 +278,53 @@ func TestBinaryStartsMigratesAndServesHealthRoutes(t *testing.T) {
 	if code := exitCodeOf(t, cmd.Wait()); code != 0 {
 		t.Errorf("exit code after SIGTERM = %d, want 0:\n%s", code, logs.String())
 	}
-	if strings.Contains(logs.String(), dummySecret) {
-		t.Errorf("the log prints the secret value:\n%s", logs.String())
+	if strings.Contains(logs.String(), dummySecret) || strings.Contains(logs.String(), accountHash) {
+		t.Errorf("the log prints a secret value:\n%s", logs.String())
 	}
 	if !strings.Contains(logs.String(), `"tmdb_api_key":"[REDACTED]"`) {
 		t.Errorf("the startup log does not show the key as redacted:\n%s", logs.String())
+	}
+}
+
+// assertBinaryLogsIn proves the process wired the accounts, the origin check
+// and the session gate: a login from the configured origin opens a session
+// that auth/me accepts, and the same request from elsewhere is refused.
+func assertBinaryLogsIn(t *testing.T, addr string) {
+	t.Helper()
+	post := func(origin string) *http.Response {
+		req, err := http.NewRequest(http.MethodPost, "http://"+addr+"/api/v1/auth/local",
+			strings.NewReader(`{"email":" Alice ","password":"`+dummySecret+`"}`))
+		if err != nil {
+			t.Fatal(err)
+		}
+		req.Header.Set("Origin", origin)
+		resp, err := http.DefaultClient.Do(req)
+		if err != nil {
+			t.Fatal(err)
+		}
+		_ = resp.Body.Close()
+		return resp
+	}
+	if resp := post("http://elsewhere.example"); resp.StatusCode != http.StatusForbidden {
+		t.Errorf("login from a foreign origin = %d, want 403", resp.StatusCode)
+	}
+	resp := post("http://127.0.0.1")
+	if resp.StatusCode != http.StatusOK || len(resp.Cookies()) != 1 {
+		t.Fatalf("login = %d with cookies %v, want 200 and a session cookie", resp.StatusCode, resp.Cookies())
+	}
+	req, err := http.NewRequest(http.MethodGet, "http://"+addr+"/api/v1/auth/me", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	req.AddCookie(resp.Cookies()[0])
+	me, err := http.DefaultClient.Do(req)
+	if err != nil {
+		t.Fatal(err)
+	}
+	body, _ := io.ReadAll(me.Body)
+	_ = me.Body.Close()
+	if me.StatusCode != http.StatusOK || !strings.Contains(string(body), `"username":"alice"`) {
+		t.Fatalf("auth/me = %d %s", me.StatusCode, body)
 	}
 }
 

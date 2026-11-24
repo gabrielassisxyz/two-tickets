@@ -4,8 +4,11 @@ import (
 	"context"
 	"log/slog"
 	"net/http"
+	"net/netip"
 	"strings"
 	"time"
+
+	"github.com/gabrielassisxyz/two-tickets/internal/auth"
 )
 
 // ReadinessCheck answers a trivial query against one dependency.
@@ -19,6 +22,13 @@ type RouterDeps struct {
 	Logger *slog.Logger
 	// Readiness is checked in order on every /readyz; all must answer.
 	Readiness []ReadinessCheck
+	// Auth resolves sessions. Every route but the health routes and the
+	// public surface listed in isPublicRoute requires one.
+	Auth *auth.Service
+	// AllowedOrigins are the origins a mutation must come from.
+	AllowedOrigins []string
+	// TrustedProxies are the networks whose forwarding headers are read.
+	TrustedProxies []netip.Prefix
 }
 
 const readinessTimeout = 2 * time.Second
@@ -40,9 +50,16 @@ func NewRouter(deps RouterDeps) http.Handler {
 	// finished, so being able to answer at all is the signal.
 	mux.Handle("/startupz", allowRead(http.HandlerFunc(answerOK)))
 	mux.Handle("/readyz", allowRead(readinessHandler(deps.Readiness, logger)))
-	mux.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
+
+	routes := authRoutes{service: deps.Auth, trustedProxies: deps.TrustedProxies, logger: logger}
+	api := http.NewServeMux()
+	routes.register(api)
+	api.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
 		writeStatusError(w, http.StatusNotFound)
 	})
+	// Everything that is not a health route goes through both checks, so a
+	// route added later is protected without anyone remembering to ask.
+	mux.Handle("/", requireAllowedOrigin(deps.AllowedOrigins, routes.requireSession(api)))
 	return recoverPanics(mux, logger)
 }
 
