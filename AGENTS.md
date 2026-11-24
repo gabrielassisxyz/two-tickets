@@ -9,8 +9,9 @@
 
 ## Stack & Commands
 
-- **Stack:** Go 1.26 at the root (`cmd/`, `internal/`) with SQLite, and a Next.js frontend under `web/` lifted from Seerr (MIT). Neither exists yet; the tracker holds the order in which they land.
-- **Gate:** `bin/ci`. Today it runs gitleaks. The Go checks switch on when `go.mod` lands, and the web checks when `web/package.json` does.
+- **Stack:** Go 1.26 at the root (`cmd/two-tickets`, `internal/`) with SQLite through the pure-Go `modernc.org/sqlite`, and a Next.js frontend under `web/` lifted from Seerr (MIT; provenance in `web/UPSTREAM.md`). The tracker holds the order in which the rest lands.
+- **Gate:** `bin/ci`. It runs gitleaks, then each stack's checks once that stack's code exists: gofmt, go vet, golangci-lint, go test and govulncheck for Go; the page-inventory test for `web/`, whose toolchain checks wait for `web/src/compat`. `bin/ci` itself is the exact list.
+- **Running the api locally:** `DATA_DIR` (an absolute path) and `TMDB_API_KEY` (or `TMDB_API_KEY_FILE`) are required; `.env.example` lists every variable. The process migrates `state.db`, taking a verified copy into `pre-migration/` first, and only then listens.
 - **Hooks:** run `bin/install-hooks` once after clone. It enables the gitleaks pre-commit hook and the commit-message attribution check.
 - **Worktrees:** `bin/worktree new <type>/<kebab-desc>`, and all work happens there. The main tree stays on `main`.
 - **Tracker:** `br` (beads). `br ready` lists open, unblocked work. The database is git-ignored, and `bin/worktree` links it into every worktree.
