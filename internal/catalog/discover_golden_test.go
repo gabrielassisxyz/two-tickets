@@ -3,76 +3,85 @@ package catalog
 import (
 	"encoding/json"
 	"fmt"
+	"os"
+	"path/filepath"
+	"slices"
+	"strings"
 	"testing"
 )
 
-// One test per route of the family, each answering a golden's request from
-// the fixtures it lists and held to its body. FakeTMDB fails a test whose
-// route asks TMDB anything upstream did not, or skips a fixture upstream used.
-
-func TestDiscoverGoldenMovies(t *testing.T) { discoverRequireGolden(t, "discover-movies", nil) }
-
-func TestDiscoverGoldenMoviesWithKeywords(t *testing.T) {
-	discoverRequireGolden(t, "discover-movies-keywords", nil)
+// discoverGoldenCases is every golden of the family but the status matrix's,
+// each with the rewrite that states its intentional normalisation, if any.
+// Each case answers the golden's request from the fixtures it lists and is
+// held to its body; FakeTMDB fails a case whose route asks TMDB anything
+// upstream did not, or skips a fixture upstream used.
+var discoverGoldenCases = map[string]func(t *testing.T, body any) any{
+	"discover-movies":          nil,
+	"discover-movies-keywords": nil,
+	"discover-movies-language": nil,
+	"discover-movies-genre":    nil,
+	"discover-movies-studio":   nil,
+	"discover-movies-upcoming": nil,
+	"discover-tv":              nil,
+	"discover-tv-language":     nil,
+	"discover-tv-genre":        nil,
+	"discover-tv-network":      nil,
+	"discover-tv-upcoming":     nil,
+	"discover-trending":        nil,
+	"discover-trending-movies": nil,
+	"discover-trending-tv":     nil,
+	"discover-keyword-movies":  nil,
+	"backdrops":                nil,
+	// Upstream keeps every genre; the port keeps only those with enough
+	// artwork for a card, so the golden is cut the same way and the
+	// survivors must still match it field for field.
+	"discover-genreslider-movie": discoverKeepGoldenGenresWithFiveBackdrops,
+	"discover-genreslider-tv":    discoverKeepGoldenGenresWithFiveBackdrops,
+	// Upstream relies on include_adult=false and passes an adult title TMDB
+	// still returns; the port drops it, so the golden loses that entry only.
+	"discover-movies-adult-entry":   discoverDropGoldenAdultResults,
+	"discover-trending-adult-entry": discoverDropGoldenAdultResults,
+	"backdrops-adult-entry":         discoverDropGoldenAdultBackdrops,
+	"discover-trending-four-kinds":  discoverTypeGoldenCollectionAsCollection,
 }
 
-func TestDiscoverGoldenMoviesByLanguage(t *testing.T) {
-	discoverRequireGolden(t, "discover-movies-language", nil)
+// discoverStatusMatrixGoldens are the goldens the status matrix rows run,
+// each in a test of its own.
+var discoverStatusMatrixGoldens = []string{
+	"discover-movies-tmdb-404", "discover-movies-tmdb-429",
+	"discover-movies-tmdb-500", "discover-movies-tmdb-timeout",
 }
 
-func TestDiscoverGoldenMoviesByGenre(t *testing.T) {
-	discoverRequireGolden(t, "discover-movies-genre", nil)
+func TestDiscoverGoldens(t *testing.T) {
+	for name, adjust := range discoverGoldenCases {
+		label := name
+		if adjust != nil {
+			label += "/IntentionalNormalisation"
+		}
+		t.Run(label, func(t *testing.T) { discoverRequireGolden(t, name, adjust) })
+	}
 }
 
-func TestDiscoverGoldenMoviesByStudio(t *testing.T) {
-	discoverRequireGolden(t, "discover-movies-studio", nil)
-}
-
-func TestDiscoverGoldenMoviesUpcoming(t *testing.T) {
-	discoverRequireGolden(t, "discover-movies-upcoming", nil)
-}
-
-func TestDiscoverGoldenTV(t *testing.T) { discoverRequireGolden(t, "discover-tv", nil) }
-
-func TestDiscoverGoldenTVByLanguage(t *testing.T) {
-	discoverRequireGolden(t, "discover-tv-language", nil)
-}
-
-func TestDiscoverGoldenTVByGenre(t *testing.T) { discoverRequireGolden(t, "discover-tv-genre", nil) }
-
-func TestDiscoverGoldenTVByNetwork(t *testing.T) {
-	discoverRequireGolden(t, "discover-tv-network", nil)
-}
-
-func TestDiscoverGoldenTVUpcoming(t *testing.T) {
-	discoverRequireGolden(t, "discover-tv-upcoming", nil)
-}
-
-func TestDiscoverGoldenTrending(t *testing.T) { discoverRequireGolden(t, "discover-trending", nil) }
-
-func TestDiscoverGoldenTrendingMovies(t *testing.T) {
-	discoverRequireGolden(t, "discover-trending-movies", nil)
-}
-
-func TestDiscoverGoldenTrendingTV(t *testing.T) {
-	discoverRequireGolden(t, "discover-trending-tv", nil)
-}
-
-func TestDiscoverGoldenKeywordMovies(t *testing.T) {
-	discoverRequireGolden(t, "discover-keyword-movies", nil)
-}
-
-func TestDiscoverGoldenBackdrops(t *testing.T) { discoverRequireGolden(t, "backdrops", nil) }
-
-// Upstream keeps every genre; the port keeps only those with enough artwork
-// for a card, so the golden is cut the same way and the survivors must still
-// match it field for field.
-func TestDiscoverGoldenMovieGenreSliderIntentionalNormalisation(t *testing.T) {
-	discoverRequireGolden(t, "discover-genreslider-movie", discoverKeepGoldenGenresWithFiveBackdrops)
-}
-
-func TestDiscoverGoldenTVGenreSliderIntentionalNormalisation(t *testing.T) {
-	discoverRequireGolden(t, "discover-genreslider-tv", discoverKeepGoldenGenresWithFiveBackdrops)
+// Every golden committed for the family is run by a test, so a golden the
+// harness adds cannot sit unchecked.
+func TestDiscoverGoldensAreAllRun(t *testing.T) {
+	entries, err := os.ReadDir(filepath.Join(mapperRepoRoot(t), "testdata", "golden", "discover"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var committed, run []string
+	for _, entry := range entries {
+		committed = append(committed, strings.TrimSuffix(entry.Name(), ".json"))
+	}
+	for name := range discoverGoldenCases {
+		run = append(run, name)
+	}
+	run = append(run, discoverStatusMatrixGoldens...)
+	slices.Sort(committed)
+	slices.Sort(run)
+	if !slices.Equal(committed, run) {
+		t.Errorf("committed goldens %v, run by tests %v", committed, run)
+	}
 }
 
 func discoverKeepGoldenGenresWithFiveBackdrops(t *testing.T, body any) any {
@@ -95,32 +104,23 @@ func discoverKeepGoldenGenresWithFiveBackdrops(t *testing.T, body any) any {
 
 // Upstream relies on include_adult=false and passes an adult title TMDB still
 // returns; the port drops it, so the golden loses exactly that entry.
-func TestDiscoverGoldenMoviesAdultEntryIntentionalNormalisation(t *testing.T) {
-	discoverRequireGolden(t, "discover-movies-adult-entry", discoverDropGoldenAdultResults)
-}
-
-func TestDiscoverGoldenTrendingAdultEntryIntentionalNormalisation(t *testing.T) {
-	discoverRequireGolden(t, "discover-trending-adult-entry", discoverDropGoldenAdultResults)
-}
-
-func TestDiscoverGoldenBackdropsAdultEntryIntentionalNormalisation(t *testing.T) {
+func discoverDropGoldenAdultBackdrops(t *testing.T, body any) any {
+	t.Helper()
 	adultBackdrops := discoverAdultBackdrops(t, "trending/all-week-adult")
-	discoverRequireGolden(t, "backdrops-adult-entry", func(t *testing.T, body any) any {
-		paths, ok := body.([]any)
-		if !ok {
-			t.Fatalf("backdrops golden %v is not an array", body)
+	paths, ok := body.([]any)
+	if !ok {
+		t.Fatalf("backdrops golden %v is not an array", body)
+	}
+	kept := []any{}
+	for _, path := range paths {
+		if !adultBackdrops[fmt.Sprint(path)] {
+			kept = append(kept, path)
 		}
-		kept := []any{}
-		for _, path := range paths {
-			if !adultBackdrops[fmt.Sprint(path)] {
-				kept = append(kept, path)
-			}
-		}
-		if len(kept) == len(paths) {
-			t.Fatal("the backdrops golden holds no adult backdrop; the fixture no longer tests the filter")
-		}
-		return kept
-	})
+	}
+	if len(kept) == len(paths) {
+		t.Fatal("the backdrops golden holds no adult backdrop; the fixture no longer tests the filter")
+	}
+	return kept
 }
 
 func discoverDropGoldenAdultResults(t *testing.T, body any) any {
@@ -164,32 +164,30 @@ func discoverAdultBackdrops(t *testing.T, fixtureID string) map[string]bool {
 	return paths
 }
 
-// Upstream's trending mapper types a collection as a movie because it tests
-// for a title first. The port types it as a collection: the entry must match
-// the collection upstream's own search route produced for the same id, and
-// every other entry must still match the trending golden.
-func TestDiscoverGoldenTrendingFourKindsIntentionalNormalisation(t *testing.T) {
+// discoverTypeGoldenCollectionAsCollection undoes upstream's trending bug:
+// its mapper tests for a title first and types a collection as a movie. The
+// entry is replaced by the collection upstream's own search route produced
+// for the same id, and every other entry still matches the trending golden.
+func discoverTypeGoldenCollectionAsCollection(t *testing.T, body any) any {
+	t.Helper()
 	searchGolden := mapperField(t, mapperGoldenBody(t, "search/search-multi-four-kinds", "search/multi-four-kinds"), "results").([]any)
-	discoverRequireGolden(t, "discover-trending-four-kinds", func(t *testing.T, body any) any {
-		results := body.(map[string]any)["results"].([]any)
-		replaced := 0
-		for i, result := range results {
-			entry := result.(map[string]any)
-			id := fmt.Sprint(entry["id"])
-			if id != "2344" {
-				continue
-			}
-			if entry["mediaType"] != "movie" {
-				t.Fatalf("the trending golden types collection %s as %v; the upstream bug this test pins is gone", id, entry["mediaType"])
-			}
-			results[i] = discoverEncodeRoundTrip(t, searchGoldenEntry(t, searchGolden, 2344))
-			replaced++
+	results := body.(map[string]any)["results"].([]any)
+	replaced := 0
+	for i, result := range results {
+		entry := result.(map[string]any)
+		if id := fmt.Sprint(entry["id"]); id != "2344" {
+			continue
 		}
-		if replaced != 1 {
-			t.Fatalf("the trending golden holds %d entries for collection 2344, want 1", replaced)
+		if entry["mediaType"] != "movie" {
+			t.Fatalf("the trending golden types collection 2344 as %v; the upstream bug this rewrite undoes is gone", entry["mediaType"])
 		}
-		return body
-	})
+		results[i] = discoverEncodeRoundTrip(t, searchGoldenEntry(t, searchGolden, 2344))
+		replaced++
+	}
+	if replaced != 1 {
+		t.Fatalf("the trending golden holds %d entries for collection 2344, want 1", replaced)
+	}
+	return body
 }
 
 func discoverEncodeRoundTrip(t *testing.T, value any) any {
