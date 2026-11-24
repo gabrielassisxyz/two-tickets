@@ -46,4 +46,29 @@ if [ "$ready" -ne 1 ]; then
   exit 1
 fi
 
+# The image's own guarantees, checked rather than assumed from its base: it
+# runs as a non-root user, it holds no shell, and its binary is static.
+echo "==> api smoke: checking the user, the shell and the binary"
+user="$(docker image inspect -f '{{.Config.User}}' "$image")"
+case "$user" in
+  "" | root | 0 | 0:*)
+    echo "api smoke: the image runs as root (user '${user}')" >&2
+    exit 1
+    ;;
+esac
+if docker run --rm --entrypoint sh "$image" -c true >/dev/null 2>&1; then
+  echo "api smoke: the image has a shell" >&2
+  exit 1
+fi
+binary_dir="$(mktemp -d)"
+probe="$(docker create "$image")"
+docker cp "${probe}:/usr/local/bin/two-tickets" "${binary_dir}/two-tickets" >/dev/null
+docker rm "$probe" >/dev/null
+if ! go version -m "${binary_dir}/two-tickets" | grep -q 'CGO_ENABLED=0'; then
+  rm -rf "$binary_dir"
+  echo "api smoke: the binary was built with cgo, so it is not static" >&2
+  exit 1
+fi
+rm -rf "$binary_dir"
+
 echo "api smoke: green"
