@@ -176,6 +176,11 @@ const tvCases = [
     url: '/api/v1/tv/125164/season/0',
     fixtures: ['tv/details-en-null-stills', 'tv/season-null-stills'],
   },
+  {
+    name: 'tv-season-empty',
+    url: '/api/v1/tv/125164/season/0',
+    fixtures: ['tv/details-en-null-stills', 'tv/season-empty'],
+  },
   { name: 'tv-recommendations', url: '/api/v1/tv/249042/recommendations?page=1', fixtures: ['tv/recommendations'] },
   {
     name: 'tv-recommendations-adult-entry',

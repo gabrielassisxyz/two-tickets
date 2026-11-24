@@ -329,9 +329,24 @@ const tvFixtures = [
     category: 'series English trailer lookup, empty',
     derive: { from: 'tv/videos-en-minimal', body: emptyTv },
   },
-  recorded('tv/season-with-stills', 'season whose episodes all have stills'),
+  recorded('tv/season-with-stills', 'season, full: poster, external ids, every episode with a still'),
   recorded('tv/details-en-null-stills', 'series details in English, for the season with null stills'),
-  recorded('tv/season-null-stills', 'season whose episode stills are null'),
+  recorded('tv/season-null-stills', 'season, minimal: no overview, poster or external ids, every episode still null'),
+  {
+    id: 'tv/season-empty',
+    category: 'season, empty: no episodes and every optional field null',
+    derive: {
+      from: 'tv/season-null-stills',
+      body: (body) => ({
+        ...body,
+        air_date: null,
+        overview: '',
+        poster_path: null,
+        episodes: [],
+        external_ids: Object.fromEntries(Object.keys(body.external_ids).map((key) => [key, null])),
+      }),
+    },
+  },
   recorded('tv/recommendations', 'series recommendations'),
   {
     id: 'tv/recommendations-adult',

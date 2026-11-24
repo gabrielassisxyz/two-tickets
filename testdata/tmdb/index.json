@@ -1043,7 +1043,7 @@
     {
       "id": "tv/season-with-stills",
       "file": "testdata/tmdb/tv/season-with-stills.json",
-      "category": "season whose episodes all have stills",
+      "category": "season, full: poster, external ids, every episode with a still",
       "source": "recorded",
       "routeFamilies": [
         "title"
@@ -1061,19 +1061,35 @@
         "title"
       ],
       "cases": [
-        "tv-season-null-stills"
+        "tv-season-null-stills",
+        "tv-season-empty"
       ]
     },
     {
       "id": "tv/season-null-stills",
       "file": "testdata/tmdb/tv/season-null-stills.json",
-      "category": "season whose episode stills are null",
+      "category": "season, minimal: no overview, poster or external ids, every episode still null",
       "source": "recorded",
       "routeFamilies": [
         "title"
       ],
       "cases": [
         "tv-season-null-stills"
+      ]
+    },
+    {
+      "id": "tv/season-empty",
+      "file": "testdata/tmdb/tv/season-empty.json",
+      "category": "season, empty: no episodes and every optional field null",
+      "source": "derived",
+      "derivedFrom": [
+        "tv/season-null-stills"
+      ],
+      "routeFamilies": [
+        "title"
+      ],
+      "cases": [
+        "tv-season-empty"
       ]
     },
     {
