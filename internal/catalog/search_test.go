@@ -491,3 +491,30 @@ func TestSearchYearOnlyEmptyAnswersEmptyPage(t *testing.T) {
 		t.Errorf("page = %+v, want empty", page)
 	}
 }
+
+// TMDB can answer a keyword or company search with results null or absent.
+// The filter selectors map over results, so the route still answers [].
+func TestSearchKeywordAndCompanyNullResultsAnswerEmptyArray(t *testing.T) {
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		_, _ = w.Write([]byte(`{"page":1,"results":null,"total_pages":0,"total_results":0}`))
+	}))
+	defer server.Close()
+	service := NewService(searchTestClient(server.URL), nil)
+	for _, target := range []string{
+		"/api/v1/search/keyword?query=anime&page=1",
+		"/api/v1/search/company?query=marvel&page=1",
+	} {
+		status, body := searchServe(t, service, "GET", target)
+		if status != http.StatusOK {
+			t.Errorf("%s status = %d, want 200", target, status)
+			continue
+		}
+		var shape struct {
+			Results json.RawMessage `json:"results"`
+		}
+		if err := json.Unmarshal(body, &shape); err != nil || string(shape.Results) != "[]" {
+			t.Errorf("%s results = %s, want []", target, shape.Results)
+		}
+	}
+}
