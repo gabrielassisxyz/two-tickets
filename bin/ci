@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # The deterministic gate. CI runs exactly this script, so green here means green in CI.
 # Sections switch on as the code they check lands: the Go checks once go.mod exists,
-# the web checks once web/package.json exists. A section that cannot run yet is skipped,
+# the page-inventory check once web/package.json exists, and the web toolchain checks
+# once web/src/compat exists. A section that cannot run yet is skipped,
 # never faked green.
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -40,6 +41,11 @@ else
 fi
 
 if [ -f web/package.json ]; then
+    echo "==> web page inventory"
+    node --test web/tools/page-inventory/inventory.test.mjs
+fi
+
+if [ -d web/src/compat ]; then
     echo "==> web"
     (
         cd web
@@ -51,7 +57,8 @@ if [ -f web/package.json ]; then
         npm audit --audit-level=high
     )
 else
-    echo "==> web: skipped (no web/package.json yet)"
+    # Step 5 creates web/src/compat; the pristine tree cannot build without it.
+    echo "==> web: skipped (no web/src/compat yet)"
 fi
 
 echo "bin/ci: green"
