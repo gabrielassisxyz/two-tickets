@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/gabrielassisxyz/two-tickets/internal/auth"
+	"github.com/gabrielassisxyz/two-tickets/internal/catalog"
 )
 
 // ReadinessCheck answers a trivial query against one dependency.
@@ -29,6 +30,15 @@ type RouterDeps struct {
 	AllowedOrigins []string
 	// TrustedProxies are the networks whose forwarding headers are read.
 	TrustedProxies []netip.Prefix
+	// Catalog serves the catalog routes, behind the session gate and the
+	// origin check. Nil leaves them out.
+	Catalog *catalog.Service
+}
+
+// routeRegistrar is what the router needs from a route family; *catalog.Service
+// satisfies it, and a test registers a stub through it.
+type routeRegistrar interface {
+	Register(mux *http.ServeMux)
 }
 
 const readinessTimeout = 2 * time.Second
@@ -38,6 +48,15 @@ const readinessTimeout = 2 * time.Second
 // can reach the port, so it never describes the configuration or the
 // dependencies behind it.
 func NewRouter(deps RouterDeps) http.Handler {
+	// A nil *catalog.Service stored in the interface would not compare equal
+	// to nil, so the conversion only happens when one is set.
+	if deps.Catalog == nil {
+		return newRouter(deps, nil)
+	}
+	return newRouter(deps, deps.Catalog)
+}
+
+func newRouter(deps RouterDeps, catalogRoutes routeRegistrar) http.Handler {
 	logger := deps.Logger
 	if logger == nil {
 		logger = slog.New(slog.DiscardHandler)
@@ -54,6 +73,9 @@ func NewRouter(deps RouterDeps) http.Handler {
 	routes := authRoutes{service: deps.Auth, trustedProxies: deps.TrustedProxies, logger: logger}
 	api := http.NewServeMux()
 	routes.register(api)
+	if catalogRoutes != nil {
+		catalogRoutes.Register(api)
+	}
 	api.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
 		writeStatusError(w, http.StatusNotFound)
 	})
