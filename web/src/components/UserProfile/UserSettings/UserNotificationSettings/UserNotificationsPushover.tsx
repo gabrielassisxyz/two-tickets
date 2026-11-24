@@ -1,3 +1,5 @@
+import type { PushoverSound } from '@app/compat/api/pushover';
+import type { UserSettingsNotificationsResponse } from '@app/compat/interfaces/api/userSettingsInterfaces';
 import Button from '@app/components/Common/Button';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
 import NotificationTypeSelector from '@app/components/NotificationTypeSelector';
@@ -6,8 +8,6 @@ import useToasts from '@app/hooks/useToasts';
 import { useUser } from '@app/hooks/useUser';
 import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
-import type { PushoverSound } from '@server/api/pushover';
-import type { UserSettingsNotificationsResponse } from '@server/interfaces/api/userSettingsInterfaces';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import { useRouter } from 'next/router';

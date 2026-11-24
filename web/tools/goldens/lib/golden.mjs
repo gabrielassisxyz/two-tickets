@@ -8,7 +8,11 @@
 // side: field names, presence and JSON types are compared everywhere, values
 // everywhere except under a volatile key.
 
-export const VOLATILE_KEYS = new Set(['popularity', 'voteCount', 'voteAverage']);
+export const VOLATILE_KEYS = new Set([
+  'popularity',
+  'voteCount',
+  'voteAverage',
+]);
 
 const MARKER = /^<(null|boolean|number|string|array|object)>$/;
 

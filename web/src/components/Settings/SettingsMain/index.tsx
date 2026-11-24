@@ -1,3 +1,6 @@
+import type { UserSettingsGeneralResponse } from '@app/compat/interfaces/api/userSettingsInterfaces';
+import type { MainSettings } from '@app/compat/lib/settings';
+import type { AvailableLocale } from '@app/compat/types/languages';
 import BlocklistedTagsSelector from '@app/components/BlocklistedTagsSelector';
 import Button from '@app/components/Common/Button';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
@@ -16,9 +19,6 @@ import defineMessages from '@app/utils/defineMessages';
 import { isValidURL } from '@app/utils/urlValidationHelper';
 import { ArrowDownOnSquareIcon } from '@heroicons/react/24/outline';
 import { ArrowPathIcon } from '@heroicons/react/24/solid';
-import type { UserSettingsGeneralResponse } from '@server/interfaces/api/userSettingsInterfaces';
-import type { MainSettings } from '@server/lib/settings';
-import type { AvailableLocale } from '@server/types/languages';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import { useIntl } from 'react-intl';

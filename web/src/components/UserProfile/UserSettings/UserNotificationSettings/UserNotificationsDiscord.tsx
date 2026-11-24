@@ -1,3 +1,5 @@
+import { DISCORD_SNOWFLAKE_REGEX } from '@app/compat/constants/discord';
+import type { UserSettingsNotificationsResponse } from '@app/compat/interfaces/api/userSettingsInterfaces';
 import Alert from '@app/components/Common/Alert';
 import Button from '@app/components/Common/Button';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
@@ -11,8 +13,6 @@ import {
   PlusIcon,
   TrashIcon,
 } from '@heroicons/react/24/outline';
-import { DISCORD_SNOWFLAKE_REGEX } from '@server/constants/discord';
-import type { UserSettingsNotificationsResponse } from '@server/interfaces/api/userSettingsInterfaces';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import { useRouter } from 'next/router';

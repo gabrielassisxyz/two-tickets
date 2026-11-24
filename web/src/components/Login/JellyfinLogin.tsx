@@ -1,3 +1,5 @@
+import { ApiErrorCode } from '@app/compat/constants/error';
+import { MediaServerType, ServerType } from '@app/compat/constants/server';
 import Button from '@app/components/Common/Button';
 import SensitiveInput from '@app/components/Common/SensitiveInput';
 import JellyfinQuickConnectModal from '@app/components/Login/JellyfinQuickConnectModal';
@@ -9,8 +11,6 @@ import {
   QrCodeIcon,
 } from '@heroicons/react/24/outline';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/solid';
-import { ApiErrorCode } from '@server/constants/error';
-import { MediaServerType, ServerType } from '@server/constants/server';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import { useCallback, useState } from 'react';

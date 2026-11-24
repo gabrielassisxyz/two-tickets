@@ -1,8 +1,8 @@
-import { MediaStatus, MediaType } from '@server/constants/media';
-import type Media from '@server/entity/Media';
-import type { DownloadingItem } from '@server/lib/downloadtracker';
+import { MediaStatus, MediaType } from '@app/compat/constants/media';
+import type Media from '@app/compat/entity/Media';
+import type { DownloadingItem } from '@app/compat/lib/downloadtracker';
 import assert from 'node:assert/strict';
-import { describe, it } from 'node:test';
+import { describe, it } from 'vitest';
 import {
   getRequestDownloadStatus,
   mediaRefreshInterval,

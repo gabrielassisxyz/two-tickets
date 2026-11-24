@@ -1,8 +1,8 @@
 import InfinityIcon from '@app/assets/infinity.svg';
+import type { QuotaResponse } from '@app/compat/interfaces/api/userInterfaces';
 import { SmallLoadingSpinner } from '@app/components/Common/LoadingSpinner';
 import ProgressCircle from '@app/components/Common/ProgressCircle';
 import defineMessages from '@app/utils/defineMessages';
-import type { QuotaResponse } from '@server/interfaces/api/userInterfaces';
 import { useIntl } from 'react-intl';
 import useSWR from 'swr';
 

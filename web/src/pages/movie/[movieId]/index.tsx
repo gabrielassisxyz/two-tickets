@@ -1,6 +1,6 @@
+import type { MovieDetails as MovieDetailsType } from '@app/compat/models/Movie';
 import MovieDetails from '@app/components/MovieDetails';
 import { getHostAndPort } from '@app/utils/urlHelper';
-import type { MovieDetails as MovieDetailsType } from '@server/models/Movie';
 import axios from 'axios';
 import type { GetServerSideProps, NextPage } from 'next';
 

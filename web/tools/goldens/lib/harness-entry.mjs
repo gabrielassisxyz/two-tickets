@@ -1,14 +1,14 @@
 // The bundle's entry: upstream's own API router mounted the way upstream's
 // server/index.ts mounts it, with TMDB answered by fixtures. Requests are
 // injected in process, so the harness opens no socket at all.
-import './frozen-clock.mjs';
+import { GOLDENS_USER } from '@server/datasource';
 import routes from '@server/routes/index';
 import axios from 'axios';
 import express from 'express';
 import * as OpenApiValidator from 'express-openapi-validator';
 import inject from 'light-my-request';
 import { createFixtureSession } from './fixture-adapter.mjs';
-import { GOLDENS_USER } from '@server/datasource';
+import './frozen-clock.mjs';
 
 const refuseOutsideCase = async () => {
   throw new Error('goldens harness: a TMDB request arrived outside a case');

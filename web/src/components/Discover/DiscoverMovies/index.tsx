@@ -1,20 +1,20 @@
+import type { MovieSortOptions as TMDBSortOptions } from '@app/compat/api/themoviedb';
+import type { MovieResult } from '@app/compat/models/Search';
 import Button from '@app/components/Common/Button';
 import Header from '@app/components/Common/Header';
 import ListView from '@app/components/Common/ListView';
 import PageTitle from '@app/components/Common/PageTitle';
+import FilterSlideover from '@app/components/Discover/FilterSlideover';
 import type { FilterOptions } from '@app/components/Discover/constants';
 import {
   countActiveFilters,
   prepareFilterValues,
 } from '@app/components/Discover/constants';
-import FilterSlideover from '@app/components/Discover/FilterSlideover';
 import useDiscover from '@app/hooks/useDiscover';
 import { useUpdateQueryParams } from '@app/hooks/useUpdateQueryParams';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
 import { BarsArrowDownIcon, FunnelIcon } from '@heroicons/react/24/solid';
-import type { MovieSortOptions as TMDBSortOptions } from '@server/api/themoviedb';
-import type { MovieResult } from '@server/models/Search';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';

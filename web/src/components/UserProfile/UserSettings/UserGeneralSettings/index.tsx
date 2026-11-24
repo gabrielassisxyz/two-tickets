@@ -1,3 +1,7 @@
+import { ApiErrorCode } from '@app/compat/constants/error';
+import { ServerType } from '@app/compat/constants/server';
+import type { UserSettingsGeneralResponse } from '@app/compat/interfaces/api/userSettingsInterfaces';
+import type { AvailableLocale } from '@app/compat/types/languages';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
@@ -14,10 +18,6 @@ import globalMessages from '@app/i18n/globalMessages';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
 import { ArrowDownOnSquareIcon } from '@heroicons/react/24/outline';
-import { ApiErrorCode } from '@server/constants/error';
-import { ServerType } from '@server/constants/server';
-import type { UserSettingsGeneralResponse } from '@server/interfaces/api/userSettingsInterfaces';
-import type { AvailableLocale } from '@server/types/languages';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import { useRouter } from 'next/router';

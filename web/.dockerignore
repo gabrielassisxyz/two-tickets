@@ -1,0 +1,5 @@
+# Keep node_modules and build output out of the Docker build context. The image
+# stages install and build from scratch; sending these directories would only
+# waste time and let stale artifacts leak into the build.
+node_modules
+.next

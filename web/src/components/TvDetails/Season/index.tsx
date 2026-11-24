@@ -1,8 +1,8 @@
+import type { SeasonWithEpisodes } from '@app/compat/models/Tv';
 import AirDateBadge from '@app/components/AirDateBadge';
 import CachedImage from '@app/components/Common/CachedImage';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
 import defineMessages from '@app/utils/defineMessages';
-import type { SeasonWithEpisodes } from '@server/models/Tv';
 import { useIntl } from 'react-intl';
 import useSWR from 'swr';
 

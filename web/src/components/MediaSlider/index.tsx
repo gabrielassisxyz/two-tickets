@@ -1,3 +1,10 @@
+import { MediaStatus } from '@app/compat/constants/media';
+import { Permission } from '@app/compat/lib/permissions';
+import type {
+  MovieResult,
+  PersonResult,
+  TvResult,
+} from '@app/compat/models/Search';
 import ShowMoreCard from '@app/components/MediaSlider/ShowMoreCard';
 import PersonCard from '@app/components/PersonCard';
 import Slider from '@app/components/Slider';
@@ -5,13 +12,6 @@ import TitleCard from '@app/components/TitleCard';
 import useSettings from '@app/hooks/useSettings';
 import { useUser } from '@app/hooks/useUser';
 import { ArrowRightCircleIcon } from '@heroicons/react/24/outline';
-import { MediaStatus } from '@server/constants/media';
-import { Permission } from '@server/lib/permissions';
-import type {
-  MovieResult,
-  PersonResult,
-  TvResult,
-} from '@server/models/Search';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import useSWRInfinite from 'swr/infinite';

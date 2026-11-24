@@ -1,4 +1,9 @@
 import Spinner from '@app/assets/spinner.svg';
+import { MediaRequestStatus, MediaStatus } from '@app/compat/constants/media';
+import type { MediaRequest } from '@app/compat/entity/MediaRequest';
+import type { NonFunctionProperties } from '@app/compat/interfaces/api/common';
+import type { MovieDetails } from '@app/compat/models/Movie';
+import type { TvDetails } from '@app/compat/models/Tv';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
@@ -22,11 +27,6 @@ import {
   TrashIcon,
   XMarkIcon,
 } from '@heroicons/react/24/solid';
-import { MediaRequestStatus, MediaStatus } from '@server/constants/media';
-import type { MediaRequest } from '@server/entity/MediaRequest';
-import type { NonFunctionProperties } from '@server/interfaces/api/common';
-import type { MovieDetails } from '@server/models/Movie';
-import type { TvDetails } from '@server/models/Tv';
 import axios from 'axios';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';

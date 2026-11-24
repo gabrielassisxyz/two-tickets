@@ -1,8 +1,8 @@
-import type { MediaRequest } from '@server/entity/MediaRequest';
+import type { MediaRequest } from '@app/compat/entity/MediaRequest';
 import type {
   ServiceCommonServer,
   ServiceCommonServerWithDetails,
-} from '@server/interfaces/api/serviceInterfaces';
+} from '@app/compat/interfaces/api/serviceInterfaces';
 import useSWR from 'swr';
 
 interface OverrideStatus {

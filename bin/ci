@@ -47,15 +47,37 @@ fi
 
 if [ -d web/src/compat ]; then
     echo "==> web"
+    pin="$(cat web/.node-version)"
+    runner=""
+    if command -v mise >/dev/null 2>&1; then
+        runner="mise exec node@${pin} --"
+    fi
+    # The Node that will run is the runner's, not whatever is first on PATH.
+    # shellcheck disable=SC2086
+    major="$($runner node --version | sed 's/^v//; s/\..*//')"
+    if [ "$major" != "$pin" ]; then
+        echo "wrong Node major ${major}; web pins ${pin} in web/.node-version" >&2
+        exit 1
+    fi
     (
         cd web
-        npm ci
-        npm run typecheck
-        npm run lint
-        npm test
-        npm run build
-        npm audit --audit-level=high
+        # shellcheck disable=SC2086
+        $runner corepack pnpm install --frozen-lockfile
+        # shellcheck disable=SC2086
+        $runner corepack pnpm run format:check
+        # shellcheck disable=SC2086
+        $runner corepack pnpm run typecheck
+        # shellcheck disable=SC2086
+        $runner corepack pnpm run lint
+        # shellcheck disable=SC2086
+        $runner corepack pnpm run test
+        # shellcheck disable=SC2086
+        $runner corepack pnpm run build
+        # shellcheck disable=SC2086
+        $runner corepack pnpm audit --audit-level high
     )
+    echo "==> web smoke"
+    bash deploy/web-smoke.sh
 else
     # Step 5 creates web/src/compat; the pristine tree cannot build without it.
     echo "==> web: skipped (no web/src/compat yet)"

@@ -1,6 +1,6 @@
+import { Permission } from '@app/compat/lib/permissions';
 import Blocklist from '@app/components/Blocklist';
 import useRouteGuard from '@app/hooks/useRouteGuard';
-import { Permission } from '@server/lib/permissions';
 import type { NextPage } from 'next';
 
 const BlocklistPage: NextPage = () => {

@@ -1,3 +1,12 @@
+import type {
+  TmdbCompanySearchResponse,
+  TmdbGenre,
+  TmdbKeywordSearchResponse,
+} from '@app/compat/api/themoviedbInterfaces';
+import { DiscoverSliderType } from '@app/compat/constants/discover';
+import type DiscoverSlider from '@app/compat/entity/DiscoverSlider';
+import type { GenreSliderItem } from '@app/compat/interfaces/api/discoverInterfaces';
+import type { Keyword, ProductionCompany } from '@app/compat/models/common';
 import Button from '@app/components/Common/Button';
 import Tooltip from '@app/components/Common/Tooltip';
 import { sliderTitles } from '@app/components/Discover/constants';
@@ -6,15 +15,6 @@ import { WatchProviderSelector } from '@app/components/Selector';
 import { encodeURIExtraParams } from '@app/hooks/useDiscover';
 import useToasts from '@app/hooks/useToasts';
 import defineMessages from '@app/utils/defineMessages';
-import type {
-  TmdbCompanySearchResponse,
-  TmdbGenre,
-  TmdbKeywordSearchResponse,
-} from '@server/api/themoviedb/interfaces';
-import { DiscoverSliderType } from '@server/constants/discover';
-import type DiscoverSlider from '@server/entity/DiscoverSlider';
-import type { GenreSliderItem } from '@server/interfaces/api/discoverInterfaces';
-import type { Keyword, ProductionCompany } from '@server/models/common';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import { useCallback, useEffect, useState } from 'react';

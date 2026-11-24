@@ -1,17 +1,17 @@
+import { MediaStatus } from '@app/compat/constants/media';
+import type { WatchlistItem } from '@app/compat/interfaces/api/discoverInterfaces';
+import type {
+  CollectionResult,
+  MovieResult,
+  PersonResult,
+  TvResult,
+} from '@app/compat/models/Search';
 import PersonCard from '@app/components/PersonCard';
 import TitleCard from '@app/components/TitleCard';
 import TmdbTitleCard from '@app/components/TitleCard/TmdbTitleCard';
 import { Permission, useUser } from '@app/hooks/useUser';
 import useVerticalScroll from '@app/hooks/useVerticalScroll';
 import globalMessages from '@app/i18n/globalMessages';
-import { MediaStatus } from '@server/constants/media';
-import type { WatchlistItem } from '@server/interfaces/api/discoverInterfaces';
-import type {
-  CollectionResult,
-  MovieResult,
-  PersonResult,
-  TvResult,
-} from '@server/models/Search';
 import { useIntl } from 'react-intl';
 
 type ListViewProps = {

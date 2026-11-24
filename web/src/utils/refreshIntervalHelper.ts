@@ -1,6 +1,6 @@
-import { MediaStatus } from '@server/constants/media';
-import type Media from '@server/entity/Media';
-import type { DownloadingItem } from '@server/lib/downloadtracker';
+import { MediaStatus } from '@app/compat/constants/media';
+import type Media from '@app/compat/entity/Media';
+import type { DownloadingItem } from '@app/compat/lib/downloadtracker';
 
 export const getRequestDownloadStatus = (
   downloadStatus: DownloadingItem[] | undefined,

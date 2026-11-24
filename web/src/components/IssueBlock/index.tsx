@@ -1,3 +1,4 @@
+import type Issue from '@app/compat/entity/Issue';
 import Button from '@app/components/Common/Button';
 import { issueOptions } from '@app/components/IssueModal/constants';
 import { useUser } from '@app/hooks/useUser';
@@ -7,7 +8,6 @@ import {
   EyeIcon,
   UserIcon,
 } from '@heroicons/react/24/solid';
-import type Issue from '@server/entity/Issue';
 import Link from 'next/link';
 import { useIntl } from 'react-intl';
 

@@ -6,27 +6,15 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "postinstall": "next telemetry disable",
-    "dev": "nodemon -e ts,json,yml --watch server --watch seerr-api.yml --exec 'ts-node -r tsconfig-paths/register --files --project server/tsconfig.json server/index.ts'",
-    "build:server": "tsc --project server/tsconfig.build.json && copyfiles -u 2 server/templates/**/*.{html,pug} dist/templates && copyfiles -u 2 \"server/i18n/locale/*.json\" dist/i18n && tsc-alias -p server/tsconfig.build.json",
-    "build:next": "next build",
-    "build": "pnpm build:next && pnpm build:server",
-    "lint": "eslint \"./server/**/*.{ts,tsx}\" \"./src/**/*.{ts,tsx}\" --cache",
-    "lintfix": "eslint \"./server/**/*.{ts,tsx}\" \"./src/**/*.{ts,tsx}\" --fix",
-    "test": "node server/test/index.mts",
-    "start": "NODE_ENV=production node dist/index.js",
-    "i18n:extract": "ts-node --project server/tsconfig.json server/i18n/extractMessages.ts",
-    "migration:generate": "ts-node -r tsconfig-paths/register --project server/tsconfig.json ./node_modules/typeorm/cli.js migration:generate -d server/datasource.ts",
-    "migration:create": "ts-node -r tsconfig-paths/register --project server/tsconfig.json ./node_modules/typeorm/cli.js migration:create -d server/datasource.ts",
-    "migration:run": "ts-node -r tsconfig-paths/register --project server/tsconfig.json ./node_modules/typeorm/cli.js migration:run -d server/datasource.ts",
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --cache",
+    "lintfix": "eslint \"./src/**/*.{ts,tsx}\" --fix",
+    "test": "vitest run",
+    "start": "node .next/standalone/server.js",
     "format": "prettier --log-level warn --write --cache .",
     "format:check": "prettier --check --cache .",
-    "typecheck": "pnpm typecheck:server && pnpm typecheck:client",
-    "typecheck:server": "tsc --project server/tsconfig.json --noEmit",
-    "typecheck:client": "tsc --noEmit",
-    "prepare": "node bin/prepare.mjs",
-    "cypress:open": "cypress open",
-    "cypress:prepare": "ts-node -r tsconfig-paths/register --files --project server/tsconfig.json server/scripts/prepareTestDb.ts",
-    "cypress:build": "pnpm build && pnpm cypress:prepare"
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -55,7 +43,6 @@
     "country-flag-icons": "1.6.16",
     "cronstrue": "3.14.0",
     "dns-caching": "^0.2.9",
-    "email-templates": "13.0.1",
     "express": "5.2.1",
     "express-openapi-validator": "5.6.2",
     "express-rate-limit": "8.7.1",
@@ -123,7 +110,6 @@
     "@types/cookie-parser": "1.4.10",
     "@types/country-flag-icons": "1.2.2",
     "@types/csurf": "1.11.5",
-    "@types/email-templates": "10.0.4",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/express": "5.0.6",
     "@types/express-session": "1.18.2",
@@ -175,7 +161,8 @@
     "tsc-alias": "1.8.16",
     "tsconfig-paths": "4.2.0",
     "typescript": "5.4.5",
-    "typescript-eslint": "^8.58.2"
+    "typescript-eslint": "^8.58.2",
+    "vitest": "^3.2.7"
   },
   "engines": {
     "node": "^22.19.0 || ^24.22.1",
@@ -211,7 +198,8 @@
     "overrides": {
       "@types/express-session": "1.18.2",
       "@types/react": "19.2.14",
-      "@types/react-dom": "19.2.3"
+      "@types/react-dom": "19.2.3",
+      "tinypool": ">=2.1.2"
     }
   },
   "scarfSettings": {

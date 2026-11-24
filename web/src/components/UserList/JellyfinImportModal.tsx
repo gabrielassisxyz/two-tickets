@@ -1,3 +1,5 @@
+import { MediaServerType, ServerType } from '@app/compat/constants/server';
+import type { UserResultsResponse } from '@app/compat/interfaces/api/userInterfaces';
 import Alert from '@app/components/Common/Alert';
 import CachedImage from '@app/components/Common/CachedImage';
 import Modal from '@app/components/Common/Modal';
@@ -5,8 +7,6 @@ import useSettings from '@app/hooks/useSettings';
 import useToasts from '@app/hooks/useToasts';
 import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
-import { MediaServerType, ServerType } from '@server/constants/server';
-import type { UserResultsResponse } from '@server/interfaces/api/userInterfaces';
 import axios from 'axios';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
