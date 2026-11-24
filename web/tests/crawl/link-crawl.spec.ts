@@ -132,9 +132,7 @@ test('every internal link resolves', async ({ page }) => {
     `crawl visited ${visitedTitles.length} title pages over ${expectedTitles} fixture-backed titles`
   );
   for (const id of fixtures.movie) {
-    expect(seenPaths, `GET /movie/${id} was crawled`).toContain(
-      `/movie/${id}`
-    );
+    expect(seenPaths, `GET /movie/${id} was crawled`).toContain(`/movie/${id}`);
   }
   for (const id of fixtures.tv) {
     expect(seenPaths, `GET /tv/${id} was crawled`).toContain(`/tv/${id}`);
