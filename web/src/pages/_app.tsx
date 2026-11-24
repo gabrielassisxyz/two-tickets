@@ -14,7 +14,7 @@ import type { User } from '@app/hooks/useUser';
 import { Permission, useUser } from '@app/hooks/useUser';
 import '@app/styles/globals.css';
 import { polyfillIntl } from '@app/utils/polyfillIntl';
-import { getHostAndPort } from '@app/utils/urlHelper';
+import { getApiBaseUrl } from '@app/utils/urlHelper';
 import '@fontsource-variable/inter';
 import axios from 'axios';
 import type { AppInitialProps, AppProps } from 'next/app';
@@ -269,7 +269,7 @@ CoreApp.getInitialProps = async (initialProps) => {
   if (ctx.res) {
     // Check if app is initialized and redirect if necessary
     const response = await axios.get<PublicSettingsResponse>(
-      `http://${getHostAndPort()}/api/v1/settings/public`
+      `${getApiBaseUrl()}/api/v1/settings/public`
     );
 
     currentSettings = response.data;
@@ -287,7 +287,7 @@ CoreApp.getInitialProps = async (initialProps) => {
       try {
         // Attempt to get the user by running a request to the local api
         const response = await axios.get<User>(
-          `http://${getHostAndPort()}/api/v1/auth/me`,
+          `${getApiBaseUrl()}/api/v1/auth/me`,
           {
             headers:
               ctx.req && ctx.req.headers.cookie
