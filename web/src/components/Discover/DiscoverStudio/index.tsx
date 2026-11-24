@@ -1,3 +1,5 @@
+import type { MovieResult } from '@app/compat/models/Search';
+import type { ProductionCompany } from '@app/compat/models/common';
 import CachedImage from '@app/components/Common/CachedImage';
 import Header from '@app/components/Common/Header';
 import ListView from '@app/components/Common/ListView';
@@ -6,8 +8,6 @@ import useDiscover from '@app/hooks/useDiscover';
 import globalMessages from '@app/i18n/globalMessages';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
-import type { ProductionCompany } from '@server/models/common';
-import type { MovieResult } from '@server/models/Search';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 

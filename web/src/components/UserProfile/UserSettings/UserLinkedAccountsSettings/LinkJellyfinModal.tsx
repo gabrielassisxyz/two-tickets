@@ -1,3 +1,4 @@
+import { MediaServerType, ServerType } from '@app/compat/constants/server';
 import Alert from '@app/components/Common/Alert';
 import Button from '@app/components/Common/Button';
 import Modal from '@app/components/Common/Modal';
@@ -6,7 +7,6 @@ import { useUser } from '@app/hooks/useUser';
 import defineMessages from '@app/utils/defineMessages';
 import { Transition } from '@headlessui/react';
 import { QrCodeIcon } from '@heroicons/react/24/outline';
-import { MediaServerType, ServerType } from '@server/constants/server';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import { useState } from 'react';

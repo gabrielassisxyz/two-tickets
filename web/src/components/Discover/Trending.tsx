@@ -1,3 +1,8 @@
+import type {
+  MovieResult,
+  PersonResult,
+  TvResult,
+} from '@app/compat/models/Search';
 import Header from '@app/components/Common/Header';
 import ListView from '@app/components/Common/ListView';
 import PageTitle from '@app/components/Common/PageTitle';
@@ -7,11 +12,6 @@ import globalMessages from '@app/i18n/globalMessages';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
 import { CircleStackIcon, FunnelIcon } from '@heroicons/react/24/solid';
-import type {
-  MovieResult,
-  PersonResult,
-  TvResult,
-} from '@server/models/Search';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 

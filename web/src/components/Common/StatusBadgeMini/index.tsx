@@ -1,4 +1,5 @@
 import Spinner from '@app/assets/spinner.svg';
+import { MediaStatus } from '@app/compat/constants/media';
 import { CheckCircleIcon } from '@heroicons/react/20/solid';
 import {
   BellIcon,
@@ -7,7 +8,6 @@ import {
   MinusSmallIcon,
   TrashIcon,
 } from '@heroicons/react/24/solid';
-import { MediaStatus } from '@server/constants/media';
 
 interface StatusBadgeMiniProps {
   status: MediaStatus;

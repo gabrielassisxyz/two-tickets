@@ -42,14 +42,21 @@ describe('normalizeForGolden', () => {
 });
 
 describe('compareToGolden', () => {
-  const withMovie = (changes) => ({ page: 1, results: [{ ...movie, ...changes }] });
+  const withMovie = (changes) => ({
+    page: 1,
+    results: [{ ...movie, ...changes }],
+  });
 
   it('matches the response the golden was made from', () => {
     assert.deepEqual(compareToGolden(withMovie({}), golden), []);
   });
 
   it('ignores the values of popularity, voteCount and voteAverage', () => {
-    const drifted = withMovie({ popularity: 3.1, voteCount: 1, voteAverage: 0 });
+    const drifted = withMovie({
+      popularity: 3.1,
+      voteCount: 1,
+      voteAverage: 0,
+    });
     assert.deepEqual(compareToGolden(drifted, golden), []);
   });
 
@@ -62,9 +69,10 @@ describe('compareToGolden', () => {
   });
 
   it('reports a volatile field whose type changed', () => {
-    assert.deepEqual(compareToGolden(withMovie({ voteAverage: '8.2' }), golden), [
-      '$.results[0].voteAverage: expected number, got string',
-    ]);
+    assert.deepEqual(
+      compareToGolden(withMovie({ voteAverage: '8.2' }), golden),
+      ['$.results[0].voteAverage: expected number, got string']
+    );
   });
 
   it('reports a field that is missing and one that is unexpected', () => {
@@ -85,15 +93,17 @@ describe('compareToGolden', () => {
   });
 
   it('reports a changed JSON type outside the volatile fields', () => {
-    assert.deepEqual(compareToGolden(withMovie({ backdropPath: '/b.jpg' }), golden), [
-      '$.results[0].backdropPath: expected null, got string',
-    ]);
+    assert.deepEqual(
+      compareToGolden(withMovie({ backdropPath: '/b.jpg' }), golden),
+      ['$.results[0].backdropPath: expected null, got string']
+    );
   });
 
   it('compares values outside the volatile fields', () => {
-    assert.deepEqual(compareToGolden(withMovie({ title: 'The Matrix' }), golden), [
-      '$.results[0].title: expected "Matrix", got "The Matrix"',
-    ]);
+    assert.deepEqual(
+      compareToGolden(withMovie({ title: 'The Matrix' }), golden),
+      ['$.results[0].title: expected "Matrix", got "The Matrix"']
+    );
   });
 
   it('reports an array of a different length', () => {
@@ -103,7 +113,9 @@ describe('compareToGolden', () => {
   });
 
   it('keeps snake_case keys nested in camelCase objects exact', () => {
-    const response = withMovie({ releases: { results: [{ iso3166_1: 'BR', release_dates: [] }] } });
+    const response = withMovie({
+      releases: { results: [{ iso3166_1: 'BR', release_dates: [] }] },
+    });
     assert.deepEqual(compareToGolden(response, golden), [
       '$.results[0].releases.results[0].iso_3166_1: missing',
       '$.results[0].releases.results[0].iso3166_1: unexpected field',

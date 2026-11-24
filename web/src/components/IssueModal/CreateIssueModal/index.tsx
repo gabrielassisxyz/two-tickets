@@ -1,3 +1,7 @@
+import { MediaStatus } from '@app/compat/constants/media';
+import type Issue from '@app/compat/entity/Issue';
+import type { MovieDetails } from '@app/compat/models/Movie';
+import type { TvDetails } from '@app/compat/models/Tv';
 import Button from '@app/components/Common/Button';
 import Modal from '@app/components/Common/Modal';
 import { issueOptions } from '@app/components/IssueModal/constants';
@@ -8,10 +12,6 @@ import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
 import { Label, Radio, RadioGroup } from '@headlessui/react';
 import { ArrowRightCircleIcon } from '@heroicons/react/24/solid';
-import { MediaStatus } from '@server/constants/media';
-import type Issue from '@server/entity/Issue';
-import type { MovieDetails } from '@server/models/Movie';
-import type { TvDetails } from '@server/models/Tv';
 import axios from 'axios';
 import { Field, Formik } from 'formik';
 import Link from 'next/link';

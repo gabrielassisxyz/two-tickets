@@ -1,7 +1,7 @@
-import { UserType } from '@server/constants/user';
-import type { PermissionCheckOptions } from '@server/lib/permissions';
-import { hasPermission, Permission } from '@server/lib/permissions';
-import type { NotificationAgentKey } from '@server/lib/settings';
+import { UserType } from '@app/compat/constants/user';
+import type { PermissionCheckOptions } from '@app/compat/lib/permissions';
+import { hasPermission, Permission } from '@app/compat/lib/permissions';
+import type { NotificationAgentKey } from '@app/compat/lib/settings';
 import { useRouter } from 'next/router';
 import type { MutatorCallback } from 'swr';
 import useSWR from 'swr';

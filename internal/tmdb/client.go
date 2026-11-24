@@ -27,8 +27,9 @@ import (
 const (
 	// DefaultBaseURL is TMDB's v3 API root.
 	DefaultBaseURL = "https://api.themoviedb.org/3"
-	// DefaultLanguage and DefaultRegion shape every response unless a caller
-	// overrides them per request.
+	// DefaultLanguage and DefaultRegion are the project's display locale. The
+	// client never adds them: a route passes them where upstream Seerr sends
+	// them for that endpoint, and only there.
 	DefaultLanguage = "pt-BR"
 	DefaultRegion   = "BR"
 
@@ -89,8 +90,6 @@ type Options struct {
 	Cache          responseCache
 	FormatVersion  int
 	Logger         *slog.Logger
-	Language       string
-	Region         string
 }
 
 // Client is one process-wide TMDB client.
@@ -109,8 +108,6 @@ type Client struct {
 	cache          responseCache
 	formatVersion  int
 	logger         *slog.Logger
-	language       string
-	region         string
 
 	flightsMu sync.Mutex
 	flights   map[string]*sharedFetch
@@ -186,14 +183,6 @@ func NewClient(opts Options) *Client {
 	if logger == nil {
 		logger = slog.New(slog.DiscardHandler)
 	}
-	language := opts.Language
-	if language == "" {
-		language = DefaultLanguage
-	}
-	region := opts.Region
-	if region == "" {
-		region = DefaultRegion
-	}
 	return &Client{
 		baseURL:        strings.TrimSuffix(baseURL, "/"),
 		apiKey:         opts.APIKey,
@@ -209,8 +198,6 @@ func NewClient(opts Options) *Client {
 		cache:          opts.Cache,
 		formatVersion:  formatVersion,
 		logger:         logger,
-		language:       language,
-		region:         region,
 		flights:        map[string]*sharedFetch{},
 	}
 }
@@ -230,24 +217,17 @@ func sleepContext(ctx context.Context, d time.Duration) error {
 }
 
 // Get fetches path with params, honouring the limiter, retry budget and cache,
-// and decodes the JSON body into dest. Language and region default to pt-BR
-// and BR; include_adult defaults to false so adult content stays excluded.
+// and decodes the JSON body into dest. It sends exactly params, plus the API
+// key, and adds nothing of its own: upstream Seerr sends a different set per
+// endpoint (language on most, region and include_adult on few), and the
+// recorded fixtures only match a route that asks what upstream asks.
 func (c *Client) Get(ctx context.Context, path string, params map[string]string, dest any) error {
 	if !strings.HasPrefix(path, "/") {
 		path = "/" + path
 	}
-	merged := make(map[string]string, len(params)+3)
+	merged := make(map[string]string, len(params))
 	for k, v := range params {
 		merged[k] = v
-	}
-	if _, ok := merged["language"]; !ok {
-		merged["language"] = c.language
-	}
-	if _, ok := merged["region"]; !ok {
-		merged["region"] = c.region
-	}
-	if _, ok := merged["include_adult"]; !ok {
-		merged["include_adult"] = "false"
 	}
 	key := BuildCacheKey(c.formatVersion, http.MethodGet, path, merged)
 	ttl := TTLForPath(path)

@@ -1,3 +1,4 @@
+import type { RequestResultsResponse } from '@app/compat/interfaces/api/requestInterfaces';
 import Button from '@app/components/Common/Button';
 import Header from '@app/components/Common/Header';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
@@ -18,7 +19,6 @@ import {
   CircleStackIcon,
   FunnelIcon,
 } from '@heroicons/react/24/solid';
-import type { RequestResultsResponse } from '@server/interfaces/api/requestInterfaces';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';

@@ -1,5 +1,5 @@
+import { IssueType } from '@app/compat/constants/issue';
 import defineMessages from '@app/utils/defineMessages';
-import { IssueType } from '@server/constants/issue';
 import type { MessageDescriptor } from 'react-intl';
 
 const messages = defineMessages('components.IssueModal', {

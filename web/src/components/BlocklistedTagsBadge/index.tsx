@@ -1,9 +1,9 @@
+import type { BlocklistItem } from '@app/compat/interfaces/api/blocklistInterfaces';
+import type { Keyword } from '@app/compat/models/common';
 import Badge from '@app/components/Common/Badge';
 import Tooltip from '@app/components/Common/Tooltip';
 import defineMessages from '@app/utils/defineMessages';
 import { TagIcon } from '@heroicons/react/20/solid';
-import type { BlocklistItem } from '@server/interfaces/api/blocklistInterfaces';
-import type { Keyword } from '@server/models/common';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';

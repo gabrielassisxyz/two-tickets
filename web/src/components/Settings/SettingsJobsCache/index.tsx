@@ -8,6 +8,12 @@ import Table from '@app/components/Common/Table';
 import useLocale from '@app/hooks/useLocale';
 import useSettings from '@app/hooks/useSettings';
 
+import { MediaServerType } from '@app/compat/constants/server';
+import type {
+  CacheItem,
+  CacheResponse,
+} from '@app/compat/interfaces/api/settingsInterfaces';
+import type { JobId } from '@app/compat/lib/settings';
 import useToasts from '@app/hooks/useToasts';
 import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
@@ -15,12 +21,6 @@ import { formatBytes } from '@app/utils/numberHelpers';
 import { Transition } from '@headlessui/react';
 import { PlayIcon, StopIcon, TrashIcon } from '@heroicons/react/24/outline';
 import { PencilIcon } from '@heroicons/react/24/solid';
-import { MediaServerType } from '@server/constants/server';
-import type {
-  CacheItem,
-  CacheResponse,
-} from '@server/interfaces/api/settingsInterfaces';
-import type { JobId } from '@server/lib/settings';
 import axios from 'axios';
 import cronstrue from 'cronstrue/i18n';
 import { Fragment, useReducer, useState } from 'react';

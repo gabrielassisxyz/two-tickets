@@ -36,4 +36,9 @@
 web/node_modules
 web/.next
 web/out
+# Written by the web toolchain on every gate run: ESLint's cache, Next's
+# generated type stub (upstream does not track it either) and tsc's build info.
+web/.eslintcache
+web/next-env.d.ts
+web/tsconfig.tsbuildinfo
 coverage

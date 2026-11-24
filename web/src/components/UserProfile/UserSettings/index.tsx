@@ -1,3 +1,5 @@
+import type { UserSettingsNotificationsResponse } from '@app/compat/interfaces/api/userSettingsInterfaces';
+import { hasPermission, Permission } from '@app/compat/lib/permissions';
 import Alert from '@app/components/Common/Alert';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
 import PageTitle from '@app/components/Common/PageTitle';
@@ -9,8 +11,6 @@ import { useUser } from '@app/hooks/useUser';
 import globalMessages from '@app/i18n/globalMessages';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
-import type { UserSettingsNotificationsResponse } from '@server/interfaces/api/userSettingsInterfaces';
-import { hasPermission, Permission } from '@server/lib/permissions';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 import useSWR from 'swr';

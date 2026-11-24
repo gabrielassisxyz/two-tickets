@@ -51,7 +51,9 @@ const upstreamPlugin = (serverDir) => ({
     const resolveUpstream = (base, importer) => {
       const file = findSource(base);
       if (!file) {
-        throw new Error(`upstream module not found: ${base} (from ${importer})`);
+        throw new Error(
+          `upstream module not found: ${base} (from ${importer})`
+        );
       }
       const id = moduleIdOf(serverDir, file);
       const stub = join(stubDir, `${id.replace(/\/index$/, '')}.mjs`);

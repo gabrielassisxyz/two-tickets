@@ -1,3 +1,4 @@
+import type { IssueResultsResponse } from '@app/compat/interfaces/api/issueInterfaces';
 import Button from '@app/components/Common/Button';
 import Header from '@app/components/Common/Header';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
@@ -12,7 +13,6 @@ import {
   ChevronRightIcon,
   FunnelIcon,
 } from '@heroicons/react/24/solid';
-import type { IssueResultsResponse } from '@server/interfaces/api/issueInterfaces';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';

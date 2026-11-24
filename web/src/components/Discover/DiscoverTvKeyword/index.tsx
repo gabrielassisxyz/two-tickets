@@ -1,3 +1,5 @@
+import type { TmdbKeyword } from '@app/compat/api/themoviedbInterfaces';
+import type { TvResult } from '@app/compat/models/Search';
 import Header from '@app/components/Common/Header';
 import ListView from '@app/components/Common/ListView';
 import PageTitle from '@app/components/Common/PageTitle';
@@ -5,8 +7,6 @@ import useDiscover, { encodeURIExtraParams } from '@app/hooks/useDiscover';
 import globalMessages from '@app/i18n/globalMessages';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
-import type { TmdbKeyword } from '@server/api/themoviedb/interfaces';
-import type { TvResult } from '@server/models/Search';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 

@@ -1,3 +1,4 @@
+import type { default as IssueCommentType } from '@app/compat/entity/IssueComment';
 import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
 import Modal from '@app/components/Common/Modal';
@@ -12,7 +13,6 @@ import {
   Transition,
 } from '@headlessui/react';
 import { EllipsisVerticalIcon } from '@heroicons/react/24/solid';
-import type { default as IssueCommentType } from '@server/entity/IssueComment';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import Link from 'next/link';

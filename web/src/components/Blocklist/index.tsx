@@ -1,3 +1,9 @@
+import type {
+  BlocklistItem,
+  BlocklistResultsResponse,
+} from '@app/compat/interfaces/api/blocklistInterfaces';
+import type { MovieDetails } from '@app/compat/models/Movie';
+import type { TvDetails } from '@app/compat/models/Tv';
 import BlocklistedTagsBadge from '@app/components/BlocklistedTagsBadge';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
@@ -20,12 +26,6 @@ import {
   MagnifyingGlassIcon,
   TrashIcon,
 } from '@heroicons/react/24/solid';
-import type {
-  BlocklistItem,
-  BlocklistResultsResponse,
-} from '@server/interfaces/api/blocklistInterfaces';
-import type { MovieDetails } from '@server/models/Movie';
-import type { TvDetails } from '@server/models/Tv';
 import axios from 'axios';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

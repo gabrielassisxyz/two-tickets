@@ -1,4 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import type {
+  ServiceCommonServer,
+  ServiceCommonServerWithDetails,
+} from '@app/compat/interfaces/api/serviceInterfaces';
+import type { UserResultsResponse } from '@app/compat/interfaces/api/userInterfaces';
+import type { OverrideRulesResult } from '@app/compat/lib/overrideRules';
+import { hasPermission } from '@app/compat/lib/permissions';
 import CachedImage from '@app/components/Common/CachedImage';
 import { SmallLoadingSpinner } from '@app/components/Common/LoadingSpinner';
 import SlideCheckbox from '@app/components/Common/SlideCheckbox';
@@ -17,13 +24,6 @@ import {
   Transition,
 } from '@headlessui/react';
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/24/solid';
-import type {
-  ServiceCommonServer,
-  ServiceCommonServerWithDetails,
-} from '@server/interfaces/api/serviceInterfaces';
-import type { UserResultsResponse } from '@server/interfaces/api/userInterfaces';
-import type { OverrideRulesResult } from '@server/lib/overrideRules';
-import { hasPermission } from '@server/lib/permissions';
 import axios from 'axios';
 import { isEqual } from 'lodash';
 import { useEffect, useMemo, useRef, useState } from 'react';
