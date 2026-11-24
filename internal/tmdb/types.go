@@ -1,5 +1,7 @@
 package tmdb
 
+import "encoding/json"
+
 // Typed TMDB structures. Only the fields the tracker needs are modelled;
 // decoding ignores the rest, so recorded fixtures stay small.
 
@@ -47,41 +49,53 @@ type CollectionDetails struct {
 }
 
 type MovieBrief struct {
-	ID            int     `json:"id"`
-	Title         string  `json:"title"`
-	OriginalTitle string  `json:"original_title"`
-	Overview      string  `json:"overview"`
-	PosterPath    *string `json:"poster_path"`
-	BackdropPath  *string `json:"backdrop_path"`
-	ReleaseDate   string  `json:"release_date"`
-	VoteAverage   float64 `json:"vote_average"`
-	GenreIDs      []int   `json:"genre_ids"`
+	ID               int     `json:"id"`
+	Title            string  `json:"title"`
+	OriginalTitle    string  `json:"original_title"`
+	Overview         string  `json:"overview"`
+	PosterPath       *string `json:"poster_path"`
+	BackdropPath     *string `json:"backdrop_path"`
+	ReleaseDate      string  `json:"release_date"`
+	VoteAverage      float64 `json:"vote_average"`
+	VoteCount        int     `json:"vote_count"`
+	Popularity       float64 `json:"popularity"`
+	GenreIDs         []int   `json:"genre_ids"`
+	OriginalLanguage string  `json:"original_language"`
+	Adult            bool    `json:"adult"`
+	Video            bool    `json:"video"`
 }
 
 type MovieDetails struct {
 	MovieBrief
-	Genres       []Genre `json:"genres"`
-	Runtime      *int    `json:"runtime"`
-	Status       string  `json:"status"`
-	Tagline      string  `json:"tagline"`
-	Homepage     string  `json:"homepage"`
-	IMDbID       string  `json:"imdb_id"`
-	OriginalLang string  `json:"original_language"`
-	Budget       int64   `json:"budget"`
-	Revenue      int64   `json:"revenue"`
-	Adult        bool    `json:"adult"`
+	Genres   []Genre `json:"genres"`
+	Runtime  *int    `json:"runtime"`
+	Status   string  `json:"status"`
+	Tagline  string  `json:"tagline"`
+	Homepage string  `json:"homepage"`
+	IMDbID   string  `json:"imdb_id"`
+	Budget   int64   `json:"budget"`
+	Revenue  int64   `json:"revenue"`
 }
 
+// TVBrief is a series result. MediaType is empty where TMDB leaves it out
+// (discover, similar); Adult is not part of Seerr's series result but is kept
+// so that adult series can be filtered like adult movies.
 type TVBrief struct {
-	ID           int     `json:"id"`
-	Name         string  `json:"name"`
-	OriginalName string  `json:"original_name"`
-	Overview     string  `json:"overview"`
-	PosterPath   *string `json:"poster_path"`
-	BackdropPath *string `json:"backdrop_path"`
-	FirstAirDate string  `json:"first_air_date"`
-	VoteAverage  float64 `json:"vote_average"`
-	GenreIDs     []int   `json:"genre_ids"`
+	ID               int      `json:"id"`
+	MediaType        string   `json:"media_type"`
+	Name             string   `json:"name"`
+	OriginalName     string   `json:"original_name"`
+	Overview         string   `json:"overview"`
+	PosterPath       *string  `json:"poster_path"`
+	BackdropPath     *string  `json:"backdrop_path"`
+	FirstAirDate     string   `json:"first_air_date"`
+	VoteAverage      float64  `json:"vote_average"`
+	VoteCount        int      `json:"vote_count"`
+	Popularity       float64  `json:"popularity"`
+	GenreIDs         []int    `json:"genre_ids"`
+	OriginCountry    []string `json:"origin_country"`
+	OriginalLanguage string   `json:"original_language"`
+	Adult            bool     `json:"adult"`
 }
 
 type TVDetails struct {
@@ -124,6 +138,8 @@ type PersonDetails struct {
 	Deathday    *string `json:"deathday"`
 	KnownFor    string  `json:"known_for_department"`
 	ProfilePath *string `json:"profile_path"`
+	Popularity  float64 `json:"popularity"`
+	Adult       bool    `json:"adult"`
 }
 
 type CreditCast struct {
@@ -171,17 +187,6 @@ type TrendingResponse struct {
 	TotalResults int         `json:"total_results"`
 }
 
-// MediaItem is one trending or multi-search row: a movie, show or person.
-type MediaItem struct {
-	ID          int     `json:"id"`
-	MediaType   string  `json:"media_type"`
-	Title       string  `json:"title"`
-	Name        string  `json:"name"`
-	Overview    string  `json:"overview"`
-	PosterPath  *string `json:"poster_path"`
-	VoteAverage float64 `json:"vote_average"`
-}
-
 type SearchMoviesResponse = DiscoverMoviesResponse
 
 type SearchTVResponse = DiscoverTVResponse
@@ -215,15 +220,16 @@ type SearchCompanyResponse struct {
 }
 
 type ExternalIDResult struct {
-	MovieResults  []MovieBrief    `json:"movie_results"`
-	TVResults     []TVBrief       `json:"tv_results"`
-	PersonResults []PersonDetails `json:"person_results"`
+	MovieResults  []MovieBrief  `json:"movie_results"`
+	TVResults     []TVBrief     `json:"tv_results"`
+	PersonResults []PersonBrief `json:"person_results"`
 }
 
 type WatchProvider struct {
-	ProviderID   int     `json:"provider_id"`
-	ProviderName string  `json:"provider_name"`
-	LogoPath     *string `json:"logo_path"`
+	ProviderID      int     `json:"provider_id"`
+	ProviderName    string  `json:"provider_name"`
+	LogoPath        *string `json:"logo_path"`
+	DisplayPriority int     `json:"display_priority"`
 }
 
 type WatchProviderRegion struct {
@@ -265,3 +271,92 @@ type MovieSimilarResponse = DiscoverMoviesResponse
 type TVRecommendationsResponse = DiscoverTVResponse
 
 type TVSimilarResponse = DiscoverTVResponse
+
+// PersonBrief is a person result (multi search, trending, find). KnownFor
+// holds movie and series rows.
+type PersonBrief struct {
+	ID          int         `json:"id"`
+	Name        string      `json:"name"`
+	Popularity  float64     `json:"popularity"`
+	ProfilePath *string     `json:"profile_path"`
+	Adult       bool        `json:"adult"`
+	KnownFor    []MediaItem `json:"known_for"`
+}
+
+// CollectionBrief is a collection result, which TMDB mixes into multi search
+// and trending.
+type CollectionBrief struct {
+	ID               int     `json:"id"`
+	Title            string  `json:"title"`
+	OriginalTitle    string  `json:"original_title"`
+	Adult            bool    `json:"adult"`
+	PosterPath       *string `json:"poster_path"`
+	BackdropPath     *string `json:"backdrop_path"`
+	Overview         string  `json:"overview"`
+	OriginalLanguage string  `json:"original_language"`
+}
+
+// TitleCast is one entry of a movie's or series' credits.cast. CastID is
+// nil when TMDB leaves it out, as it does for series.
+type TitleCast struct {
+	ID          int     `json:"id"`
+	CastID      *int    `json:"cast_id"`
+	Character   string  `json:"character"`
+	CreditID    string  `json:"credit_id"`
+	Gender      int     `json:"gender"`
+	Name        string  `json:"name"`
+	Order       int     `json:"order"`
+	ProfilePath *string `json:"profile_path"`
+}
+
+// AggregateCastRole is one role of a series actor across its episodes.
+type AggregateCastRole struct {
+	CreditID     string `json:"credit_id"`
+	Character    string `json:"character"`
+	EpisodeCount int    `json:"episode_count"`
+}
+
+// AggregateCast is one entry of a series' aggregate_credits.cast.
+type AggregateCast struct {
+	TitleCast
+	Roles []AggregateCastRole `json:"roles"`
+}
+
+// TitleCrew is one entry of a movie's or series' credits.crew.
+type TitleCrew struct {
+	ID          int     `json:"id"`
+	CreditID    string  `json:"credit_id"`
+	Department  string  `json:"department"`
+	Gender      int     `json:"gender"`
+	Job         string  `json:"job"`
+	Name        string  `json:"name"`
+	ProfilePath *string `json:"profile_path"`
+}
+
+// ExternalIDs is a title's external_ids. TMDB omits some keys for movies
+// and sends null for others, and Seerr passes both through, so every field
+// keeps all three states. TVRageID stays raw: TMDB sends it as a number while
+// Seerr declares a string, and passes on whichever arrives.
+type ExternalIDs struct {
+	IMDbID      Optional[string]          `json:"imdb_id,omitzero"`
+	FreebaseMID Optional[string]          `json:"freebase_mid,omitzero"`
+	FreebaseID  Optional[string]          `json:"freebase_id,omitzero"`
+	TVDBID      Optional[int]             `json:"tvdb_id,omitzero"`
+	TVRageID    Optional[json.RawMessage] `json:"tvrage_id,omitzero"`
+	FacebookID  Optional[string]          `json:"facebook_id,omitzero"`
+	InstagramID Optional[string]          `json:"instagram_id,omitzero"`
+	TwitterID   Optional[string]          `json:"twitter_id,omitzero"`
+}
+
+type Video struct {
+	ID   string `json:"id"`
+	Key  string `json:"key"`
+	Name string `json:"name"`
+	Site string `json:"site"`
+	Size int    `json:"size"`
+	Type string `json:"type"`
+}
+
+type VideoResult struct {
+	Results []Video `json:"results"`
+}
