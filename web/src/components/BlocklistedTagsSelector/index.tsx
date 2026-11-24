@@ -1,3 +1,8 @@
+import type {
+  TmdbKeyword,
+  TmdbKeywordSearchResponse,
+} from '@app/compat/api/themoviedbInterfaces';
+import type { Keyword } from '@app/compat/models/common';
 import Modal from '@app/components/Common/Modal';
 import Tooltip from '@app/components/Common/Tooltip';
 import CopyButton from '@app/components/Settings/CopyButton';
@@ -5,11 +10,6 @@ import { encodeURIExtraParams } from '@app/hooks/useDiscover';
 import defineMessages from '@app/utils/defineMessages';
 import { Transition } from '@headlessui/react';
 import { ArrowDownIcon } from '@heroicons/react/24/solid';
-import type {
-  TmdbKeyword,
-  TmdbKeywordSearchResponse,
-} from '@server/api/themoviedb/interfaces';
-import type { Keyword } from '@server/models/common';
 import axios from 'axios';
 import { useFormikContext } from 'formik';
 import {

@@ -71,7 +71,11 @@ export const createFixtureSession = (fixtures, { onUnmatched } = {}) => {
     }
     if (!fixture) {
       unmatched.push(request);
-      throw new AxiosError('no fixture matches this TMDB request', 'ENOFIXTURE', config);
+      throw new AxiosError(
+        'no fixture matches this TMDB request',
+        'ENOFIXTURE',
+        config
+      );
     }
     served.add(fixture.id);
     const outcome = outcomeFor(fixture, config);

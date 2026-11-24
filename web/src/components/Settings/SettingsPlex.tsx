@@ -1,3 +1,6 @@
+import { ServerType } from '@app/compat/constants/server';
+import type { PlexDevice } from '@app/compat/interfaces/api/plexInterfaces';
+import type { PlexSettings, TautulliSettings } from '@app/compat/lib/settings';
 import Alert from '@app/components/Common/Alert';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
@@ -16,9 +19,6 @@ import {
   MagnifyingGlassIcon,
   XMarkIcon,
 } from '@heroicons/react/24/solid';
-import { ServerType } from '@server/constants/server';
-import type { PlexDevice } from '@server/interfaces/api/plexInterfaces';
-import type { PlexSettings, TautulliSettings } from '@server/lib/settings';
 import axios from 'axios';
 import { Field, Formik } from 'formik';
 import { orderBy } from 'lodash';

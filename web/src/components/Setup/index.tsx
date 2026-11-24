@@ -1,6 +1,8 @@
 import EmbyLogo from '@app/assets/services/emby.svg';
 import JellyfinLogo from '@app/assets/services/jellyfin.svg';
 import PlexLogo from '@app/assets/services/plex.svg';
+import { MediaServerType } from '@app/compat/constants/server';
+import type { Library } from '@app/compat/lib/settings';
 import AppDataWarning from '@app/components/AppDataWarning';
 import Alert from '@app/components/Common/Alert';
 import Button from '@app/components/Common/Button';
@@ -14,8 +16,6 @@ import SetupSteps from '@app/components/Setup/SetupSteps';
 import useLocale from '@app/hooks/useLocale';
 import useSettings from '@app/hooks/useSettings';
 import defineMessages from '@app/utils/defineMessages';
-import { MediaServerType } from '@server/constants/server';
-import type { Library } from '@server/lib/settings';
 import axios from 'axios';
 import Image from 'next/image';
 import { useRouter } from 'next/router';

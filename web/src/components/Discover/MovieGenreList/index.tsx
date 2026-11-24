@@ -1,3 +1,4 @@
+import type { GenreSliderItem } from '@app/compat/interfaces/api/discoverInterfaces';
 import Header from '@app/components/Common/Header';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
 import PageTitle from '@app/components/Common/PageTitle';
@@ -5,7 +6,6 @@ import { genreColorMap } from '@app/components/Discover/constants';
 import GenreCard from '@app/components/GenreCard';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
-import type { GenreSliderItem } from '@server/interfaces/api/discoverInterfaces';
 import { useIntl } from 'react-intl';
 import useSWR from 'swr';
 

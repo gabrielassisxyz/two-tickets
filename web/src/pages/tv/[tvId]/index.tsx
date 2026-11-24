@@ -1,6 +1,6 @@
+import type { TvDetails as TvDetailsType } from '@app/compat/models/Tv';
 import TvDetails from '@app/components/TvDetails';
 import { getHostAndPort } from '@app/utils/urlHelper';
-import type { TvDetails as TvDetailsType } from '@server/models/Tv';
 import axios from 'axios';
 import type { GetServerSideProps, NextPage } from 'next';
 

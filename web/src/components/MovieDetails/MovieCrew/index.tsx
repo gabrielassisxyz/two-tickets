@@ -1,10 +1,10 @@
+import type { MovieDetails } from '@app/compat/models/Movie';
 import Header from '@app/components/Common/Header';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
 import PageTitle from '@app/components/Common/PageTitle';
 import PersonCard from '@app/components/PersonCard';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
-import type { MovieDetails } from '@server/models/Movie';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';

@@ -1,3 +1,5 @@
+import { MediaStatus } from '@app/compat/constants/media';
+import type { Collection } from '@app/compat/models/Collection';
 import BlocklistModal from '@app/components/BlocklistModal';
 import Button from '@app/components/Common/Button';
 import ButtonWithDropdown from '@app/components/Common/ButtonWithDropdown';
@@ -21,8 +23,6 @@ import {
   EyeIcon,
   EyeSlashIcon,
 } from '@heroicons/react/24/outline';
-import { MediaStatus } from '@server/constants/media';
-import type { Collection } from '@server/models/Collection';
 import axios from 'axios';
 import { uniq } from 'lodash';
 import Link from 'next/link';

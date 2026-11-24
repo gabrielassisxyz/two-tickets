@@ -1,3 +1,4 @@
+import { resolveImageSrc } from '@app/compat/imageHosts';
 import useSettings from '@app/hooks/useSettings';
 import type { ImageLoader, ImageProps } from 'next/image';
 import Image from 'next/image';
@@ -33,13 +34,20 @@ const CachedImage = ({ src, type, ...props }: CachedImageProps) => {
           )
         : src;
   } else if (type === 'avatar') {
-    // jellyfin avatar (if any)
+    // local avatar image path
     imageUrl = src;
   } else {
     return null;
   }
 
-  return <Image unoptimized loader={imageLoader} src={imageUrl} {...props} />;
+  return (
+    <Image
+      unoptimized
+      loader={imageLoader}
+      src={resolveImageSrc(imageUrl)}
+      {...props}
+    />
+  );
 };
 
 export default CachedImage;

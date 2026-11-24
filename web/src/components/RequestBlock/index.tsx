@@ -1,3 +1,5 @@
+import { MediaRequestStatus } from '@app/compat/constants/media';
+import type { MediaRequest } from '@app/compat/entity/MediaRequest';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
@@ -16,8 +18,6 @@ import {
   UserIcon,
   XMarkIcon,
 } from '@heroicons/react/24/solid';
-import { MediaRequestStatus } from '@server/constants/media';
-import type { MediaRequest } from '@server/entity/MediaRequest';
 import axios from 'axios';
 import Link from 'next/link';
 import { useState } from 'react';

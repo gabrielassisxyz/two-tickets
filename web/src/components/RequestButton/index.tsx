@@ -1,3 +1,6 @@
+import { MediaRequestStatus, MediaStatus } from '@app/compat/constants/media';
+import type Media from '@app/compat/entity/Media';
+import type { MediaRequest } from '@app/compat/entity/MediaRequest';
 import ButtonWithDropdown from '@app/components/Common/ButtonWithDropdown';
 import RequestModal from '@app/components/RequestModal';
 import useSettings from '@app/hooks/useSettings';
@@ -10,9 +13,6 @@ import {
   InformationCircleIcon,
   XMarkIcon,
 } from '@heroicons/react/24/solid';
-import { MediaRequestStatus, MediaStatus } from '@server/constants/media';
-import type Media from '@server/entity/Media';
-import type { MediaRequest } from '@server/entity/MediaRequest';
 import axios from 'axios';
 import { useMemo, useState } from 'react';
 import { useIntl } from 'react-intl';

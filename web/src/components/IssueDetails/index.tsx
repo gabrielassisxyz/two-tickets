@@ -1,3 +1,9 @@
+import { IssueStatus } from '@app/compat/constants/issue';
+import { MediaType } from '@app/compat/constants/media';
+import { MediaServerType, ServerType } from '@app/compat/constants/server';
+import type Issue from '@app/compat/entity/Issue';
+import type { MovieDetails } from '@app/compat/models/Movie';
+import type { TvDetails } from '@app/compat/models/Tv';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
@@ -22,12 +28,6 @@ import {
   ServerIcon,
 } from '@heroicons/react/24/outline';
 import { ArrowPathIcon } from '@heroicons/react/24/solid';
-import { IssueStatus } from '@server/constants/issue';
-import { MediaType } from '@server/constants/media';
-import { MediaServerType, ServerType } from '@server/constants/server';
-import type Issue from '@server/entity/Issue';
-import type { MovieDetails } from '@server/models/Movie';
-import type { TvDetails } from '@server/models/Tv';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import Link from 'next/link';

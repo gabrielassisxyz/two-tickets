@@ -1,3 +1,4 @@
+import type { StatusResponse } from '@app/compat/interfaces/api/settingsInterfaces';
 import useSettings from '@app/hooks/useSettings';
 import defineMessages from '@app/utils/defineMessages';
 import {
@@ -6,7 +7,6 @@ import {
   CodeBracketIcon,
   ServerIcon,
 } from '@heroicons/react/24/outline';
-import type { StatusResponse } from '@server/interfaces/api/settingsInterfaces';
 import Link from 'next/link';
 import { useIntl } from 'react-intl';
 import useSWR from 'swr';

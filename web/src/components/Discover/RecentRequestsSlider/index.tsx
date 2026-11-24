@@ -1,3 +1,4 @@
+import type { RequestResultsResponse } from '@app/compat/interfaces/api/requestInterfaces';
 import { sliderTitles } from '@app/components/Discover/constants';
 import RequestCard from '@app/components/RequestCard';
 import Slider from '@app/components/Slider';
@@ -7,7 +8,6 @@ import {
   ArrowRightCircleIcon,
   ExclamationTriangleIcon,
 } from '@heroicons/react/24/outline';
-import type { RequestResultsResponse } from '@server/interfaces/api/requestInterfaces';
 import Link from 'next/link';
 import { useIntl } from 'react-intl';
 import useSWR from 'swr';

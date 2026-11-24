@@ -8,10 +8,10 @@ import SimklLogo from '@app/assets/services/simkl.svg';
 import TmdbLogo from '@app/assets/services/tmdb.svg';
 import TraktLogo from '@app/assets/services/trakt.svg';
 import TvdbLogo from '@app/assets/services/tvdb.svg';
+import { MediaType } from '@app/compat/constants/media';
+import { MediaServerType } from '@app/compat/constants/server';
 import useLocale from '@app/hooks/useLocale';
 import useSettings from '@app/hooks/useSettings';
-import { MediaType } from '@server/constants/media';
-import { MediaServerType } from '@server/constants/server';
 
 type ExternalLinkType = 'movie' | 'tv' | 'person';
 

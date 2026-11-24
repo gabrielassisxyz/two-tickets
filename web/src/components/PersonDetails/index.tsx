@@ -1,4 +1,6 @@
 import Ellipsis from '@app/assets/ellipsis.svg';
+import type { PersonCombinedCreditsResponse } from '@app/compat/interfaces/api/personInterfaces';
+import type { PersonDetails as PersonDetailsType } from '@app/compat/models/Person';
 import CachedImage from '@app/components/Common/CachedImage';
 import ImageFader from '@app/components/Common/ImageFader';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
@@ -9,8 +11,6 @@ import globalMessages from '@app/i18n/globalMessages';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
 import { CircleStackIcon } from '@heroicons/react/24/solid';
-import type { PersonCombinedCreditsResponse } from '@server/interfaces/api/personInterfaces';
-import type { PersonDetails as PersonDetailsType } from '@server/models/Person';
 import { groupBy } from 'lodash';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';

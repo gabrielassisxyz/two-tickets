@@ -1,5 +1,8 @@
 import RadarrLogo from '@app/assets/services/radarr.svg';
 import SonarrLogo from '@app/assets/services/sonarr.svg';
+import type OverrideRule from '@app/compat/entity/OverrideRule';
+import type { OverrideRuleResultsResponse } from '@app/compat/interfaces/api/overrideRuleInterfaces';
+import type { RadarrSettings, SonarrSettings } from '@app/compat/lib/settings';
 import Alert from '@app/components/Common/Alert';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
@@ -14,9 +17,6 @@ import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
 import { Transition } from '@headlessui/react';
 import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/solid';
-import type OverrideRule from '@server/entity/OverrideRule';
-import type { OverrideRuleResultsResponse } from '@server/interfaces/api/overrideRuleInterfaces';
-import type { RadarrSettings, SonarrSettings } from '@server/lib/settings';
 import axios from 'axios';
 import { Fragment, useState } from 'react';
 import { useIntl } from 'react-intl';

@@ -1,7 +1,7 @@
 import Spinner from '@app/assets/spinner.svg';
+import type { TmdbGenre } from '@app/compat/api/themoviedbInterfaces';
 import Tag from '@app/components/Common/Tag';
 import { RectangleStackIcon } from '@heroicons/react/24/outline';
-import type { TmdbGenre } from '@server/api/themoviedb/interfaces';
 import useSWR from 'swr';
 
 type GenreTagProps = {

@@ -1,6 +1,6 @@
+import type { Language } from '@app/compat/lib/settings';
 import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
-import type { Language } from '@server/lib/settings';
 import { sortBy } from 'lodash';
 import { useMemo } from 'react';
 import { useIntl } from 'react-intl';

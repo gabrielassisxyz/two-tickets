@@ -1,5 +1,5 @@
-import { MediaServerType } from '@server/constants/server';
-import type { PublicSettingsResponse } from '@server/interfaces/api/settingsInterfaces';
+import { MediaServerType } from '@app/compat/constants/server';
+import type { PublicSettingsResponse } from '@app/compat/interfaces/api/settingsInterfaces';
 import React from 'react';
 import useSWR from 'swr';
 

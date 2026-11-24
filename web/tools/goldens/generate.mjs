@@ -9,21 +9,28 @@
 //   --upstream <dir>             reuse a checkout of the pinned commit (also
 //                                GOLDENS_UPSTREAM_DIR); otherwise it is fetched
 //                                into a temporary directory
-import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import {
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  rmSync,
+  writeFileSync,
+} from 'node:fs';
 import { dirname, join, relative } from 'node:path';
 import { parseArgs } from 'node:util';
 import { CASES } from './cases.mjs';
 import { FIXTURES } from './fixtures.mjs';
 import { normalizeForGolden, serializeJson } from './lib/golden.mjs';
 import {
-  GOLDEN_DIR,
-  INDEX_FILE,
-  REPO_ROOT,
-  TMDB_DIR,
   fixtureFile,
+  GOLDEN_DIR,
   goldenFile,
+  INDEX_FILE,
   loadAllFixtures,
   openUpstreamRunner,
+  REPO_ROOT,
+  TMDB_DIR,
   validateRegistry,
 } from './lib/store.mjs';
 
@@ -37,7 +44,9 @@ const listJsonFiles = (dir) => {
 };
 
 const buildIndex = () => {
-  const usage = new Map(FIXTURES.map((fixture) => [fixture.id, { families: new Set(), cases: [] }]));
+  const usage = new Map(
+    FIXTURES.map((fixture) => [fixture.id, { families: new Set(), cases: [] }])
+  );
   for (const entry of CASES) {
     for (const id of entry.fixtures) {
       usage.get(id).families.add(entry.family);
@@ -66,7 +75,9 @@ const runCase = async (run, entry, fixturesById) => {
   const outcome = await run(entry.url, fixtures);
   const problems = [];
   for (const request of outcome.unmatched) {
-    problems.push(`case ${entry.name}: no fixture for TMDB request ${JSON.stringify(request)}`);
+    problems.push(
+      `case ${entry.name}: no fixture for TMDB request ${JSON.stringify(request)}`
+    );
   }
   for (const id of entry.fixtures) {
     if (!outcome.served.includes(id)) {
@@ -89,7 +100,10 @@ const produceOutputs = async (run) => {
   const fixturesById = loadAllFixtures();
   const outputs = new Map();
   for (const fixture of FIXTURES.filter((entry) => entry.derive)) {
-    outputs.set(fixtureFile(fixture.id), serializeJson(fixturesById.get(fixture.id)));
+    outputs.set(
+      fixtureFile(fixture.id),
+      serializeJson(fixturesById.get(fixture.id))
+    );
   }
   outputs.set(INDEX_FILE, serializeJson(buildIndex()));
   const problems = [];
@@ -103,7 +117,9 @@ const produceOutputs = async (run) => {
 
 const strayFiles = (outputs) => {
   const recordedFiles = new Set(
-    FIXTURES.filter((fixture) => !fixture.derive).map((fixture) => fixtureFile(fixture.id))
+    FIXTURES.filter((fixture) => !fixture.derive).map((fixture) =>
+      fixtureFile(fixture.id)
+    )
   );
   return [...listJsonFiles(GOLDEN_DIR), ...listJsonFiles(TMDB_DIR)].filter(
     (file) => !outputs.has(file) && !recordedFiles.has(file)
@@ -121,7 +137,9 @@ const checkOutputs = (outputs) => {
     }
   }
   for (const file of strayFiles(outputs)) {
-    differences.push(`${relative(REPO_ROOT, file)}: not produced by any fixture or case`);
+    differences.push(
+      `${relative(REPO_ROOT, file)}: not produced by any fixture or case`
+    );
   }
   return differences;
 };
@@ -135,14 +153,19 @@ const writeOutputs = (outputs) => {
     if (file.startsWith(GOLDEN_DIR)) {
       rmSync(file);
     } else {
-      console.error(`stray fixture left in place: ${relative(REPO_ROOT, file)}`);
+      console.error(
+        `stray fixture left in place: ${relative(REPO_ROOT, file)}`
+      );
     }
   }
 };
 
 const main = async () => {
   const { values } = parseArgs({
-    options: { check: { type: 'boolean', default: false }, upstream: { type: 'string' } },
+    options: {
+      check: { type: 'boolean', default: false },
+      upstream: { type: 'string' },
+    },
   });
   const registryProblems = validateRegistry();
   if (registryProblems.length > 0) {
@@ -166,7 +189,9 @@ const main = async () => {
   const differences = checkOutputs(produced.outputs);
   if (differences.length > 0) {
     console.error(differences.join('\n'));
-    console.error('goldens: committed outputs differ; run: node web/tools/goldens/generate.mjs');
+    console.error(
+      'goldens: committed outputs differ; run: node web/tools/goldens/generate.mjs'
+    );
     process.exit(1);
   }
   console.log(`goldens: ${CASES.length} goldens reproduce`);

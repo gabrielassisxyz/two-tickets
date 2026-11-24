@@ -1,5 +1,5 @@
-import type { UserPushSubscription } from '@server/entity/UserPushSubscription';
-import type { PublicSettingsResponse } from '@server/interfaces/api/settingsInterfaces';
+import type { UserPushSubscription } from '@app/compat/entity/UserPushSubscription';
+import type { PublicSettingsResponse } from '@app/compat/interfaces/api/settingsInterfaces';
 import axios from 'axios';
 
 // Taken from https://www.npmjs.com/package/web-push

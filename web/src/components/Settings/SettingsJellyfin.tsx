@@ -1,3 +1,6 @@
+import { ApiErrorCode } from '@app/compat/constants/error';
+import { MediaServerType, ServerType } from '@app/compat/constants/server';
+import type { JellyfinSettings } from '@app/compat/lib/settings';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
@@ -9,9 +12,6 @@ import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
 import { isValidURL } from '@app/utils/urlValidationHelper';
 import { ArrowDownOnSquareIcon } from '@heroicons/react/24/outline';
-import { ApiErrorCode } from '@server/constants/error';
-import { MediaServerType, ServerType } from '@server/constants/server';
-import type { JellyfinSettings } from '@server/lib/settings';
 import axios from 'axios';
 import { Field, Formik } from 'formik';
 import { useState } from 'react';

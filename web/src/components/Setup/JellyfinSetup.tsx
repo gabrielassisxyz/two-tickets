@@ -1,10 +1,10 @@
+import { ApiErrorCode } from '@app/compat/constants/error';
+import { MediaServerType, ServerType } from '@app/compat/constants/server';
 import Button from '@app/components/Common/Button';
 import Tooltip from '@app/components/Common/Tooltip';
 import useToasts from '@app/hooks/useToasts';
 import defineMessages from '@app/utils/defineMessages';
 import { InformationCircleIcon } from '@heroicons/react/24/solid';
-import { ApiErrorCode } from '@server/constants/error';
-import { MediaServerType, ServerType } from '@server/constants/server';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
 import { FormattedMessage, useIntl } from 'react-intl';
