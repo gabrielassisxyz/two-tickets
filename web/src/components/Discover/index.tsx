@@ -1,5 +1,6 @@
 import { DiscoverSliderType } from '@app/compat/constants/discover';
 import type DiscoverSlider from '@app/compat/entity/DiscoverSlider';
+import { SliderId } from '@app/compat/sliderIds';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
 import PageTitle from '@app/components/Common/PageTitle';
 import MovieGenreSlider from '@app/components/Discover/MovieGenreSlider';
@@ -7,6 +8,7 @@ import NetworkSlider from '@app/components/Discover/NetworkSlider';
 import StudioSlider from '@app/components/Discover/StudioSlider';
 import TvGenreSlider from '@app/components/Discover/TvGenreSlider';
 import { sliderTitles } from '@app/components/Discover/constants';
+import LibraryListSlider from '@app/components/Library/LibraryListSlider';
 import MediaSlider from '@app/components/MediaSlider';
 import defineMessages from '@app/utils/defineMessages';
 import type { IntlShape } from 'react-intl';
@@ -15,6 +17,8 @@ import useSWR from 'swr';
 
 const messages = defineMessages('components.Discover', {
   discover: 'Discover',
+  myList: 'My list',
+  coupleList: 'Couple list',
 });
 
 // The api serves a fixed slider manifest from /api/v1/settings/discover: the
@@ -60,7 +64,8 @@ const discoverSliderFor = (
   intl: IntlShape,
   upcomingDate: string
 ): React.ReactNode => {
-  switch (slider.type) {
+  // The manifest carries upstream types and this app's own, from 100.
+  switch (slider.type as DiscoverSliderType | SliderId) {
     case DiscoverSliderType.TRENDING:
       return (
         <MediaSlider
@@ -116,6 +121,22 @@ const discoverSliderFor = (
       );
     case DiscoverSliderType.NETWORKS:
       return <NetworkSlider />;
+    case SliderId.MY_LIST:
+      return (
+        <LibraryListSlider
+          kind="watchlist"
+          sliderKey="my-list"
+          title={intl.formatMessage(messages.myList)}
+        />
+      );
+    case SliderId.COUPLE_LIST:
+      return (
+        <LibraryListSlider
+          kind="couple"
+          sliderKey="couple-list"
+          title={intl.formatMessage(messages.coupleList)}
+        />
+      );
     default:
       return null;
   }

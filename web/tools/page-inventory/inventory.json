@@ -110,9 +110,19 @@
     "reason": "discover catalogue browsing, kept as is"
   },
   {
+    "path": "history.tsx",
+    "class": "keep",
+    "reason": "library page, added here"
+  },
+  {
     "path": "index.tsx",
     "class": "keep",
     "reason": "standalone catalogue page, kept as is"
+  },
+  {
+    "path": "lists.tsx",
+    "class": "keep",
+    "reason": "library page, added here"
   },
   {
     "path": "login/index.tsx",

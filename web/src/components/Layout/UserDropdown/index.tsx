@@ -1,4 +1,5 @@
 import CachedImage from '@app/components/Common/CachedImage';
+import { menuMessages } from '@app/components/Layout/Sidebar';
 import { useUser } from '@app/hooks/useUser';
 import defineMessages from '@app/utils/defineMessages';
 import {
@@ -8,8 +9,13 @@ import {
   MenuItems,
   Transition,
 } from '@headlessui/react';
-import { ArrowRightOnRectangleIcon } from '@heroicons/react/24/outline';
+import {
+  ArrowRightOnRectangleIcon,
+  ClockIcon,
+  QueueListIcon,
+} from '@heroicons/react/24/outline';
 import axios from 'axios';
+import Link from 'next/link';
 import { Fragment } from 'react';
 import { useIntl } from 'react-intl';
 
@@ -81,6 +87,36 @@ const UserDropdown = () => {
               </div>
             </div>
             <div className="p-1">
+              <MenuItem>
+                {({ active }) => (
+                  <Link
+                    href="/lists"
+                    className={`flex items-center rounded px-4 py-2 text-sm font-medium text-gray-200 transition duration-150 ease-in-out ${
+                      active
+                        ? 'bg-gradient-to-br from-indigo-600 to-purple-600 text-white'
+                        : ''
+                    }`}
+                  >
+                    <QueueListIcon className="mr-2 inline h-5 w-5" />
+                    <span>{intl.formatMessage(menuMessages.lists)}</span>
+                  </Link>
+                )}
+              </MenuItem>
+              <MenuItem>
+                {({ active }) => (
+                  <Link
+                    href="/history"
+                    className={`flex items-center rounded px-4 py-2 text-sm font-medium text-gray-200 transition duration-150 ease-in-out ${
+                      active
+                        ? 'bg-gradient-to-br from-indigo-600 to-purple-600 text-white'
+                        : ''
+                    }`}
+                  >
+                    <ClockIcon className="mr-2 inline h-5 w-5" />
+                    <span>{intl.formatMessage(menuMessages.history)}</span>
+                  </Link>
+                )}
+              </MenuItem>
               <MenuItem>
                 {({ active }) => (
                   <a

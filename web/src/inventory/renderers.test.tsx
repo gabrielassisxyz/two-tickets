@@ -6,6 +6,7 @@
 // dropped polling routes.
 import { DiscoverSliderType } from '@app/compat/constants/discover';
 import type { PublicSettingsResponse } from '@app/compat/interfaces/api/settingsInterfaces';
+import { SliderId } from '@app/compat/sliderIds';
 import CollectionDetails from '@app/components/CollectionDetails';
 import CompanyTag from '@app/components/CompanyTag';
 import Discover from '@app/components/Discover';
@@ -29,6 +30,8 @@ import GenreTag from '@app/components/GenreTag';
 import KeywordTag from '@app/components/KeywordTag';
 import LanguageSelector from '@app/components/LanguageSelector';
 import UserDropdown from '@app/components/Layout/UserDropdown';
+import HistoryPage from '@app/components/Library/HistoryPage';
+import ListsPage from '@app/components/Library/ListsPage';
 import MovieDetails from '@app/components/MovieDetails';
 import MovieCast from '@app/components/MovieDetails/MovieCast';
 import MovieCrew from '@app/components/MovieDetails/MovieCrew';
@@ -54,7 +57,7 @@ import TvRecommendations from '@app/components/TvDetails/TvRecommendations';
 import TvSimilar from '@app/components/TvDetails/TvSimilar';
 import { SettingsProvider } from '@app/context/SettingsContext';
 import LoginPage from '@app/pages/login';
-import { fireEvent, render, waitFor } from '@testing-library/react';
+import { fireEvent, render, waitFor, within } from '@testing-library/react';
 import axios from 'axios';
 import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import {
@@ -258,9 +261,12 @@ const fixtureFor = (pathname: string) => {
       requestCount: 0,
     };
   }
-  // The api's fixed slider manifest: the nine kept built-ins, in its order.
+  // The api's fixed slider manifest: the two library lists, then the nine
+  // kept built-ins, in its order.
   if (pathname === '/api/v1/settings/discover') {
     return [
+      SliderId.MY_LIST,
+      SliderId.COUPLE_LIST,
       DiscoverSliderType.TRENDING,
       DiscoverSliderType.POPULAR_MOVIES,
       DiscoverSliderType.MOVIE_GENRES,
@@ -557,6 +563,113 @@ const fixtureFor = (pathname: string) => {
       network: { id: 213, name: 'Network' },
     };
   }
+  if (pathname.startsWith('/api/v1/library/title/')) {
+    const person = (displayName: string) => ({
+      displayName,
+      status: 'unwatched',
+      watched: false,
+      watchedAt: null,
+      rating:
+        level === 'full'
+          ? { level: 'liked', review: 'Uma resenha.', updatedAt: '' }
+          : null,
+      regularSeasonsWatched: 0,
+      seasons: [],
+    });
+    return {
+      mediaType: pathname.includes('/tv/') ? 'tv' : 'movie',
+      tmdbId: Number(pathname.split('/').pop()),
+      me: person('Alice'),
+      partner: person('Bob'),
+      lists: [],
+    };
+  }
+  if (pathname === '/api/v1/library/lists') {
+    const list = (
+      id: number,
+      kind: string,
+      owner: string,
+      canRename: boolean,
+      canChangeItems: boolean
+    ) => ({
+      id,
+      kind,
+      name: `List ${id}`,
+      owner,
+      itemCount: 1,
+      createdAt: '',
+      canRename,
+      canChangeItems,
+    });
+    return {
+      results:
+        level === 'empty'
+          ? []
+          : [
+              list(1, 'watchlist', 'me', false, true),
+              list(3, 'custom', 'me', true, true),
+              list(2, 'couple', 'shared', false, true),
+              list(4, 'watchlist', 'partner', false, false),
+            ],
+    };
+  }
+  if (/^\/api\/v1\/library\/lists\/\d+\/items$/.test(pathname)) {
+    return {
+      results:
+        level === 'empty'
+          ? []
+          : [
+              {
+                mediaType: 'movie',
+                tmdbId: 603,
+                available: true,
+                result: {
+                  id: 603,
+                  mediaType: 'movie',
+                  title: 'Fixture Movie',
+                  overview: '',
+                  posterPath: null,
+                  releaseDate: '1999-03-31',
+                  voteAverage: 8,
+                },
+                addedAt: '',
+                addedByMe: true,
+                note: null,
+              },
+            ],
+      nextCursor: null,
+    };
+  }
+  if (pathname === '/api/v1/library/history') {
+    return {
+      results:
+        level === 'empty'
+          ? []
+          : [
+              {
+                mediaType: 'tv',
+                tmdbId: 1399,
+                available: true,
+                result: {
+                  id: 1399,
+                  mediaType: 'tv',
+                  name: 'Fixture Series',
+                  overview: '',
+                  posterPath: null,
+                  firstAirDate: '2008-01-20',
+                  voteAverage: 9,
+                },
+                scope: 'season',
+                seasonNumber: 0,
+                activityAt: '',
+                watched: true,
+                watchedAt: '2026-11-01T00:00:00.000Z',
+                rating: { level: 'meh', review: null, updatedAt: '' },
+              },
+            ],
+      nextCursor: null,
+    };
+  }
   if (pathname === '/api/v1/backdrops') {
     return level === 'empty' ? [] : ['/backdrop.jpg'];
   }
@@ -641,6 +754,14 @@ beforeAll(async () => {
   mockedAxios.delete.mockImplementation(async (url: string) => {
     record(url);
     return { data: {}, status: 204 };
+  });
+  mockedAxios.put.mockImplementation(async (url: string) => {
+    record(url);
+    return { data: {}, status: 200 };
+  });
+  mockedAxios.patch.mockImplementation(async (url: string) => {
+    record(url);
+    return { data: {}, status: 200 };
   });
 });
 
@@ -844,11 +965,7 @@ describe('renderers against fixtures', () => {
         <TitleCard id={603} title="Fixture" mediaType="movie" />
       </Wrapper>
     );
-    fireEvent.click(add.container.querySelector('a') as HTMLAnchorElement);
-    await waitFor(() => {
-      expect(add.getByTitle('Quero ver')).toBeTruthy();
-    });
-    fireEvent.click(add.getByTitle('Quero ver'));
+    fireEvent.click(add.getByTestId('quick-watchlist'));
     await waitFor(() => {
       expect(loggedPaths()).toContain('/api/v1/watchlist');
     });
@@ -864,19 +981,81 @@ describe('renderers against fixtures', () => {
         />
       </Wrapper>
     );
-    fireEvent.click(remove.container.querySelector('a') as HTMLAnchorElement);
+    fireEvent.click(remove.getByTestId('quick-watchlist'));
     await waitFor(() => {
-      expect(remove.container.querySelector('button')).toBeTruthy();
-    });
-    fireEvent.click(
-      remove.container.querySelector('button') as HTMLButtonElement
-    );
-    await waitFor(() => {
-      expect(
-        loggedPaths().filter((path) => path === '/api/v1/watchlist').length
-      ).toBeGreaterThan(0);
+      expect(loggedPaths()).toContain('/api/v1/watchlist/603');
     });
     remove.unmount();
+  });
+
+  it('renders the lists and history pages empty, minimal and full', async () => {
+    for (const next of ['empty', 'minimal', 'full'] as Level[]) {
+      level = next;
+      await renderAndSettle(<ListsPage />);
+      await renderAndSettle(<HistoryPage />);
+    }
+  });
+
+  it('drives the library controls, covering the library mutation routes', async () => {
+    level = 'full';
+    const card = render(
+      <Wrapper>
+        <TitleCard id={603} title="Fixture" mediaType="movie" />
+      </Wrapper>
+    );
+    fireEvent.click(card.getByTestId('quick-watched'));
+    await waitFor(() => {
+      expect(loggedPaths()).toContain('/api/v1/library/watch');
+    });
+    fireEvent.click(card.getByTestId('quick-rate'));
+    fireEvent.click(card.getByTestId('rating-level-loved'));
+    await waitFor(() => {
+      expect(loggedPaths()).toContain('/api/v1/library/rating');
+    });
+    card.unmount();
+
+    const lists = render(
+      <Wrapper>
+        <ListsPage />
+      </Wrapper>
+    );
+    const custom = await lists.findByTestId('library-list-custom');
+    const removeItem = await within(custom).findByTestId('list-item-remove');
+    fireEvent.click(removeItem);
+    await waitFor(() => {
+      expect(loggedPaths()).toContain(
+        '/api/v1/library/lists/3/items/movie/603'
+      );
+    });
+    const deleteList = within(custom)
+      .getByTestId('list-delete')
+      .closest('button') as HTMLButtonElement;
+    fireEvent.click(within(custom).getByTestId('list-rename'));
+    fireEvent.change(within(custom).getByTestId('list-rename-input'), {
+      target: { value: 'Renamed' },
+    });
+    fireEvent.submit(
+      within(custom)
+        .getByTestId('list-rename-input')
+        .closest('form') as HTMLFormElement
+    );
+    await waitFor(() => {
+      expect(loggedPaths()).toContain('/api/v1/library/lists/3');
+    });
+    await waitFor(() => {
+      expect(
+        (within(custom).getByTestId('list-rename') as HTMLButtonElement)
+          .disabled
+      ).toBe(false);
+    });
+    fireEvent.click(deleteList);
+    fireEvent.click(deleteList);
+    await waitFor(() => {
+      expect(
+        loggedPaths().filter((path) => path === '/api/v1/library/lists/3')
+      ).toHaveLength(2);
+    });
+    lists.unmount();
   });
 
   it('makes no request to dropped polling routes', async () => {

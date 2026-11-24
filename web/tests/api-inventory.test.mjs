@@ -41,20 +41,11 @@ const runtimeLog = join(here, '.runtime-requests.jsonl');
 
 // Manifest paths no kept page calls yet, each naming the bead that adds the
 // caller, or saying why none will.
-const libraryUI = 'tt-1ev (the library UI adds the callers)';
 const declaredWithoutCaller = [
   {
     path: '/api/v1/discover/keyword/{}/movies',
     bead: 'none: custom keyword sliders went with the Discover editor, and the api keeps the route its goldens pin',
   },
-  { path: '/api/v1/library/history', bead: libraryUI },
-  { path: '/api/v1/library/lists', bead: libraryUI },
-  { path: '/api/v1/library/lists/{}', bead: libraryUI },
-  { path: '/api/v1/library/lists/{}/items', bead: libraryUI },
-  { path: '/api/v1/library/lists/{}/items/{}/{}', bead: libraryUI },
-  { path: '/api/v1/library/rating', bead: libraryUI },
-  { path: '/api/v1/library/title/{}/{}', bead: libraryUI },
-  { path: '/api/v1/library/watch', bead: libraryUI },
 ];
 
 // Frontend calls the api does not serve yet. Empty since the library API
