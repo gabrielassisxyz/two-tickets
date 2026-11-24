@@ -60,7 +60,7 @@ func main() {
 }
 
 // dispatchCommand picks the subcommand. With no argument the process serves,
-// which is what the container runs.
+// which is what the container runs; backup publishes the state.db artifact.
 func dispatchCommand(args []string, stderr io.Writer) int {
 	command := commandServe
 	if len(args) > 0 {
@@ -71,8 +71,10 @@ func dispatchCommand(args []string, stderr io.Writer) int {
 		ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 		defer stop()
 		return runServe(ctx, defaultServeDeps())
+	case commandBackup:
+		return runBackup(args[1:], stderr)
 	default:
-		_, _ = fmt.Fprintf(stderr, "two-tickets: unknown command %q (available: %s)\n", command, commandServe)
+		_, _ = fmt.Fprintf(stderr, "two-tickets: unknown command %q (available: %s, %s)\n", command, commandServe, commandBackup)
 		return exitUsage
 	}
 }
