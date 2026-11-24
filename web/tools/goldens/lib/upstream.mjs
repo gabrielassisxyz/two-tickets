@@ -21,8 +21,9 @@ const headOf = (dir) => {
   }
 };
 
-// A directory already holding the pinned commit is reused as is; anything else
-// at that path is refused rather than overwritten.
+// A directory already holding the pinned commit, unmodified, is reused as is;
+// anything else at that path is refused rather than overwritten, since an
+// edited upstream file would silently change every golden.
 export const fetchUpstream = (dir) => {
   if (existsSync(join(dir, '.git'))) {
     const head = headOf(dir);
@@ -30,6 +31,9 @@ export const fetchUpstream = (dir) => {
       throw new Error(
         `${dir} holds commit ${head || '(none)'}, not the pinned ${SEERR_COMMIT}`
       );
+    }
+    if (git(dir, ['status', '--porcelain', '--untracked-files=no']) !== '') {
+      throw new Error(`${dir} has local changes to the pinned commit`);
     }
     return dir;
   }
