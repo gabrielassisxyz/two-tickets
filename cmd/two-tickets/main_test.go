@@ -228,6 +228,20 @@ func journalModeOf(t *testing.T, path string) string {
 	return mode
 }
 
+func userVersionOf(t *testing.T, path string) int {
+	t.Helper()
+	db, err := sql.Open("sqlite", path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer func() { _ = db.Close() }()
+	var version int
+	if err := db.QueryRow("PRAGMA user_version").Scan(&version); err != nil {
+		t.Fatal(err)
+	}
+	return version
+}
+
 func TestBinaryStartsMigratesAndServesHealthRoutes(t *testing.T) {
 	dataDir := t.TempDir()
 	ctx, cancel := context.WithTimeout(context.Background(), processWait)
@@ -267,6 +281,10 @@ func TestBinaryStartsMigratesAndServesHealthRoutes(t *testing.T) {
 		if mode := journalModeOf(t, filepath.Join(dataDir, name)); mode != "wal" {
 			t.Errorf("%s journal_mode = %q, want wal", name, mode)
 		}
+	}
+	// Only OpenCacheStore stamps the cache schema; a plain database reads 0.
+	if version := userVersionOf(t, filepath.Join(dataDir, store.CacheFileName)); version != store.CacheSchemaVersion {
+		t.Errorf("%s user_version = %d, want %d", store.CacheFileName, version, store.CacheSchemaVersion)
 	}
 	if _, err := os.Stat(store.RollbackCopyPath(filepath.Join(dataDir, store.RollbackDirName), 0)); err != nil {
 		t.Errorf("first migration left no rollback copy: %v", err)
