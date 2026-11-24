@@ -418,14 +418,43 @@ const mutations = (method: string, path: string) =>
 const pressed = (el: HTMLElement) => el.getAttribute('aria-pressed');
 
 describe('title card quick actions', () => {
-  it('shows watched, Quero ver and rate without hover', () => {
+  it('shows watch later and watched only on hover or tap, and no rating', () => {
     const screen = renderWithApi(
       <TitleCard id={603} title="Fixture" mediaType="movie" image="/p.jpg" />
     );
     const actions = screen.getByTestId('quick-actions');
-    expect(within(actions).getByTestId('quick-watched')).toBeTruthy();
-    expect(within(actions).getByTestId('quick-watchlist')).toBeTruthy();
-    expect(within(actions).getByTestId('quick-rate')).toBeTruthy();
+    expect(actions.getAttribute('data-visible')).toBe('false');
+    expect(actions.className).toContain('invisible');
+
+    // The poster itself, not the title link the hover reveals.
+    const poster = screen.container.querySelector(
+      'div[role="link"]'
+    ) as HTMLElement;
+    fireEvent.pointerEnter(poster, { pointerType: 'mouse' });
+    expect(actions.getAttribute('data-visible')).toBe('true');
+    expect(actions.className).not.toContain('invisible');
+    expect(
+      within(actions)
+        .getAllByRole('button')
+        .map((b) => b.getAttribute('data-testid'))
+    ).toEqual(['quick-watchlist', 'quick-watched']);
+    expect(screen.queryByTestId('quick-rate')).toBeNull();
+    expect(screen.queryByTestId('rating-picker')).toBeNull();
+
+    fireEvent.pointerLeave(poster, { pointerType: 'mouse' });
+    expect(actions.getAttribute('data-visible')).toBe('false');
+
+    // A tap reveals them; the mouse events a browser emulates for that tap
+    // must not hide them again, and a tap elsewhere does.
+    fireEvent.click(poster);
+    expect(actions.getAttribute('data-visible')).toBe('true');
+    fireEvent.pointerLeave(poster, { pointerType: 'touch' });
+    fireEvent.mouseLeave(poster);
+    expect(actions.getAttribute('data-visible')).toBe('true');
+    fireEvent.pointerDown(poster, { pointerType: 'touch' });
+    expect(actions.getAttribute('data-visible')).toBe('true');
+    fireEvent.pointerDown(document.body, { pointerType: 'touch' });
+    expect(actions.getAttribute('data-visible')).toBe('false');
   });
 
   it('flips watched at once and sends one PUT /library/watch', async () => {
@@ -463,12 +492,12 @@ describe('title card quick actions', () => {
     expect(pressed(watched)).toBe('false');
     expect(addToast.mock.calls[0][1]).toMatchObject({ appearance: 'error' });
   });
+});
 
-  it('opens the seven-label picker in place and rates with one tap', async () => {
-    const screen = renderWithApi(
-      <TitleCard id={603} title="Fixture" mediaType="movie" />
-    );
-    fireEvent.click(screen.getByTestId('quick-rate'));
+describe('rating on the title page', () => {
+  it('opens the seven-label picker and rates with one tap', async () => {
+    const screen = renderWithApi(<TitlePanel mediaType="movie" tmdbId={603} />);
+    fireEvent.click(screen.getByTestId('title-rate'));
     const picker = screen.getByTestId('rating-picker');
     expect(within(picker).getAllByRole('radio')).toHaveLength(7);
     fireEvent.click(within(picker).getByTestId('rating-level-liked'));
@@ -482,11 +511,11 @@ describe('title card quick actions', () => {
       level: 'liked',
     });
     await waitFor(() =>
-      expect(screen.getByTestId('quick-rate').getAttribute('aria-busy')).toBe(
+      expect(screen.getByTestId('title-rate').getAttribute('aria-busy')).toBe(
         'false'
       )
     );
-    fireEvent.click(screen.getByTestId('quick-rate'));
+    fireEvent.click(screen.getByTestId('title-rate'));
     fireEvent.click(screen.getByTestId('rating-clear'));
     await waitFor(() =>
       expect(mutations('DELETE', '/api/v1/library/rating')).toHaveLength(1)
@@ -500,13 +529,11 @@ describe('title card quick actions', () => {
 
   it('restores the rating after a 400', async () => {
     rejections.set('PUT /api/v1/library/rating', 400);
-    const screen = renderWithApi(
-      <TitleCard id={603} title="Fixture" mediaType="movie" />
-    );
-    fireEvent.click(screen.getByTestId('quick-rate'));
+    const screen = renderWithApi(<TitlePanel mediaType="movie" tmdbId={603} />);
+    fireEvent.click(screen.getByTestId('title-rate'));
     fireEvent.click(screen.getByTestId('rating-level-loved'));
     await waitFor(() => expect(addToast).toHaveBeenCalledTimes(1));
-    expect(screen.getByTestId('quick-rate').getAttribute('aria-label')).toBe(
+    expect(screen.getByTestId('title-rate').getAttribute('aria-label')).toBe(
       'Rate'
     );
   });

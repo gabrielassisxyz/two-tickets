@@ -20,10 +20,6 @@ interface RatingControlProps {
   target: LibraryTarget;
   level: RatingLevel | null;
   hasReview: boolean;
-  // On a card the picker covers the poster, in place; elsewhere it opens
-  // below the button.
-  overlay?: boolean;
-  iconOnly?: boolean;
   testId?: string;
 }
 
@@ -31,8 +27,6 @@ const RatingControl = ({
   target,
   level,
   hasReview,
-  overlay = false,
-  iconOnly = false,
   testId = 'rating-toggle',
 }: RatingControlProps) => {
   const intl = useIntl();
@@ -53,10 +47,8 @@ const RatingControl = ({
     <RatingPicker
       value={value}
       pending={pending}
-      compact={overlay}
       onPick={choose}
       onClear={() => choose(null)}
-      onClose={overlay ? () => setOpen(false) : undefined}
     />
   );
 
@@ -70,9 +62,7 @@ const RatingControl = ({
         aria-label={label}
         title={label}
         disabled={pending}
-        className={`inline-flex items-center justify-center gap-1.5 rounded-md border transition duration-150 ease-out disabled:cursor-wait disabled:opacity-70 ${
-          iconOnly ? 'h-9 w-9' : 'px-3 py-1.5 text-sm font-medium'
-        } ${
+        className={`inline-flex items-center justify-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-medium transition duration-150 ease-out disabled:cursor-wait disabled:opacity-70 ${
           value
             ? 'border-indigo-500 bg-indigo-600 text-white'
             : 'border-gray-600 bg-gray-800/80 text-gray-200 hover:border-gray-400'
@@ -84,20 +74,9 @@ const RatingControl = ({
         }}
       >
         <Icon className="h-5 w-5" />
-        {!iconOnly && <span>{label}</span>}
+        <span>{label}</span>
       </button>
-      {open &&
-        (overlay ? (
-          <div
-            className="pointer-events-auto absolute inset-0 z-50 overflow-y-auto bg-gray-900/95 p-2"
-            onClick={(e) => e.stopPropagation()}
-            role="presentation"
-          >
-            {picker}
-          </div>
-        ) : (
-          <div className="mt-3 w-full">{picker}</div>
-        ))}
+      {open && <div className="mt-3 w-full">{picker}</div>}
     </>
   );
 };

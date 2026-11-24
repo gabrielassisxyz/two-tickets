@@ -5,12 +5,12 @@ import StatusBadgeMini from '@app/components/Common/StatusBadgeMini';
 import ErrorCard from '@app/components/TitleCard/ErrorCard';
 import Placeholder from '@app/components/TitleCard/Placeholder';
 import QuickActions from '@app/components/TitleCard/QuickActions';
-import { useIsTouch } from '@app/hooks/useIsTouch';
 import globalMessages from '@app/i18n/globalMessages';
 import { withProperties } from '@app/utils/typeHelpers';
 import { Transition } from '@headlessui/react';
 import Link from 'next/link';
-import { Fragment, useEffect, useState } from 'react';
+import type { RefObject } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useIntl } from 'react-intl';
 
@@ -31,6 +31,30 @@ interface TitleCardProps {
   showQuickActions?: boolean;
 }
 
+// On a touch screen nothing leaves the card the way a mouse does, so a card
+// revealed by a tap closes when the next tap lands anywhere else.
+const useDismissOnTapOutside = (
+  ref: RefObject<HTMLElement | null>,
+  active: boolean,
+  setShown: (shown: boolean) => void
+) => {
+  useEffect(() => {
+    if (!active) {
+      return;
+    }
+    const onPointerDown = (e: PointerEvent) => {
+      if (e.pointerType === 'mouse') {
+        return;
+      }
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setShown(false);
+      }
+    };
+    document.addEventListener('pointerdown', onPointerDown);
+    return () => document.removeEventListener('pointerdown', onPointerDown);
+  }, [ref, active, setShown]);
+};
+
 const TitleCard = ({
   id,
   image,
@@ -45,10 +69,11 @@ const TitleCard = ({
   mutateParent,
   showQuickActions = true,
 }: TitleCardProps) => {
-  const isTouch = useIsTouch();
   const intl = useIntl();
   const [currentStatus, setCurrentStatus] = useState(status);
   const [showDetail, setShowDetail] = useState(false);
+  const posterRef = useRef<HTMLDivElement>(null);
+  useDismissOnTapOutside(posterRef, showDetail, setShowDetail);
   // A card reads its library state only once it is on screen, so a page of
   // sliders does not ask about every title it holds at once.
   const { ref: inViewRef, inView } = useInView({ triggerOnce: true });
@@ -79,12 +104,20 @@ const TitleCard = ({
         style={{
           paddingBottom: '150%',
         }}
-        onMouseEnter={() => {
-          if (!isTouch) {
+        ref={posterRef}
+        // Hover follows a mouse only. A browser emulates mouse events for a
+        // tap, a mouseleave included, which hid the actions the same tap had
+        // just revealed; a tap reveals them through the click instead.
+        onPointerEnter={(e) => {
+          if (e.pointerType === 'mouse') {
             setShowDetail(true);
           }
         }}
-        onMouseLeave={() => setShowDetail(false)}
+        onPointerLeave={(e) => {
+          if (e.pointerType === 'mouse') {
+            setShowDetail(false);
+          }
+        }}
         onClick={() => setShowDetail(true)}
         onKeyDown={(e) => {
           if (e.key === 'Enter') {
@@ -123,6 +156,18 @@ const TitleCard = ({
                     : intl.formatMessage(globalMessages.tvshow)}
               </div>
             </div>
+            {showQuickActions &&
+              (mediaType === 'movie' || mediaType === 'tv') && (
+                <QuickActions
+                  mediaType={mediaType}
+                  tmdbId={id}
+                  title={title}
+                  isAddedToWatchlist={!!isAddedToWatchlist}
+                  inView={inView}
+                  visible={showDetail}
+                  mutateParent={mutateParent}
+                />
+              )}
             {currentStatus && currentStatus !== MediaStatus.UNKNOWN && (
               <div className="flex flex-col items-center gap-1">
                 <div className="pointer-events-none z-40 flex">
@@ -161,7 +206,7 @@ const TitleCard = ({
                 }}
               >
                 <div className="flex h-full w-full items-end">
-                  <div className="px-2 pb-14 text-white">
+                  <div className="px-2 pb-2 text-white">
                     {year && <div className="text-sm font-medium">{year}</div>}
 
                     <h1
@@ -194,17 +239,6 @@ const TitleCard = ({
               </Link>
             </div>
           </Transition>
-          {showQuickActions &&
-            (mediaType === 'movie' || mediaType === 'tv') && (
-              <QuickActions
-                mediaType={mediaType}
-                tmdbId={id}
-                title={title}
-                isAddedToWatchlist={!!isAddedToWatchlist}
-                inView={inView}
-                mutateParent={mutateParent}
-              />
-            )}
         </div>
       </div>
     </div>

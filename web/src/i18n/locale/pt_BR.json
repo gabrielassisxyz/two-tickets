@@ -1718,7 +1718,6 @@
   "components.Library.PartnerState.noReview": "Sem resenha",
   "components.Library.RatingControl.rate": "Dar nota",
   "components.Library.RatingPicker.clear": "Limpar",
-  "components.Library.RatingPicker.close": "Fechar",
   "components.Library.RatingPicker.pick": "Toque para dar nota",
   "components.Library.ReviewEditor.review": "Minha resenha",
   "components.Library.ReviewEditor.placeholder": "O que você achou?",
@@ -1777,5 +1776,7 @@
   "components.ForYou.ForYouPage.series": "Séries",
   "components.ForYou.ForYouPage.previous": "Anterior",
   "components.ForYou.ForYouPage.next": "Próxima",
-  "components.Layout.Sidebar.foryou": "Para você"
+  "components.Layout.Sidebar.foryou": "Para você",
+  "components.TitleCard.QuickActions.markWatched": "Marcar como assistido",
+  "components.TitleCard.QuickActions.unmarkWatched": "Desmarcar assistido"
 }

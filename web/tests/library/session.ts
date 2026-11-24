@@ -1,4 +1,4 @@
-import { expect, type Page } from '@playwright/test';
+import { expect, type Locator, type Page } from '@playwright/test';
 
 // The stack deploy/web-crawl.sh starts: the production web image in front
 // of the real api, whose TMDB is the fixture substitute. These specs import
@@ -100,4 +100,11 @@ export const refuse = async (page: Page, pattern: string, method: string) => {
     });
   });
   return refused;
+};
+
+// A title card shows its actions only once tapped, as upstream's hover
+// buttons did; the tap lands on the poster, not on a button.
+export const revealCardActions = async (card: Locator) => {
+  await card.locator('div[role="link"]').tap();
+  await expect(card.getByTestId('quick-actions')).toBeVisible();
 };

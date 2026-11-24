@@ -10,7 +10,6 @@ import { useIntl } from 'react-intl';
 
 const messages = defineMessages('components.Library.RatingPicker', {
   clear: 'Clear',
-  close: 'Close',
   pick: 'Tap a label to rate',
 });
 
@@ -19,8 +18,6 @@ interface RatingPickerProps {
   pending?: boolean;
   onPick: (level: RatingLevel) => void;
   onClear: () => void;
-  onClose?: () => void;
-  compact?: boolean;
 }
 
 // All seven labels at once, worst to best; one tap rates. The anchor line
@@ -32,8 +29,6 @@ const RatingPicker = ({
   pending = false,
   onPick,
   onClear,
-  onClose,
-  compact = false,
 }: RatingPickerProps) => {
   const intl = useIntl();
   const [focused, setFocused] = useState<RatingLevel | null>(null);
@@ -41,14 +36,11 @@ const RatingPicker = ({
 
   return (
     <div
-      className={`flex flex-col ${compact ? 'gap-1' : 'gap-3'}`}
+      className="flex flex-col gap-3"
       data-testid="rating-picker"
       aria-busy={pending}
     >
-      <div
-        className={`flex ${compact ? 'flex-col gap-0.5' : 'flex-wrap gap-2'}`}
-        role="radiogroup"
-      >
+      <div className="flex flex-wrap gap-2" role="radiogroup">
         {ratingLevels.map((level) => (
           <button
             key={level}
@@ -57,9 +49,7 @@ const RatingPicker = ({
             aria-checked={value === level}
             data-testid={`rating-level-${level}`}
             disabled={pending}
-            className={`rounded-md border font-medium transition duration-150 ease-out disabled:opacity-50 ${
-              compact ? 'px-2 py-0.5 text-left text-xs' : 'px-3 py-1.5 text-sm'
-            } ${
+            className={`rounded-md border px-3 py-1.5 text-sm font-medium transition duration-150 ease-out disabled:opacity-50 ${
               value === level
                 ? 'border-indigo-500 bg-indigo-600 text-white'
                 : 'border-gray-600 bg-gray-800 text-gray-200 hover:border-gray-400'
@@ -77,10 +67,7 @@ const RatingPicker = ({
           </button>
         ))}
       </div>
-      <p
-        className={`text-gray-400 ${compact ? 'text-[11px] leading-tight' : 'text-sm'}`}
-        data-testid="rating-anchor"
-      >
+      <p className="text-sm text-gray-400" data-testid="rating-anchor">
         {described
           ? intl.formatMessage(ratingAnchors[described])
           : intl.formatMessage(messages.pick)}
@@ -90,7 +77,7 @@ const RatingPicker = ({
           type="button"
           data-testid="rating-clear"
           disabled={pending || value === null}
-          className={`rounded-md border border-gray-600 px-2 py-0.5 text-gray-300 disabled:opacity-40 ${compact ? 'text-xs' : 'text-sm'}`}
+          className="rounded-md border border-gray-600 px-2 py-0.5 text-sm text-gray-300 disabled:opacity-40"
           onClick={(e) => {
             e.stopPropagation();
             onClear();
@@ -98,19 +85,6 @@ const RatingPicker = ({
         >
           {intl.formatMessage(messages.clear)}
         </button>
-        {onClose && (
-          <button
-            type="button"
-            data-testid="rating-close"
-            className={`rounded-md border border-gray-600 px-2 py-0.5 text-gray-300 ${compact ? 'text-xs' : 'text-sm'}`}
-            onClick={(e) => {
-              e.stopPropagation();
-              onClose();
-            }}
-          >
-            {intl.formatMessage(messages.close)}
-          </button>
-        )}
       </div>
     </div>
   );
