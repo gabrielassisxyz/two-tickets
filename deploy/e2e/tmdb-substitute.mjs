@@ -56,8 +56,8 @@ const loadFixtures = () => {
 
 const fixtures = loadFixtures();
 
-// The ids the substitute can answer per kind, from the recorded 200s on the
-// base detail paths. Derived fixtures share those paths, and the 404s (for
+// The ids the substitute can answer per kind, from the 200s on the base
+// detail paths. Derived fixtures share those paths, and the 404s (for
 // example the invalid-id cases) never count, so a crawl that seeds and
 // filters on this list only visits pages the stack can render.
 const fixtureIds = () => {

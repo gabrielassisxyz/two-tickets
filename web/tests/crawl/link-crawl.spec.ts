@@ -28,6 +28,12 @@ test('every internal link resolves', async ({ page }) => {
     person: number[];
     collection: number[];
   };
+  for (const kind of ['movie', 'tv', 'person', 'collection'] as const) {
+    expect(
+      Array.isArray(fixtures[kind]),
+      `GET /__fixtures lists ${kind} ids`
+    ).toBeTruthy();
+  }
   const movieIds = new Set(fixtures.movie);
   const tvIds = new Set(fixtures.tv);
   const personIds = new Set(fixtures.person);
