@@ -4,6 +4,7 @@
 // web/tests/.runtime-requests.jsonl, which the api-inventory check diffs
 // against the route manifest. Rendering a kept page must never request the
 // dropped polling routes.
+import { DiscoverSliderType } from '@app/compat/constants/discover';
 import type { PublicSettingsResponse } from '@app/compat/interfaces/api/settingsInterfaces';
 import CollectionDetails from '@app/components/CollectionDetails';
 import CompanyTag from '@app/components/CompanyTag';
@@ -256,6 +257,28 @@ const fixtureFor = (pathname: string) => {
       updatedAt: '',
       requestCount: 0,
     };
+  }
+  // The api's fixed slider manifest: the nine kept built-ins, in its order.
+  if (pathname === '/api/v1/settings/discover') {
+    return [
+      DiscoverSliderType.TRENDING,
+      DiscoverSliderType.POPULAR_MOVIES,
+      DiscoverSliderType.MOVIE_GENRES,
+      DiscoverSliderType.UPCOMING_MOVIES,
+      DiscoverSliderType.STUDIOS,
+      DiscoverSliderType.POPULAR_TV,
+      DiscoverSliderType.TV_GENRES,
+      DiscoverSliderType.UPCOMING_TV,
+      DiscoverSliderType.NETWORKS,
+    ].map((type, order) => ({
+      id: type,
+      type,
+      order,
+      isBuiltIn: true,
+      enabled: true,
+      title: null,
+      data: null,
+    }));
   }
   if (pathname === '/api/v1/discover/genreslider/movie') {
     return level === 'empty'

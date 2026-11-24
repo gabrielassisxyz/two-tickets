@@ -16,7 +16,7 @@ import { useIntl } from 'react-intl';
 export const menuMessages = defineMessages('components.Layout.Sidebar', {
   dashboard: 'Descobrir',
   browsemovies: 'Filmes',
-  browsetv: 'Séries',
+  browsetv: 'Series',
 });
 
 interface SidebarProps {
