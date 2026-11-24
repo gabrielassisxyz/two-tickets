@@ -1,0 +1,70 @@
+name: release
+
+# Tagging a release publishes the two production images: pushing v0.1.0 builds
+# ghcr.io/<owner>/two-tickets-api:0.1.0 and
+# ghcr.io/<owner>/two-tickets-web:0.1.0, amd64 only. Tags are immutable: the
+# job refuses a version that already exists, so a bad release is superseded by
+# a new tag, never by overwriting.
+#
+# Hosted runner, on purpose, like ci: the repository is public, so Actions
+# minutes are free, and a self-hosted runner would let a pull request from a
+# fork run arbitrary code on that machine. Only tag pushes trigger it.
+on:
+  push:
+    tags:
+      - 'v*'
+
+# The only credential the job holds is the automatic token: it reads the
+# repository and pushes the two packages, nothing else.
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      # The api smoke test below configures a throwaway account with the
+      # hashpassword helper, which needs the Go toolchain from go.mod.
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+      - name: Log in to GHCR
+        run: |
+          printf '%s' '${{ secrets.GITHUB_TOKEN }}' | docker login ghcr.io -u '${{ github.actor }}' --password-stdin
+      - name: Derive the version and the image names
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          if [ -z "$version" ]; then
+            echo "tag ${GITHUB_REF_NAME} has no version after its leading v" >&2
+            exit 1
+          fi
+          {
+            echo "VERSION=${version}"
+            echo "OWNER_LC=$(printf '%s' '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')"
+          } >> "$GITHUB_ENV"
+      - name: Refuse a tag that already exists
+        run: |
+          for image in two-tickets-api two-tickets-web; do
+            ref="ghcr.io/${OWNER_LC}/${image}:${VERSION}"
+            if docker manifest inspect "$ref" >/dev/null 2>&1; then
+              echo "$ref already exists; tags are immutable" >&2
+              exit 1
+            fi
+          done
+      - name: Build the images
+        run: |
+          source_label="org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}"
+          docker build --platform linux/amd64 --label "$source_label" \
+            -f deploy/api.Dockerfile -t "ghcr.io/${OWNER_LC}/two-tickets-api:${VERSION}" .
+          docker build --platform linux/amd64 --label "$source_label" \
+            -f deploy/web.Dockerfile -t "ghcr.io/${OWNER_LC}/two-tickets-web:${VERSION}" web/
+      - name: Smoke the web image
+        run: bash deploy/web-smoke.sh
+      - name: Smoke the api image
+        run: bash deploy/api-smoke.sh "ghcr.io/${OWNER_LC}/two-tickets-api:${VERSION}"
+      - name: Push the images
+        run: |
+          docker push "ghcr.io/${OWNER_LC}/two-tickets-api:${VERSION}"
+          docker push "ghcr.io/${OWNER_LC}/two-tickets-web:${VERSION}"
