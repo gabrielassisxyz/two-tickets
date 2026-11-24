@@ -6,7 +6,6 @@ import { DiscoverSliderType } from '@app/compat/constants/discover';
 export const SliderId = {
   FOR_YOU: 100,
   MY_LIST: 101,
-  COUPLE_LIST: 102,
 } as const;
 
 export type SliderId = (typeof SliderId)[keyof typeof SliderId];

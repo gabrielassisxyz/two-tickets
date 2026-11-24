@@ -20,9 +20,9 @@ const messages = defineMessages('components.Library.LibraryListSlider', {
 });
 
 interface LibraryListSliderProps {
-  // "watchlist" is my own watchlist ("Minha lista"); "couple" is the list
-  // both people share ("Lista do casal").
-  kind: 'watchlist' | 'couple';
+  // "watchlist" is my own watchlist ("Minha lista"), the one list Discover
+  // shows.
+  kind: 'watchlist';
   title: string;
   sliderKey: string;
 }
@@ -30,10 +30,7 @@ interface LibraryListSliderProps {
 export const pickLibraryList = (
   lists: LibraryList[] | undefined,
   kind: LibraryListSliderProps['kind']
-) =>
-  (lists ?? []).find(
-    (list) => list.kind === kind && (kind === 'couple' || list.owner === 'me')
-  );
+) => (lists ?? []).find((list) => list.kind === kind && list.owner === 'me');
 
 // A Discover slider over one library list: the first page of its items,
 // hydrated by the api into the same result shape search answers.

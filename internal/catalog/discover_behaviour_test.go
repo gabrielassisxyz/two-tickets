@@ -23,7 +23,7 @@ var upstreamDiscoverSliderTypes = map[string]int{
 
 // projectDiscoverSliderTypes are this app's own slider types, written out as
 // the literals web/src/compat/sliderIds.ts declares.
-var projectDiscoverSliderTypes = map[string]int{"FOR_YOU": 100, "MY_LIST": 101, "COUPLE_LIST": 102}
+var projectDiscoverSliderTypes = map[string]int{"FOR_YOU": 100, "MY_LIST": 101}
 
 func discoverSliderTypeOf(name string) int {
 	if value, ok := projectDiscoverSliderTypes[name]; ok {
@@ -32,7 +32,7 @@ func discoverSliderTypeOf(name string) int {
 	return upstreamDiscoverSliderTypes[name]
 }
 
-func TestDiscoverSliderManifestIsTheForYouListThenTheTwoListsThenTheNineKeptBuiltIns(t *testing.T) {
+func TestDiscoverSliderManifestIsTheForYouListThenMyListThenTheNineKeptBuiltIns(t *testing.T) {
 	response := discoverServe(t, discoverTestService("http://tmdb.invalid"), http.MethodGet, "/api/v1/settings/discover")
 	if response.Code != http.StatusOK {
 		t.Fatalf("settings/discover = %d %s", response.Code, response.Body)
@@ -41,7 +41,7 @@ func TestDiscoverSliderManifestIsTheForYouListThenTheTwoListsThenTheNineKeptBuil
 	if err := json.Unmarshal(response.Body.Bytes(), &sliders); err != nil {
 		t.Fatal(err)
 	}
-	wantOrder := []string{"FOR_YOU", "MY_LIST", "COUPLE_LIST", "TRENDING", "POPULAR_MOVIES", "MOVIE_GENRES", "UPCOMING_MOVIES", "STUDIOS", "POPULAR_TV", "TV_GENRES", "UPCOMING_TV", "NETWORKS"}
+	wantOrder := []string{"FOR_YOU", "MY_LIST", "TRENDING", "POPULAR_MOVIES", "MOVIE_GENRES", "UPCOMING_MOVIES", "STUDIOS", "POPULAR_TV", "TV_GENRES", "UPCOMING_TV", "NETWORKS"}
 	if len(sliders) != len(wantOrder) {
 		t.Fatalf("the manifest holds %d sliders, want %d: %s", len(sliders), len(wantOrder), response.Body)
 	}

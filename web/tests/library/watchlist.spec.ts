@@ -20,9 +20,9 @@ import {
 test.use({ ...devices['Pixel 7'] });
 
 // A rejected add or remove restores the star's previous state and says so,
-// on a card, on a slider and on both title pages. Each case sets the
-// title's watchlist state through the api first, so no case depends on
-// another having run.
+// on a card, on a slider, on the lists page and on both title pages. Each
+// case sets the title's watchlist state through the api first, so no case
+// depends on another having run.
 
 const addPattern = '**/api/v1/watchlist';
 const removePattern = '**/api/v1/watchlist/*';
@@ -73,7 +73,7 @@ test('card: a rejected remove restores the filled star', async ({ page }) => {
   await expectRestored(page, star, refused, 'true');
 });
 
-test('slider: a rejected add on "Lista do casal" restores the empty star', async ({
+test('lists page: a rejected add on "Lista do casal" restores the empty star', async ({
   page,
 }) => {
   const couple = await listIdOf(page, 'couple');
@@ -82,9 +82,9 @@ test('slider: a rejected add on "Lista do casal" restores the empty star', async
     mediaType: 'movie',
     tmdbId: 11441,
   });
-  await page.goto(`${base()}/`);
+  await page.goto(`${base()}/lists`);
   const card = page
-    .getByTestId('library-slider-couple')
+    .getByTestId('library-list-couple')
     .locator(
       '[data-testid="title-card"][data-media-type="movie"][data-tmdb-id="11441"]'
     );

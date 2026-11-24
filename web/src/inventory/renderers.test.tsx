@@ -300,13 +300,12 @@ const fixtureFor = (pathname: string) => {
       requestCount: 0,
     };
   }
-  // The api's fixed slider manifest: the personal list, the two library
-  // lists, then the nine kept built-ins, in its order.
+  // The api's fixed slider manifest: the personal list, "Minha lista", then
+  // the nine kept built-ins, in its order.
   if (pathname === '/api/v1/settings/discover') {
     return [
       SliderId.FOR_YOU,
       SliderId.MY_LIST,
-      SliderId.COUPLE_LIST,
       DiscoverSliderType.TRENDING,
       DiscoverSliderType.POPULAR_MOVIES,
       DiscoverSliderType.MOVIE_GENRES,

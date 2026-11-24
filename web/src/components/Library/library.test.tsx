@@ -301,6 +301,8 @@ const answerGet = (path: string, query: URLSearchParams) => {
     return historyAnswer(query);
   }
   if (path === '/api/v1/settings/discover') {
+    // 102 is the retired couple-list slider an older api still lists; the
+    // page must not render it.
     return [101, 102].map((type, order) => ({
       id: type,
       type,
@@ -573,26 +575,7 @@ describe('the watchlist star restores the previous state after a rejected reques
     );
   });
 
-  it('on a slider, for an add and for a delete, keeping the card on failure', async () => {
-    rejections.set('POST /api/v1/watchlist', 500);
-    const couple = renderWithApi(
-      <LibraryListSlider
-        kind="couple"
-        title="Lista do casal"
-        sliderKey="couple"
-      />
-    );
-    const star = await couple.findByTestId('quick-watchlist');
-    fireEvent.click(star);
-    await waitFor(() => expect(addToast).toHaveBeenCalledTimes(1));
-    expect(pressed(couple.getByTestId('quick-watchlist'))).toBe('false');
-    expect(mutations('POST', '/api/v1/watchlist')[0].data).toEqual({
-      tmdbId: 602,
-      mediaType: 'movie',
-      title: 'List 2 title',
-    });
-    couple.unmount();
-
+  it('on the "Minha lista" slider, for a delete, keeping the card on failure', async () => {
     rejections.set('DELETE /api/v1/watchlist/601', 500);
     const mine = renderWithApi(
       <LibraryListSlider
@@ -604,7 +587,7 @@ describe('the watchlist star restores the previous state after a rejected reques
     const myStar = await mine.findByTestId('quick-watchlist');
     expect(pressed(myStar)).toBe('true');
     fireEvent.click(myStar);
-    await waitFor(() => expect(addToast).toHaveBeenCalledTimes(2));
+    await waitFor(() => expect(addToast).toHaveBeenCalledTimes(1));
     expect(pressed(mine.getByTestId('quick-watchlist'))).toBe('true');
     expect(mine.getAllByTestId('title-card')).toHaveLength(1);
   });
@@ -953,9 +936,9 @@ describe('history page', () => {
 });
 
 describe('discover', () => {
-  it('renders the "Minha lista" and "Lista do casal" slider types', async () => {
+  it('renders "Minha lista" and no "Lista do casal" slider', async () => {
     const screen = renderWithApi(<Discover />);
     expect(await screen.findByTestId('library-slider-watchlist')).toBeTruthy();
-    expect(screen.getByTestId('library-slider-couple')).toBeTruthy();
+    expect(screen.queryByTestId('library-slider-couple')).toBeNull();
   });
 });

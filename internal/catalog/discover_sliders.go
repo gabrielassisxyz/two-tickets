@@ -32,11 +32,10 @@ const (
 // This app's own slider types, from 100 so they never meet an upstream value
 // (web/src/compat/sliderIds.ts holds the same numbers and fails the build on
 // a collision). "Para você" (100) is the personal list the recommender
-// serves; the library lists follow it.
+// serves; "Minha lista" follows it.
 const (
-	discoverSliderForYou     = 100
-	discoverSliderMyList     = 101
-	discoverSliderCoupleList = 102
+	discoverSliderForYou = 100
+	discoverSliderMyList = 101
 )
 
 // discoverSlider is one entry of GET /settings/discover. Built-ins carry no
@@ -53,14 +52,13 @@ type discoverSlider struct {
 
 // discoverSliderManifest is upstream's built-in slider list in upstream's
 // order, without recently added, recent requests and the Plex watchlist,
-// which have no counterpart here, preceded by this app's own "Para você",
-// "Minha lista" and "Lista do casal". Each id is the type: the row id a
+// which have no counterpart here, preceded by this app's own "Para você"
+// and "Minha lista". Each id is the type: the row id a
 // fresh upstream install gives each built-in, and stable across releases.
 func discoverSliderManifest() []discoverSlider {
 	types := []int{
 		discoverSliderForYou,
 		discoverSliderMyList,
-		discoverSliderCoupleList,
 		discoverSliderTrending,
 		discoverSliderPopularMovies,
 		discoverSliderMovieGenres,
