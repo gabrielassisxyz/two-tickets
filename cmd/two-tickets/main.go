@@ -123,6 +123,10 @@ func serve(ctx context.Context, deps serveDeps, logger *slog.Logger) error {
 	if err != nil {
 		return fmt.Errorf("accounts: %w", err)
 	}
+	// After the accounts: each watchlist references its owner's users row.
+	if err := store.BootstrapLibraryLists(ctx, state, time.Now()); err != nil {
+		return fmt.Errorf("library lists: %w", err)
+	}
 	stopPruning := startSessionPruning(ctx, authService, logger)
 	defer stopPruning()
 
