@@ -88,11 +88,20 @@ func TestTitleStatusInvalidInputAnswers400(t *testing.T) {
 	}
 }
 
+var titleErrorGoldens = []string{
+	"movie-details-not-found",
+	"movie-details-tmdb-404",
+	"movie-details-tmdb-429",
+	"movie-details-tmdb-500",
+	"movie-details-tmdb-timeout",
+	"movie-details-non-numeric-id",
+}
+
 // The movie error goldens: the status is upstream's, the message is
 // upstream's, and errors is the shared normalisation above. The 400 golden
 // records upstream's validator wording, which is not ported.
 func TestTitleStatusMovieErrorGoldens(t *testing.T) {
-	for _, name := range []string{"movie-details-not-found", "movie-details-tmdb-404", "movie-details-tmdb-429", "movie-details-tmdb-500", "movie-details-tmdb-timeout", "movie-details-non-numeric-id"} {
+	for _, name := range titleErrorGoldens {
 		t.Run(name, func(t *testing.T) {
 			golden := catalogtest.LoadGolden(t, "title", name)
 			server := catalogtest.FakeTMDB(t, golden.Fixtures...)

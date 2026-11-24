@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 	"net/http/httptest"
+	"path/filepath"
 	"slices"
 	"strings"
 	"testing"
@@ -59,39 +60,41 @@ func titleGoldenTarget(t *testing.T, golden catalogtest.Golden) string {
 	return target
 }
 
+// titleMatchedGoldens are the title goldens the handlers match as they are.
+var titleMatchedGoldens = []string{
+	"movie-details-full",
+	"movie-details-minimal",
+	"movie-details-empty",
+	"movie-details-empty-overview",
+	"movie-details-without-local-trailer",
+	"movie-recommendations",
+	"movie-similar",
+	"tv-details-full",
+	"tv-details-minimal",
+	"tv-details-empty",
+	"tv-details-empty-overview",
+	"tv-details-without-local-trailer",
+	"tv-details-anime",
+	"tv-season-with-stills",
+	"tv-season-null-stills",
+	"tv-season-empty",
+	"tv-recommendations",
+	"tv-similar",
+	"collection-full",
+	"collection-minimal",
+	"collection-empty",
+	"collection-missing-and-equal-release-dates",
+	"person-details-full",
+	"person-details-minimal",
+	"person-details-empty",
+	"person-combined-credits",
+	"person-combined-credits-adult-credit",
+}
+
 // Every title golden upstream answered with a page answers through the
 // handlers with the golden's status and a body matching the golden.
 func TestTitleGoldensMatchThroughHandlers(t *testing.T) {
-	cases := []string{
-		"movie-details-full",
-		"movie-details-minimal",
-		"movie-details-empty",
-		"movie-details-empty-overview",
-		"movie-details-without-local-trailer",
-		"movie-recommendations",
-		"movie-similar",
-		"tv-details-full",
-		"tv-details-minimal",
-		"tv-details-empty",
-		"tv-details-empty-overview",
-		"tv-details-without-local-trailer",
-		"tv-details-anime",
-		"tv-season-with-stills",
-		"tv-season-null-stills",
-		"tv-season-empty",
-		"tv-recommendations",
-		"tv-similar",
-		"collection-full",
-		"collection-minimal",
-		"collection-empty",
-		"collection-missing-and-equal-release-dates",
-		"person-details-full",
-		"person-details-minimal",
-		"person-details-empty",
-		"person-combined-credits",
-		"person-combined-credits-adult-credit",
-	}
-	for _, name := range cases {
+	for _, name := range titleMatchedGoldens {
 		t.Run(name, func(t *testing.T) {
 			golden := catalogtest.LoadGolden(t, "title", name)
 			server := catalogtest.FakeTMDB(t, golden.Fixtures...)
@@ -104,22 +107,25 @@ func TestTitleGoldensMatchThroughHandlers(t *testing.T) {
 	}
 }
 
+// titleAdultGoldens record upstream keeping one adult entry in a list: the
+// golden, the list, and the adult entry's id.
+var titleAdultGoldens = []struct {
+	name    string
+	list    string
+	adultID float64
+}{
+	{"movie-recommendations-adult-entry", "results", 87101},
+	{"movie-similar-adult-entry", "results", 563},
+	{"tv-recommendations-adult-entry", "results", 211358},
+	{"tv-similar-adult-entry", "results", 873},
+	{"collection-adult-part", "parts", 604},
+}
+
 // Upstream keeps adult entries in these lists and the goldens record them.
 // The adult policy is the intentional difference: each answer must match its
 // golden with exactly the adult entries removed, and nothing else changed.
 func TestTitleAdultGoldensMatchWithTheAdultEntriesRemoved(t *testing.T) {
-	cases := []struct {
-		name    string
-		list    string
-		adultID float64
-	}{
-		{"movie-recommendations-adult-entry", "results", 87101},
-		{"movie-similar-adult-entry", "results", 563},
-		{"tv-recommendations-adult-entry", "results", 211358},
-		{"tv-similar-adult-entry", "results", 873},
-		{"collection-adult-part", "parts", 604},
-	}
-	for _, tc := range cases {
+	for _, tc := range titleAdultGoldens {
 		t.Run(tc.name, func(t *testing.T) {
 			golden := catalogtest.LoadGolden(t, "title", tc.name)
 			server := catalogtest.FakeTMDB(t, golden.Fixtures...)
@@ -156,4 +162,33 @@ func titleGoldenWithout(t *testing.T, golden catalogtest.Golden, key string, id 
 	}
 	golden.Body = raw
 	return golden
+}
+
+// Every committed title golden is exercised by one of the title tests, so a
+// golden added later cannot sit unchecked.
+func TestTitleEveryGoldenIsExercised(t *testing.T) {
+	exercised := map[string]bool{titleAdultMovieGolden: true}
+	for _, name := range titleMatchedGoldens {
+		exercised[name] = true
+	}
+	for _, golden := range titleAdultGoldens {
+		exercised[golden.name] = true
+	}
+	for _, name := range titleErrorGoldens {
+		exercised[name] = true
+	}
+	files, err := filepath.Glob(filepath.Join("..", "..", "testdata", "golden", "title", "*.json"))
+	if err != nil || len(files) == 0 {
+		t.Fatalf("no title goldens found: %v", err)
+	}
+	for _, file := range files {
+		name := strings.TrimSuffix(filepath.Base(file), ".json")
+		if !exercised[name] {
+			t.Errorf("golden title/%s is not exercised by any title test", name)
+		}
+		delete(exercised, name)
+	}
+	for name := range exercised {
+		t.Errorf("title test names golden %s, which is not committed", name)
+	}
 }

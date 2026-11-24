@@ -304,10 +304,13 @@ func TestTitleCollectionOrdersPartsAsUpstream(t *testing.T) {
 	}
 }
 
+// titleAdultMovieGolden records upstream serving an adult movie.
+const titleAdultMovieGolden = "movie-details-adult"
+
 // A direct request for an adult title answers 404 after the first TMDB
 // request, so the fallback requests the golden lists are never sent.
 func TestTitleAdultMovieAnswers404(t *testing.T) {
-	golden := catalogtest.LoadGolden(t, "title", "movie-details-adult")
+	golden := catalogtest.LoadGolden(t, "title", titleAdultMovieGolden)
 	if !titleDecode[titleMovieTMDB](t, titleFixtureBody(t, "movie/details-adult")).Adult {
 		t.Fatalf("fixture movie/details-adult is no longer adult")
 	}
