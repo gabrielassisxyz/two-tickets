@@ -13,7 +13,7 @@ import '@app/styles/globals.css';
 import { loadLocaleData } from '@app/utils/loadLocaleData';
 import { polyfillIntl } from '@app/utils/polyfillIntl';
 import { getApiBaseUrl } from '@app/utils/urlHelper';
-import '@fontsource-variable/inter';
+import '@fontsource-variable/dm-sans';
 import axios from 'axios';
 import type { AppInitialProps, AppProps } from 'next/app';
 import App from 'next/app';

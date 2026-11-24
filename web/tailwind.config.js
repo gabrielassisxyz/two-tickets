@@ -1,6 +1,66 @@
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+// The project's identity, applied here so every kept and new component
+// follows it through the palette classes it already uses (gray-*,
+// indigo-*, ...), without restyling components one by one.
+//
+// - Ground: near-black neutral surfaces stepping up in small increments,
+//   with warm off-white text, never pure black or pure white.
+// - One accent, a muted teal, doing one job: what is active, selected or
+//   pressable. Every chromatic family upstream uses (indigo, purple, blue,
+//   green) maps onto it, so the page stays monochromatic and upstream's
+//   indigo-to-purple gradients collapse into one flat colour.
+// - One muted red for the rare thing that must shout (errors, danger);
+//   upstream's amber, orange and yellow warnings map onto it.
+const ground = {
+  50: '#f5f4f0',
+  100: '#e8e6e0',
+  200: '#d4d2cb',
+  300: '#b8b5ad',
+  400: '#8f8c86',
+  500: '#67666c',
+  600: '#43434c',
+  700: '#2a2a33',
+  800: '#16161b',
+  900: '#0e0e11',
+  950: '#08080a',
+};
+
+const accent = {
+  50: '#eff6f5',
+  100: '#dbebea',
+  200: '#bcdcd9',
+  300: '#98cdc7',
+  400: '#7bc1ba',
+  500: '#61b8af',
+  600: '#397f78',
+  700: '#2f655f',
+  800: '#264a46',
+  900: '#1c312f',
+  950: '#111d1c',
+};
+
+const signal = {
+  50: '#f9f1f1',
+  100: '#f0dbdc',
+  200: '#e4b9bc',
+  300: '#d69498',
+  400: '#cb767c',
+  500: '#c0595f',
+  600: '#a54047',
+  700: '#86373c',
+  800: '#632c30',
+  900: '#442224',
+  950: '#281517',
+};
+
+// Depth comes from hairlines and surface steps, not from frosted glass:
+// every backdrop blur upstream asks for renders unblurred.
+const noBlur = Object.fromEntries(
+  Object.keys(defaultTheme.blur).map((key) => [key, '0'])
+);
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
@@ -15,8 +75,30 @@ module.exports = {
         'max-height': 'max-height',
         width: 'width',
       },
+      colors: {
+        gray: ground,
+        indigo: accent,
+        purple: accent,
+        blue: accent,
+        green: accent,
+        red: signal,
+        orange: signal,
+        amber: signal,
+        yellow: signal,
+      },
+      // Small radii: sharply bounded surfaces rather than wide rounded cards.
+      borderRadius: {
+        md: '0.3125rem',
+        lg: '0.375rem',
+        xl: '0.5rem',
+        '2xl': '0.625rem',
+        '3xl': '0.75rem',
+      },
+      backdropBlur: noBlur,
+      // One sans family for titles, interface and body text; titles get
+      // their weight from the face, never from a serif display.
       fontFamily: {
-        sans: ['Inter Variable', ...defaultTheme.fontFamily.sans],
+        sans: ['DM Sans Variable', ...defaultTheme.fontFamily.sans],
       },
       typography: (theme) => ({
         DEFAULT: {
