@@ -16,7 +16,12 @@ import { dirname } from 'node:path';
 import { parseArgs } from 'node:util';
 import { CASES } from './cases.mjs';
 import { serializeJson } from './lib/golden.mjs';
-import { fixtureFile, isDerived, openUpstreamRunner, readRecordedFixture } from './lib/store.mjs';
+import {
+  fixtureFile,
+  isDerived,
+  openUpstreamRunner,
+  readRecordedFixture,
+} from './lib/store.mjs';
 
 const TMDB_API = 'https://api.themoviedb.org/3';
 
@@ -42,7 +47,9 @@ const fetchLive = async (request) => {
   }
   // A throttled or failing TMDB is not a response worth keeping.
   if (response.status === 429 || response.status >= 500) {
-    throw new Error(`TMDB ${request.path} answered ${response.status}; try again later`);
+    throw new Error(
+      `TMDB ${request.path} answered ${response.status}; try again later`
+    );
   }
   return { status: response.status, body: await response.json() };
 };
@@ -63,7 +70,9 @@ const recordCase = async (run, entry, missingIds) => {
     }
     const fixture = { id, request, response: await fetchLive(request) };
     saveFixture(fixture);
-    console.log(`recorded ${id}: ${request.path} -> ${fixture.response.status}`);
+    console.log(
+      `recorded ${id}: ${request.path} -> ${fixture.response.status}`
+    );
     return fixture;
   };
   const outcome = await run(entry.url, known, { onUnmatched });
@@ -73,7 +82,9 @@ const recordCase = async (run, entry, missingIds) => {
     );
   }
   if (pending.length > 0) {
-    throw new Error(`case ${entry.name} never asked for: ${pending.join(', ')}`);
+    throw new Error(
+      `case ${entry.name} never asked for: ${pending.join(', ')}`
+    );
   }
 };
 
@@ -85,7 +96,9 @@ const main = async () => {
       if (entry.fixtures.some(isDerived)) {
         continue;
       }
-      const missingIds = entry.fixtures.filter((id) => !readRecordedFixture(id));
+      const missingIds = entry.fixtures.filter(
+        (id) => !readRecordedFixture(id)
+      );
       if (missingIds.length > 0) {
         await recordCase(runner.run, entry, missingIds);
       }

@@ -17,9 +17,11 @@ export const GOLDEN_DIR = join(REPO_ROOT, 'testdata', 'golden');
 export const INDEX_FILE = join(TMDB_DIR, 'index.json');
 
 export const fixtureFile = (id) => join(TMDB_DIR, `${id}.json`);
-export const goldenFile = (entry) => join(GOLDEN_DIR, entry.family, `${entry.name}.json`);
+export const goldenFile = (entry) =>
+  join(GOLDEN_DIR, entry.family, `${entry.name}.json`);
 
-export const isDerived = (id) => Boolean(FIXTURES.find((fixture) => fixture.id === id)?.derive);
+export const isDerived = (id) =>
+  Boolean(FIXTURES.find((fixture) => fixture.id === id)?.derive);
 
 // Catches the registry and the cases drifting apart before anything runs.
 export const validateRegistry = () => {
@@ -52,9 +54,14 @@ export const validateRegistry = () => {
     if (!used.has(fixture.id)) {
       problems.push(`fixture ${fixture.id} is used by no case`);
     }
-    for (const base of [fixture.derive?.from, ...(fixture.derive?.with ?? [])]) {
+    for (const base of [
+      fixture.derive?.from,
+      ...(fixture.derive?.with ?? []),
+    ]) {
       if (base && !ids.has(base)) {
-        problems.push(`fixture ${fixture.id} derives from unregistered ${base}`);
+        problems.push(
+          `fixture ${fixture.id} derives from unregistered ${base}`
+        );
       }
     }
   }
@@ -72,13 +79,20 @@ export const readRecordedFixture = (id) => {
 const deriveFixture = (fixture, byId) => {
   const { from, with: extras = [], request, response, body } = fixture.derive;
   const base = byId.get(from);
-  const inputs = extras.map((id) => structuredClone(byId.get(id).response.body));
+  const inputs = extras.map((id) =>
+    structuredClone(byId.get(id).response.body)
+  );
   const derived = {
     id: fixture.id,
-    request: request ? request(structuredClone(base.request)) : structuredClone(base.request),
+    request: request
+      ? request(structuredClone(base.request))
+      : structuredClone(base.request),
     response: response
       ? structuredClone(response)
-      : { status: base.response.status, body: body(structuredClone(base.response.body), inputs) },
+      : {
+          status: base.response.status,
+          body: body(structuredClone(base.response.body), inputs),
+        },
   };
   return derived;
 };
