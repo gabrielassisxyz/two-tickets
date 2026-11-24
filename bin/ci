@@ -52,7 +52,9 @@ if [ -d web/src/compat ]; then
     if command -v mise >/dev/null 2>&1; then
         runner="mise exec node@${pin} --"
     fi
-    major="$(node --version | sed 's/^v//; s/\..*//')"
+    # The Node that will run is the runner's, not whatever is first on PATH.
+    # shellcheck disable=SC2086
+    major="$($runner node --version | sed 's/^v//; s/\..*//')"
     if [ "$major" != "$pin" ]; then
         echo "wrong Node major ${major}; web pins ${pin} in web/.node-version" >&2
         exit 1
