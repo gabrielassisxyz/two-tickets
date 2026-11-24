@@ -1696,3 +1696,299 @@ describe('for-you recommendations', () => {
     page.unmount();
   });
 });
+
+describe('title pages keep upstream layout (tt-s73)', () => {
+  // The api's own answer for the full fixtures, as the goldens record it.
+  // The goldens replace volatile numbers with a placeholder, so the score
+  // fields get concrete values here.
+  const goldenTitleBody = (name: string) => ({
+    ...JSON.parse(
+      readFileSync(
+        join(here, '..', '..', '..', 'testdata', 'golden', 'title', name),
+        'utf8'
+      )
+    ).body,
+    voteAverage: 8.2,
+    voteCount: 26000,
+  });
+
+  // Serves `body` for the page's own details path and everything else from
+  // the shared fixture router, then puts the shared router back.
+  const renderTitleWith = async (
+    detailsPath: string,
+    body: Record<string, unknown>,
+    node: React.ReactNode,
+    check: (view: ReturnType<typeof render>) => Promise<void> | void
+  ) => {
+    level = 'full';
+    mockedAxios.get.mockImplementation(async (url: string) => {
+      record(url);
+      const pathname = url.split('?')[0];
+      if (pathname === detailsPath) {
+        return { data: body };
+      }
+      // The trailer link is built from the api's public settings
+      // (`youtubeUrl`), which the shared router answers with `{}`.
+      if (pathname === '/api/v1/settings/public') {
+        return { data: settingsFixture };
+      }
+      return { data: fixtureFor(pathname) };
+    });
+    const view = render(<Wrapper>{node}</Wrapper>);
+    try {
+      await waitFor(() => {
+        expect(view.container.querySelector('.media-facts')).toBeTruthy();
+      });
+      await check(view);
+    } finally {
+      view.unmount();
+      mockedAxios.get.mockImplementation(async (url: string) => {
+        record(url);
+        return { data: fixtureFor(url.split('?')[0]) };
+      });
+    }
+  };
+
+  const movieBody = () => goldenTitleBody('movie-details-full.json');
+  const seriesBody = () => goldenTitleBody('tv-details-full.json');
+  const renderMovie = (
+    body: Record<string, unknown>,
+    check: (view: ReturnType<typeof render>) => Promise<void> | void
+  ) => renderTitleWith('/api/v1/movie/603', body, <MovieDetails />, check);
+  const renderSeries = (
+    body: Record<string, unknown>,
+    check: (view: ReturnType<typeof render>) => Promise<void> | void
+  ) => renderTitleWith('/api/v1/tv/1399', body, <TvDetails />, check);
+
+  const factValue = (view: ReturnType<typeof render>, label: string) => {
+    const fact = [
+      ...view.container.querySelectorAll('.media-facts .media-fact'),
+    ].find((el) => el.firstElementChild?.textContent === label);
+    return fact?.querySelector('.media-fact-value') ?? null;
+  };
+  const link = (view: ReturnType<typeof render>, href: string) =>
+    view.container.querySelector(`a[href="${href}"]`);
+
+  it('shows the movie facts column', async () => {
+    await renderMovie(movieBody(), (view) => {
+      expect(factValue(view, 'Original Title')?.textContent).toBe('The Matrix');
+      expect(factValue(view, 'Status')?.textContent).toBe('Released');
+      expect(factValue(view, 'Release Dates')?.children).toHaveLength(2);
+      expect(factValue(view, 'Revenue')?.textContent).toContain('463');
+      expect(factValue(view, 'Budget')?.textContent).toContain('63');
+      expect(
+        factValue(view, 'Original Language')?.querySelector(
+          'a[href="/discover/movies/language/en"]'
+        )
+      ).toBeTruthy();
+      expect(factValue(view, 'Production Country')?.textContent).toBeTruthy();
+      expect(
+        factValue(view, 'Studios')?.querySelectorAll(
+          'a[href^="/discover/movies/studio/"]'
+        )
+      ).toHaveLength(4);
+      expect(
+        view.container.querySelector('.media-attributes')?.textContent
+      ).toContain('136 minutes');
+    });
+  });
+
+  it('shows the movie TMDB score, trailer, crew link, genres, keywords and collection', async () => {
+    await renderMovie(movieBody(), (view) => {
+      const score = view.container.querySelector(
+        '.media-ratings a.media-rating[href="https://www.themoviedb.org/movie/603?language=pt-BR"]'
+      );
+      expect(score?.textContent).toBe('82%');
+
+      const trailer = view.getByText('Watch Trailer').closest('a');
+      expect(trailer?.getAttribute('href')).toMatch(
+        /^https:\/\/www\.youtube\.com\/watch\?v=/
+      );
+
+      expect(link(view, '/movie/603/crew')?.textContent).toBe('View Full Crew');
+      expect(
+        view.container.querySelectorAll('ul.media-crew a[href^="/person/"]')
+          .length
+      ).toBeGreaterThan(0);
+
+      expect(link(view, '/discover/movies?genre=28')?.textContent).toBe('Ação');
+      expect(link(view, '/discover/movies?genre=878')).toBeTruthy();
+
+      expect(
+        view.container.querySelectorAll('a[href^="/discover/movies?keywords="]')
+      ).toHaveLength(19);
+      expect(link(view, '/discover/movies?keywords=312')?.textContent).toBe(
+        'man vs machine'
+      );
+
+      expect(link(view, '/collection/2344')?.textContent).toContain(
+        'Matrix: Coleção'
+      );
+    });
+  });
+
+  it('folds a long studio list behind show more and show less', async () => {
+    const body = movieBody();
+    body.productionCompanies = [
+      ...body.productionCompanies,
+      { id: 9999, name: 'Fifth Studio', originCountry: 'BR' },
+    ];
+    await renderMovie(body, async (view) => {
+      const studios = () =>
+        factValue(view, 'Studios')?.querySelectorAll(
+          'a[href^="/discover/movies/studio/"]'
+        ).length;
+      expect(studios()).toBe(3);
+      fireEvent.click(view.getByText('Show More'));
+      await waitFor(() => expect(studios()).toBe(5));
+      fireEvent.click(view.getByText('Show Less'));
+      await waitFor(() => expect(studios()).toBe(3));
+    });
+  });
+
+  it('shows the series facts column with seasons and networks', async () => {
+    await renderSeries(seriesBody(), (view) => {
+      expect(factValue(view, 'Original Title')?.textContent).toBe(
+        'Adolescence'
+      );
+      expect(factValue(view, 'Status')?.textContent).toBe('Ended');
+      expect(factValue(view, 'First Air Date')?.textContent).toBeTruthy();
+      expect(
+        factValue(view, 'Original Language')?.querySelector(
+          'a[href="/discover/tv/language/en"]'
+        )
+      ).toBeTruthy();
+      expect(factValue(view, 'Production Countries')?.children).toHaveLength(2);
+      expect(
+        factValue(view, 'Network')?.querySelector(
+          'a[href="/discover/tv/network/213"]'
+        )?.textContent
+      ).toBe('Netflix');
+      expect(
+        view.container.querySelector('.media-attributes')?.textContent
+      ).toContain('1 Season');
+      expect(view.getByText('Seasons').tagName).toBe('H2');
+    });
+  });
+
+  it('shows the series TMDB score, trailer, crew link, genres and keywords', async () => {
+    await renderSeries(seriesBody(), (view) => {
+      const score = view.container.querySelector(
+        '.media-ratings a.media-rating[href="https://www.themoviedb.org/tv/249042?language=pt-BR"]'
+      );
+      expect(score?.textContent).toBe('82%');
+
+      const trailer = view.getByText('Watch Trailer').closest('a');
+      expect(trailer?.getAttribute('href')).toBe(
+        'https://www.youtube.com/watch?v=mh48KXaCSxM'
+      );
+
+      expect(link(view, '/tv/249042/crew')?.textContent).toBe('View Full Crew');
+      const crew = view.container.querySelector('ul.media-crew li');
+      expect(crew?.textContent).toBe('CreatorStephen Graham');
+
+      expect(link(view, '/discover/tv?genre=18')?.textContent).toBe('Drama');
+      expect(link(view, '/discover/tv?keywords=392')?.textContent).toBe(
+        'england'
+      );
+    });
+  });
+
+  it('lists the BR providers once, with the JustWatch credit beside them', async () => {
+    await renderMovie(movieBody(), (view) => {
+      const labels = view.getAllByText('Currently Streaming On');
+      expect(labels).toHaveLength(1);
+      const fact = labels[0].closest('.media-fact') as HTMLElement;
+      expect(within(fact).getByAltText('HBO Max')).toBeTruthy();
+      expect(
+        within(fact).getByText('Streaming provider data provided by JustWatch.')
+      ).toBeTruthy();
+      expect(
+        view.getAllByText('Streaming provider data provided by JustWatch.')
+      ).toHaveLength(1);
+      // The About page's separate block put the providers under an h2.
+      expect(
+        [...view.container.querySelectorAll('h2')].map((h) => h.textContent)
+      ).not.toContain('Currently Streaming On');
+    });
+    await renderSeries(seriesBody(), (view) => {
+      const labels = view.getAllByText('Currently Streaming On');
+      expect(labels).toHaveLength(1);
+      const fact = labels[0].closest('.media-fact') as HTMLElement;
+      expect(
+        within(fact).getByAltText('Netflix Standard with Ads')
+      ).toBeTruthy();
+      expect(
+        within(fact).getByText('Streaming provider data provided by JustWatch.')
+      ).toBeTruthy();
+      expect(
+        view.getAllByText('Streaming provider data provided by JustWatch.')
+      ).toHaveLength(1);
+    });
+  });
+
+  it('shows neither the providers nor the credit for a title with no BR provider', async () => {
+    const withoutBrazil = (body: Record<string, unknown>) => ({
+      ...body,
+      watchProviders: (body.watchProviders as { iso_3166_1: string }[]).filter(
+        (entry) => entry.iso_3166_1 !== 'BR'
+      ),
+    });
+    for (const [page, body] of [
+      [renderMovie, movieBody()],
+      [renderSeries, seriesBody()],
+    ] as const) {
+      expect((body.watchProviders as unknown[]).length).toBeGreaterThan(1);
+      await page(withoutBrazil(body), (view) => {
+        expect(view.queryByText('Currently Streaming On')).toBeNull();
+        expect(
+          view.queryByText('Streaming provider data provided by JustWatch.')
+        ).toBeNull();
+      });
+    }
+  });
+
+  it('keeps the library panels on both pages, calling the library routes', async () => {
+    const before = loggedPaths().length;
+    await renderMovie(movieBody(), async (view) => {
+      expect(await view.findByTestId('title-panel')).toBeTruthy();
+      expect(view.getByTestId('title-watchlist-add')).toBeTruthy();
+    });
+    await renderSeries(seriesBody(), async (view) => {
+      expect(await view.findByTestId('title-panel')).toBeTruthy();
+      expect(view.getByTestId('title-watchlist-add')).toBeTruthy();
+      expect(view.getByTestId('season-row-1')).toBeTruthy();
+    });
+    const called = loggedPaths().slice(before);
+    expect(called).toContain('/api/v1/library/title/movie/603');
+    expect(called).toContain('/api/v1/library/title/tv/249042');
+  });
+
+  it('renders and imports nothing request-, issue-, media-server- or arr-related', async () => {
+    const forbiddenText =
+      /Request|Report an Issue|Manage (Movie|Series)|Play on|Play 4K|Radarr|Sonarr|Download Status|Mark as Available|Rotten Tomatoes|IMDB User Score|Blocklist/;
+    const before = loggedPaths().length;
+    await renderMovie(movieBody(), (view) => {
+      expect(view.container.textContent).not.toMatch(forbiddenText);
+    });
+    await renderSeries(seriesBody(), (view) => {
+      expect(view.container.textContent).not.toMatch(forbiddenText);
+    });
+    for (const path of loggedPaths().slice(before)) {
+      expect(path).not.toMatch(/\/ratings(combined)?$|\/request|\/issue/);
+    }
+
+    const forbiddenImport =
+      /RequestButton|RequestModal|IssueModal|ManageSlideOver|BlocklistModal|StatusBadge|useDeepLinks|constants\/server|constants\/issue|api\/ratings|api\/rottentomatoes|refreshIntervalHelper|PWA/;
+    for (const page of ['MovieDetails', 'TvDetails']) {
+      const source = readFileSync(
+        join(here, '..', 'components', page, 'index.tsx'),
+        'utf8'
+      );
+      const imports = source
+        .split('\n')
+        .filter((line) => /^import |from '/.test(line));
+      expect(imports.join('\n')).not.toMatch(forbiddenImport);
+    }
+  });
+});
