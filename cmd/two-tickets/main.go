@@ -30,12 +30,33 @@ const (
 	exitFailure = 1
 	exitUsage   = 2
 
-	readHeaderTimeout = 10 * time.Second
-	idleTimeout       = 120 * time.Second
-	shutdownTimeout   = 15 * time.Second
+	shutdownTimeout = 15 * time.Second
 
 	sessionPruneInterval = 24 * time.Hour
 )
+
+// serverTimeouts bound how long one connection may hold the api. The read
+// bound covers headers and body: every body the api accepts is a few KiB, so
+// a client still sending after it is stalled, not slow. The write bound runs
+// from the end of the headers to the end of the response, so it must outlast
+// the slowest handler: a "For you" run fetches up to 60 seeds from TMDB, 8 at
+// a time, and a healthy TMDB answers that in seconds. Only a TMDB outage runs
+// past it: each timing-out call then takes about 40 s (two 20 s attempts), so
+// a full run takes minutes. The bound cuts that connection at 2 min, where it
+// would otherwise have ended later with the previous run.
+type serverTimeouts struct {
+	readHeader time.Duration
+	read       time.Duration
+	write      time.Duration
+	idle       time.Duration
+}
+
+var productionServerTimeouts = serverTimeouts{
+	readHeader: 10 * time.Second,
+	read:       30 * time.Second,
+	write:      2 * time.Minute,
+	idle:       120 * time.Second,
+}
 
 // serveDeps is everything serve takes from the outside world, so a test can run
 // the real startup sequence with a fake environment or a broken migration set.
@@ -150,7 +171,7 @@ func serve(ctx context.Context, deps serveDeps, logger *slog.Logger) error {
 		Library:        libraryService,
 		Recs:           newRecsService(state, client, libraryService, logger),
 	})
-	return serveUntilDone(ctx, listener, router, logger)
+	return serveUntilDone(ctx, listener, newAPIServer(router, productionServerTimeouts, logger), logger)
 }
 
 // startSessionPruning runs the daily prune in the background. The returned
@@ -165,13 +186,18 @@ func startSessionPruning(ctx context.Context, service *auth.Service, logger *slo
 	}
 }
 
-func serveUntilDone(ctx context.Context, listener net.Listener, handler http.Handler, logger *slog.Logger) error {
-	server := &http.Server{
+func newAPIServer(handler http.Handler, timeouts serverTimeouts, logger *slog.Logger) *http.Server {
+	return &http.Server{
 		Handler:           handler,
-		ReadHeaderTimeout: readHeaderTimeout,
-		IdleTimeout:       idleTimeout,
+		ReadHeaderTimeout: timeouts.readHeader,
+		ReadTimeout:       timeouts.read,
+		WriteTimeout:      timeouts.write,
+		IdleTimeout:       timeouts.idle,
 		ErrorLog:          slog.NewLogLogger(logger.Handler(), slog.LevelWarn),
 	}
+}
+
+func serveUntilDone(ctx context.Context, listener net.Listener, server *http.Server, logger *slog.Logger) error {
 	served := make(chan error, 1)
 	go func() { served <- server.Serve(listener) }()
 	logger.Info("listening", "addr", listener.Addr().String())
