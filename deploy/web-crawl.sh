@@ -84,6 +84,20 @@ if [ "$ready" -ne 1 ]; then
   fail "web did not become ready"
 fi
 
+# The specs import @playwright/test, which resolves from the spec's own
+# directory upwards. web/node_modules exists only where someone installed it,
+# never on the CI runner, so the specs are copied into a scratch project that
+# installs the pinned package itself, and the run never depends on the host.
+# The script expands inside the container, where PLAYWRIGHT_VERSION is set.
+# shellcheck disable=SC2016
+crawl_in_container='set -e
+mkdir -p /tmp/crawl/tests
+cp -r tests/crawl /tmp/crawl/tests/
+cd /tmp/crawl
+npm init -y >/dev/null
+npm install --no-audit --no-fund --loglevel=error "@playwright/test@${PLAYWRIGHT_VERSION}"
+npx playwright test tests --output=/tmp/test-results'
+
 echo "==> web crawl: running the Playwright link crawl (image v${playwright_version})"
 docker run --rm --network "$network" \
   -v "$PWD/web:/work:ro" \
@@ -93,7 +107,7 @@ docker run --rm --network "$network" \
   -e CRAWL_USERNAME=alice \
   -e "CRAWL_PASSWORD=${password}" \
   "mcr.microsoft.com/playwright:v${playwright_version}-noble" \
-  sh -c 'npx --yes "@playwright/test@${PLAYWRIGHT_VERSION}" test tests/crawl --output=/tmp/test-results' \
-  || fail "the link crawl found a broken internal link"
+  sh -c "$crawl_in_container" \
+  || fail "the Playwright crawl failed: a broken internal link, or the suite did not run (see above)"
 
 echo "web crawl: green"
