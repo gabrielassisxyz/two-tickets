@@ -1,0 +1,17 @@
+{
+  "id": "errors/genres-movie-404",
+  "request": {
+    "path": "/genre/movie/list",
+    "params": {
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 404,
+    "body": {
+      "success": false,
+      "status_code": 34,
+      "status_message": "The resource you requested could not be found."
+    }
+  }
+}

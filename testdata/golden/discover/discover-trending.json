@@ -1,0 +1,439 @@
+{
+  "case": "discover-trending",
+  "family": "discover",
+  "request": "GET /api/v1/discover/trending?page=1",
+  "fixtures": [
+    "trending/all-day"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 500,
+    "totalResults": 10000,
+    "results": [
+      {
+        "id": 1003596,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Avengers: Doomsday",
+        "overview": "Heróis icônicos de três universos diferentes são colocados em rota de colisão mortal e enfrentam uma ameaça existencial sem precedentes, diferente de tudo que já vivenciaram antes.",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-16",
+        "title": "Vingadores: Doutor Destino",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/tXNt66khUBZcusc22INKCeGRr4l.jpg",
+        "posterPath": "/aSzeVbyyU65420A1646YfHcf6Zt.jpg"
+      },
+      {
+        "id": 1300968,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Hunger Games: Sunrise on the Reaping",
+        "overview": "Revisite o mundo de Panem 24 anos antes dos eventos de Jogos Vorazes, começando na manhã da colheita dos 50º Jogos Vorazes, também conhecida como o Segundo Massacre Quaternário.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-18",
+        "title": "Jogos Vorazes: Amanhecer na Colheita",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+        "posterPath": "/ibZ6GSHtCeC7fLDJ2uyXNemgYwr.jpg"
+      },
+      {
+        "id": 1611767,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          10749,
+          35
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Clashing Through the Snow",
+        "overview": "Os editores rivais Ryan Mitchell e Hannah Hendricks não podem voar por causa de uma tempestade e são obrigados a dividir um carro alugado para chegar em Nova York, onde uma reunião pode salvar suas carreiras. À medida que imprevistos na estrada e paradas em cidadezinhas acontecem, o espírito natalino vai transformando a rivalidade entre eles em algo inesperado.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-23",
+        "title": "Correndo para o Natal",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/x6kwEsxxqLIoqpIrZOXRV0LORqm.jpg",
+        "posterPath": "/38xHqU2bKbsXs0KD8bXtrDFpc8n.jpg"
+      },
+      {
+        "id": 1281331,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Social Reckoning",
+        "overview": "Frances Haugen, uma jovem engenheira do Facebook, conta com a ajuda de Jeff Horwitz, repórter do The Wall Street Journal, para embarcar em uma jornada arriscada que acaba revelando alguns dos segredos mais bem guardados da rede social.",
+        "popularity": "<number>",
+        "releaseDate": "2026-10-07",
+        "title": "O Outro Lado das Redes",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/wXTaGcqX3jvdXSKCJAkl5jZyrKp.jpg",
+        "posterPath": "/51AEphEZ5JXaV0FL5PGITjLQE0m.jpg"
+      },
+      {
+        "id": 1368337,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          28,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Odyssey",
+        "overview": "Acompanhe o rei grego Odisseu em sua perigosa jornada de 20 anos para voltar a Ítaca após a Guerra de Troia, enfrentando monstros e deuses enquanto sua esposa Penélope resiste em seu reino.",
+        "popularity": "<number>",
+        "releaseDate": "2026-07-15",
+        "title": "A Odisseia",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/c7btGYblBnfAaw713WvFM0Kimc7.jpg",
+        "posterPath": "/m0ehGErq8GTLK4WZxaq9QLGAR3u.jpg"
+      },
+      {
+        "id": 290826,
+        "firstAirDate": "2026-11-23",
+        "genreIds": [
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Dig",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Dig",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/8onvZbxTmP3XpuzKfLsBSm3WXMg.jpg",
+        "posterPath": "/l44uAt5yfDOxJeiB0t3B6xNlbxu.jpg"
+      },
+      {
+        "id": 1595124,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          10751,
+          35,
+          12,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Steps",
+        "overview": "Nesta comédia de ação diferente e encantadora, Lilith, a meia-irmã \"malvada\" da Cinderela, rouba a varinha da Fada Madrinha e vira do avesso a clássica história.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-20",
+        "title": "Tipo Irmãs",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/g1bEboMx1a8JCg1jXeDCh24RtgW.jpg",
+        "posterPath": "/fLOzL7A81v6V0BKWXXjfeT1ehkw.jpg"
+      },
+      {
+        "id": 969681,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Spider-Man: Brand New Day",
+        "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
+        "popularity": "<number>",
+        "releaseDate": "2026-07-29",
+        "title": "Homem-Aranha: Um Novo Dia",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/subj7knTn4DeS6KS7qI66EQKe9i.jpg",
+        "posterPath": "/x0nvYzQpyJc5pdT9lMnkMuYAg0O.jpg"
+      },
+      {
+        "id": 1538497,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          16,
+          10751,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Hexed",
+        "overview": "Uma adolescente desajeitada e sua mãe perfeccionista descobrem que suas peculiaridades podem ser poderes mágicos, transformando suas vidas e revelando um reino mágico oculto.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-25",
+        "title": "Enfeitiçadas: Bem-vindos a Hexe",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/eMcrgrIyeAgMHS5R9LltDnuxB5R.jpg",
+        "posterPath": "/lhDdE2Uvis4Khtr1o366cAbnb57.jpg"
+      },
+      {
+        "id": 247718,
+        "firstAirDate": "2025-03-30",
+        "genreIds": [
+          80,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Terra da Máfia",
+        "originCountry": [
+          "GB",
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "MobLand",
+        "overview": "O poder está em disputa quando duas famílias do crime se chocam numa batalha que ameaça derrubar impérios e arruinar vidas. No meio está Harry Da Souza, um \"resolvedor de problemas\" que sabe bem onde a lealdade está quando as forças opostas colidem.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/h0OC7ouop8YLwbAVfS3UUE2Lw4T.jpg",
+        "posterPath": "/jM7bH9b9QT22PtkTyHzxbXx4lDI.jpg"
+      },
+      {
+        "id": 291507,
+        "firstAirDate": "2026-11-11",
+        "genreIds": [
+          9648,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "O Corpo",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Body",
+        "overview": "Na noite de Halloween, as garotas de um grupo de dança são tomadas por desejos profanos, visões fantasmagóricas e culpa católica depois que um ritual de iniciação dá errado.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/hYJqUoXRZnodGxgVZTM8uwr5kbC.jpg",
+        "posterPath": "/iHG87S3P8409qOFtYA616BiNLPj.jpg"
+      },
+      {
+        "id": 1170608,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Dune: Part Three",
+        "overview": "Na qualidade de Imperador, Paul Atreides debate-se com as consequências da sua ascensão ao poder, enquanto conspirações políticas e uma guerra santa que se estende por toda a galáxia ameaçam o futuro que só ele consegue prever.",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-15",
+        "title": "Duna: Parte Três",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/i5E9H7Ik0u61ylDDTbmUpTL3Yw.jpg",
+        "posterPath": "/8WBjwT8TBCt5PCFHjmBeb1St8BS.jpg"
+      },
+      {
+        "id": 84773,
+        "firstAirDate": "2022-09-01",
+        "genreIds": [
+          10759,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "O Senhor dos Anéis: Os Anéis de Poder",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Lord of the Rings: The Rings of Power",
+        "overview": "Tendo início em uma época de relativa paz, a série acompanha um grupo de personagens que enfrenta o ressurgimento do mal na Terra-média. Das profundezas escuras das Montanhas de Névoa, das majestosas florestas de Lindon, do belíssimo reino da ilha de Númenor, até os confins do mapa, esses reinos e personagens criarão legados que permanecerão vivos muito além de suas partidas.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/i1phX1JpaqSnHBBGta6LBFYVCZq.jpg",
+        "posterPath": "/8FPCnfOftiLTHg5wnJxVdtlF8EN.jpg"
+      },
+      {
+        "id": 300523,
+        "firstAirDate": "2026-11-20",
+        "genreIds": [
+          80,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Estrada das Lágrimas",
+        "originCountry": [
+          "KR"
+        ],
+        "originalLanguage": "ko",
+        "originalName": "푸른길",
+        "overview": "Dois detetives tentam solucionar assassinatos brutais e mensagens enigmáticas que surgem em dois países. Só que a verdade está mais perto do que eles imaginam.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/7ojpD6ARKYhRxnsjzMIrorOfj4T.jpg",
+        "posterPath": "/c3kKwzYpUvtLMCtfmrDPqphsZrc.jpg"
+      },
+      {
+        "id": 1400336,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          35,
+          10749
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Focker In-Law",
+        "overview": "Henry, filho de Greg e Pam Focker, enfrenta o caos familiar ao decidir se casar com uma mulher de personalidade forte que parece ser totalmente incompatível com ele.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-21",
+        "title": "Entrando Numa Grande Fria",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/nubnNXuMArUhiDW1nUevGsG65x9.jpg",
+        "posterPath": "/aoJYSUEBOS1MYEf4nqjsH0K3PWB.jpg"
+      },
+      {
+        "id": 103540,
+        "firstAirDate": "2023-12-19",
+        "genreIds": [
+          10759,
+          10765,
+          18,
+          10751
+        ],
+        "mediaType": "tv",
+        "name": "Percy Jackson e os Olimpianos",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Percy Jackson and the Olympians",
+        "overview": "Percy Jackson terá uma missão perigosa. Enquanto enfrenta monstros e engana deuses, ele terá uma jornada através dos EUA para devolver o raio-mestre de Zeus e impedir uma guerra iminente. Com a ajuda de seus colegas de missão, Annabeth e Grover, a jornada de Percy o deixará mais próximo das respostas das seguintes perguntas: \"como se encaixar num mundo onde ele se sente deslocado?\" e \"qual será o seu futuro?\".",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/dLIKNqBi9L1cVbwuniXkaNOsIXg.jpg",
+        "posterPath": "/i30zp0HtZ7FicUn065xrhnYKN90.jpg"
+      },
+      {
+        "id": 303552,
+        "firstAirDate": "2026-11-23",
+        "genreIds": [
+          80,
+          9648,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "대리수능",
+        "originCountry": [
+          "KR"
+        ],
+        "originalLanguage": "ko",
+        "originalName": "대리수능",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/31kyh4GXFgv0T7I2y9pwT5LFbUC.jpg",
+        "posterPath": "/oz3eIoEpmPqeu0qvaylynGbxCL5.jpg"
+      },
+      {
+        "id": 340615,
+        "firstAirDate": "2026-11-23",
+        "genreIds": [
+          80,
+          99,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Os Julgamentos de Karen Read",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Trials of Karen Read",
+        "overview": "Uma série de documentos examinando a morte do policial John O'Keefe de Boston e o polêmico julgamento da namorada Karen Read por seu assassinato. O caso terminou com um júri empatado em 2024, com os promotores buscando um novo julgamento enquanto a defesa de Read pretendia rejeitar as acusações.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/bn3UWOaVNFPXNOJhuL42W67CSKb.jpg",
+        "posterPath": "/876SDnMg7mRIgG1HEH1EtZ7ec9D.jpg"
+      },
+      {
+        "id": 1568060,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          10749,
+          53
+        ],
+        "originalLanguage": "es",
+        "originalTitle": "Perfectos mentirosos",
+        "overview": "Jude Derry chega à exclusiva Universidade de Tagus com uma missão secreta: se infiltrar no círculo dos irmãos Cash e descobrir a verdade sobre a morte do irmão dela. O que começa como vingança vira um perigoso triângulo de sedução, atração proibida e mentiras, que a empurra rumo a uma verdade para a qual talvez ela não esteja preparada. Baseado no romance de Alex Mírez.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-20",
+        "title": "Perfeitos Mentirosos",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/mdBElS5YjpZPkB9DNYjgxwWgXcv.jpg",
+        "posterPath": "/lKgbxuLuupPgIUAw0Ren7ZlOHLg.jpg"
+      },
+      {
+        "id": 1381071,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          27,
+          28
+        ],
+        "originalLanguage": "ja",
+        "originalTitle": "ゴジラ-0.0",
+        "overview": "A guerra reduziu o Japão a zero, e o Godzilla mergulhou-o no negativo. Passaram-se dois anos desde então, e o país tem enfrentado lutas agonizantes para alcançar a recuperação e, finalmente, voltar à vida normal. No momento em que a humanidade conseguiu se agarrar a uma paz conquistada com dificuldade, surge uma nova ameaça, esmagando a esperança num instante.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-03",
+        "title": "Godzilla Minus Zero",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/oqrYIDH4tvfEzPe1yqT4jzmAWHQ.jpg",
+        "posterPath": "/ebVZ8n64rtHsSItTei4EgTKzPVu.jpg"
+      }
+    ]
+  }
+}

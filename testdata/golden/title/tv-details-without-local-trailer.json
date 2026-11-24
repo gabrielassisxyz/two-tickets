@@ -1,0 +1,2676 @@
+{
+  "case": "tv-details-without-local-trailer",
+  "family": "title",
+  "request": "GET /api/v1/tv/241554",
+  "fixtures": [
+    "tv/details-en-without-local-trailer",
+    "tv/details-without-local-trailer",
+    "tv/videos-en-without-local-trailer"
+  ],
+  "status": 200,
+  "body": {
+    "createdBy": [
+      {
+        "id": 3288,
+        "credit_id": "682585a4b90c27d095ada261",
+        "name": "Chris Weitz",
+        "original_name": "Chris Weitz",
+        "gender": 2,
+        "profile_path": "/u0zSPgtetcsRpqwUqNtVkBYPAnU.jpg"
+      },
+      {
+        "id": 3289,
+        "credit_id": "682585aaf603e29841767c23",
+        "name": "Paul Weitz",
+        "original_name": "Paul Weitz",
+        "gender": 2,
+        "profile_path": "/54Np4lBqGM36uwpzRc4KztJxGJz.jpg"
+      }
+    ],
+    "episodeRunTime": [],
+    "firstAirDate": "2025-05-15",
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comédia"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10765,
+        "name": "Sci-Fi & Fantasy"
+      }
+    ],
+    "relatedVideos": [
+      {
+        "site": "YouTube",
+        "key": "vEioDeOiqEs",
+        "name": "Official Trailer",
+        "size": 1080,
+        "type": "Trailer",
+        "url": "https://www.youtube.com/watch?v=vEioDeOiqEs"
+      }
+    ],
+    "homepage": "https://tv.apple.com/show/umc.cmc.5owrzntj9v1gpg31wshflud03",
+    "id": 241554,
+    "inProduction": true,
+    "languages": [
+      "en"
+    ],
+    "lastAirDate": "2025-07-10",
+    "name": "Diários de um Robô-Assassino",
+    "networks": [
+      {
+        "id": 2552,
+        "name": "Apple TV",
+        "originCountry": "",
+        "logoPath": "/bngHRFi794mnMq34gfVcm9nDxN1.png"
+      }
+    ],
+    "numberOfEpisodes": 10,
+    "numberOfSeasons": 1,
+    "originCountry": [
+      "US"
+    ],
+    "originalLanguage": "en",
+    "originalName": "Murderbot",
+    "tagline": "Um robô esconde seu livre arbítrio e paixão por novelas em um futuro sombrio e engraçado.",
+    "overview": "Em um futuro high-tech, um robô de segurança rebelde secretamente adquire livre arbítrio. Para se manter escondido, ele acaba, contra sua vontade, participando de uma missão para proteger cientistas em um planeta perigoso... mesmo que tudo o que queria era maratonar suas novelas.",
+    "popularity": "<number>",
+    "productionCompanies": [
+      {
+        "id": 1473,
+        "name": "Depth of Field",
+        "originCountry": "US",
+        "logoPath": null
+      },
+      {
+        "id": 423,
+        "name": "Phantom Four",
+        "originCountry": "US",
+        "logoPath": "/uvA6e2O31qaonsbYd8tjvgqmNXh.png"
+      },
+      {
+        "id": 228633,
+        "name": "Paramount Television Studios",
+        "originCountry": "US",
+        "logoPath": "/of4mmVt6egYaO9oERJbuUxMOTkj.png"
+      },
+      {
+        "id": 1081,
+        "name": "CBS Studios",
+        "originCountry": "US",
+        "logoPath": "/19kn4jVvpc3sAL3YpZNb3elhSMl.png"
+      }
+    ],
+    "productionCountries": [
+      {
+        "iso_3166_1": "US",
+        "name": "United States of America"
+      }
+    ],
+    "contentRatings": {
+      "results": [
+        {
+          "descriptors": [],
+          "iso_3166_1": "US",
+          "rating": "TV-MA"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "PR",
+          "rating": "TV-MA"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "VI",
+          "rating": "TV-MA"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "MX",
+          "rating": "B-15"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "ES",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "AR",
+          "rating": "SAM 16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "AT",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "AU",
+          "rating": "MA 15+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "BE",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "BG",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "BR",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "CA",
+          "rating": "18+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "CH",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "CL",
+          "rating": "R"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "CZ",
+          "rating": "15+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "DE",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "DK",
+          "rating": "15"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "FI",
+          "rating": "K16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "FR",
+          "rating": "12"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "GB",
+          "rating": "15"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "GR",
+          "rating": "18"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "HU",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "IE",
+          "rating": "15"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "IL",
+          "rating": "18+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "IN",
+          "rating": "A"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "IT",
+          "rating": "VM14"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "LT",
+          "rating": "N-14"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "LU",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "MY",
+          "rating": "18"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "NL",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "NO",
+          "rating": "15"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "NZ",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "PH",
+          "rating": "SPG"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "PL",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "PT",
+          "rating": "16"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "SE",
+          "rating": "Från 15 år"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "SG",
+          "rating": "M18"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "SK",
+          "rating": "15"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "TH",
+          "rating": "น 18+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "TW",
+          "rating": "15+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "UA",
+          "rating": "18+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "ZA",
+          "rating": "18"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "KR",
+          "rating": "19"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "RU",
+          "rating": "18+"
+        },
+        {
+          "descriptors": [],
+          "iso_3166_1": "RO",
+          "rating": "15"
+        },
+        {
+          "descriptors": [
+            "Negative examples",
+            "Violence / Horror",
+            "Sexuality"
+          ],
+          "iso_3166_1": "TR",
+          "rating": "18+"
+        }
+      ]
+    },
+    "spokenLanguages": [
+      {
+        "englishName": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      }
+    ],
+    "seasons": [
+      {
+        "airDate": "2025-05-15",
+        "episodeCount": 10,
+        "id": 369826,
+        "name": "Temporada 1",
+        "overview": "",
+        "seasonNumber": 1,
+        "posterPath": "/87eh9S1ibgEt1L4yhAbcMITbM7K.jpg"
+      }
+    ],
+    "status": "Returning Series",
+    "type": "Scripted",
+    "voteAverage": "<number>",
+    "voteCount": "<number>",
+    "backdropPath": "/if4r7bXrDH50GhNwCo3Bz8F2LOg.jpg",
+    "lastEpisodeToAir": {
+      "id": 5995963,
+      "airDate": "2025-07-10",
+      "episodeNumber": 10,
+      "name": "O perímetro",
+      "overview": "O destino do Robô-Assassino está por um fio. No Corporação aliança, a PresAux faz uma solicitação ousada.",
+      "productionCode": "",
+      "seasonNumber": 1,
+      "showId": 241554,
+      "voteAverage": "<number>",
+      "voteCount": "<number>",
+      "stillPath": "/shtg4jBLkdAP4ATzTUHUA2f3d9e.jpg"
+    },
+    "posterPath": "/uPUBMzhNn2xhQoGO8uf3wFKpBdl.jpg",
+    "credits": {
+      "cast": [
+        {
+          "character": "Murderbot",
+          "creditId": "657b5484a1d33229dd50d300",
+          "id": 28846,
+          "name": "Alexander Skarsgård",
+          "order": 0,
+          "gender": 2,
+          "profilePath": "/6VNNddrSrIVgdzhXr4Zg89gmOzY.jpg"
+        },
+        {
+          "character": "Mensah",
+          "creditId": "65e2164ff85958018651880a",
+          "id": 517103,
+          "name": "Noma Dumezweni",
+          "order": 1,
+          "gender": 1,
+          "profilePath": "/fDEOIZfAQoOZKH1o4xn7qgOoTyM.jpg"
+        },
+        {
+          "character": "Gurathin",
+          "creditId": "65df716c8e87020184054465",
+          "id": 83854,
+          "name": "David Dastmalchian",
+          "order": 2,
+          "gender": 2,
+          "profilePath": "/eLafwcpL64CqzwjjSgKpO7Rv4ae.jpg"
+        },
+        {
+          "character": "Pin Lee",
+          "creditId": "65ea25f66beaea01867ad310",
+          "id": 3730831,
+          "name": "Sabrina Wu",
+          "order": 3,
+          "gender": 3,
+          "profilePath": "/yEu2hVOekPVFf83wpQbmgaUjFce.jpg"
+        },
+        {
+          "character": "Ratthi",
+          "creditId": "65ea2636389da10180d8495d",
+          "id": 3962153,
+          "name": "Akshay Khanna",
+          "order": 4,
+          "gender": 2,
+          "profilePath": "/L2JWyOTwPRLHBLV7xUmDOcRHU3.jpg"
+        },
+        {
+          "character": "Bharadwaj",
+          "creditId": "65ea263ca2423201613291ad",
+          "id": 220615,
+          "name": "Tamara Podemski",
+          "order": 5,
+          "gender": 1,
+          "profilePath": "/nqcdt9ko2XGA5XXqGX6ybxD5AKw.jpg"
+        },
+        {
+          "character": "Arada",
+          "creditId": "65ea262aaf95900184ddd1b7",
+          "id": 110911,
+          "name": "Tattiawna Jones",
+          "order": 6,
+          "gender": 1,
+          "profilePath": "/usiGiuzDFzESXbe38zkhpdOE9kF.jpg"
+        },
+        {
+          "character": "Captain",
+          "creditId": "682704c14afff0afa72d825f",
+          "id": 68842,
+          "name": "John Cho",
+          "order": 500,
+          "gender": 2,
+          "profilePath": "/4Lar4uy8gk78cEocq6ERPRFWt3e.jpg"
+        },
+        {
+          "character": "Navigation Unit",
+          "creditId": "682704d56479b8d42a768257",
+          "id": 206425,
+          "name": "DeWanda Wise",
+          "order": 503,
+          "gender": 1,
+          "profilePath": "/daQjduDoTzaDTC6SIsGWs55dzcM.jpg"
+        },
+        {
+          "character": "Lieutenant",
+          "creditId": "682704cc10285256852d3409",
+          "id": 9048,
+          "name": "Clark Gregg",
+          "order": 501,
+          "gender": 2,
+          "profilePath": "/7t2uHG5m4CN2lyYnGfZO54Hn3O0.jpg"
+        },
+        {
+          "character": "Navigation Officer",
+          "creditId": "682704d064e941df734b58b2",
+          "id": 58737,
+          "name": "Jack McBrayer",
+          "order": 502,
+          "gender": 2,
+          "profilePath": "/cbr26xDPEiOuYQxggtCPbu5xhDU.jpg"
+        },
+        {
+          "character": "Valen (Company Suit #1)",
+          "creditId": "68281bcb4321d6b1069e2b16",
+          "id": 1912287,
+          "name": "Sochi Fried",
+          "order": 505,
+          "gender": 1,
+          "profilePath": "/uH0cyKFZP7uDPsSI4nUGs7k2x5l.jpg"
+        },
+        {
+          "character": "Company Suit #3",
+          "creditId": "68281bf89ab81af505f550ba",
+          "id": 166522,
+          "name": "Andrew Moodie",
+          "order": 507,
+          "gender": 2,
+          "profilePath": "/3Rr4wsVHZDdjVZbzcz8uv58kXM7.jpg"
+        },
+        {
+          "character": "Aster (Company Suit #2)",
+          "creditId": "68281c255f05a71dd42f68f5",
+          "id": 4522323,
+          "name": "Devin Ross",
+          "order": 509,
+          "gender": 2,
+          "profilePath": "/nw0Ku783YWdYddaLiKE1uq69x2b.jpg"
+        },
+        {
+          "character": "Mining Station Miner #3",
+          "creditId": "68281c4bbdd07163dd2f69b5",
+          "id": 3103750,
+          "name": "Brandon Zakkai",
+          "order": 511,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "SM - Colony Solicitor",
+          "creditId": "6831e98b5f647053e7054a0c",
+          "id": 1224669,
+          "name": "Ron Kennell",
+          "order": 514,
+          "gender": 2,
+          "profilePath": "/tjenFDHhjKbAxCNrwJA0UoRGBAo.jpg"
+        },
+        {
+          "character": "Leebeebee",
+          "creditId": "6843c68cebd7244e6e300f0e",
+          "id": 1489288,
+          "name": "Anna Konkle",
+          "order": 523,
+          "gender": 1,
+          "profilePath": "/5eXyNxWOESSAdDjVJyrW5SJEDzu.jpg"
+        },
+        {
+          "character": "Rita",
+          "creditId": "685ee352c07d2e5cf0303760",
+          "id": 1232769,
+          "name": "Amanda Brugel",
+          "order": 524,
+          "gender": 1,
+          "profilePath": "/3W1RR8CzP5uk6sFt92i1QyjGLRT.jpg"
+        },
+        {
+          "character": "Venenek",
+          "creditId": "68281bb180692bab55648284",
+          "id": 1451899,
+          "name": "Josh Cruddas",
+          "order": 504,
+          "gender": 2,
+          "profilePath": "/wYnmRqmQaKhaymCRoF02ZSjCWsh.jpg"
+        },
+        {
+          "character": "Mining Station Miner #2",
+          "creditId": "68281be45613abdd990bccf1",
+          "id": 2581758,
+          "name": "Julie Mahendran",
+          "order": 506,
+          "gender": 1,
+          "profilePath": "/1LXkL9rsXgWhG2nQeTJPiPbONyK.jpg"
+        },
+        {
+          "character": "Sepp",
+          "creditId": "68281c118e0013b8515b4e6e",
+          "id": 3245581,
+          "name": "Maroc Rey",
+          "order": 508,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "Mining Station Miner #1",
+          "creditId": "68281c38d695b950850bccdd",
+          "id": 3885167,
+          "name": "Aaron Walpole",
+          "order": 510,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "SM - Alderman Friess",
+          "creditId": "68282853701b4093605b4ef2",
+          "id": 2400479,
+          "name": "Alex Cruz",
+          "order": 512,
+          "gender": 2,
+          "profilePath": "/5sxjvttSMVoVP8QgNAicnSngDA4.jpg"
+        },
+        {
+          "character": "SM - Rescue Worker",
+          "creditId": "68282866d38bca193d5b4e9c",
+          "id": 1772665,
+          "name": "Chantria Tram",
+          "order": 513,
+          "gender": 1,
+          "profilePath": "/936Bejq9dhvcNKmH3n1zpfIZijV.jpg"
+        },
+        {
+          "character": "Iverson Missouri",
+          "creditId": "6831e99ea64da04346b6aea2",
+          "id": 2555666,
+          "name": "Leah Kilpatrick",
+          "order": 515,
+          "gender": 1,
+          "profilePath": "/cJm9LS9t9MMHSU2y6JfI2rJpi14.jpg"
+        },
+        {
+          "character": "SG - Haptic Rigby",
+          "creditId": "6831e9b23fad04dca6a864e3",
+          "id": 3847872,
+          "name": "Alicia Rosario",
+          "order": 516,
+          "gender": 1,
+          "profilePath": "/5VLU9dlYndDjH87SF8FimVgIogG.jpg"
+        },
+        {
+          "character": "Lab Tech #2",
+          "creditId": "6839249bd790325c69080829",
+          "id": 131498,
+          "name": "Albert Chung",
+          "order": 517,
+          "gender": 2,
+          "profilePath": "/qgCjXse2GdnwEYYl9dOlqJD6FcS.jpg"
+        },
+        {
+          "character": "Programmer #2",
+          "creditId": "683924ce72ae797df13d2007",
+          "id": 1844067,
+          "name": "Krista Jang",
+          "order": 518,
+          "gender": 1,
+          "profilePath": "/w8bs9FP16iCAGtDV2VgUO2Xg3cc.jpg"
+        },
+        {
+          "character": "Lab Tech #1",
+          "creditId": "6839256f471bbb90ee968e2f",
+          "id": 5472026,
+          "name": "Liz Johnston",
+          "order": 519,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "Arms Supervisor",
+          "creditId": "683925917b81051e328fe5a6",
+          "id": 1470382,
+          "name": "Jai Jai Jones",
+          "order": 520,
+          "gender": 2,
+          "profilePath": "/wWW1ESMGX9ikXtGmy9qeFLeRAmq.jpg"
+        },
+        {
+          "character": "Supervisor",
+          "creditId": "683925b3da3da294fa55980e",
+          "id": 1482610,
+          "name": "Jameson Kraemer",
+          "order": 521,
+          "gender": 2,
+          "profilePath": "/ActECoFGR79aFjDqB5Thofq4c3B.jpg"
+        },
+        {
+          "character": "Worker",
+          "creditId": "683925d63c43c04ceb0807f6",
+          "id": 2242093,
+          "name": "Durae McFarlane",
+          "order": 522,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "GrayCris Worker",
+          "creditId": "6868ddec5859397a31cedab1",
+          "id": 43281,
+          "name": "Christopher Cordell",
+          "order": 525,
+          "gender": 2,
+          "profilePath": "/w7XzPVH7LFhlVyLm1VPVOKhK0MI.jpg"
+        },
+        {
+          "character": "GrayCris Yellow",
+          "creditId": "6868de0b29130765637025cc",
+          "id": 141217,
+          "name": "David Reale",
+          "order": 526,
+          "gender": 2,
+          "profilePath": "/6Mo33Tpd9Ou7nRjKjZ1iMBc2jq0.jpg"
+        },
+        {
+          "character": "GrayCris Green",
+          "creditId": "6868de1c4b86d69604cedaa2",
+          "id": 1834862,
+          "name": "Afton Rentz",
+          "order": 527,
+          "gender": 1,
+          "profilePath": "/j7tBxaCf7eYhk4gJ5FClLmWAwvb.jpg"
+        },
+        {
+          "character": "Another Reporter",
+          "creditId": "687159da6ddea7161651fbd9",
+          "id": 1756356,
+          "name": "Gurdeep Ahluwalia",
+          "order": 528,
+          "gender": 0,
+          "profilePath": "/yMwMmHxRSQgJeEaoRaYVeiooPo.jpg"
+        },
+        {
+          "character": "Technician",
+          "creditId": "687159f25becaf12ad10546c",
+          "id": 2267696,
+          "name": "Jim Armstrong",
+          "order": 529,
+          "gender": 2,
+          "profilePath": "/tTwjTWDPWK3HkWXE4qcpzCv1yQ.jpg"
+        },
+        {
+          "character": "Company Rep",
+          "creditId": "687159fe88dc95a8ddba2f0d",
+          "id": 20180,
+          "name": "Stephanie Belding",
+          "order": 530,
+          "gender": 1,
+          "profilePath": "/4WIJ20f0v2EJ6SurBaMA6qecCE5.jpg"
+        },
+        {
+          "character": "Officer",
+          "creditId": "68715a092150c1dcde6e9cf4",
+          "id": 63546,
+          "name": "Shane Daly",
+          "order": 531,
+          "gender": 2,
+          "profilePath": "/7E6fN6QhqATOtTboSYY4eNNfK4S.jpg"
+        },
+        {
+          "character": "Landers",
+          "creditId": "68715a92d3d9dd5c3eed717f",
+          "id": 54193,
+          "name": "Sergio Di Zio",
+          "order": 532,
+          "gender": 2,
+          "profilePath": "/e5sQM8rEXQW1UiVgzYM5C4GHScF.jpg"
+        },
+        {
+          "character": "Press Conference Reporter / Reporter",
+          "creditId": "68715aa388dc95a8ddba2f12",
+          "id": 1746410,
+          "name": "Nneka Elliott",
+          "order": 533,
+          "gender": 1,
+          "profilePath": "/lvKrkICabtejk9Wp2X4Fvz6CsAV.jpg"
+        },
+        {
+          "character": "Engineer",
+          "creditId": "68715abeba81d2d162ed733b",
+          "id": 64511,
+          "name": "Colin Glazer",
+          "order": 534,
+          "gender": 2,
+          "profilePath": "/iUiYYLPg0v8hHiW1DuFIxSv9iSF.jpg"
+        },
+        {
+          "character": "Press Conference Reporter #2",
+          "creditId": "68715ad15cfab44819ed75b2",
+          "id": 5558238,
+          "name": "Kenzie Heaven Grist",
+          "order": 535,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "Landers Kid",
+          "creditId": "68715ade900a7bccc4ed7196",
+          "id": 3273840,
+          "name": "Taj Levey",
+          "order": 536,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "Third Reporter",
+          "creditId": "68715afcd150c3cc65a9797a",
+          "id": 5558239,
+          "name": "Naomi Ngebulana",
+          "order": 537,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "Company Lawyer (Vinland Kemben)",
+          "creditId": "68715b1a9b03a3748b6e9bb3",
+          "id": 1016019,
+          "name": "Neil Whitely",
+          "order": 538,
+          "gender": 2,
+          "profilePath": "/taPe9RjvEkgamMXiWqjC9EWSKRt.jpg"
+        },
+        {
+          "character": "Acid Tech",
+          "creditId": "68715b277b762aef729a5af2",
+          "id": 2854357,
+          "name": "Daniel Woodrow",
+          "order": 539,
+          "gender": 0,
+          "profilePath": "/aXVQ0EnUE9A6pjcZjFgqGHH4z4.jpg"
+        },
+        {
+          "character": "Spaceship Twodor Crew (uncredited)",
+          "creditId": "690cf98e89f199e787385332",
+          "id": 4602775,
+          "name": "Negin Kamali",
+          "order": 540,
+          "gender": 1,
+          "profilePath": "/on16xkJtnmZPI15vOydheQT0i1I.jpg"
+        },
+        {
+          "character": "GrayCris Red",
+          "creditId": "69d6c24ec7aba7bae6a875cf",
+          "id": 1843640,
+          "name": "DL MacDonald",
+          "order": 541,
+          "gender": 2,
+          "profilePath": "/5W94Zt9OBIaMsGMBEP30NT9nPG3.jpg"
+        }
+      ],
+      "crew": [
+        {
+          "creditId": "657b54b07ecd28013b3ec883",
+          "department": "Production",
+          "id": 28846,
+          "job": "Executive Producer",
+          "name": "Alexander Skarsgård",
+          "gender": 2,
+          "profilePath": "/6VNNddrSrIVgdzhXr4Zg89gmOzY.jpg"
+        },
+        {
+          "creditId": "657b552aa1d33229e3a969d9",
+          "department": "Production",
+          "id": 45584,
+          "job": "Executive Producer",
+          "name": "Andrew Miano",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "657b553a176a9400c448e311",
+          "department": "Production",
+          "id": 3893,
+          "job": "Executive Producer",
+          "name": "David S. Goyer",
+          "gender": 2,
+          "profilePath": "/gf44Hr3HJuWK7ZMHQKzDNBe0ylI.jpg"
+        },
+        {
+          "creditId": "657b55458e2ba600c4f12b7d",
+          "department": "Production",
+          "id": 2125797,
+          "job": "Executive Producer",
+          "name": "Keith Levine",
+          "gender": 2,
+          "profilePath": "/s1Hw6zv701OzrVXDPCl27nuwnMO.jpg"
+        },
+        {
+          "creditId": "657b55637a3c52010cdfb39f",
+          "department": "Production",
+          "id": 4430260,
+          "job": "Consulting Producer",
+          "name": "Martha Wells",
+          "gender": 1,
+          "profilePath": "/3i9wDhRf6Sb8ydwmTtIvJ77EATA.jpg"
+        },
+        {
+          "creditId": "657b556aec8a4300c33b59cf",
+          "department": "Writing",
+          "id": 4430260,
+          "job": "Book",
+          "name": "Martha Wells",
+          "gender": 1,
+          "profilePath": "/3i9wDhRf6Sb8ydwmTtIvJ77EATA.jpg"
+        },
+        {
+          "creditId": "65e002f0a39d0b0163077b36",
+          "department": "Production",
+          "id": 6479,
+          "job": "Casting",
+          "name": "Sharon Bialy",
+          "gender": 1,
+          "profilePath": "/uOex6LpaQYncD0sQfVYD1frI5uJ.jpg"
+        },
+        {
+          "creditId": "65e002fd5294e701634e7743",
+          "department": "Production",
+          "id": 1537675,
+          "job": "Casting",
+          "name": "Russell Scott",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6660ac8e2be8fdd20f575816",
+          "department": "Art",
+          "id": 33455,
+          "job": "Production Design",
+          "name": "Sue Chan",
+          "gender": 1,
+          "profilePath": "/kpeJdh5ZYDtWIFhsa4ej687UOmJ.jpg"
+        },
+        {
+          "creditId": "671195a11f0ea4714edbccda",
+          "department": "Costume & Make-Up",
+          "id": 9551,
+          "job": "Costume Design",
+          "name": "Laura Jean Shannon",
+          "gender": 1,
+          "profilePath": "/e7Cmmphpmw5SBwg5ypCY8zsI77o.jpg"
+        },
+        {
+          "creditId": "6775c3055b8f422b6012d487",
+          "department": "Art",
+          "id": 2010383,
+          "job": "Art Direction",
+          "name": "Karl Crosby",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6775c313185486515d129cab",
+          "department": "Art",
+          "id": 2183740,
+          "job": "Art Direction",
+          "name": "Barbara Agbaje",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "6775c3267d1bc87de761e196",
+          "department": "Art",
+          "id": 1517637,
+          "job": "Set Decoration",
+          "name": "Rob Hepburn",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6775c3387d1bc87de761e1a4",
+          "department": "Costume & Make-Up",
+          "id": 1696938,
+          "job": "Makeup Artist",
+          "name": "Silvia Platsis",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "6775c3a42efbf3b41d92b6a2",
+          "department": "Camera",
+          "id": 986472,
+          "job": "Director of Photography",
+          "name": "Tobias Datum",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "67b90e2f1919d61ba8f4975d",
+          "department": "Sound",
+          "id": 2515868,
+          "job": "Original Music Composer",
+          "name": "Amanda Jones",
+          "gender": 1,
+          "profilePath": "/hrhbEDsmHTC2pZAZbHa75nll4GR.jpg"
+        },
+        {
+          "creditId": "67fadcf2aacf7cfb2699203f",
+          "department": "Visual Effects",
+          "id": 1418464,
+          "job": "Visual Effects Supervisor",
+          "name": "Sean Andrew Faden",
+          "gender": 2,
+          "profilePath": "/n1Pidy6zfPCsDz1H518NICJHOJW.jpg"
+        },
+        {
+          "creditId": "67fadd05d3ab7d7a8badf5b9",
+          "department": "Visual Effects",
+          "id": 2247855,
+          "job": "Visual Effects Producer",
+          "name": "Danny McNair",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6805499cb659822812ee29a4",
+          "department": "Visual Effects",
+          "id": 4748155,
+          "job": "Visual Effects",
+          "name": "Mario Beck",
+          "gender": 2,
+          "profilePath": "/kPLglVzagkzAyNEBCz8eMyNAE78.jpg"
+        },
+        {
+          "creditId": "682704f99dc9d442965a3fbe",
+          "department": "Production",
+          "id": 959387,
+          "job": "Casting",
+          "name": "Sherry Thomas",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "682705154f8ca297dc4b5adc",
+          "department": "Costume & Make-Up",
+          "id": 1326113,
+          "job": "Costume Design",
+          "name": "Carrie Grace",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "682705304afff0afa72d8263",
+          "department": "Production",
+          "id": 1237519,
+          "job": "Producer",
+          "name": "Amanda Lencioni",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "6827053fbadcd951ef4b5d4d",
+          "department": "Production",
+          "id": 1881033,
+          "job": "Co-Executive Producer",
+          "name": "Dan Balgoyen",
+          "gender": 2,
+          "profilePath": "/8sPhiFHRD9zc2XLFq2DxYPU1rTW.jpg"
+        },
+        {
+          "creditId": "6827054300df2bd2f4a1789e",
+          "department": "Production",
+          "id": 3193739,
+          "job": "Co-Executive Producer",
+          "name": "Britta Rowings",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "682705be64e941df734b58bb",
+          "department": "Production",
+          "id": 1555765,
+          "job": "Co-Executive Producer",
+          "name": "Michael Wray",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6827061964e941df734b58bf",
+          "department": "Production",
+          "id": 73875,
+          "job": "Co-Executive Producer",
+          "name": "Toa Fraser",
+          "gender": 2,
+          "profilePath": "/qzG6o1uczG1ffBmdRcfF2cLGWIg.jpg"
+        },
+        {
+          "creditId": "6827062fb90c27d095ada804",
+          "department": "Production",
+          "id": 3288,
+          "job": "Executive Producer",
+          "name": "Chris Weitz",
+          "gender": 2,
+          "profilePath": "/u0zSPgtetcsRpqwUqNtVkBYPAnU.jpg"
+        },
+        {
+          "creditId": "68270635caa68780a5315d47",
+          "department": "Production",
+          "id": 3289,
+          "job": "Executive Producer",
+          "name": "Paul Weitz",
+          "gender": 2,
+          "profilePath": "/54Np4lBqGM36uwpzRc4KztJxGJz.jpg"
+        },
+        {
+          "creditId": "6849e495789ef510931eb63d",
+          "department": "Production",
+          "id": 3944192,
+          "job": "Associate Producer",
+          "name": "Joseph Keyes",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "68de7cd6a95abc20606a79ca",
+          "department": "Costume & Make-Up",
+          "id": 3865464,
+          "job": "Prosthetic Supervisor",
+          "name": "Daniel Baker",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "69a5789caac6e74d7de2bdc7",
+          "department": "Sound",
+          "id": 1978847,
+          "job": "Production Sound Mixer",
+          "name": "Michael LaCroix",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "69a578a03b8fd8a9c8418c72",
+          "department": "Sound",
+          "id": 2261487,
+          "job": "Sound Re-Recording Mixer",
+          "name": "Alexandra Fehrman",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "69a578a4a5cae8b639ff6a44",
+          "department": "Sound",
+          "id": 1455666,
+          "job": "Sound Re-Recording Mixer",
+          "name": "Emilie Corpuz",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "69a578a8d4c72c3b85c4bcf8",
+          "department": "Sound",
+          "id": 4351573,
+          "job": "Scoring Mixer",
+          "name": "Alvin Wee",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "69a578adafcb2d5c72e2befc",
+          "department": "Sound",
+          "id": 2219624,
+          "job": "ADR Mixer",
+          "name": "Sebastian Vaskio",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "69a578b5e15ee26ea7c17c76",
+          "department": "Sound",
+          "id": 2047746,
+          "job": "Foley Mixer",
+          "name": "Erik Culp",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a33baea1c79e9799ee3b007",
+          "department": "Art",
+          "id": 6293462,
+          "job": "Property Master",
+          "name": "Nick Whelan",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a33bb0d594bc27e77764a1b",
+          "department": "Camera",
+          "id": 1593344,
+          "job": "\"A\" Camera Operator",
+          "name": "Sasha Moric",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a33bb13e957c77c0b02f2b0",
+          "department": "Camera",
+          "id": 1593344,
+          "job": "Steadicam Operator",
+          "name": "Sasha Moric",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a33bb1f5e22d20be1638322",
+          "department": "Camera",
+          "id": 4140575,
+          "job": "\"B\" Camera Operator",
+          "name": "Greg Frankovich",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a33bb70405e3d33d6858de1",
+          "department": "Camera",
+          "id": 6293465,
+          "job": "Digital Imaging Technician",
+          "name": "Michael Fawcett",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a71b122f8ea7a0203a27e04",
+          "department": "Sound",
+          "id": 1445368,
+          "job": "Supervising Sound Editor",
+          "name": "Tyler Whitham",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a71b128e72f9e87c7b5eeb0",
+          "department": "Sound",
+          "id": 3983691,
+          "job": "Supervising Sound Editor",
+          "name": "Danielle McBride",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a71b145dffffff51253fe38",
+          "department": "Sound",
+          "id": 1593837,
+          "job": "Dialogue Editor",
+          "name": "Ève Corrêa-Guedes",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a71b14ce9adc830f3a27e08",
+          "department": "Sound",
+          "id": 2047747,
+          "job": "Sound Effects Editor",
+          "name": "Craig MacLellan",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a71b150eb9c1ca40c46ae95",
+          "department": "Sound",
+          "id": 3401694,
+          "job": "Music Editor",
+          "name": "Marcelle Simpson",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a71b155e72f9e87c7b5eeb4",
+          "department": "Sound",
+          "id": 1543670,
+          "job": "Music Editor",
+          "name": "Nicholas Fitzgerald",
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "creditId": "6a71b15f0f9b77870346b053",
+          "department": "Sound",
+          "id": 1699377,
+          "job": "Foley Artist",
+          "name": "John Elliot",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "6acaa744ffc6ec31fc3c6e6c",
+          "department": "Production",
+          "id": 190936,
+          "job": "Location Casting",
+          "name": "Jason Knight",
+          "gender": 2,
+          "profilePath": "/h7GzTnXfx73qCdUPylUxeYrNfaZ.jpg"
+        },
+        {
+          "creditId": "6acaa74d2beac9759363b5ad",
+          "department": "Production",
+          "id": 933333,
+          "job": "Location Casting",
+          "name": "John Buchan",
+          "gender": 2,
+          "profilePath": "/ddN6XClbwbiAlONc2FPGW1Q6NZp.jpg"
+        },
+        {
+          "creditId": "6acaa75175412120cc2dea71",
+          "department": "Production",
+          "id": 2304492,
+          "job": "Casting Associate",
+          "name": "Stacia Kimler",
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "creditId": "6aeb9b513a7e43a111aa3f44",
+          "department": "Art",
+          "id": 2753254,
+          "job": "Art Department Coordinator",
+          "name": "Sherouk Hasan",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "6af638b30e45d0065c9dd9d4",
+          "department": "Visual Effects",
+          "id": 6578749,
+          "job": "Rotoscoping Artist",
+          "name": "Daniel Santos",
+          "gender": 0,
+          "profilePath": null
+        }
+      ]
+    },
+    "externalIds": {
+      "facebookId": null,
+      "freebaseId": null,
+      "freebaseMid": null,
+      "imdbId": "tt30444310",
+      "instagramId": null,
+      "tvdbId": 443396,
+      "tvrageId": null,
+      "twitterId": null
+    },
+    "keywords": [
+      {
+        "id": 803,
+        "name": "android"
+      },
+      {
+        "id": 818,
+        "name": "based on novel or book"
+      },
+      {
+        "id": 18091,
+        "name": "free will"
+      },
+      {
+        "id": 159457,
+        "name": "security"
+      },
+      {
+        "id": 202760,
+        "name": "hopeless"
+      },
+      {
+        "id": 203322,
+        "name": "dramedy"
+      },
+      {
+        "id": 244256,
+        "name": "near future"
+      },
+      {
+        "id": 309270,
+        "name": "comedy thriller"
+      }
+    ],
+    "watchProviders": [
+      {
+        "iso_3166_1": "AE",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=AE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AG",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=AG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AR",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=AR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 62,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AT",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=AT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 2,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 131,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AU",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=AU",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 84,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "AZ",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=AZ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BE",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 51,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BG",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BH",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BH",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BM",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BM",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BO",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BO",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BR",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 72,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BS",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BS",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BY",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BY",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 2,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "BZ",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BZ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CA",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 1,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 121,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CH",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CH",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 2,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 7,
+            "logoPath": "/9DoQOfCz9S9j4cif3Cqx3ebk3FP.png",
+            "id": 210,
+            "name": "Sky"
+          },
+          {
+            "displayPriority": 94,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CL",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CL",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 45,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CO",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CO",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 47,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CR",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CV",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CV",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CY",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CY",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "CZ",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CZ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 24,
+            "logoPath": "/gliWKhLJVdm7QwL1braBCRko5dx.png",
+            "id": 381,
+            "name": "Canal+"
+          },
+          {
+            "displayPriority": 47,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "DE",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=DE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 190,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "DK",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=DK",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 67,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "DO",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=DO",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "EC",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=EC",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "EE",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=EE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "EG",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=EG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "ES",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=ES",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 2,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 73,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "FI",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=FI",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 53,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "FJ",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=FJ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "FR",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=FR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 106,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GB",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=GB",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 119,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GG",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=GG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 81,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GH",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=GH",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GR",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=GR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 41,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GT",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=GT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "HK",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=HK",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "HN",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=HN",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "HU",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=HU",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 46,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "ID",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=ID",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IE",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=IE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 2,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 73,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IL",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=IL",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IN",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=IN",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 5,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 65,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IT",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=IT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 2,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 76,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "JO",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=JO",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "JP",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=JP",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 28,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "KR",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=KR",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 29,
+            "logoPath": "/w4ov8Zx73eu2TjHsDs5EmiuYKA4.png",
+            "id": 1883,
+            "name": "TVING"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "LB",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=LB",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "LT",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=LT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "LU",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=LU",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "LV",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=LV",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MD",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=MD",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MT",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=MT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MU",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=MU",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 2,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MX",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=MX",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 5,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 66,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MY",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=MY",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "MZ",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=MZ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "NI",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=NI",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "NL",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=NL",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 66,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "NO",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=NO",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 60,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "NZ",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=NZ",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 41,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "OM",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=OM",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PA",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=PA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PE",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=PE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PH",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=PH",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PL",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=PL",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 57,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PT",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=PT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 54,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "PY",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=PY",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "QA",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=QA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SA",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=SA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 4,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SE",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=SE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 57,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SG",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=SG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SI",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=SI",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SK",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=SK",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 34,
+            "logoPath": "/gliWKhLJVdm7QwL1braBCRko5dx.png",
+            "id": 381,
+            "name": "Canal+"
+          },
+          {
+            "displayPriority": 54,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "SV",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=SV",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "TH",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=TH",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "TT",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=TT",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "TW",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=TW",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "UA",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=UA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 2,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "UG",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=UG",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "US",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=US",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 7,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          },
+          {
+            "displayPriority": 217,
+            "logoPath": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+            "id": 2243,
+            "name": "Apple TV Amazon Channel"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "VE",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=VE",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 3,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "ZA",
+        "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=ZA",
+        "buy": [],
+        "flatrate": [
+          {
+            "displayPriority": 2,
+            "logoPath": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+            "id": 350,
+            "name": "Apple TV"
+          }
+        ]
+      }
+    ],
+    "onUserWatchlist": false
+  }
+}

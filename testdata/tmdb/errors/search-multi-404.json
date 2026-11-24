@@ -1,0 +1,20 @@
+{
+  "id": "errors/search-multi-404",
+  "request": {
+    "path": "/search/multi",
+    "params": {
+      "include_adult": "false",
+      "language": "pt-BR",
+      "page": "1",
+      "query": "cooper"
+    }
+  },
+  "response": {
+    "status": 404,
+    "body": {
+      "success": false,
+      "status_code": 34,
+      "status_message": "The resource you requested could not be found."
+    }
+  }
+}

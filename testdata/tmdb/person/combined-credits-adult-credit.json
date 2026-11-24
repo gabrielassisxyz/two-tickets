@@ -1,0 +1,530 @@
+{
+  "id": "person/combined-credits-adult-credit",
+  "request": {
+    "path": "/person/5225942/combined_credits",
+    "params": {
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "cast": [
+        {
+          "adult": true,
+          "backdrop_path": "/2KArIXEUQbLuCYPnvPfQAZqnHpg.jpg",
+          "genre_ids": [
+            10749,
+            18
+          ],
+          "id": 1316092,
+          "title": "“O Morro dos Ventos Uivantes”",
+          "original_language": "en",
+          "original_title": "“Wuthering Heights”",
+          "overview": "O órfão Heathcliff é acolhido ainda criança pela família Earnshaw e apaixona-se pela pequena Catherine. O afeto, embora correspondido, transforma-se num amor impossível. Tal vínculo devastador é envolto por uma atmosfera sombria e um teor dramático e audaz.",
+          "popularity": 13.5579,
+          "poster_path": "/762vOiAWzosAH95sKLzUqYaAoHR.jpg",
+          "release_date": "2026-02-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.626,
+          "vote_count": 1462,
+          "character": "Young Heathcliff",
+          "credit_id": "67bc05e6abeede36c44692ea",
+          "order": 10,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            18,
+            10402,
+            53
+          ],
+          "id": 1413113,
+          "title": "Cry to Heaven",
+          "original_language": "en",
+          "original_title": "Cry to Heaven",
+          "overview": "",
+          "popularity": 1.1987,
+          "poster_path": "/ps5wvCVpdNZv53YYTwh40tFYnQe.jpg",
+          "release_date": "",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0,
+          "character": "",
+          "credit_id": "69149451595b54d1ff31c47d",
+          "order": 9,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            53
+          ],
+          "id": 1684628,
+          "title": "Foxfinder",
+          "original_language": "en",
+          "original_title": "Foxfinder",
+          "overview": "",
+          "popularity": 0.5374,
+          "poster_path": "/h2mhHxsMHeLYTwUINTO7exzsDJf.jpg",
+          "release_date": "",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0,
+          "character": "William",
+          "credit_id": "69f2243dfbf66b5921f97b7f",
+          "order": 0,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            12
+          ],
+          "id": 1710881,
+          "title": "Treasure Island",
+          "original_language": "en",
+          "original_title": "Treasure Island",
+          "overview": "",
+          "popularity": 0.8595,
+          "poster_path": null,
+          "release_date": "2027-11-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0,
+          "character": "Jim Hawkins",
+          "credit_id": "6a8f948c119d389e74020b97",
+          "order": 0,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [],
+          "id": 1836800,
+          "title": "The Beatles - In My Life (Official Music Video starring Owen Cooper)",
+          "original_language": "en",
+          "original_title": "The Beatles - In My Life (Official Music Video starring Owen Cooper)",
+          "overview": "",
+          "popularity": 0.0709,
+          "poster_path": "/ocOHSI08MDBAEwxMYefdNnFZum.jpg",
+          "release_date": "",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0,
+          "character": "Hero",
+          "credit_id": "6b01fd8081d3651c441fa395",
+          "order": 0,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/llZodlkVKRkTdUsiRxvn8h80hhx.jpg",
+          "genre_ids": [
+            18,
+            80
+          ],
+          "id": 249042,
+          "origin_country": [
+            "GB",
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Adolescence",
+          "overview": "Um garoto de 13 anos é acusado de assassinar uma colega de escola, levando a família, a terapeuta e o investigador do caso a se perguntarem: o que realmente aconteceu?",
+          "popularity": 13.8576,
+          "poster_path": "/3v8MSpNNk3hhadeU9XocQrQXbuk.jpg",
+          "first_air_date": "2025-03-13",
+          "softcore": false,
+          "name": "Adolescência",
+          "vote_average": 7.809,
+          "vote_count": 1898,
+          "character": "Jamie Miller",
+          "credit_id": "67e06a4ece605a1ed1c73257",
+          "episode_count": 2,
+          "first_credit_air_date": "2025-03-13",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/llZodlkVKRkTdUsiRxvn8h80hhx.jpg",
+          "genre_ids": [
+            18,
+            80
+          ],
+          "id": 249042,
+          "origin_country": [
+            "GB",
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Adolescence",
+          "overview": "Um garoto de 13 anos é acusado de assassinar uma colega de escola, levando a família, a terapeuta e o investigador do caso a se perguntarem: o que realmente aconteceu?",
+          "popularity": 13.8576,
+          "poster_path": "/3v8MSpNNk3hhadeU9XocQrQXbuk.jpg",
+          "first_air_date": "2025-03-13",
+          "softcore": false,
+          "name": "Adolescência",
+          "vote_average": 7.809,
+          "vote_count": 1898,
+          "character": "Jamie Miller (voice)",
+          "credit_id": "67e49ced5f0bfa0b66ba22ce",
+          "episode_count": 1,
+          "first_credit_air_date": "2025-03-13",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/69TLqW1BeyP3bAPf18GpGqjTb00.jpg",
+          "genre_ids": [
+            10767
+          ],
+          "id": 1514,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "The One Show",
+          "overview": "",
+          "popularity": 75.4323,
+          "poster_path": "/7QpzCej3Lwrsnx5A8FePYsUCIzf.jpg",
+          "first_air_date": "2006-08-14",
+          "softcore": false,
+          "name": "The One Show",
+          "vote_average": 4.3,
+          "vote_count": 32,
+          "character": "Self",
+          "credit_id": "67f4f78bddf9194387d9dae4",
+          "episode_count": 1,
+          "first_credit_air_date": "2025-03-13",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/taqVKvEmMlI2hs2g364fXWzv0ia.jpg",
+          "genre_ids": [
+            10767,
+            35
+          ],
+          "id": 1489,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Jimmy Kimmel Live!",
+          "overview": "",
+          "popularity": 155.5377,
+          "poster_path": "/bGB6bEbG4qL22C1SFupkdAxYC9i.jpg",
+          "first_air_date": "2003-01-26",
+          "softcore": false,
+          "name": "Jimmy Kimmel Live!",
+          "vote_average": 5.3,
+          "vote_count": 230,
+          "character": "Self - Guest",
+          "credit_id": "68c3ab57792531c0007ce490",
+          "episode_count": 1,
+          "first_credit_air_date": "2025-09-11",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/nyGJjd9ALDpGFHEaGoZ1DLB0zUE.jpg",
+          "genre_ids": [],
+          "id": 28464,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "The Emmy Awards",
+          "overview": "",
+          "popularity": 6.1565,
+          "poster_path": "/guW6wHjF0eVOfsS7NEfq2ZWSLDm.jpg",
+          "first_air_date": "1949-01-25",
+          "softcore": false,
+          "name": "The Emmy Awards",
+          "vote_average": 7.545,
+          "vote_count": 11,
+          "character": "Self",
+          "credit_id": "68c40d11f1caac08972a0813",
+          "episode_count": 1,
+          "first_credit_air_date": "2025-09-14",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/i4OYRb5V13BrOnTPJGdyXWg4r0J.jpg",
+          "genre_ids": [
+            35,
+            10767
+          ],
+          "id": 59941,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "The Tonight Show Starring Jimmy Fallon",
+          "overview": "The Tonight Show Estrelado por Jimmy Fallon é um talk show noturno americano apresentado por Jimmy Fallon na rede NBC. É a sétima versão do programa mais antigo da NBC, a franquia The Tonight Show, sendo Fallon o seu sexto apresentador. O programa também conta com a presença do narrador Steve Higgins e a banda da casa The Roots. The Tonight Show é produzido pela antiga produtora executiva do Daily Show Josh Lieb e uma produção executiva de Lorne Michaels. O programa é gravado no Estúdio 6B do Rockefeller Center, Nova Iorque. O programa vai ao ar diariamente às noites, às 23:34 no horário oriental / pacífico dos Estados Unidos. O programa abre com o monólogo típico de Jimmy Fallon, seguido por esquetes / jogo cômicos, concluindo com uma entrevista com o convidado e uma atração musical. A estreia do programa atraiu críticas positivas dos profissionais de televisão, e recebeu 11,3 milhões de telespectadores nos Estados Unidos. No Brasil o programa vai ao ar no canal GNT.",
+          "popularity": 565.6063,
+          "poster_path": "/1N4o5PmmqhlVDrcdJ2RlCFWbLGX.jpg",
+          "first_air_date": "2014-02-17",
+          "softcore": false,
+          "name": "The Tonight Show com Jimmy Fallon",
+          "vote_average": 5.804,
+          "vote_count": 405,
+          "character": "Self - Guest",
+          "credit_id": "6963e6ab10918c8f893d714a",
+          "episode_count": 1,
+          "first_credit_air_date": "2025-06-03",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/jiSlSDL0PZsd3DeW9832lk7eBsE.jpg",
+          "genre_ids": [
+            10764,
+            10767
+          ],
+          "id": 71494,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Golden Globe Awards",
+          "overview": "",
+          "popularity": 61.2632,
+          "poster_path": "/kwPQHGHTTgJ8x5KTQDB8F2T4dzC.jpg",
+          "first_air_date": "1944-01-20",
+          "softcore": false,
+          "name": "Golden Globe Awards",
+          "vote_average": 7,
+          "vote_count": 21,
+          "character": "Self - Winner",
+          "credit_id": "6964a6705a05574d01b34f9b",
+          "episode_count": 1,
+          "first_credit_air_date": "2026-01-11",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [],
+          "id": 60971,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Critics Choice Awards",
+          "overview": "",
+          "popularity": 6.4487,
+          "poster_path": "/eyLyeXQAeNiz2JMIMDqfcia6bRh.jpg",
+          "first_air_date": "2001-01-22",
+          "softcore": false,
+          "name": "Critics Choice Awards",
+          "vote_average": 7.9,
+          "vote_count": 4,
+          "character": "Self",
+          "credit_id": "696d57ee95675b1e028fcd2e",
+          "episode_count": 1,
+          "first_credit_air_date": "2026-01-04",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/siQgEbkDwku6n5XFFN0IG8kjMZh.jpg",
+          "genre_ids": [
+            10763,
+            10767
+          ],
+          "id": 1709,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Today",
+          "overview": "",
+          "popularity": 26.5242,
+          "poster_path": "/27Sje8LhDZ0J71MuKdr7F8Auc4t.jpg",
+          "first_air_date": "1952-01-14",
+          "softcore": false,
+          "name": "Today",
+          "vote_average": 5.455,
+          "vote_count": 33,
+          "character": "Self - Guest",
+          "credit_id": "699345d57f884b8666fa39aa",
+          "episode_count": 1,
+          "first_credit_air_date": "2025-06-04",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/5lfj1E99LoGqrTI0M0lrV66o3ox.jpg",
+          "genre_ids": [
+            10767,
+            10763
+          ],
+          "id": 33167,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "Lorraine",
+          "overview": "",
+          "popularity": 13.3664,
+          "poster_path": "/g8lPbqXSphqtwXhUUPhxFznL68V.jpg",
+          "first_air_date": "2001-09-03",
+          "softcore": false,
+          "name": "Lorraine",
+          "vote_average": 2.8,
+          "vote_count": 9,
+          "character": "Self - Guest",
+          "credit_id": "69934635889bd864778508d4",
+          "episode_count": 1,
+          "first_credit_air_date": "2025-05-07",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/zzG3qWbwtwkgEocx99mSIcoUJSU.jpg",
+          "genre_ids": [
+            10767,
+            10763
+          ],
+          "id": 766,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "This Morning",
+          "overview": "",
+          "popularity": 6.9806,
+          "poster_path": "/3h4Ys4vzaD59YsD7IIv2f4ZS3rg.jpg",
+          "first_air_date": "1988-10-03",
+          "softcore": false,
+          "name": "This Morning",
+          "vote_average": 5.125,
+          "vote_count": 24,
+          "character": "Self - Jamie Miller (archive footage)",
+          "credit_id": "699346b4edf123d8c7fa3949",
+          "episode_count": 1,
+          "first_credit_air_date": "2025-03-14",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/zMH7hb56HSb8XTAXO3oowSO93Wu.jpg",
+          "genre_ids": [
+            10764
+          ],
+          "id": 129,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "Soccer Aid",
+          "overview": "",
+          "popularity": 6.0642,
+          "poster_path": "/rtMQroNExoNumL5p3fMKTFWdPpP.jpg",
+          "first_air_date": "2006-05-22",
+          "softcore": false,
+          "name": "Soccer Aid",
+          "vote_average": 7.3,
+          "vote_count": 12,
+          "character": "Self - Player",
+          "credit_id": "69ee40badbbc3b362ab4f1e2",
+          "episode_count": 1,
+          "first_credit_air_date": "2026-05-31",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/vOWdLVjUjhyHJYDmIbZMwvFGLEo.jpg",
+          "genre_ids": [
+            10763,
+            10767
+          ],
+          "id": 19996,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "Good Morning Britain",
+          "overview": "",
+          "popularity": 6.788,
+          "poster_path": "/oHxh8cTGqNxeqpfbwn4QtqDQiA8.jpg",
+          "first_air_date": "2014-04-28",
+          "softcore": false,
+          "name": "Good Morning Britain",
+          "vote_average": 4.1,
+          "vote_count": 9,
+          "character": "Self",
+          "credit_id": "69f37c0cb6102c8db7fabe86",
+          "episode_count": 1,
+          "first_credit_air_date": "2026-03-03",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/fFJigkZ4QoI0MFO1ZN3tKSn2Xnl.jpg",
+          "genre_ids": [
+            18,
+            35
+          ],
+          "id": 276643,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "Film Club",
+          "overview": "Evie e Noa foram feitos um para o outro, mas ainda não sabem. Amigos inseparáveis, compartilham tudo, inclusive o amor por filmes. Mas quando Noa se muda por trabalho, o roteiro da vida deles pode mudar de gênero para sempre.",
+          "popularity": 3.0692,
+          "poster_path": "/5koeXuj7klU2vfVEbLqYUfd0gqK.jpg",
+          "first_air_date": "2025-10-07",
+          "softcore": false,
+          "name": "Cineclube do Amor",
+          "vote_average": 6.3,
+          "vote_count": 31,
+          "character": "Callum",
+          "credit_id": "6a04f0bfc6d2d8d39b674a9e",
+          "episode_count": 6,
+          "first_credit_air_date": "2025-10-07",
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [],
+          "id": 342255,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Other Worlds: A Stranger Things Adventure (2028)",
+          "overview": "",
+          "popularity": 0.35,
+          "poster_path": null,
+          "first_air_date": "2028-10-30",
+          "softcore": false,
+          "name": "Other Worlds: A Stranger Things Adventure (2028)",
+          "vote_average": 0,
+          "vote_count": 0,
+          "character": "To be annouced",
+          "credit_id": "6afa66ff1bf826b92b2730ca",
+          "episode_count": 1,
+          "first_credit_air_date": "2028-10-30",
+          "media_type": "tv"
+        }
+      ],
+      "crew": [],
+      "id": 5225942
+    }
+  }
+}

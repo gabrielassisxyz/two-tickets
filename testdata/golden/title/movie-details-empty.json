@@ -1,0 +1,54 @@
+{
+  "case": "movie-details-empty",
+  "family": "title",
+  "request": "GET /api/v1/movie/485013",
+  "fixtures": [
+    "movie/details-empty",
+    "movie/videos-en-empty",
+    "movie/details-en-empty"
+  ],
+  "status": 200,
+  "body": {
+    "id": 485013,
+    "adult": false,
+    "budget": 0,
+    "genres": [],
+    "relatedVideos": [],
+    "originalLanguage": "en",
+    "originalTitle": "The Guardian Angel",
+    "popularity": "<number>",
+    "productionCompanies": [],
+    "productionCountries": [],
+    "releaseDate": "2018-03-29",
+    "releases": {
+      "results": []
+    },
+    "revenue": 0,
+    "spokenLanguages": [],
+    "status": "Released",
+    "title": "The Guardian Angel",
+    "video": false,
+    "voteAverage": "<number>",
+    "voteCount": "<number>",
+    "backdropPath": null,
+    "homepage": "",
+    "imdbId": null,
+    "overview": "",
+    "posterPath": null,
+    "runtime": 0,
+    "tagline": "",
+    "credits": {
+      "cast": [],
+      "crew": []
+    },
+    "externalIds": {
+      "facebookId": null,
+      "imdbId": null,
+      "instagramId": null,
+      "twitterId": null
+    },
+    "watchProviders": [],
+    "keywords": [],
+    "onUserWatchlist": false
+  }
+}

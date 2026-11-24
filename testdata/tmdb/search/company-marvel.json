@@ -1,0 +1,140 @@
+{
+  "id": "search/company-marvel",
+  "request": {
+    "path": "/search/company",
+    "params": {
+      "page": "1",
+      "query": "marvel"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "page": 1,
+      "results": [
+        {
+          "id": 420,
+          "logo_path": "/mIkZDuulwMPzESbzF9lg3rD8CcO.png",
+          "name": "Marvel Studios",
+          "origin_country": "US"
+        },
+        {
+          "id": 19551,
+          "logo_path": "/2WpWp9b108hizjHKdA107hFmvQ5.png",
+          "name": "Marvel Enterprises",
+          "origin_country": "US"
+        },
+        {
+          "id": 11106,
+          "logo_path": "/gpUMd5Mvo79o2Twsj4JA9ZJGtaB.png",
+          "name": "Marvel Knights",
+          "origin_country": "US"
+        },
+        {
+          "id": 108634,
+          "logo_path": "/rZGM78DBr6Zn1tV9NAOhuMdB0Sn.png",
+          "name": "Marvel Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 199712,
+          "logo_path": null,
+          "name": "Marvel Movies",
+          "origin_country": "IT"
+        },
+        {
+          "id": 2301,
+          "logo_path": "/qdPhBEP8sjK3Eb3rKc94554gcZt.png",
+          "name": "Marvel Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 38679,
+          "logo_path": "/v2y3LuLxYtW36hvLa8IDGQk3Oql.png",
+          "name": "Marvel Television",
+          "origin_country": "US"
+        },
+        {
+          "id": 7505,
+          "logo_path": "/837VMM4wOkODc1idNxGT0KQJlej.png",
+          "name": "Marvel Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 213000,
+          "logo_path": null,
+          "name": "Marvel Characters",
+          "origin_country": "US"
+        },
+        {
+          "id": 13252,
+          "logo_path": "/aGeUvfSNA8gRl6ZjvmLQOsb7PMw.png",
+          "name": "Marvel Animation",
+          "origin_country": "US"
+        },
+        {
+          "id": 133955,
+          "logo_path": null,
+          "name": "Blue Marvel",
+          "origin_country": ""
+        },
+        {
+          "id": 270421,
+          "logo_path": null,
+          "name": "Marvel HQ",
+          "origin_country": "US"
+        },
+        {
+          "id": 296514,
+          "logo_path": "/a2Y0RULxkX2lGihYPJs4qWZeWVS.png",
+          "name": "Marvel Comics",
+          "origin_country": "US"
+        },
+        {
+          "id": 309113,
+          "logo_path": null,
+          "name": "Marvel Films",
+          "origin_country": ""
+        },
+        {
+          "id": 160251,
+          "logo_path": "/x25ZchdyICzx2v0h4OQQ4yadJ0J.png",
+          "name": "Marvel Entertainment Group",
+          "origin_country": "US"
+        },
+        {
+          "id": 125136,
+          "logo_path": "/fh02gsAkkipHAJiHzDKM7Ja86Ey.png",
+          "name": "Marvel New Media",
+          "origin_country": "US"
+        },
+        {
+          "id": 1026,
+          "logo_path": null,
+          "name": "Cartel",
+          "origin_country": "ES"
+        },
+        {
+          "id": 117295,
+          "logo_path": null,
+          "name": "Margen",
+          "origin_country": ""
+        },
+        {
+          "id": 6220,
+          "logo_path": "/cAj69EL1zSXmZH6STbMGZrunyMD.png",
+          "name": "Mattel",
+          "origin_country": "US"
+        },
+        {
+          "id": 143994,
+          "logo_path": null,
+          "name": "Bartel",
+          "origin_country": ""
+        }
+      ],
+      "total_pages": 3,
+      "total_results": 58
+    }
+  }
+}

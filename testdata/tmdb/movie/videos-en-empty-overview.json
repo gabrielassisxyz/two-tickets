@@ -1,0 +1,84 @@
+{
+  "id": "movie/videos-en-empty-overview",
+  "request": {
+    "path": "/movie/11441",
+    "params": {
+      "append_to_response": "videos",
+      "include_video_language": "en",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "adult": false,
+      "backdrop_path": "/2b0m5uZY7ZFheQwg7qPuWks1Lz0.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comédia"
+        }
+      ],
+      "homepage": "",
+      "id": 11441,
+      "imdb_id": "tt0082562",
+      "origin_country": [
+        "IT"
+      ],
+      "original_language": "it",
+      "original_title": "Innamorato pazzo",
+      "overview": "",
+      "popularity": 1.154,
+      "poster_path": "/9Mo9IKxv7XOMJrdVpWY0iZqPMhe.jpg",
+      "production_companies": [
+        {
+          "id": 4986,
+          "logo_path": null,
+          "name": "Intercapital",
+          "origin_country": "IT"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "IT",
+          "name": "Italy"
+        }
+      ],
+      "release_date": "1981-12-18",
+      "revenue": 0,
+      "runtime": 100,
+      "softcore": false,
+      "spoken_languages": [
+        {
+          "english_name": "Italian",
+          "iso_639_1": "it",
+          "name": "Italiano"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Innamorato pazzo",
+      "video": false,
+      "vote_average": 6.698,
+      "vote_count": 300,
+      "videos": {
+        "results": [
+          {
+            "iso_639_1": "en",
+            "iso_3166_1": "US",
+            "name": "Gib dem Affen Zucker (1981) ORIGINAL TRAILER [HD 1080p]",
+            "key": "nm-0XQVtBqU",
+            "site": "YouTube",
+            "size": 1080,
+            "type": "Trailer",
+            "official": false,
+            "id": "62e99384c68b690058141e11",
+            "published_at": "2018-02-14T14:32:47.000Z"
+          }
+        ]
+      }
+    }
+  }
+}

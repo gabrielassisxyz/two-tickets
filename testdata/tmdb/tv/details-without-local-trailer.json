@@ -1,0 +1,4523 @@
+{
+  "id": "tv/details-without-local-trailer",
+  "request": {
+    "path": "/tv/241554",
+    "params": {
+      "append_to_response": "aggregate_credits,credits,external_ids,keywords,videos,content_ratings,watch/providers",
+      "include_video_language": "pt-BR",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "adult": false,
+      "backdrop_path": "/if4r7bXrDH50GhNwCo3Bz8F2LOg.jpg",
+      "created_by": [
+        {
+          "id": 3288,
+          "credit_id": "682585a4b90c27d095ada261",
+          "name": "Chris Weitz",
+          "original_name": "Chris Weitz",
+          "gender": 2,
+          "profile_path": "/u0zSPgtetcsRpqwUqNtVkBYPAnU.jpg"
+        },
+        {
+          "id": 3289,
+          "credit_id": "682585aaf603e29841767c23",
+          "name": "Paul Weitz",
+          "original_name": "Paul Weitz",
+          "gender": 2,
+          "profile_path": "/54Np4lBqGM36uwpzRc4KztJxGJz.jpg"
+        }
+      ],
+      "episode_run_time": [],
+      "first_air_date": "2025-05-15",
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comédia"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10765,
+          "name": "Sci-Fi & Fantasy"
+        }
+      ],
+      "homepage": "https://tv.apple.com/show/umc.cmc.5owrzntj9v1gpg31wshflud03",
+      "id": 241554,
+      "in_production": true,
+      "languages": [
+        "en"
+      ],
+      "last_air_date": "2025-07-10",
+      "last_episode_to_air": {
+        "id": 5995963,
+        "name": "O perímetro",
+        "overview": "O destino do Robô-Assassino está por um fio. No Corporação aliança, a PresAux faz uma solicitação ousada.",
+        "vote_average": 6.7,
+        "vote_count": 43,
+        "air_date": "2025-07-10",
+        "episode_number": 10,
+        "episode_type": "finale",
+        "production_code": "",
+        "runtime": 35,
+        "season_number": 1,
+        "show_id": 241554,
+        "still_path": "/shtg4jBLkdAP4ATzTUHUA2f3d9e.jpg"
+      },
+      "name": "Diários de um Robô-Assassino",
+      "next_episode_to_air": null,
+      "networks": [
+        {
+          "id": 2552,
+          "logo_path": "/bngHRFi794mnMq34gfVcm9nDxN1.png",
+          "name": "Apple TV",
+          "origin_country": ""
+        }
+      ],
+      "number_of_episodes": 10,
+      "number_of_seasons": 1,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Murderbot",
+      "overview": "Em um futuro high-tech, um robô de segurança rebelde secretamente adquire livre arbítrio. Para se manter escondido, ele acaba, contra sua vontade, participando de uma missão para proteger cientistas em um planeta perigoso... mesmo que tudo o que queria era maratonar suas novelas.",
+      "popularity": 21.6341,
+      "poster_path": "/uPUBMzhNn2xhQoGO8uf3wFKpBdl.jpg",
+      "production_companies": [
+        {
+          "id": 1473,
+          "logo_path": null,
+          "name": "Depth of Field",
+          "origin_country": "US"
+        },
+        {
+          "id": 423,
+          "logo_path": "/uvA6e2O31qaonsbYd8tjvgqmNXh.png",
+          "name": "Phantom Four",
+          "origin_country": "US"
+        },
+        {
+          "id": 228633,
+          "logo_path": "/of4mmVt6egYaO9oERJbuUxMOTkj.png",
+          "name": "Paramount Television Studios",
+          "origin_country": "US"
+        },
+        {
+          "id": 1081,
+          "logo_path": "/19kn4jVvpc3sAL3YpZNb3elhSMl.png",
+          "name": "CBS Studios",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "seasons": [
+        {
+          "air_date": "2025-05-15",
+          "episode_count": 10,
+          "id": 369826,
+          "name": "Temporada 1",
+          "overview": "",
+          "poster_path": "/87eh9S1ibgEt1L4yhAbcMITbM7K.jpg",
+          "season_number": 1,
+          "vote_average": 6.3
+        }
+      ],
+      "softcore": false,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Returning Series",
+      "tagline": "Um robô esconde seu livre arbítrio e paixão por novelas em um futuro sombrio e engraçado.",
+      "type": "Scripted",
+      "vote_average": 7.291,
+      "vote_count": 575,
+      "aggregate_credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 28846,
+            "known_for_department": "Acting",
+            "name": "Alexander Skarsgård",
+            "original_name": "Alexander Skarsgård",
+            "popularity": 3.6837,
+            "profile_path": "/6VNNddrSrIVgdzhXr4Zg89gmOzY.jpg",
+            "total_episode_count": 10,
+            "roles": [
+              {
+                "credit_id": "657b5484a1d33229dd50d300",
+                "character": "Murderbot",
+                "episode_count": 10
+              }
+            ],
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 517103,
+            "known_for_department": "Acting",
+            "name": "Noma Dumezweni",
+            "original_name": "Noma Dumezweni",
+            "popularity": 1.3822,
+            "profile_path": "/fDEOIZfAQoOZKH1o4xn7qgOoTyM.jpg",
+            "total_episode_count": 10,
+            "roles": [
+              {
+                "credit_id": "65e2164ff85958018651880a",
+                "character": "Mensah",
+                "episode_count": 10
+              }
+            ],
+            "order": 1
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 83854,
+            "known_for_department": "Acting",
+            "name": "David Dastmalchian",
+            "original_name": "David Dastmalchian",
+            "popularity": 2.3237,
+            "profile_path": "/eLafwcpL64CqzwjjSgKpO7Rv4ae.jpg",
+            "total_episode_count": 10,
+            "roles": [
+              {
+                "credit_id": "65df716c8e87020184054465",
+                "character": "Gurathin",
+                "episode_count": 10
+              }
+            ],
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 3,
+            "id": 3730831,
+            "known_for_department": "Acting",
+            "name": "Sabrina Wu",
+            "original_name": "Sabrina Wu",
+            "popularity": 0.428,
+            "profile_path": "/yEu2hVOekPVFf83wpQbmgaUjFce.jpg",
+            "total_episode_count": 10,
+            "roles": [
+              {
+                "credit_id": "65ea25f66beaea01867ad310",
+                "character": "Pin Lee",
+                "episode_count": 10
+              }
+            ],
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3962153,
+            "known_for_department": "Acting",
+            "name": "Akshay Khanna",
+            "original_name": "Akshay Khanna",
+            "popularity": 0.7331,
+            "profile_path": "/L2JWyOTwPRLHBLV7xUmDOcRHU3.jpg",
+            "total_episode_count": 10,
+            "roles": [
+              {
+                "credit_id": "65ea2636389da10180d8495d",
+                "character": "Ratthi",
+                "episode_count": 10
+              }
+            ],
+            "order": 4
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 220615,
+            "known_for_department": "Acting",
+            "name": "Tamara Podemski",
+            "original_name": "Tamara Podemski",
+            "popularity": 1.0545,
+            "profile_path": "/nqcdt9ko2XGA5XXqGX6ybxD5AKw.jpg",
+            "total_episode_count": 10,
+            "roles": [
+              {
+                "credit_id": "65ea263ca2423201613291ad",
+                "character": "Bharadwaj",
+                "episode_count": 10
+              }
+            ],
+            "order": 5
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 110911,
+            "known_for_department": "Acting",
+            "name": "Tattiawna Jones",
+            "original_name": "Tattiawna Jones",
+            "popularity": 0.911,
+            "profile_path": "/usiGiuzDFzESXbe38zkhpdOE9kF.jpg",
+            "total_episode_count": 10,
+            "roles": [
+              {
+                "credit_id": "65ea262aaf95900184ddd1b7",
+                "character": "Arada",
+                "episode_count": 10
+              }
+            ],
+            "order": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 68842,
+            "known_for_department": "Acting",
+            "name": "John Cho",
+            "original_name": "John Cho",
+            "popularity": 2.2419,
+            "profile_path": "/4Lar4uy8gk78cEocq6ERPRFWt3e.jpg",
+            "total_episode_count": 4,
+            "roles": [
+              {
+                "credit_id": "682704c14afff0afa72d825f",
+                "character": "Captain",
+                "episode_count": 4
+              }
+            ],
+            "order": 500
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 206425,
+            "known_for_department": "Acting",
+            "name": "DeWanda Wise",
+            "original_name": "DeWanda Wise",
+            "popularity": 1.4418,
+            "profile_path": "/daQjduDoTzaDTC6SIsGWs55dzcM.jpg",
+            "total_episode_count": 4,
+            "roles": [
+              {
+                "credit_id": "682704d56479b8d42a768257",
+                "character": "Navigation Unit",
+                "episode_count": 4
+              }
+            ],
+            "order": 503
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 9048,
+            "known_for_department": "Acting",
+            "name": "Clark Gregg",
+            "original_name": "Clark Gregg",
+            "popularity": 2.8381,
+            "profile_path": "/7t2uHG5m4CN2lyYnGfZO54Hn3O0.jpg",
+            "total_episode_count": 3,
+            "roles": [
+              {
+                "credit_id": "682704cc10285256852d3409",
+                "character": "Lieutenant",
+                "episode_count": 3
+              }
+            ],
+            "order": 501
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 58737,
+            "known_for_department": "Acting",
+            "name": "Jack McBrayer",
+            "original_name": "Jack McBrayer",
+            "popularity": 1.9318,
+            "profile_path": "/cbr26xDPEiOuYQxggtCPbu5xhDU.jpg",
+            "total_episode_count": 3,
+            "roles": [
+              {
+                "credit_id": "682704d064e941df734b58b2",
+                "character": "Navigation Officer",
+                "episode_count": 3
+              }
+            ],
+            "order": 502
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1912287,
+            "known_for_department": "Acting",
+            "name": "Sochi Fried",
+            "original_name": "Sochi Fried",
+            "popularity": 0.1928,
+            "profile_path": "/uH0cyKFZP7uDPsSI4nUGs7k2x5l.jpg",
+            "total_episode_count": 2,
+            "roles": [
+              {
+                "credit_id": "68281bcb4321d6b1069e2b16",
+                "character": "Valen (Company Suit #1)",
+                "episode_count": 2
+              }
+            ],
+            "order": 505
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 166522,
+            "known_for_department": "Acting",
+            "name": "Andrew Moodie",
+            "original_name": "Andrew Moodie",
+            "popularity": 0.5265,
+            "profile_path": "/3Rr4wsVHZDdjVZbzcz8uv58kXM7.jpg",
+            "total_episode_count": 2,
+            "roles": [
+              {
+                "credit_id": "68281bf89ab81af505f550ba",
+                "character": "Company Suit #3",
+                "episode_count": 2
+              }
+            ],
+            "order": 507
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 4522323,
+            "known_for_department": "Acting",
+            "name": "Devin Ross",
+            "original_name": "Devin Ross",
+            "popularity": 0.1098,
+            "profile_path": "/nw0Ku783YWdYddaLiKE1uq69x2b.jpg",
+            "total_episode_count": 2,
+            "roles": [
+              {
+                "credit_id": "68281c255f05a71dd42f68f5",
+                "character": "Aster (Company Suit #2)",
+                "episode_count": 2
+              }
+            ],
+            "order": 509
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3103750,
+            "known_for_department": "Acting",
+            "name": "Brandon Zakkai",
+            "original_name": "Brandon Zakkai",
+            "popularity": 0.1773,
+            "profile_path": null,
+            "total_episode_count": 2,
+            "roles": [
+              {
+                "credit_id": "68281c4bbdd07163dd2f69b5",
+                "character": "Mining Station Miner #3",
+                "episode_count": 2
+              }
+            ],
+            "order": 511
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1224669,
+            "known_for_department": "Acting",
+            "name": "Ron Kennell",
+            "original_name": "Ron Kennell",
+            "popularity": 0.3353,
+            "profile_path": "/tjenFDHhjKbAxCNrwJA0UoRGBAo.jpg",
+            "total_episode_count": 2,
+            "roles": [
+              {
+                "credit_id": "6831e98b5f647053e7054a0c",
+                "character": "SM - Colony Solicitor",
+                "episode_count": 2
+              }
+            ],
+            "order": 514
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1489288,
+            "known_for_department": "Acting",
+            "name": "Anna Konkle",
+            "original_name": "Anna Konkle",
+            "popularity": 1.0165,
+            "profile_path": "/5eXyNxWOESSAdDjVJyrW5SJEDzu.jpg",
+            "total_episode_count": 2,
+            "roles": [
+              {
+                "credit_id": "6843c68cebd7244e6e300f0e",
+                "character": "Leebeebee",
+                "episode_count": 2
+              }
+            ],
+            "order": 523
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1232769,
+            "known_for_department": "Acting",
+            "name": "Amanda Brugel",
+            "original_name": "Amanda Brugel",
+            "popularity": 2.2514,
+            "profile_path": "/3W1RR8CzP5uk6sFt92i1QyjGLRT.jpg",
+            "total_episode_count": 2,
+            "roles": [
+              {
+                "credit_id": "685ee352c07d2e5cf0303760",
+                "character": "Rita",
+                "episode_count": 2
+              }
+            ],
+            "order": 524
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1451899,
+            "known_for_department": "Acting",
+            "name": "Josh Cruddas",
+            "original_name": "Josh Cruddas",
+            "popularity": 1.0332,
+            "profile_path": "/wYnmRqmQaKhaymCRoF02ZSjCWsh.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68281bb180692bab55648284",
+                "character": "Venenek",
+                "episode_count": 1
+              }
+            ],
+            "order": 504
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2581758,
+            "known_for_department": "Acting",
+            "name": "Julie Mahendran",
+            "original_name": "Julie Mahendran",
+            "popularity": 0.1298,
+            "profile_path": "/1LXkL9rsXgWhG2nQeTJPiPbONyK.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68281be45613abdd990bccf1",
+                "character": "Mining Station Miner #2",
+                "episode_count": 1
+              }
+            ],
+            "order": 506
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3245581,
+            "known_for_department": "Acting",
+            "name": "Maroc Rey",
+            "original_name": "Maroc Rey",
+            "popularity": 0.0863,
+            "profile_path": null,
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68281c118e0013b8515b4e6e",
+                "character": "Sepp",
+                "episode_count": 1
+              }
+            ],
+            "order": 508
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3885167,
+            "known_for_department": "Acting",
+            "name": "Aaron Walpole",
+            "original_name": "Aaron Walpole",
+            "popularity": 0.0845,
+            "profile_path": null,
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68281c38d695b950850bccdd",
+                "character": "Mining Station Miner #1",
+                "episode_count": 1
+              }
+            ],
+            "order": 510
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2400479,
+            "known_for_department": "Acting",
+            "name": "Alex Cruz",
+            "original_name": "Alex Cruz",
+            "popularity": 0.3644,
+            "profile_path": "/5sxjvttSMVoVP8QgNAicnSngDA4.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68282853701b4093605b4ef2",
+                "character": "SM - Alderman Friess",
+                "episode_count": 1
+              }
+            ],
+            "order": 512
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1772665,
+            "known_for_department": "Acting",
+            "name": "Chantria Tram",
+            "original_name": "Chantria Tram",
+            "popularity": 0.1614,
+            "profile_path": "/936Bejq9dhvcNKmH3n1zpfIZijV.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68282866d38bca193d5b4e9c",
+                "character": "SM - Rescue Worker",
+                "episode_count": 1
+              }
+            ],
+            "order": 513
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2555666,
+            "known_for_department": "Acting",
+            "name": "Leah Kilpatrick",
+            "original_name": "Leah Kilpatrick",
+            "popularity": 0.0898,
+            "profile_path": "/cJm9LS9t9MMHSU2y6JfI2rJpi14.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "6831e99ea64da04346b6aea2",
+                "character": "Iverson Missouri",
+                "episode_count": 1
+              }
+            ],
+            "order": 515
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3847872,
+            "known_for_department": "Acting",
+            "name": "Alicia Rosario",
+            "original_name": "Alicia Rosario",
+            "popularity": 0.2303,
+            "profile_path": "/5VLU9dlYndDjH87SF8FimVgIogG.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "6831e9b23fad04dca6a864e3",
+                "character": "SG - Haptic Rigby",
+                "episode_count": 1
+              }
+            ],
+            "order": 516
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 131498,
+            "known_for_department": "Acting",
+            "name": "Albert Chung",
+            "original_name": "Albert Chung",
+            "popularity": 0.3957,
+            "profile_path": "/qgCjXse2GdnwEYYl9dOlqJD6FcS.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "6839249bd790325c69080829",
+                "character": "Lab Tech #2",
+                "episode_count": 1
+              }
+            ],
+            "order": 517
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1844067,
+            "known_for_department": "Acting",
+            "name": "Krista Jang",
+            "original_name": "Krista Jang",
+            "popularity": 0.4143,
+            "profile_path": "/w8bs9FP16iCAGtDV2VgUO2Xg3cc.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "683924ce72ae797df13d2007",
+                "character": "Programmer #2",
+                "episode_count": 1
+              }
+            ],
+            "order": 518
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 5472026,
+            "known_for_department": "Acting",
+            "name": "Liz Johnston",
+            "original_name": "Liz Johnston",
+            "popularity": 0.1495,
+            "profile_path": null,
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "6839256f471bbb90ee968e2f",
+                "character": "Lab Tech #1",
+                "episode_count": 1
+              }
+            ],
+            "order": 519
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1470382,
+            "known_for_department": "Acting",
+            "name": "Jai Jai Jones",
+            "original_name": "Jai Jai Jones",
+            "popularity": 0.3804,
+            "profile_path": "/wWW1ESMGX9ikXtGmy9qeFLeRAmq.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "683925917b81051e328fe5a6",
+                "character": "Arms Supervisor",
+                "episode_count": 1
+              }
+            ],
+            "order": 520
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1482610,
+            "known_for_department": "Acting",
+            "name": "Jameson Kraemer",
+            "original_name": "Jameson Kraemer",
+            "popularity": 0.4124,
+            "profile_path": "/ActECoFGR79aFjDqB5Thofq4c3B.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "683925b3da3da294fa55980e",
+                "character": "Supervisor",
+                "episode_count": 1
+              }
+            ],
+            "order": 521
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2242093,
+            "known_for_department": "Acting",
+            "name": "Durae McFarlane",
+            "original_name": "Durae McFarlane",
+            "popularity": 0.2523,
+            "profile_path": null,
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "683925d63c43c04ceb0807f6",
+                "character": "Worker",
+                "episode_count": 1
+              }
+            ],
+            "order": 522
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 43281,
+            "known_for_department": "Acting",
+            "name": "Christopher Cordell",
+            "original_name": "Christopher Cordell",
+            "popularity": 0.3432,
+            "profile_path": "/w7XzPVH7LFhlVyLm1VPVOKhK0MI.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "6868ddec5859397a31cedab1",
+                "character": "GrayCris Worker",
+                "episode_count": 1
+              }
+            ],
+            "order": 525
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 141217,
+            "known_for_department": "Acting",
+            "name": "David Reale",
+            "original_name": "David Reale",
+            "popularity": 0.4617,
+            "profile_path": "/6Mo33Tpd9Ou7nRjKjZ1iMBc2jq0.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "6868de0b29130765637025cc",
+                "character": "GrayCris Yellow",
+                "episode_count": 1
+              }
+            ],
+            "order": 526
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1834862,
+            "known_for_department": "Crew",
+            "name": "Afton Rentz",
+            "original_name": "Afton Rentz",
+            "popularity": 0.3257,
+            "profile_path": "/j7tBxaCf7eYhk4gJ5FClLmWAwvb.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "6868de1c4b86d69604cedaa2",
+                "character": "GrayCris Green",
+                "episode_count": 1
+              }
+            ],
+            "order": 527
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 1756356,
+            "known_for_department": "Acting",
+            "name": "Gurdeep Ahluwalia",
+            "original_name": "Gurdeep Ahluwalia",
+            "popularity": 0.2244,
+            "profile_path": "/yMwMmHxRSQgJeEaoRaYVeiooPo.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "687159da6ddea7161651fbd9",
+                "character": "Another Reporter",
+                "episode_count": 1
+              }
+            ],
+            "order": 528
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2267696,
+            "known_for_department": "Acting",
+            "name": "Jim Armstrong",
+            "original_name": "Jim Armstrong",
+            "popularity": 0.1434,
+            "profile_path": "/tTwjTWDPWK3HkWXE4qcpzCv1yQ.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "687159f25becaf12ad10546c",
+                "character": "Technician",
+                "episode_count": 1
+              }
+            ],
+            "order": 529
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 20180,
+            "known_for_department": "Acting",
+            "name": "Stephanie Belding",
+            "original_name": "Stephanie Belding",
+            "popularity": 0.9494,
+            "profile_path": "/4WIJ20f0v2EJ6SurBaMA6qecCE5.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "687159fe88dc95a8ddba2f0d",
+                "character": "Company Rep",
+                "episode_count": 1
+              }
+            ],
+            "order": 530
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 63546,
+            "known_for_department": "Acting",
+            "name": "Shane Daly",
+            "original_name": "Shane Daly",
+            "popularity": 0.4378,
+            "profile_path": "/7E6fN6QhqATOtTboSYY4eNNfK4S.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68715a092150c1dcde6e9cf4",
+                "character": "Officer",
+                "episode_count": 1
+              }
+            ],
+            "order": 531
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 54193,
+            "known_for_department": "Acting",
+            "name": "Sergio Di Zio",
+            "original_name": "Sergio Di Zio",
+            "popularity": 0.868,
+            "profile_path": "/e5sQM8rEXQW1UiVgzYM5C4GHScF.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68715a92d3d9dd5c3eed717f",
+                "character": "Landers",
+                "episode_count": 1
+              }
+            ],
+            "order": 532
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1746410,
+            "known_for_department": "Acting",
+            "name": "Nneka Elliott",
+            "original_name": "Nneka Elliott",
+            "popularity": 0.5493,
+            "profile_path": "/lvKrkICabtejk9Wp2X4Fvz6CsAV.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68715aa388dc95a8ddba2f12",
+                "character": "Press Conference Reporter / Reporter",
+                "episode_count": 1
+              }
+            ],
+            "order": 533
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 64511,
+            "known_for_department": "Acting",
+            "name": "Colin Glazer",
+            "original_name": "Colin Glazer",
+            "popularity": 0.3099,
+            "profile_path": "/iUiYYLPg0v8hHiW1DuFIxSv9iSF.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68715abeba81d2d162ed733b",
+                "character": "Engineer",
+                "episode_count": 1
+              }
+            ],
+            "order": 534
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 5558238,
+            "known_for_department": "Acting",
+            "name": "Kenzie Heaven Grist",
+            "original_name": "Kenzie Heaven Grist",
+            "popularity": 0.0734,
+            "profile_path": null,
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68715ad15cfab44819ed75b2",
+                "character": "Press Conference Reporter #2",
+                "episode_count": 1
+              }
+            ],
+            "order": 535
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3273840,
+            "known_for_department": "Acting",
+            "name": "Taj Levey",
+            "original_name": "Taj Levey",
+            "popularity": 0.1299,
+            "profile_path": null,
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68715ade900a7bccc4ed7196",
+                "character": "Landers Kid",
+                "episode_count": 1
+              }
+            ],
+            "order": 536
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 5558239,
+            "known_for_department": "Acting",
+            "name": "Naomi Ngebulana",
+            "original_name": "Naomi Ngebulana",
+            "popularity": 0.0777,
+            "profile_path": null,
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68715afcd150c3cc65a9797a",
+                "character": "Third Reporter",
+                "episode_count": 1
+              }
+            ],
+            "order": 537
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1016019,
+            "known_for_department": "Acting",
+            "name": "Neil Whitely",
+            "original_name": "Neil Whitely",
+            "popularity": 0.4008,
+            "profile_path": "/taPe9RjvEkgamMXiWqjC9EWSKRt.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68715b1a9b03a3748b6e9bb3",
+                "character": "Company Lawyer (Vinland Kemben)",
+                "episode_count": 1
+              }
+            ],
+            "order": 538
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 2854357,
+            "known_for_department": "Acting",
+            "name": "Daniel Woodrow",
+            "original_name": "Daniel Woodrow",
+            "popularity": 0.2061,
+            "profile_path": "/aXVQ0EnUE9A6pjcZjFgqGHH4z4.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "68715b277b762aef729a5af2",
+                "character": "Acid Tech",
+                "episode_count": 1
+              }
+            ],
+            "order": 539
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 4602775,
+            "known_for_department": "Acting",
+            "name": "Negin Kamali",
+            "original_name": "Negin Kamali",
+            "popularity": 0.1731,
+            "profile_path": "/on16xkJtnmZPI15vOydheQT0i1I.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "690cf98e89f199e787385332",
+                "character": "Spaceship Twodor Crew (uncredited)",
+                "episode_count": 1
+              }
+            ],
+            "order": 540
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1843640,
+            "known_for_department": "Acting",
+            "name": "DL MacDonald",
+            "original_name": "DL MacDonald",
+            "popularity": 0.3861,
+            "profile_path": "/5W94Zt9OBIaMsGMBEP30NT9nPG3.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "69d6c24ec7aba7bae6a875cf",
+                "character": "GrayCris Red",
+                "episode_count": 1
+              }
+            ],
+            "order": 541
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2183740,
+            "known_for_department": "Art",
+            "name": "Barbara Agbaje",
+            "original_name": "Barbara Agbaje",
+            "popularity": 0.2619,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6775c313185486515d129cab",
+                "job": "Art Direction",
+                "episode_count": 10
+              }
+            ],
+            "department": "Art",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2010383,
+            "known_for_department": "Art",
+            "name": "Karl Crosby",
+            "original_name": "Karl Crosby",
+            "popularity": 0.1816,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6775c3055b8f422b6012d487",
+                "job": "Art Direction",
+                "episode_count": 10
+              }
+            ],
+            "department": "Art",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1517637,
+            "known_for_department": "Art",
+            "name": "Rob Hepburn",
+            "original_name": "Rob Hepburn",
+            "popularity": 0.3638,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6775c3267d1bc87de761e196",
+                "job": "Set Decoration",
+                "episode_count": 10
+              }
+            ],
+            "department": "Art",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 6293462,
+            "known_for_department": "Art",
+            "name": "Nick Whelan",
+            "original_name": "Nick Whelan",
+            "popularity": 0.0553,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a33baea1c79e9799ee3b007",
+                "job": "Property Master",
+                "episode_count": 10
+              }
+            ],
+            "department": "Art",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 33455,
+            "known_for_department": "Art",
+            "name": "Sue Chan",
+            "original_name": "Sue Chan",
+            "popularity": 0.3997,
+            "profile_path": "/kpeJdh5ZYDtWIFhsa4ej687UOmJ.jpg",
+            "jobs": [
+              {
+                "credit_id": "6660ac8e2be8fdd20f575816",
+                "job": "Production Design",
+                "episode_count": 10
+              }
+            ],
+            "department": "Art",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 2753254,
+            "known_for_department": "Art",
+            "name": "Sherouk Hasan",
+            "original_name": "Sherouk Hasan",
+            "popularity": 0.0521,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6aeb9b513a7e43a111aa3f44",
+                "job": "Art Department Coordinator",
+                "episode_count": 10
+              }
+            ],
+            "department": "Art",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1593344,
+            "known_for_department": "Camera",
+            "name": "Sasha Moric",
+            "original_name": "Sasha Moric",
+            "popularity": 0.1449,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a33bb0d594bc27e77764a1b",
+                "job": "\"A\" Camera Operator",
+                "episode_count": 10
+              },
+              {
+                "credit_id": "6a33bb13e957c77c0b02f2b0",
+                "job": "Steadicam Operator",
+                "episode_count": 10
+              }
+            ],
+            "department": "Camera",
+            "total_episode_count": 20
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 6293465,
+            "known_for_department": "Camera",
+            "name": "Michael Fawcett",
+            "original_name": "Michael Fawcett",
+            "popularity": 0.112,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a33bb70405e3d33d6858de1",
+                "job": "Digital Imaging Technician",
+                "episode_count": 10
+              }
+            ],
+            "department": "Camera",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 4140575,
+            "known_for_department": "Camera",
+            "name": "Greg Frankovich",
+            "original_name": "Greg Frankovich",
+            "popularity": 0.0323,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a33bb1f5e22d20be1638322",
+                "job": "\"B\" Camera Operator",
+                "episode_count": 10
+              }
+            ],
+            "department": "Camera",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 986472,
+            "known_for_department": "Camera",
+            "name": "Tobias Datum",
+            "original_name": "Tobias Datum",
+            "popularity": 0.3818,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6775c3a42efbf3b41d92b6a2",
+                "job": "Director of Photography",
+                "episode_count": 10
+              }
+            ],
+            "department": "Camera",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 5890252,
+            "known_for_department": "Camera",
+            "name": "Kyle Brunet",
+            "original_name": "Kyle Brunet",
+            "popularity": 0.2206,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "69cc175fd4abbafacaabbf1c",
+                "job": "Digital Imaging Technician",
+                "episode_count": 3
+              }
+            ],
+            "department": "Camera",
+            "total_episode_count": 3
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 989460,
+            "known_for_department": "Camera",
+            "name": "Daniel Grant",
+            "original_name": "Daniel Grant",
+            "popularity": 0.2099,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "69af53e3105012b10cfcc409",
+                "job": "Director of Photography",
+                "episode_count": 1
+              }
+            ],
+            "department": "Camera",
+            "total_episode_count": 1
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 6084157,
+            "known_for_department": "Camera",
+            "name": "Murray Angotti",
+            "original_name": "Murray Angotti",
+            "popularity": 0.1437,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "69bd0e0acbf0161c298c1ef0",
+                "job": "Assistant Camera",
+                "episode_count": 1
+              }
+            ],
+            "department": "Camera",
+            "total_episode_count": 1
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 9551,
+            "known_for_department": "Costume & Make-Up",
+            "name": "Laura Jean Shannon",
+            "original_name": "Laura Jean Shannon",
+            "popularity": 0.2741,
+            "profile_path": "/e7Cmmphpmw5SBwg5ypCY8zsI77o.jpg",
+            "jobs": [
+              {
+                "credit_id": "671195a11f0ea4714edbccda",
+                "job": "Costume Design",
+                "episode_count": 10
+              }
+            ],
+            "department": "Costume & Make-Up",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1326113,
+            "known_for_department": "Costume & Make-Up",
+            "name": "Carrie Grace",
+            "original_name": "Carrie Grace",
+            "popularity": 0.2112,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "682705154f8ca297dc4b5adc",
+                "job": "Costume Design",
+                "episode_count": 10
+              }
+            ],
+            "department": "Costume & Make-Up",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1696938,
+            "known_for_department": "Costume & Make-Up",
+            "name": "Silvia Platsis",
+            "original_name": "Silvia Platsis",
+            "popularity": 0.1966,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6775c3387d1bc87de761e1a4",
+                "job": "Makeup Artist",
+                "episode_count": 10
+              }
+            ],
+            "department": "Costume & Make-Up",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3865464,
+            "known_for_department": "Costume & Make-Up",
+            "name": "Daniel Baker",
+            "original_name": "Daniel Baker",
+            "popularity": 0.157,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "68de7cd6a95abc20606a79ca",
+                "job": "Prosthetic Supervisor",
+                "episode_count": 10
+              }
+            ],
+            "department": "Costume & Make-Up",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3289,
+            "known_for_department": "Directing",
+            "name": "Paul Weitz",
+            "original_name": "Paul Weitz",
+            "popularity": 1.0936,
+            "profile_path": "/54Np4lBqGM36uwpzRc4KztJxGJz.jpg",
+            "jobs": [
+              {
+                "credit_id": "6812e29b8bbb6942aeaeb649",
+                "job": "Director",
+                "episode_count": 3
+              }
+            ],
+            "department": "Directing",
+            "total_episode_count": 3
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1123897,
+            "known_for_department": "Directing",
+            "name": "Roseanne Liang",
+            "original_name": "Roseanne Liang",
+            "popularity": 0.4081,
+            "profile_path": "/imRI6lAEVFprlFk2jv69BmpCkfA.jpg",
+            "jobs": [
+              {
+                "credit_id": "6812e34a53dc09cafc0552b6",
+                "job": "Director",
+                "episode_count": 2
+              }
+            ],
+            "department": "Directing",
+            "total_episode_count": 2
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 930697,
+            "known_for_department": "Writing",
+            "name": "Aurora Guerrero",
+            "original_name": "Aurora Guerrero",
+            "popularity": 0.2801,
+            "profile_path": "/bRJWL5X0R38kv92dFPAGTL3CGck.jpg",
+            "jobs": [
+              {
+                "credit_id": "6812e32e53dc09cafc0552b3",
+                "job": "Director",
+                "episode_count": 2
+              }
+            ],
+            "department": "Directing",
+            "total_episode_count": 2
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 73875,
+            "known_for_department": "Directing",
+            "name": "Toa Fraser",
+            "original_name": "Toa Fraser",
+            "popularity": 0.3449,
+            "profile_path": "/qzG6o1uczG1ffBmdRcfF2cLGWIg.jpg",
+            "jobs": [
+              {
+                "credit_id": "6812e2d66dbf2fb36a27f23a",
+                "job": "Director",
+                "episode_count": 2
+              }
+            ],
+            "department": "Directing",
+            "total_episode_count": 2
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3288,
+            "known_for_department": "Writing",
+            "name": "Chris Weitz",
+            "original_name": "Chris Weitz",
+            "popularity": 0.9783,
+            "profile_path": "/u0zSPgtetcsRpqwUqNtVkBYPAnU.jpg",
+            "jobs": [
+              {
+                "credit_id": "6812e2b6463040548727f011",
+                "job": "Director",
+                "episode_count": 1
+              }
+            ],
+            "department": "Directing",
+            "total_episode_count": 1
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 935243,
+            "known_for_department": "Editing",
+            "name": "Jonathan Corn",
+            "original_name": "Jonathan Corn",
+            "popularity": 0.2534,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a67cc6a8ac49e8c408e609f",
+                "job": "Editor",
+                "episode_count": 4
+              }
+            ],
+            "department": "Editing",
+            "total_episode_count": 4
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 28846,
+            "known_for_department": "Acting",
+            "name": "Alexander Skarsgård",
+            "original_name": "Alexander Skarsgård",
+            "popularity": 3.6837,
+            "profile_path": "/6VNNddrSrIVgdzhXr4Zg89gmOzY.jpg",
+            "jobs": [
+              {
+                "credit_id": "657b54b07ecd28013b3ec883",
+                "job": "Executive Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1537675,
+            "known_for_department": "Production",
+            "name": "Russell Scott",
+            "original_name": "Russell Scott",
+            "popularity": 0.2885,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "65e002fd5294e701634e7743",
+                "job": "Casting",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 73875,
+            "known_for_department": "Directing",
+            "name": "Toa Fraser",
+            "original_name": "Toa Fraser",
+            "popularity": 0.3449,
+            "profile_path": "/qzG6o1uczG1ffBmdRcfF2cLGWIg.jpg",
+            "jobs": [
+              {
+                "credit_id": "6827061964e941df734b58bf",
+                "job": "Co-Executive Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 6479,
+            "known_for_department": "Production",
+            "name": "Sharon Bialy",
+            "original_name": "Sharon Bialy",
+            "popularity": 0.6936,
+            "profile_path": "/uOex6LpaQYncD0sQfVYD1frI5uJ.jpg",
+            "jobs": [
+              {
+                "credit_id": "65e002f0a39d0b0163077b36",
+                "job": "Casting",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 45584,
+            "known_for_department": "Production",
+            "name": "Andrew Miano",
+            "original_name": "Andrew Miano",
+            "popularity": 0.2815,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "657b552aa1d33229e3a969d9",
+                "job": "Executive Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3288,
+            "known_for_department": "Writing",
+            "name": "Chris Weitz",
+            "original_name": "Chris Weitz",
+            "popularity": 0.9783,
+            "profile_path": "/u0zSPgtetcsRpqwUqNtVkBYPAnU.jpg",
+            "jobs": [
+              {
+                "credit_id": "6827062fb90c27d095ada804",
+                "job": "Executive Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 190936,
+            "known_for_department": "Production",
+            "name": "Jason Knight",
+            "original_name": "Jason Knight",
+            "popularity": 0.464,
+            "profile_path": "/h7GzTnXfx73qCdUPylUxeYrNfaZ.jpg",
+            "jobs": [
+              {
+                "credit_id": "6acaa744ffc6ec31fc3c6e6c",
+                "job": "Location Casting",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 933333,
+            "known_for_department": "Production",
+            "name": "John Buchan",
+            "original_name": "John Buchan",
+            "popularity": 0.5385,
+            "profile_path": "/ddN6XClbwbiAlONc2FPGW1Q6NZp.jpg",
+            "jobs": [
+              {
+                "credit_id": "6acaa74d2beac9759363b5ad",
+                "job": "Location Casting",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3193739,
+            "known_for_department": "Production",
+            "name": "Britta Rowings",
+            "original_name": "Britta Rowings",
+            "popularity": 0.1584,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6827054300df2bd2f4a1789e",
+                "job": "Co-Executive Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1555765,
+            "known_for_department": "Production",
+            "name": "Michael Wray",
+            "original_name": "Michael Wray",
+            "popularity": 0.172,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "682705be64e941df734b58bb",
+                "job": "Co-Executive Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 4430260,
+            "known_for_department": "Production",
+            "name": "Martha Wells",
+            "original_name": "Martha Wells",
+            "popularity": 0.0964,
+            "profile_path": "/3i9wDhRf6Sb8ydwmTtIvJ77EATA.jpg",
+            "jobs": [
+              {
+                "credit_id": "657b55637a3c52010cdfb39f",
+                "job": "Consulting Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3893,
+            "known_for_department": "Writing",
+            "name": "David S. Goyer",
+            "original_name": "David S. Goyer",
+            "popularity": 1.1027,
+            "profile_path": "/gf44Hr3HJuWK7ZMHQKzDNBe0ylI.jpg",
+            "jobs": [
+              {
+                "credit_id": "657b553a176a9400c448e311",
+                "job": "Executive Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2125797,
+            "known_for_department": "Production",
+            "name": "Keith Levine",
+            "original_name": "Keith Levine",
+            "popularity": 0.1703,
+            "profile_path": "/s1Hw6zv701OzrVXDPCl27nuwnMO.jpg",
+            "jobs": [
+              {
+                "credit_id": "657b55458e2ba600c4f12b7d",
+                "job": "Executive Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2304492,
+            "known_for_department": "Production",
+            "name": "Stacia Kimler",
+            "original_name": "Stacia Kimler",
+            "popularity": 0.2458,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6acaa75175412120cc2dea71",
+                "job": "Casting Associate",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3944192,
+            "known_for_department": "Production",
+            "name": "Joseph Keyes",
+            "original_name": "Joseph Keyes",
+            "popularity": 0.1242,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6849e495789ef510931eb63d",
+                "job": "Associate Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1237519,
+            "known_for_department": "Production",
+            "name": "Amanda Lencioni",
+            "original_name": "Amanda Lencioni",
+            "popularity": 0.0784,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "682705304afff0afa72d8263",
+                "job": "Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 959387,
+            "known_for_department": "Production",
+            "name": "Sherry Thomas",
+            "original_name": "Sherry Thomas",
+            "popularity": 0.3877,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "682704f99dc9d442965a3fbe",
+                "job": "Casting",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1881033,
+            "known_for_department": "Production",
+            "name": "Dan Balgoyen",
+            "original_name": "Dan Balgoyen",
+            "popularity": 0.1059,
+            "profile_path": "/8sPhiFHRD9zc2XLFq2DxYPU1rTW.jpg",
+            "jobs": [
+              {
+                "credit_id": "6827053fbadcd951ef4b5d4d",
+                "job": "Co-Executive Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3289,
+            "known_for_department": "Directing",
+            "name": "Paul Weitz",
+            "original_name": "Paul Weitz",
+            "popularity": 1.0936,
+            "profile_path": "/54Np4lBqGM36uwpzRc4KztJxGJz.jpg",
+            "jobs": [
+              {
+                "credit_id": "68270635caa68780a5315d47",
+                "job": "Executive Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1593837,
+            "known_for_department": "Sound",
+            "name": "Ève Corrêa-Guedes",
+            "original_name": "Ève Corrêa-Guedes",
+            "popularity": 0.2112,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a71b145dffffff51253fe38",
+                "job": "Dialogue Editor",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1543670,
+            "known_for_department": "Sound",
+            "name": "Nicholas Fitzgerald",
+            "original_name": "Nicholas Fitzgerald",
+            "popularity": 0.3452,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a71b155e72f9e87c7b5eeb4",
+                "job": "Music Editor",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3983691,
+            "known_for_department": "Sound",
+            "name": "Danielle McBride",
+            "original_name": "Danielle McBride",
+            "popularity": 0.1658,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a71b128e72f9e87c7b5eeb0",
+                "job": "Supervising Sound Editor",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 4351573,
+            "known_for_department": "Sound",
+            "name": "Alvin Wee",
+            "original_name": "Alvin Wee",
+            "popularity": 0.0614,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "69a578a8d4c72c3b85c4bcf8",
+                "job": "Scoring Mixer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2219624,
+            "known_for_department": "Sound",
+            "name": "Sebastian Vaskio",
+            "original_name": "Sebastian Vaskio",
+            "popularity": 0.328,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "69a578adafcb2d5c72e2befc",
+                "job": "ADR Mixer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2261487,
+            "known_for_department": "Sound",
+            "name": "Alexandra Fehrman",
+            "original_name": "Alexandra Fehrman",
+            "popularity": 0.3691,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "69a578a03b8fd8a9c8418c72",
+                "job": "Sound Re-Recording Mixer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1978847,
+            "known_for_department": "Sound",
+            "name": "Michael LaCroix",
+            "original_name": "Michael LaCroix",
+            "popularity": 0.2399,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "69a5789caac6e74d7de2bdc7",
+                "job": "Production Sound Mixer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2515868,
+            "known_for_department": "Sound",
+            "name": "Amanda Jones",
+            "original_name": "Amanda Jones",
+            "popularity": 0.3765,
+            "profile_path": "/hrhbEDsmHTC2pZAZbHa75nll4GR.jpg",
+            "jobs": [
+              {
+                "credit_id": "67b90e2f1919d61ba8f4975d",
+                "job": "Original Music Composer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 3401694,
+            "known_for_department": "Sound",
+            "name": "Marcelle Simpson",
+            "original_name": "Marcelle Simpson",
+            "popularity": 0.1255,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a71b150eb9c1ca40c46ae95",
+                "job": "Music Editor",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1445368,
+            "known_for_department": "Sound",
+            "name": "Tyler Whitham",
+            "original_name": "Tyler Whitham",
+            "popularity": 0.3079,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a71b122f8ea7a0203a27e04",
+                "job": "Supervising Sound Editor",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2047746,
+            "known_for_department": "Sound",
+            "name": "Erik Culp",
+            "original_name": "Erik Culp",
+            "popularity": 0.2205,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "69a578b5e15ee26ea7c17c76",
+                "job": "Foley Mixer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2047747,
+            "known_for_department": "Sound",
+            "name": "Craig MacLellan",
+            "original_name": "Craig MacLellan",
+            "popularity": 0.1873,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a71b14ce9adc830f3a27e08",
+                "job": "Sound Effects Editor",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 1699377,
+            "known_for_department": "Sound",
+            "name": "John Elliot",
+            "original_name": "John Elliot",
+            "popularity": 0.2038,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a71b15f0f9b77870346b053",
+                "job": "Foley Artist",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1455666,
+            "known_for_department": "Sound",
+            "name": "Emilie Corpuz",
+            "original_name": "Emilie Corpuz",
+            "popularity": 0.1175,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "69a578a4a5cae8b639ff6a44",
+                "job": "Sound Re-Recording Mixer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 4748155,
+            "known_for_department": "Visual Effects",
+            "name": "Mario Beck",
+            "original_name": "Mario Beck",
+            "popularity": 0.1503,
+            "profile_path": "/kPLglVzagkzAyNEBCz8eMyNAE78.jpg",
+            "jobs": [
+              {
+                "credit_id": "6805499cb659822812ee29a4",
+                "job": "Visual Effects",
+                "episode_count": 10
+              }
+            ],
+            "department": "Visual Effects",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1418464,
+            "known_for_department": "Visual Effects",
+            "name": "Sean Andrew Faden",
+            "original_name": "Sean Andrew Faden",
+            "popularity": 0.2028,
+            "profile_path": "/n1Pidy6zfPCsDz1H518NICJHOJW.jpg",
+            "jobs": [
+              {
+                "credit_id": "67fadcf2aacf7cfb2699203f",
+                "job": "Visual Effects Supervisor",
+                "episode_count": 10
+              }
+            ],
+            "department": "Visual Effects",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2247855,
+            "known_for_department": "Visual Effects",
+            "name": "Danny McNair",
+            "original_name": "Danny McNair",
+            "popularity": 0.199,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "67fadd05d3ab7d7a8badf5b9",
+                "job": "Visual Effects Producer",
+                "episode_count": 10
+              }
+            ],
+            "department": "Visual Effects",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 6578749,
+            "known_for_department": "Visual Effects",
+            "name": "Daniel Santos",
+            "original_name": "Daniel Santos",
+            "popularity": 0.1891,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6af638b30e45d0065c9dd9d4",
+                "job": "Rotoscoping Artist",
+                "episode_count": 10
+              }
+            ],
+            "department": "Visual Effects",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3288,
+            "known_for_department": "Writing",
+            "name": "Chris Weitz",
+            "original_name": "Chris Weitz",
+            "popularity": 0.9783,
+            "profile_path": "/u0zSPgtetcsRpqwUqNtVkBYPAnU.jpg",
+            "jobs": [
+              {
+                "credit_id": "686799a1d298dad8d1eeb3f8",
+                "job": "Teleplay",
+                "episode_count": 1
+              },
+              {
+                "credit_id": "682821f1e1b02296f58bfbdf",
+                "job": "Writer",
+                "episode_count": 9
+              }
+            ],
+            "department": "Writing",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3289,
+            "known_for_department": "Directing",
+            "name": "Paul Weitz",
+            "original_name": "Paul Weitz",
+            "popularity": 1.0936,
+            "profile_path": "/54Np4lBqGM36uwpzRc4KztJxGJz.jpg",
+            "jobs": [
+              {
+                "credit_id": "686799a5f76610615767731d",
+                "job": "Teleplay",
+                "episode_count": 1
+              },
+              {
+                "credit_id": "682821fd4b404174342f68a8",
+                "job": "Writer",
+                "episode_count": 9
+              }
+            ],
+            "department": "Writing",
+            "total_episode_count": 10
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 4430260,
+            "known_for_department": "Production",
+            "name": "Martha Wells",
+            "original_name": "Martha Wells",
+            "popularity": 0.0964,
+            "profile_path": "/3i9wDhRf6Sb8ydwmTtIvJ77EATA.jpg",
+            "jobs": [
+              {
+                "credit_id": "657b556aec8a4300c33b59cf",
+                "job": "Book",
+                "episode_count": 10
+              }
+            ],
+            "department": "Writing",
+            "total_episode_count": 10
+          }
+        ]
+      },
+      "credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 28846,
+            "known_for_department": "Acting",
+            "name": "Alexander Skarsgård",
+            "original_name": "Alexander Skarsgård",
+            "popularity": 3.6837,
+            "profile_path": "/6VNNddrSrIVgdzhXr4Zg89gmOzY.jpg",
+            "character": "Murderbot",
+            "credit_id": "657b5484a1d33229dd50d300",
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 517103,
+            "known_for_department": "Acting",
+            "name": "Noma Dumezweni",
+            "original_name": "Noma Dumezweni",
+            "popularity": 1.3822,
+            "profile_path": "/fDEOIZfAQoOZKH1o4xn7qgOoTyM.jpg",
+            "character": "Mensah",
+            "credit_id": "65e2164ff85958018651880a",
+            "order": 1
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 83854,
+            "known_for_department": "Acting",
+            "name": "David Dastmalchian",
+            "original_name": "David Dastmalchian",
+            "popularity": 2.3237,
+            "profile_path": "/eLafwcpL64CqzwjjSgKpO7Rv4ae.jpg",
+            "character": "Gurathin",
+            "credit_id": "65df716c8e87020184054465",
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 3,
+            "id": 3730831,
+            "known_for_department": "Acting",
+            "name": "Sabrina Wu",
+            "original_name": "Sabrina Wu",
+            "popularity": 0.428,
+            "profile_path": "/yEu2hVOekPVFf83wpQbmgaUjFce.jpg",
+            "character": "Pin Lee",
+            "credit_id": "65ea25f66beaea01867ad310",
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3962153,
+            "known_for_department": "Acting",
+            "name": "Akshay Khanna",
+            "original_name": "Akshay Khanna",
+            "popularity": 0.7331,
+            "profile_path": "/L2JWyOTwPRLHBLV7xUmDOcRHU3.jpg",
+            "character": "Ratthi",
+            "credit_id": "65ea2636389da10180d8495d",
+            "order": 4
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 220615,
+            "known_for_department": "Acting",
+            "name": "Tamara Podemski",
+            "original_name": "Tamara Podemski",
+            "popularity": 1.0545,
+            "profile_path": "/nqcdt9ko2XGA5XXqGX6ybxD5AKw.jpg",
+            "character": "Bharadwaj",
+            "credit_id": "65ea263ca2423201613291ad",
+            "order": 5
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 110911,
+            "known_for_department": "Acting",
+            "name": "Tattiawna Jones",
+            "original_name": "Tattiawna Jones",
+            "popularity": 0.911,
+            "profile_path": "/usiGiuzDFzESXbe38zkhpdOE9kF.jpg",
+            "character": "Arada",
+            "credit_id": "65ea262aaf95900184ddd1b7",
+            "order": 6
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 28846,
+            "known_for_department": "Acting",
+            "name": "Alexander Skarsgård",
+            "original_name": "Alexander Skarsgård",
+            "popularity": 3.6837,
+            "profile_path": "/6VNNddrSrIVgdzhXr4Zg89gmOzY.jpg",
+            "credit_id": "657b54b07ecd28013b3ec883",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 45584,
+            "known_for_department": "Production",
+            "name": "Andrew Miano",
+            "original_name": "Andrew Miano",
+            "popularity": 0.2815,
+            "profile_path": null,
+            "credit_id": "657b552aa1d33229e3a969d9",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3893,
+            "known_for_department": "Writing",
+            "name": "David S. Goyer",
+            "original_name": "David S. Goyer",
+            "popularity": 1.1027,
+            "profile_path": "/gf44Hr3HJuWK7ZMHQKzDNBe0ylI.jpg",
+            "credit_id": "657b553a176a9400c448e311",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2125797,
+            "known_for_department": "Production",
+            "name": "Keith Levine",
+            "original_name": "Keith Levine",
+            "popularity": 0.1703,
+            "profile_path": "/s1Hw6zv701OzrVXDPCl27nuwnMO.jpg",
+            "credit_id": "657b55458e2ba600c4f12b7d",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 4430260,
+            "known_for_department": "Production",
+            "name": "Martha Wells",
+            "original_name": "Martha Wells",
+            "popularity": 0.0964,
+            "profile_path": "/3i9wDhRf6Sb8ydwmTtIvJ77EATA.jpg",
+            "credit_id": "657b55637a3c52010cdfb39f",
+            "department": "Production",
+            "job": "Consulting Producer"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 4430260,
+            "known_for_department": "Production",
+            "name": "Martha Wells",
+            "original_name": "Martha Wells",
+            "popularity": 0.0964,
+            "profile_path": "/3i9wDhRf6Sb8ydwmTtIvJ77EATA.jpg",
+            "credit_id": "657b556aec8a4300c33b59cf",
+            "department": "Writing",
+            "job": "Book"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 6479,
+            "known_for_department": "Production",
+            "name": "Sharon Bialy",
+            "original_name": "Sharon Bialy",
+            "popularity": 0.6936,
+            "profile_path": "/uOex6LpaQYncD0sQfVYD1frI5uJ.jpg",
+            "credit_id": "65e002f0a39d0b0163077b36",
+            "department": "Production",
+            "job": "Casting"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1537675,
+            "known_for_department": "Production",
+            "name": "Russell Scott",
+            "original_name": "Russell Scott",
+            "popularity": 0.2885,
+            "profile_path": null,
+            "credit_id": "65e002fd5294e701634e7743",
+            "department": "Production",
+            "job": "Casting"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 33455,
+            "known_for_department": "Art",
+            "name": "Sue Chan",
+            "original_name": "Sue Chan",
+            "popularity": 0.3997,
+            "profile_path": "/kpeJdh5ZYDtWIFhsa4ej687UOmJ.jpg",
+            "credit_id": "6660ac8e2be8fdd20f575816",
+            "department": "Art",
+            "job": "Production Design"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 9551,
+            "known_for_department": "Costume & Make-Up",
+            "name": "Laura Jean Shannon",
+            "original_name": "Laura Jean Shannon",
+            "popularity": 0.2741,
+            "profile_path": "/e7Cmmphpmw5SBwg5ypCY8zsI77o.jpg",
+            "credit_id": "671195a11f0ea4714edbccda",
+            "department": "Costume & Make-Up",
+            "job": "Costume Design"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2010383,
+            "known_for_department": "Art",
+            "name": "Karl Crosby",
+            "original_name": "Karl Crosby",
+            "popularity": 0.1816,
+            "profile_path": null,
+            "credit_id": "6775c3055b8f422b6012d487",
+            "department": "Art",
+            "job": "Art Direction"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2183740,
+            "known_for_department": "Art",
+            "name": "Barbara Agbaje",
+            "original_name": "Barbara Agbaje",
+            "popularity": 0.2619,
+            "profile_path": null,
+            "credit_id": "6775c313185486515d129cab",
+            "department": "Art",
+            "job": "Art Direction"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1517637,
+            "known_for_department": "Art",
+            "name": "Rob Hepburn",
+            "original_name": "Rob Hepburn",
+            "popularity": 0.3638,
+            "profile_path": null,
+            "credit_id": "6775c3267d1bc87de761e196",
+            "department": "Art",
+            "job": "Set Decoration"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1696938,
+            "known_for_department": "Costume & Make-Up",
+            "name": "Silvia Platsis",
+            "original_name": "Silvia Platsis",
+            "popularity": 0.1966,
+            "profile_path": null,
+            "credit_id": "6775c3387d1bc87de761e1a4",
+            "department": "Costume & Make-Up",
+            "job": "Makeup Artist"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 986472,
+            "known_for_department": "Camera",
+            "name": "Tobias Datum",
+            "original_name": "Tobias Datum",
+            "popularity": 0.3818,
+            "profile_path": null,
+            "credit_id": "6775c3a42efbf3b41d92b6a2",
+            "department": "Camera",
+            "job": "Director of Photography"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2515868,
+            "known_for_department": "Sound",
+            "name": "Amanda Jones",
+            "original_name": "Amanda Jones",
+            "popularity": 0.3765,
+            "profile_path": "/hrhbEDsmHTC2pZAZbHa75nll4GR.jpg",
+            "credit_id": "67b90e2f1919d61ba8f4975d",
+            "department": "Sound",
+            "job": "Original Music Composer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1418464,
+            "known_for_department": "Visual Effects",
+            "name": "Sean Andrew Faden",
+            "original_name": "Sean Andrew Faden",
+            "popularity": 0.2028,
+            "profile_path": "/n1Pidy6zfPCsDz1H518NICJHOJW.jpg",
+            "credit_id": "67fadcf2aacf7cfb2699203f",
+            "department": "Visual Effects",
+            "job": "Visual Effects Supervisor"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2247855,
+            "known_for_department": "Visual Effects",
+            "name": "Danny McNair",
+            "original_name": "Danny McNair",
+            "popularity": 0.199,
+            "profile_path": null,
+            "credit_id": "67fadd05d3ab7d7a8badf5b9",
+            "department": "Visual Effects",
+            "job": "Visual Effects Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 4748155,
+            "known_for_department": "Visual Effects",
+            "name": "Mario Beck",
+            "original_name": "Mario Beck",
+            "popularity": 0.1503,
+            "profile_path": "/kPLglVzagkzAyNEBCz8eMyNAE78.jpg",
+            "credit_id": "6805499cb659822812ee29a4",
+            "department": "Visual Effects",
+            "job": "Visual Effects"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 959387,
+            "known_for_department": "Production",
+            "name": "Sherry Thomas",
+            "original_name": "Sherry Thomas",
+            "popularity": 0.3877,
+            "profile_path": null,
+            "credit_id": "682704f99dc9d442965a3fbe",
+            "department": "Production",
+            "job": "Casting"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1326113,
+            "known_for_department": "Costume & Make-Up",
+            "name": "Carrie Grace",
+            "original_name": "Carrie Grace",
+            "popularity": 0.2112,
+            "profile_path": null,
+            "credit_id": "682705154f8ca297dc4b5adc",
+            "department": "Costume & Make-Up",
+            "job": "Costume Design"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1237519,
+            "known_for_department": "Production",
+            "name": "Amanda Lencioni",
+            "original_name": "Amanda Lencioni",
+            "popularity": 0.0784,
+            "profile_path": null,
+            "credit_id": "682705304afff0afa72d8263",
+            "department": "Production",
+            "job": "Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1881033,
+            "known_for_department": "Production",
+            "name": "Dan Balgoyen",
+            "original_name": "Dan Balgoyen",
+            "popularity": 0.1059,
+            "profile_path": "/8sPhiFHRD9zc2XLFq2DxYPU1rTW.jpg",
+            "credit_id": "6827053fbadcd951ef4b5d4d",
+            "department": "Production",
+            "job": "Co-Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3193739,
+            "known_for_department": "Production",
+            "name": "Britta Rowings",
+            "original_name": "Britta Rowings",
+            "popularity": 0.1584,
+            "profile_path": null,
+            "credit_id": "6827054300df2bd2f4a1789e",
+            "department": "Production",
+            "job": "Co-Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1555765,
+            "known_for_department": "Production",
+            "name": "Michael Wray",
+            "original_name": "Michael Wray",
+            "popularity": 0.172,
+            "profile_path": null,
+            "credit_id": "682705be64e941df734b58bb",
+            "department": "Production",
+            "job": "Co-Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 73875,
+            "known_for_department": "Directing",
+            "name": "Toa Fraser",
+            "original_name": "Toa Fraser",
+            "popularity": 0.3449,
+            "profile_path": "/qzG6o1uczG1ffBmdRcfF2cLGWIg.jpg",
+            "credit_id": "6827061964e941df734b58bf",
+            "department": "Production",
+            "job": "Co-Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3288,
+            "known_for_department": "Writing",
+            "name": "Chris Weitz",
+            "original_name": "Chris Weitz",
+            "popularity": 0.9783,
+            "profile_path": "/u0zSPgtetcsRpqwUqNtVkBYPAnU.jpg",
+            "credit_id": "6827062fb90c27d095ada804",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3289,
+            "known_for_department": "Directing",
+            "name": "Paul Weitz",
+            "original_name": "Paul Weitz",
+            "popularity": 1.0936,
+            "profile_path": "/54Np4lBqGM36uwpzRc4KztJxGJz.jpg",
+            "credit_id": "68270635caa68780a5315d47",
+            "department": "Production",
+            "job": "Executive Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3944192,
+            "known_for_department": "Production",
+            "name": "Joseph Keyes",
+            "original_name": "Joseph Keyes",
+            "popularity": 0.1242,
+            "profile_path": null,
+            "credit_id": "6849e495789ef510931eb63d",
+            "department": "Production",
+            "job": "Associate Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3865464,
+            "known_for_department": "Costume & Make-Up",
+            "name": "Daniel Baker",
+            "original_name": "Daniel Baker",
+            "popularity": 0.157,
+            "profile_path": null,
+            "credit_id": "68de7cd6a95abc20606a79ca",
+            "department": "Costume & Make-Up",
+            "job": "Prosthetic Supervisor"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1978847,
+            "known_for_department": "Sound",
+            "name": "Michael LaCroix",
+            "original_name": "Michael LaCroix",
+            "popularity": 0.2399,
+            "profile_path": null,
+            "credit_id": "69a5789caac6e74d7de2bdc7",
+            "department": "Sound",
+            "job": "Production Sound Mixer"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2261487,
+            "known_for_department": "Sound",
+            "name": "Alexandra Fehrman",
+            "original_name": "Alexandra Fehrman",
+            "popularity": 0.3691,
+            "profile_path": null,
+            "credit_id": "69a578a03b8fd8a9c8418c72",
+            "department": "Sound",
+            "job": "Sound Re-Recording Mixer"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1455666,
+            "known_for_department": "Sound",
+            "name": "Emilie Corpuz",
+            "original_name": "Emilie Corpuz",
+            "popularity": 0.1175,
+            "profile_path": null,
+            "credit_id": "69a578a4a5cae8b639ff6a44",
+            "department": "Sound",
+            "job": "Sound Re-Recording Mixer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 4351573,
+            "known_for_department": "Sound",
+            "name": "Alvin Wee",
+            "original_name": "Alvin Wee",
+            "popularity": 0.0614,
+            "profile_path": null,
+            "credit_id": "69a578a8d4c72c3b85c4bcf8",
+            "department": "Sound",
+            "job": "Scoring Mixer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2219624,
+            "known_for_department": "Sound",
+            "name": "Sebastian Vaskio",
+            "original_name": "Sebastian Vaskio",
+            "popularity": 0.328,
+            "profile_path": null,
+            "credit_id": "69a578adafcb2d5c72e2befc",
+            "department": "Sound",
+            "job": "ADR Mixer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2047746,
+            "known_for_department": "Sound",
+            "name": "Erik Culp",
+            "original_name": "Erik Culp",
+            "popularity": 0.2205,
+            "profile_path": null,
+            "credit_id": "69a578b5e15ee26ea7c17c76",
+            "department": "Sound",
+            "job": "Foley Mixer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 6293462,
+            "known_for_department": "Art",
+            "name": "Nick Whelan",
+            "original_name": "Nick Whelan",
+            "popularity": 0.0553,
+            "profile_path": null,
+            "credit_id": "6a33baea1c79e9799ee3b007",
+            "department": "Art",
+            "job": "Property Master"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1593344,
+            "known_for_department": "Camera",
+            "name": "Sasha Moric",
+            "original_name": "Sasha Moric",
+            "popularity": 0.1449,
+            "profile_path": null,
+            "credit_id": "6a33bb0d594bc27e77764a1b",
+            "department": "Camera",
+            "job": "\"A\" Camera Operator"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1593344,
+            "known_for_department": "Camera",
+            "name": "Sasha Moric",
+            "original_name": "Sasha Moric",
+            "popularity": 0.1449,
+            "profile_path": null,
+            "credit_id": "6a33bb13e957c77c0b02f2b0",
+            "department": "Camera",
+            "job": "Steadicam Operator"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 4140575,
+            "known_for_department": "Camera",
+            "name": "Greg Frankovich",
+            "original_name": "Greg Frankovich",
+            "popularity": 0.0323,
+            "profile_path": null,
+            "credit_id": "6a33bb1f5e22d20be1638322",
+            "department": "Camera",
+            "job": "\"B\" Camera Operator"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 6293465,
+            "known_for_department": "Camera",
+            "name": "Michael Fawcett",
+            "original_name": "Michael Fawcett",
+            "popularity": 0.112,
+            "profile_path": null,
+            "credit_id": "6a33bb70405e3d33d6858de1",
+            "department": "Camera",
+            "job": "Digital Imaging Technician"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1445368,
+            "known_for_department": "Sound",
+            "name": "Tyler Whitham",
+            "original_name": "Tyler Whitham",
+            "popularity": 0.3079,
+            "profile_path": null,
+            "credit_id": "6a71b122f8ea7a0203a27e04",
+            "department": "Sound",
+            "job": "Supervising Sound Editor"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3983691,
+            "known_for_department": "Sound",
+            "name": "Danielle McBride",
+            "original_name": "Danielle McBride",
+            "popularity": 0.1658,
+            "profile_path": null,
+            "credit_id": "6a71b128e72f9e87c7b5eeb0",
+            "department": "Sound",
+            "job": "Supervising Sound Editor"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1593837,
+            "known_for_department": "Sound",
+            "name": "Ève Corrêa-Guedes",
+            "original_name": "Ève Corrêa-Guedes",
+            "popularity": 0.2112,
+            "profile_path": null,
+            "credit_id": "6a71b145dffffff51253fe38",
+            "department": "Sound",
+            "job": "Dialogue Editor"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2047747,
+            "known_for_department": "Sound",
+            "name": "Craig MacLellan",
+            "original_name": "Craig MacLellan",
+            "popularity": 0.1873,
+            "profile_path": null,
+            "credit_id": "6a71b14ce9adc830f3a27e08",
+            "department": "Sound",
+            "job": "Sound Effects Editor"
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 3401694,
+            "known_for_department": "Sound",
+            "name": "Marcelle Simpson",
+            "original_name": "Marcelle Simpson",
+            "popularity": 0.1255,
+            "profile_path": null,
+            "credit_id": "6a71b150eb9c1ca40c46ae95",
+            "department": "Sound",
+            "job": "Music Editor"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1543670,
+            "known_for_department": "Sound",
+            "name": "Nicholas Fitzgerald",
+            "original_name": "Nicholas Fitzgerald",
+            "popularity": 0.3452,
+            "profile_path": null,
+            "credit_id": "6a71b155e72f9e87c7b5eeb4",
+            "department": "Sound",
+            "job": "Music Editor"
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 1699377,
+            "known_for_department": "Sound",
+            "name": "John Elliot",
+            "original_name": "John Elliot",
+            "popularity": 0.2038,
+            "profile_path": null,
+            "credit_id": "6a71b15f0f9b77870346b053",
+            "department": "Sound",
+            "job": "Foley Artist"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 190936,
+            "known_for_department": "Production",
+            "name": "Jason Knight",
+            "original_name": "Jason Knight",
+            "popularity": 0.464,
+            "profile_path": "/h7GzTnXfx73qCdUPylUxeYrNfaZ.jpg",
+            "credit_id": "6acaa744ffc6ec31fc3c6e6c",
+            "department": "Production",
+            "job": "Location Casting"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 933333,
+            "known_for_department": "Production",
+            "name": "John Buchan",
+            "original_name": "John Buchan",
+            "popularity": 0.5385,
+            "profile_path": "/ddN6XClbwbiAlONc2FPGW1Q6NZp.jpg",
+            "credit_id": "6acaa74d2beac9759363b5ad",
+            "department": "Production",
+            "job": "Location Casting"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2304492,
+            "known_for_department": "Production",
+            "name": "Stacia Kimler",
+            "original_name": "Stacia Kimler",
+            "popularity": 0.2458,
+            "profile_path": null,
+            "credit_id": "6acaa75175412120cc2dea71",
+            "department": "Production",
+            "job": "Casting Associate"
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 2753254,
+            "known_for_department": "Art",
+            "name": "Sherouk Hasan",
+            "original_name": "Sherouk Hasan",
+            "popularity": 0.0521,
+            "profile_path": null,
+            "credit_id": "6aeb9b513a7e43a111aa3f44",
+            "department": "Art",
+            "job": "Art Department Coordinator"
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 6578749,
+            "known_for_department": "Visual Effects",
+            "name": "Daniel Santos",
+            "original_name": "Daniel Santos",
+            "popularity": 0.1891,
+            "profile_path": null,
+            "credit_id": "6af638b30e45d0065c9dd9d4",
+            "department": "Visual Effects",
+            "job": "Rotoscoping Artist"
+          }
+        ]
+      },
+      "external_ids": {
+        "imdb_id": "tt30444310",
+        "freebase_mid": null,
+        "freebase_id": null,
+        "tvdb_id": 443396,
+        "tvrage_id": null,
+        "wikidata_id": "Q125130750",
+        "facebook_id": null,
+        "instagram_id": null,
+        "twitter_id": null
+      },
+      "keywords": {
+        "results": [
+          {
+            "name": "android",
+            "id": 803
+          },
+          {
+            "name": "based on novel or book",
+            "id": 818
+          },
+          {
+            "name": "free will",
+            "id": 18091
+          },
+          {
+            "name": "security",
+            "id": 159457
+          },
+          {
+            "name": "hopeless",
+            "id": 202760
+          },
+          {
+            "name": "dramedy",
+            "id": 203322
+          },
+          {
+            "name": "near future",
+            "id": 244256
+          },
+          {
+            "name": "comedy thriller",
+            "id": 309270
+          }
+        ]
+      },
+      "videos": {
+        "results": []
+      },
+      "content_ratings": {
+        "results": [
+          {
+            "descriptors": [],
+            "iso_3166_1": "US",
+            "rating": "TV-MA"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "PR",
+            "rating": "TV-MA"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "VI",
+            "rating": "TV-MA"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "MX",
+            "rating": "B-15"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "ES",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "AR",
+            "rating": "SAM 16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "AT",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "AU",
+            "rating": "MA 15+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "BE",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "BG",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "BR",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "CA",
+            "rating": "18+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "CH",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "CL",
+            "rating": "R"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "CZ",
+            "rating": "15+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "DE",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "DK",
+            "rating": "15"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "FI",
+            "rating": "K16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "FR",
+            "rating": "12"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "GB",
+            "rating": "15"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "GR",
+            "rating": "18"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "HU",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "IE",
+            "rating": "15"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "IL",
+            "rating": "18+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "IN",
+            "rating": "A"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "IT",
+            "rating": "VM14"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "LT",
+            "rating": "N-14"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "LU",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "MY",
+            "rating": "18"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "NL",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "NO",
+            "rating": "15"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "NZ",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "PH",
+            "rating": "SPG"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "PL",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "PT",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "SE",
+            "rating": "Från 15 år"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "SG",
+            "rating": "M18"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "SK",
+            "rating": "15"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "TH",
+            "rating": "น 18+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "TW",
+            "rating": "15+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "UA",
+            "rating": "18+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "ZA",
+            "rating": "18"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "KR",
+            "rating": "19"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "RU",
+            "rating": "18+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "RO",
+            "rating": "15"
+          },
+          {
+            "descriptors": [
+              "Negative examples",
+              "Violence / Horror",
+              "Sexuality"
+            ],
+            "iso_3166_1": "TR",
+            "rating": "18+"
+          }
+        ]
+      },
+      "watch/providers": {
+        "results": {
+          "AE": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=AE",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 4
+              }
+            ]
+          },
+          "AG": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=AG",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "AR": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=AR",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 62
+              }
+            ]
+          },
+          "AT": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=AT",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 2
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 131
+              }
+            ]
+          },
+          "AU": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=AU",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 4
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 84
+              }
+            ]
+          },
+          "AZ": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=AZ",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "BE": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BE",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 51
+              }
+            ]
+          },
+          "BG": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BG",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "BH": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BH",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "BM": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BM",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "BO": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BO",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "BR": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BR",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 4
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 72
+              }
+            ]
+          },
+          "BS": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BS",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "BY": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BY",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 2
+              }
+            ]
+          },
+          "BZ": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=BZ",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "CA": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CA",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 1
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 121
+              }
+            ]
+          },
+          "CH": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CH",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 2
+              },
+              {
+                "logo_path": "/9DoQOfCz9S9j4cif3Cqx3ebk3FP.png",
+                "provider_id": 210,
+                "provider_name": "Sky",
+                "display_priority": 7
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 94
+              }
+            ]
+          },
+          "CL": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CL",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 45
+              }
+            ]
+          },
+          "CO": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CO",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 4
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 47
+              }
+            ]
+          },
+          "CR": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CR",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "CV": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CV",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "CY": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CY",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "CZ": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=CZ",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/gliWKhLJVdm7QwL1braBCRko5dx.png",
+                "provider_id": 381,
+                "provider_name": "Canal+",
+                "display_priority": 24
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 47
+              }
+            ]
+          },
+          "DE": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=DE",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 4
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 190
+              }
+            ]
+          },
+          "DK": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=DK",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 67
+              }
+            ]
+          },
+          "DO": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=DO",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "EC": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=EC",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "EE": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=EE",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "EG": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=EG",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 4
+              }
+            ]
+          },
+          "ES": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=ES",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 2
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 73
+              }
+            ]
+          },
+          "FI": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=FI",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 53
+              }
+            ]
+          },
+          "FJ": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=FJ",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "FR": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=FR",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 4
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 106
+              }
+            ]
+          },
+          "GB": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=GB",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 4
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 119
+              }
+            ]
+          },
+          "GG": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=GG",
+            "flatrate": [
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 81
+              }
+            ]
+          },
+          "GH": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=GH",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "GR": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=GR",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 41
+              }
+            ]
+          },
+          "GT": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=GT",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "HK": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=HK",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "HN": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=HN",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "HU": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=HU",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 46
+              }
+            ]
+          },
+          "ID": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=ID",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "IE": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=IE",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 2
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 73
+              }
+            ]
+          },
+          "IL": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=IL",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "IN": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=IN",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 5
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 65
+              }
+            ]
+          },
+          "IT": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=IT",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 2
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 76
+              }
+            ]
+          },
+          "JO": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=JO",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 4
+              }
+            ]
+          },
+          "JP": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=JP",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 28
+              }
+            ]
+          },
+          "KR": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=KR",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/w4ov8Zx73eu2TjHsDs5EmiuYKA4.png",
+                "provider_id": 1883,
+                "provider_name": "TVING",
+                "display_priority": 29
+              }
+            ]
+          },
+          "LB": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=LB",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "LT": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=LT",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "LU": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=LU",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "LV": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=LV",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "MD": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=MD",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "MT": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=MT",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "MU": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=MU",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 2
+              }
+            ]
+          },
+          "MX": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=MX",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 5
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 66
+              }
+            ]
+          },
+          "MY": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=MY",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "MZ": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=MZ",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "NI": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=NI",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "NL": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=NL",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 4
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 66
+              }
+            ]
+          },
+          "NO": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=NO",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 60
+              }
+            ]
+          },
+          "NZ": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=NZ",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 41
+              }
+            ]
+          },
+          "OM": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=OM",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "PA": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=PA",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "PE": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=PE",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 4
+              }
+            ]
+          },
+          "PH": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=PH",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "PL": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=PL",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 57
+              }
+            ]
+          },
+          "PT": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=PT",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 54
+              }
+            ]
+          },
+          "PY": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=PY",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "QA": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=QA",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "SA": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=SA",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 4
+              }
+            ]
+          },
+          "SE": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=SE",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 57
+              }
+            ]
+          },
+          "SG": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=SG",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "SI": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=SI",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "SK": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=SK",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/gliWKhLJVdm7QwL1braBCRko5dx.png",
+                "provider_id": 381,
+                "provider_name": "Canal+",
+                "display_priority": 34
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 54
+              }
+            ]
+          },
+          "SV": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=SV",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "TH": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=TH",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "TT": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=TT",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "TW": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=TW",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "UA": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=UA",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 2
+              }
+            ]
+          },
+          "UG": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=UG",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "US": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=US",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 7
+              },
+              {
+                "logo_path": "/giKLP7saeUA0WykEPRyZUcOVv92.png",
+                "provider_id": 2243,
+                "provider_name": "Apple TV Amazon Channel",
+                "display_priority": 217
+              }
+            ]
+          },
+          "VE": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=VE",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 3
+              }
+            ]
+          },
+          "ZA": {
+            "link": "https://www.themoviedb.org/tv/241554-murderbot/watch?locale=ZA",
+            "flatrate": [
+              {
+                "logo_path": "/v9SnyvYt0U3KGgBH3Sbh3z4yODe.png",
+                "provider_id": 350,
+                "provider_name": "Apple TV",
+                "display_priority": 2
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

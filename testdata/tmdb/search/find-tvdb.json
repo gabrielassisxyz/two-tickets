@@ -1,0 +1,44 @@
+{
+  "id": "search/find-tvdb",
+  "request": {
+    "path": "/find/81189",
+    "params": {
+      "external_source": "tvdb_id",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "movie_results": [],
+      "person_results": [],
+      "tv_results": [
+        {
+          "adult": false,
+          "backdrop_path": "/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg",
+          "genre_ids": [
+            18,
+            80
+          ],
+          "id": 1396,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Breaking Bad",
+          "overview": "Ao saber que tem câncer, um professor passa a fabricar metanfetamina pelo futuro da família, mudando o destino de todos.",
+          "popularity": 140.8491,
+          "poster_path": "/hGwm9Cj3CdbJIqQWNExQqiYmCd4.jpg",
+          "first_air_date": "2008-01-20",
+          "softcore": false,
+          "name": "Breaking Bad",
+          "vote_average": 8.96,
+          "vote_count": 19177,
+          "media_type": "tv"
+        }
+      ],
+      "tv_episode_results": [],
+      "tv_season_results": []
+    }
+  }
+}

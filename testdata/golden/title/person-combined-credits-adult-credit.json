@@ -1,0 +1,465 @@
+{
+  "case": "person-combined-credits-adult-credit",
+  "family": "title",
+  "request": "GET /api/v1/person/5225942/combined_credits",
+  "fixtures": [
+    "person/combined-credits-adult-credit"
+  ],
+  "status": 200,
+  "body": {
+    "cast": [
+      {
+        "id": 1413113,
+        "originalLanguage": "en",
+        "overview": "",
+        "voteCount": "<number>",
+        "mediaType": "movie",
+        "popularity": "<number>",
+        "creditId": "69149451595b54d1ff31c47d",
+        "backdropPath": null,
+        "voteAverage": "<number>",
+        "genreIds": [
+          18,
+          10402,
+          53
+        ],
+        "posterPath": "/ps5wvCVpdNZv53YYTwh40tFYnQe.jpg",
+        "originalTitle": "Cry to Heaven",
+        "video": false,
+        "title": "Cry to Heaven",
+        "adult": false,
+        "releaseDate": "",
+        "character": ""
+      },
+      {
+        "id": 1684628,
+        "originalLanguage": "en",
+        "overview": "",
+        "voteCount": "<number>",
+        "mediaType": "movie",
+        "popularity": "<number>",
+        "creditId": "69f2243dfbf66b5921f97b7f",
+        "backdropPath": null,
+        "voteAverage": "<number>",
+        "genreIds": [
+          53
+        ],
+        "posterPath": "/h2mhHxsMHeLYTwUINTO7exzsDJf.jpg",
+        "originalTitle": "Foxfinder",
+        "video": false,
+        "title": "Foxfinder",
+        "adult": false,
+        "releaseDate": "",
+        "character": "William"
+      },
+      {
+        "id": 1710881,
+        "originalLanguage": "en",
+        "overview": "",
+        "voteCount": "<number>",
+        "mediaType": "movie",
+        "popularity": "<number>",
+        "creditId": "6a8f948c119d389e74020b97",
+        "backdropPath": null,
+        "voteAverage": "<number>",
+        "genreIds": [
+          12
+        ],
+        "posterPath": null,
+        "originalTitle": "Treasure Island",
+        "video": false,
+        "title": "Treasure Island",
+        "adult": false,
+        "releaseDate": "2027-11-11",
+        "character": "Jim Hawkins"
+      },
+      {
+        "id": 1836800,
+        "originalLanguage": "en",
+        "overview": "",
+        "voteCount": "<number>",
+        "mediaType": "movie",
+        "popularity": "<number>",
+        "creditId": "6b01fd8081d3651c441fa395",
+        "backdropPath": null,
+        "voteAverage": "<number>",
+        "genreIds": [],
+        "posterPath": "/ocOHSI08MDBAEwxMYefdNnFZum.jpg",
+        "originalTitle": "The Beatles - In My Life (Official Music Video starring Owen Cooper)",
+        "video": false,
+        "title": "The Beatles - In My Life (Official Music Video starring Owen Cooper)",
+        "adult": false,
+        "releaseDate": "",
+        "character": "Hero"
+      },
+      {
+        "id": 249042,
+        "originalLanguage": "en",
+        "episodeCount": 2,
+        "overview": "Um garoto de 13 anos é acusado de assassinar uma colega de escola, levando a família, a terapeuta e o investigador do caso a se perguntarem: o que realmente aconteceu?",
+        "originCountry": [
+          "GB",
+          "US"
+        ],
+        "originalName": "Adolescence",
+        "voteCount": "<number>",
+        "name": "Adolescência",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "67e06a4ece605a1ed1c73257",
+        "backdropPath": "/llZodlkVKRkTdUsiRxvn8h80hhx.jpg",
+        "firstAirDate": "2025-03-13",
+        "voteAverage": "<number>",
+        "genreIds": [
+          18,
+          80
+        ],
+        "posterPath": "/3v8MSpNNk3hhadeU9XocQrQXbuk.jpg",
+        "adult": false,
+        "character": "Jamie Miller"
+      },
+      {
+        "id": 249042,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "Um garoto de 13 anos é acusado de assassinar uma colega de escola, levando a família, a terapeuta e o investigador do caso a se perguntarem: o que realmente aconteceu?",
+        "originCountry": [
+          "GB",
+          "US"
+        ],
+        "originalName": "Adolescence",
+        "voteCount": "<number>",
+        "name": "Adolescência",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "67e49ced5f0bfa0b66ba22ce",
+        "backdropPath": "/llZodlkVKRkTdUsiRxvn8h80hhx.jpg",
+        "firstAirDate": "2025-03-13",
+        "voteAverage": "<number>",
+        "genreIds": [
+          18,
+          80
+        ],
+        "posterPath": "/3v8MSpNNk3hhadeU9XocQrQXbuk.jpg",
+        "adult": false,
+        "character": "Jamie Miller (voice)"
+      },
+      {
+        "id": 1514,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "",
+        "originCountry": [
+          "GB"
+        ],
+        "originalName": "The One Show",
+        "voteCount": "<number>",
+        "name": "The One Show",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "67f4f78bddf9194387d9dae4",
+        "backdropPath": "/69TLqW1BeyP3bAPf18GpGqjTb00.jpg",
+        "firstAirDate": "2006-08-14",
+        "voteAverage": "<number>",
+        "genreIds": [
+          10767
+        ],
+        "posterPath": "/7QpzCej3Lwrsnx5A8FePYsUCIzf.jpg",
+        "adult": false,
+        "character": "Self"
+      },
+      {
+        "id": 1489,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "",
+        "originCountry": [
+          "US"
+        ],
+        "originalName": "Jimmy Kimmel Live!",
+        "voteCount": "<number>",
+        "name": "Jimmy Kimmel Live!",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "68c3ab57792531c0007ce490",
+        "backdropPath": "/taqVKvEmMlI2hs2g364fXWzv0ia.jpg",
+        "firstAirDate": "2003-01-26",
+        "voteAverage": "<number>",
+        "genreIds": [
+          10767,
+          35
+        ],
+        "posterPath": "/bGB6bEbG4qL22C1SFupkdAxYC9i.jpg",
+        "adult": false,
+        "character": "Self - Guest"
+      },
+      {
+        "id": 28464,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "",
+        "originCountry": [
+          "US"
+        ],
+        "originalName": "The Emmy Awards",
+        "voteCount": "<number>",
+        "name": "The Emmy Awards",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "68c40d11f1caac08972a0813",
+        "backdropPath": "/nyGJjd9ALDpGFHEaGoZ1DLB0zUE.jpg",
+        "firstAirDate": "1949-01-25",
+        "voteAverage": "<number>",
+        "genreIds": [],
+        "posterPath": "/guW6wHjF0eVOfsS7NEfq2ZWSLDm.jpg",
+        "adult": false,
+        "character": "Self"
+      },
+      {
+        "id": 59941,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "The Tonight Show Estrelado por Jimmy Fallon é um talk show noturno americano apresentado por Jimmy Fallon na rede NBC. É a sétima versão do programa mais antigo da NBC, a franquia The Tonight Show, sendo Fallon o seu sexto apresentador. O programa também conta com a presença do narrador Steve Higgins e a banda da casa The Roots. The Tonight Show é produzido pela antiga produtora executiva do Daily Show Josh Lieb e uma produção executiva de Lorne Michaels. O programa é gravado no Estúdio 6B do Rockefeller Center, Nova Iorque. O programa vai ao ar diariamente às noites, às 23:34 no horário oriental / pacífico dos Estados Unidos. O programa abre com o monólogo típico de Jimmy Fallon, seguido por esquetes / jogo cômicos, concluindo com uma entrevista com o convidado e uma atração musical. A estreia do programa atraiu críticas positivas dos profissionais de televisão, e recebeu 11,3 milhões de telespectadores nos Estados Unidos. No Brasil o programa vai ao ar no canal GNT.",
+        "originCountry": [
+          "US"
+        ],
+        "originalName": "The Tonight Show Starring Jimmy Fallon",
+        "voteCount": "<number>",
+        "name": "The Tonight Show com Jimmy Fallon",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "6963e6ab10918c8f893d714a",
+        "backdropPath": "/i4OYRb5V13BrOnTPJGdyXWg4r0J.jpg",
+        "firstAirDate": "2014-02-17",
+        "voteAverage": "<number>",
+        "genreIds": [
+          35,
+          10767
+        ],
+        "posterPath": "/1N4o5PmmqhlVDrcdJ2RlCFWbLGX.jpg",
+        "adult": false,
+        "character": "Self - Guest"
+      },
+      {
+        "id": 71494,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "",
+        "originCountry": [
+          "US"
+        ],
+        "originalName": "Golden Globe Awards",
+        "voteCount": "<number>",
+        "name": "Golden Globe Awards",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "6964a6705a05574d01b34f9b",
+        "backdropPath": "/jiSlSDL0PZsd3DeW9832lk7eBsE.jpg",
+        "firstAirDate": "1944-01-20",
+        "voteAverage": "<number>",
+        "genreIds": [
+          10764,
+          10767
+        ],
+        "posterPath": "/kwPQHGHTTgJ8x5KTQDB8F2T4dzC.jpg",
+        "adult": false,
+        "character": "Self - Winner"
+      },
+      {
+        "id": 60971,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "",
+        "originCountry": [
+          "US"
+        ],
+        "originalName": "Critics Choice Awards",
+        "voteCount": "<number>",
+        "name": "Critics Choice Awards",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "696d57ee95675b1e028fcd2e",
+        "backdropPath": null,
+        "firstAirDate": "2001-01-22",
+        "voteAverage": "<number>",
+        "genreIds": [],
+        "posterPath": "/eyLyeXQAeNiz2JMIMDqfcia6bRh.jpg",
+        "adult": false,
+        "character": "Self"
+      },
+      {
+        "id": 1709,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "",
+        "originCountry": [
+          "US"
+        ],
+        "originalName": "Today",
+        "voteCount": "<number>",
+        "name": "Today",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "699345d57f884b8666fa39aa",
+        "backdropPath": "/siQgEbkDwku6n5XFFN0IG8kjMZh.jpg",
+        "firstAirDate": "1952-01-14",
+        "voteAverage": "<number>",
+        "genreIds": [
+          10763,
+          10767
+        ],
+        "posterPath": "/27Sje8LhDZ0J71MuKdr7F8Auc4t.jpg",
+        "adult": false,
+        "character": "Self - Guest"
+      },
+      {
+        "id": 33167,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "",
+        "originCountry": [
+          "GB"
+        ],
+        "originalName": "Lorraine",
+        "voteCount": "<number>",
+        "name": "Lorraine",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "69934635889bd864778508d4",
+        "backdropPath": "/5lfj1E99LoGqrTI0M0lrV66o3ox.jpg",
+        "firstAirDate": "2001-09-03",
+        "voteAverage": "<number>",
+        "genreIds": [
+          10767,
+          10763
+        ],
+        "posterPath": "/g8lPbqXSphqtwXhUUPhxFznL68V.jpg",
+        "adult": false,
+        "character": "Self - Guest"
+      },
+      {
+        "id": 766,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "",
+        "originCountry": [
+          "GB"
+        ],
+        "originalName": "This Morning",
+        "voteCount": "<number>",
+        "name": "This Morning",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "699346b4edf123d8c7fa3949",
+        "backdropPath": "/zzG3qWbwtwkgEocx99mSIcoUJSU.jpg",
+        "firstAirDate": "1988-10-03",
+        "voteAverage": "<number>",
+        "genreIds": [
+          10767,
+          10763
+        ],
+        "posterPath": "/3h4Ys4vzaD59YsD7IIv2f4ZS3rg.jpg",
+        "adult": false,
+        "character": "Self - Jamie Miller (archive footage)"
+      },
+      {
+        "id": 129,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "",
+        "originCountry": [
+          "GB"
+        ],
+        "originalName": "Soccer Aid",
+        "voteCount": "<number>",
+        "name": "Soccer Aid",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "69ee40badbbc3b362ab4f1e2",
+        "backdropPath": "/zMH7hb56HSb8XTAXO3oowSO93Wu.jpg",
+        "firstAirDate": "2006-05-22",
+        "voteAverage": "<number>",
+        "genreIds": [
+          10764
+        ],
+        "posterPath": "/rtMQroNExoNumL5p3fMKTFWdPpP.jpg",
+        "adult": false,
+        "character": "Self - Player"
+      },
+      {
+        "id": 19996,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "",
+        "originCountry": [
+          "GB"
+        ],
+        "originalName": "Good Morning Britain",
+        "voteCount": "<number>",
+        "name": "Good Morning Britain",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "69f37c0cb6102c8db7fabe86",
+        "backdropPath": "/vOWdLVjUjhyHJYDmIbZMwvFGLEo.jpg",
+        "firstAirDate": "2014-04-28",
+        "voteAverage": "<number>",
+        "genreIds": [
+          10763,
+          10767
+        ],
+        "posterPath": "/oHxh8cTGqNxeqpfbwn4QtqDQiA8.jpg",
+        "adult": false,
+        "character": "Self"
+      },
+      {
+        "id": 276643,
+        "originalLanguage": "en",
+        "episodeCount": 6,
+        "overview": "Evie e Noa foram feitos um para o outro, mas ainda não sabem. Amigos inseparáveis, compartilham tudo, inclusive o amor por filmes. Mas quando Noa se muda por trabalho, o roteiro da vida deles pode mudar de gênero para sempre.",
+        "originCountry": [
+          "GB"
+        ],
+        "originalName": "Film Club",
+        "voteCount": "<number>",
+        "name": "Cineclube do Amor",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "6a04f0bfc6d2d8d39b674a9e",
+        "backdropPath": "/fFJigkZ4QoI0MFO1ZN3tKSn2Xnl.jpg",
+        "firstAirDate": "2025-10-07",
+        "voteAverage": "<number>",
+        "genreIds": [
+          18,
+          35
+        ],
+        "posterPath": "/5koeXuj7klU2vfVEbLqYUfd0gqK.jpg",
+        "adult": false,
+        "character": "Callum"
+      },
+      {
+        "id": 342255,
+        "originalLanguage": "en",
+        "episodeCount": 1,
+        "overview": "",
+        "originCountry": [
+          "US"
+        ],
+        "originalName": "Other Worlds: A Stranger Things Adventure (2028)",
+        "voteCount": "<number>",
+        "name": "Other Worlds: A Stranger Things Adventure (2028)",
+        "mediaType": "tv",
+        "popularity": "<number>",
+        "creditId": "6afa66ff1bf826b92b2730ca",
+        "backdropPath": null,
+        "firstAirDate": "2028-10-30",
+        "voteAverage": "<number>",
+        "genreIds": [],
+        "posterPath": null,
+        "adult": false,
+        "character": "To be annouced"
+      }
+    ],
+    "crew": [],
+    "id": 5225942
+  }
+}

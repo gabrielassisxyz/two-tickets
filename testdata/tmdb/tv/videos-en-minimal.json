@@ -1,0 +1,128 @@
+{
+  "id": "tv/videos-en-minimal",
+  "request": {
+    "path": "/tv/91073",
+    "params": {
+      "append_to_response": "videos",
+      "include_video_language": "en",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "adult": false,
+      "backdrop_path": "/xFWpWdJORfcf8uIQwFAi0OrnhBN.jpg",
+      "created_by": [
+        {
+          "id": 2716763,
+          "credit_id": "5f13cead65c26c0038be574f",
+          "name": "Ranjeev Nitu",
+          "original_name": "Ranjeev Nitu",
+          "gender": 0,
+          "profile_path": null
+        }
+      ],
+      "episode_run_time": [
+        24
+      ],
+      "first_air_date": "2019-07-01",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "https://www.primevideo.com/-/pt/detail/0SKU8WZ651LEGSBZJKN81J517P",
+      "id": 91073,
+      "in_production": false,
+      "languages": [
+        "hi"
+      ],
+      "last_air_date": "2023-12-08",
+      "last_episode_to_air": {
+        "id": 2289668,
+        "name": "Episódio 96",
+        "overview": "",
+        "vote_average": 0,
+        "vote_count": 0,
+        "air_date": "2023-12-08",
+        "episode_number": 96,
+        "episode_type": "standard",
+        "production_code": "",
+        "runtime": 24,
+        "season_number": 1,
+        "show_id": 91073,
+        "still_path": "/ku8RGZMGoEUrpb5LCz8J7ePHhSY.jpg"
+      },
+      "name": "छोटी सरदारनी",
+      "next_episode_to_air": null,
+      "networks": [
+        {
+          "id": 2532,
+          "logo_path": "/8LplmEPunQzheRGqQgvHN4tPltg.png",
+          "name": "VOOT",
+          "origin_country": "IN"
+        },
+        {
+          "id": 524,
+          "logo_path": "/1qTv9p35O9i5x0Swg1VbfzLqYBq.png",
+          "name": "Colors",
+          "origin_country": "IN"
+        }
+      ],
+      "number_of_episodes": 810,
+      "number_of_seasons": 1,
+      "origin_country": [
+        "IN"
+      ],
+      "original_language": "hi",
+      "original_name": "छोटी सरदारनी",
+      "overview": "",
+      "popularity": 23.4561,
+      "poster_path": "/uMuB9iMaAMOeqip4LsZPLUcjlqg.jpg",
+      "production_companies": [
+        {
+          "id": 141735,
+          "logo_path": "/ba2GSbH2KnInGel6L6XIy3dtGQ5.png",
+          "name": "Cockcrow Entertainment & Shaika Films",
+          "origin_country": "IN"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "IN",
+          "name": "India"
+        }
+      ],
+      "seasons": [
+        {
+          "air_date": "2019-07-01",
+          "episode_count": 810,
+          "id": 127626,
+          "name": "Temporada 1",
+          "overview": "",
+          "poster_path": "/uMuB9iMaAMOeqip4LsZPLUcjlqg.jpg",
+          "season_number": 1,
+          "vote_average": 0
+        }
+      ],
+      "softcore": false,
+      "spoken_languages": [
+        {
+          "english_name": "Hindi",
+          "iso_639_1": "hi",
+          "name": "हिन्दी"
+        }
+      ],
+      "status": "Ended",
+      "tagline": "",
+      "type": "Scripted",
+      "vote_average": 0,
+      "vote_count": 0,
+      "videos": {
+        "results": []
+      }
+    }
+  }
+}

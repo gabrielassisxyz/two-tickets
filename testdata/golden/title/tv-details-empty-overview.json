@@ -1,0 +1,347 @@
+{
+  "case": "tv-details-empty-overview",
+  "family": "title",
+  "request": "GET /api/v1/tv/241462",
+  "fixtures": [
+    "tv/details-en-empty-overview",
+    "tv/details-empty-overview",
+    "tv/videos-en-empty-overview"
+  ],
+  "status": 200,
+  "body": {
+    "createdBy": [
+      {
+        "id": 4427691,
+        "credit_id": "65796e624bfa545d010a957a",
+        "name": "Theltom Masimila",
+        "original_name": "Theltom Masimila",
+        "gender": 0,
+        "profile_path": null
+      }
+    ],
+    "episodeRunTime": [],
+    "firstAirDate": "2018-10-01",
+    "genres": [
+      {
+        "id": 10766,
+        "name": "Soap"
+      }
+    ],
+    "relatedVideos": [],
+    "homepage": "",
+    "id": 241462,
+    "inProduction": false,
+    "languages": [
+      "af"
+    ],
+    "lastAirDate": "2024-06-27",
+    "name": "Arendsvlei",
+    "networks": [
+      {
+        "id": 7099,
+        "name": "kykNET & Kie",
+        "originCountry": "ZA",
+        "logoPath": "/mPyEYYAmrN2ucqskaSxCeY6TP0d.png"
+      }
+    ],
+    "numberOfEpisodes": 1144,
+    "numberOfSeasons": 6,
+    "originCountry": [
+      "ZA"
+    ],
+    "originalLanguage": "af",
+    "originalName": "Arendsvlei",
+    "tagline": "",
+    "overview": "Arendsvlei is a South African, Afrikaans-language telenovela based on a concept by Theltom Masimila which revolves around a semi-private high school on the Cape Flats run by the Cupido family, in the fictitious community of Arendsvlei.",
+    "popularity": "<number>",
+    "productionCompanies": [
+      {
+        "id": 149066,
+        "name": "Penguin Films",
+        "originCountry": "",
+        "logoPath": null
+      }
+    ],
+    "productionCountries": [
+      {
+        "iso_3166_1": "ZA",
+        "name": "South Africa"
+      }
+    ],
+    "contentRatings": {
+      "results": [
+        {
+          "descriptors": [
+            "V",
+            "S",
+            "L"
+          ],
+          "iso_3166_1": "ZA",
+          "rating": "13"
+        }
+      ]
+    },
+    "spokenLanguages": [
+      {
+        "englishName": "Afrikaans",
+        "iso_639_1": "af",
+        "name": "Afrikaans"
+      }
+    ],
+    "seasons": [
+      {
+        "airDate": "2018-10-01",
+        "episodeCount": 156,
+        "id": 369646,
+        "name": "Temporada 1",
+        "overview": "",
+        "seasonNumber": 1,
+        "posterPath": null
+      },
+      {
+        "airDate": "2019-09-30",
+        "episodeCount": 156,
+        "id": 369651,
+        "name": "Temporada 2",
+        "overview": "",
+        "seasonNumber": 2,
+        "posterPath": null
+      },
+      {
+        "airDate": "2020-09-28",
+        "episodeCount": 208,
+        "id": 369652,
+        "name": "Temporada 3",
+        "overview": "",
+        "seasonNumber": 3,
+        "posterPath": null
+      },
+      {
+        "airDate": "2021-09-27",
+        "episodeCount": 208,
+        "id": 369664,
+        "name": "Temporada 4",
+        "overview": "",
+        "seasonNumber": 4,
+        "posterPath": null
+      },
+      {
+        "airDate": "2022-09-26",
+        "episodeCount": 208,
+        "id": 369665,
+        "name": "Temporada 5",
+        "overview": "",
+        "seasonNumber": 5,
+        "posterPath": null
+      },
+      {
+        "airDate": "2023-09-25",
+        "episodeCount": 208,
+        "id": 369668,
+        "name": "Temporada 6",
+        "overview": "",
+        "seasonNumber": 6,
+        "posterPath": "/20joN3GJC6krL2nqPYYK1ekdTVz.jpg"
+      }
+    ],
+    "status": "Canceled",
+    "type": "Scripted",
+    "voteAverage": "<number>",
+    "voteCount": "<number>",
+    "backdropPath": "/snb1RDDCJYuk6t1F7qHOfHXwCoe.jpg",
+    "lastEpisodeToAir": {
+      "id": 4996092,
+      "airDate": "2024-06-27",
+      "episodeNumber": 160,
+      "name": "Episódio 160",
+      "overview": "",
+      "productionCode": "",
+      "seasonNumber": 6,
+      "showId": 241462,
+      "voteAverage": "<number>",
+      "voteCount": "<number>",
+      "stillPath": null
+    },
+    "posterPath": "/20joN3GJC6krL2nqPYYK1ekdTVz.jpg",
+    "credits": {
+      "cast": [
+        {
+          "character": "Beatrice Abrahams",
+          "creditId": "657970e84bfa545d020adcf7",
+          "id": 1509022,
+          "name": "Jolene Martin",
+          "order": 0,
+          "gender": 1,
+          "profilePath": "/bbOXb2raIQLVtCnH1LrVS1yIpQ2.jpg"
+        },
+        {
+          "character": "Thys Cupido",
+          "creditId": "6579712bec8a4300aa6d3b55",
+          "id": 1458048,
+          "name": "Sherman Pharo",
+          "order": 4,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "Janice Cupido",
+          "creditId": "6579713935a61e00c634de4b",
+          "id": 231651,
+          "name": "Crystal-Donna Roberts",
+          "order": 5,
+          "gender": 1,
+          "profilePath": "/2XXR6h0xluMMtAi8MO58mJjSvAQ.jpg"
+        },
+        {
+          "character": "Lee-Roy Foster",
+          "creditId": "6579726589d97f013aca1ab3",
+          "id": 3182686,
+          "name": "Roberto Kyle",
+          "order": 11,
+          "gender": 2,
+          "profilePath": "/6uQJc7epTqEJ1BsSrSpFFJ6YMyi.jpg"
+        },
+        {
+          "character": "Gertie Cupido",
+          "creditId": "6a614f565f460912b0eb3898",
+          "id": 5946258,
+          "name": "Celeste Matthews Wannenburgh",
+          "order": 17,
+          "gender": 1,
+          "profilePath": null
+        },
+        {
+          "character": "Lionel Foster",
+          "creditId": "6579724820ecaf00e392a9d3",
+          "id": 1120220,
+          "name": "Jody Abrahams",
+          "order": 9,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "Gertie Cupido",
+          "creditId": "6579711789d97f013aca1a5c",
+          "id": 2229178,
+          "name": "Celeste Matthews",
+          "order": 3,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "Claudia Cupido",
+          "creditId": "65797146a1d3320138eba3ad",
+          "id": 4182873,
+          "name": "Ann Juries",
+          "order": 6,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "Wendy Newman",
+          "creditId": "65797157e93e952192ccf49e",
+          "id": 2349871,
+          "name": "Rehane Abrahams",
+          "order": 7,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "Debra Newman",
+          "creditId": "65797237a1d332011b504be9",
+          "id": 4216227,
+          "name": "Kay Smith",
+          "order": 8,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "Ronel Foster",
+          "creditId": "65797255564ec700c474a50d",
+          "id": 4293486,
+          "name": "Melanie du Bois",
+          "order": 10,
+          "gender": 0,
+          "profilePath": "/euDrpNP3TqZ2X5xCuUJ6ynS1m1y.jpg"
+        },
+        {
+          "character": "Samantha Abrahams",
+          "creditId": "657971057a3c5200ca7a7df4",
+          "id": 4427705,
+          "name": "Maria Valente de Almeida",
+          "order": 2,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "Hein Venter",
+          "creditId": "65799e41a1d33200febe66fc",
+          "id": 1028838,
+          "name": "Merlin Balie",
+          "order": 12,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "Bianca Petersen",
+          "creditId": "65799e5320ecaf0100d2f6af",
+          "id": 4216264,
+          "name": "Riana Alfreds",
+          "order": 13,
+          "gender": 0,
+          "profilePath": "/gRMNeI1n8DYCnjskRwjVHVSjloJ.jpg"
+        },
+        {
+          "character": "Arnold Bekker",
+          "creditId": "65799e7435a61e00e35fe803",
+          "id": 1307704,
+          "name": "Wilhelm van Der Walt",
+          "order": 14,
+          "gender": 2,
+          "profilePath": "/tkKvWmQBL5mLuN1787DUuGTh1zZ.jpg"
+        },
+        {
+          "character": "Anthony George Saaiman",
+          "creditId": "65799e84ec8a43011a3af038",
+          "id": 227671,
+          "name": "Terence Bridgett",
+          "order": 15,
+          "gender": 2,
+          "profilePath": null
+        },
+        {
+          "character": "Rachel Saaiman",
+          "creditId": "65799e9135a61e00c634eb1a",
+          "id": 1844774,
+          "name": "Kim Syster",
+          "order": 16,
+          "gender": 1,
+          "profilePath": "/9uHIA4lj5tcAjO7mrYn56MPiVQE.jpg"
+        },
+        {
+          "character": "David Abrahams",
+          "creditId": "657970f889d97f01009f236f",
+          "id": 2042327,
+          "name": "Oscar Petersen",
+          "order": 1,
+          "gender": 2,
+          "profilePath": "/qD5TGAwjWxgv26B7h1L3EavGDQm.jpg"
+        }
+      ],
+      "crew": []
+    },
+    "externalIds": {
+      "facebookId": null,
+      "freebaseId": null,
+      "freebaseMid": null,
+      "imdbId": "tt9248932",
+      "instagramId": null,
+      "tvdbId": 414791,
+      "tvrageId": null,
+      "twitterId": null
+    },
+    "keywords": [],
+    "watchProviders": [],
+    "onUserWatchlist": false
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "id": "movie/similar",
+  "request": {
+    "path": "/movie/603/similar",
+    "params": {
+      "language": "pt-BR",
+      "page": "1"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "page": 1,
+      "results": [
+        {
+          "adult": false,
+          "backdrop_path": "/7iEfnj3rfyunky6BzvnlwqfoEF0.jpg",
+          "genre_ids": [
+            12,
+            28,
+            53,
+            878
+          ],
+          "id": 563,
+          "title": "Tropas Estelares",
+          "original_language": "en",
+          "original_title": "Starship Troopers",
+          "overview": "Em um futuro distante, a Terra está em guerra contra uma raça de insetos gigantes alienígenas. Pouco se sabe sobre eles, exceto que têm a intenção de eliminar toda forma de vida humana. Mas houve um tempo, antes da guerra, em que a Infantaria Móvel viajava para planetas distantes a fim de combater os insetos, inimigos implacáveis, com apenas uma missão: garantir a sobrevivência de sua espécie a qualquer custo.",
+          "popularity": 9.8685,
+          "poster_path": "/xb6NkoDkbep6lhn8K6YDPitALpr.jpg",
+          "release_date": "1997-11-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.12,
+          "vote_count": 5851
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            28,
+            18
+          ],
+          "id": 1625783,
+          "title": "Relentless",
+          "original_language": "en",
+          "original_title": "Relentless",
+          "overview": "",
+          "popularity": 0.6225,
+          "poster_path": "/81vXx8drpqVlHGTmXbrDtGhisNS.jpg",
+          "release_date": "2027-01-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            16,
+            878
+          ],
+          "id": 1625788,
+          "title": "Yağmurlar Çiseleyecek",
+          "original_language": "en",
+          "original_title": "Yağmurlar Çiseleyecek",
+          "overview": "",
+          "popularity": 0.1477,
+          "poster_path": null,
+          "release_date": "",
+          "softcore": false,
+          "video": false,
+          "vote_average": 10,
+          "vote_count": 1
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/fM9ODwfR7m8fI2g99M9WyhvqXtI.jpg",
+          "genre_ids": [
+            878,
+            18
+          ],
+          "id": 636,
+          "title": "THX 1138",
+          "original_language": "en",
+          "original_title": "THX 1138",
+          "overview": "No século XXI, numa época em que as pessoas têm designações em vez de nomes, um homem, THX 1138, e uma mulher, LUH 3417, se rebelam contra sua sociedade rigidamente controlada.",
+          "popularity": 2.708,
+          "poster_path": "/yt51X3fKoJujLHNJVCJ2WrjD7tE.jpg",
+          "release_date": "1971-03-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.439,
+          "vote_count": 1139
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/qvZ91FwMq6O47VViAr8vZNQz3WI.jpg",
+          "genre_ids": [
+            28,
+            18
+          ],
+          "id": 346,
+          "title": "Os Sete Samurais",
+          "original_language": "ja",
+          "original_title": "七人の侍",
+          "overview": "Um bando de bandidos aterroriza os habitantes de uma pequena cidade, saqueando-os periodicamente sem piedade. Para repelir estes ataques, os aldeões decidem contratar mercenários. Por fim, obtêm os serviços de 7 guerreiros, 7 samurais dispostos a defendê-los em troca apenas de abrigo e comida.",
+          "popularity": 18.114,
+          "poster_path": "/2f3Aw6GCzpn1qw56xq78dH0VBgn.jpg",
+          "release_date": "1954-04-26",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.4,
+          "vote_count": 4479
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/gZbcm1ADEXuxs1TsBVOBdk4heGI.jpg",
+          "genre_ids": [
+            27,
+            878
+          ],
+          "id": 348,
+          "title": "Alien: O Oitavo Passageiro",
+          "original_language": "en",
+          "original_title": "Alien",
+          "overview": "Quando a tripulação da sonda espacial Nostromo responde a um pedido de socorro vindo de um planeta inóspito, eles descobrem uma forma de vida mortal que se reproduz dentro de humanos. Agora, a tripulação deve lutar para permanecer viva e impedir que a criatura chegue até a Terra.",
+          "popularity": 24.7541,
+          "poster_path": "/rFHzJrkO1kNIezb6rFog5oCJUEn.jpg",
+          "release_date": "1979-05-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.176,
+          "vote_count": 17192
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/pgG6tzJzC8mjGqhaT8IWwEk00xf.jpg",
+          "genre_ids": [
+            28,
+            80,
+            53
+          ],
+          "id": 393,
+          "title": "Kill Bill: Volume 2",
+          "original_language": "en",
+          "original_title": "Kill Bill: Vol. 2",
+          "overview": "Após ser traída por Bill e seu antigo grupo, a Noiva assassina fica à beira da morte por 4 anos. Após despertar do coma, ela vai atrás de cada um dos seus antigos companheiros para matá-los. Na segunda parte dessa busca por vingança, a noiva vai continuar sua procura por Bill, atacando os últimos dois sobreviventes do grupo: Budd e Elle Driver . O confronto com seu antigo mestre, e mandante da sua morte, vai revelar novas surpresas para a assassina.",
+          "popularity": 11.7351,
+          "poster_path": "/qUe5LcD5gnbRFHNZBZf5qt56ylv.jpg",
+          "release_date": "2004-04-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.871,
+          "vote_count": 15712
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/xvq1RLaiwSdHwPHe7WUhqZa1rCA.jpg",
+          "genre_ids": [
+            12,
+            878,
+            28,
+            27
+          ],
+          "id": 395,
+          "title": "Alien vs. Predador",
+          "original_language": "en",
+          "original_title": "AVP: Alien vs. Predator",
+          "overview": "Uma pirâmide até então desconhecida é encontrada na Antártica através de satélites, fazendo com que uma equipe de cientistas e aventureiros seja enviada para investigar o local. Porém lá eles fazem uma descoberta chocante: a pirâmide serve de abrigo para duas raças alienígenas extremamente violentas, que estão em guerra.",
+          "popularity": 6.0048,
+          "poster_path": "/3geC51BIBZYSttTfDHXO82Heoec.jpg",
+          "release_date": "2004-08-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.961,
+          "vote_count": 5245
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/jMvdSEdhkDT1sgz5MLrjOKAAURd.jpg",
+          "genre_ids": [
+            9648,
+            18,
+            878,
+            10751
+          ],
+          "id": 1435109,
+          "title": "Handen van Zilver",
+          "original_language": "nl",
+          "original_title": "Handen van Zilver",
+          "overview": "",
+          "popularity": 0.2203,
+          "poster_path": "/nckiNDFhs0qSXx7E8J9RN0Lr3l5.jpg",
+          "release_date": "2025-02-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8J7J7CBmapmcMaxsn9KMiaHzOU2.jpg",
+          "genre_ids": [
+            27,
+            28,
+            878
+          ],
+          "id": 1576,
+          "title": "Resident Evil: O Hóspede Maldito",
+          "original_language": "en",
+          "original_title": "Resident Evil",
+          "overview": "Uma equipe de comando militar composta por civis deve lutar contra mortos-vivos carnívoros, cães mutantes e defesas mortíferas de um super computador, antes que um vírus solto consuma a humanidade, nesta adaptação do sucesso da série de vídeo-games!",
+          "popularity": 7.6563,
+          "poster_path": "/oxZX9s92Xr5f7mnFCGyEsB5mCOb.jpg",
+          "release_date": "2002-03-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.689,
+          "vote_count": 7362
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            28
+          ],
+          "id": 457325,
+          "title": "Johnny Owes",
+          "original_language": "en",
+          "original_title": "Johnny Owes",
+          "overview": "",
+          "popularity": 0.1685,
+          "poster_path": "/wWV2dE6L1hyiWNc4TkINKMz6RH.jpg",
+          "release_date": "2008-07-27",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            28,
+            35,
+            18,
+            10751
+          ],
+          "id": 841593,
+          "title": "沒大沒小",
+          "original_language": "zh",
+          "original_title": "沒大沒小",
+          "overview": "",
+          "popularity": 0.342,
+          "poster_path": "/jaAtX6u2OKqq1m7WiX04Vj5V9ju.jpg",
+          "release_date": "1991-01-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 10,
+          "vote_count": 1
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/zZZ1FDl5FPClZ9OnMrlaPA4Iuxv.jpg",
+          "genre_ids": [
+            28,
+            53,
+            878
+          ],
+          "id": 1635,
+          "title": "A Ilha",
+          "original_language": "en",
+          "original_title": "The Island",
+          "overview": "Um homem que vive em uma colônia estéril futurista começa a questionar sua existência quando sua amiga é escolhida para ir à ilha, o último lugar não contaminado do mundo.",
+          "popularity": 9.1698,
+          "poster_path": "/cmYwqH7avrYZ3AwAODtw5ZAyavW.jpg",
+          "release_date": "2005-07-21",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.693,
+          "vote_count": 6202
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/lywmuPU5Hr1Mnpb9UGeDbILmkTx.jpg",
+          "genre_ids": [
+            28,
+            53
+          ],
+          "id": 1637,
+          "title": "Velocidade Máxima",
+          "original_language": "en",
+          "original_title": "Speed",
+          "overview": "Um policial é escolhido para desativar uma bomba que foi colocada em um ônibus de passageiros por um terrorista em busca de vingança. Mas, enquanto isso, ele e uma passageira devem manter o ônibus em movimento pelas ruas de Los Angeles a uma velocidade não inferior a 80 quilômetros por hora para evitar que o dispositivo exploda.",
+          "popularity": 11.0584,
+          "poster_path": "/d30AWcDezR0qM6OgXovulfA4z8N.jpg",
+          "release_date": "1994-06-09",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.161,
+          "vote_count": 7203
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/9a59H9qoAzMcj1NWurMgvg9iLaT.jpg",
+          "genre_ids": [
+            28,
+            12,
+            14
+          ],
+          "id": 1729,
+          "title": "O Reino Proibido",
+          "original_language": "en",
+          "original_title": "The Forbidden Kingdom",
+          "overview": "Jason, um adolescente americano, é um grande fã do cinema de Hong Kong e de velhos filmes de kung-fu. Ao visitar uma loja de penhores em Chinatown, ele descobre a arma de um sábio chinês antigo e guerreiro, o Rei Macaco. A relíquia mágica transporta Jason de volta no tempo e ele se junta a um grupo de lendários artistas marciais em uma missão para libertar um homem preso.",
+          "popularity": 7.5822,
+          "poster_path": "/2rEzOeG6he952m7tyFe7tOyfoko.jpg",
+          "release_date": "2008-04-17",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.653,
+          "vote_count": 2045
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/1uPcQNsgZIMRZl07rbIuw7EEtwX.jpg",
+          "genre_ids": [
+            28,
+            878,
+            53
+          ],
+          "id": 1738,
+          "title": "O Vidente",
+          "original_language": "en",
+          "original_title": "Next",
+          "overview": "Um astro do cassino ganha a vida prevendo acontecimentos, mas sua vida muda quando a polícia de Los Angeles descobre seu dom e lhe pede ajuda para evitar que um ataque terrorista detone armas nucleares. Porém ele fica dividido entre salvar o mundo ou salvar a mulher que ama.",
+          "popularity": 5.8397,
+          "poster_path": "/fFehtsCSORmECTCgs6mntAYFvL4.jpg",
+          "release_date": "2007-04-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.156,
+          "vote_count": 3465
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            878,
+            28,
+            14
+          ],
+          "id": 457706,
+          "title": "Skate God",
+          "original_language": "en",
+          "original_title": "Skate God",
+          "overview": "",
+          "popularity": 0.3711,
+          "poster_path": "/zqf4Mcqi4CwRBQPOyzixsaVsUwH.jpg",
+          "release_date": "",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/9mzIup930ab3dZ2ePd8ZXk98mK8.jpg",
+          "genre_ids": [
+            878,
+            28,
+            27
+          ],
+          "id": 457710,
+          "title": "Império dos Tubarões",
+          "original_language": "en",
+          "original_title": "Empire of the Sharks",
+          "overview": "Em um planeta Terra do futuro, onde 98% da superfície está debaixo d'agua, um senhor da guerra que controla um exército de tubarões encontra um inimigo a altura quando captura a filha de um misterioso caçador de tubarões.",
+          "popularity": 1.2325,
+          "poster_path": "/5L2UP16K1KYLJGDlDOqw08fDjqr.jpg",
+          "release_date": "2018-11-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 3.607,
+          "vote_count": 28
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ziECpBRIyclmBNaFSWlvCfsKbMD.jpg",
+          "genre_ids": [
+            12,
+            28,
+            878
+          ],
+          "id": 1892,
+          "title": "Guerra nas Estrelas: O Retorno de Jedi",
+          "original_language": "en",
+          "original_title": "Return of the Jedi",
+          "overview": "O imperador está supervisionando a construção de uma nova Estrela da Morte. Enquanto isso Luke Skywalker liberta Han Solo e a Princesa Leia das mãos de Jaba. Luke só se tornará um cavaleiro jedi quando destruir Darth Vader, que ainda pretende atraí-lo para o lado sombrio da Força.",
+          "popularity": 10.4577,
+          "poster_path": "/llaJ35p5e23ygDbqd0H3otJLWsA.jpg",
+          "release_date": "1983-05-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.912,
+          "vote_count": 17592
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/3TeGmKJfkik1D1rIoqGb1aR4k9c.jpg",
+          "genre_ids": [
+            12,
+            28,
+            878
+          ],
+          "id": 1893,
+          "title": "Star Wars: Episódio I - A Ameaça Fantasma",
+          "original_language": "en",
+          "original_title": "Star Wars: Episode I - The Phantom Menace",
+          "overview": "Enquanto resgatam a Rainha Amidala, governante de um planeta pacífico invadido por forças ameaçadoras, os Cavaleiros Jedi Obi-Wan Kenobi e Qui-Gon Jinn descobrem Anakin Skywalker, uma criança prodígio de 9 anos excepcionalmente poderosa na Força.",
+          "popularity": 11.9323,
+          "poster_path": "/gNk8UNAumXlfCdtaxDqsQe7ZGlt.jpg",
+          "release_date": "1999-05-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.583,
+          "vote_count": 16463
+        }
+      ],
+      "total_pages": 1001,
+      "total_results": 20001
+    }
+  }
+}

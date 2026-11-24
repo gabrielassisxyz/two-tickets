@@ -1,0 +1,13 @@
+{
+  "case": "keyword",
+  "family": "lookup",
+  "request": "GET /api/v1/keyword/9715",
+  "fixtures": [
+    "keyword/superhero"
+  ],
+  "status": 200,
+  "body": {
+    "id": 9715,
+    "name": "superhero"
+  }
+}

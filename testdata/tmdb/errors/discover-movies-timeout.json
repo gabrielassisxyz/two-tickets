@@ -1,0 +1,18 @@
+{
+  "id": "errors/discover-movies-timeout",
+  "request": {
+    "path": "/discover/movie",
+    "params": {
+      "include_adult": "false",
+      "include_video": "true",
+      "language": "pt-BR",
+      "page": "1",
+      "region": "BR",
+      "sort_by": "popularity.desc",
+      "with_original_language": ""
+    }
+  },
+  "response": {
+    "error": "timeout"
+  }
+}

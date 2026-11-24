@@ -1,0 +1,25 @@
+{
+  "case": "person-details-empty",
+  "family": "title",
+  "request": "GET /api/v1/person/5153308",
+  "fixtures": [
+    "person/details-empty"
+  ],
+  "status": 200,
+  "body": {
+    "id": 5153308,
+    "name": "Charles E. Gibb",
+    "birthday": null,
+    "deathday": null,
+    "knownForDepartment": "",
+    "alsoKnownAs": [],
+    "gender": 0,
+    "biography": "",
+    "popularity": "<number>",
+    "placeOfBirth": null,
+    "profilePath": null,
+    "adult": false,
+    "imdbId": null,
+    "homepage": null
+  }
+}

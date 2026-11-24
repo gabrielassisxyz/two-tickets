@@ -1,0 +1,454 @@
+{
+  "case": "discover-movies-studio",
+  "family": "discover",
+  "request": "GET /api/v1/discover/movies/studio/2?page=1",
+  "fixtures": [
+    "company/walt-disney-pictures",
+    "discover/movies-studio-disney"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 21,
+    "totalResults": 403,
+    "studio": {
+      "id": 2,
+      "name": "Walt Disney Pictures",
+      "originCountry": "US",
+      "description": "",
+      "headquarters": "Burbank, California",
+      "homepage": "https://movies.disney.com",
+      "logoPath": "/wdrCwmRnLFJhEoH8GSfymY85KHT.png"
+    },
+    "results": [
+      {
+        "id": 1108427,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          10751,
+          14,
+          35,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Moana",
+        "overview": "Na Polinésia Antiga, quando uma terrível maldição contraída por Maui chega à ilha de um impetuoso chefe, sua filha obstinada responde ao chamado do Oceano para procurar o semideus e consertar as coisas. Adaptação live-action do filme de animação da Disney de 2016 'Moana'",
+        "popularity": "<number>",
+        "releaseDate": "2026-07-09",
+        "title": "Moana",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/c6BPbkO5Npt1OdwttAxCFo06wtH.jpg",
+        "posterPath": "/iHpNZzSMLWPfnDqTVuMyRIhrdiW.jpg"
+      },
+      {
+        "id": 8587,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          10751,
+          18
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Lion King",
+        "overview": "Mufasa, o Rei Leão, e a rainha Sarabi apresentam ao reino o herdeiro do trono, Simba. O recém-nascido recebe a bênção do sábio babuíno Rafiki, mas ao crescer é envolvido nas artimanhas de seu tio Scar, o invejoso e maquiavélico irmão de Mufasa, que planeja livrar-se do sobrinho e herdar o trono.",
+        "popularity": "<number>",
+        "releaseDate": "1994-07-01",
+        "title": "O Rei Leão",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/wXsQvli6tWqja51pYxXNG1LFIGV.jpg",
+        "posterPath": "/8aIvm8OaJISOpVTt7rMIh7X35G5.jpg"
+      },
+      {
+        "id": 22,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          14,
+          28
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Pirates of the Caribbean: The Curse of the Black Pearl",
+        "overview": "O pirata Jack Sparrow tem seu navio saqueado e roubado pelo capitão Barbossa e sua tripulação. Com o navio de Sparrow, Barbossa invade a cidade de Port Royal, levando consigo Elizabeth Swann, filha do governador. Para recuperar sua embarcação, Sparrow recebe a ajuda de Will Turner, um grande amigo de Elizabeth. Eles desbravam os mares em direção à misteriosa Ilha da Morte, tentando impedir que os piratas-esqueleto derramem o sangue de Elizabeth para desfazer a maldição que os assola.",
+        "popularity": "<number>",
+        "releaseDate": "2003-08-29",
+        "title": "Piratas do Caribe: A Maldição do Pérola Negra",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/uRNgkJSkNBFbbn9fPsEjDIy8Sh3.jpg",
+        "posterPath": "/qlwCuP4QC79QV5pjOI08Z7KAYxP.jpg"
+      },
+      {
+        "id": 411,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          10751,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+        "overview": "Durante os bombardeios da Segunda Guerra Mundial de Londres, quatro irmãos ingleses são enviados para uma casa de campo onde eles estarão seguros. Um dia, Lucy encontra um guarda-roupa que a transporta para um mundo mágico chamado Nárnia. Depois de voltar, ela logo volta a Nárnia com seus irmãos, Peter e Edmund, e sua irmã, Susan. Lá eles se juntam ao leão mágico, Aslan, na luta contra a Feiticeira Branca.",
+        "popularity": "<number>",
+        "releaseDate": "2005-12-09",
+        "title": "As Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/tuDhEdza074bA497bO9WFEPs6O6.jpg",
+        "posterPath": "/sDBziWxSTavCNjbayaXaDDwmTiQ.jpg"
+      },
+      {
+        "id": 58,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          14,
+          28
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Pirates of the Caribbean: Dead Man's Chest",
+        "overview": "Will e Elizabeth estão prestes a se casar quando o lendário pirata Davy Jones, comandante do invencível navio assombrado O Holandês Voador, aparece para cobrar uma dívida do capitão Jack Sparrow, amigo do casal. A única chance de Sparrow se livrar de uma maldição de Jones é encontrando o baú da morte.",
+        "popularity": "<number>",
+        "releaseDate": "2006-07-21",
+        "title": "Piratas do Caribe: O Baú da Morte",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/vr6n6ZFUZvedvIlhfYcbCWcaKyW.jpg",
+        "posterPath": "/yvD1G41HwHgj8afCjmfGbyRmBBR.jpg"
+      },
+      {
+        "id": 10020,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          10749,
+          10751,
+          16,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Beauty and the Beast",
+        "overview": "Em uma pequena aldeia da França vive Bela, uma jovem inteligente que é considerada estranha pelo moradores da localidade, e seu pai, Maurice, um inventor que é visto como um louco. Ela é cortejada por Gaston, que quer casar com ela. Mas apesar de todas as jovens do lugarejo o acharem um homem bonito, Bela não o suporta, pois vê nele uma pessoa primitiva e convencida. Quando o pai de Bela vai para uma feira demonstrar sua nova invenção, ele acaba se perdendo na floresta e é atacado por lobos. Desesperado, Maurice procura abrigo em um castelo, mas acaba se tornando prisioneiro da Fera, o senhor do castelo, que na verdade é um príncipe que foi amaldiçoado por uma feiticeira quando negou abrigo a ela.",
+        "popularity": "<number>",
+        "releaseDate": "1991-11-13",
+        "title": "A Bela e a Fera",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/fW4ZCoEZRBqLAJGFQ2g5AdAfPQR.jpg",
+        "posterPath": "/is4c02QuP70BCVLp27SSlDeByoe.jpg"
+      },
+      {
+        "id": 17979,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          10751,
+          14,
+          18
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "A Christmas Carol",
+        "overview": "O Natal se aproxima e, como sempre, Ebenezer Scrooge (Jim Carrey) mantém seu desprezo pela data. Milionário e muito mesquinho, ele só pensa em dinheiro e não dá espaço para a emoção em seu coração, maltratando Bob Cratchit (Gary Oldman), seu fiel assistente, e ignorando seu sobrinho Fred (Colin Firth). Com a morte de seu sócio, Ebenezer recebe a visita de três fantasmas do Natal: do passado, do presente e do futuro. Cada um deles, levará o velho ranzinza para uma viagem que o ajudará a refletir melhor sobre sua vida passada e a escolha que fará para o futuro.",
+        "popularity": "<number>",
+        "releaseDate": "2009-11-06",
+        "title": "Os Fantasmas de Scrooge",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/uocpNfrP0Vvnf2UxykXuIR1HNUd.jpg",
+        "posterPath": "/1qhU3VJo10sISkHIyANLsHioq0Y.jpg"
+      },
+      {
+        "id": 38757,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          10751,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Tangled",
+        "overview": "O bandido mais procurado do reino, Flynn Rider, se esconde em uma torre e imediatamente se torna prisioneiro de Rapunzel, residente de longa data do local. Dona de cabelos dourados mágicos com 21 metros de comprimento, ela está trancada há anos e quer, desesperadamente, a liberdade. A adolescente determinada faz um acordo com o rapaz, e, juntos, partem para uma aventura emocionante.",
+        "popularity": "<number>",
+        "releaseDate": "2011-01-07",
+        "title": "Enrolados",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/cWczNud8Y8i8ab0Z4bxos4myWYO.jpg",
+        "posterPath": "/wZzVkdnc0kw20lSJc13ZmgTPah3.jpg"
+      },
+      {
+        "id": 321612,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          10751,
+          14,
+          10749
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Beauty and the Beast",
+        "overview": "Moradora de uma pequena aldeia francesa, Bela tem o pai capturado pela Fera e decide entregar sua vida ao estranho ser em troca da liberdade do progenitor. No castelo ela conhece objetos mágicos e descobre que a Fera é na verdade um príncipe que precisa de amor para voltar à forma humana.",
+        "popularity": "<number>",
+        "releaseDate": "2017-03-16",
+        "title": "A Bela e a Fera",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/uU1Mt4JWhDvl4vKb3AfxNsorkoM.jpg",
+        "posterPath": "/8JkXzfzwpZNZV72vSbG5c3Vn6Tt.jpg"
+      },
+      {
+        "id": 285,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          14,
+          28
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Pirates of the Caribbean: At World's End",
+        "overview": "Will Turner e Elizabeth Swann unem forças com o Capitão Barbossa para libertarem Jack Sparrow da prisão de Davy Jones. Enquanto isso, a tripulação do barco fantasma O Holandês Voador causa estragos nos Sete Mares. Os amigos devem navegar através de águas perigosas para enfrentarem o pirata chinês São Feng e, finalmente, eles devem escolher em que lado ficar na batalha, pois a vida do pirata está em jogo.",
+        "popularity": "<number>",
+        "releaseDate": "2007-05-25",
+        "title": "Piratas do Caribe: No Fim do Mundo",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/1jHxkVXMI5s3vRiyiZooUy1shB5.jpg",
+        "posterPath": "/j15lZasREutscon6e61LSSNJoN7.jpg"
+      },
+      {
+        "id": 10674,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          10751,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Mulan",
+        "overview": "Na antiga China, durante a guerra, todos os homens são convocados para lutar. Mas, um pobre velho, que pela idade não poderia mais lutar, descobre que sua filha Mulan toma o seu lugar, vestindo-se como homem e permanecendo em segredo. Se isso for descoberto, o castigo será severo. Agora, durante a guerra, Mulan ganha a proteção de um pequeno dragão, cuja missão é cuidar para que ela volte a salvo.",
+        "popularity": "<number>",
+        "releaseDate": "1998-07-03",
+        "title": "Mulan",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/mUYV0ZdsDEliGaQahcQH1F3grsP.jpg",
+        "posterPath": "/bmM6nAva9zzNn4PAzJpQsEJxD9G.jpg"
+      },
+      {
+        "id": 49013,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          10751,
+          12,
+          35
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Cars 2",
+        "overview": "O astro das corridas, Relâmpago McQueen, e o carro-guincho, Mate, viajam para disputar o primeiro Grand Prix Mundial, que irá revelar o carro mais veloz do planeta. Nessa jornada imperdível, Mate se envolve com um grupo de espionagem e vive grandes aventuras com seus amigos.",
+        "popularity": "<number>",
+        "releaseDate": "2011-06-16",
+        "title": "Carros 2",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/robYRZk9LxJTwD7GlZCginji5k.jpg",
+        "posterPath": "/fIKaabvE40T39nOIngcZPcPJeYe.jpg"
+      },
+      {
+        "id": 1865,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          28,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Pirates of the Caribbean: On Stranger Tides",
+        "overview": "O passado do capitão Jack Sparrow volta a alcançá-lo quando ele cruza com Angelica, uma bonita pirata que Jack, um dia, amou e depois abandonou. Ela, então, o força a acompanhá-la ao navio Vingança da Rainha Ana, do famoso Barba Negra. Junto com uma tripulação de zumbis, o trio parte em busca da lendária Fonte da Juventude. Mas o rival de Jack, Barbossa, também cobiça a fonte, assim como um navio espanhol.",
+        "popularity": "<number>",
+        "releaseDate": "2011-05-20",
+        "title": "Piratas do Caribe: Navegando em Águas Misteriosas",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/uzIGtyS6bbnJzGsPL93WCF1FWm8.jpg",
+        "posterPath": "/blt7kBXEk1HgJjCTusaUMQ7BCTY.jpg"
+      },
+      {
+        "id": 150689,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          10749,
+          14,
+          10751,
+          18
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Cinderella",
+        "overview": "Após a trágica e inesperada morte do seu pai, Ella (Lily James) fica à mercê da sua terrível madrasta, Lady Tremaine (Cate Blanchett), e suas filhas Anastasia e Drisella. A jovem ganha o apelido de Cinderela e é obrigada a trabalhar como empregada na sua própria casa, mas continua otimista com a vida. Passeando na floresta, ela se encanta por um corajoso estranho (Richard Madden), sem desconfiar que ele é o príncipe do castelo. Cinderela recebe um convite para o grande baile e acredita que pode voltar a encontrar sua alma gêmea, mas seus planos vão por água abaixo quando a madrasta má rasga seu vestido. Agora, será preciso uma fada madrinha (Helena Bonham Carter) para mudar o seu destino.",
+        "popularity": "<number>",
+        "releaseDate": "2015-04-02",
+        "title": "Cinderela",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/q7vmCCmyiHnuKGMzHZlr0fD44b9.jpg",
+        "posterPath": "/x8MnNc8zaKMPo5W4TuWN0xVIbNy.jpg"
+      },
+      {
+        "id": 102651,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          14,
+          12,
+          28,
+          10751,
+          10749
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Maleficent",
+        "overview": "Motivada por vingança e o desejo feroz de proteger seu reino, Malévola cruelmente coloca uma maldição irrevogável na filha recém-nascida do rei dos humanos, Aurora. Conforme cresce, Aurora enfrenta um conflito fervente entre o reino da floresta, local onde ela cresceu e ama, e o reino humano, que mantém o seu legado. Malévola percebe que Aurora pode ser a chave para a paz no reino e é forçada a tomar medidas drásticas que mudarão para sempre os dois mundos.",
+        "popularity": "<number>",
+        "releaseDate": "2014-05-30",
+        "title": "Malévola",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/xjotE7aFdZ0D8aGriYjFOtDayct.jpg",
+        "posterPath": "/ga1I9MwWnqXpbVBwE5NO1xTrpZS.jpg"
+      },
+      {
+        "id": 420818,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          18,
+          10751,
+          16
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Lion King",
+        "overview": "Simba é um jovem leão cujo destino é se tornar o rei da selva. Entretanto, uma armadilha elaborada por seu tio Scar faz com que Mufasa, o atual rei, morra ao tentar salvar o filhote. Consumido pela culpa, Simba deixa o reino rumo a um local distante, onde encontra amigos que o ensinam a mais uma vez ter prazer pela vida.",
+        "popularity": "<number>",
+        "releaseDate": "2019-07-18",
+        "title": "O Rei Leão",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/1TUg5pO1VZ4B0Q1amk3OlXvlpXV.jpg",
+        "posterPath": "/wrHr8eEJYDAA7WYybyH162s4oZ4.jpg"
+      },
+      {
+        "id": 552524,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          10751,
+          878,
+          35
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Lilo & Stitch",
+        "overview": "Stitch, um alienígena, chega ao planeta Terra após fugir de sua prisão e tenta se passar por um cachorro para se camuflar. As coisas mudam quando Lilo, uma travessa menina, o adota de um abrigo de animais. Juntos, eles aprendem os valores da amizade e família.",
+        "popularity": "<number>",
+        "releaseDate": "2025-05-22",
+        "title": "Lilo & Stitch",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/7Zx3wDG5bBtcfk8lcnCWDOLM4Y4.jpg",
+        "posterPath": "/bLQN6DUNYN4NVzSY3Q53JwBRlgV.jpg"
+      },
+      {
+        "id": 12155,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          10751,
+          14,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Alice in Wonderland",
+        "overview": "A Alice de 19 anos de idade, que regressa ao excêntrico mundo que encontrou pela primeira vez quando era criança reunindo-se assim com os seus amigos de infância: o Coelho Branco, Tweedledee e Tweedledum, a Ratazana, a Lagarta, o Gato Cheshire, e claro, o Chapeleiro Louco. Alice embarca numa fantástica viagem para encontrar o seu verdadeiro destino e acabar com o reino de terror da Rainha Vermelha.",
+        "popularity": "<number>",
+        "releaseDate": "2010-04-23",
+        "title": "Alice no País das Maravilhas",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/ocOWbTzHcJVTw9Tz173KPeskDOP.jpg",
+        "posterPath": "/rtBRW9xkP94PRuyDa9zTZahuo27.jpg"
+      },
+      {
+        "id": 166426,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          28,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Pirates of the Caribbean: Dead Men Tell No Tales",
+        "overview": "O Capitão Jack, que anda passando por uma onda de azar, sente os ventos da má sorte soprando com muita força quando os marinheiros fantasmas assassinos, liderados pelo aterrorizante Capitão Salazar, escapam do triângulo do diabo decididos a matar todos os piratas em seu caminho, especialmente Jack.",
+        "popularity": "<number>",
+        "releaseDate": "2017-05-25",
+        "title": "Piratas do Caribe: A Vingança de Salazar",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/7C921eWK06n12c1miRXnYoEu5Yv.jpg",
+        "posterPath": "/1bXv1lIkXE1TXYsyd6HHQr4dfw4.jpg"
+      },
+      {
+        "id": 37135,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          10751,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Tarzan",
+        "overview": "Um bebê perde os pais na selva. Órfão e sozinho, ele é encontrado por uma macaca que o cria como se fosse seu próprio filho. Tarzan cresce pensando ser um gorila, agindo e vivendo como tal. Quando uma equipe de pesquisadores chega à floresta, o rapaz percebe que é igual a eles. Tarzan encontra a bela Jane correndo perigo e a salva, apaixonando-se por ela. Ele se vê dividido entre o desejo de estar com gente da sua espécie e a lealdade com a família de gorilas que o criou.",
+        "popularity": "<number>",
+        "releaseDate": "1999-07-02",
+        "title": "Tarzan",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/a0E1mbejev56Ii51hCnYUDj4tZS.jpg",
+        "posterPath": "/ce4mU4yyubjP1uXcz48fMndCZni.jpg"
+      }
+    ]
+  }
+}

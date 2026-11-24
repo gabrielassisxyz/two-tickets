@@ -1,0 +1,2778 @@
+{
+  "id": "tv/details-en-anime",
+  "request": {
+    "path": "/tv/97009",
+    "params": {
+      "append_to_response": "aggregate_credits,credits,external_ids,keywords,videos,content_ratings,watch/providers",
+      "include_video_language": "en",
+      "language": "en"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "adult": false,
+      "backdrop_path": "/A4e4LG9kOXaQ8SYKoORGACKajSR.jpg",
+      "created_by": [],
+      "episode_run_time": [
+        23
+      ],
+      "first_air_date": "2019-12-30",
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        }
+      ],
+      "homepage": "https://www.netflix.com/title/81054849",
+      "id": 97009,
+      "in_production": false,
+      "languages": [
+        "ja"
+      ],
+      "last_air_date": "2019-12-30",
+      "last_episode_to_air": {
+        "id": 2032974,
+        "name": "Reawakening Saiki Kusuo",
+        "overview": "Kusuo is now a third-year student living as a normal teenager with no psychic powers. Sort of. But being normal is harder than he thought.",
+        "vote_average": 7,
+        "vote_count": 3,
+        "air_date": "2019-12-30",
+        "episode_number": 6,
+        "episode_type": "finale",
+        "production_code": "",
+        "runtime": 23,
+        "season_number": 1,
+        "show_id": 97009,
+        "still_path": "/bfnXlQfsApeh4pymA6ocbVdOvGr.jpg"
+      },
+      "name": "The Disastrous Life of Saiki K.: Reawakened",
+      "next_episode_to_air": null,
+      "networks": [
+        {
+          "id": 213,
+          "logo_path": "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png",
+          "name": "Netflix",
+          "origin_country": ""
+        }
+      ],
+      "number_of_episodes": 6,
+      "number_of_seasons": 1,
+      "origin_country": [
+        "JP"
+      ],
+      "original_language": "ja",
+      "original_name": "斉木楠雄のΨ難 Ψ始動編",
+      "overview": "Kusuo and his gaggle of self-proclaimed friends are back for more psychic mishaps. If he didn't have enough problems before, he's got even more now.",
+      "popularity": 5.6378,
+      "poster_path": "/8dTgw94cx05DwUH2fZXM2gkY7MU.jpg",
+      "production_companies": [
+        {
+          "id": 11884,
+          "logo_path": "/tHzHPSKdmLT5zCdqFbcmHzZvRIc.png",
+          "name": "J.C.STAFF",
+          "origin_country": "JP"
+        },
+        {
+          "id": 95809,
+          "logo_path": "/5ac8LhghlxYKbPSwbXJkgrNfjGF.png",
+          "name": "EGG FIRM",
+          "origin_country": "JP"
+        },
+        {
+          "id": 12655,
+          "logo_path": "/dfGqf2NoMVPrDywDL90D5HAhBlW.png",
+          "name": "Shogakukan-Shueisha Productions",
+          "origin_country": "JP"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "JP",
+          "name": "Japan"
+        }
+      ],
+      "seasons": [
+        {
+          "air_date": "2019-12-30",
+          "episode_count": 6,
+          "id": 139376,
+          "name": "Season 1",
+          "overview": "",
+          "poster_path": "/uHrOe1oWPXPOfmUhZF1rh117dGi.jpg",
+          "season_number": 1,
+          "vote_average": 6.9
+        }
+      ],
+      "softcore": false,
+      "spoken_languages": [
+        {
+          "english_name": "Japanese",
+          "iso_639_1": "ja",
+          "name": "日本語"
+        }
+      ],
+      "status": "Ended",
+      "tagline": "Yare yare.",
+      "type": "Scripted",
+      "vote_average": 7.475,
+      "vote_count": 80,
+      "aggregate_credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 93801,
+            "known_for_department": "Acting",
+            "name": "Hiroshi Kamiya",
+            "original_name": "神谷浩史",
+            "popularity": 3.058,
+            "profile_path": "/5aAAOlQ2hW5EqEQOzk4UeroxcTN.jpg",
+            "total_episode_count": 6,
+            "roles": [
+              {
+                "credit_id": "60abac0890ea4b00401a38ac",
+                "character": "Saiki Kusuo (voice)",
+                "episode_count": 6
+              }
+            ],
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1254671,
+            "known_for_department": "Acting",
+            "name": "Ai Kayano",
+            "original_name": "茅野愛衣",
+            "popularity": 2.9111,
+            "profile_path": "/l8ywp387rfdAS7mOExe3cEZnsk0.jpg",
+            "total_episode_count": 6,
+            "roles": [
+              {
+                "credit_id": "60abac5090ea4b005745ed80",
+                "character": "Teruhashi Kokomi (voice)",
+                "episode_count": 6
+              }
+            ],
+            "order": 1
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1241498,
+            "known_for_department": "Acting",
+            "name": "Daisuke Ono",
+            "original_name": "小野大輔",
+            "popularity": 3.0229,
+            "profile_path": "/5rjl28lx84JjRS0hzq3Ajvx2dhp.jpg",
+            "total_episode_count": 6,
+            "roles": [
+              {
+                "credit_id": "60abac78d29bdd0057bf6237",
+                "character": "Nendo Riki (voice)",
+                "episode_count": 6
+              }
+            ],
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1210634,
+            "known_for_department": "Acting",
+            "name": "Nobunaga Shimazaki",
+            "original_name": "島﨑信長",
+            "popularity": 2.7422,
+            "profile_path": "/qke5rZusHsjSlvB0NKlJ5dQF5D.jpg",
+            "total_episode_count": 6,
+            "roles": [
+              {
+                "credit_id": "60abac9fd132d60029868970",
+                "character": "Kaido Shun (voice)",
+                "episode_count": 6
+              }
+            ],
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 224413,
+            "known_for_department": "Acting",
+            "name": "Satoshi Hino",
+            "original_name": "日野聡",
+            "popularity": 2.1652,
+            "profile_path": "/8ZJIiwIVF2zDyyFr7oXewj0eEuu.jpg",
+            "total_episode_count": 6,
+            "roles": [
+              {
+                "credit_id": "60abad40d29bdd0040d3b1c6",
+                "character": "Hairo Kineshi (voice)",
+                "episode_count": 6
+              }
+            ],
+            "order": 4
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1256603,
+            "known_for_department": "Acting",
+            "name": "Natsuki Hanae",
+            "original_name": "花江夏樹",
+            "popularity": 3.6339,
+            "profile_path": "/alTb0DlcPIbcwM08WSmxFai58sd.jpg",
+            "total_episode_count": 6,
+            "roles": [
+              {
+                "credit_id": "60abad5490ea4b00292553d4",
+                "character": "Toritsuka Reita (voice)",
+                "episode_count": 6
+              }
+            ],
+            "order": 5
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1253008,
+            "known_for_department": "Acting",
+            "name": "Yoshimasa Hosoya",
+            "original_name": "細谷佳正",
+            "popularity": 2.6702,
+            "profile_path": "/lUR5oN1LrqGgp25IOcI1qOH1Ud5.jpg",
+            "total_episode_count": 6,
+            "roles": [
+              {
+                "credit_id": "60abad81f859580057b90665",
+                "character": "Kuboyasu Aren (voice)",
+                "episode_count": 6
+              }
+            ],
+            "order": 6
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 40332,
+            "known_for_department": "Acting",
+            "name": "Rikako Aikawa",
+            "original_name": "愛河里花子",
+            "popularity": 1.4949,
+            "profile_path": "/cpyaO7u3wqdsEF1p8BPg8fpezBP.jpg",
+            "total_episode_count": 6,
+            "roles": [
+              {
+                "credit_id": "60abadad07e2810056d4a395",
+                "character": "Saiki Kurumi (voice)",
+                "episode_count": 6
+              }
+            ],
+            "order": 7
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1319218,
+            "known_for_department": "Acting",
+            "name": "Makoto Furukawa",
+            "original_name": "古川慎",
+            "popularity": 1.7107,
+            "profile_path": "/inLmBZhrqXeE9wlViyK28ocKJSw.jpg",
+            "total_episode_count": 6,
+            "roles": [
+              {
+                "credit_id": "60abadbc05b54900575004e4",
+                "character": "Narrator (voice)",
+                "episode_count": 6
+              }
+            ],
+            "order": 8
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 203268,
+            "known_for_department": "Acting",
+            "name": "Yukari Tamura",
+            "original_name": "田村ゆかり",
+            "popularity": 2.1913,
+            "profile_path": "/AigHQPetpcKee62ekHsYFSpQeWE.jpg",
+            "total_episode_count": 3,
+            "roles": [
+              {
+                "credit_id": "60abae558c44b900598e4fb6",
+                "character": "Yumehara Chiyo (voice)",
+                "episode_count": 3
+              }
+            ],
+            "order": 501
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1249235,
+            "known_for_department": "Acting",
+            "name": "Tomoaki Maeno",
+            "original_name": "前野智昭",
+            "popularity": 2.1364,
+            "profile_path": "/w3lEuXSbEyzzNyO3YnxsF6wm2N5.jpg",
+            "total_episode_count": 1,
+            "roles": [
+              {
+                "credit_id": "5e85c854da10f00016ee49b3",
+                "character": "Makoto Teruhashi",
+                "episode_count": 1
+              }
+            ],
+            "order": 500
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2012173,
+            "known_for_department": "Art",
+            "name": "Seiko Akashi",
+            "original_name": "明石聖子",
+            "popularity": 0.4863,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a6e0c4a6564de4161e97680",
+                "job": "Art Direction",
+                "episode_count": 6
+              }
+            ],
+            "department": "Art",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1935822,
+            "known_for_department": "Camera",
+            "name": "Yoshio Ookouchi",
+            "original_name": "大河内喜夫",
+            "popularity": 0.4928,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a6e0c436f5aaaaa38e59181",
+                "job": "Director of Photography",
+                "episode_count": 6
+              }
+            ],
+            "department": "Camera",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1067790,
+            "known_for_department": "Directing",
+            "name": "Hiroaki Sakurai",
+            "original_name": "桜井弘明",
+            "popularity": 0.6826,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6647afe3c33a0c7dccf6414b",
+                "job": "Series Director",
+                "episode_count": 6
+              }
+            ],
+            "department": "Directing",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1907461,
+            "known_for_department": "Editing",
+            "name": "Motoki Niimi",
+            "original_name": "新見元希",
+            "popularity": 0.6668,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a6e0c5a694cbab67a966c89",
+                "job": "Editor",
+                "episode_count": 6
+              }
+            ],
+            "department": "Editing",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3389905,
+            "known_for_department": "Production",
+            "name": "Sayako Muramatsu",
+            "original_name": "村松紗也子",
+            "popularity": 0.4444,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "695c52ec834c08e5f164b7ce",
+                "job": "Producer",
+                "episode_count": 6
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2393581,
+            "known_for_department": "Production",
+            "name": "Soya Kiyota",
+            "original_name": "清田創也",
+            "popularity": 0.4701,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a6e0c1162530abc04543d4c",
+                "job": "Producer",
+                "episode_count": 6
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2814128,
+            "known_for_department": "Production",
+            "name": "Souji Miyagi",
+            "original_name": "宮城惣次",
+            "popularity": 0.6243,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a6e0c077f5469ac25543a7f",
+                "job": "Producer",
+                "episode_count": 6
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 4164832,
+            "known_for_department": "Production",
+            "name": "Takahiro Fujii",
+            "original_name": "藤井貴大",
+            "popularity": 0.489,
+            "profile_path": "/sCT0T5t6c1UnOdd7Pe4z5NJw5bh.jpg",
+            "jobs": [
+              {
+                "credit_id": "6a6e0bee673539e2ac4d798f",
+                "job": "Producer",
+                "episode_count": 6
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3762755,
+            "known_for_department": "Production",
+            "name": "Mai Ogiwara",
+            "original_name": "荻原麻衣",
+            "popularity": 0.2444,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a6e0bce24699a1de4e978cc",
+                "job": "Producer",
+                "episode_count": 6
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3017958,
+            "known_for_department": "Production",
+            "name": "Kaori Itou",
+            "original_name": "伊藤香織",
+            "popularity": 0.4314,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a6e0bf6c42c400ccbe5915f",
+                "job": "Producer",
+                "episode_count": 6
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2400954,
+            "known_for_department": "Sound",
+            "name": "Kentaro Anai",
+            "original_name": "穴井健太郎",
+            "popularity": 0.4108,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a6e0c1a51159cf9a6e59210",
+                "job": "Producer",
+                "episode_count": 6
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2400954,
+            "known_for_department": "Sound",
+            "name": "Kentaro Anai",
+            "original_name": "穴井健太郎",
+            "popularity": 0.4108,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a6e0c6bf320029f8f246eed",
+                "job": "Music Producer",
+                "episode_count": 6
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2400955,
+            "known_for_department": "Sound",
+            "name": "Hiroyoshi Osumi",
+            "original_name": "大隅啓良",
+            "popularity": 0.4353,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a6e0c742211410c7b66b6f9",
+                "job": "Music Producer",
+                "episode_count": 6
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1888024,
+            "known_for_department": "Sound",
+            "name": "YOFFY",
+            "original_name": "YOFFY",
+            "popularity": 0.1063,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6647afec8cd8de4dba1d043d",
+                "job": "Music",
+                "episode_count": 6
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1889814,
+            "known_for_department": "Sound",
+            "name": "IMAJO",
+            "original_name": "IMAJO",
+            "popularity": 0.2186,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6647affeb7786825aa6304b1",
+                "job": "Music",
+                "episode_count": 6
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 570486,
+            "known_for_department": "Sound",
+            "name": "Jin Aketagawa",
+            "original_name": "明田川仁",
+            "popularity": 0.9239,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a6e0c621543862ab5221023",
+                "job": "Sound Director",
+                "episode_count": 6
+              }
+            ],
+            "department": "Sound",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1556195,
+            "known_for_department": "Visual Effects",
+            "name": "Masayuki Onji",
+            "original_name": "音地正行",
+            "popularity": 0.5005,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "69adb78d2c92ca89cfc1e07b",
+                "job": "Character Designer",
+                "episode_count": 6
+              }
+            ],
+            "department": "Visual Effects",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3915766,
+            "known_for_department": "Visual Effects",
+            "name": "Mika Funahashi",
+            "original_name": "舩橋美香",
+            "popularity": 0.4529,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "6a6e0c5480325a5a94220e83",
+                "job": "Character Designer",
+                "episode_count": 6
+              }
+            ],
+            "department": "Visual Effects",
+            "total_episode_count": 6
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1673834,
+            "known_for_department": "Writing",
+            "name": "Shuichi Aso",
+            "original_name": "麻生周一",
+            "popularity": 0.5293,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "69adb685253f3deba480e852",
+                "job": "Comic Book",
+                "episode_count": 6
+              }
+            ],
+            "department": "Writing",
+            "total_episode_count": 6
+          }
+        ]
+      },
+      "credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 93801,
+            "known_for_department": "Acting",
+            "name": "Hiroshi Kamiya",
+            "original_name": "神谷浩史",
+            "popularity": 3.058,
+            "profile_path": "/5aAAOlQ2hW5EqEQOzk4UeroxcTN.jpg",
+            "character": "Saiki Kusuo (voice)",
+            "credit_id": "60abac0890ea4b00401a38ac",
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 1254671,
+            "known_for_department": "Acting",
+            "name": "Ai Kayano",
+            "original_name": "茅野愛衣",
+            "popularity": 2.9111,
+            "profile_path": "/l8ywp387rfdAS7mOExe3cEZnsk0.jpg",
+            "character": "Teruhashi Kokomi (voice)",
+            "credit_id": "60abac5090ea4b005745ed80",
+            "order": 1
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1241498,
+            "known_for_department": "Acting",
+            "name": "Daisuke Ono",
+            "original_name": "小野大輔",
+            "popularity": 3.0229,
+            "profile_path": "/5rjl28lx84JjRS0hzq3Ajvx2dhp.jpg",
+            "character": "Nendo Riki (voice)",
+            "credit_id": "60abac78d29bdd0057bf6237",
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1210634,
+            "known_for_department": "Acting",
+            "name": "Nobunaga Shimazaki",
+            "original_name": "島﨑信長",
+            "popularity": 2.7422,
+            "profile_path": "/qke5rZusHsjSlvB0NKlJ5dQF5D.jpg",
+            "character": "Kaido Shun (voice)",
+            "credit_id": "60abac9fd132d60029868970",
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 224413,
+            "known_for_department": "Acting",
+            "name": "Satoshi Hino",
+            "original_name": "日野聡",
+            "popularity": 2.1652,
+            "profile_path": "/8ZJIiwIVF2zDyyFr7oXewj0eEuu.jpg",
+            "character": "Hairo Kineshi (voice)",
+            "credit_id": "60abad40d29bdd0040d3b1c6",
+            "order": 4
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1256603,
+            "known_for_department": "Acting",
+            "name": "Natsuki Hanae",
+            "original_name": "花江夏樹",
+            "popularity": 3.6339,
+            "profile_path": "/alTb0DlcPIbcwM08WSmxFai58sd.jpg",
+            "character": "Toritsuka Reita (voice)",
+            "credit_id": "60abad5490ea4b00292553d4",
+            "order": 5
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1253008,
+            "known_for_department": "Acting",
+            "name": "Yoshimasa Hosoya",
+            "original_name": "細谷佳正",
+            "popularity": 2.6702,
+            "profile_path": "/lUR5oN1LrqGgp25IOcI1qOH1Ud5.jpg",
+            "character": "Kuboyasu Aren (voice)",
+            "credit_id": "60abad81f859580057b90665",
+            "order": 6
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 40332,
+            "known_for_department": "Acting",
+            "name": "Rikako Aikawa",
+            "original_name": "愛河里花子",
+            "popularity": 1.4949,
+            "profile_path": "/cpyaO7u3wqdsEF1p8BPg8fpezBP.jpg",
+            "character": "Saiki Kurumi (voice)",
+            "credit_id": "60abadad07e2810056d4a395",
+            "order": 7
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1319218,
+            "known_for_department": "Acting",
+            "name": "Makoto Furukawa",
+            "original_name": "古川慎",
+            "popularity": 1.7107,
+            "profile_path": "/inLmBZhrqXeE9wlViyK28ocKJSw.jpg",
+            "character": "Narrator (voice)",
+            "credit_id": "60abadbc05b54900575004e4",
+            "order": 8
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1067790,
+            "known_for_department": "Directing",
+            "name": "Hiroaki Sakurai",
+            "original_name": "桜井弘明",
+            "popularity": 0.6826,
+            "profile_path": null,
+            "credit_id": "6647afe3c33a0c7dccf6414b",
+            "department": "Directing",
+            "job": "Series Director"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1889814,
+            "known_for_department": "Sound",
+            "name": "IMAJO",
+            "original_name": "IMAJO",
+            "popularity": 0.2186,
+            "profile_path": null,
+            "credit_id": "6647affeb7786825aa6304b1",
+            "department": "Sound",
+            "job": "Music"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1888024,
+            "known_for_department": "Sound",
+            "name": "YOFFY",
+            "original_name": "YOFFY",
+            "popularity": 0.1063,
+            "profile_path": null,
+            "credit_id": "6647afec8cd8de4dba1d043d",
+            "department": "Sound",
+            "job": "Music"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3389905,
+            "known_for_department": "Production",
+            "name": "Sayako Muramatsu",
+            "original_name": "村松紗也子",
+            "popularity": 0.4444,
+            "profile_path": null,
+            "credit_id": "695c52ec834c08e5f164b7ce",
+            "department": "Production",
+            "job": "Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1673834,
+            "known_for_department": "Writing",
+            "name": "Shuichi Aso",
+            "original_name": "麻生周一",
+            "popularity": 0.5293,
+            "profile_path": null,
+            "credit_id": "69adb685253f3deba480e852",
+            "department": "Writing",
+            "job": "Comic Book"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1556195,
+            "known_for_department": "Visual Effects",
+            "name": "Masayuki Onji",
+            "original_name": "音地正行",
+            "popularity": 0.5005,
+            "profile_path": null,
+            "credit_id": "69adb78d2c92ca89cfc1e07b",
+            "department": "Visual Effects",
+            "job": "Character Designer"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3762755,
+            "known_for_department": "Production",
+            "name": "Mai Ogiwara",
+            "original_name": "荻原麻衣",
+            "popularity": 0.2444,
+            "profile_path": null,
+            "credit_id": "6a6e0bce24699a1de4e978cc",
+            "department": "Production",
+            "job": "Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 4164832,
+            "known_for_department": "Production",
+            "name": "Takahiro Fujii",
+            "original_name": "藤井貴大",
+            "popularity": 0.489,
+            "profile_path": "/sCT0T5t6c1UnOdd7Pe4z5NJw5bh.jpg",
+            "credit_id": "6a6e0bee673539e2ac4d798f",
+            "department": "Production",
+            "job": "Producer"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3017958,
+            "known_for_department": "Production",
+            "name": "Kaori Itou",
+            "original_name": "伊藤香織",
+            "popularity": 0.4314,
+            "profile_path": null,
+            "credit_id": "6a6e0bf6c42c400ccbe5915f",
+            "department": "Production",
+            "job": "Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2814128,
+            "known_for_department": "Production",
+            "name": "Souji Miyagi",
+            "original_name": "宮城惣次",
+            "popularity": 0.6243,
+            "profile_path": null,
+            "credit_id": "6a6e0c077f5469ac25543a7f",
+            "department": "Production",
+            "job": "Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2393581,
+            "known_for_department": "Production",
+            "name": "Soya Kiyota",
+            "original_name": "清田創也",
+            "popularity": 0.4701,
+            "profile_path": null,
+            "credit_id": "6a6e0c1162530abc04543d4c",
+            "department": "Production",
+            "job": "Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2400954,
+            "known_for_department": "Sound",
+            "name": "Kentaro Anai",
+            "original_name": "穴井健太郎",
+            "popularity": 0.4108,
+            "profile_path": null,
+            "credit_id": "6a6e0c1a51159cf9a6e59210",
+            "department": "Production",
+            "job": "Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1935822,
+            "known_for_department": "Camera",
+            "name": "Yoshio Ookouchi",
+            "original_name": "大河内喜夫",
+            "popularity": 0.4928,
+            "profile_path": null,
+            "credit_id": "6a6e0c436f5aaaaa38e59181",
+            "department": "Camera",
+            "job": "Director of Photography"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2012173,
+            "known_for_department": "Art",
+            "name": "Seiko Akashi",
+            "original_name": "明石聖子",
+            "popularity": 0.4863,
+            "profile_path": null,
+            "credit_id": "6a6e0c4a6564de4161e97680",
+            "department": "Art",
+            "job": "Art Direction"
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 3915766,
+            "known_for_department": "Visual Effects",
+            "name": "Mika Funahashi",
+            "original_name": "舩橋美香",
+            "popularity": 0.4529,
+            "profile_path": null,
+            "credit_id": "6a6e0c5480325a5a94220e83",
+            "department": "Visual Effects",
+            "job": "Character Designer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1907461,
+            "known_for_department": "Editing",
+            "name": "Motoki Niimi",
+            "original_name": "新見元希",
+            "popularity": 0.6668,
+            "profile_path": null,
+            "credit_id": "6a6e0c5a694cbab67a966c89",
+            "department": "Editing",
+            "job": "Editor"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 570486,
+            "known_for_department": "Sound",
+            "name": "Jin Aketagawa",
+            "original_name": "明田川仁",
+            "popularity": 0.9239,
+            "profile_path": null,
+            "credit_id": "6a6e0c621543862ab5221023",
+            "department": "Sound",
+            "job": "Sound Director"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2400954,
+            "known_for_department": "Sound",
+            "name": "Kentaro Anai",
+            "original_name": "穴井健太郎",
+            "popularity": 0.4108,
+            "profile_path": null,
+            "credit_id": "6a6e0c6bf320029f8f246eed",
+            "department": "Sound",
+            "job": "Music Producer"
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2400955,
+            "known_for_department": "Sound",
+            "name": "Hiroyoshi Osumi",
+            "original_name": "大隅啓良",
+            "popularity": 0.4353,
+            "profile_path": null,
+            "credit_id": "6a6e0c742211410c7b66b6f9",
+            "department": "Sound",
+            "job": "Music Producer"
+          }
+        ]
+      },
+      "external_ids": {
+        "imdb_id": "tt11163352",
+        "freebase_mid": null,
+        "freebase_id": null,
+        "tvdb_id": 439228,
+        "tvrage_id": null,
+        "wikidata_id": "Q140305733",
+        "facebook_id": null,
+        "instagram_id": null,
+        "twitter_id": "saikikusuo_PR"
+      },
+      "keywords": {
+        "results": [
+          {
+            "name": "telepathy",
+            "id": 1475
+          },
+          {
+            "name": "sequel",
+            "id": 9663
+          },
+          {
+            "name": "parody",
+            "id": 9755
+          },
+          {
+            "name": "based on manga",
+            "id": 13141
+          },
+          {
+            "name": "psychic",
+            "id": 14742
+          },
+          {
+            "name": "super power",
+            "id": 33637
+          },
+          {
+            "name": "shounen",
+            "id": 207826
+          },
+          {
+            "name": "anime",
+            "id": 210024
+          },
+          {
+            "name": "japanese high school",
+            "id": 235790
+          },
+          {
+            "name": "supernatural power",
+            "id": 251513
+          },
+          {
+            "name": "original net animation (ona)",
+            "id": 323096
+          }
+        ]
+      },
+      "videos": {
+        "results": [
+          {
+            "iso_639_1": "en",
+            "iso_3166_1": "US",
+            "name": "The Disastrous Life of Saiki K.: Reawakened | Official Trailer | Netflix",
+            "key": "sbw7QB6nrTc",
+            "site": "YouTube",
+            "size": 1080,
+            "type": "Trailer",
+            "official": true,
+            "id": "5f8c8b9dce9e910033453c6f",
+            "published_at": "2019-10-23T04:00:01.000Z"
+          }
+        ]
+      },
+      "content_ratings": {
+        "results": [
+          {
+            "descriptors": [],
+            "iso_3166_1": "US",
+            "rating": "TV-14"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "IN",
+            "rating": "U/A 13+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "AT",
+            "rating": "14"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "IE",
+            "rating": "12"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "PL",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "HU",
+            "rating": "16"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "CZ",
+            "rating": "15+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "RO",
+            "rating": "15"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "AR",
+            "rating": "SAM 13"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "AU",
+            "rating": "M"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "BR",
+            "rating": "14"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "CA",
+            "rating": "14+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "DE",
+            "rating": "12"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "ES",
+            "rating": "12"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "GB",
+            "rating": "12"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "KR",
+            "rating": "15"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "MY",
+            "rating": "P13"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "NL",
+            "rating": "6"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "NZ",
+            "rating": "M"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "PR",
+            "rating": "TV-14"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "RU",
+            "rating": "12+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "SG",
+            "rating": "PG13"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "TH",
+            "rating": "น 13+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "TR",
+            "rating": "13+"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "VI",
+            "rating": "TV-14"
+          },
+          {
+            "descriptors": [],
+            "iso_3166_1": "ZA",
+            "rating": "13"
+          }
+        ]
+      },
+      "watch/providers": {
+        "results": {
+          "AD": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=AD",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "AE": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=AE",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "AG": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=AG",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "AL": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=AL",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "AO": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=AO",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "AR": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=AR",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "AT": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=AT",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "AU": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=AU",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              },
+              {
+                "logo_path": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+                "provider_id": 1796,
+                "provider_name": "Netflix Standard with Ads",
+                "display_priority": 51
+              }
+            ]
+          },
+          "AZ": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=AZ",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "BA": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=BA",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "BB": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=BB",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "BE": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=BE",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "BG": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=BG",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "BH": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=BH",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "BM": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=BM",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "BO": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=BO",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "BR": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=BR",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              },
+              {
+                "logo_path": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+                "provider_id": 1796,
+                "provider_name": "Netflix Standard with Ads",
+                "display_priority": 42
+              }
+            ]
+          },
+          "BS": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=BS",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "BY": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=BY",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "BZ": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=BZ",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "CA": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=CA",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 4
+              },
+              {
+                "logo_path": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+                "provider_id": 1796,
+                "provider_name": "Netflix Standard with Ads",
+                "display_priority": 92
+              }
+            ]
+          },
+          "CH": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=CH",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "CI": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=CI",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "CL": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=CL",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "CM": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=CM",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "CO": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=CO",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "CR": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=CR",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "CU": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=CU",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "CV": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=CV",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "CY": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=CY",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "CZ": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=CZ",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "DE": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=DE",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              },
+              {
+                "logo_path": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+                "provider_id": 1796,
+                "provider_name": "Netflix Standard with Ads",
+                "display_priority": 86
+              }
+            ]
+          },
+          "DK": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=DK",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "DO": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=DO",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "DZ": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=DZ",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "EC": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=EC",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "EE": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=EE",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "EG": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=EG",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "ES": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=ES",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              },
+              {
+                "logo_path": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+                "provider_id": 1796,
+                "provider_name": "Netflix Standard with Ads",
+                "display_priority": 52
+              }
+            ]
+          },
+          "FI": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=FI",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "FJ": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=FJ",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "FR": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=FR",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              },
+              {
+                "logo_path": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+                "provider_id": 1796,
+                "provider_name": "Netflix Standard with Ads",
+                "display_priority": 52
+              }
+            ]
+          },
+          "GB": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=GB",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              },
+              {
+                "logo_path": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+                "provider_id": 1796,
+                "provider_name": "Netflix Standard with Ads",
+                "display_priority": 87
+              }
+            ]
+          },
+          "GF": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=GF",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "GG": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=GG",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 2
+              }
+            ]
+          },
+          "GH": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=GH",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "GI": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=GI",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "GQ": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=GQ",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "GR": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=GR",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "GT": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=GT",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "HK": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=HK",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "HN": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=HN",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "HU": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=HU",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "ID": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=ID",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "IE": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=IE",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "IL": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=IL",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "IN": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=IN",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "IQ": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=IQ",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "IS": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=IS",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "IT": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=IT",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "JM": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=JM",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "JO": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=JO",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 2
+              }
+            ]
+          },
+          "JP": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=JP",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              },
+              {
+                "logo_path": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+                "provider_id": 1796,
+                "provider_name": "Netflix Standard with Ads",
+                "display_priority": 24
+              }
+            ],
+            "rent": [
+              {
+                "logo_path": "/jn6TLbtaTZntTRX9UYucHJvpQx1.png",
+                "provider_id": 10,
+                "provider_name": "Amazon Video",
+                "display_priority": 8
+              }
+            ]
+          },
+          "KE": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=KE",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "KR": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=KR",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              },
+              {
+                "logo_path": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+                "provider_id": 1796,
+                "provider_name": "Netflix Standard with Ads",
+                "display_priority": 26
+              }
+            ]
+          },
+          "KW": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=KW",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "LB": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=LB",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "LC": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=LC",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "LI": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=LI",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "LT": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=LT",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "LU": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=LU",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "LV": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=LV",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "LY": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=LY",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "MA": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=MA",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "MC": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=MC",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "MD": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=MD",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "ME": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=ME",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "MG": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=MG",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "MK": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=MK",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "ML": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=ML",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "MT": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=MT",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "MU": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=MU",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "MX": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=MX",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              },
+              {
+                "logo_path": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+                "provider_id": 1796,
+                "provider_name": "Netflix Standard with Ads",
+                "display_priority": 42
+              }
+            ]
+          },
+          "MY": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=MY",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "MZ": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=MZ",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "NE": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=NE",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "NG": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=NG",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "NI": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=NI",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "NL": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=NL",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "NO": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=NO",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "NZ": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=NZ",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "OM": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=OM",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "PA": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=PA",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "PE": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=PE",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "PF": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=PF",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "PH": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=PH",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "PK": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=PK",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "PL": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=PL",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "PS": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=PS",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "PT": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=PT",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "PY": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=PY",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "QA": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=QA",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "RO": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=RO",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "RS": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=RS",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "SA": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=SA",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "SC": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=SC",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "SE": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=SE",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "SG": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=SG",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "SI": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=SI",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "SK": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=SK",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "SM": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=SM",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "SN": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=SN",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "SV": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=SV",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "TC": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=TC",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "TD": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=TD",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "TH": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=TH",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "TN": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=TN",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "TR": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=TR",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "TT": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=TT",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "TW": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=TW",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "TZ": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=TZ",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "UG": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=UG",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "US": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=US",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 3
+              },
+              {
+                "logo_path": "/eGUwOOIxcazwEBxqJpSN5sWEu6V.png",
+                "provider_id": 1796,
+                "provider_name": "Netflix Standard with Ads",
+                "display_priority": 154
+              }
+            ]
+          },
+          "UY": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=UY",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "VE": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=VE",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "YE": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=YE",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "ZA": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=ZA",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 0
+              }
+            ]
+          },
+          "ZM": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=ZM",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          },
+          "ZW": {
+            "link": "https://www.themoviedb.org/tv/97009-ps-ps/watch?locale=ZW",
+            "flatrate": [
+              {
+                "logo_path": "/rK1KljqmbvO9HQa1PBFLILWah72.png",
+                "provider_id": 8,
+                "provider_name": "Netflix",
+                "display_priority": 1
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

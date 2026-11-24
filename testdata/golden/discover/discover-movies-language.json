@@ -1,0 +1,431 @@
+{
+  "case": "discover-movies-language",
+  "family": "discover",
+  "request": "GET /api/v1/discover/movies/language/pt?page=1",
+  "fixtures": [
+    "configuration/languages",
+    "discover/movies-language-pt"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 1001,
+    "totalResults": 20001,
+    "language": {
+      "iso_639_1": "pt",
+      "english_name": "Portuguese",
+      "name": "Português"
+    },
+    "results": [
+      {
+        "id": 1307474,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Vicentina Pede Desculpas",
+        "overview": "Uma mulher que, aos 75 anos, tem de encarar a morte (e potencial suicídio) de seu filho motorista de ônibus e todos os passageiros, após o ônibus lotado cair de um viaduto. Vicentina decide embarcar em uma jornada para procurar as famílias das vítimas para pedir desculpas.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-05",
+        "title": "Vicentina Pede Desculpas",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/tTevcc0y0EQLeEyg4aMsrGyy7NO.jpg",
+        "posterPath": "/v6JBUlm6nIYx3ixF38I5ZVpQZgq.jpg"
+      },
+      {
+        "id": 1511171,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "A Virada: Ignição da Alma",
+        "overview": "Noah Silva é um vendedor de carros usados carismático, cuja vida começa a desmoronar após sua postura “a qualquer custo” cobrar um preço alto em casa e no trabalho. Confrontado por uma série de alertas, ele embarca em uma jornada de reconciliação e transformação pessoal, na tentativa de recuperar sua integridade e reconstruir a relação com sua esposa e seu filho.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-12",
+        "title": "A Virada: Ignição da Alma",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/w6GQVp1mCiEDwje8AS93CbEN75I.jpg",
+        "posterPath": "/c4MLyvjowk8tCYmukhl1DFotuky.jpg"
+      },
+      {
+        "id": 598,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          80
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Cidade de Deus",
+        "overview": "Buscapé é um jovem morador da Cidade de Deus que cresce em meio à violência. Com medo de se tornar um bandido, enxerga na fotografia uma oportunidade de ter uma vida digna.",
+        "popularity": "<number>",
+        "releaseDate": "2002-08-30",
+        "title": "Cidade de Deus",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/uvitbjFU4JqvMwIkMWHp69bmUzG.jpg",
+        "posterPath": "/gfnXixcGC060QcG6JPxN6AMdVsq.jpg"
+      },
+      {
+        "id": 1257147,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          35
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Minha Melhor Amiga",
+        "overview": "Júlia e Clara são melhores amigas e vivem o auge dos seus 50 anos. Quando suas filhas viajam para um intercâmbio de alguns meses em Portugal, as duas precisam enfrentar a saudade e o vazio deixado pelas meninas. A dupla decide sacudir a rotina e embarca para a Europa para surpreender as meninas, mas encara diversos perrengues na jornada.",
+        "popularity": "<number>",
+        "releaseDate": "2026-09-03",
+        "title": "Minha Melhor Amiga",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/q5IF3IHgKC4cQqQCp0VjllNkJp6.jpg",
+        "posterPath": "/wGfTFVeguXDXYrwPQ8QMFsaSK2M.jpg"
+      },
+      {
+        "id": 967998,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          53,
+          80
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Conspiração Fatal",
+        "overview": "Davi Martins, um diretor comercial de uma instituição financeira, e Juliana Martins, uma personal trainer, são um casal tentando se recuperar de uma crise. No trabalho, Davi acaba se envolvendo na investigação de um escândalo financeiro, ficando na mira de pessoas perigosas. Aos poucos, Juliana vai descobrindo que a nova casa talvez não seja um recomeço e sim o palco de um verdadeiro pesadelo. Alguns segredos podem acabar com a sua vida.",
+        "popularity": "<number>",
+        "releaseDate": "2022-05-26",
+        "title": "Conspiração Fatal",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/yQUTEvEb5pJi0BH3b1biQRpGvEx.jpg",
+        "posterPath": "/zpj3nNoc5xaUZTIdnuhwXwUcRag.jpg"
+      },
+      {
+        "id": 1487861,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          53,
+          80,
+          18
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Elize: Sombras de uma Mulher",
+        "overview": "Nesta adaptação de um crime chocante, uma mulher descobre as traições do marido e vê seu conto de fadas se transformar em um jogo violento.",
+        "popularity": "<number>",
+        "releaseDate": "2026-07-22",
+        "title": "Elize: Sombras de uma Mulher",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/z8mTDyKdAWjKsD0vwa7e9LTSY1j.jpg",
+        "posterPath": "/612ZyfilK8CVEEFphgPb3GOw0NF.jpg"
+      },
+      {
+        "id": 1220564,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          53,
+          18,
+          80
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "O Agente Secreto",
+        "overview": "No Brasil de 1977, Marcelo, um especialista em tecnologia fugindo de um passado misterioso, volta ao Recife em busca de um pouco de paz, mas percebe que a cidade está longe de ser o refúgio que procura.",
+        "popularity": "<number>",
+        "releaseDate": "2025-09-10",
+        "title": "O Agente Secreto",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/eeGRpU64sIrRApjWXvTpK5Lep2K.jpg",
+        "posterPath": "/t1DQ4XXIqTm5LvUjz8jypN43JjZ.jpg"
+      },
+      {
+        "id": 1263532,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          878,
+          53
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Corrida dos Bichos",
+        "overview": "Em um Rio de Janeiro distópico, o jogo do bicho evoluiu para uma corrida mortal onde os competidores usam seus entes queridos como garantia, que só são resgatados pelos vencedores. O jovem idealista Mano é forçado a entrar nessa disputa de vida ou morte quando sua irmã se torna uma dessas garantias. Para salvá-la, ele deve confrontar seus princípios, formar alianças improváveis e lutar não apenas para vencer, mas para destruir o jogo opressor de uma vez por todas.",
+        "popularity": "<number>",
+        "releaseDate": "2026-08-07",
+        "title": "Corrida dos Bichos",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/1WWukZCoavYEofNVRHJqE4t1urW.jpg",
+        "posterPath": "/2bzIygGnua4tlLo7qTyMSUsME3d.jpg"
+      },
+      {
+        "id": 1000837,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          36
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Ainda Estou Aqui",
+        "overview": "No início da década de 1970, o Brasil enfrenta o endurecimento da ditadura militar. No Rio de Janeiro, a família Paiva – Rubens, Eunice e seus cinco filhos – vive à beira da praia em uma casa de portas abertas para os amigos. Um dia, Rubens Paiva é levado por militares à paisana e desaparece.",
+        "popularity": "<number>",
+        "releaseDate": "2024-09-19",
+        "title": "Ainda Estou Aqui",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/j9uruwRe9qM8RnP758dF7ISB8Bj.jpg",
+        "posterPath": "/zNAw7jK8bwCK56rIW676pdgkwhd.jpg"
+      },
+      {
+        "id": 1664682,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          80,
+          99
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Suzane von Richthofen: O Que o Tempo Não Apaga",
+        "overview": "Com entrevistas de Suzane von Richthofen, condenada pelo assassinato dos pais, este documentário analisa um dos casos policiais de maior repercussão no Brasil.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-11",
+        "title": "Suzane von Richthofen: O Que o Tempo Não Apaga",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/bjdgmMhTKcxqFO7RdXYhTlGzffB.jpg",
+        "posterPath": "/pO3BpFyC9B2fnfByJulxjs3hM4P.jpg"
+      },
+      {
+        "id": 1610820,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          35,
+          10751
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Santo António - O Casamenteiro de Lisboa",
+        "overview": "Os tradicionais Casamentos de Santo Antônio, em Lisboa, estão em decadência. Carmo e Valentim, funcionários da prefeitura que organizam a festa há mais de 25 anos, recebem um ultimato: dar algum jeito de reinventar o evento ou perder o emprego. Com um grupo francês prestes a assumir o controle do evento, os dois decidem criar a edição mais memorável de todas. Esta vibrante comédia é uma carta de amor a Lisboa e uma celebração da comunidade, da tradição e da resistência cultural.",
+        "popularity": "<number>",
+        "releaseDate": "2026-09-10",
+        "title": "Santo António - O Casamenteiro de Lisboa",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/hILmNUH51sXpkLXd9ecEUCljU1q.jpg",
+        "posterPath": "/isoHopRbIc8ScJ6dx2vB4GOb820.jpg"
+      },
+      {
+        "id": 7347,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          28,
+          80
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Tropa de Elite",
+        "overview": "Rio de Janeiro, 1997. Nascimento, capitão da Tropa de Elite do Rio de Janeiro, é designado para chefiar uma das equipes que tem como missão \"apaziguar\" o Morro do Turano por um motivo que ele considera insensato. Mas ele tem que cumprir as ordens enquanto procura por um substituto. Sua mulher, Rosane, está no final da gravidez e todos os dias lhe pede para sair da linha de frente do batalhão. Pressionado, o capitão sente os efeitos do estresse.Neste clima, é chamado para mais uma emergência num morro. Em meio a um tiroteio em um baile funk, Nascimento e sua equipe têm que resgatar dois aspirantes a oficiais da PM: Neto e Matias. Ansiosos por entrar em ação e impressionados com a eficiência de seus salvadores, os dois se candidatam ao curso de formação da Tropa de Elite.",
+        "popularity": "<number>",
+        "releaseDate": "2007-10-05",
+        "title": "Tropa de Elite",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/huUgrGkCetYSkDl5fMvZCXCbFKl.jpg",
+        "posterPath": "/wFMkqerSlifIae2cja6K1fdvz2G.jpg"
+      },
+      {
+        "id": 1173558,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          9648,
+          10749
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "O Lado Bom de Ser Traída",
+        "overview": "Nesta adaptação do livro de Sue Hecker, uma contadora vê a traição do noivo como uma oportunidade de transformar sua vida sexual, resultando em consequências arriscadas.",
+        "popularity": "<number>",
+        "releaseDate": "2023-10-25",
+        "title": "O Lado Bom de Ser Traída",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/a65WMR49PnWmSaCzaCyMNNHKQfn.jpg",
+        "posterPath": "/boPkFKrDSUeRxc9ltZRsuVSdRkz.jpg"
+      },
+      {
+        "id": 40096,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          35,
+          18,
+          14,
+          10749
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "O Auto da Compadecida",
+        "overview": "As aventuras dos nordestinos João Grilo, um sertanejo pobre e mentiroso, e Chicó, o mais covarde dos homens. Ambos lutam pelo pão de cada dia e atravessam por vários episódios enganando a todos do pequeno vilarejo de Taperoá, no sertão da Paraíba. A salvação da dupla acontece com a aparição da Nossa Senhora. Adaptação da obra de Ariano Suassuna.",
+        "popularity": "<number>",
+        "releaseDate": "2000-09-15",
+        "title": "O Auto da Compadecida",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/alQqTpmEkxSLgajfEYTsTH6nAKB.jpg",
+        "posterPath": "/y3IhuITELtprMhUd7bccu629rba.jpg"
+      },
+      {
+        "id": 1277988,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          35,
+          18
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Caramelo",
+        "overview": "Ao receber um diagnóstico grave, um chef em ascensão redescobre a graça da vida com a ajuda de um vira-lata caramelo.",
+        "popularity": "<number>",
+        "releaseDate": "2025-10-08",
+        "title": "Caramelo",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/wBV11KLQcp5pyxl8JW1lBaDshqr.jpg",
+        "posterPath": "/c4ZEAah5a01cu27w7vT2IAoFogk.jpg"
+      },
+      {
+        "id": 47931,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          28,
+          80
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Tropa de Elite 2",
+        "overview": "O destino da cidade do Rio de Janeiro e de Nascimento se cruzam em \"Tropa de Elite 2\", quando suas obrigações de pai se chocam com as de policial. Mais maduro, estratégico e solitário, o agora Coronel Nascimento faz o bope crescer e coloca o tráfico de drogas de joelho. Isto apenas para descobrir que na segurança pública do Rio de Janeiro nada é o que parece. O sistema se reinventa e descobre como lucrar sem o intermédio do tráfico. Em perseguição ao caminho trilhado pelo sistema, Nascimento vai além dos limites do quartel, revelando as ligações das milícias com o Estado. E o preço por essa descoberta é alto: o inimigo agora é outro.",
+        "popularity": "<number>",
+        "releaseDate": "2010-10-08",
+        "title": "Tropa de Elite 2: O Inimigo Agora é Outro",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/tmowA51oykuOdiyqRCP0jGYU1mB.jpg",
+        "posterPath": "/gW2JzWuOKHkKOr33slfBEQJYYeS.jpg"
+      },
+      {
+        "id": 975335,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          36,
+          12,
+          18
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Magalhães",
+        "overview": "Século XVI. Fernão de Magalhães, um jovem e ambicioso navegador português, se rebela contra o poder do Rei, que não apoia seu sonho de descobrir o mundo. Ele convence a Coroa Espanhola a financiar sua ousada expedição às lendárias terras do Oriente. A viagem se revela exaustiva além do imaginável, com a fome e os motins levando a tripulação ao limite.",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-03",
+        "title": "Fernão de Magalhães",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/8nv5MUtEBMX4DDkrFkDhkppRxuD.jpg",
+        "posterPath": "/iS6da0E4m3RyXRxNmQPzEGvofte.jpg"
+      },
+      {
+        "id": 54989,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          36
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Amor Estranho Amor",
+        "overview": "Ana é uma prostituta em São Paulo que tenta mudar de vida ao se tornar amante de um político influente. Seus planos mudam quando seu filho de 12 anos, Hugo, passa a morar com ela, descobrindo o desejo e a sexualidade no bordel.",
+        "popularity": "<number>",
+        "releaseDate": "1982-01-11",
+        "title": "Amor Estranho Amor",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/7EwzruqMhiXiVBntRoUjOhey8ap.jpg",
+        "posterPath": "/kmsER1iY9y9B9Dc5uBnfUfy8Ys0.jpg"
+      },
+      {
+        "id": 1418582,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          35,
+          10749
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Quinze Dias",
+        "overview": "Os planos de férias de um adolescente inseguro são furados por uma visita inesperada: seu vizinho e crush da escola que passará duas semanas dormindo na sua casa. Os dias que prometiam paz, tranquilidade e maratonas épicas de séries acabam trazendo um turbilhão de sentimentos e questões mal resolvidas.",
+        "popularity": "<number>",
+        "releaseDate": "2026-06-18",
+        "title": "Quinze Dias",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/bwsGEeiEnKqsZ9vm3G82as8xUu7.jpg",
+        "posterPath": "/7SkSZOAHPJbks40PQYwIH2bV1f2.jpg"
+      },
+      {
+        "id": 1426964,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          53,
+          80,
+          18
+        ],
+        "originalLanguage": "pt",
+        "originalTitle": "Salve Geral: Irmandade",
+        "overview": "Durante uma onda de violência sem precedentes em São Paulo, uma advogada ligada ao crime precisa fazer um acordo com a polícia para resgatar a sobrinha sequestrada.",
+        "popularity": "<number>",
+        "releaseDate": "2026-02-11",
+        "title": "Salve Geral: Irmandade",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/1Xdsq7U7bvJJd2X7Jg4qNaKVkYO.jpg",
+        "posterPath": "/5AAzx2bcorTZUVe4Sk6yqhMBq1s.jpg"
+      }
+    ]
+  }
+}
