@@ -233,6 +233,34 @@ func TestRecsWatermarkMovesOnlyForItsUser(t *testing.T) {
 	}
 }
 
+// Counts are part of the watermark so that removing a row moves it too: the
+// rows left behind can keep the newest timestamp exactly where it was.
+func TestRecsWatermarkMovesWhenARowIsDeleted(t *testing.T) {
+	db := newRecsTestDatabase(t)
+	ctx := context.Background()
+	recsInsertRating(t, db.Write, recsUserA, 550)
+	recsInsertRating(t, db.Write, recsUserA, 551)
+	recsInsertWatch(t, db.Write, recsUserA, 552)
+	recsInsertWatch(t, db.Write, recsUserA, 553)
+	recsCreatePublished(t, db.Write, recsUserA, recsSampleResults())
+	if moved, err := WatermarkMoved(ctx, db.Write, recsUserA); err != nil || moved {
+		t.Fatalf("moved = %v (%v) right after publishing, want false", moved, err)
+	}
+	if _, err := db.Write.Exec("DELETE FROM ratings WHERE user_id = ? AND tmdb_id = ?", recsUserA, 551); err != nil {
+		t.Fatal(err)
+	}
+	if moved, err := WatermarkMoved(ctx, db.Write, recsUserA); err != nil || !moved {
+		t.Fatalf("a deleted rating did not move the watermark: %v (%v)", moved, err)
+	}
+	recsCreatePublished(t, db.Write, recsUserA, recsSampleResults())
+	if _, err := db.Write.Exec("DELETE FROM watches WHERE user_id = ? AND tmdb_id = ?", recsUserA, 553); err != nil {
+		t.Fatal(err)
+	}
+	if moved, err := WatermarkMoved(ctx, db.Write, recsUserA); err != nil || !moved {
+		t.Fatalf("a deleted watch did not move the watermark: %v (%v)", moved, err)
+	}
+}
+
 func TestRecsReadFiltersByMediaTypeBeforePagination(t *testing.T) {
 	db := newRecsTestDatabase(t)
 	ctx := context.Background()
