@@ -28,6 +28,8 @@ import MovieGenreList from '@app/components/Discover/MovieGenreList';
 import Trending from '@app/components/Discover/Trending';
 import TvGenreList from '@app/components/Discover/TvGenreList';
 import Upcoming from '@app/components/Discover/Upcoming';
+import ForYouPage from '@app/components/ForYou/ForYouPage';
+import ForYouSlider from '@app/components/ForYou/ForYouSlider';
 import GenreTag from '@app/components/GenreTag';
 import KeywordTag from '@app/components/KeywordTag';
 import LanguageSelector from '@app/components/LanguageSelector';
@@ -297,10 +299,11 @@ const fixtureFor = (pathname: string) => {
       requestCount: 0,
     };
   }
-  // The api's fixed slider manifest: the two library lists, then the nine
-  // kept built-ins, in its order.
+  // The api's fixed slider manifest: the personal list, the two library
+  // lists, then the nine kept built-ins, in its order.
   if (pathname === '/api/v1/settings/discover') {
     return [
+      SliderId.FOR_YOU,
       SliderId.MY_LIST,
       SliderId.COUPLE_LIST,
       DiscoverSliderType.TRENDING,
@@ -708,6 +711,92 @@ const fixtureFor = (pathname: string) => {
   }
   if (pathname === '/api/v1/backdrops') {
     return level === 'empty' ? [] : ['/backdrop.jpg'];
+  }
+  if (pathname === '/api/v1/recommendations') {
+    if (level === 'empty') {
+      return {
+        page: 1,
+        totalPages: 0,
+        totalResults: 0,
+        personal: false,
+        runId: 0,
+        results: [],
+      };
+    }
+    if (level === 'minimal') {
+      return {
+        page: 1,
+        totalPages: 1,
+        totalResults: 1,
+        personal: false,
+        runId: 7,
+        results: [
+          {
+            mediaType: 'movie',
+            tmdbId: 603,
+            available: true,
+            result: {
+              id: 603,
+              mediaType: 'movie',
+              title: 'Fixture Movie',
+              overview: '',
+              posterPath: null,
+              releaseDate: '1999-03-31',
+              voteAverage: 8,
+            },
+            reasons: [],
+            rank: 1,
+            runId: 7,
+            onWatchlist: false,
+          },
+        ],
+      };
+    }
+    return {
+      page: 1,
+      totalPages: 1,
+      totalResults: 2,
+      personal: true,
+      runId: 7,
+      results: [
+        {
+          mediaType: 'movie',
+          tmdbId: 603,
+          available: true,
+          result: {
+            id: 603,
+            mediaType: 'movie',
+            title: 'Fixture Movie',
+            overview: '',
+            posterPath: null,
+            releaseDate: '1999-03-31',
+            voteAverage: 8,
+          },
+          reasons: ['Seed One', 'Seed Two'],
+          rank: 1,
+          runId: 7,
+          onWatchlist: false,
+        },
+        {
+          mediaType: 'tv',
+          tmdbId: 1399,
+          available: true,
+          result: {
+            id: 1399,
+            mediaType: 'tv',
+            name: 'Fixture Series',
+            overview: '',
+            posterPath: null,
+            firstAirDate: '2008-01-20',
+            voteAverage: 9,
+          },
+          reasons: ['Seed Two'],
+          rank: 2,
+          runId: 7,
+          onWatchlist: true,
+        },
+      ],
+    };
   }
   return {};
 };
@@ -1494,5 +1583,116 @@ describe('discover filters (tt-t50)', () => {
     );
     view.unmount();
     spy.mockRestore();
+  });
+});
+
+describe('for-you recommendations', () => {
+  it('renders the slider and the page empty, cold and personal', async () => {
+    level = 'empty';
+    const emptySlider = render(
+      <Wrapper>
+        <ForYouSlider title="For you" sliderKey="for-you" />
+      </Wrapper>
+    );
+    await waitFor(() => {
+      expect(emptySlider.getByTestId('for-you-slider')).toBeTruthy();
+    });
+    expect(emptySlider.getByTestId('for-you-cold')).toBeTruthy();
+    expect(emptySlider.queryByTestId('recs-exposure-0-1')).toBeNull();
+    emptySlider.unmount();
+
+    const emptyPage = render(
+      <Wrapper>
+        <ForYouPage />
+      </Wrapper>
+    );
+    await waitFor(() => {
+      expect(emptyPage.getByTestId('for-you-empty')).toBeTruthy();
+    });
+    expect(emptyPage.getByTestId('for-you-cold')).toBeTruthy();
+    emptyPage.unmount();
+
+    level = 'minimal';
+    const coldSlider = render(
+      <Wrapper>
+        <ForYouSlider title="For you" sliderKey="for-you" />
+      </Wrapper>
+    );
+    await waitFor(() => {
+      expect(coldSlider.getByTestId('recs-exposure-7-1')).toBeTruthy();
+    });
+    expect(coldSlider.getByTestId('for-you-cold')).toBeTruthy();
+    expect(coldSlider.queryByText(/Because you liked/)).toBeNull();
+    coldSlider.unmount();
+
+    level = 'full';
+    const slider = render(
+      <Wrapper>
+        <ForYouSlider title="For you" sliderKey="for-you" />
+      </Wrapper>
+    );
+    await waitFor(() => {
+      expect(
+        slider.getByText('Because you liked Seed One, Seed Two')
+      ).toBeTruthy();
+    });
+    expect(slider.getByText('Because you liked Seed Two')).toBeTruthy();
+    expect(slider.queryByTestId('for-you-cold')).toBeNull();
+    slider.unmount();
+
+    // A card entering the viewport posts its exposure: with an observer
+    // that reports everything visible at once, the slider records both
+    // ranks, which the api inventory diffs against the route manifest.
+    class VisibleObserver {
+      callback: IntersectionObserverCallback;
+      constructor(callback: IntersectionObserverCallback) {
+        this.callback = callback;
+      }
+      observe(target: Element) {
+        this.callback(
+          [
+            {
+              isIntersecting: true,
+              intersectionRatio: 1,
+              target,
+            } as IntersectionObserverEntry,
+          ],
+          this as unknown as IntersectionObserver
+        );
+      }
+      unobserve() {}
+      disconnect() {}
+    }
+    vi.stubGlobal('IntersectionObserver', VisibleObserver);
+    mockedAxios.post.mockClear();
+    const exposed = render(
+      <Wrapper>
+        <ForYouSlider title="For you" sliderKey="for-you" />
+      </Wrapper>
+    );
+    await waitFor(() => {
+      expect(
+        loggedPaths().filter(
+          (path) => path === '/api/v1/recommendations/exposures'
+        )
+      ).toHaveLength(2);
+    });
+    exposed.unmount();
+
+    const page = render(
+      <Wrapper>
+        <ForYouPage />
+      </Wrapper>
+    );
+    await waitFor(() => {
+      expect(page.getByTestId('for-you-grid')).toBeTruthy();
+    });
+    expect(page.getByText('Because you liked Seed One, Seed Two')).toBeTruthy();
+    expect(page.queryByTestId('for-you-cold')).toBeNull();
+    fireEvent.click(page.getByTestId('for-you-tab-movie'));
+    await waitFor(() => {
+      expect(page.getByTestId('for-you-grid')).toBeTruthy();
+    });
+    page.unmount();
   });
 });

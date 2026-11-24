@@ -7,6 +7,7 @@ import {
   InformationCircleIcon,
   QueueListIcon,
   SparklesIcon,
+  StarIcon,
   TvIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
@@ -18,6 +19,7 @@ import { useIntl } from 'react-intl';
 
 export const menuMessages = defineMessages('components.Layout.Sidebar', {
   dashboard: 'Descobrir',
+  foryou: 'For you',
   browsemovies: 'Filmes',
   browsetv: 'Series',
   lists: 'Lists',
@@ -39,15 +41,19 @@ interface SidebarLinkProps {
   dataTestId?: string;
 }
 
-// Only entries that resolve today. The Para você page lands in a later bead
-// together with its entry, so no link here points at a page that does not
-// exist yet.
+// Every entry resolves to a kept page; the inventory test proves it.
 const SidebarLinks: SidebarLinkProps[] = [
   {
     href: '/',
     messagesKey: 'dashboard',
     svgIcon: <SparklesIcon className="mr-3 h-6 w-6" />,
     activeRegExp: /^\/(discover\/?)?$/,
+  },
+  {
+    href: '/discover/for-you',
+    messagesKey: 'foryou',
+    svgIcon: <StarIcon className="mr-3 h-6 w-6" />,
+    activeRegExp: /^\/discover\/for-you$/,
   },
   {
     href: '/discover/movies',

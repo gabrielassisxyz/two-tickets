@@ -35,6 +35,11 @@
     "reason": "collection page, modified for local lists"
   },
   {
+    "path": "discover/for-you.tsx",
+    "class": "keep",
+    "reason": "discover catalogue browsing, kept as is"
+  },
+  {
     "path": "discover/movies/genre/[genreId]/index.tsx",
     "class": "keep",
     "reason": "discover catalogue browsing, kept as is"

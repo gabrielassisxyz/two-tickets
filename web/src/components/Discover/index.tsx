@@ -8,6 +8,7 @@ import NetworkSlider from '@app/components/Discover/NetworkSlider';
 import StudioSlider from '@app/components/Discover/StudioSlider';
 import TvGenreSlider from '@app/components/Discover/TvGenreSlider';
 import { sliderTitles } from '@app/components/Discover/constants';
+import ForYouSlider from '@app/components/ForYou/ForYouSlider';
 import LibraryListSlider from '@app/components/Library/LibraryListSlider';
 import MediaSlider from '@app/components/MediaSlider';
 import defineMessages from '@app/utils/defineMessages';
@@ -17,6 +18,7 @@ import useSWR from 'swr';
 
 const messages = defineMessages('components.Discover', {
   discover: 'Discover',
+  foryou: 'For you',
   myList: 'My list',
   coupleList: 'Couple list',
 });
@@ -135,6 +137,13 @@ const discoverSliderFor = (
           kind="couple"
           sliderKey="couple-list"
           title={intl.formatMessage(messages.coupleList)}
+        />
+      );
+    case SliderId.FOR_YOU:
+      return (
+        <ForYouSlider
+          sliderKey="for-you"
+          title={intl.formatMessage(messages.foryou)}
         />
       );
     default:
