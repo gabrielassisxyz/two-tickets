@@ -4,6 +4,7 @@ package config
 
 import (
 	"fmt"
+	"net/url"
 	"strconv"
 	"strings"
 )
@@ -18,6 +19,11 @@ const (
 	// DefaultCacheMaxBytes caps cache.db at 200 MB. The file is disposable,
 	// so crossing the cap rotates it rather than failing writes.
 	DefaultCacheMaxBytes int64 = 200 * 1024 * 1024
+
+	// EnvTMDBBaseURL is a test-only override of TMDB's v3 root, so the e2e
+	// stack can point the api at a substitute that answers from the recorded
+	// fixtures. Unset means TMDB itself.
+	EnvTMDBBaseURL = "TMDB_BASE_URL"
 )
 
 // ParseCacheMaxBytes reads the cache size cap: empty means the default, a
@@ -36,4 +42,19 @@ func ParseCacheMaxBytes(lookup LookupEnv) (int64, error) {
 		return 0, fmt.Errorf("%s: must be positive, got %q", EnvCacheMaxBytes, raw)
 	}
 	return parsed, nil
+}
+
+// ParseTMDBBaseURL reads the test-only TMDB root: empty means TMDB itself,
+// anything else must be an absolute http or https URL with a host, so a typo
+// fails at start instead of on the first catalog call.
+func ParseTMDBBaseURL(lookup LookupEnv) (string, error) {
+	raw := envValue(lookup, EnvTMDBBaseURL)
+	if raw == "" {
+		return "", nil
+	}
+	parsed, err := url.Parse(raw)
+	if err != nil || (parsed.Scheme != "http" && parsed.Scheme != "https") || parsed.Host == "" {
+		return "", fmt.Errorf("%s: must be an absolute http or https URL, got %q", EnvTMDBBaseURL, raw)
+	}
+	return strings.TrimRight(raw, "/"), nil
 }

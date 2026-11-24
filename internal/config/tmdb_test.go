@@ -57,3 +57,40 @@ func TestLoadReadsTheCacheCap(t *testing.T) {
 		t.Fatalf("CacheMaxBytes = %d, want 12345", cfg.CacheMaxBytes)
 	}
 }
+
+func TestLoadLeavesTheTMDBBaseURLEmptyByDefault(t *testing.T) {
+	cfg, err := Load(fakeEnv(map[string]string{EnvDataDir: t.TempDir(), EnvTMDBAPIKey: dummySecret}))
+	if err != nil {
+		t.Fatalf("Load: %v", err)
+	}
+	if cfg.TMDBBaseURL != "" {
+		t.Fatalf("TMDBBaseURL = %q, want empty (TMDB itself)", cfg.TMDBBaseURL)
+	}
+}
+
+func TestLoadReadsTheTMDBBaseURLOverride(t *testing.T) {
+	cfg, err := Load(fakeEnv(map[string]string{
+		EnvDataDir:     t.TempDir(),
+		EnvTMDBAPIKey:  dummySecret,
+		EnvTMDBBaseURL: "http://tmdb:8080/3/",
+	}))
+	if err != nil {
+		t.Fatalf("Load: %v", err)
+	}
+	if cfg.TMDBBaseURL != "http://tmdb:8080/3" {
+		t.Fatalf("TMDBBaseURL = %q, want http://tmdb:8080/3", cfg.TMDBBaseURL)
+	}
+}
+
+func TestLoadRejectsATMDBBaseURLThatIsNotAnAbsoluteHTTPURL(t *testing.T) {
+	for _, raw := range []string{"tmdb:8080", "/3", "ftp://tmdb/3", "http://"} {
+		_, err := Load(fakeEnv(map[string]string{
+			EnvDataDir:     t.TempDir(),
+			EnvTMDBAPIKey:  dummySecret,
+			EnvTMDBBaseURL: raw,
+		}))
+		if err == nil {
+			t.Fatalf("Load accepted %s=%q", EnvTMDBBaseURL, raw)
+		}
+	}
+}

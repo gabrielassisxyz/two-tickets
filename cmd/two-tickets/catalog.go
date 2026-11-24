@@ -19,9 +19,9 @@ const cachePruneInterval = 24 * time.Hour
 
 // newTMDBClient builds the one TMDB client the process has, over cache.db.
 // The catalog and the library's hydration share it, and with it the limiter
-// and the cache.
+// and the cache. An empty TMDBBaseURL leaves the client on TMDB itself.
 func newTMDBClient(cfg config.Config, cache *store.CacheStore, logger *slog.Logger) *tmdb.Client {
-	return tmdb.NewClient(tmdb.Options{APIKey: cfg.TMDBAPIKey, Cache: cache, Logger: logger})
+	return tmdb.NewClient(tmdb.Options{BaseURL: cfg.TMDBBaseURL, APIKey: cfg.TMDBAPIKey, Cache: cache, Logger: logger})
 }
 
 // newCatalogService builds the catalog on the shared client.
