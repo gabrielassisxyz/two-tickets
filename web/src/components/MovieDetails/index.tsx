@@ -1,5 +1,5 @@
-import type { MovieDetails as MovieDetailsType } from '@app/compat/models/Movie';
 import { MediaType } from '@app/compat/constants/media';
+import type { MovieDetails as MovieDetailsType } from '@app/compat/models/Movie';
 import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
@@ -196,7 +196,9 @@ const MovieDetails = ({ movie }: MovieDetailsProps) => {
       <div className="media-overview">
         <div className="flex-1">
           <h2>{intl.formatMessage(messages.overview)}</h2>
-          <p>{data.overview || intl.formatMessage(messages.overviewunavailable)}</p>
+          <p>
+            {data.overview || intl.formatMessage(messages.overviewunavailable)}
+          </p>
         </div>
       </div>
       <ExternalLinkBlock

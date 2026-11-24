@@ -10,9 +10,12 @@ type CompanyTagProps = {
 };
 
 const CompanyTag = ({ companyId, type }: CompanyTagProps) => {
-  const { data, error } = useSWR<TvNetwork | ProductionCompany>(
-    `/api/v1/${type}/${companyId}`
-  );
+  // One literal per lookup so the static inventory resolves each route.
+  const path =
+    type === 'studio'
+      ? `/api/v1/studio/${companyId}`
+      : `/api/v1/network/${companyId}`;
+  const { data, error } = useSWR<TvNetwork | ProductionCompany>(path);
 
   if (!data && !error) {
     return (

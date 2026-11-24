@@ -71,6 +71,9 @@ if [ -d web/src/compat ]; then
         $runner corepack pnpm run lint
         # shellcheck disable=SC2086
         $runner corepack pnpm run test
+        echo "==> web inventories"
+        # shellcheck disable=SC2086
+        $runner node --test tests/api-inventory.test.mjs tests/no-server-imports.test.mjs tests/licences.test.mjs tests/locale-coverage.test.mjs tests/nav-links.test.mjs
         # shellcheck disable=SC2086
         $runner corepack pnpm run build
         # shellcheck disable=SC2086

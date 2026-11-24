@@ -120,12 +120,9 @@ const MobileMenu = () => {
                   isActive ? 'text-indigo-500' : ''
                 }`}
               >
-                {cloneElement(
-                  isActive ? link.svgIconSelected : link.svgIcon,
-                  {
-                    className: 'h-6 w-6',
-                  }
-                )}
+                {cloneElement(isActive ? link.svgIconSelected : link.svgIcon, {
+                  className: 'h-6 w-6',
+                })}
               </Link>
             );
           })}

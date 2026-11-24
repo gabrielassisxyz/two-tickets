@@ -1,5 +1,5 @@
-import type { TvDetails as TvDetailsType } from '@app/compat/models/Tv';
 import { MediaType } from '@app/compat/constants/media';
+import type { TvDetails as TvDetailsType } from '@app/compat/models/Tv';
 import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
@@ -198,7 +198,9 @@ const TvDetails = ({ tv }: TvDetailsProps) => {
       <div className="media-overview">
         <div className="flex-1">
           <h2>{intl.formatMessage(messages.overview)}</h2>
-          <p>{data.overview || intl.formatMessage(messages.overviewunavailable)}</p>
+          <p>
+            {data.overview || intl.formatMessage(messages.overviewunavailable)}
+          </p>
         </div>
       </div>
       <ExternalLinkBlock mediaType="tv" tmdbId={data.id} />

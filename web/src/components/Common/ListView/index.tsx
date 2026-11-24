@@ -65,9 +65,7 @@ const ListView = ({
                 <TitleCard
                   key={title.id}
                   id={title.id}
-                  isAddedToWatchlist={
-                    title.mediaInfo?.watchlists?.length ?? 0
-                  }
+                  isAddedToWatchlist={title.mediaInfo?.watchlists?.length ?? 0}
                   image={title.posterPath}
                   status={title.mediaInfo?.status}
                   summary={title.overview}
@@ -87,9 +85,7 @@ const ListView = ({
                 <TitleCard
                   key={title.id}
                   id={title.id}
-                  isAddedToWatchlist={
-                    title.mediaInfo?.watchlists?.length ?? 0
-                  }
+                  isAddedToWatchlist={title.mediaInfo?.watchlists?.length ?? 0}
                   image={title.posterPath}
                   status={title.mediaInfo?.status}
                   summary={title.overview}

@@ -10,6 +10,7 @@ import { SettingsProvider } from '@app/context/SettingsContext';
 import { UserContext } from '@app/context/UserContext';
 import type { User } from '@app/hooks/useUser';
 import '@app/styles/globals.css';
+import { loadLocaleData } from '@app/utils/loadLocaleData';
 import { polyfillIntl } from '@app/utils/polyfillIntl';
 import { getApiBaseUrl } from '@app/utils/urlHelper';
 import '@fontsource-variable/inter';
@@ -21,23 +22,6 @@ import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { IntlProvider } from 'react-intl';
 import { SWRConfig } from 'swr';
-
-// The locale is locked to pt-BR: there is no picker and no other locale is
-// loaded. Empty pt-BR values are dropped so the English defaultMessage
-// renders instead of a blank label (react-intl treats "" as a translation).
-export const loadLocaleData = async (): Promise<Record<string, string>> => {
-  const raw = (await import('../i18n/locale/pt_BR.json')).default as Record<
-    string,
-    string
-  >;
-  const messages: Record<string, string> = {};
-  for (const [key, value] of Object.entries(raw)) {
-    if (value !== '') {
-      messages[key] = value;
-    }
-  }
-  return messages;
-};
 
 // Custom types so we can correctly type our GetInitialProps function
 // with our combined user prop
@@ -209,7 +193,13 @@ CoreApp.getInitialProps = async (initialProps) => {
   const messages = await loadLocaleData();
   await polyfillIntl();
 
-  return { ...appInitialProps, user, messages, locale: 'pt-BR', currentSettings };
+  return {
+    ...appInitialProps,
+    user,
+    messages,
+    locale: 'pt-BR',
+    currentSettings,
+  };
 };
 
 export default CoreApp;
