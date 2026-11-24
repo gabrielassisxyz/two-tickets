@@ -11,7 +11,10 @@ test.use({ ...devices['Pixel 7'] });
 test('for-you shows the cold-start carousel, logs one exposure per card, and drops watched titles', async ({
   page,
 }) => {
-  await signIn(page);
+  // The second account: the library specs run first on the same api and
+  // rate titles as the first one, which would give it a third seed and a
+  // personal list instead of the cold start this spec checks.
+  await signIn(page, 'bob');
 
   // Seed the run through the real library routes, never by writing SQL.
   await api(page, 'PUT', '/api/v1/library/rating', {
