@@ -3,11 +3,10 @@ name: ci
 # The PR-level gate: runs the same bin/ci as a local run, so a secret committed past a
 # bypassed hook, or a red tree, is caught before it merges.
 #
-# Hosted runner for now. The repository is private, so these minutes come out of the
-# account's monthly allowance; the plan moves CI to a self-hosted runner on the home
-# server. Until then, a check that dies within seconds with "the job was not started"
-# means the allowance ran out, not that the code is red. Only pull requests trigger it:
-# a push to main would re-test what its PR already tested.
+# Hosted runner, on purpose. The repository is public, so Actions minutes are free, and
+# a self-hosted runner would let a pull request from a fork run arbitrary code on that
+# machine. Only pull requests trigger it: a push to main would re-test what its pull
+# request already tested.
 on:
   pull_request:
 

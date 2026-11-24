@@ -3,9 +3,9 @@
 > Read before every interaction. Living spec: short, imperative. On every gotcha or decision, append one line here.
 
 > **What it is:** a movie and TV tracker for two people. It records what each person watched, down to the season, keeps ratings, reviews and lists, and recommends what to watch next, with the reason.
-> **Calibration:** Tier 2 · Phase: work. High personal stakes, low external ones: two fixed users, nothing exposed publicly.
-> **Review gate:** standard, the Tier 2 default. One independent external review of the whole branch diff, once, before the pull request goes up for merge.
-> **Merging:** the owner merges pull requests. An agent opens them and stops there.
+> **Calibration:** Tier 2 · Phase: work. High personal stakes, low external ones: two fixed users, and the app itself is not exposed publicly.
+> **Review gate:** light, chosen over the Tier 2 default (`standard`) so that changes land fast. Before opening a pull request, the agent reviews its own whole diff in a fresh context (a subagent or a new session, never the context that wrote the change). No external reviewer.
+> **Merging:** this repository ships itself. An agent merges its own pull request once `bin/ci` and every check on the pull request are green; see "Merging" below.
 
 ## Stack & Commands
 
@@ -157,6 +157,20 @@
 - Before any commit, show `git status` + `git diff --cached`; confirm no secret is staged. If you spot one, STOP and report it. The gitleaks pre-commit hook is the deterministic backstop.
 - Nothing host-specific is committed: no names, no addresses, no paths from one machine. Deployment specifics live in the GitOps repository that deploys the app.
 
+## Merging
+
+- **Checks first.** Nothing on GitHub enforces the pull request's checks: `gh pr merge` merges a pull request whose check is red or still running. So read them for the commit you pushed: `gh pr view <n> --json headRefOid -q .headRefOid` must equal `git rev-parse HEAD`, and only then does `gh pr checks <n> --watch` answer for that commit.
+- **The sequence.** From the worktree, run `gh pr merge <n> --merge` once `bin/ci` is green and those checks are green. Continue only once `gh pr view <n> --json state -q .state` prints `MERGED`. Then, from the main tree:
+  1. `git fetch origin main && git merge --ff-only origin/main`
+  2. `git push origin --delete <branch>`
+  3. `bin/worktree rm <task>`
+  4. `bin/worktree prune-merged --yes`
+  5. `br close <id>`, if the pull request implements a bead
+- **Never `gh pr merge --delete-branch`.** gh implements it by checking out the base branch, which the main tree holds, so it fails after the merge has already landed and reads like a failed merge.
+- **Never chain `gh pr merge` with the steps after it.** A refused merge (a merge conflict, for one) would still run the branch deletion, and deleting the remote branch closes the pull request.
+- **A branch behind `main` gets `git fetch origin && git merge origin/main`, then `bin/ci` again; never a rebase.** No force push, ever.
+- **Never destroy another session's work.** No `push --force`, and never delete a branch or worktree that holds an unmerged commit or an uncommitted file. A merge conflict stops and asks; resolving it by taking one side wholesale is how a parallel session's work disappears.
+
 ## Post-implementation checklist (run before "done")
 
 1. Commits small and well-described.
@@ -169,7 +183,6 @@
 | hurdle | class | gate |
 |---|---|---|
 | A raw `git worktree add` has no `.beads`, so `br` in that worktree reports no tracker and offers to create one | tripwire | `bin/worktree` links it; never use a raw `git worktree add` here |
-| Hosted Actions minutes run out on this private repository; the check then dies within seconds with "the job was not started" | prose | none until the self-hosted runner lands |
 | Seerr's own `package.json` builds and starts its Express server, so importing `web/` unmodified switches on the web section of `bin/ci` with scripts that do not fit | prose | the import lands together with web-only scripts, or `bin/ci` changes in the same commit |
 
 **A hurdle promoted to a gate is deleted from this table, not duplicated.**
