@@ -39,27 +39,27 @@ const manifestFile = join(
 );
 const runtimeLog = join(here, '.runtime-requests.jsonl');
 
-// Manifest paths no kept page calls yet. The Discover page uses a fixed
-// slider manifest instead of the server-stored customization, and the custom
-// keyword sliders went with the edit UI, so neither route has a caller.
+// Manifest paths no kept page calls yet, each naming the bead that adds the
+// caller, or saying why none will.
+const libraryUI = 'tt-1ev (the library UI adds the callers)';
 const declaredWithoutCaller = [
   {
-    path: '/api/v1/settings/discover',
-    bead: 'tt-2gv (no bead re-adds server-driven sliders; entry persists while the server keeps the route)',
-  },
-  {
     path: '/api/v1/discover/keyword/{}/movies',
-    bead: 'tt-2gv (custom keyword sliders were removed with Discover customization; entry persists while the server keeps the route)',
+    bead: 'none: custom keyword sliders went with the Discover editor, and the api keeps the route its goldens pin',
   },
+  { path: '/api/v1/library/history', bead: libraryUI },
+  { path: '/api/v1/library/lists', bead: libraryUI },
+  { path: '/api/v1/library/lists/{}', bead: libraryUI },
+  { path: '/api/v1/library/lists/{}/items', bead: libraryUI },
+  { path: '/api/v1/library/lists/{}/items/{}/{}', bead: libraryUI },
+  { path: '/api/v1/library/rating', bead: libraryUI },
+  { path: '/api/v1/library/title/{}/{}', bead: libraryUI },
+  { path: '/api/v1/library/watch', bead: libraryUI },
 ];
 
-// Frontend calls the api does not serve yet. The library api bead serves
-// both watchlist feeds.
-const calledButNotDeclared = [
-  { path: '/api/v1/watchlist', bead: 'tt-72w' },
-  { path: '/api/v1/watchlist/{}', bead: 'tt-72w' },
-  { path: '/api/v1/discover/watchlist', bead: 'tt-72w' },
-];
+// Frontend calls the api does not serve yet. Empty since the library API
+// landed the watchlist routes; an entry here must name the bead that serves it.
+const calledButNotDeclared = [];
 
 const excludedFiles = new Set(['utils/apiProxy.ts', 'utils/apiProxy.test.ts']);
 
@@ -311,6 +311,10 @@ const checkAgainstManifest = (name, matches, paths) => {
   }
 
   for (const entry of called) {
+    assert.ok(
+      !manifest.includes(entry),
+      `${entry} is in the manifest now: the called-but-not-declared entry is no longer needed, delete it`
+    );
     assert.ok(
       paths.some((path) => matches(path, entry)),
       `${name} no longer calls ${entry}: the called-but-not-declared entry is no longer needed, delete it`
