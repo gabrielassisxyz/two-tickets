@@ -1,4 +1,3 @@
-import { MediaStatus } from '@app/compat/constants/media';
 import type { WatchlistItem } from '@app/compat/interfaces/api/discoverInterfaces';
 import type {
   CollectionResult,
@@ -9,7 +8,6 @@ import type {
 import PersonCard from '@app/components/PersonCard';
 import TitleCard from '@app/components/TitleCard';
 import TmdbTitleCard from '@app/components/TitleCard/TmdbTitleCard';
-import { Permission, useUser } from '@app/hooks/useUser';
 import useVerticalScroll from '@app/hooks/useVerticalScroll';
 import globalMessages from '@app/i18n/globalMessages';
 import { useIntl } from 'react-intl';
@@ -34,13 +32,7 @@ const ListView = ({
   mutateParent,
 }: ListViewProps) => {
   const intl = useIntl();
-  const { hasPermission } = useUser();
   useVerticalScroll(onScrollBottom, !isLoading && !isEmpty && !isReachingEnd);
-
-  const blocklistVisibility = hasPermission(
-    [Permission.MANAGE_BLOCKLIST, Permission.VIEW_BLOCKLIST],
-    { type: 'or' }
-  );
 
   return (
     <>
@@ -64,89 +56,80 @@ const ListView = ({
             </li>
           );
         })}
-        {items
-          ?.filter((title) => {
-            if (!blocklistVisibility)
-              return (
-                (title as TvResult | MovieResult).mediaInfo?.status !==
-                MediaStatus.BLOCKLISTED
+        {items?.map((title, index) => {
+          let titleCard: React.ReactNode;
+
+          switch (title.mediaType) {
+            case 'movie':
+              titleCard = (
+                <TitleCard
+                  key={title.id}
+                  id={title.id}
+                  isAddedToWatchlist={
+                    title.mediaInfo?.watchlists?.length ?? 0
+                  }
+                  image={title.posterPath}
+                  status={title.mediaInfo?.status}
+                  summary={title.overview}
+                  title={title.title}
+                  userScore={title.voteAverage}
+                  year={title.releaseDate}
+                  mediaType={title.mediaType}
+                  inProgress={
+                    (title.mediaInfo?.downloadStatus ?? []).length > 0
+                  }
+                  canExpand
+                />
               );
-            return title;
-          })
-          .map((title, index) => {
-            let titleCard: React.ReactNode;
+              break;
+            case 'tv':
+              titleCard = (
+                <TitleCard
+                  key={title.id}
+                  id={title.id}
+                  isAddedToWatchlist={
+                    title.mediaInfo?.watchlists?.length ?? 0
+                  }
+                  image={title.posterPath}
+                  status={title.mediaInfo?.status}
+                  summary={title.overview}
+                  title={title.name}
+                  userScore={title.voteAverage}
+                  year={title.firstAirDate}
+                  mediaType={title.mediaType}
+                  inProgress={
+                    (title.mediaInfo?.downloadStatus ?? []).length > 0
+                  }
+                  canExpand
+                />
+              );
+              break;
+            case 'collection':
+              titleCard = (
+                <TitleCard
+                  id={title.id}
+                  image={title.posterPath}
+                  summary={title.overview}
+                  title={title.title}
+                  mediaType={title.mediaType}
+                  canExpand
+                />
+              );
+              break;
+            case 'person':
+              titleCard = (
+                <PersonCard
+                  personId={title.id}
+                  name={title.name}
+                  profilePath={title.profilePath}
+                  canExpand
+                />
+              );
+              break;
+          }
 
-            switch (title.mediaType) {
-              case 'movie':
-                titleCard = (
-                  <TitleCard
-                    key={title.id}
-                    id={title.id}
-                    isAddedToWatchlist={
-                      title.mediaInfo?.watchlists?.length ?? 0
-                    }
-                    image={title.posterPath}
-                    status={title.mediaInfo?.status}
-                    summary={title.overview}
-                    title={title.title}
-                    userScore={title.voteAverage}
-                    year={title.releaseDate}
-                    mediaType={title.mediaType}
-                    inProgress={
-                      (title.mediaInfo?.downloadStatus ?? []).length > 0
-                    }
-                    canExpand
-                  />
-                );
-                break;
-              case 'tv':
-                titleCard = (
-                  <TitleCard
-                    key={title.id}
-                    id={title.id}
-                    isAddedToWatchlist={
-                      title.mediaInfo?.watchlists?.length ?? 0
-                    }
-                    image={title.posterPath}
-                    status={title.mediaInfo?.status}
-                    summary={title.overview}
-                    title={title.name}
-                    userScore={title.voteAverage}
-                    year={title.firstAirDate}
-                    mediaType={title.mediaType}
-                    inProgress={
-                      (title.mediaInfo?.downloadStatus ?? []).length > 0
-                    }
-                    canExpand
-                  />
-                );
-                break;
-              case 'collection':
-                titleCard = (
-                  <TitleCard
-                    id={title.id}
-                    image={title.posterPath}
-                    summary={title.overview}
-                    title={title.title}
-                    mediaType={title.mediaType}
-                    canExpand
-                  />
-                );
-                break;
-              case 'person':
-                titleCard = (
-                  <PersonCard
-                    personId={title.id}
-                    name={title.name}
-                    profilePath={title.profilePath}
-                    canExpand
-                  />
-                );
-                break;
-            }
-
-            return <li key={`${title.id}-${index}`}>{titleCard}</li>;
-          })}
+          return <li key={`${title.id}-${index}`}>{titleCard}</li>;
+        })}
         {isLoading &&
           !isReachingEnd &&
           [...Array(20)].map((_item, i) => (

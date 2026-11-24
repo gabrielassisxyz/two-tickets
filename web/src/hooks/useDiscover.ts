@@ -1,11 +1,8 @@
-import { MediaStatus } from '@app/compat/constants/media';
 import useToasts from '@app/hooks/useToasts';
 import globalMessages from '@app/i18n/globalMessages';
 import { useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import useSWRInfinite from 'swr/infinite';
-import useSettings from './useSettings';
-import { Permission, useUser } from './useUser';
 
 export interface BaseSearchResult<T> {
   page: number;
@@ -17,10 +14,6 @@ export interface BaseSearchResult<T> {
 interface BaseMedia {
   id: number;
   mediaType: string;
-  mediaInfo?: {
-    status: MediaStatus;
-    hasActiveRequest?: boolean;
-  };
 }
 
 interface DiscoverResult<T, S> {
@@ -58,11 +51,8 @@ const useDiscover = <
   O = Record<string, unknown>,
 >(
   endpoint: string,
-  options?: O,
-  { hideAvailable = true, hideBlocklisted = true, hideRequested = true } = {}
+  options?: O
 ): DiscoverResult<T, S> => {
-  const settings = useSettings();
-  const { hasPermission } = useUser();
   const { addToast } = useToasts();
   const intl = useIntl();
   const { data, error, size, setSize, isValidating, mutate } = useSWRInfinite<
@@ -109,7 +99,7 @@ const useDiscover = <
     setSize(size + 1);
   };
 
-  let titles = (data ?? []).reduce((a, v) => {
+  const titles = (data ?? []).reduce((a, v) => {
     const results: T[] = [];
 
     for (const result of v.results) {
@@ -121,37 +111,6 @@ const useDiscover = <
 
     return [...a, ...results];
   }, [] as T[]);
-
-  if (settings.currentSettings.hideAvailable && hideAvailable) {
-    titles = titles.filter(
-      (i) =>
-        !(i.mediaType === 'movie' || i.mediaType === 'tv') ||
-        (i.mediaInfo?.status !== MediaStatus.AVAILABLE &&
-          i.mediaInfo?.status !== MediaStatus.PARTIALLY_AVAILABLE)
-    );
-  }
-
-  if (
-    settings.currentSettings.hideBlocklisted &&
-    hideBlocklisted &&
-    hasPermission(Permission.MANAGE_BLOCKLIST)
-  ) {
-    titles = titles.filter(
-      (i) =>
-        !(i.mediaType === 'movie' || i.mediaType === 'tv') ||
-        i.mediaInfo?.status !== MediaStatus.BLOCKLISTED
-    );
-  }
-
-  if (settings.currentSettings.hideRequested && hideRequested) {
-    titles = titles.filter((i) => {
-      if (i.mediaType !== 'movie' && i.mediaType !== 'tv') {
-        return true;
-      }
-
-      return !i.mediaInfo?.hasActiveRequest;
-    });
-  }
 
   const isEmpty = !isLoadingInitialData && titles?.length === 0;
   const isReachingEnd =

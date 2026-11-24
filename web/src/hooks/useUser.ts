@@ -53,19 +53,16 @@ interface UserHookResponse {
 }
 
 export const useUser = ({
-  id,
   initialData,
-}: { id?: number; initialData?: User } = {}): UserHookResponse => {
+}: { initialData?: User } = {}): UserHookResponse => {
   const router = useRouter();
-  const isAuthPage = /^\/(login|setup|resetpassword(?:\/|$))/.test(
-    router.pathname
-  );
+  const isAuthPage = /^\/login$/.test(router.pathname);
 
   const {
     data,
     error,
     mutate: revalidate,
-  } = useSWR<User>(id ? `/api/v1/user/${id}` : `/api/v1/auth/me`, {
+  } = useSWR<User>(`/api/v1/auth/me`, {
     fallbackData: initialData,
     refreshInterval: !isAuthPage ? 30000 : 0,
     revalidateOnFocus: !isAuthPage,

@@ -22,7 +22,7 @@ const messages = defineMessages('components.TitleCard', {
   cleardata: 'Clear Data',
 });
 
-const ErrorCard = ({ id, tmdbId, tvdbId, type, canExpand }: ErrorCardProps) => {
+const ErrorCard = ({ tmdbId, tvdbId, type, canExpand }: ErrorCardProps) => {
   const intl = useIntl();
   const { addToast } = useToasts();
 
@@ -38,16 +38,7 @@ const ErrorCard = ({ id, tmdbId, tvdbId, type, canExpand }: ErrorCardProps) => {
         return;
       }
     }
-    await axios.delete(`/api/v1/media/${id}`).catch((e) => {
-      if (axios.isAxiosError(e) && e.response?.status === 404) return;
-      addToast(intl.formatMessage(globalMessages.error), {
-        appearance: 'error',
-        autoDismiss: true,
-      });
-    });
     mutate('/api/v1/discover/watchlist');
-    mutate('/api/v1/media?filter=allavailable&take=20&sort=mediaAdded');
-    mutate('/api/v1/request?filter=all&take=10&sort=modified&skip=0');
   };
 
   return (

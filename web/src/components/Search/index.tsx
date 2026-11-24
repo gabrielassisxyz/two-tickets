@@ -33,8 +33,7 @@ const Search = () => {
     `/api/v1/search`,
     {
       query: router.query.query,
-    },
-    { hideAvailable: false, hideBlocklisted: false, hideRequested: false }
+    }
   );
 
   if (error) {

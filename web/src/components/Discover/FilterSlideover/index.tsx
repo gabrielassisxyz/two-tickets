@@ -1,5 +1,4 @@
 import Button from '@app/components/Common/Button';
-import MultiRangeSlider from '@app/components/Common/MultiRangeSlider';
 import SlideOver from '@app/components/Common/SlideOver';
 import type { FilterOptions } from '@app/components/Discover/constants';
 import { countActiveFilters } from '@app/components/Discover/constants';
@@ -8,7 +7,6 @@ import {
   CompanySelector,
   GenreSelector,
   KeywordSelector,
-  StatusSelector,
   USCertificationSelector,
   WatchProviderSelector,
 } from '@app/components/Selector';
@@ -19,34 +17,26 @@ import {
 } from '@app/hooks/useUpdateQueryParams';
 import defineMessages from '@app/utils/defineMessages';
 import { XCircleIcon } from '@heroicons/react/24/outline';
-import Datepicker from '@seerr-team/react-tailwindcss-datepicker';
 import { useIntl } from 'react-intl';
 
 const messages = defineMessages('components.Discover.FilterSlideover', {
   filters: 'Filters',
   activefilters:
     '{count, plural, one {# Active Filter} other {# Active Filters}}',
-  releaseDate: 'Release Date',
-  firstAirDate: 'First Air Date',
-  from: 'From',
-  to: 'To',
   studio: 'Studio',
   genres: 'Genres',
   keywords: 'Keywords',
   excludeKeywords: 'Exclude Keywords',
   originalLanguage: 'Original Language',
-  runtimeText: '{minValue}-{maxValue} minute runtime',
-  ratingText: 'Ratings between {minValue} and {maxValue}',
   clearfilters: 'Clear Active Filters',
-  tmdbuserscore: 'TMDB User Score',
-  tmdbuservotecount: 'TMDB User Vote Count',
-  runtime: 'Runtime',
   streamingservices: 'Streaming Services',
-  voteCount: 'Number of votes between {minValue} and {maxValue}',
-  status: 'Status',
   certification: 'Content Rating',
 });
 
+// Every control here maps to a lookup route the api serves: studio, genres,
+// keywords, original language, certifications and watch providers. Date,
+// runtime, score, vote-count and status controls were removed with the
+// request-era filters.
 type FilterSlideoverProps = {
   show: boolean;
   onClose: () => void;
@@ -65,11 +55,6 @@ const FilterSlideover = ({
   const updateQueryParams = useUpdateQueryParams({});
   const batchUpdateQueryParams = useBatchUpdateQueryParams({});
 
-  const dateGte =
-    type === 'movie' ? 'primaryReleaseDateGte' : 'firstAirDateGte';
-  const dateLte =
-    type === 'movie' ? 'primaryReleaseDateLte' : 'firstAirDateLte';
-
   return (
     <SlideOver
       show={show}
@@ -80,57 +65,6 @@ const FilterSlideover = ({
       onClose={() => onClose()}
     >
       <div className="flex flex-col space-y-4">
-        <div>
-          <div className="mb-2 text-lg font-semibold">
-            {intl.formatMessage(
-              type === 'movie' ? messages.releaseDate : messages.firstAirDate
-            )}
-          </div>
-          <div className="relative z-40 flex space-x-2">
-            <div className="flex flex-col">
-              <div className="mb-2">{intl.formatMessage(messages.from)}</div>
-              <Datepicker
-                primaryColor="indigo"
-                value={{
-                  startDate: currentFilters[dateGte] ?? null,
-                  endDate: currentFilters[dateGte] ?? null,
-                }}
-                onChange={(value) => {
-                  updateQueryParams(
-                    dateGte,
-                    value?.startDate ? (value.startDate as string) : undefined
-                  );
-                }}
-                inputName="fromdate"
-                useRange={false}
-                asSingle
-                containerClassName="datepicker-wrapper"
-                inputClassName="pr-1 sm:pr-4 text-base leading-5"
-              />
-            </div>
-            <div className="flex flex-col">
-              <div className="mb-2">{intl.formatMessage(messages.to)}</div>
-              <Datepicker
-                primaryColor="indigo"
-                value={{
-                  startDate: currentFilters[dateLte] ?? null,
-                  endDate: currentFilters[dateLte] ?? null,
-                }}
-                onChange={(value) => {
-                  updateQueryParams(
-                    dateLte,
-                    value?.startDate ? (value.startDate as string) : undefined
-                  );
-                }}
-                inputName="todate"
-                useRange={false}
-                asSingle
-                containerClassName="datepicker-wrapper"
-                inputClassName="pr-1 sm:pr-4 text-base leading-5"
-              />
-            </div>
-          </div>
-        </div>
         {type === 'movie' && (
           <>
             <span className="text-lg font-semibold">
@@ -155,23 +89,6 @@ const FilterSlideover = ({
             updateQueryParams('genre', value?.map((v) => v.value).join(','));
           }}
         />
-        {type === 'tv' && (
-          <>
-            <span className="text-lg font-semibold">
-              {intl.formatMessage(messages.status)}
-            </span>
-            <StatusSelector
-              defaultValue={currentFilters.status}
-              isMulti
-              onChange={(value) => {
-                updateQueryParams(
-                  'status',
-                  value?.map((v) => v.value).join('|')
-                );
-              }}
-            />
-          </>
-        )}
         <span className="text-lg font-semibold">
           {intl.formatMessage(messages.keywords)}
         </span>
@@ -216,123 +133,6 @@ const FilterSlideover = ({
             batchUpdateQueryParams(params);
           }}
         />
-        <span className="text-lg font-semibold">
-          {intl.formatMessage(messages.runtime)}
-        </span>
-        <div className="relative z-0">
-          <MultiRangeSlider
-            min={0}
-            max={400}
-            onUpdateMin={(min) => {
-              updateQueryParams(
-                'withRuntimeGte',
-                min !== 0 && Number(currentFilters.withRuntimeLte) !== 400
-                  ? min.toString()
-                  : undefined
-              );
-            }}
-            onUpdateMax={(max) => {
-              updateQueryParams(
-                'withRuntimeLte',
-                max !== 400 && Number(currentFilters.withRuntimeGte) !== 0
-                  ? max.toString()
-                  : undefined
-              );
-            }}
-            defaultMaxValue={
-              currentFilters.withRuntimeLte
-                ? Number(currentFilters.withRuntimeLte)
-                : undefined
-            }
-            defaultMinValue={
-              currentFilters.withRuntimeGte
-                ? Number(currentFilters.withRuntimeGte)
-                : undefined
-            }
-            subText={intl.formatMessage(messages.runtimeText, {
-              minValue: currentFilters.withRuntimeGte ?? 0,
-              maxValue: currentFilters.withRuntimeLte ?? 400,
-            })}
-          />
-        </div>
-        <span className="text-lg font-semibold">
-          {intl.formatMessage(messages.tmdbuserscore)}
-        </span>
-        <div className="relative z-0">
-          <MultiRangeSlider
-            min={1}
-            max={10}
-            defaultMaxValue={
-              currentFilters.voteAverageLte
-                ? Number(currentFilters.voteAverageLte)
-                : undefined
-            }
-            defaultMinValue={
-              currentFilters.voteAverageGte
-                ? Number(currentFilters.voteAverageGte)
-                : undefined
-            }
-            onUpdateMin={(min) => {
-              updateQueryParams(
-                'voteAverageGte',
-                min !== 1 && Number(currentFilters.voteAverageLte) !== 10
-                  ? min.toString()
-                  : undefined
-              );
-            }}
-            onUpdateMax={(max) => {
-              updateQueryParams(
-                'voteAverageLte',
-                max !== 10 && Number(currentFilters.voteAverageGte) !== 1
-                  ? max.toString()
-                  : undefined
-              );
-            }}
-            subText={intl.formatMessage(messages.ratingText, {
-              minValue: currentFilters.voteAverageGte ?? 1,
-              maxValue: currentFilters.voteAverageLte ?? 10,
-            })}
-          />
-        </div>
-        <span className="text-lg font-semibold">
-          {intl.formatMessage(messages.tmdbuservotecount)}
-        </span>
-        <div className="relative z-0">
-          <MultiRangeSlider
-            min={0}
-            max={1000}
-            defaultMaxValue={
-              currentFilters.voteCountLte
-                ? Number(currentFilters.voteCountLte)
-                : undefined
-            }
-            defaultMinValue={
-              currentFilters.voteCountGte
-                ? Number(currentFilters.voteCountGte)
-                : undefined
-            }
-            onUpdateMin={(min) => {
-              updateQueryParams(
-                'voteCountGte',
-                min !== 0 && Number(currentFilters.voteCountLte) !== 1000
-                  ? min.toString()
-                  : undefined
-              );
-            }}
-            onUpdateMax={(max) => {
-              updateQueryParams(
-                'voteCountLte',
-                max !== 1000 && Number(currentFilters.voteCountGte) !== 0
-                  ? max.toString()
-                  : undefined
-              );
-            }}
-            subText={intl.formatMessage(messages.voteCount, {
-              minValue: currentFilters.voteCountGte ?? 0,
-              maxValue: currentFilters.voteCountLte ?? 1000,
-            })}
-          />
-        </div>
         <span className="text-lg font-semibold">
           {intl.formatMessage(messages.streamingservices)}
         </span>

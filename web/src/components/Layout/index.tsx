@@ -1,17 +1,11 @@
-import type { AvailableLocale } from '@app/compat/types/languages';
 import MobileMenu from '@app/components/Layout/MobileMenu';
 import PullToRefresh from '@app/components/Layout/PullToRefresh';
 import SearchInput from '@app/components/Layout/SearchInput';
 import Sidebar from '@app/components/Layout/Sidebar';
 import UserDropdown from '@app/components/Layout/UserDropdown';
-import UserWarnings from '@app/components/Layout/UserWarnings';
-import useLocale from '@app/hooks/useLocale';
-import useSettings from '@app/hooks/useSettings';
-import { useUser } from '@app/hooks/useUser';
 import { ArrowLeftIcon, Bars3BottomLeftIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import useSWR from 'swr';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -20,32 +14,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { user } = useUser();
   const router = useRouter();
-  const { currentSettings } = useSettings();
-  const { setLocale } = useLocale();
-  const { data: requestResponse, mutate: revalidateRequestsCount } = useSWR(
-    '/api/v1/request/count',
-    {
-      revalidateOnMount: true,
-    }
-  );
-  const { data: issueResponse, mutate: revalidateIssueCount } = useSWR(
-    '/api/v1/issue/count',
-    {
-      revalidateOnMount: true,
-    }
-  );
-
-  useEffect(() => {
-    if (setLocale && user) {
-      setLocale(
-        (user?.settings?.locale
-          ? user.settings.locale
-          : currentSettings.locale) as AvailableLocale
-      );
-    }
-  }, [setLocale, currentSettings.locale, user]);
 
   useEffect(() => {
     const updateScrolled = () => {
@@ -69,21 +38,9 @@ const Layout = ({ children }: LayoutProps) => {
       <div className="absolute top-0 h-64 w-full bg-gradient-to-bl from-gray-800 to-gray-900">
         <div className="relative inset-0 h-full w-full bg-gradient-to-t from-gray-900 to-transparent" />
       </div>
-      <Sidebar
-        open={isSidebarOpen}
-        setClosed={() => setSidebarOpen(false)}
-        pendingRequestsCount={requestResponse?.pending ?? 0}
-        openIssuesCount={issueResponse?.open ?? 0}
-        revalidateIssueCount={() => revalidateIssueCount()}
-        revalidateRequestsCount={() => revalidateRequestsCount()}
-      />
+      <Sidebar open={isSidebarOpen} setClosed={() => setSidebarOpen(false)} />
       <div className="sm:hidden">
-        <MobileMenu
-          pendingRequestsCount={requestResponse?.pending ?? 0}
-          openIssuesCount={issueResponse?.open ?? 0}
-          revalidateIssueCount={() => revalidateIssueCount()}
-          revalidateRequestsCount={() => revalidateRequestsCount()}
-        />
+        <MobileMenu />
       </div>
 
       <div className="relative mb-16 flex w-0 min-w-0 flex-1 flex-col lg:ml-64">
@@ -125,10 +82,7 @@ const Layout = ({ children }: LayoutProps) => {
 
         <main className="relative top-16 z-0 focus:outline-none" tabIndex={0}>
           <div className="mb-6">
-            <div className="max-w-8xl mx-auto px-4">
-              <UserWarnings />
-              {children}
-            </div>
+            <div className="max-w-8xl mx-auto px-4">{children}</div>
           </div>
         </main>
       </div>

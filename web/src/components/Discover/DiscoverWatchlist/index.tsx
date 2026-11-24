@@ -3,25 +3,18 @@ import Header from '@app/components/Common/Header';
 import ListView from '@app/components/Common/ListView';
 import PageTitle from '@app/components/Common/PageTitle';
 import useDiscover from '@app/hooks/useDiscover';
-import { useUser } from '@app/hooks/useUser';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
 const messages = defineMessages('components.Discover.DiscoverWatchlist', {
   discoverwatchlist: 'Your Watchlist',
-  watchlist: 'Plex Watchlist',
 });
 
+// The watchlist page reads the api's watchlist feed, which the library bead
+// serves. Until then every render records the call for the inventory check.
 const DiscoverWatchlist = () => {
   const intl = useIntl();
-  const router = useRouter();
-  const { user } = useUser({
-    id: Number(router.query.userId),
-  });
-  const { user: currentUser } = useUser();
 
   const {
     isLoadingInitialData,
@@ -32,43 +25,19 @@ const DiscoverWatchlist = () => {
     fetchMore,
     error,
     mutate,
-  } = useDiscover<WatchlistItem>(
-    `/api/v1/${
-      router.pathname.startsWith('/profile')
-        ? `user/${currentUser?.id}`
-        : router.query.userId
-          ? `user/${router.query.userId}`
-          : 'discover'
-    }/watchlist`
-  );
+  } = useDiscover<WatchlistItem>('/api/v1/discover/watchlist');
 
   if (error) {
     return <ErrorPage statusCode={500} />;
   }
 
-  const title = intl.formatMessage(
-    router.query.userId ? messages.watchlist : messages.discoverwatchlist
-  );
+  const title = intl.formatMessage(messages.discoverwatchlist);
 
   return (
     <>
-      <PageTitle
-        title={[title, router.query.userId ? user?.displayName : '']}
-      />
+      <PageTitle title={[title, '']} />
       <div className="mb-5 mt-1">
-        <Header
-          subtext={
-            router.query.userId ? (
-              <Link href={`/users/${user?.id}`} className="hover:underline">
-                {user?.displayName}
-              </Link>
-            ) : (
-              ''
-            )
-          }
-        >
-          {title}
-        </Header>
+        <Header subtext="">{title}</Header>
       </div>
       <ListView
         plexItems={titles}

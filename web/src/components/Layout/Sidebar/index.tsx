@@ -1,44 +1,27 @@
-import Badge from '@app/components/Common/Badge';
-import VersionStatus from '@app/components/Layout/VersionStatus';
 import useClickOutside from '@app/hooks/useClickOutside';
-import { Permission, useUser } from '@app/hooks/useUser';
 import defineMessages from '@app/utils/defineMessages';
 import { Transition, TransitionChild } from '@headlessui/react';
 import {
-  ClockIcon,
-  CogIcon,
-  ExclamationTriangleIcon,
-  EyeSlashIcon,
   FilmIcon,
   SparklesIcon,
   TvIcon,
-  UsersIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Fragment, useEffect, useRef } from 'react';
+import { Fragment, useRef } from 'react';
 import { useIntl } from 'react-intl';
 
 export const menuMessages = defineMessages('components.Layout.Sidebar', {
-  dashboard: 'Discover',
-  browsemovies: 'Movies',
-  browsetv: 'Series',
-  requests: 'Requests',
-  blocklist: 'Blocklist',
-  issues: 'Issues',
-  users: 'Users',
-  settings: 'Settings',
+  dashboard: 'Descobrir',
+  browsemovies: 'Filmes',
+  browsetv: 'Séries',
 });
 
 interface SidebarProps {
   open?: boolean;
   setClosed: () => void;
-  pendingRequestsCount: number;
-  openIssuesCount: number;
-  revalidateIssueCount: () => void;
-  revalidateRequestsCount: () => void;
 }
 
 interface SidebarLinkProps {
@@ -47,11 +30,12 @@ interface SidebarLinkProps {
   messagesKey: keyof typeof menuMessages;
   activeRegExp: RegExp;
   as?: string;
-  requiredPermission?: Permission | Permission[];
-  permissionType?: 'and' | 'or';
   dataTestId?: string;
 }
 
+// Only entries that resolve today. The Para você, Listas, Histórico and
+// Sobre pages land in later beads together with their entries, so no link
+// here points at a page that does not exist yet.
 const SidebarLinks: SidebarLinkProps[] = [
   {
     href: '/',
@@ -71,81 +55,13 @@ const SidebarLinks: SidebarLinkProps[] = [
     svgIcon: <TvIcon className="mr-3 h-6 w-6" />,
     activeRegExp: /^\/discover\/tv$/,
   },
-  {
-    href: '/requests',
-    messagesKey: 'requests',
-    svgIcon: <ClockIcon className="mr-3 h-6 w-6" />,
-    activeRegExp: /^\/requests/,
-  },
-  {
-    href: '/blocklist',
-    messagesKey: 'blocklist',
-    svgIcon: <EyeSlashIcon className="mr-3 h-6 w-6" />,
-    activeRegExp: /^\/blocklist/,
-    requiredPermission: [
-      Permission.MANAGE_BLOCKLIST,
-      Permission.VIEW_BLOCKLIST,
-    ],
-    permissionType: 'or',
-  },
-  {
-    href: '/issues',
-    messagesKey: 'issues',
-    svgIcon: <ExclamationTriangleIcon className="mr-3 h-6 w-6" />,
-    activeRegExp: /^\/issues/,
-    requiredPermission: [
-      Permission.MANAGE_ISSUES,
-      Permission.CREATE_ISSUES,
-      Permission.VIEW_ISSUES,
-    ],
-    permissionType: 'or',
-  },
-  {
-    href: '/users',
-    messagesKey: 'users',
-    svgIcon: <UsersIcon className="mr-3 h-6 w-6" />,
-    activeRegExp: /^\/users/,
-    requiredPermission: Permission.MANAGE_USERS,
-    dataTestId: 'sidebar-menu-users',
-  },
-  {
-    href: '/settings',
-    messagesKey: 'settings',
-    svgIcon: <CogIcon className="mr-3 h-6 w-6" />,
-    activeRegExp: /^\/settings/,
-    requiredPermission: Permission.ADMIN,
-    dataTestId: 'sidebar-menu-settings',
-  },
 ];
 
-const Sidebar = ({
-  open,
-  setClosed,
-  pendingRequestsCount,
-  openIssuesCount,
-  revalidateIssueCount,
-  revalidateRequestsCount,
-}: SidebarProps) => {
+const Sidebar = ({ open, setClosed }: SidebarProps) => {
   const navRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const intl = useIntl();
-  const { hasPermission } = useUser();
   useClickOutside(navRef, () => setClosed());
-
-  useEffect(() => {
-    if (openIssuesCount) {
-      revalidateIssueCount();
-    }
-
-    if (pendingRequestsCount) {
-      revalidateRequestsCount();
-    }
-  }, [
-    revalidateIssueCount,
-    revalidateRequestsCount,
-    pendingRequestsCount,
-    openIssuesCount,
-  ]);
 
   return (
     <>
@@ -192,18 +108,12 @@ const Sidebar = ({
                     <div className="flex flex-shrink-0 items-center px-2">
                       <span className="w-full px-4 text-xl text-gray-50">
                         <Link href="/" className="relative block h-24 w-64">
-                          <Image src="/logo_full.svg" alt="Logo" fill />
+                          <Image src="/logo_full.svg" alt="Two Tickets" fill />
                         </Link>
                       </span>
                     </div>
                     <nav className="mt-10 flex-1 space-y-4 px-4">
-                      {SidebarLinks.filter((link) =>
-                        link.requiredPermission
-                          ? hasPermission(link.requiredPermission, {
-                              type: link.permissionType ?? 'and',
-                            })
-                          : true
-                      ).map((sidebarLink) => {
+                      {SidebarLinks.map((sidebarLink) => {
                         return (
                           <Link
                             key={`mobile-${sidebarLink.messagesKey}`}
@@ -232,11 +142,6 @@ const Sidebar = ({
                         );
                       })}
                     </nav>
-                    {hasPermission(Permission.ADMIN) && (
-                      <div className="px-2">
-                        <VersionStatus onClick={() => setClosed()} />
-                      </div>
-                    )}
                   </div>
                 </div>
                 <div className="w-14 flex-shrink-0">
@@ -257,7 +162,7 @@ const Sidebar = ({
                   <Link href="/" className="relative block h-24">
                     <Image
                       src="/logo_full.svg"
-                      alt="Logo"
+                      alt="Two Tickets"
                       fill
                       loading="eager"
                     />
@@ -265,13 +170,7 @@ const Sidebar = ({
                 </span>
               </div>
               <nav className="mt-8 flex-1 space-y-4 px-4">
-                {SidebarLinks.filter((link) =>
-                  link.requiredPermission
-                    ? hasPermission(link.requiredPermission, {
-                        type: link.permissionType ?? 'and',
-                      })
-                    : true
-                ).map((sidebarLink) => {
+                {SidebarLinks.map((sidebarLink) => {
                   return (
                     <Link
                       key={`desktop-${sidebarLink.messagesKey}`}
@@ -288,45 +187,10 @@ const Sidebar = ({
                       {intl.formatMessage(
                         menuMessages[sidebarLink.messagesKey]
                       )}
-                      {sidebarLink.messagesKey === 'requests' &&
-                        pendingRequestsCount > 0 &&
-                        hasPermission(Permission.MANAGE_REQUESTS) && (
-                          <div className="ml-auto flex">
-                            <Badge
-                              className={`rounded-md bg-gradient-to-br ${
-                                router.pathname.match(sidebarLink.activeRegExp)
-                                  ? 'border-indigo-600 from-indigo-700 to-purple-700'
-                                  : 'border-indigo-500 from-indigo-600 to-purple-600'
-                              }`}
-                            >
-                              {pendingRequestsCount}
-                            </Badge>
-                          </div>
-                        )}
-                      {sidebarLink.messagesKey === 'issues' &&
-                        openIssuesCount > 0 &&
-                        hasPermission(Permission.MANAGE_ISSUES) && (
-                          <div className="ml-auto flex">
-                            <Badge
-                              className={`rounded-md bg-gradient-to-br ${
-                                router.pathname.match(sidebarLink.activeRegExp)
-                                  ? 'border-indigo-600 from-indigo-700 to-purple-700'
-                                  : 'border-indigo-500 from-indigo-600 to-purple-600'
-                              }`}
-                            >
-                              {openIssuesCount}
-                            </Badge>
-                          </div>
-                        )}
                     </Link>
                   );
                 })}
               </nav>
-              {hasPermission(Permission.ADMIN) && (
-                <div className="px-2">
-                  <VersionStatus />
-                </div>
-              )}
             </div>
           </div>
         </div>
