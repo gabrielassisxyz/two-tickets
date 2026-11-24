@@ -3,6 +3,7 @@ package tmdb
 import (
 	"bytes"
 	"context"
+	"errors"
 	"log/slog"
 	"net/http"
 	"net/http/httptest"
@@ -71,6 +72,31 @@ func TestFiveHundredThreeTimesReturnsExactlyThreeAttempts(t *testing.T) {
 	if elapsed > 30*time.Second {
 		t.Fatalf("elapsed = %v, want within the 30s budget", elapsed)
 	}
+	// The catalog maps TMDB failures by status, so exhaustion must keep it.
+	var tmdbErr *TMDBError
+	if !errors.As(err, &tmdbErr) || tmdbErr.Status != http.StatusInternalServerError {
+		t.Fatalf("error = %v, want a *TMDBError carrying status 500", err)
+	}
+}
+
+func TestRateLimitedOnEveryAttemptKeepsTheStatus(t *testing.T) {
+	var upstream atomic.Int64
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, _ *http.Request) {
+		upstream.Add(1)
+		w.WriteHeader(http.StatusTooManyRequests)
+	}))
+	defer server.Close()
+
+	client, _, _ := newTestClient(t, server.URL, testClientArgs{budget: 30 * time.Second})
+	var movie MovieDetails
+	err := client.Get(context.Background(), "/movie/550", nil, &movie)
+	if got := upstream.Load(); got != 3 {
+		t.Fatalf("upstream attempts = %d, want exactly 3", got)
+	}
+	var tmdbErr *TMDBError
+	if !errors.As(err, &tmdbErr) || tmdbErr.Status != http.StatusTooManyRequests {
+		t.Fatalf("error = %v, want a *TMDBError carrying status 429", err)
+	}
 }
 
 func TestNeverAnsweringServerIsAbandonedPerAttempt(t *testing.T) {
@@ -134,6 +160,7 @@ func TestCallerCancellationStopsRetriesImmediately(t *testing.T) {
 	}
 }
 
+
 func TestCached200ServedWithoutUpstreamUntilTTLPasses(t *testing.T) {
 	var upstream atomic.Int64
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, _ *http.Request) {
@@ -168,6 +195,7 @@ func TestCached200ServedWithoutUpstreamUntilTTLPasses(t *testing.T) {
 		t.Fatalf("upstream = %d after TTL expiry, want 2", got)
 	}
 }
+
 
 func TestFailuresLeaveNoCacheRowAndKeyword404IsNegative(t *testing.T) {
 	ctx := context.Background()

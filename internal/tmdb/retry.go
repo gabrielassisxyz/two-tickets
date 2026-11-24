@@ -14,71 +14,38 @@ import (
 // errors the caller decides on, and an error only when no answer should be
 // trusted (transport failure, timeout, retry exhaustion, cancellation).
 func (c *Client) fetchWithRetry(ctx context.Context, path string, params map[string]string) ([]byte, int, error) {
-	start := c.clock.Now()
-	deadline := start.Add(c.retryBudget)
+	deadline := c.clock.Now().Add(c.retryBudget)
 	var lastErr error
 	for attempt := 1; attempt <= c.maxAttempts; attempt++ {
-		if err := ctx.Err(); err != nil {
+		if err := c.acquireSlot(ctx); err != nil {
 			return nil, 0, err
-		}
-		if err := c.limiter.Wait(ctx); err != nil {
-			return nil, 0, err
-		}
-		select {
-		case <-ctx.Done():
-			return nil, 0, ctx.Err()
-		case c.sem <- struct{}{}:
 		}
 		body, status, retryable, retryAfter, err := c.doAttempt(ctx, path, params)
 		<-c.sem
-		if err == nil {
+		if err != nil {
+			if ctx.Err() != nil {
+				return nil, 0, ctx.Err()
+			}
+			if !retryable {
+				return nil, 0, err
+			}
+			lastErr = err
+		} else {
 			switch {
-			case status == http.StatusOK:
-				return body, status, nil
-			case status == http.StatusNotFound && isNegativeCacheable(path):
+			case status == http.StatusOK, status == http.StatusNotFound && isNegativeCacheable(path):
 				return body, status, nil
 			case status == http.StatusTooManyRequests:
 				lastErr = &TMDBError{Status: status, Path: redactPath(path), Message: "rate limited"}
-				if attempt == c.maxAttempts {
-					break
-				}
-				delay := retryAfter
-				if delay <= 0 {
-					delay = c.backoff(attempt)
-				}
-				if !c.withinBudget(deadline, delay) {
-					break
-				}
-				if sleepErr := c.sleep(ctx, delay); sleepErr != nil {
-					return nil, 0, sleepErr
-				}
-				continue
 			case status >= 500 && status <= 599:
 				lastErr = &TMDBError{Status: status, Path: redactPath(path), Message: "server error"}
-				if attempt == c.maxAttempts {
-					break
-				}
-				delay := c.backoff(attempt)
-				if !c.withinBudget(deadline, delay) {
-					break
-				}
-				if sleepErr := c.sleep(ctx, delay); sleepErr != nil {
-					return nil, 0, sleepErr
-				}
-				continue
 			default:
+				// Any other 4xx is an answer, not a failure to get one.
 				return nil, status, &TMDBError{Status: status, Path: redactPath(path), Message: "request failed"}
 			}
 		}
-		// Transport or timeout failure: only these, 429 and 5xx are retried.
-		// Any other 4xx above returned already.
-		if ctx.Err() != nil {
-			return nil, 0, ctx.Err()
-		}
-		lastErr = err
-		if !retryable {
-			return nil, 0, err
-		}
+		// Only a retryable failure reaches this point. The decisions stay out
+		// of the switch above on purpose: a break inside a switch leaves the
+		// switch, not the loop, and once turned a 500 into a status-less error.
 		if attempt == c.maxAttempts {
 			break
 		}
@@ -89,15 +56,29 @@ func (c *Client) fetchWithRetry(ctx context.Context, path string, params map[str
 		if !c.withinBudget(deadline, delay) {
 			break
 		}
-		if sleepErr := c.sleep(ctx, delay); sleepErr != nil {
-			return nil, 0, sleepErr
+		if err := c.sleep(ctx, delay); err != nil {
+			return nil, 0, err
 		}
-	}
-	if lastErr == nil {
-		lastErr = &TMDBError{Path: redactPath(path), Message: "retry budget exhausted"}
 	}
 	c.logger.WarnContext(ctx, "tmdb request failed", "path", redactPath(path), "error", lastErr)
 	return nil, 0, lastErr
+}
+
+// acquireSlot waits for the global rate limiter, then for a concurrency slot,
+// both under the caller's context.
+func (c *Client) acquireSlot(ctx context.Context) error {
+	if err := ctx.Err(); err != nil {
+		return err
+	}
+	if err := c.limiter.Wait(ctx); err != nil {
+		return err
+	}
+	select {
+	case <-ctx.Done():
+		return ctx.Err()
+	case c.sem <- struct{}{}:
+		return nil
+	}
 }
 
 func (c *Client) withinBudget(deadline time.Time, delay time.Duration) bool {
