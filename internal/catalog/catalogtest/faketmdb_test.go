@@ -74,14 +74,17 @@ func TestFakeTMDBServesTheRecordedBodyAndStatus(t *testing.T) {
 	}
 }
 
-// The fixture is one whose recorded request carries language, region and
-// include_adult, which tmdb.Client adds to every request it sends.
+// tmdb.Client sends exactly its caller's parameters, so the caller passes the
+// whole set upstream recorded for this fixture, locale included.
 func TestFakeTMDBAnswersTheTMDBClientAtItsBaseURL(t *testing.T) {
 	server := FakeTMDB(t, "discover/movies-popular")
 	client := tmdb.NewClient(tmdb.Options{BaseURL: server.URL, APIKey: config.NewSecret("sentinelsentinelsentinel")})
 	movies, err := client.GetDiscoverMovies(context.Background(), map[string]string{
+		"include_adult":          "false",
 		"include_video":          "true",
+		"language":               tmdb.DefaultLanguage,
 		"page":                   "1",
+		"region":                 tmdb.DefaultRegion,
 		"sort_by":                "popularity.desc",
 		"with_original_language": "",
 	})
