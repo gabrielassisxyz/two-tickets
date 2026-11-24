@@ -326,6 +326,9 @@ func (s *Service) forYouFetchSeed(ctx context.Context, seed forYouSeed) ([]forYo
 	switch seed.mediaType {
 	case "movie":
 		data, err := s.tmdb.GetMovieRecommendations(ctx, id, params)
+		if forYouSeedGone(err) {
+			return []forYouRecItem{}, nil
+		}
 		if err != nil {
 			return nil, fmt.Errorf("recommendations for movie %d: %w", seed.tmdbID, err)
 		}
@@ -336,6 +339,9 @@ func (s *Service) forYouFetchSeed(ctx context.Context, seed forYouSeed) ([]forYo
 		return items, nil
 	case "tv":
 		data, err := s.tmdb.GetTVRecommendations(ctx, id, params)
+		if forYouSeedGone(err) {
+			return []forYouRecItem{}, nil
+		}
 		if err != nil {
 			return nil, fmt.Errorf("recommendations for series %d: %w", seed.tmdbID, err)
 		}
@@ -347,6 +353,15 @@ func (s *Service) forYouFetchSeed(ctx context.Context, seed forYouSeed) ([]forYo
 	default:
 		return nil, fmt.Errorf("recommendations for unknown media type %q", seed.mediaType)
 	}
+}
+
+// forYouSeedGone reports a seed TMDB answers 404 for: a title it no longer
+// knows. Such a seed contributes nothing. Failing the run instead would keep
+// the previous run forever, since the 404 never clears; any other failure
+// still fails the run, so a transient outage keeps the previous one.
+func forYouSeedGone(err error) bool {
+	var tmdbErr *tmdb.TMDBError
+	return errors.As(err, &tmdbErr) && tmdbErr.Status == http.StatusNotFound
 }
 
 // forYouTrending fetches the week's trending list, the cold-start source.

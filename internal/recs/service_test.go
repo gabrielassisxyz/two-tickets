@@ -27,6 +27,7 @@ import (
 type forYouFakeTMDB struct {
 	mu       sync.Mutex
 	failing  map[string]bool
+	gone     map[string]bool
 	inFlight atomic.Int32
 	maxSeen  atomic.Int32
 	delay    time.Duration
@@ -37,9 +38,15 @@ func (f *forYouFakeTMDB) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 	f.mu.Lock()
 	failing := f.failing[path]
+	gone := f.gone[path]
 	f.mu.Unlock()
 	if failing {
 		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	if gone {
+		w.WriteHeader(http.StatusNotFound)
+		_, _ = w.Write([]byte(`{"success":false,"status_code":34,"status_message":"The resource you requested could not be found."}`))
 		return
 	}
 	if strings.HasSuffix(path, "/recommendations") {
@@ -408,5 +415,55 @@ func TestForYouExposuresBelongToTheSessionUser(t *testing.T) {
 	}
 	if total != 1 {
 		t.Errorf("%d exposures stored, want only the one legitimate row", total)
+	}
+}
+
+// A title watched after a cold-start run is gone at the next read: the cold
+// path recomputes on a moved watermark like the personal one.
+func TestForYouColdStartDropsATitleWatchedAfterTheRun(t *testing.T) {
+	s := startForYouServer(t, &forYouFakeTMDB{failing: map[string]bool{}})
+	user := forYouUser(recsUserA)
+	forYouInsertRating(t, s.db.Write, recsUserA, "movie", 1, "movie", "loved", 100)
+	forYouInsertRating(t, s.db.Write, recsUserA, "movie", 2, "movie", "loved", 200)
+	_, raw := s.get(t, user, "/api/v1/recommendations")
+	before := decodeForYouAnswer(t, raw)
+	if before.Personal || len(before.Results) == 0 {
+		t.Fatalf("two seeds answer = %+v, want a non-empty cold start", before)
+	}
+	top := before.Results[0]
+	scope := top.MediaType
+	if scope == "tv" {
+		scope = "show"
+	}
+	forYouInsertWatch(t, s.db.Write, recsUserA, top.MediaType, top.TmdbID, scope)
+	_, raw = s.get(t, user, "/api/v1/recommendations")
+	after := decodeForYouAnswer(t, raw)
+	if after.RunID == before.RunID {
+		t.Fatal("watching a cold-start title recomputed nothing")
+	}
+	for _, result := range after.Results {
+		if result.MediaType == top.MediaType && result.TmdbID == top.TmdbID {
+			t.Errorf("watched %s/%d is still in the cold start", top.MediaType, top.TmdbID)
+		}
+	}
+}
+
+// A seed TMDB answers 404 for, a title it no longer knows, contributes
+// nothing: the run still completes from the other seeds instead of failing
+// every later run and freezing the previous one.
+func TestForYouSeedTMDBNoLongerKnowsIsSkipped(t *testing.T) {
+	fake := &forYouFakeTMDB{failing: map[string]bool{}, gone: map[string]bool{"/movie/3/recommendations": true}}
+	s := startForYouServer(t, fake)
+	user := forYouUser(recsUserA)
+	forYouInsertRating(t, s.db.Write, recsUserA, "movie", 1, "movie", "loved", 100)
+	forYouInsertRating(t, s.db.Write, recsUserA, "movie", 2, "movie", "loved", 200)
+	forYouInsertRating(t, s.db.Write, recsUserA, "movie", 3, "movie", "loved", 300)
+	code, raw := s.get(t, user, "/api/v1/recommendations")
+	if code != http.StatusOK {
+		t.Fatalf("GET = %d %.200s", code, raw)
+	}
+	answer := decodeForYouAnswer(t, raw)
+	if answer.RunID == 0 || !answer.Personal || len(answer.Results) == 0 {
+		t.Fatalf("answer with one gone seed = %+v, want a completed personal run", answer)
 	}
 }
