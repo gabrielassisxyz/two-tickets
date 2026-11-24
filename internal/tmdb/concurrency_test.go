@@ -164,8 +164,6 @@ func TestLimiterNeverExceeds20StartsInAnySecond(t *testing.T) {
 		AttemptTimeout: 5 * time.Second,
 		MaxConcurrency: 10,
 		FormatVersion:  CacheFormatVersion,
-		Language:       DefaultLanguage,
-		Region:         DefaultRegion,
 	})
 
 	// Sequential sustained load: 100 requests at 20/sec take 5 seconds, the

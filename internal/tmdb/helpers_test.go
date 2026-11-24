@@ -129,8 +129,6 @@ func newTestClient(t *testing.T, baseURL string, args testClientArgs) (*Client, 
 		MaxConcurrency: 10,
 		Cache:          args.cache,
 		FormatVersion:  formatVer,
-		Language:       DefaultLanguage,
-		Region:         DefaultRegion,
 	})
 	return client, clock, sleeper
 }
