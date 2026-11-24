@@ -15,6 +15,7 @@
 - **Hooks:** run `bin/install-hooks` once after clone. It enables the gitleaks pre-commit hook and the commit-message attribution check.
 - **Worktrees:** `bin/worktree new <type>/<kebab-desc>`, and all work happens there. The main tree stays on `main`.
 - **Tracker:** `br` (beads). `br ready` lists open, unblocked work. The database is git-ignored, and `bin/worktree` links it into every worktree.
+- **Look:** the palette lives in `web/tailwind.config.js` and every upstream colour family maps onto it. The one accent is the yellow `#e8c87a`, taken from the movie-filtering project; text on an accent fill is `text-ink`, never `text-white`. The grays are neutral, at upstream's lightness. Title cards show their actions only on hover or first tap, as upstream does.
 
 ## Scope (current)
 
