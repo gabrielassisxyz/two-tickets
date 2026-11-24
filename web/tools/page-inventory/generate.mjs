@@ -54,6 +54,13 @@ const rules = [
     cls: MODIFY,
     reason: 'collection page, modified for local lists',
   },
+  // A page under a kept section still drops when its route is not ported:
+  // the Plex sign-in callback has no counterpart with two local accounts.
+  {
+    match: (p) => p.startsWith('login/plex/'),
+    cls: DROP,
+    reason: 'Plex sign-in callback, a route that is not ported',
+  },
   {
     match: (p) => p.startsWith('login/'),
     cls: MODIFY,

@@ -131,8 +131,8 @@
   },
   {
     "path": "login/plex/loading.tsx",
-    "class": "modify",
-    "reason": "login flow, modified for the two fixed accounts"
+    "class": "drop",
+    "reason": "Plex sign-in callback, a route that is not ported"
   },
   {
     "path": "movie/[movieId]/cast.tsx",
