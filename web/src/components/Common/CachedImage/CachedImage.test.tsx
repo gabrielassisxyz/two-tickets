@@ -30,6 +30,12 @@ describe('CachedImage hostile URLs', () => {
     expect(html).not.toContain('evil.example');
   });
 
+  it('renders the placeholder for a protocol-relative URL to another host', () => {
+    const html = renderSrc('//evil.example/x.jpg');
+    expect(html).toContain(IMAGE_PLACEHOLDER);
+    expect(html).not.toContain('evil.example');
+  });
+
   it('renders the placeholder for a javascript: path', () => {
     const html = renderSrc('javascript:alert(1)');
     expect(html).toContain(IMAGE_PLACEHOLDER);

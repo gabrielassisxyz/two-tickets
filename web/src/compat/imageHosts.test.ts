@@ -26,6 +26,17 @@ describe('image host policy', () => {
     );
   });
 
+  it('renders protocol-relative URLs to another host as the placeholder', () => {
+    for (const src of [
+      '//evil.example/x.jpg',
+      '/\\evil.example/x.jpg',
+      '//image.tmdb.org.evil.example/x.jpg',
+    ]) {
+      expect(isAllowedImageSrc(src)).toBe(false);
+      expect(resolveImageSrc(src)).toBe(IMAGE_PLACEHOLDER);
+    }
+  });
+
   it('renders a javascript: path as the placeholder', () => {
     expect(isAllowedImageSrc('javascript:alert(1)')).toBe(false);
     expect(resolveImageSrc('javascript:alert(1)')).toBe(IMAGE_PLACEHOLDER);
