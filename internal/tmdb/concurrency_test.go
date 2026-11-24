@@ -11,8 +11,6 @@ import (
 	"sync/atomic"
 	"testing"
 	"time"
-
-	"golang.org/x/time/rate"
 )
 
 func TestSingleflightCoalesces100IdenticalColdRequests(t *testing.T) {
@@ -152,13 +150,12 @@ func TestLimiterNeverExceeds20StartsInAnySecond(t *testing.T) {
 	ctx := context.Background()
 	recorder := &startRecorder{base: http.DefaultTransport}
 	httpClient := &http.Client{Transport: recorder}
-	// The settled design: 20 per second with a burst of 1.
-	limiter := rate.NewLimiter(rate.Every(50*time.Millisecond), 1)
+	// No Limiter option: the test measures the production default, which is
+	// what a constructed limiter here would never have proved.
 	client := NewClient(Options{
 		BaseURL:        server.URL,
 		APIKey:         testAPIKey(),
 		HTTPClient:     httpClient,
-		Limiter:        limiter,
 		Clock:          newTestClock(),
 		Sleep:          (&recordingSleeper{}).Sleep,
 		Jitter:         func() float64 { return 0 },
@@ -174,6 +171,7 @@ func TestLimiterNeverExceeds20StartsInAnySecond(t *testing.T) {
 	// Sequential sustained load: 100 requests at 20/sec take 5 seconds, the
 	// bead's 5-second burst. The limiter itself spaces grants; the transport
 	// records each start just before the request leaves.
+	limiter := client.limiter
 	if got := limiter.Limit(); got != 20 {
 		t.Fatalf("limiter rate = %v/sec, want 20/sec", got)
 	}

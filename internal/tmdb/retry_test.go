@@ -227,6 +227,35 @@ func TestCached200ServedWithoutUpstreamUntilTTLPasses(t *testing.T) {
 	}
 }
 
+// Only the keyword 404 is an intentional negative. Any other 404 is a missing
+// record: cached as null it would decode into an empty title, with no error,
+// for as long as the row lived.
+func TestNotFoundOutsideKeywordsIsAnErrorAndLeavesNoRow(t *testing.T) {
+	ctx := context.Background()
+	var upstream atomic.Int64
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, _ *http.Request) {
+		upstream.Add(1)
+		w.WriteHeader(http.StatusNotFound)
+	}))
+	defer server.Close()
+	cache := newCacheStoreForTest(t, ctx)
+	client, _, _ := newTestClient(t, server.URL, testClientArgs{cache: cache})
+
+	var movie MovieDetails
+	err := client.Get(ctx, "/movie/999999", nil, &movie)
+	var tmdbErr *TMDBError
+	if !errors.As(err, &tmdbErr) || tmdbErr.Status != http.StatusNotFound {
+		t.Fatalf("error = %v, want a *TMDBError carrying status 404", err)
+	}
+	key := BuildCacheKey(CacheFormatVersion, "GET", "/movie/999999", map[string]string{"language": DefaultLanguage, "region": DefaultRegion, "include_adult": "false"})
+	if _, ok, _ := cache.Get(ctx, key); ok {
+		t.Fatal("a 404 outside the keyword family left a cache row")
+	}
+	_ = client.Get(ctx, "/movie/999999", nil, &movie)
+	if got := upstream.Load(); got != 2 {
+		t.Fatalf("upstream requests = %d, want 2: a missing record is asked again, never served from cache", got)
+	}
+}
 
 func TestFailuresLeaveNoCacheRowAndKeyword404IsNegative(t *testing.T) {
 	ctx := context.Background()
