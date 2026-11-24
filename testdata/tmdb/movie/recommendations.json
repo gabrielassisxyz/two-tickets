@@ -1,0 +1,457 @@
+{
+  "id": "movie/recommendations",
+  "request": {
+    "path": "/movie/603/recommendations",
+    "params": {
+      "language": "pt-BR",
+      "page": "1"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "page": 1,
+      "results": [
+        {
+          "adult": false,
+          "backdrop_path": "/wvlIoof1FnKPLv9jAYanuP31V0C.jpg",
+          "genre_ids": [
+            878,
+            28,
+            53
+          ],
+          "id": 87101,
+          "title": "O Exterminador do Futuro: Gênesis",
+          "original_language": "en",
+          "original_title": "Terminator Genisys",
+          "overview": "John Connor, líder da resistência humana contra Skynet, envia Kyle Reese de volta a 1984 para proteger sua mãe, Sarah. Porém, Reese se surpreende ao encontrá-la com um exterminador que age como seu protetor, e descobre que o passado foi alterado.",
+          "popularity": 13.698,
+          "poster_path": "/xmFGm5Earx8OOYEbgE3iuiNmQpu.jpg",
+          "release_date": "2015-06-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.965,
+          "vote_count": 9321,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/2n7lYEeIbucsEQCswRcVB6ZYmMP.jpg",
+          "genre_ids": [
+            28,
+            12,
+            878
+          ],
+          "id": 777443,
+          "title": "The Electric State",
+          "original_language": "en",
+          "original_title": "The Electric State",
+          "overview": "Uma adolescente órfã pega a estrada com um robô misterioso em busca do irmão há muito tempo desaparecido, encontrando no caminho um contrabandista e seu ajudante hilário.",
+          "popularity": 7.4472,
+          "poster_path": "/mUBxeBpI5xg66YhLJxg8Ppv0ArW.jpg",
+          "release_date": "2025-02-24",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.46,
+          "vote_count": 1897,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/kIBK5SKwgqIIuRKhhWrJn3XkbPq.jpg",
+          "genre_ids": [
+            28,
+            12,
+            878
+          ],
+          "id": 99861,
+          "title": "Vingadores: Era de Ultron",
+          "original_language": "en",
+          "original_title": "Avengers: Age of Ultron",
+          "overview": "Ao tentar proteger o planeta de ameaças, Tony Stark constrói um sistema de inteligência artificial que cuidaria da paz mundial. O projeto acaba dando errado e gera o nascimento do Ultron. Com o destino da Terra em jogo, os Vingadores terão que se unir para mais uma vez salvar a raça humana da extinção.",
+          "popularity": 34.293,
+          "poster_path": "/uvzqTsRmUzk9mJVzX8cMSWMyM5l.jpg",
+          "release_date": "2015-04-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.278,
+          "vote_count": 25398,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/u6QKT8EqpPHoPUng7aE90mWXigX.jpg",
+          "genre_ids": [
+            28,
+            878,
+            53
+          ],
+          "id": 274855,
+          "title": "Tempestade: Planeta em Fúria",
+          "original_language": "en",
+          "original_title": "Geostorm",
+          "overview": "E se, após mais de uma década de desastres naturais devastadores, nós descobríssemos uma forma de controlar a mãe natureza e a destruição que ela carrega? Quando uma mudança catastrófica do clima ameaça a sobrevivência da terra, os governos mundiais se unem e criam o Projeto Dutch Boy: uma rede global de satélites ao redor do planeta armados com tecnologias de geo-engenharia desenvolvidas para impedir os desastres naturais. Após proteger o planeta com sucesso por dois anos, algo começa a dar errado. Dois irmão afastados são encarregados de resolver um defeito no funcionamento do programa antes que uma tempestade mundial acabe com tudo.",
+          "popularity": 7.8859,
+          "poster_path": "/7646jFVhBDqpd8WqwWLSVO5vAIR.jpg",
+          "release_date": "2017-10-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.126,
+          "vote_count": 5437,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/kjQBrc00fB2RjHZB3PGR4w9ibpz.jpg",
+          "genre_ids": [
+            878,
+            28,
+            12
+          ],
+          "id": 670292,
+          "title": "Resistência",
+          "original_language": "en",
+          "original_title": "The Creator",
+          "overview": "Em meio a uma futura guerra entre a raça humana e as forças da inteligência artificial, Joshua, um endurecido ex-agente das forças especiais que lamenta o desaparecimento de sua esposa, é recrutado para caçar e matar o Criador, o indescritível arquiteto da IA avançada que desenvolveu uma arma misteriosa com o poder de acabar com a guerra - e a própria humanidade.",
+          "popularity": 9.9369,
+          "poster_path": "/a2CroeECoXPpvJlbUxtrfDd4Rih.jpg",
+          "release_date": "2023-09-27",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.012,
+          "vote_count": 4313,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/qtamfYGFfDLfGRcucx1zNwohRts.jpg",
+          "genre_ids": [
+            18,
+            878,
+            53
+          ],
+          "id": 860,
+          "title": "Jogos de Guerra",
+          "original_language": "en",
+          "original_title": "WarGames",
+          "overview": "Um jovem (Matthew Broderick) aficcionado por informática conecta seu micro acidentalmente ao sistema de defesa americano, controlado por um computador ultrasofisticado. O acidente provoca um estado de alerta, que pode acabar causando a Terceira Guerra Mundial.",
+          "popularity": 7.621,
+          "poster_path": "/wp0pKfyNhAE2EgWapYWNl5Zm4v5.jpg",
+          "release_date": "1983-06-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.066,
+          "vote_count": 2311,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/kVChi7qHX9UMcpAh7J6fGBCCH2c.jpg",
+          "genre_ids": [
+            53,
+            878
+          ],
+          "id": 262543,
+          "title": "Agente do Futuro",
+          "original_language": "en",
+          "original_title": "Autómata",
+          "overview": "Jacq Vaucan, agente de seguros da Robotics Corporation por volta de 2060, investiga rotineiramente casos de manipulação de robôs. Numa de suas descobertas, Vaucan irá desvendar mistérios complexos que trarão consequências profundas para o futuro da humanidade.",
+          "popularity": 4.8719,
+          "poster_path": "/s2GdAwJulHmlTIKZmSnFzFDxwvq.jpg",
+          "release_date": "2014-10-09",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.911,
+          "vote_count": 1904,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/xS0g3s4blsiPmtpjjb7chFjI1ip.jpg",
+          "genre_ids": [
+            878,
+            12
+          ],
+          "id": 438631,
+          "title": "Duna",
+          "original_language": "en",
+          "original_title": "Dune",
+          "overview": "Em um futuro distante, planetas são comandados por casas nobres que fazem parte de um império feudal intergalático. Paul Atreides é um jovem cuja família toma o controle do planeta deserto Arrakis, também conhecido como Duna. A única fonte da especiaria Melange, a substância mais importante do cosmos, Arrakis se mostra ser um planeta nem um pouco fácil de governar.",
+          "popularity": 44.8232,
+          "poster_path": "/uzERcfV2rSHNhW5eViQiO9hNiA7.jpg",
+          "release_date": "2021-09-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.786,
+          "vote_count": 16028,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/c6H7Z4u73ir3cIoCteuhJh7UCAR.jpg",
+          "genre_ids": [
+            878,
+            28,
+            12
+          ],
+          "id": 524434,
+          "title": "Eternos",
+          "original_language": "en",
+          "original_title": "Eternals",
+          "overview": "Após os eventos de \"Vingadores: Ultimato\", os Eternos, uma raça alienígena imortal criada pelos Celestiais que vivem em segredo na Terra há mais de 7000 anos, se reúnem após uma tragédia inesperada para proteger a humanidade de seus colegas malignos: os Deviantes.",
+          "popularity": 15.2289,
+          "poster_path": "/2IgZIYa8iTQuLNIcVERwXmh8pUj.jpg",
+          "release_date": "2021-11-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.736,
+          "vote_count": 9601,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/uUa6jgSr5BQpcBhhaz1PV1JhSa4.jpg",
+          "genre_ids": [
+            12,
+            28,
+            878
+          ],
+          "id": 20526,
+          "title": "Tron: O Legado",
+          "original_language": "en",
+          "original_title": "TRON: Legacy",
+          "overview": "Quando Flynn, o maior criador de videogames do planeta, envia uma mensagem de um incrível mundo digital, seu filho descobre o caminho e embarca numa jornada pessoal para salvar seu pai desaparecido há anos. Com a ajuda da destemida guerreira Quorra, pai e filho se aventuram num universo cibernético incrível e travam a batalha definitiva do bem x mal.",
+          "popularity": 9.9929,
+          "poster_path": "/kHSIHeYvcP8NTjESmxh9vMAk15E.jpg",
+          "release_date": "2010-12-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.552,
+          "vote_count": 8306,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/bgkFOoXEQMRjKkCvgoj7smdGbuh.jpg",
+          "genre_ids": [
+            28,
+            12,
+            878
+          ],
+          "id": 157350,
+          "title": "Divergente",
+          "original_language": "en",
+          "original_title": "Divergent",
+          "overview": "Na futurística cidade de Chicago, ao completar 16 anos, Beatrice precisa escolher entre as diferentes facções em que a cidade está dividida. Cada uma representa um valor diferente e, ao contrário de sua família, a jovem opta pela facção dos destemidos, a Audácia. Ela então se torna Tris e inicia uma jornada para afastar seus medos e descobrir quem realmente é. Durante essa jornada, acaba conhecendo o jovem Quatro, um rapaz experiente que tem o dom de intrigá-la e de encantá-la ao mesmo tempo.",
+          "popularity": 10.9142,
+          "poster_path": "/tieMNz2baXJNSbIWMt0zFTb1IuY.jpg",
+          "release_date": "2014-03-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.896,
+          "vote_count": 13902,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/pUNfHmVqfwRdILhCkU8TdysVOXo.jpg",
+          "genre_ids": [
+            878,
+            12,
+            28
+          ],
+          "id": 533533,
+          "title": "Tron: Ares",
+          "original_language": "en",
+          "original_title": "TRON: Ares",
+          "overview": "Um programa de IA altamente avançado chamado Ares (Jared Leto) que é enviado do mundo digital (A Grade) para o mundo real em uma missão perigosa, sendo o primeiro encontro da humanidade com inteligência artificial que transcende o ciberespaço, explorando temas de consciência e a linha tênue entre homem e máquina em meio a uma corrida tecnológica entre duas empresas, Dillinger e Encon",
+          "popularity": 9.391,
+          "poster_path": "/4NO0mmJ7WEU3PcllcogmiQIUecq.jpg",
+          "release_date": "2025-10-08",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.435,
+          "vote_count": 1740,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/nJ0jz1J3zNja31UEMeklhgFeMw5.jpg",
+          "genre_ids": [
+            53,
+            878,
+            9648
+          ],
+          "id": 1090,
+          "title": "13º Andar",
+          "original_language": "en",
+          "original_title": "The Thirteenth Floor",
+          "overview": "Um homem acorda e descobre uma camisa ensanguentada em casa. Seu chefe foi assassinado na noite anterior, e ele não consegue se lembrar de nada. Esta ficção científica explora a possibilidade sinistra e assustadora de universos simulados por computadores, onde as pessoas apenas acreditam que são reais.",
+          "popularity": 4.7989,
+          "poster_path": "/2Wv6a0yNxTl7NH1f0FbPYC2kZvg.jpg",
+          "release_date": "1999-04-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.087,
+          "vote_count": 1669,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/rdlXnumaarKFHQ4rB8YBWINEeuE.jpg",
+          "genre_ids": [
+            28,
+            878,
+            53
+          ],
+          "id": 9620,
+          "title": "O Pagamento",
+          "original_language": "en",
+          "original_title": "Paycheck",
+          "overview": "Michael Jennings é um engenheiro de computação contratado por corporações para descobrir os segredos de empresas concorrentes. Quando ele finaliza um projeto, sua memória é apagada para evitar o vazamento de informações secretas. Porém, quando termina seu trabalho mais recente, ele acorda do processo de eliminação de memória apenas com um envelope na mão, contendo vários objetos, e começa a ser perseguido pela polícia.",
+          "popularity": 5.4316,
+          "poster_path": "/8d6VZvqRqTPKGA074BfZiOGGw94.jpg",
+          "release_date": "2003-12-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.231,
+          "vote_count": 2182,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/i0eOILDW8HipIkOUSKhB1dvZzNJ.jpg",
+          "genre_ids": [
+            878,
+            12,
+            28
+          ],
+          "id": 2135,
+          "title": "A Máquina do Tempo",
+          "original_language": "en",
+          "original_title": "The Time Machine",
+          "overview": "Desesperado pelo assassinato de sua noiva, o inventor Alexander não consegue reverter a morte da amada alterando o tempo. Porém, em um futuro em que a humanidade está dividida entre espécies pacíficas e predatórias, o cientista precisa enfrentar os carnívoros Morlocks para salvar seus novos amigos.",
+          "popularity": 7.4306,
+          "poster_path": "/hEUR9s3oWImmN1PdSvzzTm0ez1N.jpg",
+          "release_date": "2002-03-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.376,
+          "vote_count": 2735,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/pVVobDO8cezhVPvwD6EBUN0g3mt.jpg",
+          "genre_ids": [
+            14,
+            28,
+            878
+          ],
+          "id": 353491,
+          "title": "A Torre Negra",
+          "original_language": "en",
+          "original_title": "The Dark Tower",
+          "overview": "Um pistoleiro chamado Roland Deschain percorre o mundo em busca da famosa Torre Negra, prédio mágico que está prestes a desaparecer. Essa busca envolve uma intensa perseguição ao poderoso Homem de Preto, passagens entre tempos diferentes, encontros intensos e confusões entre o real e o imaginário. Baseado na obra literária homônima de Stephen King.",
+          "popularity": 7.465,
+          "poster_path": "/ampCjcdMJAPm9AmVcmxwicpjnKE.jpg",
+          "release_date": "2017-08-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.818,
+          "vote_count": 5773,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/okRY6YHbakM9cQz08EfcaLfzDoX.jpg",
+          "genre_ids": [
+            16,
+            878,
+            14
+          ],
+          "id": 30061,
+          "title": "Liga da Justiça: Crise em Duas Terras",
+          "original_language": "en",
+          "original_title": "Justice League: Crisis on Two Earths",
+          "overview": "Neste longa de animação, um Lex Luthor \"do bem\" vem de um universo alternativo para pedir ajuda, pois seu planeta está sendo ameaçado pelo Sindicato do Crime, uma versão maligna da Liga da Justiça. As coisas se complicam quando o vilão Coruja tenta por em prática um plano diabólico, que poderá colocar todo o equilíbrio dos universos em perigo.",
+          "popularity": 2.7684,
+          "poster_path": "/bdlmUeBn2k2LGADnJKsyzuegaXC.jpg",
+          "release_date": "2010-02-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.289,
+          "vote_count": 809,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/eVYChqJavS1DCXFeJE2lzVUMLKp.jpg",
+          "genre_ids": [
+            878,
+            12,
+            28,
+            53
+          ],
+          "id": 70160,
+          "title": "Jogos Vorazes",
+          "original_language": "en",
+          "original_title": "The Hunger Games",
+          "overview": "Num futuro distante, boa parte da população é controlada por um regime totalitário, que relembra esse domínio realizando um evento anual – e mortal – entre os 12 distritos sob sua tutela. Para salvar sua irmã caçula, a jovem Katniss Everdeen se oferece como voluntária para representar seu distrito na competição e acaba contando com a companhia de Peeta Melark, desafiando não só o sistema dominante, mas também a força dos outros oponentes.",
+          "popularity": 67.8689,
+          "poster_path": "/l6jn53LMu07uPt8A42JWIKi1Beb.jpg",
+          "release_date": "2012-03-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.227,
+          "vote_count": 24095,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/qCPLtXrTB10UsgAFxsWOB44gDPu.jpg",
+          "genre_ids": [
+            14,
+            878,
+            12
+          ],
+          "id": 412656,
+          "title": "Mundo em Caos",
+          "original_language": "en",
+          "original_title": "Chaos Walking",
+          "overview": "Em um futuro não muito distante, em um mundo onde as mulheres desapareceram e os homens foram afetados pelo \"ruído\" – uma força que deixa seus pensamentos audíveis – Todd Hewitt encontra Viola, uma jovem misteriosa que aterrissou em seu planeta. Com Viola correndo perigo, Todd jura protegê-la e colocá-la fora de perigo. Para salvá-la, Todd terá que controlar seu \"ruído\", descobrir sua própria força e desvendar todos os segredos sombrios que seu planeta e sua comunidade guardam.",
+          "popularity": 6.1397,
+          "poster_path": "/oMSumadgRiygK1DUtBurdnZb9Jz.jpg",
+          "release_date": "2021-02-24",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.542,
+          "vote_count": 2750,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/gJmM9pDsltITbPz0iH79kc8tWv9.jpg",
+          "genre_ids": [
+            878
+          ],
+          "id": 420410,
+          "title": "2149: The Aftermath",
+          "original_language": "en",
+          "original_title": "2149: The Aftermath",
+          "overview": "In an oppressive future, where everyone's only contact is their computer, one lonely young man is forced to venture forth in search of human contact.",
+          "popularity": 0.9601,
+          "poster_path": "/oHBGb6MKYvT6j1ICCV53t2Kn1Te.jpg",
+          "release_date": "2016-10-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.434,
+          "vote_count": 68,
+          "media_type": "movie"
+        }
+      ],
+      "total_pages": 36,
+      "total_results": 709
+    }
+  }
+}

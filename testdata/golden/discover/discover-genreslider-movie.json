@@ -1,0 +1,48 @@
+{
+  "case": "discover-genreslider-movie",
+  "family": "discover",
+  "request": "GET /api/v1/discover/genreslider/movie",
+  "fixtures": [
+    "genre/movie-list-slider",
+    "discover/movies-slider-backdrops-0",
+    "discover/movies-slider-backdrops-1",
+    "discover/movies-slider-backdrops-4",
+    "discover/movies-slider-backdrops-5"
+  ],
+  "status": 200,
+  "body": [
+    {
+      "id": 16,
+      "name": "Animação",
+      "backdrops": [
+        "/z26LxXDMmAIzKr06FPDudCJyvsM.jpg",
+        "/bDsmYvrzto7xrEwqDpLC3SPhn9A.jpg",
+        "/274ahmbkJSzdmcWrWSTu9DFv5rp.jpg",
+        "/mdBElS5YjpZPkB9DNYjgxwWgXcv.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Aventura",
+      "backdrops": [
+        "/z26LxXDMmAIzKr06FPDudCJyvsM.jpg"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Ação",
+      "backdrops": []
+    },
+    {
+      "id": 35,
+      "name": "Comédia",
+      "backdrops": [
+        "/z26LxXDMmAIzKr06FPDudCJyvsM.jpg",
+        "/bDsmYvrzto7xrEwqDpLC3SPhn9A.jpg",
+        "/274ahmbkJSzdmcWrWSTu9DFv5rp.jpg",
+        "/mdBElS5YjpZPkB9DNYjgxwWgXcv.jpg",
+        "/bybAHw5fenKXRFI4phanPhpljlT.jpg"
+      ]
+    }
+  ]
+}

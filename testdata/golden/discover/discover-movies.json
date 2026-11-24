@@ -1,0 +1,427 @@
+{
+  "case": "discover-movies",
+  "family": "discover",
+  "request": "GET /api/v1/discover/movies?page=1",
+  "fixtures": [
+    "discover/movies-popular"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 1001,
+    "totalResults": 20001,
+    "keywords": [],
+    "results": [
+      {
+        "id": 1726,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          878,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Iron Man",
+        "overview": "Tony Stark é um industrial bilionário, que também é um brilhante inventor. Ao ser sequestrado ele é obrigado por terroristas a construir uma arma devastadora mas, ao invés disto, constrói uma armadura de alta tecnologia que permite que fuja de seu cativeiro. A partir de então ele passa a usá-la para combater o crime, sob o alter ego do Homem de Ferro.",
+        "popularity": "<number>",
+        "releaseDate": "2008-04-30",
+        "title": "Homem de Ferro",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/cKvDv2LpwVEqbdXWoQl4XgGN6le.jpg",
+        "posterPath": "/mqN7RxojEiPoh3FTSTwOtwg7KAu.jpg"
+      },
+      {
+        "id": 1368337,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          28,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Odyssey",
+        "overview": "Acompanhe o rei grego Odisseu em sua perigosa jornada de 20 anos para voltar a Ítaca após a Guerra de Troia, enfrentando monstros e deuses enquanto sua esposa Penélope resiste em seu reino.",
+        "popularity": "<number>",
+        "releaseDate": "2026-07-16",
+        "title": "A Odisseia",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/c7btGYblBnfAaw713WvFM0Kimc7.jpg",
+        "posterPath": "/m0ehGErq8GTLK4WZxaq9QLGAR3u.jpg"
+      },
+      {
+        "id": 1263337,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Heart of the Beast",
+        "overview": "Um ex-soldado ferido e seu cão de guerra aposentado lutam para sobreviver na região do Alasca e encontrar o caminho de volta para casa após um acidente aéreo na mata.",
+        "popularity": "<number>",
+        "releaseDate": "2026-09-24",
+        "title": "Coração Selvagem",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/yE766yhgg98tKwTKd8CyNvAtmn6.jpg",
+        "posterPath": "/n4PJa4xVo4SjIsBvTA0yGMKjTBh.jpg"
+      },
+      {
+        "id": 1300968,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Hunger Games: Sunrise on the Reaping",
+        "overview": "Revisite o mundo de Panem 24 anos antes dos eventos de Jogos Vorazes, começando na manhã da colheita dos 50º Jogos Vorazes, também conhecida como o Segundo Massacre Quaternário.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-18",
+        "title": "Jogos Vorazes: Amanhecer na Colheita",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+        "posterPath": "/ibZ6GSHtCeC7fLDJ2uyXNemgYwr.jpg"
+      },
+      {
+        "id": 1400837,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          27
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Other Mommy",
+        "overview": "Uma menina de 8 anos, filha de um casal que enfrenta problemas conjugais, encara uma entidade sinistra que sai do seu armário e torna-se cada vez mais ameaçadora para a família.",
+        "popularity": "<number>",
+        "releaseDate": "2026-10-08",
+        "title": "Outra Mamãe",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/smZ8BT4Vzw4iCEppTLCnN8jNYtn.jpg",
+        "posterPath": "/hiuBB4ZqGbL7uihdVPUahFtg7Zr.jpg"
+      },
+      {
+        "id": 969681,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Spider-Man: Brand New Day",
+        "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
+        "popularity": "<number>",
+        "releaseDate": "2026-07-29",
+        "title": "Homem-Aranha: Um Novo Dia",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/subj7knTn4DeS6KS7qI66EQKe9i.jpg",
+        "posterPath": "/x0nvYzQpyJc5pdT9lMnkMuYAg0O.jpg"
+      },
+      {
+        "id": 1423191,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          27,
+          878,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Resident Evil",
+        "overview": "Bryan, um tranquilo entregador de órgãos, é enviado para uma entrega noturna no Hospital Geral de Raccoon City. No caminho por uma estrada montanhosa coberta de neve, ele acidentalmente atropela uma mulher desconhecida. Ela sobrevive, mas algo está muito errado. Ao tentar ajudar, Bryan se depara com um surto em larga escala envolvendo mutações horríveis com tentáculos e monstruosidades bioengenheiradas.",
+        "popularity": "<number>",
+        "releaseDate": "2026-09-17",
+        "title": "Resident Evil",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
+        "posterPath": "/bvBTdNaWVPrHKjyPFnsigZJsKdD.jpg"
+      },
+      {
+        "id": 1058424,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          9648,
+          28
+        ],
+        "originalLanguage": "ko",
+        "originalTitle": "호프",
+        "overview": "A polícia investiga a presença de uma criatura misteriosa que vem causando tumulto na remota vila de Hope Harbor. Ao seguir os rastros do animal, um grupo de caçadores acaba se tornando sua presa involuntária, dando início a um conflito que se transforma em uma tragédia de proporções cósmicas.",
+        "popularity": "<number>",
+        "releaseDate": "2026-10-08",
+        "title": "Hope: O Primeiro Impacto",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/qqHFLg90IUSoTmSMpKOOW5RyqN3.jpg",
+        "posterPath": "/yfWe8Vaac8b8f9dagmzBWOroUcg.jpg"
+      },
+      {
+        "id": 1616687,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          80,
+          53
+        ],
+        "originalLanguage": "id",
+        "originalTitle": "Serangan Balik",
+        "overview": "Depois que uma gangue violenta invade sua casa isolada, um veterano atormentado pela culpa e os netos que ele mal conhece precisam unir forças para sobreviver.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-12",
+        "title": "Sem Desistir",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/bjt53Hjqwl9VrtJkDv39GwmE1QN.jpg",
+        "posterPath": "/k0f4a5RVBwLJUq3UYXnfcOaXjCu.jpg"
+      },
+      {
+        "id": 1507696,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          53,
+          27
+        ],
+        "originalLanguage": "es",
+        "originalTitle": "Apocalipsis Z: Nuevo mundo",
+        "overview": "Após o surto do vírus TSJ, as Ilhas Canárias se tornaram o último refúgio da Europa. Quando uma missão parte rumo a Madri em busca de suprimentos, Roberto se junta à equipe com intenções duvidosas. Cercados por infectados e divididos por lealdades conflitantes, eles precisam lutar pela sobrevivência e enfrentar um dilema moral: salvar a própria pele ou arriscar tudo pelo que resta da humanidade.",
+        "popularity": "<number>",
+        "releaseDate": "2026-10-30",
+        "title": "Apocalipse Z: Novo Mundo",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/o3XwuDUj0n8qnK91p6q8LKfr6rj.jpg",
+        "posterPath": "/tzk90shtAI6WaoDIjLLVten7oov.jpg"
+      },
+      {
+        "id": 1551025,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          10749,
+          35
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Guarding Stars",
+        "overview": "Uma guarda-costas pragmática tem que proteger um ator de Hollywood durante as festas de fim de ano, mas o clima esquenta, segredos vêm à tona e o Natal fica bem mais complicado.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-18",
+        "title": "Protegendo Estrelas",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/qHvap0vpfTBIbv7cnR0OyBRqQHG.jpg",
+        "posterPath": "/lcjabMgrRfWGs81vq9vGK0tERDo.jpg"
+      },
+      {
+        "id": 1244523,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          27,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Beware Boiúna",
+        "overview": "Um grupo de jovens médicos embarca em missão humanitária na Amazônia, cada um com seus próprios interesses ocultos. No entanto, nem todos recebem bem a chegada do grupo, e a visita deles desperta um predador ancestral: a Boiúna. A criatura mítica retorna para defender seu território. Em meio à selva densa, trava-se uma luta pela sobrevivência, e as fronteiras entre caçador e presa, herói e vilão, tornam-se cada vez mais tênues.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-12",
+        "title": "Boiúna - Terror no Amazonas",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/9nU0FKNefmhbgi2xXlvZchZsqwm.jpg",
+        "posterPath": "/r2HKWQ4kCQsEEsCAQGn5qsl4H29.jpg"
+      },
+      {
+        "id": 1813355,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          27,
+          9648
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "A Story of Derry",
+        "overview": "Séculos antes da aparição do palhaço Pennywise em Derry, três jovens nativos americanos encontram um aterrorizante espírito ancestral na floresta.",
+        "popularity": "<number>",
+        "releaseDate": "2026-10-31",
+        "title": "Uma História de Derry",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/z26LxXDMmAIzKr06FPDudCJyvsM.jpg",
+        "posterPath": "/9duTLm4Xk62wGIWJBfdco9lPHvW.jpg"
+      },
+      {
+        "id": 1003596,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Avengers: Doomsday",
+        "overview": "Heróis icônicos de três universos diferentes são colocados em rota de colisão mortal e enfrentam uma ameaça existencial sem precedentes, diferente de tudo que já vivenciaram antes.",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-16",
+        "title": "Vingadores: Doutor Destino",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/tXNt66khUBZcusc22INKCeGRr4l.jpg",
+        "posterPath": "/aSzeVbyyU65420A1646YfHcf6Zt.jpg"
+      },
+      {
+        "id": 1599184,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          12
+        ],
+        "originalLanguage": "zh",
+        "originalTitle": "斗破苍穹剧场版：双帝之战",
+        "overview": "Acima da Academia Jia Nan, o Clã Hun e a Aliança Tianfu se enfrentam em um confronto por causa do lendário Imperador Antigo Tuoshe. Hun Tiandi utiliza o antigo jade para abrir a caverna do imperador. Assim, começa a disputa entre Xiao Yan e Hun Tiandi pela oportunidade de alcançar o nível de Imperador (Dou Di).",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-22",
+        "title": "Battle Through the Heavens Movie：Duel of the Two Dou Emperors",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/9uMWGlxHR3bpyhzKQLYL83m5puq.jpg",
+        "posterPath": "/kQA44KCjcI284f3uxCRAdiS9blt.jpg"
+      },
+      {
+        "id": 1562642,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Ghost Soldier",
+        "overview": "Um engenheiro de sistemas de armas e ex-boina verde protege seus vizinhos em Wyoming contra uma corporação implacável que ameaça sua comunidade rural.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-06",
+        "title": "Ghost Soldier",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/ggqvhSdAASrseKuMlzk51sbvbE8.jpg",
+        "posterPath": "/h1MUn834b2u1FDQWObUBwp5jlHJ.jpg"
+      },
+      {
+        "id": 1741617,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          27,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Hansel & Gretel's Halloween",
+        "overview": "",
+        "popularity": "<number>",
+        "releaseDate": "2026-08-01",
+        "title": "Hansel & Gretel's Halloween",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": null,
+        "posterPath": "/taNnBPN5FrJqYxsiJIqAL0KhqZ.jpg"
+      },
+      {
+        "id": 656908,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          14,
+          28,
+          12
+        ],
+        "originalLanguage": "hi",
+        "originalTitle": "रामायणम्",
+        "overview": "Rama é um príncipe cujo destino é marcado pelo sacrifício, enquanto Ravana é um rei imortal movido pela vingança. Uma profecia une os destinos dos dois.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-19",
+        "title": "Ramayana: O Nascimento de uma Lenda",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/yHVZncPRZr63mezRX20IyKLrSkv.jpg",
+        "posterPath": "/lV7b3n4tqwlKGUsl72r3fI7COH1.jpg"
+      },
+      {
+        "id": 1294189,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Mongoose",
+        "overview": "Um herói de guerra falsamente acusado, sem nada a perder, lidera a polícia em uma épica perseguição televisiva de carro pelo país, ajudado por membros de seu antigo batalhão das Forças Especiais do Exército e monitorado de perto por um público fascinado que torce por sua fuga segura.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-04",
+        "title": "Fuga Mortal",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/uAe2LEuZ2xg312FY7D8Ei4bl0aG.jpg",
+        "posterPath": "/3QX08keJGtcIJsCyy4Mdaq28ZGq.jpg"
+      },
+      {
+        "id": 1101412,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Fall 2: Deadpoint",
+        "overview": "De luto pela morte de sua irmã Shiloh, Jax Hunter cria um laço com Luce, a amiga corajosa de Shiloh. Juntas, elas enfrentam a perigosa passarela suspensa do Monte Kwan, na Tailândia. Quando um deslizamento de rochas as deixa presas em uma estreita prancha a mais de 3.000 metros de altitude, Jax precisa enfrentar seus medos para sobreviver.",
+        "popularity": "<number>",
+        "releaseDate": "2026-10-01",
+        "title": "A Queda 2: No Limite",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/nGau0KBOaRILSK5MqFcuTfv7GMl.jpg",
+        "posterPath": "/xtxEvJACNnbz3WYmJ5mYT1a0KGk.jpg"
+      }
+    ]
+  }
+}

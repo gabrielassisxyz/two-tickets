@@ -1,0 +1,17 @@
+{
+  "case": "search-missing-query",
+  "family": "search",
+  "request": "GET /api/v1/search",
+  "fixtures": [],
+  "status": 400,
+  "body": {
+    "message": "request/query must have required property 'query'",
+    "errors": [
+      {
+        "path": "/query/query",
+        "message": "must have required property 'query'",
+        "errorCode": "required.openapi.validation"
+      }
+    ]
+  }
+}

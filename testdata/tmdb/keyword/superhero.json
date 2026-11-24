@@ -1,0 +1,14 @@
+{
+  "id": "keyword/superhero",
+  "request": {
+    "path": "/keyword/9715",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "id": 9715,
+      "name": "superhero"
+    }
+  }
+}

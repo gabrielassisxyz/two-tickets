@@ -1,0 +1,12 @@
+{
+  "case": "genres-movie-tmdb-500",
+  "family": "lookup",
+  "request": "GET /api/v1/genres/movie",
+  "fixtures": [
+    "errors/genres-movie-500"
+  ],
+  "status": 500,
+  "body": {
+    "message": "Unable to retrieve movie genres."
+  }
+}

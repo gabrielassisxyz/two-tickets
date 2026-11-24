@@ -1,0 +1,15 @@
+{
+  "id": "errors/search-multi-timeout",
+  "request": {
+    "path": "/search/multi",
+    "params": {
+      "include_adult": "false",
+      "language": "pt-BR",
+      "page": "1",
+      "query": "cooper"
+    }
+  },
+  "response": {
+    "error": "timeout"
+  }
+}

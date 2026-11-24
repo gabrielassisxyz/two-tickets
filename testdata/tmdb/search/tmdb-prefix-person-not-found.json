@@ -1,0 +1,17 @@
+{
+  "id": "search/tmdb-prefix-person-not-found",
+  "request": {
+    "path": "/person/485013",
+    "params": {
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 404,
+    "body": {
+      "success": false,
+      "status_code": 34,
+      "status_message": "The resource you requested could not be found."
+    }
+  }
+}

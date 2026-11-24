@@ -1,0 +1,437 @@
+{
+  "case": "discover-keyword-movies",
+  "family": "discover",
+  "request": "GET /api/v1/discover/keyword/9715/movies?page=1",
+  "fixtures": [
+    "keyword/superhero-movies"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 63,
+    "totalResults": 1248,
+    "results": [
+      {
+        "id": 1726,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          878,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Iron Man",
+        "overview": "Tony Stark é um industrial bilionário, que também é um brilhante inventor. Ao ser sequestrado ele é obrigado por terroristas a construir uma arma devastadora mas, ao invés disto, constrói uma armadura de alta tecnologia que permite que fuja de seu cativeiro. A partir de então ele passa a usá-la para combater o crime, sob o alter ego do Homem de Ferro.",
+        "popularity": "<number>",
+        "releaseDate": "2008-04-30",
+        "title": "Homem de Ferro",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/cKvDv2LpwVEqbdXWoQl4XgGN6le.jpg",
+        "posterPath": "/mqN7RxojEiPoh3FTSTwOtwg7KAu.jpg"
+      },
+      {
+        "id": 969681,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Spider-Man: Brand New Day",
+        "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
+        "popularity": "<number>",
+        "releaseDate": "2026-07-29",
+        "title": "Homem-Aranha: Um Novo Dia",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/subj7knTn4DeS6KS7qI66EQKe9i.jpg",
+        "posterPath": "/x0nvYzQpyJc5pdT9lMnkMuYAg0O.jpg"
+      },
+      {
+        "id": 1003596,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Avengers: Doomsday",
+        "overview": "Heróis icônicos de três universos diferentes são colocados em rota de colisão mortal e enfrentam uma ameaça existencial sem precedentes, diferente de tudo que já vivenciaram antes.",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-16",
+        "title": "Vingadores: Doutor Destino",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/tXNt66khUBZcusc22INKCeGRr4l.jpg",
+        "posterPath": "/aSzeVbyyU65420A1646YfHcf6Zt.jpg"
+      },
+      {
+        "id": 299534,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          878,
+          28
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Avengers: Endgame",
+        "overview": "Após os eventos devastadores de \"Vingadores: Guerra Infinita\", o universo está em ruínas devido aos esforços do Titã Louco, Thanos. Com a ajuda de aliados remanescentes, os Vingadores devem se reunir mais uma vez a fim de desfazer as ações de Thanos e restaurar a ordem no universo de uma vez por todas, não importando as consequências.",
+        "popularity": "<number>",
+        "releaseDate": "2019-04-24",
+        "title": "Vingadores: Ultimato",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+        "posterPath": "/9fRX8UKlIW7Lb9GqNsJVakWWFCi.jpg"
+      },
+      {
+        "id": 299536,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          28,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Avengers: Infinity War",
+        "overview": "Homem de Ferro, Thor, Hulk e os Vingadores se unem para combater seu inimigo mais poderoso, o maligno Thanos. Em uma missão para coletar todas as seis pedras infinitas, Thanos planeja usá-las para infligir sua vontade maléfica sobre a realidade.",
+        "popularity": "<number>",
+        "releaseDate": "2018-04-25",
+        "title": "Vingadores: Guerra Infinita",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/mDfJG3LC3Dqb67AZ52x3Z0jU0uB.jpg",
+        "posterPath": "/A4kvp7vY1BDLrrQIagRCffLKj1t.jpg"
+      },
+      {
+        "id": 155,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          53,
+          80
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Dark Knight",
+        "overview": "Após dois anos desde o surgimento do Batman, os criminosos de Gotham City têm muito o que temer. Com a ajuda do tenente James Gordon e do promotor público Harvey Dent, Batman luta contra o crime organizado. Acuados com o combate, os chefes do crime aceitam a proposta feita pelo Coringa e o contratam para combater o Homem-Morcego.",
+        "popularity": "<number>",
+        "releaseDate": "2008-07-16",
+        "title": "Batman: O Cavaleiro das Trevas",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/cfT29Im5VDvjE0RpyKOSdCKZal7.jpg",
+        "posterPath": "/dutnVGV9ljCZh84bkTE1TVZ4s4Y.jpg"
+      },
+      {
+        "id": 24428,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Avengers",
+        "overview": "Loki, o irmão de Thor, ganha acesso ao poder ilimitado do cubo cósmico ao roubá-lo de dentro das instalações da S.H.I.E.L.D. Nick Fury, o diretor desta agência internacional que mantém a paz, logo reúne os únicos super-heróis que serão capazes de defender a Terra de ameaças sem precedentes. Homem de Ferro, Capitão América, Hulk, Thor, Viúva Negra e Gavião Arqueiro formam o time dos sonhos de Fury, mas eles precisam aprender a colocar os egos de lado e agir como um grupo em prol da humanidade.",
+        "popularity": "<number>",
+        "releaseDate": "2012-04-25",
+        "title": "Os Vingadores: The Avengers",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg",
+        "posterPath": "/PtSapjHdDjlVcsqdEo0u7rDE6i.jpg"
+      },
+      {
+        "id": 533535,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          35,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Deadpool & Wolverine",
+        "overview": "Um apático Wade Wilson trabalha duro na vida civil. Seus dias como mercenário moralmente flexível, Deadpool, ficaram para trás. Quando seu planeta enfrenta uma ameaça, Wade deve relutantemente vestir-se novamente com um ainda mais relutante... relutante? Mais relutante? Ele deve convencer um Wolverine relutante em... Porra. As sinopses são tão estúpidas.",
+        "popularity": "<number>",
+        "releaseDate": "2024-07-24",
+        "title": "Deadpool & Wolverine",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/by8z9Fe8y7p4jo2YlW2SZDnptyT.jpg",
+        "posterPath": "/cJFqqiDYprqExaXatu4AaoMzDG2.jpg"
+      },
+      {
+        "id": 634649,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          12,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Spider-Man: No Way Home",
+        "overview": "Peter Parker é desmascarado e não consegue mais separar sua vida normal dos grandes riscos de ser um super-herói. Quando ele pede ajuda ao Doutor Estranho, os riscos se tornam ainda mais perigosos, e o forçam a descobrir o que realmente significa ser o Homem-Aranha...",
+        "popularity": "<number>",
+        "releaseDate": "2021-12-15",
+        "title": "Homem-Aranha: Sem Volta Para Casa",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg",
+        "posterPath": "/xaKydnMw6wR1MBAjS5seGPVusbs.jpg"
+      },
+      {
+        "id": 414906,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          80,
+          9648,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Batman",
+        "overview": "Em seu segundo ano de combate ao crime, Batman descobre corrupção em Gotham City que se conecta à sua própria família enquanto enfrenta um serial killer conhecido como Charada.",
+        "popularity": "<number>",
+        "releaseDate": "2022-03-01",
+        "title": "Batman",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/rvtdN5XkWAfGX6xDuPL6yYS2seK.jpg",
+        "posterPath": "/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg"
+      },
+      {
+        "id": 453395,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          14,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Doctor Strange in the Multiverse of Madness",
+        "overview": "Doutor Estranho, com a ajuda de aliados místicos antigos e novos, atravessa as perigosas realidades alternativas e alucinantes do Multiverso para enfrentar um novo adversário misterioso.",
+        "popularity": "<number>",
+        "releaseDate": "2022-05-04",
+        "title": "Doutor Estranho no Multiverso da Loucura",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/AdyJH8kDm8xT8IKTlgpEC15ny4u.jpg",
+        "posterPath": "/7pLIVfovuIf2KQOOvMsKx3Lanrg.jpg"
+      },
+      {
+        "id": 99861,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          12,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Avengers: Age of Ultron",
+        "overview": "Ao tentar proteger o planeta de ameaças, Tony Stark constrói um sistema de inteligência artificial que cuidaria da paz mundial. O projeto acaba dando errado e gera o nascimento do Ultron. Com o destino da Terra em jogo, os Vingadores terão que se unir para mais uma vez salvar a raça humana da extinção.",
+        "popularity": "<number>",
+        "releaseDate": "2015-04-22",
+        "title": "Vingadores: Era de Ultron",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/kIBK5SKwgqIIuRKhhWrJn3XkbPq.jpg",
+        "posterPath": "/uvzqTsRmUzk9mJVzX8cMSWMyM5l.jpg"
+      },
+      {
+        "id": 617126,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          12,
+          28
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Fantastic 4: First Steps",
+        "overview": "No vibrante cenário de um mundo retrofuturista inspirado nos anos 1960, a Primeira Família da Marvel é forçada a equilibrar seus papéis como heróis com a força de seus laços familiares, enquanto defendem a Terra de um deus espacial voraz chamado Galactus e sua enigmática arauta, a Surfista Prateada.",
+        "popularity": "<number>",
+        "releaseDate": "2025-07-23",
+        "title": "Quarteto Fantástico: Primeiros Passos",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/s94NjfKkcSczZ1FembwmQZwsuwY.jpg",
+        "posterPath": "/8F2vIxWycANHW763lnx2hJVtjDC.jpg"
+      },
+      {
+        "id": 986056,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          878,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Thunderbolts*",
+        "overview": "Depois de se verem presos em uma armadilha mortal, uma equipe não convencional de sete anti-heróis deve embarcar em uma missão perigosa que os forçará a confrontar os cantos mais sombrios de seus passados.",
+        "popularity": "<number>",
+        "releaseDate": "2025-04-30",
+        "title": "Thunderbolts*",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/rthMuZfFv4fqEU4JVbgSW9wQ8rs.jpg",
+        "posterPath": "/zkysYSX51ddSPQuiDTjkGCS6vyh.jpg"
+      },
+      {
+        "id": 569094,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          28,
+          12,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Spider-Man: Across the Spider-Verse",
+        "overview": "Miles Morales retorna para o próximo capítulo da saga do Aranhaverso, uma aventura épica que transportará o Homem-Aranha em tempo integral e amigável do bairro do Brooklyn através do Multiverso para unir forças com Gwen Stacy e uma nova equipe de Homens-Aranha para enfrentar com um vilão mais poderoso do que qualquer coisa que eles já encontraram.",
+        "popularity": "<number>",
+        "releaseDate": "2023-05-31",
+        "title": "Homem-Aranha: Através do Aranhaverso",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/kVd3a9YeLGkoeR50jGEXM6EqseS.jpg",
+        "posterPath": "/fBS6y0LYX4kU6pPSBYMdQy6SIHX.jpg"
+      },
+      {
+        "id": 557,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Spider-Man",
+        "overview": "Peter Parker é um jovem estudioso que vive com seus tios, Ben e May, desde que seus pais faleceram. Peter tem dificuldade em se relacionar com seus colegas, por ser tímido e por eles o considerarem um nerd. Até que, em uma demonstração científica, um acidente inesperado faz com que uma aranha modificada geneticamente pique Peter. A partir de então seu corpo é quimicamente alterado pela picada da aranha.",
+        "popularity": "<number>",
+        "releaseDate": "2002-05-01",
+        "title": "Homem-Aranha",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/jHxCeXnSchAuwHnmVatTgqMYdX8.jpg",
+        "posterPath": "/RbZQL5hXmydecu82UHw9ZGyytB.jpg"
+      },
+      {
+        "id": 447365,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          12,
+          28
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Guardians of the Galaxy Vol. 3",
+        "overview": "Peter Quill, que ainda está se recuperando da perda de Gamora, tem que reunir a sua equipe para defender o universo e proteger um dos seus. Uma missão que, se não for concluída com sucesso, pode levar ao fim dos Guardiões como os conhecemos.",
+        "popularity": "<number>",
+        "releaseDate": "2023-05-03",
+        "title": "Guardiões da Galáxia: Vol. 3",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg",
+        "posterPath": "/4yycSPnchdNAZirGkmCYQwTd3cr.jpg"
+      },
+      {
+        "id": 1560520,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          28,
+          12,
+          18
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Batman: Knightfall Part 1: Knightfall",
+        "overview": "O Asilo Arkham foi destruído, e todos os seus detentos foram soltos em Gotham City. Enquanto corre contra o tempo para capturar alguns de seus maiores inimigos, Batman é levado ao limite de suas capacidades físicas e mentais, rumo a um confronto final contra uma nova ameaça: o homem chamado Bane!",
+        "popularity": "<number>",
+        "releaseDate": "2026-08-25",
+        "title": "Batman: A Queda do Morcego - Parte 1",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/caBIySpwuFi2i7ynvHIlnxJLOdN.jpg",
+        "posterPath": "/kOeLi6uIhAlWchS7ZkgDwWSavYT.jpg"
+      },
+      {
+        "id": 271110,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          28,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Captain America: Civil War",
+        "overview": "Depois do ataque de Ultron, os políticos decidem controlar os Vingadores, já que suas ações afetam toda a humanidade. A decisão coloca o Capitão América em rota de colisão com o Homem de Ferro.",
+        "popularity": "<number>",
+        "releaseDate": "2016-04-27",
+        "title": "Capitão América: Guerra Civil",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/7FWlcZq3r6525LWOcvO9kNWurN1.jpg",
+        "posterPath": "/dsvUR5aEVSkB1Sro7nT6Khqik71.jpg"
+      },
+      {
+        "id": 1081003,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          12,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Supergirl",
+        "overview": "Quando um adversário implacável atinge alguém muito próximo dela, Kara Zor-El relutantemente une forças com uma companheira improvável em uma épica jornada interestelar de vingança e justiça.",
+        "popularity": "<number>",
+        "releaseDate": "2026-06-24",
+        "title": "Supergirl",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/heZQmyNvkH236ha2M3JckdUQQqb.jpg",
+        "posterPath": "/pgKFmJ4mvohpI6LUdRj6uIn6wQR.jpg"
+      }
+    ]
+  }
+}

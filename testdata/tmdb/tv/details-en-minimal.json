@@ -1,0 +1,511 @@
+{
+  "id": "tv/details-en-minimal",
+  "request": {
+    "path": "/tv/91073",
+    "params": {
+      "append_to_response": "aggregate_credits,credits,external_ids,keywords,videos,content_ratings,watch/providers",
+      "include_video_language": "en",
+      "language": "en"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "adult": false,
+      "backdrop_path": "/xFWpWdJORfcf8uIQwFAi0OrnhBN.jpg",
+      "created_by": [
+        {
+          "id": 2716763,
+          "credit_id": "5f13cead65c26c0038be574f",
+          "name": "Ranjeev Nitu",
+          "original_name": "Ranjeev Nitu",
+          "gender": 0,
+          "profile_path": null
+        }
+      ],
+      "episode_run_time": [
+        24
+      ],
+      "first_air_date": "2019-07-01",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "https://www.primevideo.com/-/pt/detail/0SKU8WZ651LEGSBZJKN81J517P",
+      "id": 91073,
+      "in_production": false,
+      "languages": [
+        "hi"
+      ],
+      "last_air_date": "2023-12-08",
+      "last_episode_to_air": {
+        "id": 2289668,
+        "name": "Episode 96",
+        "overview": "",
+        "vote_average": 0,
+        "vote_count": 0,
+        "air_date": "2023-12-08",
+        "episode_number": 96,
+        "episode_type": "standard",
+        "production_code": "",
+        "runtime": 24,
+        "season_number": 1,
+        "show_id": 91073,
+        "still_path": "/ku8RGZMGoEUrpb5LCz8J7ePHhSY.jpg"
+      },
+      "name": "Choti Sarrdaarni",
+      "next_episode_to_air": null,
+      "networks": [
+        {
+          "id": 2532,
+          "logo_path": "/8LplmEPunQzheRGqQgvHN4tPltg.png",
+          "name": "VOOT",
+          "origin_country": "IN"
+        },
+        {
+          "id": 524,
+          "logo_path": "/1qTv9p35O9i5x0Swg1VbfzLqYBq.png",
+          "name": "Colors",
+          "origin_country": "IN"
+        }
+      ],
+      "number_of_episodes": 810,
+      "number_of_seasons": 1,
+      "origin_country": [
+        "IN"
+      ],
+      "original_language": "hi",
+      "original_name": "छोटी सरदारनी",
+      "overview": "Meher is coerced by her mother into marrying Sarabjeet, a widower with a 5 year-old child. But, much to her mother's dislike, Meher is pregnant with her lover, Manav's child. Can she stand up for her love and fight her own?",
+      "popularity": 23.5913,
+      "poster_path": "/yfjSzkR82f5P8Nep3g1FFJvarLe.jpg",
+      "production_companies": [
+        {
+          "id": 141735,
+          "logo_path": "/ba2GSbH2KnInGel6L6XIy3dtGQ5.png",
+          "name": "Cockcrow Entertainment & Shaika Films",
+          "origin_country": "IN"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "IN",
+          "name": "India"
+        }
+      ],
+      "seasons": [
+        {
+          "air_date": "2019-07-01",
+          "episode_count": 810,
+          "id": 127626,
+          "name": "Season 1",
+          "overview": "",
+          "poster_path": "/uMuB9iMaAMOeqip4LsZPLUcjlqg.jpg",
+          "season_number": 1,
+          "vote_average": 0
+        }
+      ],
+      "softcore": false,
+      "spoken_languages": [
+        {
+          "english_name": "Hindi",
+          "iso_639_1": "hi",
+          "name": "हिन्दी"
+        }
+      ],
+      "status": "Ended",
+      "tagline": "",
+      "type": "Scripted",
+      "vote_average": 0,
+      "vote_count": 0,
+      "aggregate_credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2360830,
+            "known_for_department": "Acting",
+            "name": "Nimrit Ahluwalia",
+            "original_name": "Nimrit Ahluwalia",
+            "popularity": 0.1527,
+            "profile_path": "/ixCTMMEesEMTqACtSvMNJHlvhkc.jpg",
+            "total_episode_count": 810,
+            "roles": [
+              {
+                "credit_id": "5d29b317caab6d66599ce0ce",
+                "character": "Meher Kaur Dhillon",
+                "episode_count": 810
+              }
+            ],
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1686384,
+            "known_for_department": "Acting",
+            "name": "Avinesh Rekhi",
+            "original_name": "Avinesh Rekhi",
+            "popularity": 0.2832,
+            "profile_path": "/rjZR977M1KppWkW5tq9wF09yCZ8.jpg",
+            "total_episode_count": 810,
+            "roles": [
+              {
+                "credit_id": "5d29b334caab6d7ddb9952e2",
+                "character": "Sarabjit Gill",
+                "episode_count": 810
+              }
+            ],
+            "order": 1
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 2360831,
+            "known_for_department": "Acting",
+            "name": "Shivendraa Om Saainiyol",
+            "original_name": "Shivendraa Om Saainiyol",
+            "popularity": 0.0432,
+            "profile_path": null,
+            "total_episode_count": 810,
+            "roles": [
+              {
+                "credit_id": "5d29b3a4be4b36756aa0dd8d",
+                "character": "Tarkash",
+                "episode_count": 810
+              }
+            ],
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 140767,
+            "known_for_department": "Acting",
+            "name": "Anita Raj",
+            "original_name": "Anita Raj",
+            "popularity": 0.3987,
+            "profile_path": "/ny2EEe6T0hP37X9b92iOZxm3GsC.jpg",
+            "total_episode_count": 810,
+            "roles": [
+              {
+                "credit_id": "5d29b5a8a294f000102c9d8b",
+                "character": "Kulwant Kaur",
+                "episode_count": 810
+              }
+            ],
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 1655318,
+            "known_for_department": "Acting",
+            "name": "Amal Sehrawat",
+            "original_name": "Amal Sehrawat",
+            "popularity": 0.1103,
+            "profile_path": "/fNUCIlDMZWme53BgCoV1bMrRCjJ.jpg",
+            "total_episode_count": 810,
+            "roles": [
+              {
+                "credit_id": "5d29b3b8be4b3632c4a0f050",
+                "character": "Jagga",
+                "episode_count": 810
+              }
+            ],
+            "order": 4
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2188913,
+            "known_for_department": "Acting",
+            "name": "Hitesh Bhardwaj",
+            "original_name": "Hitesh Bhardwaj",
+            "popularity": 0.1229,
+            "profile_path": "/fYdT3rL52JlmbWswpeMiBqiCvAQ.jpg",
+            "total_episode_count": 810,
+            "roles": [
+              {
+                "credit_id": "5d29b389a294f00c172a7c47",
+                "character": "Manav Sharma",
+                "episode_count": 810
+              }
+            ],
+            "order": 5
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 2360832,
+            "known_for_department": "Acting",
+            "name": "Pawan Mahendroo",
+            "original_name": "Pawan Mahendroo",
+            "popularity": 0.0469,
+            "profile_path": null,
+            "total_episode_count": 810,
+            "roles": [
+              {
+                "credit_id": "5d29b3c7a294f00c172a7d16",
+                "character": "",
+                "episode_count": 810
+              }
+            ],
+            "order": 6
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 2360833,
+            "known_for_department": "Acting",
+            "name": "Abhilasha Jhakhad",
+            "original_name": "Abhilasha Jhakhad",
+            "popularity": 0.0575,
+            "profile_path": null,
+            "total_episode_count": 810,
+            "roles": [
+              {
+                "credit_id": "5d29b3d3a294f000122c988b",
+                "character": "",
+                "episode_count": 810
+              }
+            ],
+            "order": 7
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 3754848,
+            "known_for_department": "Acting",
+            "name": "Ajay Dutta",
+            "original_name": "Ajay Dutta",
+            "popularity": 0.1928,
+            "profile_path": "/8MwxYWk5WkYS92mmvIhb85MPvLE.jpg",
+            "total_episode_count": 22,
+            "roles": [
+              {
+                "credit_id": "6a8fe9a6e7639c516e58e503",
+                "character": "Jaswant (Devika’s Father)",
+                "episode_count": 22
+              }
+            ],
+            "order": 500
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 1953750,
+            "known_for_department": "Directing",
+            "name": "Rajesh Ram Singh",
+            "original_name": "Rajesh Ram Singh",
+            "popularity": 0.1213,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "5d29b25fbe4b3612f5a51b49",
+                "job": "Producer",
+                "episode_count": 810
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 810
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 1756263,
+            "known_for_department": "Writing",
+            "name": "Pradeep Kumar",
+            "original_name": "Pradeep Kumar",
+            "popularity": 0.05,
+            "profile_path": null,
+            "jobs": [
+              {
+                "credit_id": "5d29b294caab6d66599cdead",
+                "job": "Producer",
+                "episode_count": 810
+              }
+            ],
+            "department": "Production",
+            "total_episode_count": 810
+          }
+        ]
+      },
+      "credits": {
+        "cast": [
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 2360830,
+            "known_for_department": "Acting",
+            "name": "Nimrit Ahluwalia",
+            "original_name": "Nimrit Ahluwalia",
+            "popularity": 0.1527,
+            "profile_path": "/ixCTMMEesEMTqACtSvMNJHlvhkc.jpg",
+            "character": "Meher Kaur Dhillon",
+            "credit_id": "5d29b317caab6d66599ce0ce",
+            "order": 0
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 1686384,
+            "known_for_department": "Acting",
+            "name": "Avinesh Rekhi",
+            "original_name": "Avinesh Rekhi",
+            "popularity": 0.2505,
+            "profile_path": "/rjZR977M1KppWkW5tq9wF09yCZ8.jpg",
+            "character": "Sarabjit Gill",
+            "credit_id": "5d29b334caab6d7ddb9952e2",
+            "order": 1
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 2360831,
+            "known_for_department": "Acting",
+            "name": "Shivendraa Om Saainiyol",
+            "original_name": "Shivendraa Om Saainiyol",
+            "popularity": 0.0432,
+            "profile_path": null,
+            "character": "Tarkash",
+            "credit_id": "5d29b3a4be4b36756aa0dd8d",
+            "order": 2
+          },
+          {
+            "adult": false,
+            "gender": 1,
+            "id": 140767,
+            "known_for_department": "Acting",
+            "name": "Anita Raj",
+            "original_name": "Anita Raj",
+            "popularity": 0.3825,
+            "profile_path": "/ny2EEe6T0hP37X9b92iOZxm3GsC.jpg",
+            "character": "Kulwant Kaur",
+            "credit_id": "5d29b5a8a294f000102c9d8b",
+            "order": 3
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 1655318,
+            "known_for_department": "Acting",
+            "name": "Amal Sehrawat",
+            "original_name": "Amal Sehrawat",
+            "popularity": 0.1314,
+            "profile_path": "/fNUCIlDMZWme53BgCoV1bMrRCjJ.jpg",
+            "character": "Jagga",
+            "credit_id": "5d29b3b8be4b3632c4a0f050",
+            "order": 4
+          },
+          {
+            "adult": false,
+            "gender": 2,
+            "id": 2188913,
+            "known_for_department": "Acting",
+            "name": "Hitesh Bhardwaj",
+            "original_name": "Hitesh Bhardwaj",
+            "popularity": 0.1702,
+            "profile_path": "/fYdT3rL52JlmbWswpeMiBqiCvAQ.jpg",
+            "character": "Manav Sharma",
+            "credit_id": "5d29b389a294f00c172a7c47",
+            "order": 5
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 2360832,
+            "known_for_department": "Acting",
+            "name": "Pawan Mahendroo",
+            "original_name": "Pawan Mahendroo",
+            "popularity": 0.0469,
+            "profile_path": null,
+            "character": "",
+            "credit_id": "5d29b3c7a294f00c172a7d16",
+            "order": 6
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 2360833,
+            "known_for_department": "Acting",
+            "name": "Abhilasha Jhakhad",
+            "original_name": "Abhilasha Jhakhad",
+            "popularity": 0.0575,
+            "profile_path": null,
+            "character": "",
+            "credit_id": "5d29b3d3a294f000122c988b",
+            "order": 7
+          }
+        ],
+        "crew": [
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 1953750,
+            "known_for_department": "Directing",
+            "name": "Rajesh Ram Singh",
+            "original_name": "Rajesh Ram Singh",
+            "popularity": 0.1213,
+            "profile_path": null,
+            "credit_id": "5d29b25fbe4b3612f5a51b49",
+            "department": "Production",
+            "job": "Producer"
+          },
+          {
+            "adult": false,
+            "gender": 0,
+            "id": 1756263,
+            "known_for_department": "Writing",
+            "name": "Pradeep Kumar",
+            "original_name": "Pradeep Kumar",
+            "popularity": 0.0732,
+            "profile_path": null,
+            "credit_id": "5d29b294caab6d66599cdead",
+            "department": "Production",
+            "job": "Producer"
+          }
+        ]
+      },
+      "external_ids": {
+        "imdb_id": "tt10461426",
+        "freebase_mid": null,
+        "freebase_id": null,
+        "tvdb_id": 384733,
+        "tvrage_id": null,
+        "wikidata_id": "Q71631715",
+        "facebook_id": null,
+        "instagram_id": null,
+        "twitter_id": null
+      },
+      "keywords": {
+        "results": []
+      },
+      "videos": {
+        "results": []
+      },
+      "content_ratings": {
+        "results": []
+      },
+      "watch/providers": {
+        "results": {
+          "IN": {
+            "link": "https://www.themoviedb.org/tv/91073-choti-srdarni/watch?locale=IN",
+            "ads": [
+              {
+                "logo_path": "/ledoS6EgdjTNq8F1e6wubUQer18.png",
+                "provider_id": 2336,
+                "provider_name": "JioHotstar",
+                "display_priority": 6
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

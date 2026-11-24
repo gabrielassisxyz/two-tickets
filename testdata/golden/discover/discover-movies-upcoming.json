@@ -1,0 +1,438 @@
+{
+  "case": "discover-movies-upcoming",
+  "family": "discover",
+  "request": "GET /api/v1/discover/movies/upcoming?page=1",
+  "fixtures": [
+    "discover/movies-upcoming"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 150,
+    "totalResults": 2991,
+    "results": [
+      {
+        "id": 1003596,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Avengers: Doomsday",
+        "overview": "Heróis icônicos de três universos diferentes são colocados em rota de colisão mortal e enfrentam uma ameaça existencial sem precedentes, diferente de tudo que já vivenciaram antes.",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-16",
+        "title": "Vingadores: Doutor Destino",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/tXNt66khUBZcusc22INKCeGRr4l.jpg",
+        "posterPath": "/aSzeVbyyU65420A1646YfHcf6Zt.jpg"
+      },
+      {
+        "id": 1538497,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          16,
+          10751,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Hexed",
+        "overview": "Uma adolescente desajeitada e sua mãe perfeccionista descobrem que suas peculiaridades podem ser poderes mágicos, transformando suas vidas e revelando um reino mágico oculto.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-26",
+        "title": "Enfeitiçadas: Bem-vindos a Hexe",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/eMcrgrIyeAgMHS5R9LltDnuxB5R.jpg",
+        "posterPath": "/lhDdE2Uvis4Khtr1o366cAbnb57.jpg"
+      },
+      {
+        "id": 1170608,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Dune: Part Three",
+        "overview": "Na qualidade de Imperador, Paul Atreides debate-se com as consequências da sua ascensão ao poder, enquanto conspirações políticas e uma guerra santa que se estende por toda a galáxia ameaçam o futuro que só ele consegue prever.",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-15",
+        "title": "Duna: Parte Três",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/i5E9H7Ik0u61ylDDTbmUpTL3Yw.jpg",
+        "posterPath": "/8WBjwT8TBCt5PCFHjmBeb1St8BS.jpg"
+      },
+      {
+        "id": 1461490,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          18,
+          36,
+          10749
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Hershey",
+        "overview": "A história real de Milton e Kitty Hershey, que, diante de uma tragédia, decidem deixar sua fortuna acumulada através de chocolates nas mãos de crianças.",
+        "popularity": "<number>",
+        "releaseDate": "2027-01-21",
+        "title": "Hershey",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/mFAalGTR6PBJPPNbjVklMJ6OhSB.jpg",
+        "posterPath": "/ojd8Gu2bPsOzdMz6Ip5AYDu4Vki.jpg"
+      },
+      {
+        "id": 1384758,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          16,
+          10751,
+          35
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Ice Age: Boiling Point",
+        "overview": "Uma aventura alucinante repleta de dinossauros e lava, que leva Manny, Sid, Diego, Ellie, Scrat e o resto do bando pelas regiões inexploradas do perigoso Mundo Perdido.",
+        "popularity": "<number>",
+        "releaseDate": "2027-01-28",
+        "title": "A Era do Gelo: Mundo de Lava",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/pJfMliqzzVzTU634zpYDMfYNX6c.jpg",
+        "posterPath": "/lWjA97vk4kXhRF3ecGDEgVswz5p.jpg"
+      },
+      {
+        "id": 1457866,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          35,
+          18,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "THE FURTHER MIS-ADVENTURES OF CLIFF BOOTH",
+        "overview": "Oito anos após os eventos de “Era uma vez em… Hollywood”, Cliff Booth navega pelo sistema de estúdio em seu novo papel como um arrumador.",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-25",
+        "title": "As Novas Desventuras de Cliff Booth",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/qqPspJFy0XrEoVTKZdp0Em7kej6.jpg",
+        "posterPath": "/60KWghhG3I3bKNEPT2i7ak7GiVg.jpg"
+      },
+      {
+        "id": 1492198,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          36,
+          18,
+          35
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Artificial",
+        "overview": "Acompanhe a ascensão da OpenAI e a corrida tecnológica em torno da inteligência artificial ao longo de duas décadas. Após um avanço revolucionário do cientista Ilya Sutskever e do pioneiro Geoffrey Hinton atrair a elite do Vale do Silício, Ilya se une a Sam Altman, Elon Musk e Mira Murati para fundar a empresa. Quando a IA generativa se torna uma realidade poderosa e valiosa, Ilya precisa decidir em quem confiar o controle dessa tecnologia, travando uma batalha decisiva pelo futuro da humanidade.",
+        "popularity": "<number>",
+        "releaseDate": "2027-01-21",
+        "title": "Artificial",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/sTKpFaObARrgKXU3099qbBjLLod.jpg",
+        "posterPath": "/4QmPINfCQiUKnpi2ZJrpQGmMVY4.jpg"
+      },
+      {
+        "id": 1260649,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          35,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Jumanji: Open World",
+        "overview": "Nossos heróis já escaparam das selvas de Jumanji antes, mas desta vez o jogo vem até nós. Jumanji se liberta do console, liberando o caos em nosso mundo.",
+        "popularity": "<number>",
+        "releaseDate": "2027-01-07",
+        "title": "Jumanji: Mundo Real",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/vaYfhMuwFwsMqyMnu9amtS9hUHE.jpg",
+        "posterPath": "/AfkMmf0xkazKDgtFjN0mHcW4DYN.jpg"
+      },
+      {
+        "id": 1440769,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          80,
+          53
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Beekeeper 2",
+        "overview": "Agora um homem procurado, o ex-assassino do governo Adam Clay continua sua vingança contra aqueles que o prejudicaram.",
+        "popularity": "<number>",
+        "releaseDate": "2027-01-14",
+        "title": "Beekeeper 2: Sem Perdão",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/tKTCTuG63KFQD82M5fvQbfO4fra.jpg",
+        "posterPath": "/6qF4Z9sfP2rDsn8SBdLAiGEaRlQ.jpg"
+      },
+      {
+        "id": 1720486,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          35,
+          10751,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Lilo & Scratch",
+        "overview": "",
+        "popularity": "<number>",
+        "releaseDate": "2026-11-26",
+        "title": "Lilo & Scratch",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/iYivIgRjEbxsS3Jgt64k4zpCTyv.jpg",
+        "posterPath": "/4dtJOWyqKofHa6cAyv96lk5MkFs.jpg"
+      },
+      {
+        "id": 1078446,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          28,
+          35,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Violent Night 2",
+        "overview": "O Papai Noel se encontra preso em um shopping, em Nova Jersey, e isolado do Polo Norte. Ele precisa fazer justiça à sua maneira contra um implacável Senhor do Crime e seus capangas, que invadem o estabelecimento.",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-03",
+        "title": "Noite Ainda Mais Infeliz",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/78dChJs7doULSEhIiOvGUcXQRGU.jpg",
+        "posterPath": "/e2olETeXHDasOr30feVU7JCxFJN.jpg"
+      },
+      {
+        "id": 1300926,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          12,
+          16,
+          35,
+          10751
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Angry Birds Movie 3",
+        "overview": "Acompanhe Red em uma aventura inédita que se tornará a mais importante de sua vida. O pássaro mais irritado do mundo terá que lidar com a paternidade ao mesmo tempo em que faz de tudo para salvar o mundo.",
+        "popularity": "<number>",
+        "releaseDate": "2027-01-01",
+        "title": "Angry Birds 3: O Filme",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/ieAytQ8YcWEZGQpbBy7vHVddwd.jpg",
+        "posterPath": "/xiDH4CAZoyQTEjiCXdb5XYtLAGx.jpg"
+      },
+      {
+        "id": 1003598,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          878,
+          28,
+          12
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Avengers: Secret Wars",
+        "overview": "Futuro filme da fase 6 do Universo Cinematográfico Marvel (UCM) que marcará o final da Saga do Multiverso. Informações da história ainda não reveladas.",
+        "popularity": "<number>",
+        "releaseDate": "2027-12-16",
+        "title": "Vingadores: Guerras Secretas",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/iNeYAwCcp0k6ndRqejXr3ugb8Vi.jpg",
+        "posterPath": "/hZATmsUbsGN0ItDQ355u1qnjkUL.jpg"
+      },
+      {
+        "id": 1401586,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          35,
+          28,
+          10751,
+          878
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Sonic the Hedgehog 4",
+        "overview": "Sonic, acompanhado por uma nova heroína chamada Amy, enfrenta um novo inimigo tecnológico conhecido como Metal Sonic.",
+        "popularity": "<number>",
+        "releaseDate": "2027-03-18",
+        "title": "Sonic 4: O Filme",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/4Sh2c33WHf1KxX8UYuYLIroaVEv.jpg",
+        "posterPath": "/goS166oUlWRnMC766CLxeSCBLa.jpg"
+      },
+      {
+        "id": 1137888,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          14,
+          35,
+          10751,
+          28
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Man with the Bag",
+        "overview": "Quando o icônico saco vermelho do Papai Noel é roubado por uma elfa rebelde e rancorosa, o Natal de repente corre risco. Com a maior noite do ano se aproximando rapidamente, o Papai Noel, que marca seu retorno ao gênero natalino após 30 anos, recruta um ladrão de sua \"Lista de Travessos\" para ajudá-lo. O criminoso, chamado Vance, contará com a ajuda de sua filha, do próprio Papai Noel e de um grupo de desajustados com habilidades ilícitas (além de uma ajudinha de elfos e renas) para realizar o maior assalto de sua vida e recuperar o item mágico.",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-02",
+        "title": "Missão Resgate de Natal",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/pi8c5iEPamGFaZSnxaMSVSLhMlr.jpg",
+        "posterPath": "/qOpCG3suOQrqPFPjdKvJnG9N6La.jpg"
+      },
+      {
+        "id": 1391239,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          10402,
+          35,
+          18
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "The Debut",
+        "overview": "Quando Mona Friedman é escalada para um papel menor em um pequeno teatro comunitário, ela se transforma de uma dona de casa tímida e despretensiosa em uma fervorosa atriz do Método, disposta a qualquer coisa para proteger a integridade artística de seu personagem secundário — mesmo que isso signifique travar uma guerra contra o diretor dominador do espetáculo.",
+        "popularity": "<number>",
+        "releaseDate": "2027-01-28",
+        "title": "A Grande Estreia",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/nR3HoUX6zvO6PigYAFOBWjQoYUD.jpg",
+        "posterPath": "/kOrkuio6VQZdAuvRnMv4vOAz4RG.jpg"
+      },
+      {
+        "id": 1421903,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          27,
+          14
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Werwulf",
+        "overview": "Na Inglaterra medieval do século XIII, um homem enfrenta uma transformação corporal em lobisomem, lidando com as consequências sobrenaturais e os perigos da época.",
+        "popularity": "<number>",
+        "releaseDate": "2027-01-21",
+        "title": "Lobis-Homem",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/jmW9NkzbpI9vhyxJU2x644Nj7VU.jpg",
+        "posterPath": "/qAvCgWOCzBGnhHIEkaWBSxhEEEk.jpg"
+      },
+      {
+        "id": 1497464,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          16,
+          35,
+          80,
+          10751
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Gatto",
+        "overview": "Após anos navegando pela supersticiosa cidade repleta de canais, um gato preto chamado Nero começa a se questionar se viveu as vidas certas. Endividado com um chefe da máfia felina local, ele se vê em um grande dilema e é forçado a construir uma amizade verdadeiramente inesperada que pode, finalmente, levá-lo ao seu propósito — a menos que Veneza leve a melhor sobre ele primeiro.",
+        "popularity": "<number>",
+        "releaseDate": "2027-03-04",
+        "title": "Gatto",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/dJyNIzED9PPLraxEdKU5hGkXM0x.jpg",
+        "posterPath": "/jPBZQwaKBc49p1RS05z3vIk58SU.jpg"
+      },
+      {
+        "id": 1452168,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          10402,
+          18
+        ],
+        "originalLanguage": "en",
+        "originalTitle": "Behemoth!",
+        "overview": "Alex Serian é um violoncelista talentoso que retorna a Los Angeles após passar duas décadas viajando pelo mundo. Ao revisitar o passado e redescobrir sua conexão com a arte que o guiou a vida toda, ele embarca em uma jornada de autoconhecimento que promete mudar sua forma de enxergar a si mesmo e o mundo.",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-03",
+        "title": "Behemoth! Uma Vida Composta em Peças",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/b3YTMlknqSqJVV7I45kIQNVzErs.jpg",
+        "posterPath": "/uJga2NnCFaRldcFluPlVu5SsgxK.jpg"
+      },
+      {
+        "id": 1301248,
+        "mediaType": "movie",
+        "adult": false,
+        "genreIds": [
+          35
+        ],
+        "originalLanguage": "tr",
+        "originalTitle": "2 Aile Arasında",
+        "overview": "",
+        "popularity": "<number>",
+        "releaseDate": "2026-12-03",
+        "title": "2 Aile Arasında",
+        "video": false,
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/gYuPvxBneOTDpGaani5mVNMwcPt.jpg",
+        "posterPath": "/tRiQj2PDSbpt01O3BD7zgPFZZFn.jpg"
+      }
+    ]
+  }
+}

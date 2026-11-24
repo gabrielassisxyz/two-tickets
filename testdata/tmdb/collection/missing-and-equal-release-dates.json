@@ -1,0 +1,110 @@
+{
+  "id": "collection/missing-and-equal-release-dates",
+  "request": {
+    "path": "/collection/2344",
+    "params": {
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "id": 2344,
+      "name": "Matrix: Coleção",
+      "original_language": "en",
+      "original_name": "The Matrix Collection",
+      "overview": "Thomas A. Anderson vive uma vida dupla. De dia, é um programador para uma companhia de software. De noite é um hacker, invadindo sistemas de computador ilegalmente e roubando informações, sob o apelido de Neo. Durante a sua vida como pirata informático, Neo cruza-se com uma pergunta constante: \"O que é a Matrix?\". Na busca da resposta, dedica-se de forma persistente a encontrar um suposto \"terrorista\" conhecido apenas como Morpheus. O que Neo não sabe é que o Morpheus o tem observado por um longo período de tempo.",
+      "poster_path": "/kP1M00dSffxGqzXir9ITgaSNxcK.jpg",
+      "backdrop_path": "/bRm2DEgUiYciDw3myHuYFInD7la.jpg",
+      "parts": [
+        {
+          "adult": false,
+          "backdrop_path": "/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
+          "genre_ids": [
+            28,
+            878
+          ],
+          "id": 603,
+          "title": "Matrix",
+          "original_language": "en",
+          "original_title": "The Matrix",
+          "overview": "O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a desconfiar da realidade. Thomas conhece os misteriosos Morpheus e Trinity e descobre que é vítima de um sistema inteligente e artificial chamado Matrix, que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia.",
+          "popularity": 40.3135,
+          "poster_path": "/lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg",
+          "release_date": "1999-03-31",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.264,
+          "vote_count": 29330,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ihOJcrorpDQtHTzIOrobbOhpJsj.jpg",
+          "genre_ids": [
+            28,
+            53,
+            878
+          ],
+          "id": 604,
+          "title": "Matrix Reloaded",
+          "original_language": "en",
+          "original_title": "The Matrix Reloaded",
+          "overview": "Após derrotar as máquinas em seu combate inicial, Neo ainda vive na Nabucodonosor ao lado de Morpheus, Trinity e Link, o novo tripulante da nave. As máquinas estão realizando uma grande ofensiva contra Zion, onde 250 mil delas escavam rumo à cidade e podem alcançá-la em poucos dias. A Nabucodonosor é convocada para retornar a Zion e participar da reunião que definirá o contra-ataque para salvar a humanidade da extinção. Entretanto, um recado enviado pelo Oráculo faz com que Neo retorne à Matrix.",
+          "popularity": 15.2477,
+          "poster_path": "/ayZkaN2f3ASjWW8ooCfuJT3T8Va.jpg",
+          "release_date": "2003-05-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.088,
+          "vote_count": 12579,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/533xAMhhVyjTy8hwMUFEt5TuDfR.jpg",
+          "genre_ids": [
+            28,
+            53,
+            878
+          ],
+          "id": 605,
+          "title": "Matrix Revolutions",
+          "original_language": "en",
+          "original_title": "The Matrix Revolutions",
+          "overview": "Após enfrentar os sentinelas no mundo real, Neo, a maior esperança da humanidade, está preso entre a Matrix e a realidade. A maioria da população do planeta permanece em um estado de suspensão da realidade virtual. Os poucos humanos que estão cientes das duras realidades tentam desesperadamente afastar as máquinas a tempo de Neo escapar e salvar o dia. Mas as coisas pioram quando o poderoso programa de computador, Agente Smith, aparece na forma humana.",
+          "popularity": 11.3179,
+          "poster_path": "/92oJ810bYqijBQ8tqYL74mSpPtV.jpg",
+          "release_date": "2003-05-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.765,
+          "vote_count": 11359,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/eNI7PtK6DEYgZmHWP9gQNuff8pv.jpg",
+          "genre_ids": [
+            878,
+            28,
+            12
+          ],
+          "id": 624860,
+          "title": "Matrix Resurrections",
+          "original_language": "en",
+          "original_title": "The Matrix Resurrections",
+          "overview": "Em um mundo de duas realidades — a vida cotidiana e o que está por trás dela —, Thomas Anderson terá que escolher seguir o coelho branco mais uma vez. A escolha, embora seja uma ilusão, ainda é a única maneira de entrar ou sair da Matrix, que é mais forte, mais segura e mais perigosa do que nunca.",
+          "popularity": 10.1746,
+          "poster_path": "/9DT4WVqZqBEI9Kub18gZ3m1D89m.jpg",
+          "release_date": "",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.297,
+          "vote_count": 6892,
+          "media_type": "movie"
+        }
+      ]
+    }
+  }
+}

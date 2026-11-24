@@ -1,0 +1,468 @@
+{
+  "case": "discover-tv-language",
+  "family": "discover",
+  "request": "GET /api/v1/discover/tv/language/ja?page=1",
+  "fixtures": [
+    "configuration/languages",
+    "discover/tv-language-ja"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 836,
+    "totalResults": 16715,
+    "language": {
+      "iso_639_1": "ja",
+      "english_name": "Japanese",
+      "name": "日本語"
+    },
+    "results": [
+      {
+        "id": 60572,
+        "firstAirDate": "1997-04-01",
+        "genreIds": [
+          16,
+          10759,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Pokémon",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ポケットモンスター",
+        "overview": "Explore o mundo de Pokémon com Ash Ketchum e seu parceiro Pikachu enquanto eles fazem novos amigos, encontram Pokémon poderosos e buscam o objetivo supremo de Ash: Tornar-se um Mestre Pokémon!",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/yYpQV25I7XB6S0POJOScPjxYWV5.jpg",
+        "posterPath": "/ck1nfqYxMkiGvBVztIuM6b7fHoC.jpg"
+      },
+      {
+        "id": 65733,
+        "firstAirDate": "2005-04-22",
+        "genreIds": [
+          10759,
+          16,
+          35,
+          10765,
+          10762,
+          10751
+        ],
+        "mediaType": "tv",
+        "name": "Doraemon: O Gato do Futuro",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ドラえもん",
+        "overview": "A série é sobre um gato robótico chamado Doraemon que voltou dois séculos no passado para ajudar um estudante: Nobita Nobi.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/c2oiRa7V3bQzof4wVGzLXtWJ5QU.jpg",
+        "posterPath": "/jzd80ryL0kTBgvXVLeh01cJdNFv.jpg"
+      },
+      {
+        "id": 37854,
+        "firstAirDate": "1999-10-20",
+        "genreIds": [
+          10759,
+          35,
+          16
+        ],
+        "mediaType": "tv",
+        "name": "One Piece",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ワンピース",
+        "overview": "Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger. Capturado e condenado à execução pelo Governo Mundial, suas últimas palavras lançaram legiões aos mares. \"Meu tesouro? Se quiserem, podem pegá-lo. Procurem-no! Ele contém tudo que este mundo pode oferecer!\". Foi a revelação do maior tesouro, o One Piece, cobiçado por homens de todo o mundo, sonhando com fama e riqueza imensuráveis... Assim começou a Grande Era dos Piratas!",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
+        "posterPath": "/9ltisibeD4gzqjM1AzmQwCdyirQ.jpg"
+      },
+      {
+        "id": 2661,
+        "firstAirDate": "1971-04-03",
+        "genreIds": [
+          10759,
+          10765,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Kamen Rider",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "仮面ライダー",
+        "overview": "Uma longa série japonesa que gira um volta de diferentes grupos de pessoas que podem se transformar em super-heróis com temáticas variadas e que geralmente pilotam uma moto.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/usLRh1bcbL0Q9X8zf6rL4OV1qrA.jpg",
+        "posterPath": "/fIJNVBa6MJStPiOvhLV69nAdu0e.jpg"
+      },
+      {
+        "id": 57775,
+        "firstAirDate": "1990-01-07",
+        "genreIds": [
+          16,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Chibi Maruko-chan",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ちびまる子ちゃん",
+        "overview": "Maruko Sakura é uma jovem estudante do ensino fundamental que cresceu com seus pais, avós e irmã mais velha nesta série animada baseada na infância do produtor nos anos 60. À medida que Maruko cresce e aprende os caminhos do mundo, ela e seus amigos se metem em uma variedade de situações, mas com a engenhosidade de Maruko (e a ajuda de seu avô) eles geralmente encontram seu caminho.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/vuajwjep1FxphPhMEWKv4bfrCnf.jpg",
+        "posterPath": "/auruoMM9a9c4diotHvI5v7dKFbF.jpg"
+      },
+      {
+        "id": 34860,
+        "firstAirDate": "1993-04-10",
+        "genreIds": [
+          35,
+          10759,
+          10762,
+          16,
+          10751
+        ],
+        "mediaType": "tv",
+        "name": "忍たま乱太郎",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "忍たま乱太郎",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/4fVwc77cov2q9i0szzYhlkAaqza.jpg",
+        "posterPath": "/fzNiSp0HhCthOTYu9IYWlPPa7fU.jpg"
+      },
+      {
+        "id": 30983,
+        "firstAirDate": "1996-01-08",
+        "genreIds": [
+          16,
+          80,
+          9648,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Detetive Conan",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "名探偵コナン",
+        "overview": "Transformado em criança por uma substância misteriosa, o detetive adolescente Conan ajuda na solução de crimes complexos enquanto persegue os vilões que o envenenaram.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/z67lpMtm8YGykJO4p89meuNMvj8.jpg",
+        "posterPath": "/gW14n6xxONXrya8CIDhRe5Ada7U.jpg"
+      },
+      {
+        "id": 30984,
+        "firstAirDate": "2004-10-05",
+        "genreIds": [
+          10759,
+          16,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Bleach",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "BLEACH",
+        "overview": "Ichigo Kurosaki, um adolescente de quinze anos, nunca pediu o dom de ver fantasmas — ele simplesmente nasceu com essa habilidade. Quando sua família é atacada por um Hollow, uma alma perdida e maligna, Ichigo conhece Rukia, uma Ceifeira de Almas que acaba lhe transferindo seus poderes. A partir desse momento, Ichigo passa a dedicar sua vida a proteger os inocentes e ajudar almas atormentadas a encontrar a paz.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/o0NsbcIvsllg6CJX0FBFY8wWbsn.jpg",
+        "posterPath": "/dx28DE7EgLy0FatOvnaUg0k9j92.jpg"
+      },
+      {
+        "id": 45790,
+        "firstAirDate": "2012-10-06",
+        "genreIds": [
+          16,
+          10759,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "JoJo's Bizarre Adventure",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ジョジョの奇妙な冒険",
+        "overview": "A saga que se inicia na Inglaterra do século XIX, contando a rivalidade entre Jonathan Joestar, um jovem aristocrata, e Dio Brando, um garoto plebeu que foi acolhido pelo pai de Jonathan quando tornou-se órfão. Insatisfeito com sua posição social, a ambição insaciável e o desejo de dominação de Dio o levam a estudar os poderes sobrenaturais de uma antiga máscara asteca de pedra presente na mansão dos Joestar - um artefato que mudará para sempre o destino de Dio e das futuras gerações dos Joestar.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/l2gc2dPRUPe3bAfYCRTjc6uAMmB.jpg",
+        "posterPath": "/2Sc0veFPh9CcHMtNqMyiQqIW9ZF.jpg"
+      },
+      {
+        "id": 57911,
+        "firstAirDate": "1979-04-02",
+        "genreIds": [
+          10759,
+          16,
+          35,
+          10765,
+          10762,
+          10751
+        ],
+        "mediaType": "tv",
+        "name": "Doraemon",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ドラえもん",
+        "overview": "Doraemon é uma série de TV de anime criada por Fujiko F. Fujio e baseada na série de mangá de mesmo nome. Este anime é o sucessor muito mais bem-sucedido do anime de 1973.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/6oVBODwFvbDJczBFlf4J930jKZg.jpg",
+        "posterPath": "/bbn4QLcJfITlAEa0nJDPntsdOgz.jpg"
+      },
+      {
+        "id": 67192,
+        "firstAirDate": "1972-03-06",
+        "genreIds": [
+          18
+        ],
+        "mediaType": "tv",
+        "name": "New Japan Pro Wrestling",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "New Japan Pro Wrestling",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/zcQRmnySOmVqT6WRmdztbiA9vVk.jpg",
+        "posterPath": "/c6IZc3avqSgTzSXrrj9vV0EwRp.jpg"
+      },
+      {
+        "id": 40663,
+        "firstAirDate": "2002-10-09",
+        "genreIds": [
+          18,
+          80,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "AIBOU: Tokyo Detective Duo",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "相棒",
+        "overview": "O detetive Ukyo Sugishita é um profissional que enfrenta crimes com base em suas próprias convicções e trabalha em uma unidade especial. Ele teve vários parceiros ao longo das temporadas de sua série de TV, incluindo Kaoru Kameyama, Takeru Kanbe, Toru Kai e Wataru Kaburagi. Cada um desses parceiros possui características e traços de personalidade únicos. A partir da 14ª temporada, Kaburagi é o parceiro atual de Ukyo e é um burocrata que veio para a polícia metropolitana temporariamente. Ele é o primeiro parceiro de Ukyo que não tem experiência como policial e juntos eles enfrentarão casos desafiadores.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/xkRI8RfjnMTDn8d9otLYneMzsJx.jpg",
+        "posterPath": "/lahVy2ZYCDrVc5Rhgj1qqq4WIau.jpg"
+      },
+      {
+        "id": 220542,
+        "firstAirDate": "2023-10-22",
+        "genreIds": [
+          16,
+          9648,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Diários de uma Apotecária",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "薬屋のひとりごと",
+        "overview": "Maomao levava uma vida tranquila ao lado de seu pai, um boticário renomado. No entanto, sua vida muda da noite pro dia quando ela é vendida como uma simples serva no palácio do imperador. Incapaz de se adaptar à vida na realeza, Maomao decide tomar medidas drásticas quando os herdeiros imperiais adoecem, embarcando numa missão para encontrar a cura. Sua audácia chama a atenção de Jinshi, um belo funcionário do palácio que decide apoiá-la. Agora, Maomao se envolve em intrigas médicas enquanto sua fama se espalha pelos corredores do palácio!",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/gffVOVZ2Y9cmVIZ26Gt9ByMGCYH.jpg",
+        "posterPath": "/t8fC3K3XnwE6Iso6b1bi5Fdo93n.jpg"
+      },
+      {
+        "id": 12971,
+        "firstAirDate": "1989-04-26",
+        "genreIds": [
+          16,
+          10765,
+          10759
+        ],
+        "mediaType": "tv",
+        "name": "Dragon Ball Z",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ドラゴンボールゼット",
+        "overview": "Cinco anos após vencer o Torneio Mundial de Artes Marciais, Goku vive uma vida tranquila com sua esposa e seu filho. No entanto, essa situação muda com a chegada de um inimigo misterioso chamado Raditz, que se apresenta como o irmão de Goku, há muito desaparecido. Ele revela que Goku é descendente da raça Saiyajin — outrora poderosa, mas agora praticamente extinta —, cujo planeta natal foi aniquilado. Quando foi enviado à Terra ainda bebê, o único objetivo de Goku era conquistar e destruir o planeta; porém, após sofrer amnésia devido a um ferimento na cabeça, sua natureza violenta e selvagem mudou, e ele acabou sendo criado como um garoto gentil e educado, passando a lutar para proteger os outros.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/ydf1CeiBLfdxiyNTpskM0802TKl.jpg",
+        "posterPath": "/kbkuYkaFsDwL6cyMgnBf77LczEo.jpg"
+      },
+      {
+        "id": 95479,
+        "firstAirDate": "2020-10-03",
+        "genreIds": [
+          16,
+          10765,
+          10759
+        ],
+        "mediaType": "tv",
+        "name": "Jujutsu Kaisen",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "呪術廻戦",
+        "overview": "Sofrimento, arrependimento, vergonha: os sentimentos negativos dos humanos tornam-se Maldições, causando terríveis acidentes que podem levar até mesmo à morte. E pra piorar, Maldições só podem ser exorcizadas por outras Maldições. Certo dia, para salvar amigos que estavam sendo atacados por Maldições, Yuji Itadori engole o dedo do Ryomen-Sukuna, absorvendo sua Maldição. Ele então decide se matricular no Colégio Técnico de Feitiçaria de Tóquio, uma organização que combate as Maldições... e assim começa a heróica lenda do garoto que tornou-se uma Maldição para exorcizar uma Maldição.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/gmECX1DvFgdUPjtio2zaL8BPYPu.jpg",
+        "posterPath": "/8R1mMSC1gX1cg5ed7ns49JOEqw3.jpg"
+      },
+      {
+        "id": 312359,
+        "firstAirDate": "2026-10-11",
+        "genreIds": [
+          16,
+          10759,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Dragon Ball Super: Beerus",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ドラゴンボール超 ビルス",
+        "overview": "Anos após a feroz batalha contra Majin Boo, a Terra recupera uma breve paz. Simultaneamente, Bills, o Deus da Destruição, desperta de seu longo sono. Cientes de seu poder avassalador para destruir planetas, Sr. Kaioh e Kaiohshin observam seu retorno com grande temor.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/8phLVFEXOe02JgFmH9ldn3j4tXW.jpg",
+        "posterPath": "/w5ai45092PIlV1Vbt7kswry2C03.jpg"
+      },
+      {
+        "id": 9537,
+        "firstAirDate": "2002-04-19",
+        "genreIds": [
+          16,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "あたしンち",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "あたしンち",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/j6jHIjnyCT5YwxEKu7c8e7DS57V.jpg",
+        "posterPath": "/bQCZvbyTJFWt3majCn37ykJBpIf.jpg"
+      },
+      {
+        "id": 31910,
+        "firstAirDate": "2007-02-15",
+        "genreIds": [
+          16,
+          10759,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Naruto Shippuden",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ナルト 疾風伝",
+        "overview": "Naruto Shippuden ocorre 2 anos e meio após Naruto ter deixado a vila para treinar com Jiraiya. Após seu retorno, Naruto descobre que seus amigos  shinobi's o superaram na classificação, e ele caiu para trás. No  entanto, com apenas 6 meses para resgatar Sasuke, Naruto tem de  enfrentar inimigos ainda mais perigosos. O plano da Akatsuki se revela  lentamente e os perigos surgem mais do que nunca!",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/z0YhJvomqedHF85bplUJEotkN5l.jpg",
+        "posterPath": "/nRJmByfK9XdtOY73VArcN8KpKVs.jpg"
+      },
+      {
+        "id": 46260,
+        "firstAirDate": "2002-10-03",
+        "genreIds": [
+          16,
+          10759,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Naruto",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ナルト",
+        "overview": "Momentos antes do nascimento de Naruto Uzumaki, um enorme demônio conhecido como o Kyuubi, a Raposa de Nove Caudas, atacou o vilarejo da folha oculta Konoha, causando destruição. Para pôr fim à devastação de Kyuubi, o líder da aldeia, o quarto Hokage, sacrificou sua vida e selou o monstruoso animal dentro do recém-nascido Naruto. Agora, Naruto é um ninja hiperativo e cabeça dura que ainda vivem em Konoha. Evitado pelos demais habitantes por causa da Kyuubi dentro dele, Naruto se esforça para encontrar seu lugar na aldeia, enquanto o seu ardente desejo de se tornar o Hokage de Konoha o leva a conhecer alguns grandes novos amigos, e também alguns inimigos mortais.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/5F0HVEgkgP99fEWDjPyikGt9jQi.jpg",
+        "posterPath": "/9ptbVZpKNy5NY9D4zq4KGiYWRQY.jpg"
+      },
+      {
+        "id": 65942,
+        "firstAirDate": "2016-04-04",
+        "genreIds": [
+          16,
+          9648,
+          10759,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Re:Zero - Começando uma Vida em Outro Mundo",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "Re:ゼロから始める異世界生活",
+        "overview": "Natsuki Subaru, um adolescente comum, conhece uma linda garota de cabelos prateados vinda de outro mundo. Subaru quer ficar ao lado dela, mas o fardo que ela carrega é maior do que Subaru pode imaginar. Eles enfrentam o feroz ataque de monstros, traições, violência irracional... e, por fim, a morte. Subaru promete derrotar qualquer inimigo, qualquer destino, tudo para protegê-la. E assim, o pobre garoto sem poder algum obtém o \"Retorno da Morte\", uma habilidade única que permite ao usuário voltar no tempo ao morrer. Usando esse poder, o passado é perdido e as memórias são reescritas.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/7ZruEnSnHD6Jx5mF0hBt1E306Vt.jpg",
+        "posterPath": "/2FvWqbgJDG2IWGgUxhROYQxE98p.jpg"
+      }
+    ]
+  }
+}

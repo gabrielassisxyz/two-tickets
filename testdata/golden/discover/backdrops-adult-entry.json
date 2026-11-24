@@ -1,0 +1,31 @@
+{
+  "case": "backdrops-adult-entry",
+  "family": "discover",
+  "request": "GET /api/v1/backdrops",
+  "fixtures": [
+    "trending/all-week-adult"
+  ],
+  "status": 200,
+  "body": [
+    "/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+    "/c7btGYblBnfAaw713WvFM0Kimc7.jpg",
+    "/tXNt66khUBZcusc22INKCeGRr4l.jpg",
+    "/subj7knTn4DeS6KS7qI66EQKe9i.jpg",
+    "/g1bEboMx1a8JCg1jXeDCh24RtgW.jpg",
+    "/i1phX1JpaqSnHBBGta6LBFYVCZq.jpg",
+    "/wXTaGcqX3jvdXSKCJAkl5jZyrKp.jpg",
+    "/lRsapglJZIyMfGl8oQyNASlZqDC.jpg",
+    "/x6kwEsxxqLIoqpIrZOXRV0LORqm.jpg",
+    "/h0OC7ouop8YLwbAVfS3UUE2Lw4T.jpg",
+    "/qHvap0vpfTBIbv7cnR0OyBRqQHG.jpg",
+    "/hYJqUoXRZnodGxgVZTM8uwr5kbC.jpg",
+    "/7ojpD6ARKYhRxnsjzMIrorOfj4T.jpg",
+    "/r5RYEmZzm1Z6imS7XfiKPnMlyc7.jpg",
+    "/uoXXbN2PrOxH6UKyP7kYwmGpAAP.jpg",
+    "/oqrYIDH4tvfEzPe1yqT4jzmAWHQ.jpg",
+    "/dLIKNqBi9L1cVbwuniXkaNOsIXg.jpg",
+    "/mdBElS5YjpZPkB9DNYjgxwWgXcv.jpg",
+    "/b3EGc5Ucj7wIeUjFc64Wq4IYgkp.jpg",
+    "/3icyRAqgakNcQn6aDVz9libFmBA.jpg"
+  ]
+}

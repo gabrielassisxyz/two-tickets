@@ -1,0 +1,403 @@
+{
+  "id": "search/year-prefix-movies",
+  "request": {
+    "path": "/search/movie",
+    "params": {
+      "include_adult": "false",
+      "language": "en",
+      "page": "1",
+      "primary_release_year": "1994",
+      "query": "friends "
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "page": 1,
+      "results": [
+        {
+          "adult": false,
+          "backdrop_path": "/uGbO4p5vEuMFyoxLwcnQZdvfoil.jpg",
+          "genre_ids": [
+            18
+          ],
+          "id": 115786,
+          "title": "The Friends",
+          "original_language": "ja",
+          "original_title": "夏の庭 The Friends",
+          "overview": "A delightful and moving coming-of-age story. One summer, three young boys take an increasing interest in an eccentric old man who lives alone in a house surrounded by an overgrown garden. The boys form a bond with the recluse and set about weeding and replanting the garden.",
+          "popularity": 1.57,
+          "poster_path": "/70K0yVXeenU1Ukan4AZ5TuevL3p.jpg",
+          "release_date": "1994-03-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.036,
+          "vote_count": 28
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/38sgZ5vJSCeIRZo7NLGhCZaXQ8O.jpg",
+          "genre_ids": [
+            18
+          ],
+          "id": 196924,
+          "title": "Friends",
+          "original_language": "en",
+          "original_title": "Friends",
+          "overview": "The beginning of the end of the apartheid era in South Africa is seen through the perspectives of three female friends: Sophie, who is of English descent; Aninka, who is an Afrikaner; and Thoko, who is black.",
+          "popularity": 0.2922,
+          "poster_path": "/dZB6ny9nGD56crinf4hfeVFTZ2E.jpg",
+          "release_date": "1994-01-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.6,
+          "vote_count": 26
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            18,
+            10402
+          ],
+          "id": 285484,
+          "title": "Just Friends",
+          "original_language": "en",
+          "original_title": "Just Friends",
+          "overview": "Jack has a tenor saxophone and he plays jazz. In the 1950s, in the Belgian harbor town Antwerp, there is not a lot off future for a jazz musician. Jack and his band try to earn a living by playing at weddings and the odd tea party, usually resulting in mixed emotions and hilarious scenes. Most of the time, he earns a living by unloading bananas in the Antwerp docks. Jack is convinced that New York is the place to be for a jazz musician, but where will he get the money for the big trip? And what is more important: a woman or a saxophone?",
+          "popularity": 0.1622,
+          "poster_path": "/h4DNEgZRicTLriH18TImZEOouKl.jpg",
+          "release_date": "1994-08-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 4.5,
+          "vote_count": 4
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/we503USJZaRUNxz20c5zwHBLac0.jpg",
+          "genre_ids": [
+            35,
+            18
+          ],
+          "id": 64822,
+          "title": "Dear Goddamned Friends",
+          "original_language": "it",
+          "original_title": "Cari fottutissimi amici",
+          "overview": "In 1944 Tuscany, a group of boxers struggling through World War II stages rigged matches to earn money and travel, accompanied by a missing black American soldier and a girl resisting marriage, as they navigate the challenges of their war-torn world.",
+          "popularity": 0.5286,
+          "poster_path": "/5LlGU2hppgQPo4Oc0CJ8OeLyQ3i.jpg",
+          "release_date": "1994-03-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.8,
+          "vote_count": 67
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            18
+          ],
+          "id": 1564626,
+          "title": "Between Friends",
+          "original_language": "en",
+          "original_title": "Between Friends",
+          "overview": "After finding out he's HIV Positive, Paul confides in Jack, his best friend, who, in turn, tells the rest of their friends. Things get emotional when Karen, one of Paul's past love interests, hears the news and, concerned about her life, confronts him.",
+          "popularity": 0.0868,
+          "poster_path": null,
+          "release_date": "1994-10-21",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            53,
+            10770
+          ],
+          "id": 266324,
+          "title": "Murder Between Friends",
+          "original_language": "en",
+          "original_title": "Murder Between Friends",
+          "overview": "True story about two friends become involved in murder when the wife of one of them begins cheating on her spouse.",
+          "popularity": 0.3987,
+          "poster_path": "/6pE2v0MPiSdB7vcCzbOUJWqQNvA.jpg",
+          "release_date": "1994-01-10",
+          "softcore": false,
+          "video": false,
+          "vote_average": 10,
+          "vote_count": 1
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            10402
+          ],
+          "id": 339601,
+          "title": "Pavarotti & Friends 2",
+          "original_language": "en",
+          "original_title": "Pavarotti & Friends 2",
+          "overview": "Pavarotti & Friends was a series of benefit concerts hosted by Italian operatic tenor Luciano Pavarotti between 1992 and 2003 in his home town of Modena, Italy. Proceeds from the events were donated to humanitarian causes including the international aid agency War Child and the United Nations High Commissioner for Refugees.  Pavarotti & Friends 2 took place on September 13, 1994, and featured guest performances by Bryan Adams, Andreas Vollenweider, Nancy Gustafson, Giorgia and Andrea Bocelli.",
+          "popularity": 0.3849,
+          "poster_path": "/zuZkhAvYYI2KqhP7ZstKGtn3e2Z.jpg",
+          "release_date": "1994-09-13",
+          "softcore": false,
+          "video": true,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/3tWYZW0jy2IYfRKhjgKJDHmES5Q.jpg",
+          "genre_ids": [
+            9648,
+            80,
+            12,
+            10770
+          ],
+          "id": 269699,
+          "title": "Hart to Hart: Old Friends Never Die",
+          "original_language": "en",
+          "original_title": "Hart to Hart: Old Friends Never Die",
+          "overview": "The Harts find themselves in the middle of a dangerous murder plot, but it isn't clear if the plot it a famous author's fictional murder-mystery, or an actual murder plot, until Jonathan finds himself the unsuspecting target of a killer. It begins to look like the culprit behind the plot is an old friend, Frank Crane, but there may be a connection to a corporate takeover of Hart Industries as well.",
+          "popularity": 0.8003,
+          "poster_path": "/b3X5lkRJdeThJRd2w4RpEjUK1qY.jpg",
+          "release_date": "1994-05-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.8,
+          "vote_count": 13
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [],
+          "id": 578868,
+          "title": "My Best Friends Too",
+          "original_language": "en",
+          "original_title": "My Best Friends Too",
+          "overview": "My Best Friends Too is a UK VHS release by National Children's Home on 1st August 1994.",
+          "popularity": 0.0025,
+          "poster_path": "/53Ey4gHoIL8WY4SV3HFaniLXxbC.jpg",
+          "release_date": "1994-08-01",
+          "softcore": false,
+          "video": true,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/gBWVipiGCkAk6tFyhmFn5OrtkL8.jpg",
+          "genre_ids": [
+            10402
+          ],
+          "id": 1330088,
+          "title": "Paul Rodgers And Friends - Live At Montreux",
+          "original_language": "en",
+          "original_title": "Paul Rodgers And Friends - Live At Montreux",
+          "overview": "In 1993, Paul Rodgers released the acclaimed blues based album Muddy Water Blues (now available on Eagle Records) with contributions from many special guest artists with a shared love for the blues. In July 1994 the tour in support of this album rolled into Montreux. The regular tour band was joined through the evening by a number of special guests to create a typically unique Montreux festival performance including an amazing finale of Hoochie Coochie Man where all the guests join in. As well as tracks from the Muddy Water Blues album there are all the classic tracks that you would expect from across Paul Rodgers highly successful career.",
+          "popularity": 0.545,
+          "poster_path": "/fSbTpZb9kSHx8AQ7H147RjNGgb1.jpg",
+          "release_date": "1994-06-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/aNnY7sRTDqcV9YlT4PuLZVmgdgC.jpg",
+          "genre_ids": [
+            10751
+          ],
+          "id": 1423454,
+          "title": "Thomas & Friends: Thomas' Christmas Party and Other Favorite Stories",
+          "original_language": "en",
+          "original_title": "Thomas & Friends: Thomas' Christmas Party and Other Favorite Stories",
+          "overview": "PEEP! PEEP! Sir Topham Hatt has a wish for you, \"Enjoy the Holiday series, and our eight jolly adventures too!\"  The Island of Sodor is covered with snow including Mrs. Kindly's home. Will someone rescue Mrs. Kindly in time for Sir Topham Hatt's Christmas Party? With a peep and a whistle, and a puff of steam, Thomas is missing with the Christmas Tree. Thomas ends up in a muddle with snow up to his funnel, and Terence the Tractor helps save the day. So join your favorite friends on the Island of Sodor for a winter wonderland of play.",
+          "popularity": 0.5881,
+          "poster_path": "/6tYAXkFZgl0XI50VUngLAK02sCA.jpg",
+          "release_date": "1994-09-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ltFnqz09hCUx0f5QUQdt9xtyF7M.jpg",
+          "genre_ids": [
+            10751
+          ],
+          "id": 285690,
+          "title": "Thomas & Friends: James Goes Buzz Buzz and Other Thomas Stories",
+          "original_language": "en",
+          "original_title": "Thomas & Friends: James Goes Buzz Buzz and Other Thomas Stories",
+          "overview": "James boasts about his bravery but, when a swarm of bees start buzzing around him he wishes that they would get back to making honey and leave him to make steam. See what happens when Bill and Ben have trouble on the turntable and end up face to face. Climb aboard as we clear the way for trainloads of fun.",
+          "popularity": 0.5156,
+          "poster_path": "/af0LG4QnGO9cjZxciMjgfAysRYC.jpg",
+          "release_date": "1994-02-23",
+          "softcore": false,
+          "video": true,
+          "vote_average": 8,
+          "vote_count": 2
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/yeEOAfM6QDDdfYWljblaEVkjYLf.jpg",
+          "genre_ids": [],
+          "id": 1755706,
+          "title": "Thomas & Friends: Thomas Gets Bumped and 17 Other Stories",
+          "original_language": "en",
+          "original_title": "Thomas & Friends: Thomas Gets Bumped and 17 Other Stories",
+          "overview": "Thomas is needlessly jealous when Bertie helps out.",
+          "popularity": 0.4411,
+          "poster_path": "/nEUKpNBVAuAkVioFt6hCUhcSWmd.jpg",
+          "release_date": "1994-03-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            18
+          ],
+          "id": 1677950,
+          "title": "The Adventures of Four Friends 4",
+          "original_language": "ru",
+          "original_title": "Жизнь и приключения четырех друзей 4",
+          "overview": "The bag with the money is being searched not only by Semaphore the cat, but also by riot police with dogs, local boys and, of course, the \"locksmith\" thief. But Nikita discovers the bag. The police catch him red-handed at the entrance of his house and imprison him. Four-legged friends are doing everything possible and impossible to free their beloved master.",
+          "popularity": 0.1458,
+          "poster_path": null,
+          "release_date": "1994-04-24",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/5NtvQG9kMBZSqDvNllMMPfYC8RY.jpg",
+          "genre_ids": [],
+          "id": 1755717,
+          "title": "Thomas & Friends: Rock 'n' Roll and Other Stories",
+          "original_language": "en",
+          "original_title": "Thomas & Friends: Rock 'n' Roll and Other Stories",
+          "overview": "Rusty has been working on the line while Skarloey was away at the menders. Duncan ignores Rusty's warning about a broken section of line and he is soon rocking 'n' rolling along the rails!",
+          "popularity": 0.321,
+          "poster_path": "/3xd2L1ilywkOE9BksLicljn8fP.jpg",
+          "release_date": "1994-11-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/oN33PhqJFNZAWfyRBavxZNXOHZZ.jpg",
+          "genre_ids": [],
+          "id": 1755713,
+          "title": "Thomas & Friends: Thomas Comes to Breakfast and Other Stories",
+          "original_language": "en",
+          "original_title": "Thomas & Friends: Thomas Comes to Breakfast and Other Stories",
+          "overview": "Thomas shows off to Percy and Toby and finds himself an unwelcome guest in the Stationmaster's house.",
+          "popularity": 0.2874,
+          "poster_path": "/4H32RO0ViGJd1koY4tZ8ESLMTGE.jpg",
+          "release_date": "1994-10-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/viLIVqDzK57NpfmlKhy2dFDzBsl.jpg",
+          "genre_ids": [
+            10751
+          ],
+          "id": 385105,
+          "title": "Thomas & Friends: Percy's Ghostly Trick and Other Thomas Stories",
+          "original_language": "en",
+          "original_title": "Thomas & Friends: Percy's Ghostly Trick and Other Thomas Stories",
+          "overview": "PEEP! PEEP! All aboard for ghostly adventures as Percy has Thomas thinking he's just seen a ghost! But on their next escapade, the tables turn, when Percy puffs away into a giant pile of hay! Meet Oliver who soon learns that trucks can be troublesome and help Donald and Douglas rescue Thomas, the cheeky, mischievous engine. So join volume 11's festivities with Thomas the Tank Engine and Friends, where there are laughs and surprises around each bend.",
+          "popularity": 0.8149,
+          "poster_path": "/dRSMCX9fQiXHlIJt7kobJuzR61g.jpg",
+          "release_date": "1994-08-17",
+          "softcore": false,
+          "video": true,
+          "vote_average": 8,
+          "vote_count": 2
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            16,
+            35,
+            14
+          ],
+          "id": 1303407,
+          "title": "The World of Peter Rabbit and Friends: The Tale of Pigling Bland",
+          "original_language": "en",
+          "original_title": "The World of Peter Rabbit and Friends: The Tale of Pigling Bland",
+          "overview": "\"The World of Peter Rabbit and Friends\", episode 6. Pigling Bland is a young pig who is forced to leave home, along with his brother Alexander, when his mother realizes that she is unable to feed all eight of her piglets. Pigling Bland becomes separated from Alexander and gets hopelessly lost.",
+          "popularity": 0.6078,
+          "poster_path": "/oW9sS2aGZGIZ7xqhQVfJKmEhD2d.jpg",
+          "release_date": "1994-12-27",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/9jlpLc9E4wds2cVVN1RmF6qaREk.jpg",
+          "genre_ids": [],
+          "id": 1265658,
+          "title": "Learn to Play Golf with Toby and His Friends",
+          "original_language": "en",
+          "original_title": "Learn to Play Golf with Toby and His Friends",
+          "overview": "Toby and his friends teach your children how to play golf with a simple, easy to understand and enjoyable program.",
+          "popularity": 0.2613,
+          "poster_path": "/zP6b0IhUIWssoO6pV1SLs5m34Hv.jpg",
+          "release_date": "1994-01-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            16,
+            35,
+            14
+          ],
+          "id": 1601218,
+          "title": "The World of Peter Rabbit and Friends: The Tale of Mrs. Tiggy-Winkle and Mr. Jeremy Fisher",
+          "original_language": "en",
+          "original_title": "The World of Peter Rabbit and Friends: The Tale of Mrs. Tiggy-Winkle and Mr. Jeremy Fisher",
+          "overview": "\"The World of Peter Rabbit and Friends\", episode 5. While searching for her somewhere lost handkerchiefs, little Lucie meets Mrs. Tiggy Winkle, a hedgehog who does laundry, anmd Mr. Jeremy Fisher, who had a bad encounter with a large fish.",
+          "popularity": 0.5906,
+          "poster_path": "/xUyFRKC1DBSCXJXOVqy7BU5rztg.jpg",
+          "release_date": "1994-04-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0
+        }
+      ],
+      "total_pages": 2,
+      "total_results": 23
+    }
+  }
+}

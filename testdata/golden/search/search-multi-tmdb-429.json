@@ -1,0 +1,15 @@
+{
+  "case": "search-multi-tmdb-429",
+  "family": "search",
+  "request": "GET /api/v1/search?query=cooper&page=1",
+  "fixtures": [
+    "errors/search-multi-429"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 1,
+    "totalResults": 0,
+    "results": []
+  }
+}
