@@ -47,6 +47,13 @@ const rules = [
     cls: KEEP,
     reason: 'title subpage, kept as is',
   },
+  // Not an upstream page: the browser's /api/v1 calls reach the api process
+  // through this route, so it stays.
+  {
+    match: (p) => p === 'api/v1/[...path].ts',
+    cls: KEEP,
+    reason: 'runtime proxy to the api process, added here',
+  },
   {
     match: (p) => p === '_app.tsx',
     cls: MODIFY,

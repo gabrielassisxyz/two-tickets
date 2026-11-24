@@ -1,0 +1,33 @@
+# Every field of PublicSettingsResponse, copied from Seerr
+# server/interfaces/api/settingsInterfaces.ts at the commit pinned in
+# web/UPSTREAM.md, in upstream order. When upstream adds a field, add it here
+# and to the fixture in internal/httpapi/settings_routes.go.
+jellyfinHost
+jellyfinExternalHost
+jellyfinServerName
+jellyfinForgotPasswordUrl
+initialized
+applicationTitle
+applicationUrl
+hideAvailable
+hideBlocklisted
+hideRequested
+localLogin
+mediaServerLogin
+movie4kEnabled
+series4kEnabled
+discoverRegion
+streamingRegion
+originalLanguage
+mediaServerType
+partialRequestsEnabled
+enableSpecialEpisodes
+cacheImages
+vapidPublic
+enablePushRegistration
+locale
+emailEnabled
+newPlexLogin
+youtubeUrl
+versionCheck
+plexClientIdentifier
