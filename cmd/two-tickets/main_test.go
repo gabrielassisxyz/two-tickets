@@ -228,6 +228,21 @@ func journalModeOf(t *testing.T, path string) string {
 	return mode
 }
 
+// libraryListKindsOf reads which lists startup bootstrapped, in kind order.
+func libraryListKindsOf(t *testing.T, path string) string {
+	t.Helper()
+	db, err := sql.Open("sqlite", path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer func() { _ = db.Close() }()
+	var kinds sql.NullString
+	if err := db.QueryRow("SELECT group_concat(kind, ',') FROM (SELECT kind FROM lists ORDER BY kind)").Scan(&kinds); err != nil {
+		t.Fatal(err)
+	}
+	return kinds.String
+}
+
 func TestBinaryStartsMigratesAndServesHealthRoutes(t *testing.T) {
 	dataDir := t.TempDir()
 	ctx, cancel := context.WithTimeout(context.Background(), processWait)
@@ -270,6 +285,9 @@ func TestBinaryStartsMigratesAndServesHealthRoutes(t *testing.T) {
 	}
 	if _, err := os.Stat(store.RollbackCopyPath(filepath.Join(dataDir, store.RollbackDirName), 0)); err != nil {
 		t.Errorf("first migration left no rollback copy: %v", err)
+	}
+	if got := libraryListKindsOf(t, filepath.Join(dataDir, store.StateFileName)); got != "couple,watchlist,watchlist" {
+		t.Errorf("lists after startup = %q, want the couple list and one watchlist per account", got)
 	}
 
 	if err := cmd.Process.Signal(syscall.SIGTERM); err != nil {
