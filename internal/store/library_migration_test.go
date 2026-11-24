@@ -86,8 +86,10 @@ func libraryTablesPresent(t *testing.T, db *sql.DB) []string {
 
 func TestLibraryMigrationFromAnEmptyDatabase(t *testing.T) {
 	db := newLibraryDatabase(t)
-	if got, err := schemaVersion(context.Background(), db.Write); err != nil || got != librarySchemaVersion {
-		t.Fatalf("schema version = %d (%v), want %d", got, err, librarySchemaVersion)
+	// Newer migrations (0004_recs and later) raise the newest version past
+	// the library's own; the library's tables must still be there.
+	if got, err := schemaVersion(context.Background(), db.Write); err != nil || got < librarySchemaVersion {
+		t.Fatalf("schema version = %d (%v), want at least %d", got, err, librarySchemaVersion)
 	}
 	if got := libraryTablesPresent(t, db.Write); !slices.Equal(got, libraryTables) {
 		t.Fatalf("library tables = %v, want %v", got, libraryTables)
