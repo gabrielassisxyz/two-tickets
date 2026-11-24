@@ -51,7 +51,7 @@ const RatingPicker = ({
             disabled={pending}
             className={`rounded-md border px-3 py-1.5 text-sm font-medium transition duration-150 ease-out disabled:opacity-50 ${
               value === level
-                ? 'border-indigo-500 bg-indigo-600 text-white'
+                ? 'border-indigo-500 bg-indigo-600 text-ink'
                 : 'border-gray-600 bg-gray-800 text-gray-200 hover:border-gray-400'
             }`}
             onClick={(e) => {

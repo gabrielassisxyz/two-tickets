@@ -8,10 +8,11 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 // - Ground: neutral charcoal surfaces at the lightness steps of upstream's
 //   gray, so posters, cards and their hairlines keep the contrast they have
 //   in Seerr; text is warm off-white, never pure black or pure white.
-// - One accent, a muted teal, doing one job: what is active, selected or
-//   pressable. Every chromatic family upstream uses (indigo, purple, blue,
-//   green) maps onto it, so the page stays monochromatic and upstream's
-//   indigo-to-purple gradients collapse into one flat colour.
+// - One accent, the yellow of the movie-filtering project, doing one job:
+//   what is active, selected or pressable. Every chromatic family upstream
+//   uses (indigo, purple, blue, green) maps onto it, so the page stays
+//   monochromatic and upstream's indigo-to-purple gradients collapse into
+//   one flat colour. Text on an accent fill is `ink`, never white.
 // - One muted red for the rare thing that must shout (errors, danger);
 //   upstream's amber, orange and yellow warnings map onto it.
 const ground = {
@@ -28,19 +29,23 @@ const ground = {
   950: '#09090b',
 };
 
+// 500 is movie-filtering's --accent and 700 its --accent-dim.
 const accent = {
-  50: '#eff6f5',
-  100: '#dbebea',
-  200: '#bcdcd9',
-  300: '#98cdc7',
-  400: '#7bc1ba',
-  500: '#61b8af',
-  600: '#397f78',
-  700: '#2f655f',
-  800: '#264a46',
-  900: '#1c312f',
-  950: '#111d1c',
+  50: '#fdf9ef',
+  100: '#faf1da',
+  200: '#f5e4b8',
+  300: '#f0d89c',
+  400: '#efd699',
+  500: '#e8c87a',
+  600: '#dcbb6c',
+  700: '#c4a355',
+  800: '#8c7339',
+  900: '#5a4a25',
+  950: '#2e2614',
 };
+
+// The text colour on an accent fill: movie-filtering's ink on its yellow.
+const ink = '#0c0c0f';
 
 const signal = {
   50: '#f9f1f1',
@@ -78,6 +83,7 @@ module.exports = {
       },
       colors: {
         gray: ground,
+        ink,
         indigo: accent,
         purple: accent,
         blue: accent,

@@ -352,7 +352,7 @@
   }
 
   button.input-action {
-    @apply relative -ml-px inline-flex items-center border border-gray-500 bg-indigo-600/80 px-3 py-2 text-sm font-medium leading-5 text-white last:rounded-r-md sm:px-3.5;
+    @apply relative -ml-px inline-flex items-center border border-gray-500 bg-indigo-600/80 px-3 py-2 text-sm font-medium leading-5 text-ink last:rounded-r-md sm:px-3.5;
   }
 
   button.input-action[disabled] {
@@ -503,6 +503,12 @@
 
   .datepicker-wrapper > div > div:first-child {
     @apply hidden;
+  }
+
+  /* The picker writes white text on its accent fill (the picked day, the
+     ends of a range), which is unreadable on the yellow accent. */
+  .datepicker-wrapper .text-white.bg-indigo-500 {
+    @apply text-ink;
   }
 
   input[type='range']::-webkit-slider-thumb {

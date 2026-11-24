@@ -34,13 +34,13 @@ const StatusBadgeMini = ({
   switch (status) {
     case MediaStatus.PROCESSING:
       badgeStyle.push(
-        'bg-indigo-500/80 border-indigo-400 ring-indigo-400 text-indigo-100'
+        'bg-indigo-500/80 border-indigo-400 ring-indigo-400 text-ink'
       );
       indicatorIcon = <ClockIcon />;
       break;
     case MediaStatus.AVAILABLE:
       badgeStyle.push(
-        'bg-green-500/80 border-green-400 ring-green-400 text-green-100'
+        'bg-green-500/80 border-green-400 ring-green-400 text-ink'
       );
       indicatorIcon = <CheckCircleIcon />;
       break;
@@ -56,7 +56,7 @@ const StatusBadgeMini = ({
       break;
     case MediaStatus.PARTIALLY_AVAILABLE:
       badgeStyle.push(
-        'bg-green-500/80 border-green-400 ring-green-400 text-green-100'
+        'bg-green-500/80 border-green-400 ring-green-400 text-ink'
       );
       indicatorIcon = <MinusSmallIcon />;
       break;

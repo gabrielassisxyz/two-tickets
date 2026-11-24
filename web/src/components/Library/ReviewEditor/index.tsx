@@ -86,7 +86,7 @@ const ReviewEditor = ({ target, review }: ReviewEditorProps) => {
           type="submit"
           data-testid="review-save"
           disabled={saved.pending || unchanged || !reviewIsSavable(draft)}
-          className="rounded-md border border-indigo-500 bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white disabled:opacity-50"
+          className="rounded-md border border-indigo-500 bg-indigo-600 px-3 py-1.5 text-sm font-medium text-ink disabled:opacity-50"
         >
           {saved.pending
             ? intl.formatMessage(messages.saving)

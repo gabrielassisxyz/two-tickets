@@ -90,7 +90,7 @@ const ForYouPage = () => {
             onClick={() => switchTab(tab.key)}
             className={`rounded-full px-4 py-1 text-sm ${
               mediaType === tab.key
-                ? 'bg-indigo-600 text-white'
+                ? 'bg-indigo-600 text-ink'
                 : 'bg-gray-800 text-gray-300'
             }`}
           >

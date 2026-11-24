@@ -47,7 +47,7 @@ const WatchedToggle = ({
         iconOnly ? 'h-9 w-9' : 'px-3 py-1.5 text-sm font-medium'
       } ${
         value
-          ? 'border-indigo-500 bg-indigo-600 text-white'
+          ? 'border-indigo-500 bg-indigo-600 text-ink'
           : 'border-gray-600 bg-gray-800/80 text-gray-200 hover:border-gray-400'
       }`}
       onClick={(e) => {
