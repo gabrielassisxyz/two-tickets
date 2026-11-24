@@ -28,4 +28,18 @@ jobs:
           curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v${version}/gitleaks_${version}_linux_x64.tar.gz" \
             | sudo tar -xz -C /usr/local/bin gitleaks
           gitleaks version
+      # bin/ci switches on its Go section once go.mod exists. The toolchain comes
+      # from go.mod's toolchain line, so govulncheck judges the standard library
+      # the binary is actually built with.
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+      - name: Install golangci-lint and govulncheck
+        run: |
+          version=2.12.2
+          curl -sSfL "https://github.com/golangci/golangci-lint/releases/download/v${version}/golangci-lint-${version}-linux-amd64.tar.gz" \
+            | sudo tar -xz -C /usr/local/bin --strip-components=1 "golangci-lint-${version}-linux-amd64/golangci-lint"
+          golangci-lint version
+          go install golang.org/x/vuln/cmd/govulncheck@v1.10.0
+          govulncheck -version
       - run: bin/ci
