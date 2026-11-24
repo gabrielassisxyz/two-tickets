@@ -8,7 +8,6 @@ import (
 	"io"
 	"net"
 	"net/http"
-	"net/http/httptrace"
 	"net/url"
 	"os"
 	"path/filepath"
@@ -171,10 +170,8 @@ func TestFakeTMDBHoldsATimeoutRequestUntilTheClientGivesUp(t *testing.T) {
 func TestFakeTMDBReleasesAHeldTimeoutRequestAtCleanup(t *testing.T) {
 	fixture := readFixtureFile(t, "errors/discover-movies-timeout")
 	recorder := newRecordingTB(t)
-	server := FakeTMDB(recorder, fixture.ID)
-	written := make(chan struct{})
-	trace := &httptrace.ClientTrace{WroteRequest: func(httptrace.WroteRequestInfo) { close(written) }}
-	request, err := http.NewRequestWithContext(httptrace.WithClientTrace(context.Background(), trace), http.MethodGet, fixtureURL(server.URL, fixture), nil)
+	server, fake := startFakeTMDB(recorder, []string{fixture.ID})
+	request, err := http.NewRequest(http.MethodGet, fixtureURL(server.URL, fixture), nil)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -186,7 +183,7 @@ func TestFakeTMDBReleasesAHeldTimeoutRequestAtCleanup(t *testing.T) {
 		}
 		clientDone <- err
 	}()
-	<-written
+	<-fake.holding
 	cleanupDone := make(chan struct{})
 	go func() {
 		recorder.runCleanups()

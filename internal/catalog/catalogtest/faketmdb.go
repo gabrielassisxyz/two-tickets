@@ -36,11 +36,18 @@ const tmdbTimeoutError = "timeout"
 // never requested fails t when the test ends.
 func FakeTMDB(t testing.TB, fixtureIDs ...string) *httptest.Server {
 	t.Helper()
+	server, _ := startFakeTMDB(t, fixtureIDs)
+	return server
+}
+
+func startFakeTMDB(t testing.TB, fixtureIDs []string) (*httptest.Server, *fakeTMDBServer) {
+	t.Helper()
 	fake := &fakeTMDBServer{
 		t:        t,
 		fixtures: loadTMDBFixtures(t, fixtureIDs),
 		served:   map[string]bool{},
 		stopped:  make(chan struct{}),
+		holding:  make(chan struct{}, 1),
 	}
 	server := httptest.NewServer(http.HandlerFunc(fake.answer))
 	t.Cleanup(func() {
@@ -50,13 +57,16 @@ func FakeTMDB(t testing.TB, fixtureIDs ...string) *httptest.Server {
 		server.Close()
 		fake.reportUnused()
 	})
-	return server
+	return server, fake
 }
 
 type fakeTMDBServer struct {
 	t        testing.TB
 	fixtures []tmdbFixture
 	stopped  chan struct{}
+	// holding is signalled, without blocking, each time a timeout fixture
+	// starts holding a request, so a test can act once the hold is real.
+	holding chan struct{}
 
 	mu     sync.Mutex
 	served map[string]bool
@@ -69,6 +79,10 @@ func (f *fakeTMDBServer) answer(w http.ResponseWriter, r *http.Request) {
 		panic(http.ErrAbortHandler)
 	}
 	if fixture.Response.Error == tmdbTimeoutError {
+		select {
+		case f.holding <- struct{}{}:
+		default:
+		}
 		select {
 		case <-r.Context().Done():
 			return
