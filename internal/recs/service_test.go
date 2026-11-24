@@ -273,7 +273,11 @@ func TestForYouExcludesWatchedAndRated(t *testing.T) {
 		t.Fatalf("three seeds answer = %+v, want a personal list", before)
 	}
 	top := before.Results[0]
-	forYouInsertWatch(t, s.db.Write, recsUserA, top.MediaType, top.TmdbID, top.MediaType)
+	topScope := top.MediaType
+	if topScope == "tv" {
+		topScope = "show"
+	}
+	forYouInsertWatch(t, s.db.Write, recsUserA, top.MediaType, top.TmdbID, topScope)
 	_, raw = s.get(t, user, "/api/v1/recommendations")
 	after := decodeForYouAnswer(t, raw)
 	if after.RunID == before.RunID {
@@ -327,7 +331,7 @@ func TestForYouFailureKeepsThePublishedRun(t *testing.T) {
 	}
 	movies := decodeForYouAnswer(t, raw)
 	movieCount := 0
-	code, raw = s.get(t, user, "/api/v1/recommendations?mediaType=all&page=1")
+	_, raw = s.get(t, user, "/api/v1/recommendations?mediaType=all&page=1")
 	all := decodeForYouAnswer(t, raw)
 	for _, result := range all.Results {
 		if result.MediaType == "movie" {
@@ -342,7 +346,7 @@ func TestForYouFailureKeepsThePublishedRun(t *testing.T) {
 			t.Errorf("movie filter returned %s/%d", result.MediaType, result.TmdbID)
 		}
 	}
-	code, raw = s.get(t, user, "/api/v1/recommendations?mediaType=book&page=1")
+	code, _ = s.get(t, user, "/api/v1/recommendations?mediaType=book&page=1")
 	if code != http.StatusBadRequest {
 		t.Errorf("mediaType=book = %d, want 400", code)
 	}
