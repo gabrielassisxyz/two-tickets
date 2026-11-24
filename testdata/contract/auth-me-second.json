@@ -1,0 +1,20 @@
+{
+  "id": 2,
+  "username": "bob",
+  "email": "bob@example.com",
+  "displayName": "Bob",
+  "avatar": "/os_icon.svg",
+  "userType": 2,
+  "permissions": 0,
+  "warnings": [],
+  "requestCount": 0,
+  "createdAt": "2026-03-01T12:00:00.000Z",
+  "updatedAt": "2026-03-01T12:00:00.000Z",
+  "settings": {
+    "locale": "pt-BR",
+    "discoverRegion": "BR",
+    "streamingRegion": "BR",
+    "originalLanguage": "",
+    "notificationTypes": {}
+  }
+}
