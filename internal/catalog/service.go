@@ -16,6 +16,9 @@ import (
 type Service struct {
 	tmdb *tmdb.Client
 	now  func() time.Time
+	// watchlist is set at wiring time by UseWatchlist; nil means nothing is
+	// on a watchlist.
+	watchlist WatchlistMembership
 }
 
 // NewService builds the catalog over client. A nil now means time.Now.
@@ -30,9 +33,13 @@ func NewService(client *tmdb.Client, now func() time.Time) *Service {
 // line here, a call to the register<Family> function in that family's own
 // file: s.registerDiscover(mux), s.registerTitles(mux), s.registerSearch(mux),
 // s.registerLookups(mux).
+//
+// The families register through watchlistMarkingMux, so every result page
+// they answer gains mediaInfo.watchlists in one place.
 func (s *Service) Register(mux *http.ServeMux) {
-	s.registerDiscover(mux)
-	s.registerTitles(mux)
-	s.registerSearch(mux)
-	s.registerLookups(mux)
+	marking := watchlistMarkingMux{mux: mux, service: s}
+	s.registerDiscover(marking)
+	s.registerTitles(marking)
+	s.registerSearch(marking)
+	s.registerLookups(marking)
 }

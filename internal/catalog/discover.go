@@ -17,7 +17,7 @@ import (
 // parameters the recorded fixtures show upstream sending, and a failed TMDB
 // call answers upstream's 500 with upstream's message.
 
-func (s *Service) registerDiscover(mux *http.ServeMux) {
+func (s *Service) registerDiscover(mux watchlistRouteMux) {
 	mux.HandleFunc("GET /api/v1/settings/discover", s.handleDiscoverSliderManifest)
 	mux.HandleFunc("GET /api/v1/discover/movies", s.handleDiscoverMovies)
 	mux.HandleFunc("GET /api/v1/discover/tv", s.handleDiscoverTV)
