@@ -5,8 +5,9 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 // follows it through the palette classes it already uses (gray-*,
 // indigo-*, ...), without restyling components one by one.
 //
-// - Ground: near-black neutral surfaces stepping up in small increments,
-//   with warm off-white text, never pure black or pure white.
+// - Ground: neutral charcoal surfaces at the lightness steps of upstream's
+//   gray, so posters, cards and their hairlines keep the contrast they have
+//   in Seerr; text is warm off-white, never pure black or pure white.
 // - One accent, a muted teal, doing one job: what is active, selected or
 //   pressable. Every chromatic family upstream uses (indigo, purple, blue,
 //   green) maps onto it, so the page stays monochromatic and upstream's
@@ -19,12 +20,12 @@ const ground = {
   200: '#d4d2cb',
   300: '#b8b5ad',
   400: '#8f8c86',
-  500: '#67666c',
-  600: '#43434c',
-  700: '#2a2a33',
-  800: '#16161b',
-  900: '#0e0e11',
-  950: '#08080a',
+  500: '#71717a',
+  600: '#52525b',
+  700: '#3f3f46',
+  800: '#27272a',
+  900: '#18181b',
+  950: '#09090b',
 };
 
 const accent = {

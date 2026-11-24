@@ -25,7 +25,7 @@ const PWAHeader = ({ applicationTitle = 'Two Tickets' }: PWAHeaderProps) => {
         href="/favicon-16x16.png"
       />
       <meta name="description" content="Two Tickets" />
-      <meta name="theme-color" content="#1f2937" />
+      <meta name="theme-color" content="#18181b" />
       <meta name="application-name" content={applicationTitle} />
     </>
   );
