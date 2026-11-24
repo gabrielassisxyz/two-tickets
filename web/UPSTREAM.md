@@ -566,9 +566,9 @@ Every class below deletes what the app never uses; nothing is left as a stub.
   manifest with no server fetch and no edit UI; `TitleCard` keeps only the
   watchlist star ("Quero ver"); `CollectionDetails`, `MovieDetails` and
   `TvDetails` show the catalog record with recommendations and similar
-  titles; `FilterSlideover` keeps only controls backed by a lookup route
-  (genres, keyword, studio, network, watch providers, languages, regions,
-  certifications); `MediaSlider`, `useDiscover` and `Common/ListView` lost
+  titles; `FilterSlideover` keeps the full upstream filter set
+  (release/first-air dates, genres, status, keywords, languages, runtime,
+  scores, vote counts, certifications, watch providers); `MediaSlider`, `useDiscover` and `Common/ListView` lost
   their hide-available/hide-blocklist/hide-requested filters and blocklist
   permission checks; `Selector` lost `UserSelector`.
 - No PWA: the manifest link, mobile-web-app tags, splash images,
