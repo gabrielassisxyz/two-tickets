@@ -92,17 +92,36 @@ const answerBadGateway = (res: ServerResponse): void => {
 
 interface ApiTarget {
   base: URL;
-  // The path and query sent to the api: the base's own path, then req.url
-  // exactly as the browser sent it. It never goes through a URL parser, so
-  // nothing is decoded and re-encoded on the way.
+  // The path and query sent to the api: the base's own path, then the path
+  // and query exactly as the browser sent them. They never go through a URL
+  // parser, so nothing is decoded and re-encoded on the way.
   path: string;
 }
+
+const nextRequestMeta = Symbol.for('NextInternalRequestMeta');
+
+// Next rebuilds req.url for an API route from the parsed query, which turns
+// %20 into + among other changes. The URL as received survives only in
+// Next's request metadata, as initURL, absolute or not depending on how the
+// server was started. Outside Next (in the tests) req.url is still raw.
+// deploy/web-e2e.sh checks this against the built image.
+export const rawPathAndQuery = (req: IncomingMessage): string => {
+  const meta = (req as unknown as Record<symbol, { initURL?: unknown }>)[
+    nextRequestMeta
+  ];
+  const initURL = typeof meta?.initURL === 'string' ? meta.initURL : '';
+  const raw = initURL.replace(/^[a-z][a-z0-9+.-]*:\/\/[^/]*/i, '');
+  if (raw.startsWith('/')) {
+    return raw;
+  }
+  return req.url ?? '/';
+};
 
 const apiTargetFor = (req: IncomingMessage): ApiTarget => {
   const base = new URL(getApiBaseUrl());
   return {
     base,
-    path: base.pathname.replace(/\/+$/, '') + (req.url ?? '/'),
+    path: base.pathname.replace(/\/+$/, '') + rawPathAndQuery(req),
   };
 };
 

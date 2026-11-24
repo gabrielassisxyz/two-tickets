@@ -1,4 +1,8 @@
-import { buildApiRequestHeaders, proxyToApi } from '@app/utils/apiProxy';
+import {
+  buildApiRequestHeaders,
+  proxyToApi,
+  rawPathAndQuery,
+} from '@app/utils/apiProxy';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
@@ -255,6 +259,37 @@ describe('buildApiRequestHeaders', () => {
       )['x-forwarded-proto'];
     expect(protoOf(true)).toBe('https');
     expect(protoOf(false)).toBe('http');
+  });
+});
+
+describe('rawPathAndQuery', () => {
+  const withMeta = (url: string, initURL?: string): IncomingMessage =>
+    ({
+      url,
+      [Symbol.for('NextInternalRequestMeta')]:
+        initURL === undefined ? undefined : { initURL },
+    }) as unknown as IncomingMessage;
+
+  it('prefers the URL Next received over the req.url it rebuilt', () => {
+    expect(
+      rawPathAndQuery(
+        withMeta(
+          '/api/v1/search?query=a+b',
+          'http://0.0.0.0:3000/api/v1/search?query=a%20b'
+        )
+      )
+    ).toBe('/api/v1/search?query=a%20b');
+    expect(
+      rawPathAndQuery(
+        withMeta('/api/v1/search?query=a+b', '/api/v1/search?query=a%20b')
+      )
+    ).toBe('/api/v1/search?query=a%20b');
+  });
+
+  it('falls back to req.url outside Next', () => {
+    expect(rawPathAndQuery(withMeta('/api/v1/x?q=%20'))).toBe(
+      '/api/v1/x?q=%20'
+    );
   });
 });
 
