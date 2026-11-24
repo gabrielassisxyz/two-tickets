@@ -21,7 +21,18 @@ var upstreamDiscoverSliderTypes = map[string]int{
 	"POPULAR_TV": 9, "TV_GENRES": 10, "UPCOMING_TV": 11, "NETWORKS": 12,
 }
 
-func TestDiscoverSliderManifestIsTheNineKeptBuiltIns(t *testing.T) {
+// projectDiscoverSliderTypes are this app's own slider types, written out as
+// the literals web/src/compat/sliderIds.ts declares.
+var projectDiscoverSliderTypes = map[string]int{"MY_LIST": 101, "COUPLE_LIST": 102}
+
+func discoverSliderTypeOf(name string) int {
+	if value, ok := projectDiscoverSliderTypes[name]; ok {
+		return value
+	}
+	return upstreamDiscoverSliderTypes[name]
+}
+
+func TestDiscoverSliderManifestIsTheTwoListsThenTheNineKeptBuiltIns(t *testing.T) {
 	response := discoverServe(t, discoverTestService("http://tmdb.invalid"), http.MethodGet, "/api/v1/settings/discover")
 	if response.Code != http.StatusOK {
 		t.Fatalf("settings/discover = %d %s", response.Code, response.Body)
@@ -30,13 +41,13 @@ func TestDiscoverSliderManifestIsTheNineKeptBuiltIns(t *testing.T) {
 	if err := json.Unmarshal(response.Body.Bytes(), &sliders); err != nil {
 		t.Fatal(err)
 	}
-	wantOrder := []string{"TRENDING", "POPULAR_MOVIES", "MOVIE_GENRES", "UPCOMING_MOVIES", "STUDIOS", "POPULAR_TV", "TV_GENRES", "UPCOMING_TV", "NETWORKS"}
+	wantOrder := []string{"MY_LIST", "COUPLE_LIST", "TRENDING", "POPULAR_MOVIES", "MOVIE_GENRES", "UPCOMING_MOVIES", "STUDIOS", "POPULAR_TV", "TV_GENRES", "UPCOMING_TV", "NETWORKS"}
 	if len(sliders) != len(wantOrder) {
 		t.Fatalf("the manifest holds %d sliders, want %d: %s", len(sliders), len(wantOrder), response.Body)
 	}
 	ids := map[float64]bool{}
 	for i, slider := range sliders {
-		if got, want := slider["type"], float64(upstreamDiscoverSliderTypes[wantOrder[i]]); got != want {
+		if got, want := slider["type"], float64(discoverSliderTypeOf(wantOrder[i])); got != want {
 			t.Errorf("slider %d has type %v, want %s (%v)", i, got, wantOrder[i], want)
 		}
 		if slider["enabled"] != true || slider["isBuiltIn"] != true {
@@ -50,6 +61,16 @@ func TestDiscoverSliderManifestIsTheNineKeptBuiltIns(t *testing.T) {
 			t.Errorf("slider id %v appears twice", id)
 		}
 		ids[id] = true
+		if _, own := projectDiscoverSliderTypes[wantOrder[i]]; own {
+			if id < 100 {
+				t.Errorf("slider %d (%s) has id %v, want 100 or above", i, wantOrder[i], id)
+			}
+			for name, upstream := range upstreamDiscoverSliderTypes {
+				if float64(upstream) == slider["type"] {
+					t.Errorf("slider %d (%s) collides with upstream %s", i, wantOrder[i], name)
+				}
+			}
+		}
 		for _, key := range []string{"title", "data"} {
 			if value, present := slider[key]; !present || value != nil {
 				t.Errorf("slider %d %s = %v (present %v), want null", i, key, value, present)
