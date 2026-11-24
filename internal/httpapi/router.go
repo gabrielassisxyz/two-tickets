@@ -11,6 +11,7 @@ import (
 	"github.com/gabrielassisxyz/two-tickets/internal/auth"
 	"github.com/gabrielassisxyz/two-tickets/internal/catalog"
 	"github.com/gabrielassisxyz/two-tickets/internal/library"
+	"github.com/gabrielassisxyz/two-tickets/internal/recs"
 )
 
 // ReadinessCheck answers a trivial query against one dependency.
@@ -37,6 +38,9 @@ type RouterDeps struct {
 	// Library serves the library routes and the Seerr watchlist routes,
 	// behind the same two checks. Nil leaves them out.
 	Library *library.Service
+	// Recs serves the recommendations routes, behind the same two checks.
+	// Nil leaves them out.
+	Recs *recs.Service
 }
 
 // routeRegistrar is what the router needs from a route family;
@@ -61,6 +65,9 @@ func NewRouter(deps RouterDeps) http.Handler {
 	}
 	if deps.Library != nil {
 		families = append(families, deps.Library)
+	}
+	if deps.Recs != nil {
+		families = append(families, deps.Recs)
 	}
 	return newRouter(deps, families...)
 }

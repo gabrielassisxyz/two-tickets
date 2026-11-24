@@ -11,6 +11,7 @@ import (
 	"github.com/gabrielassisxyz/two-tickets/internal/config"
 	"github.com/gabrielassisxyz/two-tickets/internal/hydrate"
 	"github.com/gabrielassisxyz/two-tickets/internal/library"
+	"github.com/gabrielassisxyz/two-tickets/internal/recs"
 	"github.com/gabrielassisxyz/two-tickets/internal/store"
 	"github.com/gabrielassisxyz/two-tickets/internal/tmdb"
 )
@@ -35,6 +36,34 @@ func newLibraryService(state *store.Database, accounts *auth.Service, client *tm
 	libraryService := library.NewService(state, accounts, hydrate.New(client), logger, nil)
 	catalogService.UseWatchlist(libraryService)
 	return libraryService
+}
+
+// forYouWatchlistAdapter answers the recommender's membership question from
+// the library, converting between the two packages' title types.
+type forYouWatchlistAdapter struct {
+	library *library.Service
+}
+
+func (a forYouWatchlistAdapter) OnCallerWatchlist(ctx context.Context, titles []recs.ForYouWatchTitle) (map[recs.ForYouWatchTitle]bool, error) {
+	asking := make([]catalog.WatchlistTitle, 0, len(titles))
+	for _, title := range titles {
+		asking = append(asking, catalog.WatchlistTitle{MediaType: title.MediaType, TMDBID: title.TMDBID})
+	}
+	found, err := a.library.OnCallerWatchlist(ctx, asking)
+	if err != nil {
+		return nil, err
+	}
+	marked := make(map[recs.ForYouWatchTitle]bool, len(found))
+	for title := range found {
+		marked[recs.ForYouWatchTitle{MediaType: title.MediaType, TMDBID: title.TMDBID}] = true
+	}
+	return marked, nil
+}
+
+// newRecsService builds the recommender on the shared client, reading
+// watchlist state from the library.
+func newRecsService(state *store.Database, client *tmdb.Client, libraryService *library.Service, logger *slog.Logger) *recs.Service {
+	return recs.NewService(state, client, hydrate.New(client), forYouWatchlistAdapter{library: libraryService}, logger, nil)
 }
 
 // prunableCache is the part of *store.CacheStore the prune loop uses.

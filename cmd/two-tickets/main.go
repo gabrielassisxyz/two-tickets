@@ -137,6 +137,7 @@ func serve(ctx context.Context, deps serveDeps, logger *slog.Logger) error {
 	}
 	client := newTMDBClient(cfg, cache, logger)
 	catalogService := newCatalogService(client)
+	libraryService := newLibraryService(state, authService, client, catalogService, logger)
 	router := httpapi.NewRouter(httpapi.RouterDeps{
 		Logger:         logger,
 		Readiness:      []httpapi.ReadinessCheck{state, cacheReadiness{cache: cache}},
@@ -144,7 +145,8 @@ func serve(ctx context.Context, deps serveDeps, logger *slog.Logger) error {
 		AllowedOrigins: authCfg.AllowedOrigins,
 		TrustedProxies: authCfg.TrustedProxies,
 		Catalog:        catalogService,
-		Library:        newLibraryService(state, authService, client, catalogService, logger),
+		Library:        libraryService,
+		Recs:           newRecsService(state, client, libraryService, logger),
 	})
 	return serveUntilDone(ctx, listener, router, logger)
 }

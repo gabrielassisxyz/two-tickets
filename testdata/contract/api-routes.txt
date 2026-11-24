@@ -38,6 +38,8 @@
 /api/v1/network/{}
 /api/v1/person/{}
 /api/v1/person/{}/combined_credits
+/api/v1/recommendations
+/api/v1/recommendations/exposures
 /api/v1/regions
 /api/v1/search
 /api/v1/search/company
