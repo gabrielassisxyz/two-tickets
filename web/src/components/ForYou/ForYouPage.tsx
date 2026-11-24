@@ -15,7 +15,7 @@ import { useIntl } from 'react-intl';
 import useSWR from 'swr';
 
 const messages = defineMessages('components.ForYou.ForYouPage', {
-  title: 'Para você',
+  title: 'For you',
   coldStart:
     'Popular this week: rate a few titles and this page learns your taste.',
   empty: 'Rate a few titles and your picks will show up here.',

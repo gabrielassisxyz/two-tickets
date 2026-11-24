@@ -65,11 +65,7 @@ const ForYouSlider = ({ title, sliderKey }: ForYouSliderProps) => {
         sliderKey={sliderKey}
         isLoading={!data}
         isEmpty={!!data && items.length === 0}
-        emptyMessage={
-          data && !data.personal
-            ? intl.formatMessage(messages.coldStart)
-            : intl.formatMessage(messages.empty)
-        }
+        emptyMessage={intl.formatMessage(messages.empty)}
         items={items}
       />
     </div>

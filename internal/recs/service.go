@@ -238,8 +238,14 @@ func (s *Service) forYouAnswer(ctx context.Context, stored Page, page int) forYo
 
 // forYouCompute builds one run from the user's current ratings and watches
 // and publishes it. Any error leaves the new run unpublished, so the newest
-// completed run stays the one readers see.
+// completed run stays the one readers see. The watermark is read before any
+// TMDB fetch: a rating landing mid-compute moves the next read's watermark
+// and recomputes, instead of baking into a run whose results predate it.
 func (s *Service) forYouCompute(ctx context.Context, userID int64) (int64, error) {
+	watermark, err := Watermark(ctx, s.db.Read, userID)
+	if err != nil {
+		return 0, err
+	}
 	ratings, excluded, err := s.forYouLoadRatings(ctx, userID)
 	if err != nil {
 		return 0, err
@@ -259,10 +265,6 @@ func (s *Service) forYouCompute(ctx context.Context, userID int64) (int64, error
 		if err != nil {
 			return 0, err
 		}
-	}
-	watermark, err := Watermark(ctx, s.db.Read, userID)
-	if err != nil {
-		return 0, err
 	}
 	runID, err := CreateRun(ctx, s.db.Write, userID, algorithm, watermark, s.now().Unix())
 	if err != nil {

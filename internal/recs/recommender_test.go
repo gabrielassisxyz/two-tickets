@@ -137,8 +137,6 @@ func TestForYouQualityFactorIsPinned(t *testing.T) {
 		{6.5, 0, 0.85 + ((6.5 / 10) * 0.30)},
 		{9, 10000, 0.85 + ((((9*10000 + 6.5*200) / (10000 + 200)) / 10) * 0.30)},
 		{2, 10000, 0.85 + ((((2*10000 + 6.5*200) / (10000 + 200)) / 10) * 0.30)},
-		// Missing vote data counts as no votes at the mean.
-		{6.5, 0, 0.85 + ((6.5 / 10) * 0.30)},
 	}
 	for _, tc := range cases {
 		if got := forYouQualityFactor(tc.average, tc.count); math.Abs(got-tc.want) > 1e-12 {

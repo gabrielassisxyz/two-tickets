@@ -1,5 +1,5 @@
 import { postRecExposure } from '@app/components/ForYou/recsRequests';
-import { useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 interface RecsExposureProps {
@@ -8,23 +8,33 @@ interface RecsExposureProps {
   children: React.ReactNode;
 }
 
-// Reports one exposure when the card enters the viewport. The backend
-// records once per run and rank, so a repeated report is a no-op; the local
-// guard keeps a remount from even sending it. A rejected report clears the
-// guard, so the next entry retries.
+// Reports one exposure when the card enters the viewport, once per run and
+// rank: the request helper dedupes, so a remount never reposts. A rejected
+// report retries twice, two seconds apart, then gives up.
+const maxRecExposureAttempts = 2;
+
 const RecsExposure = ({ runId, rank, children }: RecsExposureProps) => {
   const { ref, inView } = useInView({ triggerOnce: true });
-  const reported = useRef(false);
+  const [attempt, setAttempt] = useState(0);
 
   useEffect(() => {
-    if (!inView || reported.current) {
+    if (!inView) {
       return;
     }
-    reported.current = true;
+    let cancelled = false;
+    let timer: ReturnType<typeof setTimeout> | undefined;
     postRecExposure(runId, rank).catch(() => {
-      reported.current = false;
+      if (!cancelled && attempt < maxRecExposureAttempts) {
+        timer = setTimeout(() => setAttempt(attempt + 1), 2000);
+      }
     });
-  }, [inView, runId, rank]);
+    return () => {
+      cancelled = true;
+      if (timer !== undefined) {
+        clearTimeout(timer);
+      }
+    };
+  }, [inView, runId, rank, attempt]);
 
   return (
     <div

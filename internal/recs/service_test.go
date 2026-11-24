@@ -56,21 +56,16 @@ func (f *forYouFakeTMDB) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		}
 		trimmed := strings.TrimSuffix(strings.TrimPrefix(path, "/"), "/recommendations")
 		kind, id, _ := strings.Cut(trimmed, "/")
-		base := 1000
-		media := "movie"
-		title := "title"
-		if kind == "tv" {
-			base = 2000
-			media = "tv"
-			title = "name"
-		}
 		var seed int
 		_, _ = fmt.Sscanf(id, "%d", &seed)
+		base, title := 1000, "title"
+		if kind == "tv" {
+			base, title = 2000, "name"
+		}
 		items := make([]string, 0, 3)
 		for k := range 3 {
 			items = append(items, fmt.Sprintf(`{"id":%d,"%s":"Candidate %d","vote_average":6.5,"vote_count":0}`, base+seed*10+k, title, base+seed*10+k))
 		}
-		_ = media
 		_, _ = fmt.Fprintf(w, `{"page":1,"total_pages":1,"total_results":3,"results":[%s]}`, strings.Join(items, ","))
 		return
 	}
