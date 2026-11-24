@@ -10,8 +10,12 @@ export const base = () => {
   return value;
 };
 
-export const signIn = async (page: Page) => {
-  const username = process.env.CRAWL_USERNAME as string;
+// Signs in through the login form. A spec that needs state no other spec has
+// touched signs in as the second account, since every spec shares one api.
+export const signIn = async (
+  page: Page,
+  username: string = process.env.CRAWL_USERNAME as string
+) => {
   const password = process.env.CRAWL_PASSWORD as string;
   expect(username, 'CRAWL_USERNAME is set').toBeTruthy();
   expect(password, 'CRAWL_PASSWORD is set').toBeTruthy();

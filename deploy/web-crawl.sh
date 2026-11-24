@@ -105,13 +105,13 @@ fi
 # shellcheck disable=SC2016
 crawl_in_container='set -e
 mkdir -p /tmp/crawl/tests
-cp -r tests/crawl tests/library /tmp/crawl/tests/
+cp -r tests/crawl tests/library tests/recs /tmp/crawl/tests/
 cd /tmp/crawl
 npm init -y >/dev/null
 npm install --no-audit --no-fund --loglevel=error "@playwright/test@${PLAYWRIGHT_VERSION}"
-npx playwright test tests/crawl tests/library --workers=1 --output=/tmp/test-results'
+npx playwright test tests/crawl tests/library tests/recs --workers=1 --output=/tmp/test-results'
 
-echo "==> web crawl: running the link crawl and the library specs (image v${playwright_version})"
+echo "==> web crawl: running the link crawl and the library and recommendations specs (image v${playwright_version})"
 docker run --rm --network "$network" \
   -v "$PWD/web:/work:ro" \
   -w /work \

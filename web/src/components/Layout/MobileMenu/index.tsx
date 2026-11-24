@@ -8,6 +8,7 @@ import {
   InformationCircleIcon,
   QueueListIcon,
   SparklesIcon,
+  StarIcon,
   TvIcon,
 } from '@heroicons/react/24/outline';
 import {
@@ -16,6 +17,7 @@ import {
   InformationCircleIcon as FilledInformationCircleIcon,
   QueueListIcon as FilledQueueListIcon,
   SparklesIcon as FilledSparklesIcon,
+  StarIcon as FilledStarIcon,
   TvIcon as FilledTvIcon,
   XMarkIcon,
 } from '@heroicons/react/24/solid';
@@ -56,6 +58,13 @@ const MobileMenu = () => {
       svgIcon: <SparklesIcon className="h-6 w-6" />,
       svgIconSelected: <FilledSparklesIcon className="h-6 w-6" />,
       activeRegExp: /^\/(discover\/?)?$/,
+    },
+    {
+      href: '/discover/for-you',
+      content: intl.formatMessage(menuMessages.foryou),
+      svgIcon: <StarIcon className="h-6 w-6" />,
+      svgIconSelected: <FilledStarIcon className="h-6 w-6" />,
+      activeRegExp: /^\/discover\/for-you$/,
     },
     {
       href: '/discover/movies',

@@ -1802,5 +1802,19 @@
   "pages.pagenotfound": "Page Not Found",
   "pages.returnHome": "Return Home",
   "pages.serviceunavailable": "Service Unavailable",
-  "pages.somethingwentwrong": "Something Went Wrong"
+  "pages.somethingwentwrong": "Something Went Wrong",
+  "components.Discover.foryou": "For you",
+  "components.ForYou.ForYouSlider.coldStart": "Popular this week",
+  "components.ForYou.ForYouSlider.empty": "Rate a few titles and your picks will show up here.",
+  "components.ForYou.ForYouSlider.becauseYouLiked": "Because you liked {titles}",
+  "components.ForYou.ForYouPage.title": "For you",
+  "components.ForYou.ForYouPage.coldStart": "Popular this week: rate a few titles and this page learns your taste.",
+  "components.ForYou.ForYouPage.empty": "Rate a few titles and your picks will show up here.",
+  "components.ForYou.ForYouPage.becauseYouLiked": "Because you liked {titles}",
+  "components.ForYou.ForYouPage.all": "All",
+  "components.ForYou.ForYouPage.movies": "Movies",
+  "components.ForYou.ForYouPage.series": "Series",
+  "components.ForYou.ForYouPage.previous": "Previous",
+  "components.ForYou.ForYouPage.next": "Next",
+  "components.Layout.Sidebar.foryou": "For you"
 }

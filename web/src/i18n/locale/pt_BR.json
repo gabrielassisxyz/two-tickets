@@ -1763,5 +1763,19 @@
   "components.About.title": "Sobre",
   "components.About.tmdbNotice": "Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.",
   "components.Layout.Sidebar.about": "Sobre",
-  "components.Layout.UserDropdown.about": "Sobre"
+  "components.Layout.UserDropdown.about": "Sobre",
+  "components.Discover.foryou": "Para você",
+  "components.ForYou.ForYouSlider.coldStart": "Em alta nesta semana",
+  "components.ForYou.ForYouSlider.empty": "Avalie alguns títulos e suas sugestões aparecem aqui.",
+  "components.ForYou.ForYouSlider.becauseYouLiked": "Porque você gostou de {titles}",
+  "components.ForYou.ForYouPage.title": "Para você",
+  "components.ForYou.ForYouPage.coldStart": "Em alta nesta semana: avalie alguns títulos e esta página aprende o seu gosto.",
+  "components.ForYou.ForYouPage.empty": "Avalie alguns títulos e suas sugestões aparecem aqui.",
+  "components.ForYou.ForYouPage.becauseYouLiked": "Porque você gostou de {titles}",
+  "components.ForYou.ForYouPage.all": "Tudo",
+  "components.ForYou.ForYouPage.movies": "Filmes",
+  "components.ForYou.ForYouPage.series": "Séries",
+  "components.ForYou.ForYouPage.previous": "Anterior",
+  "components.ForYou.ForYouPage.next": "Próxima",
+  "components.Layout.Sidebar.foryou": "Para você"
 }
