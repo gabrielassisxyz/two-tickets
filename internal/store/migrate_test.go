@@ -202,35 +202,50 @@ func TestMigrateStateStopsWhenTheCopyFailsVerification(t *testing.T) {
 	}
 }
 
-// Corrupting an index page breaks integrity_check while leaving the header and
-// foreign_key_check (there are no foreign keys) untouched, so only the
-// integrity step can reject this file.
-func TestVerifyRollbackCopyRejectsACorruptFile(t *testing.T) {
-	path := filepath.Join(t.TempDir(), "state-7.db")
+// writeIndexedFile creates a database at schema 7 with an index and no foreign
+// key, so foreign_key_check has nothing to read and only integrity_check can
+// object to what the tests below do to it. The intact file must verify first.
+func writeIndexedFile(t *testing.T) (path string, indexRootPage, pageSize int64) {
+	t.Helper()
+	path = filepath.Join(t.TempDir(), "state-7.db")
 	raw, err := sql.Open(sqliteDriverName, path)
 	if err != nil {
 		t.Fatal(err)
 	}
-	setup := `CREATE TABLE t (id INTEGER PRIMARY KEY, v TEXT NOT NULL);
+	defer func() { _ = raw.Close() }()
+	setup := `CREATE TABLE t (id INTEGER PRIMARY KEY, v TEXT NOT NULL, w TEXT NOT NULL);
 		WITH RECURSIVE n(i) AS (SELECT 1 UNION ALL SELECT i + 1 FROM n WHERE i < 2000)
-		INSERT INTO t (id, v) SELECT i, printf('value-%08d', i) FROM n;
+		INSERT INTO t (id, v, w) SELECT i, printf('value-%08d', i), printf('other-%08d', 2001 - i) FROM n;
 		CREATE INDEX t_v ON t(v);
 		PRAGMA user_version = 7;`
 	if _, err := raw.Exec(setup); err != nil {
 		t.Fatal(err)
 	}
-	var rootPage, pageSize int64
-	if err := raw.QueryRow("SELECT rootpage FROM sqlite_master WHERE name = 't_v'").Scan(&rootPage); err != nil {
+	if err := raw.QueryRow("SELECT rootpage FROM sqlite_master WHERE name = 't_v'").Scan(&indexRootPage); err != nil {
 		t.Fatal(err)
 	}
 	if err := raw.QueryRow("PRAGMA page_size").Scan(&pageSize); err != nil {
 		t.Fatal(err)
 	}
-	_ = raw.Close()
-
+	if err := raw.Close(); err != nil {
+		t.Fatal(err)
+	}
 	if err := verifyRollbackCopy(context.Background(), path, 7); err != nil {
 		t.Fatalf("the intact file failed verification: %v", err)
 	}
+	return path, indexRootPage, pageSize
+}
+
+func TestVerifyRollbackCopyRejectsTheWrongSchemaVersion(t *testing.T) {
+	path, _, _ := writeIndexedFile(t)
+	if err := verifyRollbackCopy(context.Background(), path, 8); err == nil {
+		t.Fatal("a copy at schema 7 verified as schema 8")
+	}
+}
+
+// A torn index page makes integrity_check fail as a query.
+func TestVerifyRollbackCopyRejectsAMalformedPage(t *testing.T) {
+	path, rootPage, pageSize := writeIndexedFile(t)
 	file, err := os.OpenFile(path, os.O_WRONLY, 0)
 	if err != nil {
 		t.Fatal(err)
@@ -242,7 +257,33 @@ func TestVerifyRollbackCopyRejectsACorruptFile(t *testing.T) {
 	_ = file.Close()
 
 	if err := verifyRollbackCopy(context.Background(), path, 7); err == nil {
-		t.Fatal("a file with a corrupt index page passed verification")
+		t.Fatal("a file with a malformed index page passed verification")
+	}
+}
+
+// An index whose definition no longer matches its entries leaves every page
+// well formed, so integrity_check answers with report rows instead of failing:
+// the check has to read what it says, not only whether it ran.
+func TestVerifyRollbackCopyRejectsAnIndexThatDisagreesWithItsTable(t *testing.T) {
+	path, _, _ := writeIndexedFile(t)
+	raw, err := sql.Open(sqliteDriverName, path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	rewrite := `PRAGMA writable_schema = ON;
+		UPDATE sqlite_master SET sql = 'CREATE INDEX t_v ON t(w)' WHERE name = 't_v';
+		PRAGMA writable_schema = OFF;`
+	if _, err := raw.Exec(rewrite); err != nil {
+		t.Fatal(err)
+	}
+	_ = raw.Close()
+
+	err = verifyRollbackCopy(context.Background(), path, 7)
+	if err == nil {
+		t.Fatal("a file whose index disagrees with its table passed verification")
+	}
+	if !strings.Contains(err.Error(), "integrity_check reports") {
+		t.Fatalf("verify failed for another reason than the integrity report: %v", err)
 	}
 }
 
