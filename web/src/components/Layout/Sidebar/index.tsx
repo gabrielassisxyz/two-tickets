@@ -4,6 +4,7 @@ import { Transition, TransitionChild } from '@headlessui/react';
 import {
   ClockIcon,
   FilmIcon,
+  InformationCircleIcon,
   QueueListIcon,
   SparklesIcon,
   TvIcon,
@@ -21,6 +22,7 @@ export const menuMessages = defineMessages('components.Layout.Sidebar', {
   browsetv: 'Series',
   lists: 'Lists',
   history: 'History',
+  about: 'About',
 });
 
 interface SidebarProps {
@@ -37,9 +39,9 @@ interface SidebarLinkProps {
   dataTestId?: string;
 }
 
-// Only entries that resolve today. The Para você and Sobre pages land in
-// later beads together with their entries, so no link here points at a page
-// that does not exist yet.
+// Only entries that resolve today. The Para você page lands in a later bead
+// together with its entry, so no link here points at a page that does not
+// exist yet.
 const SidebarLinks: SidebarLinkProps[] = [
   {
     href: '/',
@@ -70,6 +72,12 @@ const SidebarLinks: SidebarLinkProps[] = [
     messagesKey: 'history',
     svgIcon: <ClockIcon className="mr-3 h-6 w-6" />,
     activeRegExp: /^\/history$/,
+  },
+  {
+    href: '/about',
+    messagesKey: 'about',
+    svgIcon: <InformationCircleIcon className="mr-3 h-6 w-6" />,
+    activeRegExp: /^\/about$/,
   },
 ];
 

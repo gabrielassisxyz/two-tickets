@@ -1756,5 +1756,12 @@
   "components.Discover.coupleList": "Lista do casal",
   "components.Layout.Sidebar.lists": "Listas",
   "components.Layout.Sidebar.history": "Histórico",
-  "components.Library.ListsPage.Section.unavailable": "Título indisponível"
+  "components.Library.ListsPage.Section.unavailable": "Título indisponível",
+  "components.About.JustWatchCredit.justwatchcredit": "Dados de provedores de streaming fornecidos pela JustWatch.",
+  "components.About.posterHosting": "Cartazes e imagens são carregados diretamente dos servidores de imagem do TMDB. Se eles estiverem inacessíveis, a arte pode não aparecer.",
+  "components.About.seerrCredit": "Interface baseada no Seerr, um projeto de código aberto sob licença MIT.",
+  "components.About.title": "Sobre",
+  "components.About.tmdbNotice": "Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.",
+  "components.Layout.Sidebar.about": "Sobre",
+  "components.Layout.UserDropdown.about": "Sobre"
 }

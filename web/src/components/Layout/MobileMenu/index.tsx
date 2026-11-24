@@ -5,6 +5,7 @@ import {
   ClockIcon,
   EllipsisHorizontalIcon,
   FilmIcon,
+  InformationCircleIcon,
   QueueListIcon,
   SparklesIcon,
   TvIcon,
@@ -12,6 +13,7 @@ import {
 import {
   ClockIcon as FilledClockIcon,
   FilmIcon as FilledFilmIcon,
+  InformationCircleIcon as FilledInformationCircleIcon,
   QueueListIcon as FilledQueueListIcon,
   SparklesIcon as FilledSparklesIcon,
   TvIcon as FilledTvIcon,
@@ -82,6 +84,13 @@ const MobileMenu = () => {
       svgIcon: <ClockIcon className="h-6 w-6" />,
       svgIconSelected: <FilledClockIcon className="h-6 w-6" />,
       activeRegExp: /^\/history$/,
+    },
+    {
+      href: '/about',
+      content: intl.formatMessage(menuMessages.about),
+      svgIcon: <InformationCircleIcon className="h-6 w-6" />,
+      svgIconSelected: <FilledInformationCircleIcon className="h-6 w-6" />,
+      activeRegExp: /^\/about$/,
     },
   ];
 

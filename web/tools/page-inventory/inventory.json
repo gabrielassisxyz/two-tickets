@@ -20,6 +20,11 @@
     "reason": "standalone catalogue page, kept as is"
   },
   {
+    "path": "about.tsx",
+    "class": "keep",
+    "reason": "About page with credits, added here"
+  },
+  {
     "path": "api/v1/[...path].ts",
     "class": "keep",
     "reason": "runtime proxy to the api process, added here"

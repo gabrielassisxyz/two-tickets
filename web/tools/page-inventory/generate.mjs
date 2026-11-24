@@ -60,6 +60,12 @@ const rules = [
     cls: KEEP,
     reason: 'library page, added here',
   },
+  // Not an upstream page: the credits page, added here.
+  {
+    match: (p) => p === 'about.tsx',
+    cls: KEEP,
+    reason: 'About page with credits, added here',
+  },
   {
     match: (p) => p === '_app.tsx',
     cls: MODIFY,
