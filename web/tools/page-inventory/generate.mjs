@@ -54,6 +54,12 @@ const rules = [
     cls: KEEP,
     reason: 'runtime proxy to the api process, added here',
   },
+  // Not upstream pages: the library's own Lists and History pages.
+  {
+    match: (p) => p === 'lists.tsx' || p === 'history.tsx',
+    cls: KEEP,
+    reason: 'library page, added here',
+  },
   // Not an upstream page: the credits page, added here.
   {
     match: (p) => p === 'about.tsx',
@@ -130,6 +136,8 @@ const parentClass = {
   '_error.tsx': KEEP,
   'index.tsx': KEEP,
   'search.tsx': KEEP,
+  'lists.tsx': KEEP,
+  'history.tsx': KEEP,
   '_app.tsx': MODIFY,
   'setup.tsx': DROP,
 };

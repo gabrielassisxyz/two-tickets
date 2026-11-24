@@ -2,15 +2,19 @@ import { menuMessages } from '@app/components/Layout/Sidebar';
 import useClickOutside from '@app/hooks/useClickOutside';
 import { Transition } from '@headlessui/react';
 import {
+  ClockIcon,
   EllipsisHorizontalIcon,
   FilmIcon,
   InformationCircleIcon,
+  QueueListIcon,
   SparklesIcon,
   TvIcon,
 } from '@heroicons/react/24/outline';
 import {
+  ClockIcon as FilledClockIcon,
   FilmIcon as FilledFilmIcon,
   InformationCircleIcon as FilledInformationCircleIcon,
+  QueueListIcon as FilledQueueListIcon,
   SparklesIcon as FilledSparklesIcon,
   TvIcon as FilledTvIcon,
   XMarkIcon,
@@ -66,6 +70,20 @@ const MobileMenu = () => {
       svgIcon: <TvIcon className="h-6 w-6" />,
       svgIconSelected: <FilledTvIcon className="h-6 w-6" />,
       activeRegExp: /^\/discover\/tv$/,
+    },
+    {
+      href: '/lists',
+      content: intl.formatMessage(menuMessages.lists),
+      svgIcon: <QueueListIcon className="h-6 w-6" />,
+      svgIconSelected: <FilledQueueListIcon className="h-6 w-6" />,
+      activeRegExp: /^\/lists$/,
+    },
+    {
+      href: '/history',
+      content: intl.formatMessage(menuMessages.history),
+      svgIcon: <ClockIcon className="h-6 w-6" />,
+      svgIconSelected: <FilledClockIcon className="h-6 w-6" />,
+      activeRegExp: /^\/history$/,
     },
     {
       href: '/about',

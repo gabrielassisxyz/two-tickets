@@ -2,7 +2,12 @@
 # Playwright link crawl of the production `web` image against a real api.
 # It builds both images the way deploy/web-e2e.sh does, signs in through
 # the login form on a mobile viewport with touch input, then follows every
-# internal link and proves none answers 404 or an error page.
+# internal link and proves none answers 404 or an error page. The library
+# specs (web/tests/library) run in the same command, against the same stack.
+#
+# The api's TMDB is a substitute (deploy/e2e/tmdb-substitute.mjs) answering
+# from the recorded fixtures in testdata/tmdb/, so cards and title pages
+# render without a TMDB key or a network call to TMDB.
 #
 # The crawl runs inside the official Playwright image
 # (mcr.microsoft.com/playwright), on the same Docker network, so no browser
@@ -45,6 +50,13 @@ password_hash="$(printf '%s' "$password" | go run ./deploy/e2e/hashpassword)"
 docker network create "$network" >/dev/null
 subnet="$(docker network inspect -f '{{(index .IPAM.Config 0).Subnet}}' "$network")"
 
+tmdb="two-tickets-crawl-tmdb-${$}"
+containers+=("$tmdb")
+docker run -d --name "$tmdb" --network "$network" --network-alias tmdb \
+  -v "$PWD/deploy/e2e/tmdb-substitute.mjs:/e2e/tmdb-substitute.mjs:ro" \
+  -v "$PWD/testdata/tmdb:/e2e/tmdb:ro" \
+  --entrypoint node "$image" /e2e/tmdb-substitute.mjs >/dev/null
+
 api="two-tickets-crawl-api-${$}"
 containers+=("$api")
 docker run -d --name "$api" --network "$network" --network-alias api \
@@ -52,6 +64,7 @@ docker run -d --name "$api" --network "$network" --network-alias api \
   -v "$work/two-tickets:/e2e/two-tickets:ro" \
   -e DATA_DIR=/data -e LISTEN_ADDR=:8080 \
   -e TMDB_API_KEY=sentinelsentinelsentinel \
+  -e TMDB_BASE_URL=http://tmdb:8080/3 \
   -e ACCOUNT_1_KEY=first -e ACCOUNT_1_USERNAME=alice \
   -e ACCOUNT_1_EMAIL=alice@example.com -e ACCOUNT_1_DISPLAY_NAME=Alice \
   -e "ACCOUNT_1_PASSWORD_HASH=${password_hash}" \
@@ -92,13 +105,13 @@ fi
 # shellcheck disable=SC2016
 crawl_in_container='set -e
 mkdir -p /tmp/crawl/tests
-cp -r tests/crawl /tmp/crawl/tests/
+cp -r tests/crawl tests/library /tmp/crawl/tests/
 cd /tmp/crawl
 npm init -y >/dev/null
 npm install --no-audit --no-fund --loglevel=error "@playwright/test@${PLAYWRIGHT_VERSION}"
-npx playwright test tests --output=/tmp/test-results'
+npx playwright test tests/crawl tests/library --workers=1 --output=/tmp/test-results'
 
-echo "==> web crawl: running the Playwright link crawl (image v${playwright_version})"
+echo "==> web crawl: running the link crawl and the library specs (image v${playwright_version})"
 docker run --rm --network "$network" \
   -v "$PWD/web:/work:ro" \
   -w /work \
@@ -108,6 +121,6 @@ docker run --rm --network "$network" \
   -e "CRAWL_PASSWORD=${password}" \
   "mcr.microsoft.com/playwright:v${playwright_version}-noble" \
   sh -c "$crawl_in_container" \
-  || fail "the Playwright crawl failed: a broken internal link, or the suite did not run (see above)"
+  || fail "the Playwright suite failed: a broken internal link, a library spec, or the suite did not run (see above)"
 
 echo "web crawl: green"

@@ -1,24 +1,20 @@
-import { MediaType } from '@app/compat/constants/media';
 import type { TvDetails as TvDetailsType } from '@app/compat/models/Tv';
 import JustWatchCredit from '@app/components/About/JustWatchCredit';
-import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
 import PageTitle from '@app/components/Common/PageTitle';
 import Tooltip from '@app/components/Common/Tooltip';
 import ExternalLinkBlock from '@app/components/ExternalLinkBlock';
+import SeasonRows from '@app/components/Library/SeasonRows';
+import TitlePanel from '@app/components/Library/TitlePanel';
+import TitleWatchlistButton from '@app/components/Library/TitleWatchlistButton';
 import MediaSlider from '@app/components/MediaSlider';
 import PersonCard from '@app/components/PersonCard';
 import Slider from '@app/components/Slider';
-import TitleCard from '@app/components/TitleCard';
-import useToasts from '@app/hooks/useToasts';
 import { UserType, useUser } from '@app/hooks/useUser';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
-import { MinusCircleIcon, StarIcon } from '@heroicons/react/24/outline';
-import axios from 'axios';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import useSWR from 'swr';
 
@@ -30,12 +26,6 @@ const messages = defineMessages('components.TvDetails', {
   overviewunavailable: 'Overview unavailable.',
   streamingproviders: 'Currently Streaming On',
   seasons: 'Seasons',
-  watchlistSuccess: '<strong>{title}</strong> added to watchlist successfully!',
-  watchlistDeleted:
-    '<strong>{title}</strong> Removed from watchlist successfully!',
-  watchlistError: 'Something went wrong. Please try again.',
-  removefromwatchlist: 'Remove From Watchlist',
-  addtowatchlist: 'Quero ver',
 });
 
 interface TvDetailsProps {
@@ -49,11 +39,6 @@ const TvDetails = ({ tv }: TvDetailsProps) => {
   const { user } = useUser();
   const router = useRouter();
   const intl = useIntl();
-  const [isUpdating, setIsUpdating] = useState<boolean>(false);
-  const [toggleWatchlist, setToggleWatchlist] = useState<boolean>(
-    !tv?.onUserWatchlist
-  );
-  const { addToast } = useToasts();
 
   const { data, error } = useSWR<TvDetailsType>(
     `/api/v1/tv/${router.query.tvId}`,
@@ -75,65 +60,6 @@ const TvDetails = ({ tv }: TvDetailsProps) => {
   const streamingProviders =
     data.watchProviders?.find((provider) => provider.iso_3166_1 === 'BR')
       ?.flatrate ?? [];
-
-  const onClickWatchlistBtn = async (): Promise<void> => {
-    setIsUpdating(true);
-    try {
-      const response = await axios.post('/api/v1/watchlist', {
-        tmdbId: data.id,
-        mediaType: MediaType.TV,
-        title: data.name,
-      });
-      if (response.data) {
-        addToast(
-          <span>
-            {intl.formatMessage(messages.watchlistSuccess, {
-              title: data.name,
-              strong: (msg: React.ReactNode) => <strong>{msg}</strong>,
-            })}
-          </span>,
-          { appearance: 'success', autoDismiss: true }
-        );
-      }
-    } catch {
-      addToast(intl.formatMessage(messages.watchlistError), {
-        appearance: 'error',
-        autoDismiss: true,
-      });
-    } finally {
-      setIsUpdating(false);
-      setToggleWatchlist((prevState) => !prevState);
-    }
-  };
-
-  const onClickDeleteWatchlistBtn = async (): Promise<void> => {
-    setIsUpdating(true);
-    try {
-      const response = await axios.delete(
-        `/api/v1/watchlist/${data.id}?mediaType=${MediaType.TV}`
-      );
-
-      if (response.status === 204) {
-        addToast(
-          <span>
-            {intl.formatMessage(messages.watchlistDeleted, {
-              title: data.name,
-              strong: (msg: React.ReactNode) => <strong>{msg}</strong>,
-            })}
-          </span>,
-          { appearance: 'info', autoDismiss: true }
-        );
-      }
-    } catch {
-      addToast(intl.formatMessage(messages.watchlistError), {
-        appearance: 'error',
-        autoDismiss: true,
-      });
-    } finally {
-      setIsUpdating(false);
-      setToggleWatchlist((prevState) => !prevState);
-    }
-  };
 
   return (
     <div className="media-page">
@@ -179,30 +105,17 @@ const TvDetails = ({ tv }: TvDetailsProps) => {
           {data.tagline && <p className="tagline">{data.tagline}</p>}
         </div>
         <div className="media-actions">
-          {user?.userType !== UserType.PLEX &&
-            (toggleWatchlist ? (
-              <Button
-                buttonType="primary"
-                onClick={onClickWatchlistBtn}
-                disabled={isUpdating}
-                title={intl.formatMessage(messages.addtowatchlist)}
-              >
-                <StarIcon />
-                <span>{intl.formatMessage(messages.addtowatchlist)}</span>
-              </Button>
-            ) : (
-              <Button
-                buttonType="ghost"
-                onClick={onClickDeleteWatchlistBtn}
-                disabled={isUpdating}
-                title={intl.formatMessage(messages.removefromwatchlist)}
-              >
-                <MinusCircleIcon />
-                <span>{intl.formatMessage(messages.removefromwatchlist)}</span>
-              </Button>
-            ))}
+          {user?.userType !== UserType.PLEX && (
+            <TitleWatchlistButton
+              mediaType="tv"
+              tmdbId={data.id}
+              title={data.name}
+              onWatchlist={!!data.onUserWatchlist}
+            />
+          )}
         </div>
       </div>
+      <TitlePanel mediaType="tv" tmdbId={data.id} />
       <div className="media-overview">
         <div className="flex-1">
           <h2>{intl.formatMessage(messages.overview)}</h2>
@@ -252,21 +165,7 @@ const TvDetails = ({ tv }: TvDetailsProps) => {
               <span>{intl.formatMessage(messages.seasons)}</span>
             </div>
           </div>
-          <Slider
-            sliderKey="tv-seasons"
-            isLoading={false}
-            isEmpty={data.seasons.length === 0}
-            items={data.seasons.map((season) => (
-              <TitleCard
-                key={season.id}
-                id={data.id}
-                image={season.posterPath}
-                summary={season.overview}
-                title={season.name}
-                mediaType="tv"
-              />
-            ))}
-          />
+          <SeasonRows tvId={data.id} seasons={data.seasons} />
         </>
       )}
       {data.credits.cast.length > 0 && (

@@ -1,25 +1,18 @@
-import Spinner from '@app/assets/spinner.svg';
 import { MediaStatus } from '@app/compat/constants/media';
-import type { Watchlist } from '@app/compat/entity/Watchlist';
 import type { MediaType } from '@app/compat/models/Search';
-import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
 import StatusBadgeMini from '@app/components/Common/StatusBadgeMini';
 import ErrorCard from '@app/components/TitleCard/ErrorCard';
 import Placeholder from '@app/components/TitleCard/Placeholder';
+import QuickActions from '@app/components/TitleCard/QuickActions';
 import { useIsTouch } from '@app/hooks/useIsTouch';
-import useToasts from '@app/hooks/useToasts';
-import { UserType, useUser } from '@app/hooks/useUser';
 import globalMessages from '@app/i18n/globalMessages';
-import defineMessages from '@app/utils/defineMessages';
 import { withProperties } from '@app/utils/typeHelpers';
 import { Transition } from '@headlessui/react';
-import { MinusCircleIcon, StarIcon } from '@heroicons/react/24/outline';
-import axios from 'axios';
 import Link from 'next/link';
 import { Fragment, useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { useIntl } from 'react-intl';
-import { mutate } from 'swr';
 
 interface TitleCardProps {
   id: number;
@@ -34,17 +27,9 @@ interface TitleCardProps {
   inProgress?: boolean;
   isAddedToWatchlist?: number | boolean;
   mutateParent?: () => void;
+  // Off where the card belongs to someone else's list, which is read-only.
+  showQuickActions?: boolean;
 }
-
-const messages = defineMessages('components.TitleCard', {
-  addToWatchList: 'Quero ver',
-  watchlistSuccess:
-    '<strong>{title}</strong> added to watchlist  successfully!',
-  watchlistDeleted:
-    '<strong>{title}</strong> Removed from watchlist  successfully!',
-  watchlistCancel: 'watchlist for <strong>{title}</strong> canceled.',
-  watchlistError: 'Something went wrong. Please try again.',
-});
 
 const TitleCard = ({
   id,
@@ -58,16 +43,15 @@ const TitleCard = ({
   inProgress = false,
   canExpand = false,
   mutateParent,
+  showQuickActions = true,
 }: TitleCardProps) => {
   const isTouch = useIsTouch();
   const intl = useIntl();
-  const { user } = useUser();
-  const [isUpdating, setIsUpdating] = useState(false);
   const [currentStatus, setCurrentStatus] = useState(status);
   const [showDetail, setShowDetail] = useState(false);
-  const { addToast } = useToasts();
-  const [toggleWatchlist, setToggleWatchlist] =
-    useState<boolean>(!isAddedToWatchlist);
+  // A card reads its library state only once it is on screen, so a page of
+  // sliders does not ask about every title it holds at once.
+  const { ref: inViewRef, inView } = useInView({ triggerOnce: true });
 
   // Just to get the year from the date
   if (year) {
@@ -78,74 +62,13 @@ const TitleCard = ({
     setCurrentStatus(status);
   }, [status]);
 
-  const onClickWatchlistBtn = async (): Promise<void> => {
-    setIsUpdating(true);
-    try {
-      const response = await axios.post<Watchlist>('/api/v1/watchlist', {
-        tmdbId: id,
-        mediaType,
-        title,
-      });
-      mutate('/api/v1/discover/watchlist');
-      if (response.data) {
-        addToast(
-          <span>
-            {intl.formatMessage(messages.watchlistSuccess, {
-              title,
-              strong: (msg: React.ReactNode) => <strong>{msg}</strong>,
-            })}
-          </span>,
-          { appearance: 'success', autoDismiss: true }
-        );
-      }
-    } catch {
-      addToast(intl.formatMessage(messages.watchlistError), {
-        appearance: 'error',
-        autoDismiss: true,
-      });
-    } finally {
-      setIsUpdating(false);
-      setToggleWatchlist((prevState) => !prevState);
-    }
-  };
-
-  const onClickDeleteWatchlistBtn = async (): Promise<void> => {
-    setIsUpdating(true);
-    try {
-      const response = await axios.delete<Watchlist>(
-        `/api/v1/watchlist/${id}?mediaType=${mediaType}`
-      );
-
-      if (response.status === 204) {
-        addToast(
-          <span>
-            {intl.formatMessage(messages.watchlistDeleted, {
-              title,
-              strong: (msg: React.ReactNode) => <strong>{msg}</strong>,
-            })}
-          </span>,
-          { appearance: 'info', autoDismiss: true }
-        );
-      }
-    } catch {
-      addToast(intl.formatMessage(messages.watchlistError), {
-        appearance: 'error',
-        autoDismiss: true,
-      });
-    } finally {
-      setIsUpdating(false);
-      mutate('/api/v1/discover/watchlist');
-      if (mutateParent) {
-        mutateParent();
-      }
-      setToggleWatchlist((prevState) => !prevState);
-    }
-  };
-
   return (
     <div
       className={canExpand ? 'w-full' : 'w-36 sm:w-36 md:w-44'}
       data-testid="title-card"
+      data-media-type={mediaType}
+      data-tmdb-id={id}
+      ref={inViewRef}
     >
       <div
         className={`relative transform-gpu cursor-default overflow-hidden rounded-xl bg-gray-800 bg-cover outline-none ring-1 transition duration-300 ${
@@ -200,31 +123,6 @@ const TitleCard = ({
                     : intl.formatMessage(globalMessages.tvshow)}
               </div>
             </div>
-            {showDetail && (
-              <div className="flex flex-col gap-1">
-                {user?.userType !== UserType.PLEX &&
-                  (toggleWatchlist ? (
-                    <Button
-                      buttonType={'ghost'}
-                      className="z-40"
-                      buttonSize={'sm'}
-                      onClick={onClickWatchlistBtn}
-                      title={intl.formatMessage(messages.addToWatchList)}
-                      aria-label={intl.formatMessage(messages.addToWatchList)}
-                    >
-                      <StarIcon className={'h-3 text-amber-300'} />
-                    </Button>
-                  ) : (
-                    <Button
-                      className="z-40"
-                      buttonSize={'sm'}
-                      onClick={onClickDeleteWatchlistBtn}
-                    >
-                      <MinusCircleIcon className={'h-3'} />
-                    </Button>
-                  ))}
-              </div>
-            )}
             {currentStatus && currentStatus !== MediaStatus.UNKNOWN && (
               <div className="flex flex-col items-center gap-1">
                 <div className="pointer-events-none z-40 flex">
@@ -237,21 +135,6 @@ const TitleCard = ({
               </div>
             )}
           </div>
-          <Transition
-            as={Fragment}
-            show={isUpdating}
-            enter="transition-opacity ease-in-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity ease-in-out duration-300"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <div className="absolute inset-0 z-40 flex items-center justify-center rounded-xl bg-gray-800/75 text-white">
-              <Spinner className="h-10 w-10" />
-            </div>
-          </Transition>
-
           <Transition
             as={Fragment}
             show={!image || showDetail}
@@ -278,7 +161,7 @@ const TitleCard = ({
                 }}
               >
                 <div className="flex h-full w-full items-end">
-                  <div className="px-2 pb-2 text-white">
+                  <div className="px-2 pb-14 text-white">
                     {year && <div className="text-sm font-medium">{year}</div>}
 
                     <h1
@@ -311,6 +194,17 @@ const TitleCard = ({
               </Link>
             </div>
           </Transition>
+          {showQuickActions &&
+            (mediaType === 'movie' || mediaType === 'tv') && (
+              <QuickActions
+                mediaType={mediaType}
+                tmdbId={id}
+                title={title}
+                isAddedToWatchlist={!!isAddedToWatchlist}
+                inView={inView}
+                mutateParent={mutateParent}
+              />
+            )}
         </div>
       </div>
     </div>

@@ -4,11 +4,14 @@ import (
 	"bytes"
 	"context"
 	"log/slog"
+	"net/http"
+	"net/http/httptest"
 	"path/filepath"
 	"sync"
 	"testing"
 	"time"
 
+	"github.com/gabrielassisxyz/two-tickets/internal/config"
 	"github.com/gabrielassisxyz/two-tickets/internal/store"
 )
 
@@ -153,5 +156,29 @@ func TestCacheReadinessFailsOnceTheCacheIsClosed(t *testing.T) {
 	}
 	if err := check.Ping(context.Background()); err == nil {
 		t.Fatal("ping a closed cache answered nil")
+	}
+}
+
+// The e2e stack points the api at a TMDB substitute through TMDB_BASE_URL;
+// the one client the process builds must call it, not TMDB.
+func TestTMDBClientCallsTheConfiguredBaseURL(t *testing.T) {
+	var gotPath string
+	substitute := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		gotPath = r.URL.Path
+		_, _ = w.Write([]byte(`{"genres":[]}`))
+	}))
+	t.Cleanup(substitute.Close)
+	cache, err := store.OpenCacheStore(context.Background(), filepath.Join(t.TempDir(), store.CacheFileName))
+	if err != nil {
+		t.Fatal(err)
+	}
+	t.Cleanup(func() { _ = cache.Close() })
+	cfg := config.Config{TMDBAPIKey: config.NewSecret("sentinelsentinelsentinel"), TMDBBaseURL: substitute.URL + "/3"}
+	client := newTMDBClient(cfg, cache, slog.New(slog.DiscardHandler))
+	if _, err := client.GetMovieGenres(context.Background()); err != nil {
+		t.Fatalf("GetMovieGenres through the substitute: %v", err)
+	}
+	if gotPath != "/3/genre/movie/list" {
+		t.Fatalf("the substitute saw %q, want /3/genre/movie/list", gotPath)
 	}
 }

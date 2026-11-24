@@ -34,6 +34,9 @@ type Config struct {
 	TMDBAPIKey Secret
 	// CacheMaxBytes caps cache.db before rotation. See tmdb.go.
 	CacheMaxBytes int64
+	// TMDBBaseURL overrides TMDB's root for the e2e stack only. Empty means
+	// TMDB itself. See tmdb.go.
+	TMDBBaseURL string
 }
 
 // LookupEnv has the signature of os.LookupEnv, so a test can pass a fake environment.
@@ -79,6 +82,13 @@ func Load(lookup LookupEnv) (Config, error) {
 		cfg.CacheMaxBytes = cacheMax
 	}
 
+	baseURL, err := ParseTMDBBaseURL(lookup)
+	if err != nil {
+		problems = append(problems, err)
+	} else {
+		cfg.TMDBBaseURL = baseURL
+	}
+
 	if len(missing) > 0 {
 		problems = append([]error{fmt.Errorf("missing required configuration: %s", strings.Join(missing, ", "))}, problems...)
 	}
@@ -95,6 +105,7 @@ func (c Config) LogValue() slog.Value {
 		slog.String("data_dir", c.DataDir),
 		slog.Any("tmdb_api_key", c.TMDBAPIKey),
 		slog.Int64("tmdb_cache_max_bytes", c.CacheMaxBytes),
+		slog.String("tmdb_base_url", c.TMDBBaseURL),
 	)
 }
 
