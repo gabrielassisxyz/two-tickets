@@ -24,6 +24,9 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=builder /app/.next/standalone ./.next/standalone
+# The image's own unprivileged user: the server only reads its files and
+# writes nothing, so it has no reason to run as root.
+USER node
 EXPOSE 3000
 ENV PORT=3000
 ENV HOSTNAME=0.0.0.0
