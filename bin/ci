@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+# The deterministic gate. CI runs exactly this script, so green here means green in CI.
+# Sections switch on as the code they check lands: the Go checks once go.mod exists,
+# the web checks once web/package.json exists. A section that cannot run yet is skipped,
+# never faked green.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+# Keep Go's and Node's caches off /tmp, which is a tmpfs on the development machine.
+# A CI runner has no /mnt/build and keeps the toolchain defaults.
+build_root=/mnt/build
+if [ -d "$build_root" ] && [ -w "$build_root" ]; then
+    export GOCACHE="$build_root/go-build"
+    export GOTMPDIR="$build_root/go-tmp"
+    export NODE_COMPILE_CACHE="$build_root/node-compile-cache"
+    mkdir -p "$GOTMPDIR"
+fi
+
+echo "==> gitleaks"
+gitleaks git --no-banner --redact .
+
+if [ -f go.mod ]; then
+    echo "==> gofmt"
+    unformatted=$(gofmt -l .)
+    if [ -n "$unformatted" ]; then
+        printf '%s\n' "$unformatted"
+        echo "unformatted Go files; run: gofmt -w ." >&2
+        exit 1
+    fi
+    echo "==> go vet"
+    go vet ./...
+    echo "==> golangci-lint"
+    golangci-lint run
+    echo "==> go test"
+    go test ./...
+    echo "==> govulncheck"
+    govulncheck ./...
+else
+    echo "==> go: skipped (no go.mod yet)"
+fi
+
+if [ -f web/package.json ]; then
+    echo "==> web"
+    (
+        cd web
+        npm ci
+        npm run typecheck
+        npm run lint
+        npm test
+        npm run build
+        npm audit --audit-level=high
+    )
+else
+    echo "==> web: skipped (no web/package.json yet)"
+fi
+
+echo "bin/ci: green"

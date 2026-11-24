@@ -1,0 +1,39 @@
+# >>> repo-harness:gitignore-private-boundary >>>
+# Maintainer notes — not part of the project; they live in the private notes repo,
+# reachable through the `local` symlink. NO trailing slash on any path in this block:
+# a worktree materializes these paths as SYMLINKS, and a `foo/` pattern matches a real
+# directory only — the ignore then keeps working in the main tree and silently fails
+# in every worktree.
+/local
+
+# Environment secrets and the per-machine agent sandbox config. `.env.*` covers the
+# variants a real session produces — `.env.local`, and above all the `.env.bak.<epoch>`
+# an editor or a script leaves behind. One of those sat untracked in a repo for weeks:
+# the pre-commit secret scan only reads what is staged, so a secret nobody stages is a
+# secret nobody scans, and `.env` alone does not match it.
+.env
+.env.*
+!.env.example
+.ai-jail
+# <<< repo-harness:gitignore-private-boundary <<<
+
+# The br tracker stays out of git. Its beads describe deployment steps on the host
+# that runs the app, and nothing host-specific is committed here. bin/worktree links
+# it into every worktree (.worktree-links), so a worktree still sees the same tracker.
+# No trailing slash, for the reason given in the block above.
+.beads
+
+# Per-machine Claude Code settings. .claude/settings.json is tracked: it carries the
+# project-scoped skill packs.
+.claude/settings.local.json
+
+# Build output and local state.
+/dist
+/data
+*.db
+*.db-wal
+*.db-shm
+web/node_modules
+web/.next
+web/out
+coverage
