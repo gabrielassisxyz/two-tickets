@@ -159,7 +159,7 @@
 
 ## Merging
 
-- **Checks first.** Nothing on GitHub enforces the pull request's checks: `gh pr merge` merges a pull request whose check is red or still running. So read them for the commit you pushed: `gh pr view <n> --json headRefOid -q .headRefOid` must equal `git rev-parse HEAD`, and only then does `gh pr checks <n> --watch` answer for that commit.
+- **Checks first.** A ruleset on `main` requires the `ci` check, refuses force pushes and refuses deleting the branch, so `gh pr merge` is refused while `ci` is red or still running, and nothing reaches `main` except through a pull request. Still read the checks for the commit you pushed before merging: `gh pr view <n> --json headRefOid -q .headRefOid` must equal `git rev-parse HEAD`, and only then does `gh pr checks <n> --watch` answer for that commit. The ruleset does not require a branch to be up to date with `main`, so two pull requests merged close together can still leave `main` holding a merge nobody tested.
 - **The sequence.** From the worktree, run `gh pr merge <n> --merge` once `bin/ci` is green and those checks are green. Continue only once `gh pr view <n> --json state -q .state` prints `MERGED`. Then, from the main tree:
   1. `git fetch origin main && git merge --ff-only origin/main`
   2. `git push origin --delete <branch>`
