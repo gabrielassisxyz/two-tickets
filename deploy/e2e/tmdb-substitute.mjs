@@ -56,6 +56,41 @@ const loadFixtures = () => {
 
 const fixtures = loadFixtures();
 
+// The ids the substitute can answer per kind, from the recorded 200s on the
+// base detail paths. Derived fixtures share those paths, and the 404s (for
+// example the invalid-id cases) never count, so a crawl that seeds and
+// filters on this list only visits pages the stack can render.
+const fixtureIds = () => {
+  const ids = {
+    movie: new Set(),
+    tv: new Set(),
+    person: new Set(),
+    collection: new Set(),
+  };
+  for (const fixture of fixtures) {
+    if (fixture.status !== 200) {
+      continue;
+    }
+    let id;
+    if ((id = fixture.path.match(/^\/movie\/(\d+)$/))) {
+      ids.movie.add(Number(id[1]));
+    } else if ((id = fixture.path.match(/^\/tv\/(\d+)$/))) {
+      ids.tv.add(Number(id[1]));
+    } else if ((id = fixture.path.match(/^\/person\/(\d+)$/))) {
+      ids.person.add(Number(id[1]));
+    } else if ((id = fixture.path.match(/^\/collection\/(\d+)$/))) {
+      ids.collection.add(Number(id[1]));
+    }
+  }
+  const sorted = (set) => [...set].sort((a, b) => a - b);
+  return {
+    movie: sorted(ids.movie),
+    tv: sorted(ids.tv),
+    person: sorted(ids.person),
+    collection: sorted(ids.collection),
+  };
+};
+
 const match = (path, params) =>
   fixtures.find((f) => f.path === path && f.params === params) ??
   fixtures.find((f) => f.path === path && f.status === 200);
@@ -66,6 +101,13 @@ http
     const path = url.pathname.startsWith(`${versionPrefix}/`)
       ? url.pathname.slice(versionPrefix.length)
       : url.pathname;
+    if (path === '/__fixtures') {
+      res.setHeader('content-type', 'application/json;charset=utf-8');
+      res.statusCode = 200;
+      res.end(JSON.stringify(fixtureIds()));
+      console.log(JSON.stringify({ path, status: 200 }));
+      return;
+    }
     const found = match(path, paramsKey(Object.fromEntries(url.searchParams)));
     res.setHeader('content-type', 'application/json;charset=utf-8');
     res.statusCode = found ? found.status : 404;
