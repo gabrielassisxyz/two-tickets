@@ -108,6 +108,38 @@ func TestEleventhFailureForOneAddressAndIdentifierIsRateLimited(t *testing.T) {
 	assertRateLimited(t, attemptLogin(svc, "alice", authTestClientA), "the slot was used again")
 }
 
+// CRITERION 3 counts failed logins: a correct password ends the run of failures
+// against that identifier, so legitimate logins never lock the account.
+func TestSuccessfulLoginClearsTheIdentifiersFailures(t *testing.T) {
+	clock := newAuthTestClock()
+	svc, _ := newTestService(t, clock)
+	for i := 1; i < LoginAttemptsPerIdentifier; i++ {
+		if err := attemptLogin(svc, "alice", authTestClientA); !errors.Is(err, ErrInvalidCredentials) {
+			t.Fatalf("failure %d: %v, want invalid credentials", i, err)
+		}
+	}
+	mustLogin(t, svc, "alice", alicePassword)
+	// Without the reset this is the 11th attempt inside the window.
+	if err := attemptLogin(svc, "alice", authTestClientA); !errors.Is(err, ErrInvalidCredentials) {
+		t.Fatalf("first failure after a successful login: %v, want invalid credentials, not a rate limit", err)
+	}
+}
+
+// The per-address ceiling counts attempts, successes included: a login that
+// succeeds clears its own identifier's failures and never the address's budget,
+// which is what bounds guessing across many identifiers.
+func TestSuccessfulLoginKeepsTheAddressBudget(t *testing.T) {
+	clock := newAuthTestClock()
+	svc, _ := newTestService(t, clock)
+	for i := 1; i < LoginAttemptsPerAddress; i++ {
+		if err := attemptLogin(svc, fmt.Sprintf("guess-%d", i), authTestClientA); !errors.Is(err, ErrInvalidCredentials) {
+			t.Fatalf("attempt %d: %v, want invalid credentials", i, err)
+		}
+	}
+	mustLogin(t, svc, "alice", alicePassword)
+	assertRateLimited(t, attemptLogin(svc, "guess-31", authTestClientA), "31st attempt after a successful 30th")
+}
+
 // CRITERION 3: thirty attempts per address, whatever the identifiers.
 func TestThirtyFirstAttemptFromOneAddressIsRateLimited(t *testing.T) {
 	svc, _ := newTestService(t, newAuthTestClock())

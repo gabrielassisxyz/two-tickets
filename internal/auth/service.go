@@ -97,6 +97,7 @@ func (s *Service) Login(ctx context.Context, attempt LoginAttempt) (Session, err
 	if !s.verifyPassword(hash, attempt.Password) || !found {
 		return Session{}, ErrInvalidCredentials
 	}
+	s.limiter.forgetIdentifier(attempt.Client, identifier)
 	if err := s.deleteSession(ctx, attempt.PreviousToken); err != nil {
 		return Session{}, err
 	}

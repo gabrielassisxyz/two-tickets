@@ -41,7 +41,7 @@ func (l *loginRateLimiter) admit(client netip.Addr, identifier string, now time.
 	l.sweepIfDue(now)
 
 	addressKey := client.String()
-	pairKey := addressKey + "\x00" + identifier
+	pairKey := loginPairKey(client, identifier)
 	addressHits := attemptsInsideWindow(l.byAddress[addressKey], now)
 	pairHits := attemptsInsideWindow(l.byPair[pairKey], now)
 	if len(addressHits) >= LoginAttemptsPerAddress {
@@ -56,6 +56,20 @@ func (l *loginRateLimiter) admit(client netip.Addr, identifier string, now time.
 	l.byAddress[addressKey] = append(addressHits, now)
 	l.byPair[pairKey] = append(pairHits, now)
 	return 0, true
+}
+
+// forgetIdentifier drops what one address recorded against one identifier. A
+// correct password proves the account is the caller's, so the failures before
+// it stop counting: the per-identifier limit is on failed logins. The
+// per-address count is kept, because it bounds guessing across identifiers.
+func (l *loginRateLimiter) forgetIdentifier(client netip.Addr, identifier string) {
+	l.mu.Lock()
+	defer l.mu.Unlock()
+	delete(l.byPair, loginPairKey(client, identifier))
+}
+
+func loginPairKey(client netip.Addr, identifier string) string {
+	return client.String() + "\x00" + identifier
 }
 
 // sweepIfDue drops every key with no attempt left inside the window, at most
