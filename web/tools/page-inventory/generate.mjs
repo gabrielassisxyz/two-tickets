@@ -19,7 +19,13 @@ export const DROP = 'drop';
 const rules = [
   {
     match: (p) =>
-      ['404.tsx', '_document.tsx', '_error.tsx', 'index.tsx', 'search.tsx'].includes(p),
+      [
+        '404.tsx',
+        '_document.tsx',
+        '_error.tsx',
+        'index.tsx',
+        'search.tsx',
+      ].includes(p),
     cls: KEEP,
     reason: 'standalone catalogue page, kept as is',
   },
@@ -35,7 +41,9 @@ const rules = [
   },
   {
     match: (p) =>
-      /^(movie\/\[movieId\]|tv\/\[tvId\])\/(cast|crew|recommendations|similar)\.tsx$/.test(p),
+      /^(movie\/\[movieId\]|tv\/\[tvId\])\/(cast|crew|recommendations|similar)\.tsx$/.test(
+        p
+      ),
     cls: KEEP,
     reason: 'title subpage, kept as is',
   },
@@ -45,7 +53,8 @@ const rules = [
     reason: 'app shell, modified for the two fixed accounts',
   },
   {
-    match: (p) => p === 'movie/[movieId]/index.tsx' || p === 'tv/[tvId]/index.tsx',
+    match: (p) =>
+      p === 'movie/[movieId]/index.tsx' || p === 'tv/[tvId]/index.tsx',
     cls: MODIFY,
     reason: 'title page, modified to call the local api',
   },
@@ -68,9 +77,15 @@ const rules = [
   },
   {
     match: (p) =>
-      ['blocklist/', 'issues/', 'requests/', 'resetpassword/', 'settings/', 'users/', 'profile/'].some(
-        (prefix) => p.startsWith(prefix),
-      ),
+      [
+        'blocklist/',
+        'issues/',
+        'requests/',
+        'resetpassword/',
+        'settings/',
+        'users/',
+        'profile/',
+      ].some((prefix) => p.startsWith(prefix)),
     cls: DROP,
     reason: 'request and user management, not ported',
   },
@@ -155,7 +170,9 @@ if (isMain) {
     }
   }
   if (failed) {
-    console.error('refused to write inventory.json: classify every page above first');
+    console.error(
+      'refused to write inventory.json: classify every page above first'
+    );
     process.exit(1);
   }
   entries.sort((a, b) => (a.path < b.path ? -1 : a.path > b.path ? 1 : 0));
