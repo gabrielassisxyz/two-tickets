@@ -1,0 +1,461 @@
+{
+  "id": "tv/similar",
+  "request": {
+    "path": "/tv/249042/similar",
+    "params": {
+      "language": "pt-BR",
+      "page": "1"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "page": 1,
+      "results": [
+        {
+          "adult": false,
+          "backdrop_path": "/d7cH4zt3xoqRQnLqYXMPOrUz5k3.jpg",
+          "genre_ids": [
+            80,
+            18,
+            9648
+          ],
+          "id": 873,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Columbo",
+          "overview": "Columbo é uma premiada série policial dos anos 1970 estrelada pelo ator Peter Falk. A série revolucionou as histórias de detetives.\n\nAo contrário do que geralmente ocorre em filmes policiais, cada episódio sempre começa mostrando claramente quem é o assassino, e os pormenores de como cometeu o homicídio. Todos os crimes da série têm um ponto em comum: o criminoso monta um alibi que parece perfeito.\n\nDepois entra em cena Columbo (o seu primeiro nome nunca foi revelado), um tenente da Divisão de Homicídios da Polícia de Los Angeles, sempre vestindo um jaleco de gabardine surrado e dirigindo um carro velho, um Peugeot. Embora fale sempre na mulher e em um sobrinho, estes não aparecem nunca.\n\nColumbo é educado e faz de tudo para não ofender os suspeitos e, aparentemente dispersivo, dá a impressão que não tem a mínima chance de resolver o crime. Passa ao assassino uma falsa sensação de segurança, pois faz perguntas tolas e sem pretensões. Apesar disso, aos poucos e metodicamente, junta os pedaços do quebra-cabeça a partir dos mínimos detalhes e sempre consegue desmontar o álibi e desvendar o crime, para espanto do assassino. Resolve os crimes pela lógica.",
+          "popularity": 102.181,
+          "poster_path": "/2JCD8vab3fircOU8cM2HJCxfv4I.jpg",
+          "first_air_date": "1971-09-15",
+          "softcore": false,
+          "name": "Columbo",
+          "vote_average": 8.051,
+          "vote_count": 896
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/w6DMGvQLAplYivUJlCsv8BEc70C.jpg",
+          "genre_ids": [
+            35,
+            18,
+            80
+          ],
+          "id": 312972,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Oliver Hollywood",
+          "overview": "",
+          "popularity": 1.4759,
+          "poster_path": "/gRPsV975BzIOMCAwXjk3pTDGVD2.jpg",
+          "first_air_date": "2026-01-31",
+          "softcore": false,
+          "name": "Oliver Hollywood",
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/pQC84aWQziIAngmK9gvyZAzGf9S.jpg",
+          "genre_ids": [
+            18
+          ],
+          "id": 312978,
+          "origin_country": [
+            "CZ"
+          ],
+          "original_language": "cs",
+          "original_name": "Filter",
+          "overview": "",
+          "popularity": 1.7068,
+          "poster_path": "/oNESXfQ357ui5L7FPPmXsazOIsm.jpg",
+          "first_air_date": "2026-09-01",
+          "softcore": false,
+          "name": "Filter",
+          "vote_average": 7,
+          "vote_count": 6
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/9FsIQ9q71GRRjzc1GqUDyN1XyCQ.jpg",
+          "genre_ids": [
+            80,
+            9648
+          ],
+          "id": 95101,
+          "origin_country": [
+            "JP"
+          ],
+          "original_language": "ja",
+          "original_name": "悪の波動 殺人分析班スピンオフ",
+          "overview": "",
+          "popularity": 1.5119,
+          "poster_path": "/v0EL2dZHgklsgtUrZPdmfk6BlVK.jpg",
+          "first_air_date": "2019-10-06",
+          "softcore": false,
+          "name": "悪の波動 殺人分析班スピンオフ",
+          "vote_average": 7.5,
+          "vote_count": 6
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/fz79I6gdsZrznSv3ERwpqqpxWM9.jpg",
+          "genre_ids": [
+            18,
+            35
+          ],
+          "id": 95123,
+          "origin_country": [
+            "FR"
+          ],
+          "original_language": "fr",
+          "original_name": "Mental",
+          "overview": "",
+          "popularity": 2.2403,
+          "poster_path": "/nb7JNNyvXFFhwL3QKjrHAUsZD6s.jpg",
+          "first_air_date": "2019-10-25",
+          "softcore": false,
+          "name": "Mental",
+          "vote_average": 8.4,
+          "vote_count": 12
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wzwNgclb07JYK3zkmdPeWmwvgeb.jpg",
+          "genre_ids": [
+            35,
+            18
+          ],
+          "id": 29954,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "The Man Who Made Husbands Jealous",
+          "overview": "",
+          "popularity": 2.0666,
+          "poster_path": "/8KuBjqyz7arCdLIl4T4Chw1iDbn.jpg",
+          "first_air_date": "1997-06-06",
+          "softcore": false,
+          "name": "The Man Who Made Husbands Jealous",
+          "vote_average": 3.7,
+          "vote_count": 3
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/a8qbQkYirMNE6qCEnaqapPeJwhB.jpg",
+          "genre_ids": [
+            99,
+            80,
+            18
+          ],
+          "id": 95302,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "Stalkers Who Kill",
+          "overview": "",
+          "popularity": 0.3723,
+          "poster_path": "/z0PgxZbhazDStsItGdsoH544utz.jpg",
+          "first_air_date": "2016-03-06",
+          "softcore": false,
+          "name": "Stalkers Who Kill",
+          "vote_average": 3,
+          "vote_count": 2
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            18
+          ],
+          "id": 29989,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "The Kennedys of Massachusetts",
+          "overview": "",
+          "popularity": 1.7685,
+          "poster_path": "/tlq0zbIyCZsYh6irlW60sGohjCy.jpg",
+          "first_air_date": "1990-02-18",
+          "softcore": false,
+          "name": "The Kennedys of Massachusetts",
+          "vote_average": 7.8,
+          "vote_count": 5
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7QYA3tXXX4mwAZwFjv6KBnYaaWO.jpg",
+          "genre_ids": [
+            18,
+            99,
+            80
+          ],
+          "id": 61277,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Murder in Paradise",
+          "overview": "",
+          "popularity": 0.3197,
+          "poster_path": "/s35138MEluePD5t9Ues8axMNIkX.jpg",
+          "first_air_date": "2013-04-13",
+          "softcore": false,
+          "name": "Murder in Paradise",
+          "vote_average": 7.5,
+          "vote_count": 6
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "genre_ids": [
+            9648,
+            18,
+            80
+          ],
+          "id": 61290,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "Devices and Desires",
+          "overview": "",
+          "popularity": 2.5908,
+          "poster_path": "/xAVIUwvGXGm1oOjygGlgSuSP2Wq.jpg",
+          "first_air_date": "1991-01-04",
+          "softcore": false,
+          "name": "Devices and Desires",
+          "vote_average": 6.6,
+          "vote_count": 7
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wnyMAP1Xep5BUwTqMq2KBHjRHws.jpg",
+          "genre_ids": [
+            18,
+            10766
+          ],
+          "id": 1021,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "Casualty",
+          "overview": "Casualty, é uma série de drama médica britânica que se transmite semanalmente na BBC One (às vezes com uma curta interrupção no verão entre séries, mas nem sempre). É a série de televisão de drama médica de emergência mais longa do mundo, e o drama médico mais duradouro mostrado na televisão no horário nobre do mundo. Criado por Jeremy Brock e Paul Unwin, foi transmitida pela primeira vez no Reino Unido na BBC One em 6 de setembro de 1986. O produtor original era Geraint Morris.\n\nO programa está estabelecido no hospital fictício da Holby City e concentra-se na equipe e nos pacientes do Departamento de Acidentes e Emergências do hospital. O show tem muito poucos laços com seu programa irmão Holby City, que começou como spin-off de Casualty em 1999, no mesmo hospital. Casualty é mostrado semanalmente em uma noite de sábado, que tem sido seu intervalo de tempo desde o início dos anos 90.\n\nAs externas de Casualty foram filmadas principalmente fora do Ashley Down Center, em Bristol, de 1986 a 2002, quando se mudaram para o centro de Bristol por pouco mais de nove anos. Em 2011, Casualty comemorou seu 25º aniversário; Depois disso, para o final de Bristol, eles filmaram o departamento de Emergência pegando fogo e, posteriormente, explodindo. Depois de 25 anos em Bristol, Casualty mudou-se para sua nova casa no Roath Lock Studios, em Cardiff, onde está atualmente filmado.\n\nO milésimo episódio de Casualty foi exibido em 25 de junho de 2016. Um episódio de longa duração do 30º aniversário de Casualty foi exibido em 27 de agosto de 2016, episódio 1 da série 31. Para o final da série 31, o criador Paul Unwin voltou a escrever um especial episódio que foi totalmente gravado em uma tomada usando apenas uma câmera, cinco operadores de boom e quarenta microfones.",
+          "popularity": 83.1406,
+          "poster_path": "/ahqMUNIUeGIBQSkShEV32085IFZ.jpg",
+          "first_air_date": "1986-09-06",
+          "softcore": false,
+          "name": "Casualty",
+          "vote_average": 6.233,
+          "vote_count": 88
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/9a8x7uScSahUtFcpX4yawIUM2Bm.jpg",
+          "genre_ids": [
+            35,
+            18
+          ],
+          "id": 1023,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "Blackpool",
+          "overview": "",
+          "popularity": 6.085,
+          "poster_path": "/nTfqEIqtMbehNWXliWXmu4Ki1E1.jpg",
+          "first_air_date": "2004-11-11",
+          "softcore": false,
+          "name": "Blackpool",
+          "vote_average": 6.9,
+          "vote_count": 29
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/indMShlMwOFyUA9x4SNHUm4ubwF.jpg",
+          "genre_ids": [
+            18,
+            10768
+          ],
+          "id": 61241,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "The Crimson Field",
+          "overview": "",
+          "popularity": 3.3782,
+          "poster_path": "/gFHTFvCaR9cdMYXLCaGzB3LkHtW.jpg",
+          "first_air_date": "2014-04-06",
+          "softcore": false,
+          "name": "The Crimson Field",
+          "vote_average": 7.5,
+          "vote_count": 30
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/rV1c8abChfUaZEmS0LCLRE9zTvG.jpg",
+          "genre_ids": [
+            18
+          ],
+          "id": 61245,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "Jamaica Inn",
+          "overview": "",
+          "popularity": 2.4642,
+          "poster_path": "/3SZ2TSpaVIRJG8FNDsX7HLZlE5q.jpg",
+          "first_air_date": "2014-04-21",
+          "softcore": false,
+          "name": "Jamaica Inn",
+          "vote_average": 6.5,
+          "vote_count": 31
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/rGFreUpEsrl2hYVSMmUub4Ajt5g.jpg",
+          "genre_ids": [
+            18
+          ],
+          "id": 61247,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "Secret State",
+          "overview": "",
+          "popularity": 3.3017,
+          "poster_path": "/igowmLbw204dSRb8Aut7iD4v1hw.jpg",
+          "first_air_date": "2012-11-07",
+          "softcore": false,
+          "name": "Secret State",
+          "vote_average": 7.058,
+          "vote_count": 60
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7vA3fSVrZ4YbvvAue6EIxcS5fgE.jpg",
+          "genre_ids": [
+            18
+          ],
+          "id": 61251,
+          "origin_country": [
+            "GB"
+          ],
+          "original_language": "en",
+          "original_name": "Our World War",
+          "overview": "",
+          "popularity": 2.8979,
+          "poster_path": "/2IlaZm6UCbaXNDaEbo4YqcYObHb.jpg",
+          "first_air_date": "2014-08-07",
+          "softcore": false,
+          "name": "Our World War",
+          "vote_average": 7.6,
+          "vote_count": 26
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8v2hM6n6TuITPfT5Mhb66hpBQFL.jpg",
+          "genre_ids": [
+            18,
+            10751
+          ],
+          "id": 60803,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Chasing Life",
+          "overview": "April é uma esperta jornalista em seus 20 anos que tenta equilibrar sua ambiciosa carreira com sua família, que inclui sua mãe viúva, sua irmãzinha rebelde e sua avó. Conhecemos April em um momento crucial de sua vida: ela conseguiu uma oportunidade fantástica de impressionar seu durão editor de jornal de Boston e um romance no escritório com sua super sexy colega de trabalho, Dominic está apenas começando a florescer. Em uma reviravolta inesperada do destino, April aterrissa no hospital onde seu distante tio George trabalha como oncologista, e ela descobre a notícia devastadora de que ela tem câncer. A série segue abril através de sua jornada em face desta revelação assustadora, durante um tempo em sua vida em que os desafios de encontrar amor e sucesso seriam suficientes para manter qualquer garota ocupada. Mas April está determinada a lutar e se recusa a desistir de seus sonhos e objetivos.",
+          "popularity": 10.5157,
+          "poster_path": "/divzwWoDznYdqn0FtwyPuQfacg6.jpg",
+          "first_air_date": "2014-06-10",
+          "softcore": false,
+          "name": "Lutando Pela Vida",
+          "vote_average": 7.2,
+          "vote_count": 57
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/yIdNvXqRj76mTUgNLsq97IWdXLR.jpg",
+          "genre_ids": [
+            10759,
+            18,
+            80
+          ],
+          "id": 244207,
+          "origin_country": [
+            "SE"
+          ],
+          "original_language": "sv",
+          "original_name": "Helikopterrånet",
+          "overview": "Dois amigos de infância decidem embarcar em um último assalto: roubar milhões do cofre mais seguro da Suécia. Só que a polícia já está na cola deles.",
+          "popularity": 4.1914,
+          "poster_path": "/wPMXlAIG1ogIAMZ7nhsZaqgxFwE.jpg",
+          "first_air_date": "2024-11-22",
+          "softcore": false,
+          "name": "Voo Criminoso",
+          "vote_average": 7.029,
+          "vote_count": 52
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/nW3mSVpxaS8uNlny2mdTLAFnEmt.jpg",
+          "genre_ids": [
+            18,
+            10768
+          ],
+          "id": 60875,
+          "origin_country": [
+            "FR"
+          ],
+          "original_language": "fr",
+          "original_name": "Résistance",
+          "overview": "",
+          "popularity": 3.3793,
+          "poster_path": "/k3R90ujL8czXSRwg35WlEVrKf1z.jpg",
+          "first_air_date": "2014-05-19",
+          "softcore": false,
+          "name": "Résistance",
+          "vote_average": 8,
+          "vote_count": 9
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/u6uy1J66TB9CIQ688Ctv2koaSM7.jpg",
+          "genre_ids": [
+            35,
+            18
+          ],
+          "id": 211971,
+          "origin_country": [
+            "TH"
+          ],
+          "original_language": "th",
+          "original_name": "เดือนเกี้ยวเดือน",
+          "overview": "",
+          "popularity": 0.9165,
+          "poster_path": "/senGc6b2xSrpAmSFuWhBm3EGTmP.jpg",
+          "first_air_date": "2022-10-10",
+          "softcore": false,
+          "name": "เดือนเกี้ยวเดือน",
+          "vote_average": 6,
+          "vote_count": 3
+        }
+      ],
+      "total_pages": 1001,
+      "total_results": 20001
+    }
+  }
+}

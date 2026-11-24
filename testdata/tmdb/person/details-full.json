@@ -1,0 +1,30 @@
+{
+  "id": "person/details-full",
+  "request": {
+    "path": "/person/52583",
+    "params": {
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "adult": false,
+      "also_known_as": [
+        "Wagner Maniçoba de Moura"
+      ],
+      "biography": "Wagner Maniçoba de Moura é um ator, diretor e músico brasileiro. Considerado pela crítica um dos protagonistas do atual cinema brasileiro. É reconhecido internacionalmente pelo papel de Pablo Escobar na série de TV Narcos e Nacionalmente conhecido pelo papel de Capitão Nascimento no filme de TV Tropa de Elite e Tropa de Elite 2: O Inimigo Agora é Outro. Começou fazendo teatro em Salvador, onde trabalhou com diretores consagrados, a exemplo de Fernando Guerreiro e Celso Júnior, e logo teve algumas participações em filmes. Em 2003, estrelou em Deus é Brasileiro, além de ter tido papel de destaque em Carandiru. Em 2025, protagonizou “O Agente Secreto” de Kleber Mendonça Filho, pelo qual ganhou o prêmio de Melhor Ator no Festival de Cannes.",
+      "birthday": "1976-06-27",
+      "deathday": null,
+      "gender": 2,
+      "homepage": null,
+      "id": 52583,
+      "imdb_id": "nm0609944",
+      "known_for_department": "Acting",
+      "name": "Wagner Moura",
+      "place_of_birth": "Rodelas, Bahia, Brazil",
+      "popularity": 2.5914,
+      "profile_path": "/53IbAed4t1dOWxY3iygbRYZBBnm.jpg"
+    }
+  }
+}

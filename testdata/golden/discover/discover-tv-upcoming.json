@@ -1,0 +1,436 @@
+{
+  "case": "discover-tv-upcoming",
+  "family": "discover",
+  "request": "GET /api/v1/discover/tv/upcoming?page=1",
+  "fixtures": [
+    "discover/tv-upcoming"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 21,
+    "totalResults": 405,
+    "results": [
+      {
+        "id": 171802,
+        "firstAirDate": "2026-11-24",
+        "genreIds": [
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Blade Runner 2099",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Blade Runner 2099",
+        "overview": "Cinquenta anos após os acontecimentos de Blade Runner 2049, Los Angeles renasceu, mas não graças a humanidade. Cora, uma fugitiva determinada a abandonar de vez sua vida em fuga, assume uma última identidade: a de uma Blade Runner. Obrigada a trabalhar ao lado de Olwen, uma Replicante que tem apenas alguns dias de vida, ela parte à caça de um foragido que guarda um segredo capaz de destruir o frágil equilíbrio da cidade.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/7UAUa3qQBtm7Z07d2BwiBPGBGbe.jpg",
+        "posterPath": "/8Huo5JEmtKV03VTzq50lYVDbD4N.jpg"
+      },
+      {
+        "id": 224377,
+        "firstAirDate": "2026-12-25",
+        "genreIds": [
+          10765,
+          10759
+        ],
+        "mediaType": "tv",
+        "name": "Harry Potter",
+        "originCountry": [
+          "GB",
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Harry Potter",
+        "overview": "Esta série explora todos os cantos do mundo mágico, levando as incríveis aventuras de Harry Potter para públicos novos e antigos.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/8ETWSVaRiNGst4LUNZHiQ9J2bJV.jpg",
+        "posterPath": "/t43BlBqDZFQD4Gs5PYLPG0azTXB.jpg"
+      },
+      {
+        "id": 215528,
+        "firstAirDate": "2027-01-21",
+        "genreIds": [
+          10765,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Neuromancer",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Neuromancer",
+        "overview": "Um super-hacker arruinado e uma assassina letal são recrutados para uma missão arriscada: roubar uma poderosa dinastia corporativa que tem uma fortuna incalculável... e segredos que eles matariam para proteger.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/spJlfBUUFHaaJCpTSYEpf8wx79p.jpg",
+        "posterPath": "/iqgZcf5g0KfyAXqyANNun9k2Asg.jpg"
+      },
+      {
+        "id": 288672,
+        "firstAirDate": "2026-12-03",
+        "genreIds": [
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Orgulho e Preconceito",
+        "originCountry": [
+          "GB"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Pride and Prejudice",
+        "overview": "As primeiras impressões dão lugar a algo mais profundo entre Elizabeth Bennet e Sr. Darcy nesta adaptação fiel e atual do romance clássico.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/yeoijfjaZkx17Pcw2jsrz7pU0a7.jpg",
+        "posterPath": "/nqm2DnxpdOevMWExZO3kiDSRMJq.jpg"
+      },
+      {
+        "id": 331962,
+        "firstAirDate": "2026-12-01",
+        "genreIds": [
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Skimmer",
+        "originCountry": [
+          "NO"
+        ],
+        "originalLanguage": "no",
+        "originalName": "Skimmer",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/tEAvrAaiFzhYTVy41zFBE437SNg.jpg",
+        "posterPath": null
+      },
+      {
+        "id": 310209,
+        "firstAirDate": "2026-11-25",
+        "genreIds": [
+          18,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Nove às Seis",
+        "originCountry": [
+          "KR"
+        ],
+        "originalLanguage": "ko",
+        "originalName": "나인 투 식스",
+        "overview": "Acusada de incendiar um carro, Kang Yi-ji, gerente da Chronic Motors, pode perder seu cargo. Será possível encontrar amor e felicidade no trabalho?",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/vRuayyRqPoxFCq2xwAc2hsJqonm.jpg",
+        "posterPath": "/wRKzSp3u0SWqs4dihRttb8rJ1FW.jpg"
+      },
+      {
+        "id": 256726,
+        "firstAirDate": "2026-12-11",
+        "genreIds": [
+          18,
+          10768
+        ],
+        "mediaType": "tv",
+        "name": "O Espetáculo Vai Começar",
+        "originCountry": [
+          "KR"
+        ],
+        "originalLanguage": "ko",
+        "originalName": "천천히 강렬하게",
+        "overview": "O mundo do entretenimento coreano manteve as luzes acesas e o sonho vivo mesmo diante de obstáculos. Aqui, todos querem alcançar a glória.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/nlBosA3PFD3UwUCe5LHkKLLOzNT.jpg",
+        "posterPath": "/733Vm8e0bzUbjbDuATgR4Ol7vqd.jpg"
+      },
+      {
+        "id": 296244,
+        "firstAirDate": "2026-12-18",
+        "genreIds": [
+          80,
+          18,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Frisco King",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Frisco King",
+        "overview": "O gângster de Nova Orleans, Russell Lee Washington Jr., chega a Frisco, no Texas, onde transforma pequenos golpes em um grande negócio, com a ajuda de um protegido ambicioso, um motorista leal e uma rede crescente de parceiros excêntricos.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/4rBugdmBu7ZgrWnh5Gp5qgwvdQ.jpg",
+        "posterPath": "/9wNdTWthGpTZZaOBKlO07pK77pU.jpg"
+      },
+      {
+        "id": 326247,
+        "firstAirDate": "2026-11-26",
+        "genreIds": [
+          16,
+          18,
+          10765,
+          9648
+        ],
+        "mediaType": "tv",
+        "name": "Fool Night",
+        "originCountry": [
+          "JP",
+          "US"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "フールナイト",
+        "overview": "Em um futuro sem sol no qual os humanos viram plantas para produzir oxigênio, um jovem desesperado passa pela transformação e descobre uma conspiração.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/etpkY4qjoAGaTm1RbvvEIXDvfhT.jpg",
+        "posterPath": "/vTTr4YG3qIUq6E5uahU0fWSWch7.jpg"
+      },
+      {
+        "id": 258862,
+        "firstAirDate": "2026-12-05",
+        "genreIds": [
+          18,
+          10759
+        ],
+        "mediaType": "tv",
+        "name": "Joia Sagrada",
+        "originCountry": [
+          "KR"
+        ],
+        "originalLanguage": "ko",
+        "originalName": "신의 구슬",
+        "overview": "Em 1258, com a derrota iminente após quase 30 anos de guerra contra os mongóis, o imperador de Goryeo ordena o resgate da Jóia Sagrada de Avalokitesvara. Uma unidade Yabyeolcho deixa Gangdo em busca dessa última esperança e atravessa terras devastadas e montanhas, fugindo das forças mongóis. Ao chegar ao continente, encontram Goryeo devastada e são perseguidos pela unidade mais letal de mongóis.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/jipUHhBGg2V4rccO0yIbl4er62Y.jpg",
+        "posterPath": "/bDQVBOWSUUXcweSQhCPmWM97xtB.jpg"
+      },
+      {
+        "id": 312580,
+        "firstAirDate": "2026-11-28",
+        "genreIds": [
+          18,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "รัก ลืม ตาย",
+        "originCountry": [
+          "TH"
+        ],
+        "originalLanguage": "th",
+        "originalName": "รัก ลืม ตาย",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/6VL0mGo5cwe1ZCTBZOFUbasxN1Y.jpg",
+        "posterPath": "/5YK56FJUxIijz63dnlrJyZcn4cZ.jpg"
+      },
+      {
+        "id": 294607,
+        "firstAirDate": "2026-12-01",
+        "genreIds": [
+          18,
+          10768,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "Trinity",
+        "originCountry": [
+          "GB",
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Trinity",
+        "overview": "Uma oficial da marinha se envolve com o carismático secretário de defesa, mas descobre que ele pode fazer parte de uma conspiração perigosa.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/d6t09reR7JH0EUQfACa2846REo8.jpg",
+        "posterPath": "/4V1DsqIwLmEKsgfzQayDF60eRYc.jpg"
+      },
+      {
+        "id": 270596,
+        "firstAirDate": "2026-12-10",
+        "genreIds": [
+          18,
+          80
+        ],
+        "mediaType": "tv",
+        "name": "O Assassinato de JonBenét Ramsey",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Murder of JonBenét Ramsey",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/q12hmkA73LaOSHrrexpMbE2UcV6.jpg",
+        "posterPath": null
+      },
+      {
+        "id": 337425,
+        "firstAirDate": "2026-12-01",
+        "genreIds": [],
+        "mediaType": "tv",
+        "name": "I Nissernes Tjeneste",
+        "originCountry": [
+          "DK"
+        ],
+        "originalLanguage": "da",
+        "originalName": "I Nissernes Tjeneste",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/uc2koR4Wovr6Ds93bbBtPGqMc1P.jpg",
+        "posterPath": "/qivSSkxTUIyjXN9VDxnrdaEsQi3.jpg"
+      },
+      {
+        "id": 291074,
+        "firstAirDate": "2026-12-17",
+        "genreIds": [
+          16,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Ted: A Série Animada",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "ted: the animated series",
+        "overview": "Depois de dois filmes e uma série que mostrou a dupla nos anos 90, Ted e John voltam em uma animação adulta de Seth MacFarlane. Agora que Ted tem uma família, ele precisa aprender a ser pai sem abrir mão de fazer besteira com o melhor amigo.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/3PVZZh61kTw784zjmtneyk6MxNp.jpg",
+        "posterPath": "/196N6Cle1lJCM0JJa3FctcLugex.jpg"
+      },
+      {
+        "id": 302987,
+        "firstAirDate": "2026-12-05",
+        "genreIds": [
+          10765,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "기프트",
+        "originCountry": [
+          "KR"
+        ],
+        "originalLanguage": "ko",
+        "originalName": "기프트",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/fZd9fYe0ie8nz81v8usjkEV88yU.jpg",
+        "posterPath": "/w3NxDgY72aQ8AphxUPGGH5rd2RV.jpg"
+      },
+      {
+        "id": 243214,
+        "firstAirDate": "2027-01-13",
+        "genreIds": [
+          80,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Criminal - Herança do Crime",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Criminal",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/cRrkgywOQU3q09ONVq8BkHHqeuu.jpg",
+        "posterPath": "/qsS3xGLmNAlElDNs2B89QABCgMx.jpg"
+      },
+      {
+        "id": 283220,
+        "firstAirDate": "2026-12-17",
+        "genreIds": [
+          10765,
+          10759,
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Quiztopia",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "国民クイズ",
+        "overview": "Em um Japão alternativo, um apresentador comanda um teste letal, em que os vencedores fazem pedidos e os perdedores pagam caro. Até que ele vira alvo de rebeldes.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/lHJnbocsJXA0nwxdpnLpPrNePFJ.jpg",
+        "posterPath": "/3L8El6VH4CL1pdz9JgnGsHXeGra.jpg"
+      },
+      {
+        "id": 274395,
+        "firstAirDate": "2027-02-15",
+        "genreIds": [
+          18
+        ],
+        "mediaType": "tv",
+        "name": "The Land: Além do Jogo",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Land",
+        "overview": "Após várias temporadas decepcionantes, o treinador do Cleveland Browns, Danny Roarke, tem uma última chance para reerguer o time. O destino dele está nas mãos de um novo Quarterback da Ohio State que, por acaso, é seu filho.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/pghdnNj2hSy3Eht3cAKu1PW5hon.jpg",
+        "posterPath": "/kNXCdnIlg5KY1FXh7s9ulhwb6Rq.jpg"
+      },
+      {
+        "id": 248172,
+        "firstAirDate": "2027-01-07",
+        "genreIds": [
+          18
+        ],
+        "mediaType": "tv",
+        "name": "Baywatch",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Baywatch",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/6s25WseOcAnlrL9kav1i0moozG4.jpg",
+        "posterPath": "/rZl6qtrjklEOhT5XmyxQFKhFEcZ.jpg"
+      }
+    ]
+  }
+}

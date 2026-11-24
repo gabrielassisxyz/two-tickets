@@ -1,0 +1,48 @@
+{
+  "case": "discover-genreslider-tv",
+  "family": "discover",
+  "request": "GET /api/v1/discover/genreslider/tv",
+  "fixtures": [
+    "genre/tv-list-slider",
+    "discover/tv-slider-backdrops-0",
+    "discover/tv-slider-backdrops-1",
+    "discover/tv-slider-backdrops-4",
+    "discover/tv-slider-backdrops-5"
+  ],
+  "status": 200,
+  "body": [
+    {
+      "id": 10759,
+      "name": "Action & Adventure",
+      "backdrops": []
+    },
+    {
+      "id": 16,
+      "name": "Animação",
+      "backdrops": [
+        "/jbTqU6BJMufoMnPSlO4ThrcXs3Y.jpg"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Comédia",
+      "backdrops": [
+        "/jbTqU6BJMufoMnPSlO4ThrcXs3Y.jpg",
+        "/5MWFjQ3NuNtNeOE9FdrVLeNMNPs.jpg",
+        "/jIArNHIekrCSVgdMbKPAXpPY03Y.jpg",
+        "/yYpQV25I7XB6S0POJOScPjxYWV5.jpg"
+      ]
+    },
+    {
+      "id": 80,
+      "name": "Crime",
+      "backdrops": [
+        "/jbTqU6BJMufoMnPSlO4ThrcXs3Y.jpg",
+        "/5MWFjQ3NuNtNeOE9FdrVLeNMNPs.jpg",
+        "/jIArNHIekrCSVgdMbKPAXpPY03Y.jpg",
+        "/yYpQV25I7XB6S0POJOScPjxYWV5.jpg",
+        "/5k3JpB88vubqYVSHHiAhk2T8z17.jpg"
+      ]
+    }
+  ]
+}

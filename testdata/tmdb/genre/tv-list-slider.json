@@ -1,0 +1,32 @@
+{
+  "id": "genre/tv-list-slider",
+  "request": {
+    "path": "/genre/tv/list",
+    "params": {
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "genres": [
+        {
+          "id": 10759,
+          "name": "Action & Adventure"
+        },
+        {
+          "id": 16,
+          "name": "Animação"
+        },
+        {
+          "id": 35,
+          "name": "Comédia"
+        },
+        {
+          "id": 80,
+          "name": "Crime"
+        }
+      ]
+    }
+  }
+}

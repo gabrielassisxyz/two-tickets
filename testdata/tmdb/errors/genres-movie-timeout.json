@@ -1,0 +1,12 @@
+{
+  "id": "errors/genres-movie-timeout",
+  "request": {
+    "path": "/genre/movie/list",
+    "params": {
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "error": "timeout"
+  }
+}

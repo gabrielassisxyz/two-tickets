@@ -1,0 +1,21 @@
+{
+  "id": "errors/search-year-prefix-tv-500",
+  "request": {
+    "path": "/search/tv",
+    "params": {
+      "first_air_date_year": "1994",
+      "include_adult": "false",
+      "language": "en",
+      "page": "1",
+      "query": "friends "
+    }
+  },
+  "response": {
+    "status": 500,
+    "body": {
+      "success": false,
+      "status_code": 11,
+      "status_message": "Internal error: Something went wrong, contact TMDB."
+    }
+  }
+}

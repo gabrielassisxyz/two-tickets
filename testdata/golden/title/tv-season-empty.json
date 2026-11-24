@@ -1,0 +1,25 @@
+{
+  "case": "tv-season-empty",
+  "family": "title",
+  "request": "GET /api/v1/tv/125164/season/0",
+  "fixtures": [
+    "tv/details-en-null-stills",
+    "tv/season-empty"
+  ],
+  "status": 200,
+  "body": {
+    "airDate": null,
+    "episodes": [],
+    "externalIds": {
+      "freebaseId": null,
+      "freebaseMid": null,
+      "tvdbId": null,
+      "tvrageId": null
+    },
+    "id": 202876,
+    "name": "Especiais",
+    "overview": "",
+    "seasonNumber": 0,
+    "posterPath": null
+  }
+}

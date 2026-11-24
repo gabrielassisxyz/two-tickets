@@ -1,0 +1,434 @@
+{
+  "id": "discover/movies-language-pt",
+  "request": {
+    "path": "/discover/movie",
+    "params": {
+      "include_adult": "false",
+      "include_video": "true",
+      "language": "pt-BR",
+      "page": "1",
+      "region": "BR",
+      "sort_by": "popularity.desc",
+      "with_original_language": "pt"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "page": 1,
+      "results": [
+        {
+          "adult": false,
+          "backdrop_path": "/tTevcc0y0EQLeEyg4aMsrGyy7NO.jpg",
+          "genre_ids": [
+            18
+          ],
+          "id": 1307474,
+          "title": "Vicentina Pede Desculpas",
+          "original_language": "pt",
+          "original_title": "Vicentina Pede Desculpas",
+          "overview": "Uma mulher que, aos 75 anos, tem de encarar a morte (e potencial suicídio) de seu filho motorista de ônibus e todos os passageiros, após o ônibus lotado cair de um viaduto. Vicentina decide embarcar em uma jornada para procurar as famílias das vítimas para pedir desculpas.",
+          "popularity": 23.5518,
+          "poster_path": "/v6JBUlm6nIYx3ixF38I5ZVpQZgq.jpg",
+          "release_date": "2026-11-05",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.563,
+          "vote_count": 8
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/w6GQVp1mCiEDwje8AS93CbEN75I.jpg",
+          "genre_ids": [
+            18
+          ],
+          "id": 1511171,
+          "title": "A Virada: Ignição da Alma",
+          "original_language": "pt",
+          "original_title": "A Virada: Ignição da Alma",
+          "overview": "Noah Silva é um vendedor de carros usados carismático, cuja vida começa a desmoronar após sua postura “a qualquer custo” cobrar um preço alto em casa e no trabalho. Confrontado por uma série de alertas, ele embarca em uma jornada de reconciliação e transformação pessoal, na tentativa de recuperar sua integridade e reconstruir a relação com sua esposa e seu filho.",
+          "popularity": 18.9872,
+          "poster_path": "/c4MLyvjowk8tCYmukhl1DFotuky.jpg",
+          "release_date": "2026-11-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 10,
+          "vote_count": 1
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/uvitbjFU4JqvMwIkMWHp69bmUzG.jpg",
+          "genre_ids": [
+            18,
+            80
+          ],
+          "id": 598,
+          "title": "Cidade de Deus",
+          "original_language": "pt",
+          "original_title": "Cidade de Deus",
+          "overview": "Buscapé é um jovem morador da Cidade de Deus que cresce em meio à violência. Com medo de se tornar um bandido, enxerga na fotografia uma oportunidade de ter uma vida digna.",
+          "popularity": 14.2072,
+          "poster_path": "/gfnXixcGC060QcG6JPxN6AMdVsq.jpg",
+          "release_date": "2002-08-30",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.423,
+          "vote_count": 8655
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/q5IF3IHgKC4cQqQCp0VjllNkJp6.jpg",
+          "genre_ids": [
+            35
+          ],
+          "id": 1257147,
+          "title": "Minha Melhor Amiga",
+          "original_language": "pt",
+          "original_title": "Minha Melhor Amiga",
+          "overview": "Júlia e Clara são melhores amigas e vivem o auge dos seus 50 anos. Quando suas filhas viajam para um intercâmbio de alguns meses em Portugal, as duas precisam enfrentar a saudade e o vazio deixado pelas meninas. A dupla decide sacudir a rotina e embarca para a Europa para surpreender as meninas, mas encara diversos perrengues na jornada.",
+          "popularity": 8.4646,
+          "poster_path": "/wGfTFVeguXDXYrwPQ8QMFsaSK2M.jpg",
+          "release_date": "2026-09-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.066,
+          "vote_count": 61
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/yQUTEvEb5pJi0BH3b1biQRpGvEx.jpg",
+          "genre_ids": [
+            18,
+            53,
+            80
+          ],
+          "id": 967998,
+          "title": "Conspiração Fatal",
+          "original_language": "pt",
+          "original_title": "Conspiração Fatal",
+          "overview": "Davi Martins, um diretor comercial de uma instituição financeira, e Juliana Martins, uma personal trainer, são um casal tentando se recuperar de uma crise. No trabalho, Davi acaba se envolvendo na investigação de um escândalo financeiro, ficando na mira de pessoas perigosas. Aos poucos, Juliana vai descobrindo que a nova casa talvez não seja um recomeço e sim o palco de um verdadeiro pesadelo. Alguns segredos podem acabar com a sua vida.",
+          "popularity": 8.351,
+          "poster_path": "/zpj3nNoc5xaUZTIdnuhwXwUcRag.jpg",
+          "release_date": "2022-05-26",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.4,
+          "vote_count": 5
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/z8mTDyKdAWjKsD0vwa7e9LTSY1j.jpg",
+          "genre_ids": [
+            53,
+            80,
+            18
+          ],
+          "id": 1487861,
+          "title": "Elize: Sombras de uma Mulher",
+          "original_language": "pt",
+          "original_title": "Elize: Sombras de uma Mulher",
+          "overview": "Nesta adaptação de um crime chocante, uma mulher descobre as traições do marido e vê seu conto de fadas se transformar em um jogo violento.",
+          "popularity": 7.9964,
+          "poster_path": "/612ZyfilK8CVEEFphgPb3GOw0NF.jpg",
+          "release_date": "2026-07-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.4,
+          "vote_count": 248
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/eeGRpU64sIrRApjWXvTpK5Lep2K.jpg",
+          "genre_ids": [
+            53,
+            18,
+            80
+          ],
+          "id": 1220564,
+          "title": "O Agente Secreto",
+          "original_language": "pt",
+          "original_title": "O Agente Secreto",
+          "overview": "No Brasil de 1977, Marcelo, um especialista em tecnologia fugindo de um passado misterioso, volta ao Recife em busca de um pouco de paz, mas percebe que a cidade está longe de ser o refúgio que procura.",
+          "popularity": 6.715,
+          "poster_path": "/t1DQ4XXIqTm5LvUjz8jypN43JjZ.jpg",
+          "release_date": "2025-09-10",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.1,
+          "vote_count": 971
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/1WWukZCoavYEofNVRHJqE4t1urW.jpg",
+          "genre_ids": [
+            28,
+            878,
+            53
+          ],
+          "id": 1263532,
+          "title": "Corrida dos Bichos",
+          "original_language": "pt",
+          "original_title": "Corrida dos Bichos",
+          "overview": "Em um Rio de Janeiro distópico, o jogo do bicho evoluiu para uma corrida mortal onde os competidores usam seus entes queridos como garantia, que só são resgatados pelos vencedores. O jovem idealista Mano é forçado a entrar nessa disputa de vida ou morte quando sua irmã se torna uma dessas garantias. Para salvá-la, ele deve confrontar seus princípios, formar alianças improváveis e lutar não apenas para vencer, mas para destruir o jogo opressor de uma vez por todas.",
+          "popularity": 6.6716,
+          "poster_path": "/2bzIygGnua4tlLo7qTyMSUsME3d.jpg",
+          "release_date": "2026-08-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.9,
+          "vote_count": 133
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/j9uruwRe9qM8RnP758dF7ISB8Bj.jpg",
+          "genre_ids": [
+            18,
+            36
+          ],
+          "id": 1000837,
+          "title": "Ainda Estou Aqui",
+          "original_language": "pt",
+          "original_title": "Ainda Estou Aqui",
+          "overview": "No início da década de 1970, o Brasil enfrenta o endurecimento da ditadura militar. No Rio de Janeiro, a família Paiva – Rubens, Eunice e seus cinco filhos – vive à beira da praia em uma casa de portas abertas para os amigos. Um dia, Rubens Paiva é levado por militares à paisana e desaparece.",
+          "popularity": 6.1187,
+          "poster_path": "/zNAw7jK8bwCK56rIW676pdgkwhd.jpg",
+          "release_date": "2024-09-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.911,
+          "vote_count": 1222
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/bjdgmMhTKcxqFO7RdXYhTlGzffB.jpg",
+          "genre_ids": [
+            80,
+            99
+          ],
+          "id": 1664682,
+          "title": "Suzane von Richthofen: O Que o Tempo Não Apaga",
+          "original_language": "pt",
+          "original_title": "Suzane von Richthofen: O Que o Tempo Não Apaga",
+          "overview": "Com entrevistas de Suzane von Richthofen, condenada pelo assassinato dos pais, este documentário analisa um dos casos policiais de maior repercussão no Brasil.",
+          "popularity": 5.6822,
+          "poster_path": "/pO3BpFyC9B2fnfByJulxjs3hM4P.jpg",
+          "release_date": "2026-11-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.038,
+          "vote_count": 13
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/hILmNUH51sXpkLXd9ecEUCljU1q.jpg",
+          "genre_ids": [
+            35,
+            10751
+          ],
+          "id": 1610820,
+          "title": "Santo António - O Casamenteiro de Lisboa",
+          "original_language": "pt",
+          "original_title": "Santo António - O Casamenteiro de Lisboa",
+          "overview": "Os tradicionais Casamentos de Santo Antônio, em Lisboa, estão em decadência. Carmo e Valentim, funcionários da prefeitura que organizam a festa há mais de 25 anos, recebem um ultimato: dar algum jeito de reinventar o evento ou perder o emprego. Com um grupo francês prestes a assumir o controle do evento, os dois decidem criar a edição mais memorável de todas. Esta vibrante comédia é uma carta de amor a Lisboa e uma celebração da comunidade, da tradição e da resistência cultural.",
+          "popularity": 5.5494,
+          "poster_path": "/isoHopRbIc8ScJ6dx2vB4GOb820.jpg",
+          "release_date": "2026-09-10",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.5,
+          "vote_count": 4
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/huUgrGkCetYSkDl5fMvZCXCbFKl.jpg",
+          "genre_ids": [
+            18,
+            28,
+            80
+          ],
+          "id": 7347,
+          "title": "Tropa de Elite",
+          "original_language": "pt",
+          "original_title": "Tropa de Elite",
+          "overview": "Rio de Janeiro, 1997. Nascimento, capitão da Tropa de Elite do Rio de Janeiro, é designado para chefiar uma das equipes que tem como missão \"apaziguar\" o Morro do Turano por um motivo que ele considera insensato. Mas ele tem que cumprir as ordens enquanto procura por um substituto. Sua mulher, Rosane, está no final da gravidez e todos os dias lhe pede para sair da linha de frente do batalhão. Pressionado, o capitão sente os efeitos do estresse.Neste clima, é chamado para mais uma emergência num morro. Em meio a um tiroteio em um baile funk, Nascimento e sua equipe têm que resgatar dois aspirantes a oficiais da PM: Neto e Matias. Ansiosos por entrar em ação e impressionados com a eficiência de seus salvadores, os dois se candidatam ao curso de formação da Tropa de Elite.",
+          "popularity": 5.3378,
+          "poster_path": "/wFMkqerSlifIae2cja6K1fdvz2G.jpg",
+          "release_date": "2007-10-05",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.055,
+          "vote_count": 2876
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/a65WMR49PnWmSaCzaCyMNNHKQfn.jpg",
+          "genre_ids": [
+            18,
+            9648,
+            10749
+          ],
+          "id": 1173558,
+          "title": "O Lado Bom de Ser Traída",
+          "original_language": "pt",
+          "original_title": "O Lado Bom de Ser Traída",
+          "overview": "Nesta adaptação do livro de Sue Hecker, uma contadora vê a traição do noivo como uma oportunidade de transformar sua vida sexual, resultando em consequências arriscadas.",
+          "popularity": 5.0483,
+          "poster_path": "/boPkFKrDSUeRxc9ltZRsuVSdRkz.jpg",
+          "release_date": "2023-10-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.2,
+          "vote_count": 260
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/alQqTpmEkxSLgajfEYTsTH6nAKB.jpg",
+          "genre_ids": [
+            35,
+            18,
+            14,
+            10749
+          ],
+          "id": 40096,
+          "title": "O Auto da Compadecida",
+          "original_language": "pt",
+          "original_title": "O Auto da Compadecida",
+          "overview": "As aventuras dos nordestinos João Grilo, um sertanejo pobre e mentiroso, e Chicó, o mais covarde dos homens. Ambos lutam pelo pão de cada dia e atravessam por vários episódios enganando a todos do pequeno vilarejo de Taperoá, no sertão da Paraíba. A salvação da dupla acontece com a aparição da Nossa Senhora. Adaptação da obra de Ariano Suassuna.",
+          "popularity": 4.571,
+          "poster_path": "/y3IhuITELtprMhUd7bccu629rba.jpg",
+          "release_date": "2000-09-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.4,
+          "vote_count": 1263
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wBV11KLQcp5pyxl8JW1lBaDshqr.jpg",
+          "genre_ids": [
+            35,
+            18
+          ],
+          "id": 1277988,
+          "title": "Caramelo",
+          "original_language": "pt",
+          "original_title": "Caramelo",
+          "overview": "Ao receber um diagnóstico grave, um chef em ascensão redescobre a graça da vida com a ajuda de um vira-lata caramelo.",
+          "popularity": 4.0334,
+          "poster_path": "/c4ZEAah5a01cu27w7vT2IAoFogk.jpg",
+          "release_date": "2025-10-08",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.7,
+          "vote_count": 308
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/tmowA51oykuOdiyqRCP0jGYU1mB.jpg",
+          "genre_ids": [
+            18,
+            28,
+            80
+          ],
+          "id": 47931,
+          "title": "Tropa de Elite 2: O Inimigo Agora é Outro",
+          "original_language": "pt",
+          "original_title": "Tropa de Elite 2",
+          "overview": "O destino da cidade do Rio de Janeiro e de Nascimento se cruzam em \"Tropa de Elite 2\", quando suas obrigações de pai se chocam com as de policial. Mais maduro, estratégico e solitário, o agora Coronel Nascimento faz o bope crescer e coloca o tráfico de drogas de joelho. Isto apenas para descobrir que na segurança pública do Rio de Janeiro nada é o que parece. O sistema se reinventa e descobre como lucrar sem o intermédio do tráfico. Em perseguição ao caminho trilhado pelo sistema, Nascimento vai além dos limites do quartel, revelando as ligações das milícias com o Estado. E o preço por essa descoberta é alto: o inimigo agora é outro.",
+          "popularity": 3.8953,
+          "poster_path": "/gW2JzWuOKHkKOr33slfBEQJYYeS.jpg",
+          "release_date": "2010-10-08",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.8,
+          "vote_count": 2155
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8nv5MUtEBMX4DDkrFkDhkppRxuD.jpg",
+          "genre_ids": [
+            36,
+            12,
+            18
+          ],
+          "id": 975335,
+          "title": "Fernão de Magalhães",
+          "original_language": "pt",
+          "original_title": "Magalhães",
+          "overview": "Século XVI. Fernão de Magalhães, um jovem e ambicioso navegador português, se rebela contra o poder do Rei, que não apoia seu sonho de descobrir o mundo. Ele convence a Coroa Espanhola a financiar sua ousada expedição às lendárias terras do Oriente. A viagem se revela exaustiva além do imaginável, com a fome e os motins levando a tripulação ao limite.",
+          "popularity": 3.7442,
+          "poster_path": "/iS6da0E4m3RyXRxNmQPzEGvofte.jpg",
+          "release_date": "2026-12-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.167,
+          "vote_count": 46
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7EwzruqMhiXiVBntRoUjOhey8ap.jpg",
+          "genre_ids": [
+            18,
+            36
+          ],
+          "id": 54989,
+          "title": "Amor Estranho Amor",
+          "original_language": "pt",
+          "original_title": "Amor Estranho Amor",
+          "overview": "Ana é uma prostituta em São Paulo que tenta mudar de vida ao se tornar amante de um político influente. Seus planos mudam quando seu filho de 12 anos, Hugo, passa a morar com ela, descobrindo o desejo e a sexualidade no bordel.",
+          "popularity": 3.4957,
+          "poster_path": "/kmsER1iY9y9B9Dc5uBnfUfy8Ys0.jpg",
+          "release_date": "1982-01-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.8,
+          "vote_count": 74
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/bwsGEeiEnKqsZ9vm3G82as8xUu7.jpg",
+          "genre_ids": [
+            35,
+            10749
+          ],
+          "id": 1418582,
+          "title": "Quinze Dias",
+          "original_language": "pt",
+          "original_title": "Quinze Dias",
+          "overview": "Os planos de férias de um adolescente inseguro são furados por uma visita inesperada: seu vizinho e crush da escola que passará duas semanas dormindo na sua casa. Os dias que prometiam paz, tranquilidade e maratonas épicas de séries acabam trazendo um turbilhão de sentimentos e questões mal resolvidas.",
+          "popularity": 3.3276,
+          "poster_path": "/7SkSZOAHPJbks40PQYwIH2bV1f2.jpg",
+          "release_date": "2026-06-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.3,
+          "vote_count": 100
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/1Xdsq7U7bvJJd2X7Jg4qNaKVkYO.jpg",
+          "genre_ids": [
+            28,
+            53,
+            80,
+            18
+          ],
+          "id": 1426964,
+          "title": "Salve Geral: Irmandade",
+          "original_language": "pt",
+          "original_title": "Salve Geral: Irmandade",
+          "overview": "Durante uma onda de violência sem precedentes em São Paulo, uma advogada ligada ao crime precisa fazer um acordo com a polícia para resgatar a sobrinha sequestrada.",
+          "popularity": 3.2396,
+          "poster_path": "/5AAzx2bcorTZUVe4Sk6yqhMBq1s.jpg",
+          "release_date": "2026-02-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.785,
+          "vote_count": 79
+        }
+      ],
+      "total_pages": 1001,
+      "total_results": 20001
+    }
+  }
+}

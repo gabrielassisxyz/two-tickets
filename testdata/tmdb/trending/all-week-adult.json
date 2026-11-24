@@ -1,0 +1,468 @@
+{
+  "id": "trending/all-week-adult",
+  "request": {
+    "path": "/trending/all/week",
+    "params": {
+      "language": "en",
+      "page": "1",
+      "region": "BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "page": 1,
+      "results": [
+        {
+          "adult": true,
+          "backdrop_path": "/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+          "genre_ids": [
+            878,
+            28,
+            12
+          ],
+          "id": 1300968,
+          "title": "The Hunger Games: Sunrise on the Reaping",
+          "original_language": "en",
+          "original_title": "The Hunger Games: Sunrise on the Reaping",
+          "overview": "Return to the world of Panem 24 years before Katniss Everdeen volunteers in her sister's place, commencing on the morning of the reaping of the 50th Hunger Games, also known as the Second Quarter Quell.",
+          "popularity": 385.9271,
+          "poster_path": "/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg",
+          "release_date": "2026-11-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.8,
+          "vote_count": 284,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/c7btGYblBnfAaw713WvFM0Kimc7.jpg",
+          "genre_ids": [
+            12,
+            28,
+            14
+          ],
+          "id": 1368337,
+          "title": "The Odyssey",
+          "original_language": "en",
+          "original_title": "The Odyssey",
+          "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
+          "popularity": 446.189,
+          "poster_path": "/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+          "release_date": "2026-07-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.025,
+          "vote_count": 5420,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/tXNt66khUBZcusc22INKCeGRr4l.jpg",
+          "genre_ids": [
+            878,
+            28,
+            12
+          ],
+          "id": 1003596,
+          "title": "Avengers: Doomsday",
+          "original_language": "en",
+          "original_title": "Avengers: Doomsday",
+          "overview": "Beloved heroes from three distinct universes are set on a deadly collision course and face an existential threat unlike anything they've ever encountered.",
+          "popularity": 207.401,
+          "poster_path": "/1zqWkLwC1zLBBBtIWzmkmWeMWnT.jpg",
+          "release_date": "2026-12-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0,
+          "vote_count": 0,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/subj7knTn4DeS6KS7qI66EQKe9i.jpg",
+          "genre_ids": [
+            878,
+            28,
+            12
+          ],
+          "id": 969681,
+          "title": "Spider-Man: Brand New Day",
+          "original_language": "en",
+          "original_title": "Spider-Man: Brand New Day",
+          "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
+          "popularity": 296.3028,
+          "poster_path": "/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+          "release_date": "2026-07-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.5,
+          "vote_count": 7083,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/g1bEboMx1a8JCg1jXeDCh24RtgW.jpg",
+          "genre_ids": [
+            16,
+            10751,
+            35,
+            12,
+            14
+          ],
+          "id": 1595124,
+          "title": "Steps",
+          "original_language": "en",
+          "original_title": "Steps",
+          "overview": "After being blamed for disrupting the Royal Ball with a stolen magic wand, a misunderstood stepsister accidentally turns her sister into a frog and must team up with Cinderella and an unlikely ally to save the kingdom and rewrite their fairytale ending.",
+          "popularity": 110.3574,
+          "poster_path": "/jtfCcWZ3ZyKdgi0u7JVOxEOSSJP.jpg",
+          "release_date": "2026-11-20",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.918,
+          "vote_count": 73,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/i1phX1JpaqSnHBBGta6LBFYVCZq.jpg",
+          "genre_ids": [
+            10759,
+            10765
+          ],
+          "id": 84773,
+          "name": "The Lord of the Rings: The Rings of Power",
+          "original_language": "en",
+          "original_name": "The Lord of the Rings: The Rings of Power",
+          "overview": "Beginning in a time of relative peace, we follow an ensemble cast of characters as they confront the re-emergence of evil to Middle-earth. From the darkest depths of the Misty Mountains, to the majestic forests of Lindon, to the breathtaking island kingdom of Númenor, to the furthest reaches of the map, these kingdoms and characters will carve out legacies that live on long after they are gone.",
+          "popularity": 1517.8425,
+          "poster_path": "/bMXWXKM9ydUmMTNvDnYo9QtCBRt.jpg",
+          "first_air_date": "2022-09-01",
+          "softcore": false,
+          "vote_average": 7.223,
+          "vote_count": 4138,
+          "media_type": "tv",
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wXTaGcqX3jvdXSKCJAkl5jZyrKp.jpg",
+          "genre_ids": [
+            18,
+            53
+          ],
+          "id": 1281331,
+          "title": "The Social Reckoning",
+          "original_language": "en",
+          "original_title": "The Social Reckoning",
+          "overview": "Frances Haugen, a young Facebook engineer, enlists the help of Jeff Horwitz, a Wall Street Journal reporter, to go on a dangerous journey that ends up blowing the whistle on the social network's most guarded secrets.",
+          "popularity": 43.4398,
+          "poster_path": "/vWbEuI3LuFOGYZIxESLAmwFwtvr.jpg",
+          "release_date": "2026-10-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7,
+          "vote_count": 153,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/lRsapglJZIyMfGl8oQyNASlZqDC.jpg",
+          "genre_ids": [
+            18,
+            36,
+            35
+          ],
+          "id": 1131943,
+          "title": "Madden",
+          "original_language": "en",
+          "original_title": "Madden",
+          "overview": "Chronicles John Madden's incredible journey alongside best friend and true original Al Davis—from a Super Bowl-winning partnership with the Raiders, to becoming football's most recognizable voice, to building the worldwide Madden NFL video game.",
+          "popularity": 74.6629,
+          "poster_path": "/bRa83oPFFPqaAF3wrpVWPqqfFel.jpg",
+          "release_date": "2026-11-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.6,
+          "vote_count": 57,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/x6kwEsxxqLIoqpIrZOXRV0LORqm.jpg",
+          "genre_ids": [
+            10749,
+            35
+          ],
+          "id": 1611767,
+          "title": "Clashing Through the Snow",
+          "original_language": "en",
+          "original_title": "Clashing Through the Snow",
+          "overview": "Rival publishing editors Ryan Mitchell and Hannah Hendricks are stranded by a holiday snowstorm and forced to share a rental car to New York, where a career-saving deal awaits them both. As roadside mishaps and small-town detours pile up, the holiday spirit begins to melt their fierce rivalry into something unexpected.",
+          "popularity": 46.2954,
+          "poster_path": "/95K1Y96ELBDL3M8kyTVb5wocCtX.jpg",
+          "release_date": "2026-11-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.042,
+          "vote_count": 12,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/h0OC7ouop8YLwbAVfS3UUE2Lw4T.jpg",
+          "genre_ids": [
+            80,
+            18
+          ],
+          "id": 247718,
+          "name": "MobLand",
+          "original_language": "en",
+          "original_name": "MobLand",
+          "overview": "Two mob families clash in a war that threatens to topple empires and lives.",
+          "popularity": 755.8379,
+          "poster_path": "/5Xc7WpWsgflfgEMoBlf9TmWhfbH.jpg",
+          "first_air_date": "2025-03-30",
+          "softcore": false,
+          "vote_average": 8.7,
+          "vote_count": 1303,
+          "media_type": "tv",
+          "origin_country": [
+            "GB",
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/qHvap0vpfTBIbv7cnR0OyBRqQHG.jpg",
+          "genre_ids": [
+            10749,
+            35
+          ],
+          "id": 1551025,
+          "title": "Guarding Stars",
+          "original_language": "en",
+          "original_title": "Guarding Stars",
+          "overview": "When a no-nonsense bodyguard is assigned to protect a charming action star over the holidays, sparks fly, secrets unravel, and Christmas gets a whole lot more complicated.",
+          "popularity": 174.1184,
+          "poster_path": "/5bsXFYXOlbzHBpl9mPaxmOPIQJ9.jpg",
+          "release_date": "2026-11-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.909,
+          "vote_count": 115,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/hYJqUoXRZnodGxgVZTM8uwr5kbC.jpg",
+          "genre_ids": [
+            9648,
+            18
+          ],
+          "id": 291507,
+          "name": "The Body",
+          "original_language": "en",
+          "original_name": "The Body",
+          "overview": "On Halloween night, an all-girls dance squad tumbles into Catholic guilt, unholy desires and ghostly visions when an initiation goes to hell.",
+          "popularity": 161.8806,
+          "poster_path": "/195kCuy2RqGaEAZDDpGTx7gBUBZ.jpg",
+          "first_air_date": "2026-11-11",
+          "softcore": false,
+          "vote_average": 8.004,
+          "vote_count": 125,
+          "media_type": "tv",
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7ojpD6ARKYhRxnsjzMIrorOfj4T.jpg",
+          "genre_ids": [
+            80,
+            9648
+          ],
+          "id": 300523,
+          "name": "The Blue Road",
+          "original_language": "ko",
+          "original_name": "푸른길",
+          "overview": "Two detectives join forces when brutal murders and cryptic messages surface across borders — but the deadly truth lurks dangerously close.",
+          "popularity": 63.2359,
+          "poster_path": "/cVbilrgtgKi7gN74KK4voyV7iDR.jpg",
+          "first_air_date": "2026-11-20",
+          "softcore": false,
+          "vote_average": 7.778,
+          "vote_count": 18,
+          "media_type": "tv",
+          "origin_country": [
+            "KR"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/r5RYEmZzm1Z6imS7XfiKPnMlyc7.jpg",
+          "genre_ids": [
+            28,
+            53
+          ],
+          "id": 1185344,
+          "title": "The Beast",
+          "original_language": "en",
+          "original_title": "The Beast",
+          "overview": "When a militia of unidentified hostiles coordinates a coup against the United States, the president must fight back by utilizing the highly classified offensive capabilities of his armored limousine, nicknamed The Beast.",
+          "popularity": 85.2668,
+          "poster_path": "/ocg5JfJP19fodcv5uQUApkmZMdI.jpg",
+          "release_date": "2026-10-08",
+          "softcore": false,
+          "video": false,
+          "vote_average": 4.9,
+          "vote_count": 59,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/uoXXbN2PrOxH6UKyP7kYwmGpAAP.jpg",
+          "genre_ids": [
+            10765,
+            18
+          ],
+          "id": 213375,
+          "name": "VisionQuest",
+          "original_language": "en",
+          "original_name": "VisionQuest",
+          "overview": "With a bounty on his head, Vision must confront his nature and resist Ultron's influence to survive.",
+          "popularity": 121.8126,
+          "poster_path": "/WGyAyBPncfuu8MZhLY9RtfZPM0.jpg",
+          "first_air_date": "2026-10-13",
+          "softcore": false,
+          "vote_average": 8.2,
+          "vote_count": 575,
+          "media_type": "tv",
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/oqrYIDH4tvfEzPe1yqT4jzmAWHQ.jpg",
+          "genre_ids": [
+            878,
+            27,
+            28
+          ],
+          "id": 1381071,
+          "title": "Godzilla Minus Zero",
+          "original_language": "ja",
+          "original_title": "ゴジラ-0.0",
+          "overview": "War reduced Japan to zero, and Godzilla plunged it into minus. Two years have passed since then, and the country has faced agonizing struggles to achieve recovery and finally reclaim its daily life. Just as humanity managed to cling to a hard-won peace, a new threat strikes, crushing hope in an instant. There is no third time. Everything ends here.",
+          "popularity": 100.0097,
+          "poster_path": "/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg",
+          "release_date": "2026-11-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.673,
+          "vote_count": 297,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/dLIKNqBi9L1cVbwuniXkaNOsIXg.jpg",
+          "genre_ids": [
+            10759,
+            10765,
+            18,
+            10751
+          ],
+          "id": 103540,
+          "name": "Percy Jackson and the Olympians",
+          "original_language": "en",
+          "original_name": "Percy Jackson and the Olympians",
+          "overview": "Percy Jackson is on a dangerous quest. Outrunning monsters and outwitting gods, he must journey across America to return Zeus's master bolt and stop an all-out war. With the help of his friends Annabeth and Grover, Percy's journey will lead him closer to the answers he seeks: how to fit into a world where he feels out of place, and who he's destined to be.",
+          "popularity": 117.7585,
+          "poster_path": "/zofPiEpwCRYaezOncTlQwXebHFU.jpg",
+          "first_air_date": "2023-12-19",
+          "softcore": false,
+          "vote_average": 7.3,
+          "vote_count": 887,
+          "media_type": "tv",
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/mdBElS5YjpZPkB9DNYjgxwWgXcv.jpg",
+          "genre_ids": [
+            18,
+            10749,
+            53
+          ],
+          "id": 1568060,
+          "title": "Perfect Liars",
+          "original_language": "es",
+          "original_title": "Perfectos mentirosos",
+          "overview": "Jude Derry arrives at the exclusive Tagus university with a hidden mission: to infiltrate the circle of the Cash brothers and uncover the truth about her brother's death. What begins as revenge turns into a dangerous triangle of seduction, forbidden attraction and lies, drawing her toward a truth she may not be ready to face.",
+          "popularity": 91.3971,
+          "poster_path": "/kej8EipJOvfHUHFg5wtT7gQ6bNb.jpg",
+          "release_date": "2026-11-20",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.5,
+          "vote_count": 32,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/b3EGc5Ucj7wIeUjFc64Wq4IYgkp.jpg",
+          "genre_ids": [
+            53,
+            18,
+            80
+          ],
+          "id": 1084409,
+          "title": "A Talent for Murder",
+          "original_language": "en",
+          "original_title": "A Talent for Murder",
+          "overview": "A young man travels from New York to Switzerland to try to persuade acclaimed thriller writer Patricia Highsmith to write one final installment of her Tom Ripley series, with his efforts gradually turning more sinister.",
+          "popularity": 47.0834,
+          "poster_path": "/mstDPKNKgSGFvVFVdfzeMNkcyw2.jpg",
+          "release_date": "2026-10-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7,
+          "vote_count": 35,
+          "media_type": "movie"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
+          "genre_ids": [
+            27,
+            878,
+            12
+          ],
+          "id": 1423191,
+          "title": "Resident Evil",
+          "original_language": "en",
+          "original_title": "Resident Evil",
+          "overview": "Medical courier Bryan unwittingly finds himself fighting for survival as one fateful, horrifying night collapses around him in chaos.",
+          "popularity": 257.3999,
+          "poster_path": "/gAgWJhUSQWCgtKR8170nMkYlBda.jpg",
+          "release_date": "2026-09-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.5,
+          "vote_count": 2524,
+          "media_type": "movie"
+        }
+      ],
+      "total_pages": 500,
+      "total_results": 10000
+    }
+  }
+}

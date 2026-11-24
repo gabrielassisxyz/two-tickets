@@ -1,0 +1,12 @@
+{
+  "case": "movie-details-tmdb-500",
+  "family": "title",
+  "request": "GET /api/v1/movie/603",
+  "fixtures": [
+    "errors/movie-details-500"
+  ],
+  "status": 500,
+  "body": {
+    "message": "Unable to retrieve movie."
+  }
+}

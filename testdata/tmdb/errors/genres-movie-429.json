@@ -1,0 +1,17 @@
+{
+  "id": "errors/genres-movie-429",
+  "request": {
+    "path": "/genre/movie/list",
+    "params": {
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 429,
+    "body": {
+      "success": false,
+      "status_code": 25,
+      "status_message": "Your request count (#) is over the allowed limit of (40)."
+    }
+  }
+}

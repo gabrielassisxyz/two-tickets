@@ -1,0 +1,469 @@
+{
+  "case": "discover-tv-genre",
+  "family": "discover",
+  "request": "GET /api/v1/discover/tv/genre/16?page=1",
+  "fixtures": [
+    "genre/tv-list",
+    "discover/tv-genre-animation"
+  ],
+  "status": 200,
+  "body": {
+    "page": 1,
+    "totalPages": 787,
+    "totalResults": 15739,
+    "genre": {
+      "id": 16,
+      "name": "Animação"
+    },
+    "results": [
+      {
+        "id": 1434,
+        "firstAirDate": "1999-01-31",
+        "genreIds": [
+          16,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Uma Família da Pesada",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Family Guy",
+        "overview": "A série animada apresenta as aventuras da família Griffin. O ignorante Peter e sua esposa Lois residem em Quahog, em Rhode Island e têm três filhos. Meg, a filha mais velha, é uma pária social, e o adolescente Chris é estranho e sem noção quando se trata do sexo oposto. O mais novo, Stewie, é um bebê gênio decidido a matar sua mãe e destruir o mundo. O cachorro falante, Brian, mantém Stewie sob controle enquanto toma martinis e resolve seus próprios problemas de vida.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/jbTqU6BJMufoMnPSlO4ThrcXs3Y.jpg",
+        "posterPath": "/j28XGzAhvJNGWEHbYrzvREw7kKd.jpg"
+      },
+      {
+        "id": 1877,
+        "firstAirDate": "2007-08-17",
+        "genreIds": [
+          16,
+          35,
+          10751,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Phineas e Ferb",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Phineas and Ferb",
+        "overview": "Todos os dias, dois meio-irmãos nas férias de verão embarcam em um grande novo projeto, o que irrita sua irmã controladora, Candace, que sempre tenta entrega-los para sua mãe. Enquanto isso, seu animal de estimação Perry o ornitorrinco luta contra o malvado Dr. Doofenshmirtz.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/5MWFjQ3NuNtNeOE9FdrVLeNMNPs.jpg",
+        "posterPath": "/cu2nJgERq8ZmRUlBFPsamdJb7rh.jpg"
+      },
+      {
+        "id": 456,
+        "firstAirDate": "1989-12-17",
+        "genreIds": [
+          16,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Os Simpsons",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "The Simpsons",
+        "overview": "Uma animação sobre uma típica família dos Estados Unidos. Homer é o pai de família nada saudável ou inteligente, que adora beber cerveja. Marge é a esposa e mãe de família dedicada. Bart é o filho de 10 anos, que não leva a escola a sério e tem orgulho disso. Lisa é a garota de 8 anos, um gênio não apreciado. E Maggie é a bebê que não larga a chupeta.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/jIArNHIekrCSVgdMbKPAXpPY03Y.jpg",
+        "posterPath": "/1jGPgDDcmg3Xgs3WO8sfYfbnFoA.jpg"
+      },
+      {
+        "id": 60572,
+        "firstAirDate": "1997-04-01",
+        "genreIds": [
+          16,
+          10759,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Pokémon",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ポケットモンスター",
+        "overview": "Explore o mundo de Pokémon com Ash Ketchum e seu parceiro Pikachu enquanto eles fazem novos amigos, encontram Pokémon poderosos e buscam o objetivo supremo de Ash: Tornar-se um Mestre Pokémon!",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/yYpQV25I7XB6S0POJOScPjxYWV5.jpg",
+        "posterPath": "/ck1nfqYxMkiGvBVztIuM6b7fHoC.jpg"
+      },
+      {
+        "id": 2153,
+        "firstAirDate": "1996-10-07",
+        "genreIds": [
+          16,
+          35,
+          10762,
+          10751
+        ],
+        "mediaType": "tv",
+        "name": "Arthur",
+        "originCountry": [
+          "US",
+          "CA"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Arthur",
+        "overview": "Conta as aventuras e desventuras de um porquinho-da-terra de oito anos, cujo maior charme é ser apenas uma criança normal. Acompanhado da irmã e dos amigos, ele consegue resolver os problemas que aparecem, sempre com imaginação, bondade e muito humor.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/5k3JpB88vubqYVSHHiAhk2T8z17.jpg",
+        "posterPath": "/nYN8okmcsmhd4bGVcqifZ5OCumB.jpg"
+      },
+      {
+        "id": 65733,
+        "firstAirDate": "2005-04-22",
+        "genreIds": [
+          10759,
+          16,
+          35,
+          10765,
+          10762,
+          10751
+        ],
+        "mediaType": "tv",
+        "name": "Doraemon: O Gato do Futuro",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ドラえもん",
+        "overview": "A série é sobre um gato robótico chamado Doraemon que voltou dois séculos no passado para ajudar um estudante: Nobita Nobi.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/c2oiRa7V3bQzof4wVGzLXtWJ5QU.jpg",
+        "posterPath": "/jzd80ryL0kTBgvXVLeh01cJdNFv.jpg"
+      },
+      {
+        "id": 37854,
+        "firstAirDate": "1999-10-20",
+        "genreIds": [
+          10759,
+          35,
+          16
+        ],
+        "mediaType": "tv",
+        "name": "One Piece",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ワンピース",
+        "overview": "Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger. Capturado e condenado à execução pelo Governo Mundial, suas últimas palavras lançaram legiões aos mares. \"Meu tesouro? Se quiserem, podem pegá-lo. Procurem-no! Ele contém tudo que este mundo pode oferecer!\". Foi a revelação do maior tesouro, o One Piece, cobiçado por homens de todo o mundo, sonhando com fama e riqueza imensuráveis... Assim começou a Grande Era dos Piratas!",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
+        "posterPath": "/9ltisibeD4gzqjM1AzmQwCdyirQ.jpg"
+      },
+      {
+        "id": 64414,
+        "firstAirDate": "2008-10-30",
+        "genreIds": [
+          16,
+          10759,
+          18,
+          10765,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Wakfu",
+        "originCountry": [
+          "FR"
+        ],
+        "originalLanguage": "fr",
+        "originalName": "Wakfu",
+        "overview": "Wakfu se passa mil anós após Dofus, em um mundo destruido pela fúria de Orgrest, o ogro. \n\nA história começa com Yugo, um jovem de uma classe desconhecida, que vai junto a um amigo de seu pai, o Enutrof Ruel, em busca de sua família verdadeira e também para salvar seu \"pai\" que sofre com o ataque de seres bastante esquisitos.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/794lCiKgncQg4tE2FDY8GVcEubZ.jpg",
+        "posterPath": "/hXx5KsyUynyH6f6sxyqpOQgLBNb.jpg"
+      },
+      {
+        "id": 387,
+        "firstAirDate": "1999-05-01",
+        "genreIds": [
+          16,
+          35,
+          10751
+        ],
+        "mediaType": "tv",
+        "name": "Bob Esponja",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "SpongeBob SquarePants",
+        "overview": "Uma esponja-do-mar chamada Bob Esponja Calça Quadrada mora com seu caracol de estimação na Fenda do Biquíni, no fundo do oceano. Bob trabalha no Siri Cascudo e, nas horas vagas, vive arrumando confusões com seu melhor amigo, a estrela-do-mar Patrick.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/f3f5OzzYd8m3zN47DAjKs0sbx00.jpg",
+        "posterPath": "/yXrtQINkVRyNmfUQFyVG2LuoTqm.jpg"
+      },
+      {
+        "id": 57775,
+        "firstAirDate": "1990-01-07",
+        "genreIds": [
+          16,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Chibi Maruko-chan",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ちびまる子ちゃん",
+        "overview": "Maruko Sakura é uma jovem estudante do ensino fundamental que cresceu com seus pais, avós e irmã mais velha nesta série animada baseada na infância do produtor nos anos 60. À medida que Maruko cresce e aprende os caminhos do mundo, ela e seus amigos se metem em uma variedade de situações, mas com a engenhosidade de Maruko (e a ajuda de seu avô) eles geralmente encontram seu caminho.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/vuajwjep1FxphPhMEWKv4bfrCnf.jpg",
+        "posterPath": "/auruoMM9a9c4diotHvI5v7dKFbF.jpg"
+      },
+      {
+        "id": 1433,
+        "firstAirDate": "2005-02-06",
+        "genreIds": [
+          16,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "American Dad!",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "American Dad!",
+        "overview": "Stan Smith é um agente da CIA lotado em Langley Falls, na Virginia, cujo objetivo principal da vida é a segurança nacional. Sua família, um peixe dourado falante e um alienígena resgatado da Área 51 mantêm Stan ocupado enquanto ele tenta combater atividades terroristas nos EUA.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/iixxhk3ycXmFqBn616pAsC3lu53.jpg",
+        "posterPath": "/eb9sH2am9IUSQ8GhXTNAVoujk8W.jpg"
+      },
+      {
+        "id": 65334,
+        "firstAirDate": "2015-10-19",
+        "genreIds": [
+          10759,
+          16,
+          10762
+        ],
+        "mediaType": "tv",
+        "name": "Miraculous: As Aventuras de Ladybug",
+        "originCountry": [
+          "FR"
+        ],
+        "originalLanguage": "fr",
+        "originalName": "Miraculous, les aventures de Ladybug et Chat Noir",
+        "overview": "Ladybug é uma heroína que tem a missão de defender Paris de um vilão misterioso. Junto com o parceiro Cat Noir, eles devem conciliar o dia a dia com a vida de super-heróis.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/lH22EnM0ofC7GsVGU8dAA2RXV1c.jpg",
+        "posterPath": "/24wf3O8SJeUSJJvDowQR5FDgHGO.jpg"
+      },
+      {
+        "id": 45140,
+        "firstAirDate": "2013-04-23",
+        "genreIds": [
+          16,
+          10759,
+          35,
+          10751,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Os Jovens Titãs em Ação!",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Teen Titans Go!",
+        "overview": "Robin, Estelar, Ravena, Mutano e Ciborgue são super-heróis que moram juntos. Quando não estão ocupados brigando e competindo, garantem a segurança de Jump City.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/bIHCUqaapZdRjd2kzSDiwzYyrpC.jpg",
+        "posterPath": "/7YAFoSGn6gBhZFzuWhHaGa3jJOi.jpg"
+      },
+      {
+        "id": 34860,
+        "firstAirDate": "1993-04-10",
+        "genreIds": [
+          35,
+          10759,
+          10762,
+          16,
+          10751
+        ],
+        "mediaType": "tv",
+        "name": "忍たま乱太郎",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "忍たま乱太郎",
+        "overview": "",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/4fVwc77cov2q9i0szzYhlkAaqza.jpg",
+        "posterPath": "/fzNiSp0HhCthOTYu9IYWlPPa7fU.jpg"
+      },
+      {
+        "id": 2190,
+        "firstAirDate": "1997-08-13",
+        "genreIds": [
+          35,
+          16
+        ],
+        "mediaType": "tv",
+        "name": "South Park",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "South Park",
+        "overview": "Série animada que satiriza com muito humor negro a sociedade estadounidense ao apresentar situações bizarras e surreais protagonizadas por Stan, Kyle, Eric e Kenny, as crianças mais travessas de South Park.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/3UviYOlhn8EgXMBuiT6MnUuo1w9.jpg",
+        "posterPath": "/ojwZ7dO7CUVUjbUDW81XaBjqy6h.jpg"
+      },
+      {
+        "id": 30983,
+        "firstAirDate": "1996-01-08",
+        "genreIds": [
+          16,
+          80,
+          9648,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Detetive Conan",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "名探偵コナン",
+        "overview": "Transformado em criança por uma substância misteriosa, o detetive adolescente Conan ajuda na solução de crimes complexos enquanto persegue os vilões que o envenenaram.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/z67lpMtm8YGykJO4p89meuNMvj8.jpg",
+        "posterPath": "/gW14n6xxONXrya8CIDhRe5Ada7U.jpg"
+      },
+      {
+        "id": 30984,
+        "firstAirDate": "2004-10-05",
+        "genreIds": [
+          10759,
+          16,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "Bleach",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "BLEACH",
+        "overview": "Ichigo Kurosaki, um adolescente de quinze anos, nunca pediu o dom de ver fantasmas — ele simplesmente nasceu com essa habilidade. Quando sua família é atacada por um Hollow, uma alma perdida e maligna, Ichigo conhece Rukia, uma Ceifeira de Almas que acaba lhe transferindo seus poderes. A partir desse momento, Ichigo passa a dedicar sua vida a proteger os inocentes e ajudar almas atormentadas a encontrar a paz.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/o0NsbcIvsllg6CJX0FBFY8wWbsn.jpg",
+        "posterPath": "/dx28DE7EgLy0FatOvnaUg0k9j92.jpg"
+      },
+      {
+        "id": 45790,
+        "firstAirDate": "2012-10-06",
+        "genreIds": [
+          16,
+          10759,
+          10765
+        ],
+        "mediaType": "tv",
+        "name": "JoJo's Bizarre Adventure",
+        "originCountry": [
+          "JP"
+        ],
+        "originalLanguage": "ja",
+        "originalName": "ジョジョの奇妙な冒険",
+        "overview": "A saga que se inicia na Inglaterra do século XIX, contando a rivalidade entre Jonathan Joestar, um jovem aristocrata, e Dio Brando, um garoto plebeu que foi acolhido pelo pai de Jonathan quando tornou-se órfão. Insatisfeito com sua posição social, a ambição insaciável e o desejo de dominação de Dio o levam a estudar os poderes sobrenaturais de uma antiga máscara asteca de pedra presente na mansão dos Joestar - um artefato que mudará para sempre o destino de Dio e das futuras gerações dos Joestar.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/l2gc2dPRUPe3bAfYCRTjc6uAMmB.jpg",
+        "posterPath": "/2Sc0veFPh9CcHMtNqMyiQqIW9ZF.jpg"
+      },
+      {
+        "id": 60625,
+        "firstAirDate": "2013-12-02",
+        "genreIds": [
+          16,
+          35,
+          10765,
+          10759
+        ],
+        "mediaType": "tv",
+        "name": "Rick e Morty",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Rick and Morty",
+        "overview": "O brilhante cientista beberrão Rick sequestra Morty, seu neto aborrescente, para viver loucuras em outros mundos e dimensões alternativas.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/iFOkrSrJRwE27PwbyQeYLlMJXzw.jpg",
+        "posterPath": "/5qfd0e2uMbVInX3YdeFbDsfxi1t.jpg"
+      },
+      {
+        "id": 32726,
+        "firstAirDate": "2011-01-09",
+        "genreIds": [
+          16,
+          35
+        ],
+        "mediaType": "tv",
+        "name": "Bob's Burgers",
+        "originCountry": [
+          "US"
+        ],
+        "originalLanguage": "en",
+        "originalName": "Bob's Burgers",
+        "overview": "A série acompanha Bob da terceira geração de uma família de proprietários de restaurantes, responsável por administrar a hamburgueria \"Bob's Burgers\" junto com sua esposa e seus três filhos. Bob e sua peculiar família têm grandes ideias para os hambúrgueres, mas estão pobres em serviço e em sofisticação.",
+        "popularity": "<number>",
+        "voteAverage": "<number>",
+        "voteCount": "<number>",
+        "backdropPath": "/2AVPwdHJsF044jT39akgLxxv2zx.jpg",
+        "posterPath": "/iIHsQe3Qjs3NH62HdamyQEPeqTR.jpg"
+      }
+    ]
+  }
+}

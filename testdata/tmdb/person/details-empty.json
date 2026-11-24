@@ -1,0 +1,28 @@
+{
+  "id": "person/details-empty",
+  "request": {
+    "path": "/person/5153308",
+    "params": {
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "adult": false,
+      "also_known_as": [],
+      "biography": "",
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 5153308,
+      "imdb_id": null,
+      "known_for_department": "",
+      "name": "Charles E. Gibb",
+      "place_of_birth": null,
+      "popularity": 0.0247,
+      "profile_path": null
+    }
+  }
+}

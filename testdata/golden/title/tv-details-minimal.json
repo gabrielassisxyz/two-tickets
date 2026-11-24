@@ -1,0 +1,245 @@
+{
+  "case": "tv-details-minimal",
+  "family": "title",
+  "request": "GET /api/v1/tv/91073",
+  "fixtures": [
+    "tv/details-en-minimal",
+    "tv/details-minimal",
+    "tv/videos-en-minimal"
+  ],
+  "status": 200,
+  "body": {
+    "createdBy": [
+      {
+        "id": 2716763,
+        "credit_id": "5f13cead65c26c0038be574f",
+        "name": "Ranjeev Nitu",
+        "original_name": "Ranjeev Nitu",
+        "gender": 0,
+        "profile_path": null
+      }
+    ],
+    "episodeRunTime": [
+      24
+    ],
+    "firstAirDate": "2019-07-01",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      }
+    ],
+    "relatedVideos": [],
+    "homepage": "https://www.primevideo.com/-/pt/detail/0SKU8WZ651LEGSBZJKN81J517P",
+    "id": 91073,
+    "inProduction": false,
+    "languages": [
+      "hi"
+    ],
+    "lastAirDate": "2023-12-08",
+    "name": "छोटी सरदारनी",
+    "networks": [
+      {
+        "id": 2532,
+        "name": "VOOT",
+        "originCountry": "IN",
+        "logoPath": "/8LplmEPunQzheRGqQgvHN4tPltg.png"
+      },
+      {
+        "id": 524,
+        "name": "Colors",
+        "originCountry": "IN",
+        "logoPath": "/1qTv9p35O9i5x0Swg1VbfzLqYBq.png"
+      }
+    ],
+    "numberOfEpisodes": 810,
+    "numberOfSeasons": 1,
+    "originCountry": [
+      "IN"
+    ],
+    "originalLanguage": "hi",
+    "originalName": "छोटी सरदारनी",
+    "tagline": "",
+    "overview": "Meher is coerced by her mother into marrying Sarabjeet, a widower with a 5 year-old child. But, much to her mother's dislike, Meher is pregnant with her lover, Manav's child. Can she stand up for her love and fight her own?",
+    "popularity": "<number>",
+    "productionCompanies": [
+      {
+        "id": 141735,
+        "name": "Cockcrow Entertainment & Shaika Films",
+        "originCountry": "IN",
+        "logoPath": "/ba2GSbH2KnInGel6L6XIy3dtGQ5.png"
+      }
+    ],
+    "productionCountries": [
+      {
+        "iso_3166_1": "IN",
+        "name": "India"
+      }
+    ],
+    "contentRatings": {
+      "results": []
+    },
+    "spokenLanguages": [
+      {
+        "englishName": "Hindi",
+        "iso_639_1": "hi",
+        "name": "हिन्दी"
+      }
+    ],
+    "seasons": [
+      {
+        "airDate": "2019-07-01",
+        "episodeCount": 810,
+        "id": 127626,
+        "name": "Temporada 1",
+        "overview": "",
+        "seasonNumber": 1,
+        "posterPath": "/uMuB9iMaAMOeqip4LsZPLUcjlqg.jpg"
+      }
+    ],
+    "status": "Ended",
+    "type": "Scripted",
+    "voteAverage": "<number>",
+    "voteCount": "<number>",
+    "backdropPath": "/xFWpWdJORfcf8uIQwFAi0OrnhBN.jpg",
+    "lastEpisodeToAir": {
+      "id": 2289668,
+      "airDate": "2023-12-08",
+      "episodeNumber": 96,
+      "name": "Episódio 96",
+      "overview": "",
+      "productionCode": "",
+      "seasonNumber": 1,
+      "showId": 91073,
+      "voteAverage": "<number>",
+      "voteCount": "<number>",
+      "stillPath": "/ku8RGZMGoEUrpb5LCz8J7ePHhSY.jpg"
+    },
+    "posterPath": "/uMuB9iMaAMOeqip4LsZPLUcjlqg.jpg",
+    "credits": {
+      "cast": [
+        {
+          "character": "Meher Kaur Dhillon",
+          "creditId": "5d29b317caab6d66599ce0ce",
+          "id": 2360830,
+          "name": "Nimrit Ahluwalia",
+          "order": 0,
+          "gender": 1,
+          "profilePath": "/ixCTMMEesEMTqACtSvMNJHlvhkc.jpg"
+        },
+        {
+          "character": "Sarabjit Gill",
+          "creditId": "5d29b334caab6d7ddb9952e2",
+          "id": 1686384,
+          "name": "Avinesh Rekhi",
+          "order": 1,
+          "gender": 2,
+          "profilePath": "/rjZR977M1KppWkW5tq9wF09yCZ8.jpg"
+        },
+        {
+          "character": "Tarkash",
+          "creditId": "5d29b3a4be4b36756aa0dd8d",
+          "id": 2360831,
+          "name": "Shivendraa Om Saainiyol",
+          "order": 2,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "Kulwant Kaur",
+          "creditId": "5d29b5a8a294f000102c9d8b",
+          "id": 140767,
+          "name": "Anita Raj",
+          "order": 3,
+          "gender": 1,
+          "profilePath": "/ny2EEe6T0hP37X9b92iOZxm3GsC.jpg"
+        },
+        {
+          "character": "Jagga",
+          "creditId": "5d29b3b8be4b3632c4a0f050",
+          "id": 1655318,
+          "name": "Amal Sehrawat",
+          "order": 4,
+          "gender": 0,
+          "profilePath": "/fNUCIlDMZWme53BgCoV1bMrRCjJ.jpg"
+        },
+        {
+          "character": "Manav Sharma",
+          "creditId": "5d29b389a294f00c172a7c47",
+          "id": 2188913,
+          "name": "Hitesh Bhardwaj",
+          "order": 5,
+          "gender": 2,
+          "profilePath": "/fYdT3rL52JlmbWswpeMiBqiCvAQ.jpg"
+        },
+        {
+          "character": "",
+          "creditId": "5d29b3c7a294f00c172a7d16",
+          "id": 2360832,
+          "name": "Pawan Mahendroo",
+          "order": 6,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "",
+          "creditId": "5d29b3d3a294f000122c988b",
+          "id": 2360833,
+          "name": "Abhilasha Jhakhad",
+          "order": 7,
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "character": "Jaswant (Devika’s Father)",
+          "creditId": "6a8fe9a6e7639c516e58e503",
+          "id": 3754848,
+          "name": "Ajay Dutta",
+          "order": 500,
+          "gender": 2,
+          "profilePath": "/8MwxYWk5WkYS92mmvIhb85MPvLE.jpg"
+        }
+      ],
+      "crew": [
+        {
+          "creditId": "5d29b25fbe4b3612f5a51b49",
+          "department": "Production",
+          "id": 1953750,
+          "job": "Producer",
+          "name": "Rajesh Ram Singh",
+          "gender": 0,
+          "profilePath": null
+        },
+        {
+          "creditId": "5d29b294caab6d66599cdead",
+          "department": "Production",
+          "id": 1756263,
+          "job": "Producer",
+          "name": "Pradeep Kumar",
+          "gender": 0,
+          "profilePath": null
+        }
+      ]
+    },
+    "externalIds": {
+      "facebookId": null,
+      "freebaseId": null,
+      "freebaseMid": null,
+      "imdbId": "tt10461426",
+      "instagramId": null,
+      "tvdbId": 384733,
+      "tvrageId": null,
+      "twitterId": null
+    },
+    "keywords": [],
+    "watchProviders": [
+      {
+        "iso_3166_1": "IN",
+        "link": "https://www.themoviedb.org/tv/91073-choti-srdarni/watch?locale=IN",
+        "buy": [],
+        "flatrate": []
+      }
+    ],
+    "onUserWatchlist": false
+  }
+}

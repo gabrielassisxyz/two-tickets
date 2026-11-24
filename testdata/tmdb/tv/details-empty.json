@@ -1,0 +1,79 @@
+{
+  "id": "tv/details-empty",
+  "request": {
+    "path": "/tv/91073",
+    "params": {
+      "append_to_response": "aggregate_credits,credits,external_ids,keywords,videos,content_ratings,watch/providers",
+      "include_video_language": "pt-BR",
+      "language": "pt-BR"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "adult": false,
+      "backdrop_path": null,
+      "created_by": [],
+      "episode_run_time": [],
+      "first_air_date": "2019-07-01",
+      "genres": [],
+      "homepage": "",
+      "id": 91073,
+      "in_production": false,
+      "languages": [],
+      "last_air_date": "2023-12-08",
+      "last_episode_to_air": null,
+      "name": "छोटी सरदारनी",
+      "next_episode_to_air": null,
+      "networks": [],
+      "number_of_episodes": 0,
+      "number_of_seasons": 0,
+      "origin_country": [],
+      "original_language": "hi",
+      "original_name": "छोटी सरदारनी",
+      "overview": "",
+      "popularity": 23.4561,
+      "poster_path": null,
+      "production_companies": [],
+      "production_countries": [],
+      "seasons": [],
+      "softcore": false,
+      "spoken_languages": [],
+      "status": "Ended",
+      "tagline": "",
+      "type": "Scripted",
+      "vote_average": 0,
+      "vote_count": 0,
+      "aggregate_credits": {
+        "cast": [],
+        "crew": []
+      },
+      "credits": {
+        "cast": [],
+        "crew": []
+      },
+      "external_ids": {
+        "id": 91073,
+        "imdb_id": null,
+        "wikidata_id": null,
+        "facebook_id": null,
+        "instagram_id": null,
+        "twitter_id": null,
+        "tvdb_id": null,
+        "tvrage_id": null
+      },
+      "keywords": {
+        "results": []
+      },
+      "videos": {
+        "results": []
+      },
+      "content_ratings": {
+        "results": []
+      },
+      "watch/providers": {
+        "results": {}
+      }
+    }
+  }
+}

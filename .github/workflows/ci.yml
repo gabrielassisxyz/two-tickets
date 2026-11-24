@@ -42,4 +42,8 @@ jobs:
           golangci-lint version
           go install golang.org/x/vuln/cmd/govulncheck@v1.10.0
           govulncheck -version
+      # The goldens harness declares Node ^22.19.0 || ^24.22.1 and enforces it.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - run: bin/ci

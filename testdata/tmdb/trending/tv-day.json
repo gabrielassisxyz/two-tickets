@@ -1,0 +1,488 @@
+{
+  "id": "trending/tv-day",
+  "request": {
+    "path": "/trending/tv/day",
+    "params": {
+      "language": "pt-BR",
+      "page": "1"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "page": 1,
+      "results": [
+        {
+          "adult": false,
+          "backdrop_path": "/8onvZbxTmP3XpuzKfLsBSm3WXMg.jpg",
+          "genre_ids": [
+            35
+          ],
+          "id": 290826,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Dig",
+          "overview": "",
+          "popularity": 31.4945,
+          "poster_path": "/l44uAt5yfDOxJeiB0t3B6xNlbxu.jpg",
+          "first_air_date": "2026-11-23",
+          "softcore": false,
+          "name": "Dig",
+          "vote_average": 7.1,
+          "vote_count": 7,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/h0OC7ouop8YLwbAVfS3UUE2Lw4T.jpg",
+          "genre_ids": [
+            80,
+            18
+          ],
+          "id": 247718,
+          "origin_country": [
+            "GB",
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "MobLand",
+          "overview": "O poder está em disputa quando duas famílias do crime se chocam numa batalha que ameaça derrubar impérios e arruinar vidas. No meio está Harry Da Souza, um \"resolvedor de problemas\" que sabe bem onde a lealdade está quando as forças opostas colidem.",
+          "popularity": 755.8379,
+          "poster_path": "/jM7bH9b9QT22PtkTyHzxbXx4lDI.jpg",
+          "first_air_date": "2025-03-30",
+          "softcore": false,
+          "name": "Terra da Máfia",
+          "vote_average": 8.682,
+          "vote_count": 1303,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/hYJqUoXRZnodGxgVZTM8uwr5kbC.jpg",
+          "genre_ids": [
+            9648,
+            18
+          ],
+          "id": 291507,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "The Body",
+          "overview": "Na noite de Halloween, as garotas de um grupo de dança são tomadas por desejos profanos, visões fantasmagóricas e culpa católica depois que um ritual de iniciação dá errado.",
+          "popularity": 161.8806,
+          "poster_path": "/iHG87S3P8409qOFtYA616BiNLPj.jpg",
+          "first_air_date": "2026-11-11",
+          "softcore": false,
+          "name": "O Corpo",
+          "vote_average": 8.004,
+          "vote_count": 125,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/i1phX1JpaqSnHBBGta6LBFYVCZq.jpg",
+          "genre_ids": [
+            10759,
+            10765
+          ],
+          "id": 84773,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "The Lord of the Rings: The Rings of Power",
+          "overview": "Tendo início em uma época de relativa paz, a série acompanha um grupo de personagens que enfrenta o ressurgimento do mal na Terra-média. Das profundezas escuras das Montanhas de Névoa, das majestosas florestas de Lindon, do belíssimo reino da ilha de Númenor, até os confins do mapa, esses reinos e personagens criarão legados que permanecerão vivos muito além de suas partidas.",
+          "popularity": 1517.8425,
+          "poster_path": "/8FPCnfOftiLTHg5wnJxVdtlF8EN.jpg",
+          "first_air_date": "2022-09-01",
+          "softcore": false,
+          "name": "O Senhor dos Anéis: Os Anéis de Poder",
+          "vote_average": 7.223,
+          "vote_count": 4138,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7ojpD6ARKYhRxnsjzMIrorOfj4T.jpg",
+          "genre_ids": [
+            80,
+            9648
+          ],
+          "id": 300523,
+          "origin_country": [
+            "KR"
+          ],
+          "original_language": "ko",
+          "original_name": "푸른길",
+          "overview": "Dois detetives tentam solucionar assassinatos brutais e mensagens enigmáticas que surgem em dois países. Só que a verdade está mais perto do que eles imaginam.",
+          "popularity": 63.2359,
+          "poster_path": "/c3kKwzYpUvtLMCtfmrDPqphsZrc.jpg",
+          "first_air_date": "2026-11-20",
+          "softcore": false,
+          "name": "Estrada das Lágrimas",
+          "vote_average": 7.778,
+          "vote_count": 18,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/31kyh4GXFgv0T7I2y9pwT5LFbUC.jpg",
+          "genre_ids": [
+            80,
+            9648,
+            18
+          ],
+          "id": 303552,
+          "origin_country": [
+            "KR"
+          ],
+          "original_language": "ko",
+          "original_name": "대리수능",
+          "overview": "",
+          "popularity": 11.6646,
+          "poster_path": "/oz3eIoEpmPqeu0qvaylynGbxCL5.jpg",
+          "first_air_date": "2026-11-23",
+          "softcore": false,
+          "name": "대리수능",
+          "vote_average": 0,
+          "vote_count": 0,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/dLIKNqBi9L1cVbwuniXkaNOsIXg.jpg",
+          "genre_ids": [
+            10759,
+            10765,
+            18,
+            10751
+          ],
+          "id": 103540,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Percy Jackson and the Olympians",
+          "overview": "Percy Jackson terá uma missão perigosa. Enquanto enfrenta monstros e engana deuses, ele terá uma jornada através dos EUA para devolver o raio-mestre de Zeus e impedir uma guerra iminente. Com a ajuda de seus colegas de missão, Annabeth e Grover, a jornada de Percy o deixará mais próximo das respostas das seguintes perguntas: \"como se encaixar num mundo onde ele se sente deslocado?\" e \"qual será o seu futuro?\".",
+          "popularity": 117.7585,
+          "poster_path": "/i30zp0HtZ7FicUn065xrhnYKN90.jpg",
+          "first_air_date": "2023-12-19",
+          "softcore": false,
+          "name": "Percy Jackson e os Olimpianos",
+          "vote_average": 7.27,
+          "vote_count": 887,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/bn3UWOaVNFPXNOJhuL42W67CSKb.jpg",
+          "genre_ids": [
+            80,
+            99,
+            18
+          ],
+          "id": 340615,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "The Trials of Karen Read",
+          "overview": "Uma série de documentos examinando a morte do policial John O'Keefe de Boston e o polêmico julgamento da namorada Karen Read por seu assassinato. O caso terminou com um júri empatado em 2024, com os promotores buscando um novo julgamento enquanto a defesa de Read pretendia rejeitar as acusações.",
+          "popularity": 9.309,
+          "poster_path": "/876SDnMg7mRIgG1HEH1EtZ7ec9D.jpg",
+          "first_air_date": "2026-11-23",
+          "softcore": false,
+          "name": "Os Julgamentos de Karen Read",
+          "vote_average": 7,
+          "vote_count": 1,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/uoXXbN2PrOxH6UKyP7kYwmGpAAP.jpg",
+          "genre_ids": [
+            10765,
+            18
+          ],
+          "id": 213375,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "VisionQuest",
+          "overview": "Um Visão repaginado tem se escondido daqueles que buscam usá-lo como arma. Enquanto permanece na clandestinidade, ele consulta as personalidades de IA embutidas em sua programação, incluindo o infame Ultron, para encontrar seu verdadeiro propósito. Essa vida tranquila de autorreflexão chega ao fim quando uma recompensa por sua cabeça o força a fugir ao lado de Thomas Shepard, um garoto misterioso que pode ser a reencarnação de seu filho.",
+          "popularity": 121.8126,
+          "poster_path": "/WGyAyBPncfuu8MZhLY9RtfZPM0.jpg",
+          "first_air_date": "2026-10-13",
+          "softcore": false,
+          "name": "VisionQuest",
+          "vote_average": 8.2,
+          "vote_count": 575,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/vcpj6rRDS93ImHCLPY8bwBuFGjR.jpg",
+          "genre_ids": [
+            80,
+            18,
+            9648
+          ],
+          "id": 259909,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Dexter: Resurrection",
+          "overview": "Dexter Morgan acorda do coma e vai para Nova Iorque, determinado a encontrar Harrison e consertar as coisas, mas quando Angel Batista da Miami Metro chega com perguntas, Dexter percebe que seu passado está mais próximo do que nunca.",
+          "popularity": 99.6383,
+          "poster_path": "/wnQ99OpwyVUxRZbfeqhNE1aab6h.jpg",
+          "first_air_date": "2025-07-13",
+          "softcore": false,
+          "name": "Dexter: Ressurreição",
+          "vote_average": 8.5,
+          "vote_count": 778,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/2YQFwn9aF7huTFHxn9lFTAn14F.jpg",
+          "genre_ids": [
+            10759,
+            10751,
+            18
+          ],
+          "id": 85077,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "The Chosen",
+          "overview": "Aprofundando-se nas histórias de fundo e no contexto das pessoas e eventos dos evangelhos, a Primeira Temporada do projeto de mídia de maior financiamento coletivo pelo público de todos os tempos apresenta pessoas como Simão Pedro, Nicodemos, Maria Madalena, Mateus e, claro, Jesus de uma forma nunca antes vista em filme.",
+          "popularity": 128.8702,
+          "poster_path": "/9lL4etMuaZnqlSzkf0zEm3gbvlR.jpg",
+          "first_air_date": "2019-04-21",
+          "softcore": false,
+          "name": "The Chosen: Os Escolhidos",
+          "vote_average": 8.863,
+          "vote_count": 1087,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ibFWJDWS8cTO6s2vZVd2uKDm8p.jpg",
+          "genre_ids": [
+            18,
+            9648
+          ],
+          "id": 117488,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Yellowjackets",
+          "overview": "A trama foca em um time de talentosas jogadoras de futebol do ensino médio de Nova Jersey, que viaja para Seattle por conta de um torneio nacional. No entanto, o avião que levava o grupo de atletas cai no distante deserto de Ontário, no Canadá. As jovens sobrevivem ao acidente, mas acabam presas em uma região inóspita, onde são obrigadas a se transformar em um clã selvagem se quiserem sobreviver. Com duas linhas temporais, a série salta para 2021, onde apresenta as personagens adultas tentando reconstruir suas vidas, apesar de o passado ser difícil de ignorar.",
+          "popularity": 76.5709,
+          "poster_path": "/xRnGrn7Z7SC0KIBodocoU1QgDZF.jpg",
+          "first_air_date": "2021-11-14",
+          "softcore": false,
+          "name": "Yellowjackets",
+          "vote_average": 7.4,
+          "vote_count": 1086,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7UAUa3qQBtm7Z07d2BwiBPGBGbe.jpg",
+          "genre_ids": [
+            10765
+          ],
+          "id": 171802,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Blade Runner 2099",
+          "overview": "Cinquenta anos após os acontecimentos de Blade Runner 2049, Los Angeles renasceu, mas não graças a humanidade. Cora, uma fugitiva determinada a abandonar de vez sua vida em fuga, assume uma última identidade: a de uma Blade Runner. Obrigada a trabalhar ao lado de Olwen, uma Replicante que tem apenas alguns dias de vida, ela parte à caça de um foragido que guarda um segredo capaz de destruir o frágil equilíbrio da cidade.",
+          "popularity": 19.2625,
+          "poster_path": "/8Huo5JEmtKV03VTzq50lYVDbD4N.jpg",
+          "first_air_date": "2026-11-24",
+          "softcore": false,
+          "name": "Blade Runner 2099",
+          "vote_average": 0,
+          "vote_count": 0,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
+          "genre_ids": [
+            10759,
+            35,
+            16
+          ],
+          "id": 37854,
+          "origin_country": [
+            "JP"
+          ],
+          "original_language": "ja",
+          "original_name": "ワンピース",
+          "overview": "Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger. Capturado e condenado à execução pelo Governo Mundial, suas últimas palavras lançaram legiões aos mares. \"Meu tesouro? Se quiserem, podem pegá-lo. Procurem-no! Ele contém tudo que este mundo pode oferecer!\". Foi a revelação do maior tesouro, o One Piece, cobiçado por homens de todo o mundo, sonhando com fama e riqueza imensuráveis... Assim começou a Grande Era dos Piratas!",
+          "popularity": 303.553,
+          "poster_path": "/9ltisibeD4gzqjM1AzmQwCdyirQ.jpg",
+          "first_air_date": "1999-10-20",
+          "softcore": false,
+          "name": "One Piece",
+          "vote_average": 8.8,
+          "vote_count": 5670,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/pFTGCQ3oVhFkuOCjnvCPeVsQBaL.jpg",
+          "genre_ids": [
+            18
+          ],
+          "id": 203483,
+          "origin_country": [
+            "CN"
+          ],
+          "original_language": "zh",
+          "original_name": "两京十五日",
+          "overview": "No primeiro ano do reinado Hongxi, o imperador envia seu filho e herdeiro, o príncipe Zhu Zhanji (Cheng Yi), a Nanquim para inspecionar a região e preparar uma possível transferência da capital. Assim que chega, o navio do tesouro do príncipe afunda após uma emboscada com explosivos às margens do rio Qinhuai, deixando-o isolado e sem proteção. Ao mesmo tempo, chega a notícia secreta de que o imperador está gravemente doente em Pequim, forçando Zhu Zhanji a percorrer mais de 1.100 quilômetros em apenas 15 dias para receber o édito imperial e garantir o trono",
+          "popularity": 23.2434,
+          "poster_path": "/oqHkgdVFO9LpGnwTx0zXZcUJ82p.jpg",
+          "first_air_date": "2026-11-20",
+          "softcore": false,
+          "name": "Rio Sem Retorno",
+          "vote_average": 8.1,
+          "vote_count": 7,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ob7m6JqZ7jSOocR3VL73VxRC6Is.jpg",
+          "genre_ids": [
+            35,
+            18,
+            80
+          ],
+          "id": 303745,
+          "origin_country": [
+            "KR"
+          ],
+          "original_language": "ko",
+          "original_name": "나의 유죄인간",
+          "overview": "Yoon Yi-jun, herdeiro do Grupo Taekang, é o principal suspeito de um assassinato chocante. Para descobrir a verdade, a detetive Kang Jae-hee se infiltra como seu secretário para vigiá-lo de perto. Quanto mais se aproximam da verdade, mais próximos também ficam. Será que Jae-hee, que esconde sua identidade, e Yi-jun, que guarda um segredo, conseguirão revelar o que realmente sentem um pelo outro?",
+          "popularity": 112.0188,
+          "poster_path": "/fhYPYQyVopTbPIf4A7FN5Q3lxPR.jpg",
+          "first_air_date": "2026-10-19",
+          "softcore": false,
+          "name": "Amor Disfarçado",
+          "vote_average": 9,
+          "vote_count": 96,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/fNcpHmuZLKoyhNMBEzdqzX8iIvg.jpg",
+          "genre_ids": [
+            18,
+            10765
+          ],
+          "id": 279246,
+          "origin_country": [
+            "KR"
+          ],
+          "original_language": "ko",
+          "original_name": "재혼 황후",
+          "overview": "A amada imperatriz Navier governa o Império do Oriente ao lado do imperador Sovieshu. Mas, quando Sovieshu se apaixona por uma escrava fugitiva e exige o divórcio, Navier aceita sob uma única condição: receber permissão para se casar com o príncipe rival Heinrey, do Reino do Ocidente.",
+          "popularity": 211.3795,
+          "poster_path": "/lzS8kJgL5pNlX25iVVjafhvQGBy.jpg",
+          "first_air_date": "2026-11-03",
+          "softcore": false,
+          "name": "A Imperatriz Se Casou Novamente",
+          "vote_average": 8.687,
+          "vote_count": 142,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/yGJGwt7DdIWTUXuahLfhcH1gi7G.jpg",
+          "genre_ids": [
+            18,
+            80,
+            10759
+          ],
+          "id": 290856,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "Marshals",
+          "overview": "Com o Rancho Yellowstone no passado, Kayce Dutton junta-se aos Marshals, combinando suas habilidades como cowboy e SEAL para levar justiça a Montana. Ele e seus companheiros servem como a última linha de defesa na guerra contra a violência na região.",
+          "popularity": 134.1104,
+          "poster_path": "/kqzWUZKQYomcJhXA5mDcaZFTWiG.jpg",
+          "first_air_date": "2026-03-01",
+          "softcore": false,
+          "name": "Marshals: Uma História de Yellowstone",
+          "vote_average": 7.985,
+          "vote_count": 448,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8phLVFEXOe02JgFmH9ldn3j4tXW.jpg",
+          "genre_ids": [
+            16,
+            10759,
+            10765
+          ],
+          "id": 312359,
+          "origin_country": [
+            "JP"
+          ],
+          "original_language": "ja",
+          "original_name": "ドラゴンボール超 ビルス",
+          "overview": "Anos após a feroz batalha contra Majin Boo, a Terra recupera uma breve paz. Simultaneamente, Bills, o Deus da Destruição, desperta de seu longo sono. Cientes de seu poder avassalador para destruir planetas, Sr. Kaioh e Kaiohshin observam seu retorno com grande temor.",
+          "popularity": 83.4723,
+          "poster_path": "/w5ai45092PIlV1Vbt7kswry2C03.jpg",
+          "first_air_date": "2026-10-11",
+          "softcore": false,
+          "name": "Dragon Ball Super: Beerus",
+          "vote_average": 9.597,
+          "vote_count": 431,
+          "media_type": "tv"
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/jIArNHIekrCSVgdMbKPAXpPY03Y.jpg",
+          "genre_ids": [
+            16,
+            35
+          ],
+          "id": 456,
+          "origin_country": [
+            "US"
+          ],
+          "original_language": "en",
+          "original_name": "The Simpsons",
+          "overview": "Uma animação sobre uma típica família dos Estados Unidos. Homer é o pai de família nada saudável ou inteligente, que adora beber cerveja. Marge é a esposa e mãe de família dedicada. Bart é o filho de 10 anos, que não leva a escola a sério e tem orgulho disso. Lisa é a garota de 8 anos, um gênio não apreciado. E Maggie é a bebê que não larga a chupeta.",
+          "popularity": 1031.475,
+          "poster_path": "/1jGPgDDcmg3Xgs3WO8sfYfbnFoA.jpg",
+          "first_air_date": "1989-12-17",
+          "softcore": false,
+          "name": "Os Simpsons",
+          "vote_average": 8.029,
+          "vote_count": 11198,
+          "media_type": "tv"
+        }
+      ],
+      "total_pages": 500,
+      "total_results": 10000
+    }
+  }
+}

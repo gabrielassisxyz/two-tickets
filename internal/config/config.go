@@ -32,6 +32,8 @@ type Config struct {
 	DataDir string
 	// TMDBAPIKey is the credential for The Movie Database API.
 	TMDBAPIKey Secret
+	// CacheMaxBytes caps cache.db before rotation. See tmdb.go.
+	CacheMaxBytes int64
 }
 
 // LookupEnv has the signature of os.LookupEnv, so a test can pass a fake environment.
@@ -68,6 +70,15 @@ func Load(lookup LookupEnv) (Config, error) {
 		cfg.TMDBAPIKey = NewSecret(key)
 	}
 
+	// The cache cap is optional: an absent or blank value means the default.
+	// Its parsing lives in tmdb.go so this file stays clear of the TMDB block.
+	cacheMax, err := ParseCacheMaxBytes(lookup)
+	if err != nil {
+		problems = append(problems, err)
+	} else {
+		cfg.CacheMaxBytes = cacheMax
+	}
+
 	if len(missing) > 0 {
 		problems = append([]error{fmt.Errorf("missing required configuration: %s", strings.Join(missing, ", "))}, problems...)
 	}
@@ -83,6 +94,7 @@ func (c Config) LogValue() slog.Value {
 		slog.String("listen_addr", c.ListenAddr),
 		slog.String("data_dir", c.DataDir),
 		slog.Any("tmdb_api_key", c.TMDBAPIKey),
+		slog.Int64("tmdb_cache_max_bytes", c.CacheMaxBytes),
 	)
 }
 
