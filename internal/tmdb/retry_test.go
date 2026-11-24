@@ -247,7 +247,7 @@ func TestNotFoundOutsideKeywordsIsAnErrorAndLeavesNoRow(t *testing.T) {
 	if !errors.As(err, &tmdbErr) || tmdbErr.Status != http.StatusNotFound {
 		t.Fatalf("error = %v, want a *TMDBError carrying status 404", err)
 	}
-	key := BuildCacheKey(CacheFormatVersion, "GET", "/movie/999999", map[string]string{"language": DefaultLanguage, "region": DefaultRegion, "include_adult": "false"})
+	key := BuildCacheKey(CacheFormatVersion, "GET", "/movie/999999", map[string]string{})
 	if _, ok, _ := cache.Get(ctx, key); ok {
 		t.Fatal("a 404 outside the keyword family left a cache row")
 	}
@@ -269,7 +269,7 @@ func TestFailuresLeaveNoCacheRowAndKeyword404IsNegative(t *testing.T) {
 		client, _, _ := newTestClient(t, server.URL, testClientArgs{cache: cache, maxTries: 1})
 		var out MovieDetails
 		_ = client.Get(ctx, "/movie/1", nil, &out)
-		key := BuildCacheKey(CacheFormatVersion, "GET", "/movie/1", map[string]string{"language": DefaultLanguage, "region": DefaultRegion, "include_adult": "false"})
+		key := BuildCacheKey(CacheFormatVersion, "GET", "/movie/1", map[string]string{})
 		if _, ok, _ := cache.Get(ctx, key); ok {
 			t.Fatal("a 429 left a cache row")
 		}
@@ -284,7 +284,7 @@ func TestFailuresLeaveNoCacheRowAndKeyword404IsNegative(t *testing.T) {
 		client, _, _ := newTestClient(t, server.URL, testClientArgs{cache: cache, maxTries: 1})
 		var out MovieDetails
 		_ = client.Get(ctx, "/movie/2", nil, &out)
-		key := BuildCacheKey(CacheFormatVersion, "GET", "/movie/2", map[string]string{"language": DefaultLanguage, "region": DefaultRegion, "include_adult": "false"})
+		key := BuildCacheKey(CacheFormatVersion, "GET", "/movie/2", map[string]string{})
 		if _, ok, _ := cache.Get(ctx, key); ok {
 			t.Fatal("a 5xx left a cache row")
 		}
@@ -302,7 +302,7 @@ func TestFailuresLeaveNoCacheRowAndKeyword404IsNegative(t *testing.T) {
 		client, _, _ := newTestClient(t, server.URL, testClientArgs{cache: cache, maxTries: 1, attemptTO: 100 * time.Millisecond})
 		var out MovieDetails
 		_ = client.Get(ctx, "/movie/3", nil, &out)
-		key := BuildCacheKey(CacheFormatVersion, "GET", "/movie/3", map[string]string{"language": DefaultLanguage, "region": DefaultRegion, "include_adult": "false"})
+		key := BuildCacheKey(CacheFormatVersion, "GET", "/movie/3", map[string]string{})
 		if _, ok, _ := cache.Get(ctx, key); ok {
 			t.Fatal("a timeout left a cache row")
 		}
@@ -319,7 +319,7 @@ func TestFailuresLeaveNoCacheRowAndKeyword404IsNegative(t *testing.T) {
 		cancel()
 		var out MovieDetails
 		_ = client.Get(cancelled, "/movie/4", nil, &out)
-		key := BuildCacheKey(CacheFormatVersion, "GET", "/movie/4", map[string]string{"language": DefaultLanguage, "region": DefaultRegion, "include_adult": "false"})
+		key := BuildCacheKey(CacheFormatVersion, "GET", "/movie/4", map[string]string{})
 		if _, ok, _ := cache.Get(ctx, key); ok {
 			t.Fatal("a cancellation left a cache row")
 		}
