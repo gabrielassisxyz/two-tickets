@@ -130,3 +130,44 @@ func TestWatchAndRatingAreIndependent(t *testing.T) {
 		t.Errorf("watch without a rating = %+v", state.Me)
 	}
 }
+
+// Clearing one rating clears only that row: the show's rating and each
+// season's are independent, so clearing a season keeps the show and the
+// other seasons, and clearing the show keeps every season.
+func TestClearingARatingKeepsTheOtherScopes(t *testing.T) {
+	kit := newLibraryKit(t)
+	for _, body := range []string{
+		`{"mediaType":"tv","tmdbId":1,"scope":"show","level":"loved"}`,
+		`{"mediaType":"tv","tmdbId":1,"scope":"season","seasonNumber":1,"level":"good"}`,
+		`{"mediaType":"tv","tmdbId":1,"scope":"season","seasonNumber":2,"level":"meh"}`,
+	} {
+		kit.mustServe(t, kit.alice, http.MethodPut, "/api/v1/library/rating", body, http.StatusOK)
+	}
+	seasonLevels := func(state titleStateBody) map[int]string {
+		levels := map[int]string{}
+		for _, season := range state.Me.Seasons {
+			if season.Rating != nil && season.Rating.Level != nil {
+				levels[season.SeasonNumber] = *season.Rating.Level
+			}
+		}
+		return levels
+	}
+
+	state := decodeLibraryJSON[titleStateBody](t, kit.mustServe(t, kit.alice, http.MethodDelete, "/api/v1/library/rating",
+		`{"mediaType":"tv","tmdbId":1,"scope":"season","seasonNumber":1}`, http.StatusOK))
+	if state.Me.Rating == nil || state.Me.Rating.Level == nil || *state.Me.Rating.Level != "loved" {
+		t.Errorf("clearing season 1 changed the show's rating: %+v", state.Me.Rating)
+	}
+	if got := seasonLevels(state); len(got) != 1 || got[2] != "meh" {
+		t.Errorf("after clearing season 1, season ratings = %v, want only season 2 = meh", got)
+	}
+
+	state = decodeLibraryJSON[titleStateBody](t, kit.mustServe(t, kit.alice, http.MethodDelete, "/api/v1/library/rating",
+		`{"mediaType":"tv","tmdbId":1,"scope":"show"}`, http.StatusOK))
+	if state.Me.Rating != nil {
+		t.Errorf("the show's rating survived its own clearing: %+v", state.Me.Rating)
+	}
+	if got := seasonLevels(state); len(got) != 1 || got[2] != "meh" {
+		t.Errorf("clearing the show changed the season ratings: %v, want season 2 = meh", got)
+	}
+}
