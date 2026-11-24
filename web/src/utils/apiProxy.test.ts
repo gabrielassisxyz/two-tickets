@@ -1,5 +1,6 @@
 import {
   buildApiRequestHeaders,
+  parseTrustedProxies,
   proxyToApi,
   rawPathAndQuery,
 } from '@app/utils/apiProxy';
@@ -259,6 +260,78 @@ describe('buildApiRequestHeaders', () => {
       )['x-forwarded-proto'];
     expect(protoOf(true)).toBe('https');
     expect(protoOf(false)).toBe('http');
+  });
+});
+
+// In production TLS ends at the ingress, which connects to web from the pod
+// network. Its forwarding headers carry the browser's address and protocol;
+// anyone else's are replaced.
+describe('buildApiRequestHeaders behind a trusted ingress', () => {
+  const ingress = parseTrustedProxies('10.0.0.0/8');
+  const fromIngress = (headers: IncomingHttpHeaders) =>
+    buildApiRequestHeaders(
+      fakeRequest(headers, { remoteAddress: '10.0.0.5' }),
+      ingress
+    );
+
+  it("takes the browser's address from the ingress's X-Forwarded-For", () => {
+    expect(
+      fromIngress({ 'x-forwarded-for': '203.0.113.7' })['x-forwarded-for']
+    ).toBe('203.0.113.7');
+  });
+
+  it('takes the rightmost entry outside the trusted networks', () => {
+    expect(
+      fromIngress({ 'x-forwarded-for': '1.2.3.4, 203.0.113.7, 10.0.0.9' })[
+        'x-forwarded-for'
+      ]
+    ).toBe('203.0.113.7');
+  });
+
+  it("says https when the ingress says the browser's connection was", () => {
+    expect(
+      fromIngress({ 'x-forwarded-proto': 'https' })['x-forwarded-proto']
+    ).toBe('https');
+    expect(
+      fromIngress({ 'x-forwarded-proto': 'http' })['x-forwarded-proto']
+    ).toBe('http');
+  });
+
+  it('still replaces the headers of a peer outside the trusted networks', () => {
+    const headers = buildApiRequestHeaders(
+      fakeRequest(
+        { 'x-forwarded-for': '203.0.113.7', 'x-forwarded-proto': 'https' },
+        { remoteAddress: '192.0.2.7' }
+      ),
+      ingress
+    );
+    expect(headers['x-forwarded-for']).toBe('192.0.2.7');
+    expect(headers['x-forwarded-proto']).toBe('http');
+  });
+
+  it('falls back to the peer when an entry is not an address', () => {
+    expect(
+      fromIngress({ 'x-forwarded-for': 'not-an-address' })['x-forwarded-for']
+    ).toBe('10.0.0.5');
+  });
+
+  it('trusts nobody when the setting is empty, and refuses a bad entry', () => {
+    const nobody = parseTrustedProxies('');
+    expect(
+      buildApiRequestHeaders(
+        fakeRequest(
+          { 'x-forwarded-for': '203.0.113.7' },
+          { remoteAddress: '10.0.0.5' }
+        ),
+        nobody
+      )['x-forwarded-for']
+    ).toBe('10.0.0.5');
+    expect(() => parseTrustedProxies('10.0.0.0/99')).toThrow(
+      /WEB_TRUSTED_PROXY_CIDRS/
+    );
+    expect(() => parseTrustedProxies('ingress')).toThrow(
+      /WEB_TRUSTED_PROXY_CIDRS/
+    );
   });
 });
 
