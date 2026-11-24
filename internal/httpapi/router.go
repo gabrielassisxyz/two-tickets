@@ -10,6 +10,7 @@ import (
 
 	"github.com/gabrielassisxyz/two-tickets/internal/auth"
 	"github.com/gabrielassisxyz/two-tickets/internal/catalog"
+	"github.com/gabrielassisxyz/two-tickets/internal/library"
 )
 
 // ReadinessCheck answers a trivial query against one dependency.
@@ -33,10 +34,14 @@ type RouterDeps struct {
 	// Catalog serves the catalog routes, behind the session gate and the
 	// origin check. Nil leaves them out.
 	Catalog *catalog.Service
+	// Library serves the library routes and the Seerr watchlist routes,
+	// behind the same two checks. Nil leaves them out.
+	Library *library.Service
 }
 
-// routeRegistrar is what the router needs from a route family; *catalog.Service
-// satisfies it, and a test registers a stub through it.
+// routeRegistrar is what the router needs from a route family;
+// *catalog.Service and *library.Service satisfy it, and a test registers a
+// stub through it.
 type routeRegistrar interface {
 	Register(mux *http.ServeMux)
 }
@@ -48,15 +53,19 @@ const readinessTimeout = 2 * time.Second
 // can reach the port, so it never describes the configuration or the
 // dependencies behind it.
 func NewRouter(deps RouterDeps) http.Handler {
-	// A nil *catalog.Service stored in the interface would not compare equal
-	// to nil, so the conversion only happens when one is set.
-	if deps.Catalog == nil {
-		return newRouter(deps, nil)
+	// A nil pointer stored in the interface would not compare equal to nil,
+	// so a family is only converted when it is set.
+	var families []routeRegistrar
+	if deps.Catalog != nil {
+		families = append(families, deps.Catalog)
 	}
-	return newRouter(deps, deps.Catalog)
+	if deps.Library != nil {
+		families = append(families, deps.Library)
+	}
+	return newRouter(deps, families...)
 }
 
-func newRouter(deps RouterDeps, catalogRoutes routeRegistrar) http.Handler {
+func newRouter(deps RouterDeps, families ...routeRegistrar) http.Handler {
 	logger := deps.Logger
 	if logger == nil {
 		logger = slog.New(slog.DiscardHandler)
@@ -74,8 +83,8 @@ func newRouter(deps RouterDeps, catalogRoutes routeRegistrar) http.Handler {
 	api := http.NewServeMux()
 	routes.register(api)
 	registerSettingsRoutes(api)
-	if catalogRoutes != nil {
-		catalogRoutes.Register(api)
+	for _, family := range families {
+		family.Register(api)
 	}
 	api.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
 		writeStatusError(w, http.StatusNotFound)

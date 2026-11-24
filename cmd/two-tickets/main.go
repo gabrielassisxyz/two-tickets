@@ -135,13 +135,16 @@ func serve(ctx context.Context, deps serveDeps, logger *slog.Logger) error {
 	if err != nil {
 		return fmt.Errorf("listen on %s: %w", cfg.ListenAddr, err)
 	}
+	client := newTMDBClient(cfg, cache, logger)
+	catalogService := newCatalogService(client)
 	router := httpapi.NewRouter(httpapi.RouterDeps{
 		Logger:         logger,
 		Readiness:      []httpapi.ReadinessCheck{state, cacheReadiness{cache: cache}},
 		Auth:           authService,
 		AllowedOrigins: authCfg.AllowedOrigins,
 		TrustedProxies: authCfg.TrustedProxies,
-		Catalog:        newCatalogService(cfg, cache, logger),
+		Catalog:        catalogService,
+		Library:        newLibraryService(state, authService, client, catalogService, logger),
 	})
 	return serveUntilDone(ctx, listener, router, logger)
 }
