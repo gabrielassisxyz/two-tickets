@@ -169,9 +169,22 @@ func TestBinaryExitsBeforeListeningWhenAMigrationFails(t *testing.T) {
 	if _, err := os.Stat(marker); !errors.Is(err, os.ErrNotExist) {
 		t.Fatalf("the process reached listen after a failed migration, so /readyz could have answered; output:\n%s", out)
 	}
-	if !strings.Contains(string(out), "0001_broken") {
-		t.Errorf("output does not name the failing migration:\n%s", out)
+	// Every later step needs the tables the migration did not create, so the
+	// process would stop before listen even if it carried on past the failure.
+	// The stop itself has to be the migration's.
+	if !strings.Contains(stoppedLineOf(string(out)), "0001_broken") {
+		t.Errorf("the process did not stop on the failing migration:\n%s", out)
 	}
+}
+
+// stoppedLineOf returns the log line runServe writes when serve fails.
+func stoppedLineOf(output string) string {
+	for line := range strings.Lines(output) {
+		if strings.Contains(line, `"msg":"two-tickets stopped"`) {
+			return line
+		}
+	}
+	return ""
 }
 
 // syncBuffer collects the child's stderr while the test reads it.
