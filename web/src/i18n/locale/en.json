@@ -279,6 +279,7 @@
   "components.Library.ListsPage.Section.removeItem": "Remove from list",
   "components.Library.ListsPage.Section.rename": "Rename",
   "components.Library.ListsPage.Section.saveName": "Save name",
+  "components.Library.ListsPage.Section.unavailable": "Title unavailable",
   "components.Library.ListsPage.Section.watchlist": "Watchlist",
   "components.Library.ListsPage.create": "Create list",
   "components.Library.ListsPage.createFailed": "Could not create the list.",

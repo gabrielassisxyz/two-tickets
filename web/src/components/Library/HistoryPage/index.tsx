@@ -80,6 +80,8 @@ const HistoryRowItem = ({ row }: HistoryRowProps) => {
       className="flex gap-3 py-3"
       data-testid="history-row"
       data-scope={row.scope}
+      data-media-type={row.mediaType}
+      data-tmdb-id={row.tmdbId}
     >
       <div className="relative h-20 w-14 flex-shrink-0 overflow-hidden rounded bg-gray-800">
         {row.available && row.result.posterPath && (
@@ -93,11 +95,16 @@ const HistoryRowItem = ({ row }: HistoryRowProps) => {
         )}
       </div>
       <div className="flex min-w-0 flex-1 flex-col gap-1">
-        <Link href={href} className="truncate font-semibold text-gray-100">
-          {row.available
-            ? titleOf(row)
-            : intl.formatMessage(messages.unavailable)}
-        </Link>
+        {row.available ? (
+          <Link href={href} className="truncate font-semibold text-gray-100">
+            {titleOf(row)}
+          </Link>
+        ) : (
+          // A title TMDB cannot answer has no page to link to.
+          <span className="truncate font-semibold text-gray-400">
+            {intl.formatMessage(messages.unavailable)}
+          </span>
+        )}
         <span className="text-sm text-gray-400">{scope}</span>
         <div className="flex flex-wrap gap-x-4 text-sm">
           <span className="text-gray-200" data-testid="history-watched">

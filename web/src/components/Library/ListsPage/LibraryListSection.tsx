@@ -29,6 +29,7 @@ const messages = defineMessages('components.Library.ListsPage.Section', {
   removeItem: 'Remove from list',
   more: 'Show more',
   empty: 'No titles on this list.',
+  unavailable: 'Title unavailable',
 });
 
 interface ListItemTileProps {
@@ -47,12 +48,23 @@ const ListItemTile = ({ list, item }: ListItemTileProps) => {
   }
   return (
     <li className="flex flex-col gap-2" data-testid="list-item">
-      <LibraryCardFor
-        item={item}
-        canExpand
-        isAddedToWatchlist={list.kind === 'watchlist' && list.owner === 'me'}
-        showQuickActions={list.owner !== 'partner'}
-      />
+      {item.available ? (
+        <LibraryCardFor
+          item={item}
+          canExpand
+          isAddedToWatchlist={list.kind === 'watchlist' && list.owner === 'me'}
+          showQuickActions={list.owner !== 'partner'}
+        />
+      ) : (
+        // A title TMDB cannot answer right now: named, never linked, and
+        // still removable.
+        <div
+          className="flex aspect-[2/3] w-full items-center justify-center rounded-xl border border-gray-700 bg-gray-800 p-3 text-center text-sm text-gray-400"
+          data-testid="list-item-unavailable"
+        >
+          {intl.formatMessage(messages.unavailable)}
+        </div>
+      )}
       {list.canChangeItems && (
         <button
           type="button"

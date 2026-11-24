@@ -66,6 +66,8 @@ const TitleCard = ({
     <div
       className={canExpand ? 'w-full' : 'w-36 sm:w-36 md:w-44'}
       data-testid="title-card"
+      data-media-type={mediaType}
+      data-tmdb-id={id}
       ref={inViewRef}
     >
       <div
