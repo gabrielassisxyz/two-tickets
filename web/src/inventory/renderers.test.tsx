@@ -6,6 +6,7 @@
 // dropped polling routes.
 import { DiscoverSliderType } from '@app/compat/constants/discover';
 import type { PublicSettingsResponse } from '@app/compat/interfaces/api/settingsInterfaces';
+import About from '@app/components/About';
 import CollectionDetails from '@app/components/CollectionDetails';
 import CompanyTag from '@app/components/CompanyTag';
 import Discover from '@app/components/Discover';
@@ -189,6 +190,23 @@ const movieFixture = (withCast: boolean) => ({
   collection: null,
   mediaInfo: null,
   onUserWatchlist: false,
+  watchProviders: withCast
+    ? [
+        {
+          iso_3166_1: 'BR',
+          link: 'https://www.themoviedb.org/movie/603/watch?locale=BR',
+          buy: [],
+          flatrate: [
+            {
+              displayPriority: 1,
+              logoPath: '/logo.png',
+              id: 8,
+              name: 'Netflix',
+            },
+          ],
+        },
+      ]
+    : [],
 });
 
 const tvFixture = (withCast: boolean) => ({
@@ -241,6 +259,23 @@ const tvFixture = (withCast: boolean) => ({
   relatedVideos: [],
   mediaInfo: null,
   onUserWatchlist: false,
+  watchProviders: withCast
+    ? [
+        {
+          iso_3166_1: 'BR',
+          link: 'https://www.themoviedb.org/tv/1399/watch?locale=BR',
+          buy: [],
+          flatrate: [
+            {
+              displayPriority: 1,
+              logoPath: '/logo.png',
+              id: 8,
+              name: 'Netflix',
+            },
+          ],
+        },
+      ]
+    : [],
 });
 
 const fixtureFor = (pathname: string) => {
@@ -695,6 +730,68 @@ describe('renderers against fixtures', () => {
     await renderAndSettle(<TvCrew />);
     await renderAndSettle(<TvRecommendations />);
     await renderAndSettle(<TvSimilar />);
+  });
+
+  it('renders the About page with the four credit lines', async () => {
+    level = 'full';
+    const view = render(
+      <Wrapper>
+        <About />
+      </Wrapper>
+    );
+    await waitFor(() => {
+      expect(
+        view.getByText(
+          'This product uses the TMDB API but is not endorsed or certified by TMDB.'
+        )
+      ).toBeTruthy();
+    });
+    expect(
+      view.getByText(
+        'Interface built on Seerr, an open-source project under the MIT licence.'
+      )
+    ).toBeTruthy();
+    expect(
+      view.getByText(
+        'Posters and images load directly from the TMDB image servers. If they are unreachable, artwork may be missing.'
+      )
+    ).toBeTruthy();
+    expect(
+      view.getByText('Streaming provider data provided by JustWatch.')
+    ).toBeTruthy();
+    expect(view.getByAltText('The Movie Database')).toBeTruthy();
+    view.unmount();
+  });
+
+  it('shows the JustWatch credit next to the provider lists', async () => {
+    level = 'full';
+    const movie = render(
+      <Wrapper>
+        <MovieDetails />
+      </Wrapper>
+    );
+    await waitFor(() => {
+      expect(movie.getByText('Currently Streaming On')).toBeTruthy();
+    });
+    expect(movie.getByAltText('Netflix')).toBeTruthy();
+    expect(
+      movie.getByText('Streaming provider data provided by JustWatch.')
+    ).toBeTruthy();
+    movie.unmount();
+
+    const series = render(
+      <Wrapper>
+        <TvDetails />
+      </Wrapper>
+    );
+    await waitFor(() => {
+      expect(series.getByText('Currently Streaming On')).toBeTruthy();
+    });
+    expect(series.getByAltText('Netflix')).toBeTruthy();
+    expect(
+      series.getByText('Streaming provider data provided by JustWatch.')
+    ).toBeTruthy();
+    series.unmount();
   });
 
   it('renders the collection and person pages empty, minimal and full', async () => {
