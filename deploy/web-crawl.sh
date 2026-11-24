@@ -1,0 +1,99 @@
+#!/usr/bin/env bash
+# Playwright link crawl of the production `web` image against a real api.
+# It builds both images the way deploy/web-e2e.sh does, signs in through
+# the login form on a mobile viewport with touch input, then follows every
+# internal link and proves none answers 404 or an error page.
+#
+# The crawl runs inside the official Playwright image
+# (mcr.microsoft.com/playwright), on the same Docker network, so no browser
+# is installed on the host, locally or in CI. The @playwright/test version
+# in web/package.json is pinned to the same version as the image tag.
+#
+# Everything it starts is removed in a trap, whatever happens.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+playwright_version="$(node -p "require('./web/package.json').devDependencies['@playwright/test']")"
+image="two-tickets-web-crawl:$$"
+network="two-tickets-crawl-${$}"
+work="$(mktemp -d)"
+containers=()
+
+cleanup() {
+  local c
+  for c in "${containers[@]}"; do
+    docker rm -f "$c" >/dev/null 2>&1 || true
+  done
+  docker network rm "$network" >/dev/null 2>&1 || true
+  docker rmi -f "$image" >/dev/null 2>&1 || true
+  rm -rf "$work"
+}
+trap cleanup EXIT
+
+fail() {
+  echo "web crawl: $*" >&2
+  exit 1
+}
+
+password="sentinelsentinelsentinel"
+
+echo "==> web crawl: building the production image and the api binary"
+docker build -q -f deploy/web.Dockerfile -t "$image" web/ >/dev/null
+CGO_ENABLED=0 go build -o "$work/two-tickets" ./cmd/two-tickets
+password_hash="$(printf '%s' "$password" | go run ./deploy/e2e/hashpassword)"
+
+docker network create "$network" >/dev/null
+subnet="$(docker network inspect -f '{{(index .IPAM.Config 0).Subnet}}' "$network")"
+
+api="two-tickets-crawl-api-${$}"
+containers+=("$api")
+docker run -d --name "$api" --network "$network" --network-alias api \
+  --tmpfs /data:mode=1777 \
+  -v "$work/two-tickets:/e2e/two-tickets:ro" \
+  -e DATA_DIR=/data -e LISTEN_ADDR=:8080 \
+  -e TMDB_API_KEY=sentinelsentinelsentinel \
+  -e ACCOUNT_1_KEY=first -e ACCOUNT_1_USERNAME=alice \
+  -e ACCOUNT_1_EMAIL=alice@example.com -e ACCOUNT_1_DISPLAY_NAME=Alice \
+  -e "ACCOUNT_1_PASSWORD_HASH=${password_hash}" \
+  -e ACCOUNT_2_KEY=second -e ACCOUNT_2_USERNAME=bob \
+  -e ACCOUNT_2_EMAIL=bob@example.com -e ACCOUNT_2_DISPLAY_NAME=Bob \
+  -e "ACCOUNT_2_PASSWORD_HASH=${password_hash}" \
+  -e ALLOWED_ORIGINS=http://web:3000 \
+  -e "TRUSTED_PROXY_CIDRS=${subnet}" \
+  --entrypoint /e2e/two-tickets "$image" >/dev/null
+
+web="two-tickets-crawl-web-${$}"
+containers+=("$web")
+docker run -d --name "$web" --network "$network" --network-alias web \
+  --read-only --tmpfs /tmp \
+  -e PORT=3000 -e HOSTNAME=0.0.0.0 -e "API_INTERNAL_URL=http://api:8080" \
+  -p '127.0.0.1::3000' "$image" >/dev/null
+port="$(docker port "$web" 3000 | head -n 1 | sed 's/.*://')"
+
+echo "==> web crawl: waiting for the server on 127.0.0.1:${port}"
+ready=0
+for _ in $(seq 1 60); do
+  if curl -sSf -o /dev/null "http://127.0.0.1:${port}/favicon.ico"; then
+    ready=1
+    break
+  fi
+  sleep 1
+done
+if [ "$ready" -ne 1 ]; then
+  docker logs "$web" >&2 || true
+  fail "web did not become ready"
+fi
+
+echo "==> web crawl: running the Playwright link crawl (image v${playwright_version})"
+docker run --rm --network "$network" \
+  -v "$PWD/web:/work:ro" \
+  -w /work \
+  -e PLAYWRIGHT_VERSION="$playwright_version" \
+  -e CRAWL_BASE_URL=http://web:3000 \
+  -e CRAWL_USERNAME=alice \
+  -e "CRAWL_PASSWORD=${password}" \
+  "mcr.microsoft.com/playwright:v${playwright_version}-noble" \
+  sh -c 'npx --yes "@playwright/test@${PLAYWRIGHT_VERSION}" test tests/crawl --output=/tmp/test-results' \
+  || fail "the link crawl found a broken internal link"
+
+echo "web crawl: green"

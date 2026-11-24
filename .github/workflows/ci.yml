@@ -49,3 +49,15 @@ jobs:
         with:
           node-version-file: web/.node-version
       - run: bin/ci
+
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      # The crawl builds the api binary, so it needs the Go toolchain from
+      # go.mod, the same one bin/ci uses. The browser itself comes from the
+      # pinned Playwright image, never from the runner.
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+      - run: bash deploy/web-crawl.sh
