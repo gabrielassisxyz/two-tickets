@@ -137,19 +137,6 @@ func (a authRoutes) me(w http.ResponseWriter, r *http.Request) {
 	writeUser(w, user)
 }
 
-// userBody carries the account fields auth/me needs; the rest of Seerr's User
-// shape is fixed and is added where that shape is pinned.
-type userBody struct {
-	ID          int64  `json:"id"`
-	Username    string `json:"username"`
-	Email       string `json:"email"`
-	DisplayName string `json:"displayName"`
-}
-
-func writeUser(w http.ResponseWriter, user auth.User) {
-	writeJSONBody(w, userBody{ID: user.ID, Username: user.Username, Email: user.Email, DisplayName: user.DisplayName})
-}
-
 func writeJSONBody(w http.ResponseWriter, body any) {
 	respond.JSON(w, body)
 }

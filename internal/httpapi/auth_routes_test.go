@@ -518,10 +518,11 @@ func TestOnlyThePublicSurfaceAnswersWithoutASession(t *testing.T) {
 		}
 		assertErrorShape(t, resp)
 	}
-	// The public routes pass the gate; nothing is mounted there yet, so 404.
-	for _, path := range []string{"/api/v1/settings/public", "/api/v1/backdrops"} {
-		if resp := s.do(t, authRequest{method: http.MethodGet, path: path}); resp.status != http.StatusNotFound {
-			t.Errorf("GET %s = %d, want 404 past the gate", path, resp.status)
+	// The public routes pass the gate: settings/public answers, and nothing
+	// is mounted at backdrops yet, so 404.
+	for path, want := range map[string]int{routePublicSettings: http.StatusOK, "/api/v1/backdrops": http.StatusNotFound} {
+		if resp := s.do(t, authRequest{method: http.MethodGet, path: path}); resp.status != want {
+			t.Errorf("GET %s = %d, want %d past the gate", path, resp.status, want)
 		}
 	}
 	token := s.mustLogin(t, "alice", routerAlicePassword)
@@ -532,20 +533,20 @@ func TestOnlyThePublicSurfaceAnswersWithoutASession(t *testing.T) {
 	assertErrorShape(t, resp)
 }
 
+// auth/me answers Seerr's whole User shape for each account, pinned by a
+// golden per account.
 func TestAuthMeAnswersTheSessionsAccount(t *testing.T) {
 	s := startAuthServer(t, nil)
-	users := s.service.Users()
-	for i, login := range [][2]string{{"alice", routerAlicePassword}, {"bob", routerBobPassword}} {
-		token := s.mustLogin(t, login[0], login[1])
+	for _, account := range []struct{ username, password, golden string }{
+		{"alice", routerAlicePassword, "auth-me-first.json"},
+		{"bob", routerBobPassword, "auth-me-second.json"},
+	} {
+		token := s.mustLogin(t, account.username, account.password)
 		resp := s.do(t, authRequest{method: http.MethodGet, path: routeMe, token: token})
-		var got userBody
-		if err := json.Unmarshal(resp.body, &got); err != nil {
-			t.Fatal(err)
+		if resp.status != http.StatusOK {
+			t.Fatalf("auth/me as %s = %d %s", account.username, resp.status, resp.body)
 		}
-		want := userBody{ID: users[i].ID, Username: users[i].Username, Email: users[i].Email, DisplayName: users[i].DisplayName}
-		if resp.status != http.StatusOK || got != want {
-			t.Fatalf("auth/me as %s = %d %+v, want %+v", login[0], resp.status, got, want)
-		}
+		assertMatchesContractGolden(t, resp.body, account.golden)
 		if resp.header.Get("Cache-Control") != "no-store" {
 			t.Errorf("auth/me is cacheable: %q", resp.header.Get("Cache-Control"))
 		}

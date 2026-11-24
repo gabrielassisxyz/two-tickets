@@ -32,4 +32,5 @@ func NewService(client *tmdb.Client, now func() time.Time) *Service {
 // s.registerLookups(mux).
 func (s *Service) Register(mux *http.ServeMux) {
 	s.registerDiscover(mux)
+	s.registerLookups(mux)
 }

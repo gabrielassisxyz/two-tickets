@@ -73,6 +73,7 @@ func newRouter(deps RouterDeps, catalogRoutes routeRegistrar) http.Handler {
 	routes := authRoutes{service: deps.Auth, trustedProxies: deps.TrustedProxies, logger: logger}
 	api := http.NewServeMux()
 	routes.register(api)
+	registerSettingsRoutes(api)
 	if catalogRoutes != nil {
 		catalogRoutes.Register(api)
 	}
