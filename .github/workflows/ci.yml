@@ -28,4 +28,8 @@ jobs:
           curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v${version}/gitleaks_${version}_linux_x64.tar.gz" \
             | sudo tar -xz -C /usr/local/bin gitleaks
           gitleaks version
+      # The goldens harness declares Node ^22.19.0 || ^24.22.1 and enforces it.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - run: bin/ci
