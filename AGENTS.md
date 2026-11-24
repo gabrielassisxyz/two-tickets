@@ -159,16 +159,20 @@
 
 ## Merging
 
-- **Checks first.** A ruleset on `main` requires the `ci` check, refuses force pushes and refuses deleting the branch, so `gh pr merge` is refused while `ci` is red or still running, and nothing reaches `main` except through a pull request. Still read the checks for the commit you pushed before merging: `gh pr view <n> --json headRefOid -q .headRefOid` must equal `git rev-parse HEAD`, and only then does `gh pr checks <n> --watch` answer for that commit. The ruleset does not require a branch to be up to date with `main`, so two pull requests merged close together can still leave `main` holding a merge nobody tested.
-- **The sequence.** From the worktree, run `gh pr merge <n> --merge` once `bin/ci` is green and those checks are green. Continue only once `gh pr view <n> --json state -q .state` prints `MERGED`. Then, from the main tree:
+- **What GitHub enforces.** A ruleset on `main` requires:
+  - a pull request (no approvals needed);
+  - a green `ci` check from GitHub Actions, on a branch that is up to date with `main`.
+
+  It also refuses force pushes and deleting the branch. A merge is therefore refused while `ci` is red, running or older than the latest `main`, and every commit on `main` has passed `ci`.
+- **The sequence.** From the worktree, once `bin/ci` is green and `gh pr checks <n> --watch` reports `ci` green, run `gh pr merge <n> --merge --match-head-commit "$(git rev-parse HEAD)"`. The last flag makes GitHub refuse the merge if the pull request's head is not the commit you pushed. Continue only once `gh pr view <n> --json state -q .state` prints `MERGED`. Then, from the main tree:
   1. `git fetch origin main && git merge --ff-only origin/main`
   2. `git push origin --delete <branch>`
   3. `bin/worktree rm <task>`
   4. `bin/worktree prune-merged --yes`
   5. `br close <id>`, if the pull request implements a bead
 - **Never `gh pr merge --delete-branch`.** gh implements it by checking out the base branch, which the main tree holds, so it fails after the merge has already landed and reads like a failed merge.
-- **Never chain `gh pr merge` with the steps after it.** A refused merge (a merge conflict, for one) would still run the branch deletion, and deleting the remote branch closes the pull request.
-- **A branch behind `main` gets `git fetch origin && git merge origin/main`, then `bin/ci` again; never a rebase.** No force push, ever.
+- **Never chain `gh pr merge` with the steps after it.** A refused merge (a red check, a branch behind `main`, a conflict) would still run the branch deletion, and deleting the remote branch closes the pull request.
+- **A branch behind `main` gets `git fetch origin && git merge origin/main`, then `bin/ci` again; never a rebase.** Push the merge and wait for `ci` again: the ruleset refuses the stale one. No force push, ever.
 - **Never destroy another session's work.** No `push --force`, and never delete a branch or worktree that holds an unmerged commit or an uncommitted file. A merge conflict stops and asks; resolving it by taking one side wholesale is how a parallel session's work disappears.
 
 ## Post-implementation checklist (run before "done")
