@@ -140,6 +140,29 @@ func TestCardsNeverFetchesMoreThanAPage(t *testing.T) {
 	}
 }
 
+// A history page holds one row per season, so one series can fill most of
+// it. Each distinct title costs one detail call, however many rows name it.
+func TestCardsFetchesEachDistinctTitleOnce(t *testing.T) {
+	fake := &countingTMDB{hold: 40 * time.Millisecond}
+	hydrator := newCountingHydrator(t, fake)
+	titles := make([]Title, 0, 20)
+	for range 11 {
+		titles = append(titles, Title{MediaType: "tv", TMDBID: 500})
+	}
+	titles = append(titles, pageOfTitles(9)...)
+
+	cards := hydrator.Cards(context.Background(), titles)
+
+	if got := fake.calls.Load(); got != 10 {
+		t.Errorf("detail calls = %d for 10 distinct titles, want 10", got)
+	}
+	for i, card := range cards {
+		if !card.Available || card.TMDBID != titles[i].TMDBID {
+			t.Errorf("card %d = %+v, want %s", i, card, titles[i])
+		}
+	}
+}
+
 // One failing title is one placeholder card with the same keys as a real
 // card; the rest of the page is unaffected.
 func TestCardsFailingTitleIsAPlaceholderWithTheSameKeys(t *testing.T) {

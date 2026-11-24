@@ -383,6 +383,46 @@ func TestLibraryConcurrentMutationsLeaveOneConsistentRow(t *testing.T) {
 	}
 }
 
+// Concurrent rating writes to one row, each sending a level and a review that
+// belong together, released at once and repeated over several rounds: after
+// every round the row holds one request's pair, never a level from one and a
+// review from another, and every request answered 200.
+func TestLibraryConcurrentRatingsKeepOneRequestsPair(t *testing.T) {
+	s := startLibraryServer(t)
+	levels := []string{"hated", "disliked", "meh", "fine", "good", "liked", "loved"}
+	const writers, rounds = 21, 6
+	for round := range rounds {
+		start := make(chan struct{})
+		var wg sync.WaitGroup
+		var failed atomic.Int32
+		for i := range writers {
+			level := levels[(i+round)%len(levels)]
+			body := fmt.Sprintf(`{"mediaType":"movie","tmdbId":77,"scope":"movie","level":%q,"review":"because %s"}`, level, level)
+			wg.Go(func() {
+				<-start
+				if resp := s.call(t, s.alice, http.MethodPut, "/api/v1/library/rating", body); resp.status != http.StatusOK {
+					failed.Add(1)
+				}
+			})
+		}
+		close(start)
+		wg.Wait()
+		if n := failed.Load(); n != 0 {
+			t.Fatalf("round %d: %d concurrent rating writes failed", round, n)
+		}
+		var level, review string
+		if err := s.db.Read.QueryRow(`SELECT level, review FROM ratings WHERE tmdb_id = 77`).Scan(&level, &review); err != nil {
+			t.Fatal(err)
+		}
+		if review != "because "+level {
+			t.Fatalf("round %d: rating row = (%s, %q), a level and a review from different requests", round, level, review)
+		}
+		if got := s.count(t, `SELECT COUNT(*) FROM ratings WHERE tmdb_id = 77`); got != 1 {
+			t.Fatalf("round %d: rating rows = %d, want 1", round, got)
+		}
+	}
+}
+
 // One title TMDB cannot answer is one placeholder card; the page answers 200.
 func TestLibraryPageWithAFailingTitleAnswersAPlaceholder(t *testing.T) {
 	s := startLibraryServer(t)

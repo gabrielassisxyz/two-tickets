@@ -40,9 +40,10 @@ func pageSizes[T any](pages [][]T) []int {
 	return sizes
 }
 
-// 45 items, added three at a time so that every third shares added_at with
-// two others, page as 20, 20 and 5 in the full ordering key, with no item
-// repeated or skipped at a page boundary.
+// 45 items, added nine at a time under one clock tick, two movies to every
+// series, page as 20, 20 and 5 in the full ordering key, with no item
+// repeated or skipped at a page boundary. Both boundaries fall inside a tie
+// on added_at and on media_type, so only tmdb_id orders the rows across them.
 func TestListPagesFollowTheFullOrderingKey(t *testing.T) {
 	kit := newLibraryKit(t)
 	listID := decodeLibraryJSON[listBody](t, kit.mustServe(t, kit.alice, http.MethodPost, "/api/v1/library/lists", `{"name":"Big"}`, http.StatusCreated)).ID
@@ -53,11 +54,14 @@ func TestListPagesFollowTheFullOrderingKey(t *testing.T) {
 	}
 	var want []key
 	for i := 1; i <= 45; i++ {
-		mediaType := []string{"tv", "movie"}[i%2]
+		mediaType := "movie"
+		if i%3 == 0 {
+			mediaType = "tv"
+		}
 		kit.mustServe(t, kit.alice, http.MethodPut, fmt.Sprintf("/api/v1/library/lists/%d/items", listID),
 			fmt.Sprintf(`{"mediaType":%q,"tmdbId":%d}`, mediaType, 100-i), http.StatusOK)
 		want = append(want, key{kit.clock.Now().Unix(), mediaType, 100 - i})
-		if i%3 == 0 {
+		if i%9 == 0 {
 			kit.clock.Advance(time.Second)
 		}
 	}
@@ -93,22 +97,23 @@ func TestListPagesFollowTheFullOrderingKey(t *testing.T) {
 }
 
 // 45 history rows across movies, a whole show and its seasons, rated-only
-// seasons and watched-and-rated movies, written five at a time under one
-// clock tick so that rows share activity_at, page as 20, 20 and 5 in the full
-// ordering key; ?level=loved returns exactly the loved rows.
+// seasons and watched-and-rated movies page as 20, 20 and 5 in the full
+// ordering key; ?level=loved returns exactly the loved rows. The rows are
+// written at three instants: 20 movies first, then the series, then ratings
+// on 7 more movies, so the first boundary falls inside one title's seasons
+// sharing one activity_at, where only scope and season order the rows, and
+// the second inside the oldest movies, where only tmdb_id does, with older
+// rows after it.
 func TestHistoryPagesFollowTheFullOrderingKeyAndFilterByLevel(t *testing.T) {
 	kit := newLibraryKit(t)
-	writes := 0
 	write := func(path, body string) {
 		t.Helper()
 		kit.mustServe(t, kit.alice, http.MethodPut, path, body, http.StatusOK)
-		if writes++; writes%5 == 0 {
-			kit.clock.Advance(time.Second)
-		}
 	}
 	for id := 1; id <= 20; id++ {
 		write("/api/v1/library/watch", fmt.Sprintf(`{"mediaType":"movie","tmdbId":%d,"scope":"movie"}`, id))
 	}
+	kit.clock.Advance(time.Second)
 	write("/api/v1/library/watch", `{"mediaType":"tv","tmdbId":500,"scope":"show"}`)
 	for season := 0; season <= 9; season++ {
 		write("/api/v1/library/watch", fmt.Sprintf(`{"mediaType":"tv","tmdbId":500,"scope":"season","seasonNumber":%d}`, season))
@@ -122,11 +127,14 @@ func TestHistoryPagesFollowTheFullOrderingKeyAndFilterByLevel(t *testing.T) {
 		write("/api/v1/library/rating", fmt.Sprintf(`{"mediaType":"tv","tmdbId":600,"scope":"season","seasonNumber":%d,"level":%q}`, season, level))
 	}
 	for id := 21; id <= 27; id++ {
+		write("/api/v1/library/watch", fmt.Sprintf(`{"mediaType":"movie","tmdbId":%d,"scope":"movie"}`, id))
+	}
+	kit.clock.Advance(time.Second)
+	for id := 21; id <= 27; id++ {
 		level := "good"
 		if id <= 22 {
 			level, wantLoved = "loved", wantLoved+1
 		}
-		write("/api/v1/library/watch", fmt.Sprintf(`{"mediaType":"movie","tmdbId":%d,"scope":"movie"}`, id))
 		write("/api/v1/library/rating", fmt.Sprintf(`{"mediaType":"movie","tmdbId":%d,"scope":"movie","level":%q,"review":"r"}`, id, level))
 	}
 
